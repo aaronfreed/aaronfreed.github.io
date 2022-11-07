@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>Marathon Mapmaking: Setup, Snafus, & Solutions</title>
+  <style>
+    a {text-decoration: none;}
+    a:link {color: #09f;}
+    a:visited {color: #c0c;}
+    a:link:hover, a:visited:hover {text-decoration: underline; color: #c60;}
+    a:link:active, a:visited:active {color: #090;}
+    body {width: 800px; font-family: Candara, Corbel, Skia, "Trebuchet MS", Calibri, sans-serif; text-align: justify; margin: auto;}
+    h1 {margin-top: 12px; margin-bottom: 12px;}
+    h2 {margin-top: 12px; margin-bottom: 12px;}
+    h3 {margin-top: 12px; margin-bottom: 12px;}
+    div {margin-top: 8px; margin-bottom: 8px;}
+    li {margin-top: 8px; margin-bottom: 8px;}
+    ul {margin-top: 4px; margin-bottom: 4px; padding-left: 30px; margin-left; 30px;}
+    ol {margin-top: 4px; margin-bottom: 4px; padding-left: 30px; margin-left; 30px;}
+    ol li::marker {font-family: Corbel, Calibri, monospace;}
+    /*ol {padding-left: 30px; margin-left; 30px;}
+    ol li:before {font-family: Corbel, Calibri, monospace; font-weight: bold;}*/
+    .toc li {display: block; margin-top: 4px; margin-bottom: 4px;}
+    .toc ol {counter-reset: item; margin-top: 0px; margin-bottom: 0px;}
+    .toc li:before {content: counters(item, ".")" "; counter-increment: item;}
+    p {margin-top: 8px; margin-bottom: 8px;}
+    table {border-collapse: collapse; margin: auto;}
+    td, th {padding-left: 12px; padding-right: 12px; padding-top: 4px; padding-bottom: 4px;}
+    tbody:nth-child(even) tr:nth-child(even) {background-color: #eff0ff;}
+    tbody:nth-child(even) tr:nth-child(odd) {background-color: #fff;}
+    tbody:nth-child(even) tr:nth-child(even) .hidden {color: #eff0ff;}
+    tbody:nth-child(even) tr:nth-child(odd) .hidden {color: #fff;}
+    thead {font-weight: bold; background-color: #eff0ff;}
+    .endnotes td, .endnotes th {padding: 4px; vertical-align: top;}
+    .integer {font-family: Corbel, Calibri, monospace; text-align: right;}
+    .decimal {font-family: Corbel, Calibri, monospace;}
+    .centred {text-align: center;}
+    .right {text-align: right;}
+    pre {font-size: 115%;}
+    .dotted {border-bottom: 1px dotted;}
+    .light {font-family: "Candara Light", "Corbel Light", Skia, "Trebuchet MS", "Calibri Light", sans-serif;}
+    .light .integer, .light .decimal {font-family: "Corbel Light", "Calibri Light", monospace;}
+    .light strong {font-family: Candara, Corbel, Skia, "Trebuchet MS", Calibri, sans-serif; font-weight: normal;}
+    .light .integer strong, .light .decimal strong {font-family: Corbel, Calibri, monospace;}
+  </style>
+  <script>
+function sortTable(table, col, reverse) {
+    var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+        i;
+    reverse = -((+reverse) || -1);
+    tr = tr.sort(function (a, b) { // sort rows
+        return reverse // `-1 *` if want opposite order
+            * (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+                .localeCompare(b.cells[col].textContent.trim(), undefined, {numeric: true})
+               );
+    });
+    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+    var th = table.tHead, i;
+    th && (th = th.rows[0]) && (th = th.cells);
+    if (th) i = th.length;
+    else return; // if no `<thead>` then do nothing
+    while (--i >= 0) (function (i) {
+        var dir = 1;
+        th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+    }(i));
+}
+
+function makeAllSortable(parent) {
+    parent = parent || document.body;
+    var t = parent.getElementsByTagName('table'), i = t.length;
+    while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+</script>
+</head>
+<body>
+
+<header><p>This document is meant to help troubleshoot several problems with Marathon content creation that AFAIK aren&rsquo;t documented anywhere else well, if at all. It also includes links to other resources about the game. With the exception of its guide to setting up Weland, this is designed as an advanced document; see &lsquo;Other Tutorials & Resources&rsquo; for guides to basic mapmaking principles, which you should definitely familiarize yourself with before moving onto more advanced tricks.</p>
+
+<h1 id="bio">Who are you and what qualifies you to write this?</h1>
+
+<p>I&rsquo;m Aaron; I&rsquo;m likely best-known in the community for co-directing <em>Eternal</em>, though I&rsquo;ve also worked in some capacity (not always mapping-related) on current or forthcoming mods like <em>Tempus Irae Redux</em>, <em>Where Monsters Are in Dreams</em>, <em>Marathon Chronicles</em>, <em>Hellpak</em>, <em>Apotheosis X</em>…basically I&rsquo;ve been busy mapping for this engine off and on since about 1997, during which I&rsquo;ve acquired all kinds of stupid arcane knowledge about it. Have you ever heard of ambient light delta? Neither had Aleph One&rsquo;s developers until I pointed it out. I&rsquo;m not saying that because I think it&rsquo;s worth being proud of having acquired so much useless and pointless knowledge, but what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me… oh, sorry, that&rsquo;s <em>Taken</em>. Anyway, I feel Aleph One content creation should have a lower barrier to entry, so here&rsquo;s an attempt to create a reference for solutions to some of its frustrating problems.</p>
+
+<p>If you wish to contact me, the best way is via Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@Aaron#6608</strong>, though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I&rsquo;d recommend this only if you notice errors/omissions in this document (or have suggestions for additions; I can credit you for all three). If you need help, it&rsquo;s best to ask in <strong>#marathon-general</strong>, <strong>#forge</strong>, or <strong>#tech-support</strong> (<strong>#development</strong> is for engine/editor development). I&rsquo;m also on the <a href="https://pfhorums.com" target="_blank">Pfhorums</a> (as <a href="https://pfhorums.com/memberlist.php?mode=viewprofile&u=6618" target="_blank">The Man</a>) and <a href="https://reddit.com/r/marathon/" target="_blank">Reddit</a> (as <a href="https://reddit.com/u/aaronnotarobot" target="_blank">u/aaronnotarobot</a>), but I can&rsquo;t promise to respond to messages on either quickly.</p>
+
+<h1 id="thanks">Acknowledgements</h2>
+<ul>
+  <li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
+  <li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
+  <li><strong>W&rsquo;rkncacnter</strong> for pointing out a sound source that eluded me (namely the fighter death).</li>
+  <li>The numerous mapmakers I&rsquo;ve learned from or been influenced by over the years. I couldn&rsquo;t possibly hope to list them all, but <strong>James Hastings-Trew</strong>, <strong>CryoS</strong>, <strong>hypersleep</strong>, <strong>RyokoTK</strong>, <strong>windbreaker</strong>, <strong>Don-Martin Antell</strong>, <strong>Drictelt</strong>, <strong>Mike Trinder</strong>, <strong>Jason Harper</strong>, <strong>Chris Lund</strong>, <strong>Courtney Evans</strong>, <strong>Frank Rooke</strong>, <strong>Devon Belcher</strong>, <strong>Borzz</strong>, <strong>Shebob</strong>, <strong>Jason Jones</strong>, <strong>Greg Kirkpatrick</strong>, <strong>Randy Reddig</strong>, and <strong>FM</strong> have to number among them.</li>
+  <li>The numerous people who have helped maintain <strong>Aleph One</strong> over the years.</li>
+  <li><strong>Bungie</strong>, for obvious reasons.</li> 
+</ul>
+</header>
+
+<h1 id="toc">Table of Contents</h1>
+
+<div class="toc">
+  <ol>
+    <li><a href="#bio">Author Info</a></li>
+    <li><a href="#thanks">Acknowledgements</a></li>
+    <li><a href="#toc">Table of Contents</a> (you’re looking at it?)</li>
+    <li><a href="#resources">Resources</a>
+      <ol>
+        <li><a href="#resourcesa1">Aleph One Content Editing</a></li>
+        <li><a href="#resourcesm1"><em>Marathon 1</em> Content Editing for Aleph One</a></li>
+        <li><a href="#tutorialsother">Other Tutorials & Resources</a></li>
+        <li><a href="#resourcescommunity">Marathon Communities & Resources</a></li>
+      </ol>
+    </li>
+    <li><a href="#general">General</a>
+      <ol>
+        <li><a href="#welandsetup">Weland Setup</a></li>
+        <li><a href="#ShapeFusion">ShapeFusion</a></li>
+      </ol>
+    </li>
+    <li><a href="#shapes">Shapes & Palettes</a>
+      <ol>
+        <li><a href="#clutrestrictions">Restrictions on Number of Colors</a></li>
+        <li><a href="#transparency">Transparency & Landscapes</a></li>
+        <li><a href="#sequencetiming">Sequence Timing & Film Compatibility</a></li>
+      </ol>
+    </li>
+    <li><a href="#8bitsoftware">8-bit Software Mode</a>
+      <ol>
+        <li><a href="#weaponsinhand">&lsquo;Weapons in Hand&rsquo; Sequences</a></li>
+        <li><a href="#8bitsoftwareimages">The Images File</a></li>
+        <li><a href="#8bitchapterscreens">Chapter Screens</a></li>
+      </ol>
+    </li>
+    <li><a href="#mapmaking">Mapmaking</a>
+      <ol>
+        <li><a href="#forgeerrata">Forge Manual Errata & Omissions</a></li>
+        <li><a href="#generalmapmaking">General Notes</a></li>
+        <li><a href="#tagsareterrible">Tags Are Terrible</a></li>
+        <li><a href="#ambientsound">Ambient Sound</a></li>
+        <li><a href="#texturingissues">Texturing Issues in Visual Mode.lua and Vasara</a>
+          <ol>
+            <li><a href="#vasaratexturing">Further Texturing Issues in Vasara</a></li>
+          </ol>
+        </li>
+        <li><a href="#m1polygons">Those Weird Marathon 1 Polygon Types</a></li>
+        <li><a href="#directionality">Directionality</a></li>
+        <li><a href="#circles">Circles and the Custom Grid</a>
+          <ol>
+            <li><a href="#radii">Radii and Rotations for 1 WU-long Sides with Regular Polygons</a></li>
+          </ol>
+        </li>
+        <li><a href="#mapcomplexity">Map Complexity: A Case Study</a></li>
+      </ol>
+    </li>
+    <li><a href="#sounds">Sounds</a>
+      <ol>
+        <li><a href="#sounds-general">General Notes</a></li>
+        <li><a href="#soundids">Vanilla <em>Infinity</em> Sound ID List</a></li>
+        <li><a href="#soundsources">Sound Sources</a></li>
+      </ol>
+    </li>
+    <li><a href="#endnotes">Endnotes</a></li>
+  </ol>
+</div>
+
+<h1 id="resources">Resources</h1>
+<h2 id="resourcesa1">Aleph One Content Editing (Marathon 2/Infinity Format)</h2>
+
+<ul style="text-align: left;">
+<li><strong>Weland</strong> (most aspects of mapmaking): <a href="https://github.com/treellama/weland/releases" target="_blank">https://github.com/treellama/weland/releases</a>
+<div style="padding-left: 20px;"><strong><em>Make sure to grab the right dependency for your platform &ndash; the download page is confusingly laid out. A brief setup guide can be found below in &lsquo;Weland Setup&rsquo; under &lsquo;General&rsquo;.</em></strong></div></li>
+<li><strong>Vasara</strong> (texturing, more like Windows): <a href="http://simplici7y.com/items/vasara" target="_blank">http://simplici7y.com/items/vasara</a></li>
+<li><strong>Visual Mode.lua</strong> (texturing, more like DOS): <a href="http://simplici7y.com/items/visual-mode-lua" target="_blank">http://simplici7y.com/items/visual-mode-lua</a></li>
+<li><strong>Atque</strong> (merging/splitting maps): <a href="https://github.com/treellama/atque/releases" target="_blank">https://github.com/treellama/atque/releases</a></li>
+<li><strong>Forge+</strong> (texturing/map viewing): <a href="https://github.com/deramscholzara/ForgePlus/releases" target="_blank">https://github.com/deramscholzara/ForgePlus/releases</a></li>
+<li><strong>ShapeFusion</strong> (physics/shapes/sounds; replaces Anvil): <a href="https://github.com/treellama/shapefusion/releases" target="_blank">https://github.com/treellama/shapefusion/releases</a></li>
+<li><strong>Charlemagne</strong> (viewing differences between physics): <a href="https://jonirons.net/code/go/charlemagne.html" target="_blank">https://jonirons.net/code/go/charlemagne.html</a></li>
+<li><strong>Hux</strong> (terminal editor): <a href="https://github.com/janos-ijgyarto/HuxQt/releases" target="_blank">https://github.com/janos-ijgyarto/HuxQt/releases</a> (currently Windows binaries only)</li>
+<li><strong>Aorta</strong> (DDS/parallax map creation): <a href="https://sourceforge.net/projects/aorta" target="_blank">https://sourceforge.net/projects/aorta</a></li>
+<li><strong>Default Infinity physics model:</strong> <a href="https://simplici7y.com/items/default-infinity-physics-model-2" target="_blank">http://simplici7y.com/items/default-infinity-physics-model-2</a></li></ul>
+
+<h2 id="resourcesm1"><em>Marathon 1</em> Content Editing for Aleph One</h2>
+
+It&rsquo;s not supported on modern OSes, with one partial exception: You can extract <em>M1</em> sound files&rsquo; contents by splitting them with Atque, but it won&rsquo;t re-merge them into a format Aleph One reads as <em>M1</em> sounds. The &lsquo;Classic OS&rsquo; resources below require a Mac or emulator running System 7 through 9. Setting one up is beyond this document&rsquo;s scope.
+<ul style="text-align: left;">
+<li><strong>Maps:</strong> Pfhorte (classic OS, <a href="http://archives2.bungie.org/m1.tools/pfhorte1.0d26.hqx" target="_blank">http://archives2.bungie.org/m1.tools/pfhorte1.0d26.hqx</a>)</li>
+<li><strong>Physics:</strong> Marathon Physics Model Editor (classic OS, <a href="http://archives2.bungie.org/m1.tools/MaraModelEdit1.1.sit.hqx" target="_blank">http://archives2.bungie.org/m1.tools/MaraModelEdit1.1.sit.hqx</a>)</li>
+<li><strong>Shapes:</strong> Pfhred (classic OS, <a href="http://archives2.bungie.org/m1.tools/pfhred.131.hqx" target="_blank">http://archives2.bungie.org/m1.tools/pfhred.131.hqx</a>)</li>
+<li><strong>Sounds and Terminals:</strong> ResEdit (classic OS, <a href="https://www.macintoshrepository.org/1317-resedit-2-1-3" target="_blank">https://www.macintoshrepository.org/1317-resedit-2-1-3</a>). Terminals are TEXT resources in the Marathon application. Explaining the terminal format is beyond the current scope of this guide, though I may cover it eventually.</li></ul>
+
+To make this content compatible with modern Aleph One, you must run it through <a href="https://en.wikipedia.org/wiki/MacBinary" target="_blank">MacBinary</a> (I&rsquo;ve never gotten this to work) or extract it from an emulator disk image with a program like <a href="https://www.macintoshrepository.org/7358-hfvexplorer-1-3-1-for-windows-" target="_blank">HFV Explorer</a> (the method I used for my remastered <a href="http://simplici7y.com/items/marathon-1-remastered-sounds-2" target="_blank"><em>Marathon 1</em></a> and <a href="https://hhas01.itch.io/trojan-se" target="_blank"><em>Trojan</em></a> sounds).
+
+<h2 id="resourcesother">Other Tutorials & Resources</h2>
+
+<p>I can&rsquo;t vouch for the accuracy of all of this info (besides the Github wiki), but start with the Forge manual and tutorials; they aren&rsquo;t 100% accurate (hence the errata below), but you need to familiarize yourself with the fundamentals before moving onto more advanced techniques. The rest of these resources may still be helpful, Hastur&rsquo;s Workshop especially – that should be your next step after finishing the tutorials.</p>
+<ul style="text-align: left;"><li><strong>Bungie&rsquo;s Forge & Anvil Manuals:</strong> <a href="https://marathon.bungie.org/story/manuals/Marathon-Infinity-Manual.pdf" target="_blank">https://marathon.bungie.org/story/manuals/Marathon-Infinity-Manual.pdf</a></li>
+<li><strong>Bungie&rsquo;s Forge Video Tutorials:</strong> <a href="https://youtu.be/E8yqfvNc0HM" target="_blank">https://youtu.be/E8yqfvNc0HM</a></li>
+<li><strong>Aleph One Github Wiki:</strong> <a href="https://github.com/Aleph-One-Marathon/alephone/wiki" target="_blank">https://github.com/Aleph-One-Marathon/alephone/wiki</a> <em>(the only still-extant Marathon wiki worth perusing in the slightest, and the only source of info almost </em>guaranteed<em> to be accurate)</em></li>
+<li><strong>Hastur&rsquo;s Workshop:</strong> <a href="https://citadel.lhowon.org/litterbox/Forge/hastursworkshop" target="_blank">https://citadel.lhowon.org/litterbox/Forge/hastursworkshop</a> (<em>Infinity</em>&rsquo;s creators&rsquo; advanced tips)</li>
+<li><strong>Additional Forge tutorials:</strong> <a href="https://citadel.lhowon.org/litterbox/Forge/index.html" target="_blank">https://citadel.lhowon.org/litterbox/Forge/index.html</a></li>
+<li><strong>Anvil references:</strong> <a href="https://citadel.lhowon.org/litterbox/Anvil/Index.html" target="_blank">https://citadel.lhowon.org/litterbox/Anvil/Index.html</a></li>
+<li><strong>File format info:</strong> <a href="https://gist.github.com/marrub--/98af41f36e15a277088b220a6a9f4244" target="_blank">https://gist.github.com/marrub--/98af41f36e15a277088b220a6a9f4244</a> <em>(note: parts of this now appear to be outdated, but parts may still be helpful)</em></li></ul>
+
+<h2 id="resourcescommunity">Marathon Communities & Resources</h2>
+
+<ul style="text-align: left;"><li><strong>Discord:</strong> <a href="https://discord.gg/c7rEVgY" target="_blank">https://discord.gg/c7rEVgY</a></li>
+<li><strong>The Pfhorums:</strong> <a href="https://pfhorums.com/" target="_blank">https://pfhorums.com/</a></li>
+<li><strong>Marathon Story Forums:</strong> <a href="http://forums.bungie.org/story/" target="_blank">http://forums.bungie.org/story/</a></li>
+<li><strong>Reddit:</strong> <a href="https://reddit.com/r/marathon/" target="_blank">https://reddit.com/r/marathon/</a></li>
+<li><strong>Marathon&rsquo;s Story Page:</strong> <a href="http://marathon.bungie.org/story" target="_blank">http://marathon.bungie.org/story</a> <em>(if you have story questions, for the love of Yrro, go here first &ndash; 90% of them can be answered with a quick search here)</em></li>
+<li><strong>Marathon Scenarios:</strong> <a href="http://lochnits.com/marathon/scenarios" target="_blank">http://lochnits.com/marathon/scenarios</a></li>
+<li><strong>Marathon Spoiler Guide:</strong> <a href="http://marathon.bungie.org/spoiler" target="_blank">http://marathon.bungie.org/spoiler</a></li>
+<li><strong>Dr John Sumner&rsquo;s Spoiler Guides:</strong> <a href="https://1drv.ms/u/s!AuD0MykSsmaRmx_NxpRgTRM69vgn?e=AplygX" target="_blank">https://1drv.ms/u/s!AuD0MykSsmaRmx_NxpRgTRM69vgn?e=AplygX</a></li>
+<li><strong>Marathon Vidmasters&rsquo; Page:</strong> <a href="http://marathon.bungie.org/vidmaster" target="_blank">http://marathon.bungie.org/vidmaster</a></li>
+<li><strong>Vidmaster Films on YouTube:</strong> <a href="https://www.youtube.com/c/MarathonVidmaster/" target="_blank">https://www.youtube.com/c/MarathonVidmaster/</a>, <a href="https://www.youtube.com/user/VidmastersChallenge" target="_blank">https://www.youtube.com/user/VidmastersChallenge</a> <em>(full disclosure: I run the first channel)</em></li>
+<li><strong>Wikipedia:</strong> <a href="https://en.wikipedia.org/wiki/Marathon_Trilogy" target="_blank">https://en.wikipedia.org/wiki/Marathon_Trilogy</a></li>
+<li><strong>TV Tropes:</strong> <a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/Marathon" target="_blank">https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/Marathon</a> <em>(Bungie games),</em>
+<a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/MarathonExpandedUniverse" target="_blank">https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/MarathonExpandedUniverse</a> <em>(fan scenarios)</em></li></ul>
+
+<h1 id="general">General</h1>
+<h2 id="welandsetup">Weland Setup</h2>
+
+<ul>
+  <li>Setting up Weland can be confusing; this doesn&rsquo;t aim to be an exhaustive list of the issues you may face in doing so. I can&rsquo;t possibly hope to provide that here; you&rsquo;ll find people who can help on the <a href="https://discord.gg/c7rEVgY">Discord</a>.</li>
+  <li>You&rsquo;ll need either <strong>Gtk#</strong> or <strong>Mono</strong>, depending on your OS; the readme tells you which to get. (You&rsquo;ll also need <strong>.NET</strong> on Windows; however, Windows 10 and 11 should already have this installed.) Installing the wrong one sometimes seems to make Weland not work, and they&rsquo;re on the same webpage, so users can get one thinking they&rsquo;ve gotten the other. Read carefully!</li>
+  <li>After getting Weland to start, you&rsquo;ll next want to set up visual mode to function from within Weland. Go to <strong>Edit > Preferences</strong>. You&rsquo;ll want the <strong>Shapes</strong> and <strong>Visual Mode</strong> segments to resemble these settings:</li>
+
+<p class="centred"><img src="welandprefs.png" alt="Weland preferences" title="Weland preferences" height="184" width="316" /></p>
+
+    <ul>
+      <li><strong>Shapes File:</strong> valid <em>Marathon 2</em>/<em>Infinity</em>-format shapes. <em>Marathon 1</em> shapes probably won&rsquo;t work, but I haven&rsquo;t tested this. This affects what Weland uses in visual mode and the overhead texture view.</li>
+      <li><strong>Aleph One:</strong> the Aleph One app. EZ.</li>
+      <li><strong>Scenario:</strong> the folder you use within Aleph One to run the scenario you&rsquo;re editing. This is <em>usually</em> the folder with <strong>Map</strong>, <strong>Shapes</strong>, <strong>Images</strong>, and <strong>Sounds</strong>, but <em>Rubicon X</em> is an annoying exception: it uses a script to put these in a <strong>Rubicon Data</strong> subfolder. Use the containing <strong>Rubicon X</strong> folder, <em>not</em> Rubicon Data, for <em>Rubicon</em>.</li>
+    </ul>
+
+  <li>Next, you&rsquo;ll need to set up an editor for visual mode. The two options are currently Visual Mode.lua and Vasara. Whichever one you choose must be accessible by the scenario you wish to edit.</li>
+    <ul>
+      <li><strong>Visual Mode.lua</strong> is a solo Lua script; this should go in the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank"><strong>Aleph One user data folder</strong></a>.</li>
+      <li><strong>Vasara</strong> is a plugin, so you&rsquo;ll want it in the <strong>Plugins</strong> folder (if there isn&rsquo;t one already, make a folder called <strong>&lsquo;Plugins&rsquo;</strong>. It can go either in the scenario plugins folder (<strong>Marathon Infinity\Plugins\Vasara.zip</strong> in our <em>Infinity</em> example), or in the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank"><strong>Aleph One user data</strong></a> plugins folder to make it accessible to all scenarios (which may be more convenient if you map for several scenarios, though you may have to turn it off in the main games).</li>
+    </ul>
+
+  <li>Then, click <strong>&lsquo;Edit Preferences&rsquo;</strong>. In Aleph One, click <strong>Settings > Environment</strong>. These are separate from the standard scenario preferences; they only affect the game&rsquo;s behavior when it&rsquo;s launched from Weland.
+    <ul>
+      <li><strong>For Visual Mode.lua:</strong> check <strong>&lsquo;Use Solo Script&rsquo;</strong> if it isn&rsquo;t already, then select <strong>&lsquo;Script File&rsquo;</strong> and find Visual Mode.lua in Aleph One&rsquo;s user data folder (Aleph One usually navigates from this folder by default).</li>
+      <li><strong>For Vasara:</strong> Select it under <strong>Plugins</strong>; no other plugins that use solo Lua should be active, and <strong>&lsquo;Use Solo Script&rsquo;</strong> should be unchecked. If it doesn&rsquo;t show up, you may have copied it to the wrong location.</li>
+    </ul>
+  <li>In either case, now select <strong>&lsquo;Accept&rsquo;</strong>, quit out of Aleph One, and select <strong>&lsquo;OK&rsquo;</strong> in the Weland dialog box. If you&rsquo;ve done everything correctly, you should now be able to launch visual mode in much the same way it launched from within Forge. If not, reread the above, try to ensure everything is set up as shown here, and if you still can&rsquo;t solve the issue, you may wish to ask for help at one of the above resources.</li>
+</ul>
+
+<h2 id="ShapeFusion">ShapeFusion</h2>
+
+<ul>
+  <li>You can rename ShapeFusion resources by adding a file called <strong>DefaultNames.txt</strong> to your ShapeFusion folder. (You can also, of course, keep multiple ShapeFusion installs with different DefaultNames.txt files in each folder if you need versions for multiple scenarios.) <a href="https://cdn.discordapp.com/attachments/430075740889808908/1024204236126433330/DefaultNames.txt" target="_blank">This version of DefaultNames.txt</a> incorporates complete lists of the Lua mnemonics for all possible resources, with a few specific changes, all detailed at the start of the file. Feel free to use these as needed to create names for your own scenarios.</li>
+  <li>ShapeFusion has most of <strong>Anvil</strong>&rsquo;s functionality, plus some functionality Anvil lacks (e.g. the ability to add new sound slots or alter the frames in a sequence). However, it lacks two major features:</li>
+    <ul>
+      <li>Anvil&rsquo;s help balloons. I compiled them in a <a href="https://cdn.discordapp.com/attachments/669769856974979093/1022294371170783262/Anvil_Help_Strings.txt" target="_blank">text file</a>, but some of them lack identifiers. I&rsquo;ll rectify this soon. Their order often matches their positioning in Anvil (and ShapeFusion), but might not always.</li>
+      <li>It can&rsquo;t create new physics models. The physics model that ships with Infinity is a Marathon 2 physics model and thus lacks SMG and VacBob slots, but <a href="http://simplici7y.com/items/default-infinity-physics-model-2" target="_blank">Simplici7y</a> has a complete Infinity physics model.</li>
+    </ul>
+  <li>An annoying bug displays the <strong>Scale Factors</strong> of new frames as being above 0, but actually sets them to 0. The game doesn&rsquo;t display frames with 0 scale factors (i.e., &lsquo;multiply size by 0&rsquo;). Be sure to fix this.</li>
+</ul>
+
+<h1 id="shapes"><h1>Shapes & Palettes</h1>
+<h2 id="clutrestrictions">Restrictions on Number of Colors</h2>
+
+<p>Palettes (also called <strong>CLUTs</strong>, short for <strong>Color Look-Up Tables</strong>, the name for these resources in MacOS&rsquo; resource fork in the classic OS) can pose particular problems. One particular issue occurs with non-standard CLUTs.</p>
+
+<ol>
+  <li>We&rsquo;re restricted to 256 colors not just <em>within one palette</em> but <em>across all eight palettes within a collection</em>. If there are more than 256, then once it runs out, Aleph One will simply use the closest color it encounters among the first 256.</li>
+  <li>Aleph One counts colors that are imperceptibly different as separate colors. For instance, it regards #0100FF (red 1, green 0, blue 255) as different from #0200FF (red 2, green 0, blue 255).</li>
+  <li>Unlike Anvil (which tried to restrict itself to vanilla-safe colors unless you specifically enabled a setting to override this), ShapeFusion isn&rsquo;t guaranteed to use the same colors each time it creates a color ramp unless each ramp starts and ends with the same color and contains the same number of colors.</li>
+</ol>
+
+<p>It&rsquo;s a mess. Two ways to ensure you&rsquo;re getting the 256 colors you want:</p>
+
+<ol>
+  <li>Export all color tables in a collection to GIMP format (.gpl) and go through them with a fine-toothed comb. GIMP palettes are human-readable and can be edited in any text editor; each color is simply listed in RGB format, with values ranging from 0 to 255. After weeding out the unwanted near-identical colors across palettes, save and reimport.</li>
+  <li>Simply use all 256 colors you want in CLUT 0 and rearrange them as desired in the others if needed. Be warned, however, that ShapeFusion currently has no option to reduce the number of colors per CLUT, should you decide you want fewer. You&rsquo;d currently need to open the shapes file in Anvil or Hakvil (using an emulator or a classic Mac) and adjust the palettes there.</li>
+</ol>
+
+<p>Note that using non-vanilla palettes causes 8-bit software mode to look very, very stupid, in case anyone even cares about that in a scenario created in 2022. I don&rsquo;t actually know how it selects the colors for that.</p>
+
+<h2 id="transparency">Transparency & Landscapes</h2>
+
+<p><em>Marathon</em> counts the first three colors of each CLUT as transparent, whether you want it to or not. Why does it need three? Why not just one? In all likelihood, only Jason Jones might be able to answer this question, assuming he even remembers the answer. This poses problems with custom landscape CLUTs. Why do landscapes even have transparency? Another question Jason Jones probably doesn&rsquo;t recall the answer to. The first three colors in a landscape CLUT are still considered transparent, and in OpenGL mode, <em>Marathon</em> changes anything it regards as transparent to show up as white.</p>
+
+<p>As a result, for all practical purposes, landscape CLUTs are restricted to 253 colors, so when generating landscape CLUTs, you must account for transparency and fill the CLUT&rsquo;s first three colors with garbage that won&rsquo;t show up in the landscape. Alternately (in Photoshop), you can:</p>
+
+<ol>
+<li>Convert to 253-color indexed color.</li>
+<li>Convert back to RGB.</li>
+<li>Using <strong>Forced &gt; Custom</strong> with #0000FF, #FF00FF, and #00FFFF, convert to 256-color indexed color.</li>
+<li>Export the new CLUT.</li>
+</ol>
+
+<p>Either way. (I don&rsquo;t use GIMP, but I&rsquo;m guessing you can do something similar by making a 253-color bitmap, exporting the CLUT, and editing it in a text editor.)</p>
+
+<h2 id="sequencetiming">Sequence Timing & Film Compatibility</h2>
+
+<ul><li>Ideally, &lsquo;Transfer mode period&rsquo; should equal &lsquo;Frames per view&rsquo; times &lsquo;Number of frames&rsquo;.</li>
+
+<li>Changing a sequence&rsquo;s timing, loop frame, or key frame can desync films. (Probably obvious.)</li>
+
+<li>Another surprising factor affecting film sync: &lsquo;Display a random frame&rsquo; (even if only one frame is defined) is different from &lsquo;Animation with 1 view&rsquo; (or any other number). Altering this alters the PRNG when the game loads maps, since it runs the PRNG for each sequence that uses &lsquo;Display a random frame&rsquo;, even if it only has one frame. Thus, changing a sequence from or to &lsquo;Display a random frame&rsquo; desyncs old films made with the same shapes. (I haven&rsquo;t tested whether this also desyncs network games.)</li></ul>
+
+<h1 id="8bitsoftware">8-bit Software Mode</h1>
+
+<p>Aleph One 1.4 restored 8-bit software mode after it had been unavailable for over a decade. I&rsquo;ve given this its own section because it doesn&rsquo;t strictly belong in either the shapes section or the mapmaking section; it causes potential havoc in territory related to both ShapeFusion (shapes sequences) and Atque (images files, map resources).
+
+<h2 id="weaponsinhand">&lsquo;Weapons in Hand&rsquo; Sequences</h2>
+
+<p>For years, Aleph One didn&rsquo;t have 8-bit software mode, so &lsquo;8-bit color&rsquo; and &lsquo;true color&rsquo; sequences being out of alignment wasn&rsquo;t a problem. Since it does again, if a sequence is present in one and not the other, a physics model calling said sequence will crash Aleph One (or cause an assertion failure; I forget which, but either way, it closes the game). Plus, if a sequence has a different timing between the two versions of a collection, it&rsquo;ll desync films and may desync network games if one player uses 8-bit software mode and the other doesn&rsquo;t.</p>
+
+<p>As tempting as it is to tell players not to use 8-bit software mode, some will inevitably disregard it out of ignorance, and others out of pure spite (&lsquo;You can&rsquo;t tell me what to do&rsquo;). The best solution is to make sure each sequence in both versions has the same sequence type, frames per view, ticks per frame, loop frame, key frame, transfer mode period, and frame sound, then update one anytime you update the other.</p>
+
+<p>By default, the only other collections with &lsquo;true color&rsquo; versions are the landscape palettes, and it&rsquo;s very rare (though not unthinkable) for something to call one of the sequences in these (assuming any are even defined). I think a classic Mac utility could create &lsquo;true color&rsquo; versions of other collections (all 32 collections can have them; it&rsquo;s just that, by default, only the Weapons in Hand and Landscapes did), and if a shapes file had these, their sequences should align between &lsquo;8-bit&rsquo; and &lsquo;true color&rsquo; wherever they&rsquo;re defined.</p>
+
+<h2 id="8bitsoftwareimages">The Images File</h2>
+
+<p>The Images file should have at least images 1100 and 1101 (&lsquo;enabled&rsquo; and &lsquo;disabled&rsquo; versions of the main menu) and 1700 (the vanilla HUD). It also needs CLUT resources with the same IDs. If it lacks images 1100 and 1101, the menu will show up black if a player selects 8-bit software, and if they then quit the game, they&rsquo;ll either need to delete their scenario preferences or to manually edit them to change the graphics settings (on the very slim chance that they even know how to do this). Effectively, this will render the scenario unplayable for many players.</p>
+
+<p>For full reference, the resources in Images correspond to the following:</p>
+
+<ul><li><strong>1000:</strong> Opening splash screen. If 1001, 1002, 1003, etc., are defined, the game subsequently displays each before loading the main menu. (Please don&rsquo;t overdo this.)</li>
+<li><strong>1100:</strong> &lsquo;Disabled&rsquo; main menu.</li>
+<li><strong>1101:</strong> &lsquo;Enabled&rsquo; main menu.</li>
+<li><strong>1400, 1401, 1402, etc.:</strong> Credits pages. The game loads as many consecutive resources as are defined.</li>
+<li><strong>1700:</strong> Default HUD.</li></ul>
+
+<p>Add 1,000 to each of these numbers for the &lsquo;24-bit&rsquo; versions. It&rsquo;s ideal to have separate 8-bit and 24-bit versions, as IIRC, Photoshop and GIMP dither images much better than Aleph One does.</p>
+
+<h2 id="8bitchapterscreens">Chapter Screens</h2>
+
+<p>The game won&rsquo;t display a chapter screen in 8-bit software mode unless it has an associated CLUT resource (sharing the chapter screen&rsquo;s resource ID). Chapter screens go from 1500 (for level 0) to 1599 (for the end screen or, God help us all, level 99). Add 10,000 for &lsquo;24-bit&rsquo; versions. If there&rsquo;s an associated sound (sharing the 15xx ID), the game plays it. This includes ending screens (though Aleph One also plays the music file, so it&rsquo;s probably not worth including a sound 1599 unless you plan for your scenario not to have opening music).</p>
+
+<h1 id="mapmaking">Mapmaking</h1>
+<h2 id="forgeerrata">Forge Manual Errata & Omissions</h2>
+
+<ul>
+  <li><strong>Platforms:</strong> The &lsquo;Locked Door&rsquo; flag is broken and doesn&rsquo;t do anything.</li>
+  <li><strong>Lights:</strong> The &lsquo;Stateless&rsquo; flag is broken and doesn&rsquo;t do anything.</li>
+  <li><strong>Sound Objects:</strong> &lsquo;Is On Platform&rsquo; overrides the selected sound with the platform&rsquo;s ambient sound.</li>
+  <li><strong>Polygon Types:</strong> &lsquo;Invisible Monster Trigger&rsquo; behaves like a &lsquo;Dual Monster Trigger&rsquo;: it activates all monsters in a zone, not just teleporting ones.</li>
+  <li>Only players can trigger <strong>Platform On/Off Triggers</strong>, but both players and monsters can trigger <strong>Light On/Off Triggers</strong>.</li>
+  <li>Monsters can&rsquo;t move over <strong>Teleporters</strong> and won&rsquo;t cross them (this doesn&rsquo;t apply to <strong>Automatic Exits</strong>).</li>
+  <li>Monsters never drop items if they die on <strong>Item Impassable</strong>, <strong>Monster & Item Impassable</strong>, <strong>Platform</strong>, or <strong>Teleporter</strong> polygons, or on the edges of steps/ledges/cliffs.</li>
+</ul>
+
+<h2 id="generalmapmaking">General Notes</h2>
+
+<ul>
+  <li>Test your maps extensively on Total Carnage. If you&rsquo;re not good enough, get someone who is to test it. If you <em>are</em> good enough, note that you have a sort of &lsquo;home field advantage&rsquo; in already knowing the maps and your intended strategies &ndash; other players will find your maps harder than you think they will. Also, if something annoys you, it&rsquo;ll annoy other players ten times more.</li>
+  <li>Monsters can&rsquo;t move through lines shorter than their diameters, as <a href="https://citadel.lhowon.org/litterbox/Forge/hastursworkshop/things2.html" target="_blank">Hastur&rsquo;s Workshop explains</a>. This link also features plenty of other vital information about monster path building.</li>
+  <li>You can override monster activation limits with MML scripts. If you&rsquo;re making a scenario, override this in your scenario&rsquo;s Scripts folder. The code for this (which also raises some limits on rendered objects) is:
+<pre>&lt;marathon&gt;
+    &lt;dynamic_limits&gt;
+        &lt;objects value="1024"/&gt;
+        &lt;monsters value="512"/&gt;
+        &lt;paths value="512"/&gt;
+        &lt;projectiles value="256"/&gt;
+        &lt;effects value="2048"/&gt;
+        &lt;rendered value="1024"/&gt;
+        &lt;local_collision value="1024"/&gt;
+        &lt;global_collision value="1024"/&gt;
+    &lt;/dynamic_limits&gt;
+&lt;/marathon&gt;</pre>
+  Alter as needed. By contrast, if mapping for <em>Infinity</em>, I recommend merging in MML. You can do this by saving the above script as a TEXT resource (i.e., <strong>Resources/TEXT/10000.txt</strong>) and calling it in TEXT resource 128 (i.e., <strong>Resources/TEXT/00128.txt</strong>):</li>
+<pre>&lt;marathon_levels&gt;
+    &lt;level index="0"&gt;
+        &lt;mml resource="10000"/&gt;
+        &lt;music file="Eternal-Data/Music/Craig/SwirlsPiano.ogg"/&gt;
+    &lt;/level&gt;
+&lt;/marathon_levels&gt;</pre>
+  Or by including MML scripts in each individual level&rsquo;s folder (i.e., <strong>00 The Far Side of Nowhere/Monster Limits.mml</strong>). Either method should work fine, though I think the latter is preferred for net maps.</li>
+  <li>The above code excerpt also shows how to merge in music (i.e., the &lsquo;music file&rsquo; line).</li>
+  <li>Aleph One removes the 1,024 polygon limit, but a factor called map indices still limits map complexity, as Aleph One developer treellama explained <a href="http://pfhorums.com/viewtopic.php?p=73316#p73316" target="_blank">on the Pfhorums</a> (though the limit is now 65,535, not 32,767). The tl;dr is:
+    <ul>
+      <li>Use as few sound objects as possible (but see below).</li>
+      <li>Avoid clusters of small polygons and/or short lines.</li>
+      <li>If you can cut out a line or polygon without affecting the map&rsquo;s appearance or monster path building (see the Hastur&rsquo;s Workshop explanation above), always cut it out.</li>
+    </ul>
+  </li>
+  <li>There are several hazards with the <strong>Activates Only Once</strong> flag for platforms (i.e., lifts and doors). Misusing this is one of the most common causes of incompletable levels.
+    <ul>
+      <li>These should always, <em>always</em>, <strong><em>ALWAYS</em></strong> have <strong>Can&rsquo;t Deactivate Externally</strong> checked.</li>
+      <li>Also, if such a door starts as <strong>Extended</strong>, it should deactivate either <strong>At Each Level</strong> or <strong>Never.</strong></li>
+      <li>Meanwhile, lifts that activate <strong>Only Once</strong> should probably deactivate <strong>Never</strong>.</li>
+      <li>The only <em>possible</em> acceptable exception to this is missable secrets, but I&rsquo;d strongly discourage even this. If you must have one, provide a way out for players caught on the wrong sides of doors. Make sure any teleporters are usable (i.e., test them in-game).</li>
+    </ul>
+  </li>
+  <li>Speaking of which, teleporters (and automatic exit polygons) behave oddly with media. If there&rsquo;s a liquid on the teleporter, it probably shouldn&rsquo;t have a current.</li>
+  <li>It isn&rsquo;t necessary to move the player&rsquo;s start point to texture maps in Weland; just select the arrow, hold down X, make sure caps lock is off, and click on a polygon to set a start point.</li>
+</ul>
+
+<h2 id="tagsareterrible">Tags Are Terrible</h2>
+
+<ul><li>Tags must be possible to activate when players activate them. Thus, if a (tag switch/wires/chip slot) controls only something controllable by other means that:
+  <ol>
+    <li>could be active when a player activates the tag, and/or</li>
+    <li>activates only once,</li>
+  </ol>
+  That can cause an unbeatable level.</li>
+  <li>If a player deactivates a tag switch set to <strong>Repair</strong> and can&rsquo;t reactivate it, they can&rsquo;t finish the mission. Tag switches can&rsquo;t be activated if nothing they control can be activated; rather than risk this, consider never <del>using them</del> marking them as <strong>Repair</strong>. <em>Usually</em> <strong>Repair</strong>-safe:
+    <ul><li>Destructible wires (they stay toggled).</li>
+      <li>Platform switches (the game remembers they were toggled even if they deactivate).</li>
+      <li>Light switches (they can be reactivated unless they&rsquo;re <strong>Destructible</strong> or <strong>Light Dependent</strong>).</li>
+    </ul>
+  </li>
+  <li>Chip slots are a &lsquo;maybe&rsquo; on the <strong>Repair</strong> count. Unless set to the &lsquo;dummy&rsquo; tag 0, a chip slot&rsquo;s tag must control something, or it&rsquo;ll consume chips without activating (which also renders levels unbeatable).</li>
+  <li>These bugs can interact, as well. If a chip controls a tag that can&rsquo;t activate, it can&rsquo;t be marked <strong>Repair</strong>, and it will eat any chips a hapless player tries to insert.</li>
+  <li>Avoid having multiple (chip slots/wires/tag switches) control the same tag.</li>
+  <li>There are also texturing issues (see below). Basically, tags are awful, and you should avoid them unless they&rsquo;re absolutely necessary. They often aren&rsquo;t; e.g., platforms can activate adjacent platforms and lights. Make underground platforms if needed (extending <strong>From Floor</strong> to reduce the odds of motion glitches); they may look ugly in Weland, but players won&rsquo;t see them. If you don&rsquo;t want to see them in the visual mode map, you can even give them landscape textures (just avoid doing that on walls that players can see the other side of, or they&rsquo;ll disappear from the map).</li>
+</ul>
+
+<h2 id="ambientsound">Ambient Sound</h2>
+
+<ul>
+  <li>Platforms or doors with associated ambient sounds should have sound objects marked <strong>&lsquo;Is On Platform&rsquo;</strong> so that their &lsquo;moving&rsquo; sounds don&rsquo;t suddenly cut off when players walk off the platform, which sounds unnatural. This doesn&rsquo;t apply to platforms without ambient sounds (i.e., S&rsquo;pht Door, S&rsquo;pht Platform Silent).</li>
+  <li>Liquids should have the correct associated sound objects near their edges. Failure to include these causes sudden cutoffs when players move from polygons with liquids to polygons without them (or vice versa). These should be marked <strong>&lsquo;Floats&rsquo;</strong> so they align to their liquids&rsquo; heights; if they fall below the liquids, they&rsquo;ll become almost inaudible, which defeats the purpose of placing them.</li>
+  <li>If you place ambient sounds on polygons, boundaries between different ambient sounds (or between ambient sounds and silence) should have sound objects to avoid sudden cutoffs when players move between &lsquo;sound boundaries&rsquo;. This also results in directional sound, which enhances immersion.</li>
+  <li>At the same time, avoid overusing sound objects, which eat up map indices worst of all factors that use them: one per polygon within a 10-world unit X/Y radius (Z is irrelevant). If this all sounds like a delicate juggling act, it is! No one said making maps for an ancient engine was <em>easy</em>. I recommend avoiding complicated &lsquo;sound boundaries&rsquo; or too many discrete polygon sounds per level.</li>
+</ul>
+
+<h2 id="texturingissues">Texturing Issues in Visual Mode.lua and Vasara</h2>
+
+<ul>
+  <li>When you exit visual mode (or type <strong>.save level</strong>), platforms that extend <strong>From Ceiling</strong> or <strong>From Both</strong> should be in the same position they start the level in, or you&rsquo;ll get texture misalignments. (A forthcoming release of Aleph One will fix this and a related platform alignment bug that occurred even in the original engine; you can get these fixes early by building it from master.)</li>
+  <li>When you exit visual mode, tags should be in the state they&rsquo;re meant to start the level in. Thus, if you tabbed a tag switch that starts the level inactive so you could open some doors, reset the tag to inactive. Take special care with wires and chip insertion switches &ndash; messing them up can render levels uncompletable. For this reason and more (see above), I&rsquo;d recommend avoiding tags where possible.</li>
+  <li>Walking on a <strong>Must Be Explored</strong> polygon (or even looking at it if <strong>Exploration (M1)</strong> is set) resets it to <strong>Normal.</strong> Be sure to reset these after texturing (or just don&rsquo;t set them until you&rsquo;ve finished texturing).</li>
+  <li>Frame interpolation can cause textures to jitter if you place them without paving first. Some players have also reported that placing textures without first paving can cause crashes (I haven&rsquo;t experienced this). However, paving occasionally crashes Weland (I haven&rsquo;t isolated the cause, but it seems to be an index mismatch), so it&rsquo;s ideal to save, pave, then go into visual mode.</li>
+  <li>By necessity, texturing always loads all texture sets, so you may want to avoid using hi-res textures while texturing. If you must use them, I recommend keeping as few other programs open as possible.</li>
+</ul>
+
+<h3 id="vasaratexturing">Further Texturing Issues in Vasara</h3>
+
+<ul>
+  <li>Vasara gets weird with more than 56 lights. If you have both &lsquo;Apply Light&rsquo; and &lsquo;Apply Texture&rsquo; selected with a light &#8805; 56, the HUD disappears; reduce the light value to something &lt; 56 and hit the action key to restore it. If one is selected, but not the other, the HUD functions normally.</li>
+</ul>
+
+<h2 id="m1polygons">Those Weird Marathon 1 Polygon Types</h2>
+<ul>
+  <li><strong>Superglue</strong>, <strong>Glue Trigger</strong>, and <strong>Glue</strong> only function if <strong>Glue</strong> is selected under <strong>M1 Compatibility</strong> in the <strong>Map Parameters</strong>.</li>
+  <li>If <strong>Ouch Is Lava</strong> is selected, monsters won&rsquo;t leave corpses on <strong>Minor Ouch</strong> or <strong>Major Ouch</strong> polygons; however, those polygons will still damage players and monsters even if it isn&rsquo;t.</li>
+  <li><strong>Minor Ouch</strong> behaves like <em>M1</em> lava: it only damages monsters and players that are touching the ground.</li>
+  <li><strong>Major Ouch</strong> behaves like <em>M1</em> Pfhor goo: it damages monsters and players even if they&rsquo;re airborne.</li>
+  <li>Monsters on <strong>Glue</strong> act deaf (but not blind) until players walk onto their polygons (or they&rsquo;re activated by other means). Sounds don&rsquo;t enter Glue polygons but can leave them.</li>
+  <li>A <strong>Glue Trigger</strong> activates all monsters that aren&rsquo;t on or beyond Superglue or Zone Borders.</li>
+  <li><strong>Superglue</strong> is <em>M1</em>&rsquo;s zone border equivalent; it stops Glue Trigger monster activation (as do Zone Borders).</li>
+  <li>If <strong>Exploration (M1)</strong> is selected as a mission type, players must merely look at <strong>Must Be Explored</strong> polygons to complete the mission, rather than walk on them (as in <em>M2</em>/<em>Infinity</em>). As mentioned above, looking at these in visual mode resets them to <strong>&lsquo;Normal&rsquo;</strong>, so be careful.</li>
+</ul>
+
+<h2 id="directionality">Directionality</h2>
+<table>
+  <thead>
+    <tr>
+      <td class="right">Angle</td>
+      <td>Liquids</td>
+      <td>Objects</td>
+      <td>Lines</td>
+      <td>Sounds</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="integer" style="font-weight: bold;">0&deg;</td>
+      <td>East to west</td>
+      <td>Faces east</td>
+      <td>West to east</td>
+      <td>From west</td>
+    </tr>
+    <tr>
+      <td class="integer" style="font-weight: bold;">90&deg;</td>
+      <td>South to north</td>
+      <td>Faces south</td>
+      <td>South to north</td>
+      <td>From north</td>
+    </tr>
+    <tr>
+      <td class="integer" style="font-weight: bold;">180&deg;</td>
+      <td>West to east</td>
+      <td>Faces west</td>
+      <td>East to west</td>
+      <td>From east</td>
+    </tr>
+    <tr>
+      <td class="integer" style="font-weight: bold;">270&deg;</td>
+      <td>North to south</td>
+      <td>Faces north</td>
+      <td>North to south</td>
+      <td>From south</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="circles">Circles and the Custom Grid</h2>
+
+<p>For the purposes of this tutorial, we are taking the term &lsquo;circle&rsquo; to mean &lsquo;regular polygon with sufficiently many sides to look like a circle&rsquo;. Aleph One is not actually capable of curves.</p>
+
+<p>There are a few ways to construct circles in Weland. The simplest is probably to use shift+alt and draw points of equal length out from a central area. This will give you a regular sixteen-sided polygon, and for many cases, this is all you&rsquo;ll need. However, in many cases, you may want more points. There are a few options here. There&rsquo;s a <a href="http://simplici7y.com/items/circle-plugin-for-weland" target="_blank">circle plugin</a>, which is fine if you&rsquo;re OK doing a bit of math. Another option that doesn&rsquo;t require a plugin (but still requires a bit of math) is the custom grid, this little icon you may not have bothered to try out before:</p>
+
+<p class="centred"><img src="gridicon.png" width="647" height="73" alt="Custom Grid Icon" title="Custom Grid Icon"/>
+
+<p>When you click it, it brings up some sliders that may at first look intimidating. (I&rsquo;ve resized parts of this image to make its contents legible, but it&rsquo;s otherwise untouched.)</p>
+
+<p class="centred"><img src="gridsliders.png" width="740" height="35" alt="Custom Grid Sliders" title="Custom Grid Sliders"/>
+
+<ul>
+  <li><strong>Reset:</strong> Restores the default grid settings.</li>
+  <li><strong>Rotation:</strong> How much to rotate the grid, from 0&deg; to 90&deg;. (90&deg; isn&rsquo;t quite accurate; I recommend using 0&deg; instead.)</li>
+  <li><strong>Scale:</strong> The amount by which to multiply the size of the standard grid, from 0.125 (one-eighth) to 8.</li>
+  <li><strong>Origin:</strong> The point around which to center the grid&rsquo;s rotation and scale. This is input using internal units (1,024 IU = 1 WU), so -32,768 (-32 WU) to 32,767 (&asymp;31.999 WU).</li>
+  <li><strong>1, 2, 3, 4, 5, 6:</strong> Grid presets. <strong>2</strong> through <strong>6</strong> persist after you quit Weland, apart from the origin point (use them for the grids you use most often); <strong>1</strong> resets when you exit.</li>
+  <li>If you select a line, <strong>&lsquo;Reset&rsquo;</strong> becomes <strong>&lsquo;Set All&rsquo;</strong>, which sets the <strong>Rotation</strong>, <strong>Scale</strong>, and <strong>Origin</strong> to match, respectively, the line&rsquo;s angle, its length (give or take an internal unit), and its origin point (i.e., the first point drawn); likewise,
+    <ul>
+      <li>Clicking <strong>&lsquo;Set&rsquo;</strong> for <strong>&lsquo;Rotation&rsquo;</strong> matches the line&rsquo;s angle.</li>
+      <li>Clicking <strong>&lsquo;Set&rsquo;</strong> for <strong>&lsquo;Scale&rsquo;</strong> matches the line&rsquo;s length (again, give or take an internal unit).</li>
+      <li>Clicking <strong>&lsquo;Set&rsquo;</strong> for <strong>&lsquo;Origin&rsquo;</strong> matches the line&rsquo;s origin point.</li>
+    </ul></li>
+  <li>Similarly, clicking <strong>&lsquo;Set&rsquo;</strong> with a point selected sets the point as the origin.</li>
+  <li>Therefore, if you need to set a custom <strong>Origin</strong>, make sure you have neither a line nor a point selected; if you need to set a custom <strong>Rotation</strong> or <strong>Scale</strong>, make sure you don&rsquo;t have a line selected.</ul>
+
+<p>For our &lsquo;circle&rsquo;, <strong>Origin</strong> will match its center and <strong>Scale</strong> will match its radius (at its vertices, anyhow). <strong>Rotation</strong> will vary, as we&rsquo;ll see. I&rsquo;ll demonstrate how to draw a 24-sided circle. We&rsquo;ll leave Origin as 0, 0. We&rsquo;ll start <strong>Rotation</strong> from 0&deg;. For <strong>Scale</strong>, we&rsquo;ll use the seemingly random number 3.831. Press 4 on the keyboard to get the grid to show at 1x size, then draw points out from (0, 0) in all four cardinal directions. We should have something like:</p>
+
+<p class="centred"><img src="circle0.png" width="550" height="546" alt="0&deg; Circle Vertices" title="0&deg; Circle Vertices"/>
+
+<blockquote><strong>Protip:</strong> If you&rsquo;re having trouble finding (0, 0), you can rotate the grid forward and backward (it always rotates around the center point); or edit one point by double-clicking it; or start from 15&deg; and work back around to 0&deg;. (I don&rsquo;t recommend using a <strong>Rotation</strong> of 90&deg;; it&rsquo;s not quite accurate.)</blockquote>
+
+<p>From here, we must rotate the grid by regular increments (this might be the trickiest part). 360&deg; (the span of a circle) divided by 24 points (the number of vertices we&rsquo;re using) gives us 15&deg; increments, so our next angle is 15&deg;. Set <strong>Rotation</strong> to 15&deg; and draw lines out from the center. Rotating by another 15&deg; gives us 30&deg;, then 45&deg;, then 60&deg;, then 75&deg;. (We could do this with fewer rotations, but we&rsquo;ll save that for later.) All these steps are shown below.</p>
+
+<p class="centred"><img src="circle1.png" width="124" height="124" alt="15&deg; Circle Vertices" title="15&deg; Circle Vertices"/>
+<img src="circle2.png" width="124" height="124" alt="30&deg; Circle Vertices" title="30&deg; Circle Vertices"/>
+<img src="circle3.png" width="124" height="124" alt="45&deg; Circle Vertices" title="45&deg; Circle Vertices"/>
+<img src="circle4.png" width="124" height="124" alt="60&deg; Circle Vertices" title="60&deg; Circle Vertices"/>
+<img src="circle5.png" width="124" height="124" alt="75&deg; Circle Vertices" title="75&deg; Circle Vertices"/></p>
+
+<p>We now have our circle&rsquo;s points. Our next step is to draw our lines. It&rsquo;ll probably help to disable the grid or to reduce the grid size (i.e., press 1 on the keyboard).</p>
+
+<p class="centred"><img src="circle6.png" width="248" height="248" alt="Drawing the Lines of Our &lsquo;Circle&rsquo;"/></p>
+
+<p>The next task is to fill the circle (assuming we wish to do that). It&rsquo;s an inefficient allocation of map indices to fill all 24 triangles when we can use more sides per polygon; here, we can divide our circle into quadrants to get eight sides per polygon, which is perfect.</p>
+
+<p class="centred"><img src="circle7.png" width="248" height="248" alt="Filling Our &lsquo;Circle&rsquo;"/></p>
+
+<p>Now, some notes:</p>
+
+<ol>
+  <li>If we select one of our circle&rsquo;s outer lines, we&rsquo;ll see why 3.831 was our <strong>Scale</strong>: they&rsquo;re all 1 or 0.999 WU long. A long list of radii and rotations that produce 1 WU-long sides can be found on the next page.</li>
+  <li>Not using the center as one of our vertices could, in some cases, allow us to fill our circle with fewer polygons; however, it could also result in acute angles, which often cause bouncy walls. In this specific case, four polygons is the fewest we could get away with.</li>
+  <li>I mentioned Shift+Alt constraint as a way to create 16-sided polygons. You can combine this with grid rotation if the number of sides is a multiple of 8 (divides evenly into 45&deg;, i.e., use 8 of the 16 Shift+Alt angles) or 16 (divides evenly into 22.5&deg;; i.e., use all 16 Shift+Alt angles). As the math might confuse people at first, I avoided showing this above, but it can save time once you&rsquo;re comfortable with this method.</li>
+  <li>Points may be off by an internal unit (&asymp;.001 WU) or two. Adjust them manually if this bothers you. Drawing our lines from the center with Shift+Alt constraint makes this slightly less likely.</li>
+  <li>Since we started at 0&deg;, we don&rsquo;t have any horizontal or vertical lines in our circle. To get them, we&rsquo;d divide our grid rotation of 15&deg; by 2 for a starting angle of 7.5&deg;, then increase that by 15 (i.e., 22.5&deg;, 37.5&deg;, 52.5&deg;, 67.5&deg;, 82.5&deg;). The result is below. Note that getting both horizontal and vertical lines requires a number of sides divisible by 4. If it&rsquo;s divisible by 2, we&rsquo;ll get one but not the other. If it&rsquo;s an odd number, we&rsquo;ll get only a single horizontal or vertical side.</li>
+<p class="centred"><img src="circle8.png" width="247" height="246" alt="&lsquo;Circle&rsquo; with Vertical Lines"/></p>
+  <li>If our number of vertices is not a multiple of four, we&rsquo;ll need to start at 0&deg; as usual, keep adding our angle increment until we exceed 90&deg;, subtract 90&deg; from our <strong>Rotation</strong>, and then continue as before. We also won&rsquo;t draw lines in all four directions &ndash; we&rsquo;ll either draw them in two directions (if our number of vertices is a multiple of 2) or one (if it isn&rsquo;t).</ol>
+
+<h3 id="radii">Radii and Rotations for 1 WU-long Sides with Regular Polygons</h3>
+
+<p >These radii and rotations will create 1 WU-long sides. (As pointless as including a triangle may seem, this is a fast way to get an equilateral triangle centered around a desired point.) <em>Italic numbers</em> are divisible by 8 (i.e, you can use shift+alt with 45&deg; angles); <strong>bold numbers</strong>, by 16 (22.5&deg; angles). 1 WU = 1,024 Internal Units; these are included for the circle plugin. It produces slightly different results, so they differ slightly.</p>
+
+<p class="light" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
+
+<table>
+  <thead>
+    <tr>
+      <td class="right"># Sides</strong></td>
+      <td class="right">WU Radius</td>
+      <td class="right">IU Radius</td>
+      <td>Rotation</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="integer">3</td>
+      <td class="integer">0.578</td>
+      <td class="integer">591.3</td>
+      <td class="decimal">120.0&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">5</td>
+      <td class="integer">0.852</td>
+      <td class="integer">871</td>
+      <td class="decimal"><span class="hidden">0</span>72.0&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">6</td>
+      <td class="integer">1.000</td>
+      <td class="integer">1024</td>
+      <td class="decimal"><span class="hidden">0</span>60.0&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">7</td>
+      <td class="integer">1.153</td>
+      <td class="integer">1180</td>
+      <td class="decimal"><span class="hidden">0</span>51.42857142&hellip;&deg;</td>
+    </tr>
+    <tr style="font-style: italic;">
+      <td class="integer">8</td>
+      <td class="integer">1.306</td>
+      <td class="integer">1338</td>
+      <td class="decimal"><span class="hidden">0</span>45.0&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">10</td>
+      <td class="integer">1.618</td>
+      <td class="integer">1657</td>
+      <td class="decimal"><span class="hidden">0</span>36.0&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">12</td>
+      <td class="integer">1.934</td>
+      <td class="integer">1978</td>
+      <td class="decimal"><span class="hidden">0</span>30.0&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">14</td>
+      <td class="integer">2.247</td>
+      <td class="integer">2301</td>
+      <td class="decimal"><span class="hidden">0</span>25.71428571&hellip;&deg;</td>
+    </tr>
+    <tr style="font-weight: bold;">
+      <td class="integer">16</td>
+      <td class="integer">2.563</td>
+      <td class="integer">2624</td>
+      <td class="decimal"><span class="hidden">0</span>22.5&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">18</td>
+      <td class="integer">2.880</td>
+      <td class="integer">2948</td>
+      <td class="decimal"><span class="hidden">0</span>20.0&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">20</td>
+      <td class="integer">3.197</td>
+      <td class="integer">3272</td>
+      <td class="decimal"><span class="hidden">0</span>18.0&deg;</td>
+    </tr>
+    <tr style="font-style: italic;">
+      <td class="integer">24</td>
+      <td class="integer">3.831</td>
+      <td class="integer">3922</td>
+      <td class="decimal"><span class="hidden">0</span>15.0&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">28</td>
+      <td class="integer">4.467</td>
+      <td class="integer">4574</td>
+      <td class="decimal"><span class="hidden">0</span>12.85714285&hellip;&deg;</td>
+    </tr>
+    <tr style="font-weight: bold;">
+      <td class="integer">32</td>
+      <td class="integer">5.102</td>
+      <td class="integer">5224</td>
+      <td class="decimal"><span class="hidden">0</span>11.25&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">36</td>
+      <td class="integer">5.735</td>
+      <td class="integer">5873</td>
+      <td class="decimal"><span class="hidden">0</span>10.0&deg;</td>
+    </tr>
+    <tr style="font-style: italic;">
+      <td class="integer">40</td>
+      <td class="integer">6.372</td>
+      <td class="integer">6525</td>
+      <td class="decimal"><span class="hidden">00</span>9.0&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">42</td>
+      <td class="integer">6.690</td>
+      <td class="integer">6851</td>
+      <td class="decimal"><span class="hidden">00</span>8.57142857&hellip;&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">44</td>
+      <td class="integer">7.008</td>
+      <td class="integer">7176</td>
+      <td class="decimal"><span class="hidden">00</span>8.1818&hellip;&deg;</td>
+    </tr>
+    <tr style="font-weight: bold;">
+      <td class="integer">48</td>
+      <td class="integer">7.647</td>
+      <td class="integer">7830</td>
+      <td class="decimal"><span class="hidden">00</span>7.5&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">52</td>
+      <td class="integer">8.283 (use 4.142)</td>
+      <td class="integer">8482</td>
+      <td class="decimal"><span class="hidden">00</span>6.92307692&hellip;&deg;</td>
+    </tr>
+    <tr style="font-style: italic;">
+      <td class="integer">56</td>
+      <td class="integer">8.918 (use 4.459)</td>
+      <td class="integer">9130</td>
+      <td class="decimal"><span class="hidden">00</span>6.42857142&hellip;&deg;</td>
+    </tr>
+    <tr>
+      <td class="integer">60</td>
+      <td class="integer">9.558 (use 4.779)</td>
+      <td class="integer">9780</td>
+      <td class="decimal"><span class="hidden">00</span>6.0&deg;</td>
+    </tr>
+    <tr style="font-weight: bold;">
+      <td class="integer">64</td>
+      <td class="integer">10.190 (use 5.095)</td>
+      <td class="integer">10435</td>
+      <td class="decimal"><span class="hidden">00</span>5.625&deg;</td>
+    </tr>
+    <tr style="font-style: italic;">
+      <td class="integer">72</td>
+      <td class="integer">11.468 (use 5.734)</td>
+      <td class="integer">11740</td>
+      <td class="decimal"><span class="hidden">00</span>5.0&deg;</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="mapcomplexity">Map Complexity: A Case Study</h2>
+
+<p>I mentioned above in <strong>General Notes</strong> that map indices are the primary limit on map complexity, and advised avoiding too many small polygons in a given area. Two more reasons to avoid too much complexity, though, are to avoid frustration and to improve map performance. This case study largely centers on the once-infamous <em>Eternal</em> level <strong>&lsquo;Where Giants Have Fallen&rsquo;</strong>. I apologize in advance for the length and number of images; the main lessons can be summarized as &lsquo;Don&rsquo;t overuse greeble or sound objects,&rsquo; but I think illustrating what that means would be helpful.</p>
+
+<p>This is a Weland view of <em>Eternal Mark V</em>&rsquo;s &lsquo;Where Giants Have Fallen&rsquo;:</p>
+
+<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Draw Mode" src="wghf-mv-0.png" width="512" height="512" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Draw Mode"></p>
+
+<p>(I&rsquo;ve hidden all objects besides players and sounds; they&rsquo;re the only important objects for our purposes.)</p>
+
+<p>And here are some Vasara screenshots, with a few major caveats. First, I took these screenshots with 1.3 shapes because I wanted consistency between them. Second, the map had basically no shading to speak of, so I ran Auto Shade on it to make it easier to parse. Third, I rarely use hi-res textures when texturing, due partly to loading times, but mostly to memory usage: the game must load all textures into memory when it loads Vasara or Visual Mode.lua. That adds up fast. That said, the <em>Mark V</em> version looks like this:</p>
+
+<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1" src="wghf-mv-1.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1"></p>
+
+<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2" src="wghf-mv-2.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2"></p>
+
+<p>Beyond the obvious issues of the terrible shading and the sea of gray, this version, despite featuring only 509 polygons, is relatively slow for several reasons I&rsquo;ll discuss at length soon.</p>
+
+<p><em>Eternal X</em> 1.0 overhauled the level, but the new version was even slower. It looked like this in Weland:</p>
+
+<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode" src="wghf-10-0.png" width="512" height="512" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode"></p>
+
+<p>Despite only featuring 836 polygons, this one chugs even worse. Both of these maps have a major problem: they have essentially no negative space. To oversimplify slightly, Aleph One is effectively a <a href="https://en.wikipedia.org/wiki/Portal_rendering" target="_blank">portal engine</a>. Portal engines have several strengths, but rendering large, complex outdoor spaces is not one of them. As a result, whenever the player gets near one of the edges of one of these maps, the performance plummets, even on modern boxes. With frame interpolation now a feature in Aleph One, it&rsquo;s simply not acceptable for maps to get fewer than 60 fps on modern boxes, at least in areas of the map players are meant to access. Here are a few screenshots of what the 1.0 version looks like (again with 1.3 textures):</p>
+
+<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1" src="wghf-10-1.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1"></p>
+
+<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #2" src="wghf-10-2.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #2"></p>
+
+<p>You get as close to the feeling of having climbed up a huge mountain as Aleph One is likely to provide, but as you can see in the first screenshot, the frame rate is bad in places, the texturing is quite dull, and the lamps just look silly. Subsequent releases of the map fixed the latter two aspects, but the frame rate problem persisted, which was the primary impetus for CryoS and me to remake it from scratch.</p>
+
+<p>Our new version - and I&rsquo;ll withhold its polygon count for a moment - looks like this in Weland (minus some map writing that I&rsquo;ve removed to make the screenshot more legible):</p>
+
+<p class="centred"><img alt="Where Giants Have Fallen 1.3 Draw Mode" src="wghf-13-0.png" width="512" height="512" title="Where Giants Have Fallen 1.3 Draw Mode"></p>
+
+<p>This screenshot has some conspicuous features. First, the new map is a lot more circular. (I worked on the design, to the surprise of no one who knows my style.) Secondly, there are <span id="ftnt_ref1" class="dotted" title="One of the crossbeams has gone out of skew on the treadle.">crossbeams<a href="#ftnt1">&#8317;&sup1;&#8318;</a></span> extending through playable areas of the map that break it up into sextants (septants if we count the central structure). It&rsquo;s hard to tell from a Weland screenshot, but these actually create an optical illusion to make players think they&rsquo;re seeing much further than they actually are; landscape textures mostly conceal players&rsquo; inability to actually see past the crossbeams. Here are some screenshots I took in Vasara:</p>
+
+<p class="centred"><img alt="Where Giants Have Fallen 1.3 Visual Mode #1" src="wghf-13-1.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Visual Mode #1"></p>
+
+<p class="centred"><img alt="Where Giants Have Fallen 1.3 Visual Mode #2" src="wghf-13-2.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Visual Mode #2"></p>
+
+<p>Again, we notice a few things immediately. First, this area still <em>looks</em> wide-open, even though it constricts the view to a much smaller area; second, despite having a snow script (which can be a drag on performance), the map gets a much better frame rate. And here&rsquo;s where I&rsquo;ll note its polygon count: 2,028 (that&rsquo;s <em>not</em> a typo).</p>
+
+<p>But doesn&rsquo;t it look like you can see over the crossbeams? Yes. This <del>trick</del> <em>illusion</em> employs &lsquo;5D space&rsquo;, the engine&rsquo;s ability to overlap spaces in X/Y/Z coordinates. It can do this because it uses four dimensions to render spaces: X, Y, Z, and polygon. This is related to it being a portal engine: it determines what to render based on how lines connect polygons. I feel a bit like a magician revealing how to perform <del>a trick</del> <em>an illusion</em> here, but&hellip; if you could get to the area of the crossbeam with the blue pillars, you&rsquo;d see this:</p>
+
+<p class="centred"><img alt="Where Giants Have Fallen 1.3 Crossbeam Top #1" src="wghf-13-3.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Crossbeam Top #1"></p>
+
+<p>And the other side of the crossbeam would look like this:</p>
+
+<p class="centred"><img alt="Where Giants Have Fallen 1.3 Crossbeam Top #2" src="wghf-13-4.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Crossbeam Top #2"></p>
+
+<p>The only thing to the left of the last screenshot, and to the right of the one prior, is a landscape-textured wall. (These regions are, of course, inaccessible to players.) As long as we constrict players&rsquo; view to a reasonable segment of the level, the frame rate rarely dips below 120 fps and almost never below 60.</p>
+
+<p>But in a few cases, players can actually escape the constriction. One is if they fall to their deaths, which, who cares. In a few others, though, they can use the assault rifle (or a similar weapon) to boost themselves over onto the edges of the crossbeams, whence they&rsquo;ll get a clear view of two sextants at once:</p>
+
+<p class="centred"><img alt="Where Giants Have Fallen 1.3 Crossbeam Top #3" src="wghf-13-5.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Crossbeam Top #3"></p>
+
+<p>Or even jump to an island, where they can see the sky texture clipping their view of the crossbeam in places:</p>
+
+<p class="centred"><img alt="Where Giants Have Fallen 1.3 Island View" src="wghf-13-6.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Island View"></p>
+
+<p>I consider these secrets, so I don&rsquo;t really care to fix them. More importantly, this goes to show how important negative space is to keeping the frame rate within acceptable bounds.</p>
+
+<p>There are other seams in the level design as well, but there&rsquo;s usually enough going on in the level to distract players from noticing. Another case relates to the blue pillars. Two are clearly visible from here:</p>
+
+<p class="centred"><img alt="Where Giants Have Fallen 1.3: Now you see it&hellip;" src="wghf-13-7.png" width="600" height="300" title="Where Giants Have Fallen 1.3: Now you see it&hellip;"></p>
+
+<p>However, if we step a bit to the left:</p>
+
+<p class="centred"><img alt="Where Giants Have Fallen 1.3:&hellip;now you don&rsquo;t." src="wghf-13-8.png" width="600" height="300" title="Where Giants Have Fallen 1.3: &hellip;now you don&rsquo;t."></p>
+
+<p>The rear one disappears. This is a result of the engine&rsquo;s lack of any sort of &lsquo;bridges and balconies&rsquo;, owing to how it connects polygons. We can&rsquo;t stack one polygon on top of another, and the passage under the crossbeam blocks off the view above it, so the blue pillar in the back is impossible to show. Despite this, I felt the blue pillars were worth including, since they conceal more conspicuous blemishes in the view from the top of the level (which are again consequences of the passages beneath the crossbeams).</p>
+
+<p>This is the largest map I&rsquo;ve constructed (mostly) from scratch that never once exceeded the map index limit. There are a few reasons for this, but I think the two biggest are ambient sounds and greeble.</p>
+
+<p>Greeble, in this case, refers to map detailing. This may not be evident to anyone else but me, but the newest &lsquo;Where Giants Have Fallen&rsquo; was effectively my second attempt to make a pastiche of <em>Phoenix</em>&rsquo;s &lsquo;Stone Temple Pilates&rsquo;, in this case combining its style with those of <em>Apotheosis X</em> (hence all the hexagons, though I already felt obligated to use them due to Tacticus&rsquo; brilliant sky texture), <em>Eternal</em> itself, and of course my own compulsion to make everything as circular as possible. (Ironically, the one part I didn&rsquo;t create from scratch is the central structure, the most circular part of the whole level &ndash; that was CryoS&rsquo; work.)</p>
+
+<p class="centred"><img alt="&lsquo;Il grande silenzio&rsquo; Draw Mode" src="igs-0.png" width="512" height="512" title="&lsquo;Il grande silenzio&rsquo; 1.3 Draw Mode"></p>
+
+<p>My first pastiche of &lsquo;Stone Temple Pilates&rsquo;, seen above in its current, unfinished state (1,763 polygons), went a lot differently. It&rsquo;s called &lsquo;Il grande silenzio&rsquo; (after a brilliant Corbucci spaghetti western with an equally brilliant Morricone soundtrack); it&rsquo;s from a project that, as of this writing, still hasn&rsquo;t been released: <em>Tempus Irae Redux</em>. There are obvious stylistic differences; besides the mathematical regularity of &lsquo;Where Giants Have Fallen&rsquo;, we can also see how much more densely the sound, points, and polygons are clustered in many areas (and, as a direct consequence, how much less densely they are clustered in others).</p>
+
+<p>In fact, I first ran out of map indices at around 1,500 polygons and had to prune dozens of sound objects. This is partly because I was pastiching two brilliant mapmakers: <strong>RyokoTK</strong> and my co-conspirator <strong>James Hastings-Trew</strong>, who both tend to employ a lot of greeble. However, I greatly exceeded the amount they use, reasoning, &lsquo;Modern computers can handle it.&rsquo; (This was before Aleph One had frame interpolation.) But thanks to the snow script and the comparative lack of negative space, the map chugs in a few places:</p>
+
+<p class="centred"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #1" src="igs-1.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #1"></p>
+
+<p class="centred"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #2" src="igs-2.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #2"></p>
+
+<p>My further revisions will require me to fix that, which in turn will likely require removing a few parts and reconstructing them from scratch &ndash; a painful process.</p>
+
+<p>It might be more instructive to show screenshots of these maps consecutively:</p>
+
+<p class="centred"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #3" src="igs-3.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #3"></p>
+
+<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #9" src="wghf-13-9.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #9"></p>
+
+<p>Now, do I think the geometry in the <em>Tempus</em> map looks cool? Yes. Do I think it looks that much cooler than the <em>Eternal</em> map? Certainly not enough to justify the added difficulty it caused me.</p>
+
+<p>In any case, my main point in showing these screenshots isn&rsquo;t to show off the maps; it&rsquo;s to show how overusing greeble causes problems. It looks cool, but you have to know when to stop. There&rsquo;s probably no way to learn this except trial and error, but I urge you to examine mapmakers&rsquo; styles closely. Ryoko doesn&rsquo;t really use as much greeble as I thought he did when I made &lsquo;Il grande silenzio&rsquo;. As an example, &lsquo;Monument to All Your Sins&rsquo; from <em>Starlight</em>, which I believe has the highest polygon count of any map he&rsquo;s released (1,843):</p>
+
+<p class="centred"><img alt="&lsquo;Monument to All Your Sins&rsquo; Draw Mode" src="monument-0.png" width="512" height="512" title="&lsquo;Monument to All Your Sins&rsquo; Draw Mode"></p>
+
+<p>Yes, there are parts with plenty of greeble, but there&rsquo;s really nothing approaching the density I was using. Regardless of this, when I got his permission to adapt it for <em>Chronicles</em> as a solo level, he warned me that it was near the map index limit, that he&rsquo;d had to simplify it during construction, and that it&rsquo;d probably crash if I added too much complexity or many more ambient sound objects &ndash; which, in fact, is exactly what happened. In any case, here are two views from the southeast of &lsquo;Monument&rsquo; (which, to be clear, is just about the upper bound of the detail I&rsquo;d suggest trying to incorporate):</p>
+
+<p class="centred"><img alt="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #1" src="monument-1.png" width="600" height="300" title="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #1"></p>
+
+<p class="centred"><img alt="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #2" src="monument-2.png" width="600" height="300" title="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #2"></p>
+
+<p>There are parts with a lot of greeble, but others with almost none. And it looks fantastic. This was a lesson I hadn&rsquo;t absorbed when I made &lsquo;Il grande silenzio&rsquo;, but &lsquo;Where Giants Have Fallen&rsquo; hammered it home for me.</p>
+
+<p>While I&rsquo;m at it, here&rsquo;s &lsquo;Stone Temple Pilates&rsquo;, which has 1,771 polygons. The Weland view looks like this:</p>
+
+<p class="centred"><img alt="&lsquo;Stone Temple Pilates&rsquo; Draw Mode" src="stp-0.png" width="512" height="512" title="&lsquo;Stone Temple Pilates&rsquo; Draw Mode"></p>
+
+<p>I think the overall polygon density of the map is comparable to what I was trying to accomplish with &lsquo;Il grande silenzio&rsquo;, but there are some important differences. The clusters of small polygons aren&rsquo;t as densely packed together, and while there are a lot of sound objects, Ryoko has few of them near polygon clusters as dense as mine. (Scroll back to the &lsquo;Il grande silenzio&rsquo; Weland screenshot again and look at how densely clustered the polygons in some of my houses are.)</p>
+
+<p>&lsquo;Stone Temple Pilates&rsquo; looks like this in Vasara:</p>
+
+<p class="centred"><img alt="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #1" src="stp-1.png" width="600" height="300" title="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #1"></p>
+
+<p class="centred"><img alt="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2" src="stp-2.png" width="600" height="300" title="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2"></p>
+
+<p>This map slaps. Its influence on &lsquo;Il grande silenzio&rsquo; is probably especially obvious; its influence on &lsquo;Where Giants Have Fallen&rsquo; is probably less so, besides the isolated islands from which Enforcers snipe at players, but it&rsquo;s nonetheless there.</p>
+
+<p>Anyway, back to &lsquo;Where Giants Have Fallen&rsquo;. The other way I saved a lot of headache was by using as few sound objects as possible; to avoid using too many, I even went to the trouble of making new ambient sounds that combined existing sounds. For instance, this sound may <em>say</em> <strong>&lsquo;Waterfall&rsquo;</strong>:</p>
+
+<p><img alt="" src="wghf-a.png" width="800" height="416" title=""></p>
+
+<p>However, the following script is merged in with the level:</p>
+
+<pre>&lt;marathon&gt;
+    &lt;!-- puts Water &amp; Waterfall into the Waterfall slot --&gt;
+    &lt;sounds&gt;
+        &lt;ambient index=&quot;6&quot; sound=&quot;251&quot;/&gt;
+    &lt;/sounds&gt;
+    &lt;!-- sets Water to use the Waterfall sound slot --&gt;
+    &lt;liquid index=&quot;0&quot;&gt;
+        &lt;sound type=&quot;5&quot; which=&quot;6&quot;/&gt;
+    &lt;/liquid&gt;
+&lt;/marathon&gt;
+</pre>
+
+<p>As the comments suggest, this reassigns the &lsquo;Waterfall&rsquo; ambient sound to use a separate ambient sound created by mix-pasting the &lsquo;Water&rsquo; and &lsquo;Waterfall&rsquo; sounds; and it plays that sound whenever the player&rsquo;s head is above water. This effectively cuts in half the number of sounds I need water to play, and cuts the number of sound objects on the level by eight.</p>
+
+<p>On dream versions of the level (of which there are four), I embed another script to combine the &lsquo;Wind&rsquo; sound (or, in one case, the &lsquo;Wind &amp; Rain&rsquo; sound) and the &lsquo;Dream Ambience&rsquo; sound, thus saving further sound objects. The expense is three sound slots and about a dozen megabytes in the sound file (these sounds are CD-quality stereo, so they&rsquo;re not small), but hey, that&rsquo;s nothing by the standards of modern games, and it means the map runs without any issues.</p>
+
+<p>We can boil down the lessons of this case study to two major principles:</p>
+
+<ol>
+  <li>Don&rsquo;t overuse greeble.</li>
+  <li>Don&rsquo;t overuse sound objects.</li>
+</ol>
+
+<p>However, if I just wrote that &ndash; or even &lsquo;don&rsquo;t overuse greeble and sound objects so you don&rsquo;t run out of map indices&rsquo; &ndash; you might not grasp what &lsquo;overuse&rsquo; means. Hopefully, you at least now have reference points.</p>
+
+<p>An even better understanding can come from looking at <em><a href="http://simplici7y.com/items/starlight" target="_blank">Starlight</a></em>, <em><a href="http://simplici7y.com/items/marathon-phoenix-2" target="_blank">Phoenix</a></em>, and the <a href="http://eternal.bungie.org/development" target="_blank">latest preview build of <em>Eternal</em></a> (and <em>Tempus Irae Redux</em>, once it comes out) yourself. Learning from others is one of the best ways to improve. <strong>RyokoTK</strong>&rsquo;s other works (<em><a href="http://simplici7y.com/items/kindred-spirits" target="_blank">Kindred Spirits</a></em>, <em><a href="http://simplici7y.com/items/paradise-lost" target="_blank">Paradise Lost</a></em>, <em><a href="http://simplici7y.com/items/second-quest" target="_blank">Second Quest</a></em>, etc.) are also well worth looking at, as are the works of mappers like <strong>windbreaker</strong> (<em><a href="http://simplici7y.com/items/imperium" target="_blank">Imperium</a></em>, <em><a href="http://simplici7y.com/items/infra-apogee" target="_blank">Infra Apogee</a></em>, <em><a href="http://simplici7y.com/items/caustic-dystopia" target="_blank">Caustic Dystopia</a></em>, etc.); <strong>James Hastings-Trew</strong> and <strong>Borzz</strong> (<em><a href="http://simplici7y.com/items/megiddo-game" target="_blank">Megiddo Game</a></em>, <em><a href="http://nardo.bungie.org/alephone.php" target="_blank">Tempus Irae</a></em>, etc.); <strong>hypersleep</strong> and <strong>CryoS</strong> (<em><a href="http://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em>); and of course <strong>Bungie</strong> and <strong>Double Aught</strong> themselves. It&rsquo;s worth not just marveling at the pretty sights, but also closely considering where they use greeble and sounds and &ndash; just as importantly &ndash; where they don&rsquo;t.</p>
+
+<h1 id="sounds">Sounds</h1>
+<h2 id="sounds-general">General Notes</h2>
+<ul>
+  <li>Sounds have two different numbers associated with them: sound ID and sound number. Sound IDs can be anything from 130 to 32760, must be multiples of 5, and must be unique within the sound file. If the ID is -1, the game won&rsquo;t play them. Unfortunately, they&rsquo;re in no logical order in the vanilla sound file, so I&rsquo;ve listed them all below. The vanilla <em>Infinity</em> sounds only use IDs between 10,000 and 19,210 (inclusive).</li>
+  <li>You can use up to 256 classes (sound numbers 0-255); Aleph One&rsquo;s developers advise against using more.</li>
+  <li>&lsquo;Volume&rsquo; affects not the sound&rsquo;s decibel level in-game but how far away it&rsquo;s audible.</li>
+</ul>
+
+<h2 id="soundids">Vanilla <em>Infinity</em> Sound ID List</h2>
+
+<p>I&rsquo;ve used the Lua mnemonics for these unless I had a reason not to, which I usually note in tooltips (also reproduced at the bottom of this document as endnotes). Parenthetical names are alternate names prominently used elsewhere (e.g., Anvil/ShapeFusion or Forge/Weland).</p>
+
+<p class="light" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
+
+<table style="width: 500px;">
+  <thead>
+    <tr>
+      <th style="width: 40px;" class="right">ID</td>
+      <th style="width: 40px;" class="right">#</td>
+      <th>Sound</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="integer">10000</td>
+      <td class="integer">1</td>
+      <td>Teleport In</td>
+    </tr>
+    <tr>
+      <td class="integer">10010</td>
+      <td class="integer">2</td>
+      <td>Teleport Out</td>
+    </tr>
+    <tr>
+      <td class="integer">10020</td>
+      <td class="integer">3</td>
+      <td>Crushed</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10030</td>
+      <td class="integer">5</td>
+      <td>Absorbed</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10040</td>
+      <td class="integer">7</td>
+      <td>Oxygen Warning</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10050</td>
+      <td class="integer">8</td>
+      <td>Suffocation</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10060</td>
+      <td class="integer">9</td>
+      <td>Energy Refuel</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10070</td>
+      <td class="integer">10</td>
+      <td>Oxygen Refuel</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10080</td>
+      <td class="integer">11</td>
+      <td>Can&rsquo;t Toggle Switch</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10090</td>
+      <td class="integer">12</td>
+      <td>Switch On</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10100</td>
+      <td class="integer">13</td>
+      <td>Switch Off</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10110</td>
+      <td class="integer">14</td>
+      <td>Puzzle Switch</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10120</td>
+      <td class="integer">15</td>
+      <td>Chip Insertion</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10130</td>
+      <td class="integer">16</td>
+      <td>Pattern Buffer</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10150</td>
+      <td class="integer">18</td>
+      <td>Adjust Volume</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10160</td>
+      <td class="integer">19</td>
+      <td><span class="dotted" id="ftnt_ref2" title="The Lua mnemonics have &lsquo;GOT Powerup&rsquo;, but GET Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.">Got Powerup<a href="#ftnt2">&#8317;&sup2;&#8318;</a></span></td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">10170</td>
+      <td class="integer">20</td>
+      <td><span class="dotted" title="The Lua mnemonics have &lsquo;GOT Powerup&rsquo;, but GET Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.">Get Item<a href="#ftnt2">&#8317;&sup2;&#8318;</a></span></td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11000</td>
+      <td class="integer">21</td>
+      <td>Bullet Ricochet</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11010</td>
+      <td class="integer">22</td>
+      <td>Metallic Ricochet</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11020</td>
+      <td class="integer">23</td>
+      <td>Empty Gun</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11030</td>
+      <td class="integer">34</td>
+      <td>Fist Hitting</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11040</td>
+      <td class="integer">35</td>
+      <td>Magnum Firing</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11050</td>
+      <td class="integer">36</td>
+      <td>Magnum Reloading</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11060</td>
+      <td class="integer">37</td>
+      <td>Assault Rifle Firing</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11070</td>
+      <td class="integer">38</td>
+      <td>Grenade Launcher Firing</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11080</td>
+      <td class="integer">39</td>
+      <td><span class="dotted" id="ftnt_ref3" title="The Lua mnemonics (but not Anvil or ShapeFusion) misspell this as &lsquo;Grenade Expolding&rsquo;. I&rsquo;ve corrected it.">Grenade Exploding<a href="#ftnt3">&#8317;&sup3;&#8318;</a></span></td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11090</td>
+      <td class="integer">40</td>
+      <td>Grenade Flyby</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11100</td>
+      <td class="integer">41</td>
+      <td>Fusion Pistol Firing</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11110</td>
+      <td class="integer">42</td>
+      <td>Fusion Exploding</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11120</td>
+      <td class="integer">43</td>
+      <td>Fusion Flyby</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11130</td>
+      <td class="integer">44</td>
+      <td>Fusion Charging</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11140</td>
+      <td class="integer">45</td>
+      <td><span class="dotted" id="ftnt_ref4" title="Misspelled in Anvil (and thus ShapeFusion) as &lsquo;Rocket Expoding&rsquo;. The Lua mnemonics get this one correct.">Rocket Exploding<a href="#ftnt4">&#8317;&#8308;&#8318;</a></span></td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11150</td>
+      <td class="integer">46</td>
+      <td>Rocket Flyby</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11160</td>
+      <td class="integer">47</td>
+      <td>Rocket Firing</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11170</td>
+      <td class="integer">48</td>
+      <td>Flamethrower</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11180</td>
+      <td class="integer">49</td>
+      <td>Body Falling</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11190</td>
+      <td class="integer">50</td>
+      <td>Body Exploding</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11200</td>
+      <td class="integer">51</td>
+      <td>Bullet Hit Flesh</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11210</td>
+      <td class="integer">134</td>
+      <td>Assault Rifle Reloading</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11220</td>
+      <td class="integer">136</td>
+      <td>Shotgun Firing</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11230</td>
+      <td class="integer">137</td>
+      <td>Shotgun Reloading</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11240</td>
+      <td class="integer">141</td>
+      <td>Computer Login</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11250</td>
+      <td class="integer">142</td>
+      <td>Computer Logout</td>
+    </tr>
+    </tr>
+    <tr>
+      <td class="integer">11260</td>
+      <td class="integer">143</td>
+      <td>Computer Page</td>
+    </tr>
+    <tr>
+      <td class="integer">11270</td>
+      <td class="integer">135</td>
+      <td>Assault Rifle Shell Casings</td>
+    </tr>
+    <tr>
+      <td class="integer">11280</td>
+      <td class="integer">17</td>
+      <td>Destroy Control Panel</td>
+    </tr>
+    <tr>
+      <td class="integer">11290</td>
+      <td class="integer">132</td>
+      <td>Fusion Pistol Firing Charged</td>
+    </tr>
+    <tr>
+      <td class="integer">11300</td>
+      <td class="integer">138</td>
+      <td>Ball Bounce</td>
+    </tr>
+    <tr>
+      <td class="integer">11310</td>
+      <td class="integer">139</td>
+      <td>You Are It</td>
+    </tr>
+    <tr>
+      <td class="integer">11320</td>
+      <td class="integer">140</td>
+      <td>Got Ball</td>
+    </tr>
+    <tr>
+      <td class="integer">11330</td>
+      <td class="integer">133</td>
+      <td>Major Fusion Charged</td>
+    </tr>
+    <tr>
+      <td class="integer">12000</td>
+      <td class="integer">124</td>
+      <td><span class="dotted" id="ftnt_ref5" title="In both Anvil/ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2022?">S&rsquo;pht Door Closing<a href="#ftnt5">&#8317;&#8309;&#8318;</a></span></td>
+    </tr>
+    <tr>
+      <td class="integer">12010</td>
+      <td class="integer">25</td>
+      <td><span class="dotted" title="In both Anvil/ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2022?">S&rsquo;pht Door Opening<a href="#ftnt5">&#8317;&#8309;&#8318;</a></span></td>
+    </tr>
+    <tr>
+      <td class="integer">12020</td>
+      <td class="integer">26</td>
+      <td>S&rsquo;pht Door Obstructed</td>
+    </tr>
+    <tr>
+      <td class="integer">12030</td>
+      <td class="integer">27</td>
+      <td>S&rsquo;pht Platform Starting</td>
+    </tr>
+    <tr>
+      <td class="integer">12040</td>
+      <td class="integer">28</td>
+      <td>S&rsquo;pht Platform Stopping</td>
+    </tr>
+    <tr>
+      <td class="integer">12080</td>
+      <td class="integer">32</td>
+      <td>Heavy S&rsquo;pht Platform Starting</td>
+    </tr>
+    <tr>
+      <td class="integer">12090</td>
+      <td class="integer">33</td>
+      <td>Heavy S&rsquo;pht Platform Stopping</td>
+    </tr>
+    <tr>
+      <td class="integer">13000</td>
+      <td class="integer">144</td>
+      <td>Heavy S&rsquo;pht Door</td>
+    </tr>
+    <tr>
+      <td class="integer">13010</td>
+      <td class="integer">145</td>
+      <td>Heavy S&rsquo;pht Door Opening</td>
+    </tr>
+    <tr>
+      <td class="integer">13020</td>
+      <td class="integer">146</td>
+      <td>Heavy S&rsquo;pht Door Closing</td>
+    </tr>
+    <tr>
+      <td class="integer">13030</td>
+      <td class="integer">147</td>
+      <td>Heavy S&rsquo;pht Door Open</td>
+    </tr>
+    <tr>
+      <td class="integer">13040</td>
+      <td class="integer">148</td>
+      <td>Heavy S&rsquo;pht Door Closed</td>
+    </tr>
+    <tr>
+      <td class="integer">13050</td>
+      <td class="integer">149</td>
+      <td>Heavy S&rsquo;pht Door Obstructed</td>
+    </tr>
+    <tr>
+      <td class="integer">14000</td>
+      <td class="integer">90</td>
+      <td>Water</td>
+    </tr>
+    <tr>
+      <td class="integer">14010</td>
+      <td class="integer">91</td>
+      <td>Sewage</td>
+    </tr>
+    <tr>
+      <td class="integer">14020</td>
+      <td class="integer">92</td>
+      <td>Lava</td>
+    </tr>
+    <tr>
+      <td class="integer">14030</td>
+      <td class="integer">93</td>
+      <td>Goo</td>
+    </tr>
+    <tr>
+      <td class="integer">14040</td>
+      <td class="integer">94</td>
+      <td>Underwater</td>
+    </tr>
+    <tr>
+      <td class="integer">14050</td>
+      <td class="integer">95</td>
+      <td>Wind</td>
+    </tr>
+    <tr>
+      <td class="integer">14060</td>
+      <td class="integer">96</td>
+      <td>Waterfall</td>
+    </tr>
+    <tr>
+      <td class="integer">14070</td>
+      <td class="integer">97</td>
+      <td>Siren</td>
+    </tr>
+    <tr>
+      <td class="integer">14080</td>
+      <td class="integer">98</td>
+      <td>Fan</td>
+    </tr>
+    <tr>
+      <td class="integer">14100</td>
+      <td class="integer">100</td>
+      <td>S&rsquo;pht Platform</td>
+    </tr>
+    <tr>
+      <td class="integer">14120</td>
+      <td class="integer">101</td>
+      <td>Alien Harmonics (Jjaro Ship)</td>
+    </tr>
+    <tr>
+      <td class="integer">14130</td>
+      <td class="integer">102</td>
+      <td>Heavy S&rsquo;pht Platform</td>
+    </tr>
+    <tr>
+      <td class="integer">14140</td>
+      <td class="integer">103</td>
+      <td>Light Machinery</td>
+    </tr>
+    <tr>
+      <td class="integer">14150</td>
+      <td class="integer">104</td>
+      <td>Heavy Machinery</td>
+    </tr>
+    <tr>
+      <td class="integer">14160</td>
+      <td class="integer">105</td>
+      <td>Transformer</td>
+    </tr>
+    <tr>
+      <td class="integer">14170</td>
+      <td class="integer">106</td>
+      <td>Sparking Transformer</td>
+    </tr>
+    <tr>
+      <td class="integer">14180</td>
+      <td class="integer">169</td>
+      <td>Machine Binder</td>
+    </tr>
+    <tr>
+      <td class="integer">14190</td>
+      <td class="integer">170</td>
+      <td>Machine Bookpress</td>
+    </tr>
+    <tr>
+      <td class="integer">14200</td>
+      <td class="integer">171</td>
+      <td>Machine Puncher</td>
+    </tr>
+    <tr>
+      <td class="integer">14210</td>
+      <td class="integer">172</td>
+      <td>Electric Hum</td>
+    </tr>
+    <tr>
+      <td class="integer">14220</td>
+      <td class="integer">173</td>
+      <td>Alarm</td>
+    </tr>
+    <tr>
+      <td class="integer">14230</td>
+      <td class="integer">174</td>
+      <td>Night Wind</td>
+    </tr>
+    <tr>
+      <td class="integer">14240</td>
+      <td class="integer">201</td>
+      <td>Alien Noise 1 (Pfhor Ship #1)</td>
+    </tr>
+    <tr>
+      <td class="integer">14250</td>
+      <td class="integer">202</td>
+      <td>Alien Noise 2 (Pfhor Ship #2)</td>
+    </tr>
+    <tr>
+      <td class="integer">14260</td>
+      <td class="integer">4</td>
+      <td><span class="dotted" id="ftnt_ref6" title="Inexplicably labeled in the Lua mnemonics as &lsquo;Nuclear Hard Death&rsquo;, the physics&rsquo; name for the screen flash and sound effect made when Juggernauts die. (Worst Prince cover ever.) That sound is Juggernaut Exploding (#198, ID 14650).">Jjaro Ship Creak<a href="#ftnt5">&#8317;&#8310;&#8318;</a></span></td>
+    </tr>
+    <tr>
+      <td class="integer">14500</td>
+      <td class="integer">107</td>
+      <td>Water Drip</td>
+    </tr>
+    <tr>
+      <td class="integer">14510</td>
+      <td class="integer">175</td>
+      <td>Surface Explosion (Thunder)</td>
+    </tr>
+    <tr>
+      <td class="integer">14520</td>
+      <td class="integer">176</td>
+      <td>Underground Explosion</td>
+    </tr>
+    <tr>
+      <td class="integer">14530</td>
+      <td class="integer">186</td>
+      <td>Lamp Exploding</td>
+    </tr>
+    <tr>
+      <td class="integer">14540</td>
+      <td class="integer">29</td>
+      <td>Loon</td>
+    </tr>
+    <tr>
+      <td class="integer">14545</td>
+      <td class="integer">187</td>
+      <td>Pfhor Platform Starting</td>
+    </tr>
+    <tr>
+      <td class="integer">14550</td>
+      <td class="integer">188</td>
+      <td>Pfhor Platform Stopping</td>
+    </tr>
+    <tr>
+      <td class="integer">14560</td>
+      <td class="integer">189</td>
+      <td>Pfhor Platform</td>
+    </tr>
+    <tr>
+      <td class="integer">14570</td>
+      <td class="integer">190</td>
+      <td><span class="dotted" id="ftnt_ref7" title="The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.">Pfhor Door Closing<a href="#ftnt7">&#8317;&#8311;&#8318;</a></span></td>
+    </tr>
+    <tr>
+      <td class="integer">14580</td>
+      <td class="integer">191</td>
+      <td><span class="dotted" id="ftnt_ref7" title="The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.">Pfhor Door Opening<a href="#ftnt7">&#8317;&#8311;&#8318;</a></span></td>
+    </tr>
+    <tr>
+      <td class="integer">14590</td>
+      <td class="integer">192</td>
+      <td>Pfhor Door Obstructed</td>
+    </tr>
+    <tr>
+      <td class="integer">14600</td>
+      <td class="integer">193</td>
+      <td>Pfhor Door</td>
+    </tr>
+    <tr>
+      <td class="integer">14610</td>
+      <td class="integer">194</td>
+      <td>Pfhor Switch On</td>
+    </tr>
+    <tr>
+      <td class="integer">14620</td>
+      <td class="integer">195</td>
+      <td>Pfhor Switch Off</td>
+    </tr>
+    <tr>
+      <td class="integer">14630</td>
+      <td class="integer">196</td>
+      <td>Juggernaut Firing</td>
+    </tr>
+    <tr>
+      <td class="integer">14640</td>
+      <td class="integer">197</td>
+      <td>Juggernaut Warning</td>
+    </tr>
+    <tr>
+      <td class="integer">14650</td>
+      <td class="integer">198</td>
+      <td>Juggernaut Exploding</td>
+    </tr>
+    <tr>
+      <td class="integer">14660</td>
+      <td class="integer">199</td>
+      <td>Juggernaut Start Attack</td>
+    </tr>
+    <tr>
+      <td class="integer">14670</td>
+      <td class="integer">200</td>
+      <td>Enforcer Exploding</td>
+    </tr>
+    <tr>
+      <td class="integer">15000</td>
+      <td class="integer">71</td>
+      <td>Drone Activate</td>
+    </tr>
+    <tr>
+      <td class="integer">15010</td>
+      <td class="integer">72</td>
+      <td>Drone Start Attack</td>
+    </tr>
+    <tr>
+      <td class="integer">15020</td>
+      <td class="integer">73</td>
+      <td>Drone Attack</td>
+    </tr>
+    <tr>
+      <td class="integer">15030</td>
+      <td class="integer">74</td>
+      <td>Drone Dying</td>
+    </tr>
+    <tr>
+      <td class="integer">15040</td>
+      <td class="integer">75</td>
+      <td>Drone Death</td>
+    </tr>
+    <tr>
+      <td class="integer">15050</td>
+      <td class="integer">76</td>
+      <td>Drone Projectile Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">15060</td>
+      <td class="integer">77</td>
+      <td>Drone Projectile Flyby</td>
+    </tr>
+    <tr>
+      <td class="integer">15100</td>
+      <td class="integer">64</td>
+      <td>Cyborg Moving</td>
+    </tr>
+    <tr>
+      <td class="integer">15110</td>
+      <td class="integer">65</td>
+      <td>Cyborg Attack</td>
+    </tr>
+    <tr>
+      <td class="integer">15120</td>
+      <td class="integer">66</td>
+      <td>Cyborg Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">15130</td>
+      <td class="integer">67</td>
+      <td>Cyborg Death</td>
+    </tr>
+    <tr>
+      <td class="integer">15140</td>
+      <td class="integer">68</td>
+      <td>Cyborg Projectile Bounce</td>
+    </tr>
+    <tr>
+      <td class="integer">15150</td>
+      <td class="integer"><span class="dotted" title="Nice." id="ftnt_ref8">69<a href="#ftnt8">&#8317;&#8312;&#8318;</a></span></td>
+      <td>Cyborg Projectile Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">15200</td>
+      <td class="integer">59</td>
+      <td>S&rsquo;pht Attack</td>
+    </tr>
+    <tr>
+      <td class="integer">15210</td>
+      <td class="integer">60</td>
+      <td>S&rsquo;pht Death</td>
+    </tr>
+    <tr>
+      <td class="integer">15220</td>
+      <td class="integer">61</td>
+      <td>S&rsquo;pht Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">15230</td>
+      <td class="integer">62</td>
+      <td>S&rsquo;pht Projectile Flyby</td>
+    </tr>
+    <tr>
+      <td class="integer">15240</td>
+      <td class="integer">63</td>
+      <td>S&rsquo;pht Projectile Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">15300</td>
+      <td class="integer">52</td>
+      <td>Fighter Activate</td>
+    </tr>
+    <tr>
+      <td class="integer">15310</td>
+      <td class="integer">53</td>
+      <td>Fighter Wail</td>
+    </tr>
+    <tr>
+      <td class="integer">15320</td>
+      <td class="integer">54</td>
+      <td>Fighter Scream</td>
+    </tr>
+    <tr>
+      <td class="integer">15330</td>
+      <td class="integer">55</td>
+      <td>Fighter Chatter</td>
+    </tr>
+    <tr>
+      <td class="integer">15340</td>
+      <td class="integer">56</td>
+      <td>Fighter Attack</td>
+    </tr>
+    <tr>
+      <td class="integer">15350</td>
+      <td class="integer">57</td>
+      <td>Fighter Projectile Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">15360</td>
+      <td class="integer">58</td>
+      <td>Fighter Projectile Flyby</td>
+    </tr>
+    <tr>
+      <td class="integer">15400</td>
+      <td class="integer">78</td>
+      <td>Bob Wail</td>
+    </tr>
+    <tr>
+      <td class="integer">15410</td>
+      <td class="integer">79</td>
+      <td>Bob Scream</td>
+    </tr>
+    <tr>
+      <td class="integer">15420</td>
+      <td class="integer">80</td>
+      <td>Bob Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">15430</td>
+      <td class="integer">81</td>
+      <td>Bob Chatter</td>
+    </tr>
+    <tr>
+      <td class="integer">15440</td>
+      <td class="integer">82</td>
+      <td>Assimilated Bob Chatter</td>
+    </tr>
+    <tr>
+      <td class="integer">15450</td>
+      <td class="integer">83</td>
+      <td>Bob Trash Talk</td>
+    </tr>
+    <tr>
+      <td class="integer">15460</td>
+      <td class="integer">84</td>
+      <td>Bob Apology</td>
+    </tr>
+    <tr>
+      <td class="integer">15470</td>
+      <td class="integer">85</td>
+      <td>Bob Activation</td>
+    </tr>
+    <tr>
+      <td class="integer">15480</td>
+      <td class="integer">86</td>
+      <td>Bob Clear</td>
+    </tr>
+    <tr>
+      <td class="integer">15490</td>
+      <td class="integer">87</td>
+      <td>Bob Angry (Stop Shooting Me You Bastard)</td>
+    </tr>
+    <tr>
+      <td class="integer">15500</td>
+      <td class="integer">88</td>
+      <td>Bob Secure</td>
+    </tr>
+    <tr>
+      <td class="integer">15510</td>
+      <td class="integer">89</td>
+      <td>Bob Kill the Player</td>
+    </tr>
+    <tr>
+      <td class="integer">15610</td>
+      <td class="integer">151</td>
+      <td>Hunter Attack</td>
+    </tr>
+    <tr>
+      <td class="integer">15630</td>
+      <td class="integer">153</td>
+      <td>Hunter Landing</td>
+    </tr>
+    <tr>
+      <td class="integer">15640</td>
+      <td class="integer">154</td>
+      <td>Hunter Exploding</td>
+    </tr>
+    <tr>
+      <td class="integer">15650</td>
+      <td class="integer">155</td>
+      <td>Hunter Projectile Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">15660</td>
+      <td class="integer">156</td>
+      <td>Hunter Projectile Flyby</td>
+    </tr>
+    <tr>
+      <td class="integer">15700</td>
+      <td class="integer">157</td>
+      <td>Enforcer Activate</td>
+    </tr>
+    <tr>
+      <td class="integer">15710</td>
+      <td class="integer">158</td>
+      <td>Enforcer Attack</td>
+    </tr>
+    <tr>
+      <td class="integer">15720</td>
+      <td class="integer">159</td>
+      <td>Enforcer Projectile Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">15730</td>
+      <td class="integer">160</td>
+      <td>Enforcer Projectile Flyby</td>
+    </tr>
+    <tr>
+      <td class="integer">15800</td>
+      <td class="integer">161</td>
+      <td>F&rsquo;lickta Melee Attack</td>
+    </tr>
+    <tr>
+      <td class="integer">15810</td>
+      <td class="integer">162</td>
+      <td>F&rsquo;lickta Melee Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">15820</td>
+      <td class="integer">163</td>
+      <td>F&rsquo;lickta Projectile Attack</td>
+    </tr>
+    <tr>
+      <td class="integer">15830</td>
+      <td class="integer">166</td>
+      <td>F&rsquo;lickta Projectile Lava Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">15840</td>
+      <td class="integer">167</td>
+      <td>F&rsquo;lickta Projectile Lava Flyby</td>
+    </tr>
+    <tr>
+      <td class="integer">15850</td>
+      <td class="integer">168</td>
+      <td>F&rsquo;lickta Dying</td>
+    </tr>
+    <tr>
+      <td class="integer">15860</td>
+      <td class="integer">164</td>
+      <td>F&rsquo;lickta Projectile Sewage Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">16000</td>
+      <td class="integer">177</td>
+      <td>S&rsquo;pht&rsquo;Kr Attack</td>
+    </tr>
+    <tr>
+      <td class="integer">16010</td>
+      <td class="integer">178</td>
+      <td>S&rsquo;pht&rsquo;Kr Projectile Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">16020</td>
+      <td class="integer">179</td>
+      <td>S&rsquo;pht&rsquo;Kr Projectile Flyby</td>
+    </tr>
+    <tr>
+      <td class="integer">16030</td>
+      <td class="integer">180</td>
+      <td>S&rsquo;pht&rsquo;Kr Being Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">16040</td>
+      <td class="integer">181</td>
+      <td>S&rsquo;pht&rsquo;Kr Exploding</td>
+    </tr>
+    <tr>
+      <td class="integer">17000</td>
+      <td class="integer">182</td>
+      <td>Tick Chatter</td>
+    </tr>
+    <tr>
+      <td class="integer">17020</td>
+      <td class="integer">184</td>
+      <td>Tick Flapping</td>
+    </tr>
+    <tr>
+      <td class="integer">18000</td>
+      <td class="integer">30</td>
+      <td>SMG Firing</td>
+    </tr>
+    <tr>
+      <td class="integer">18010</td>
+      <td class="integer">31</td>
+      <td>SMG Reloading</td>
+    </tr>
+    <tr>
+      <td class="integer">18100</td>
+      <td class="integer">203</td>
+      <td>VacBob Wail</td>
+    </tr>
+    <tr>
+      <td class="integer">18110</td>
+      <td class="integer">204</td>
+      <td>VacBob Scream</td>
+    </tr>
+    <tr>
+      <td class="integer">18120</td>
+      <td class="integer">205</td>
+      <td>VacBob Hit</td>
+    </tr>
+    <tr>
+      <td class="integer">18130</td>
+      <td class="integer">206</td>
+      <td>VacBob Chatter</td>
+    </tr>
+    <tr>
+      <td class="integer">18140</td>
+      <td class="integer">207</td>
+      <td>Assimilated VacBob Chatter</td>
+    </tr>
+    <tr>
+      <td class="integer">18150</td>
+      <td class="integer">208</td>
+      <td>VacBob Trash Talk</td>
+    </tr>
+    <tr>
+      <td class="integer">18160</td>
+      <td class="integer">209</td>
+      <td>VacBob Apology</td>
+    </tr>
+    <tr>
+      <td class="integer">18170</td>
+      <td class="integer">210</td>
+      <td>VacBob Activation</td>
+    </tr>
+    <tr>
+      <td class="integer">18180</td>
+      <td class="integer">211</td>
+      <td>VacBob Clear</td>
+    </tr>
+    <tr>
+      <td class="integer">18190</td>
+      <td class="integer">212</td>
+      <td>VacBob Angry (Stop Shooting Me You Bastard)</td>
+    </tr>
+    <tr>
+      <td class="integer">18200</td>
+      <td class="integer">213</td>
+      <td>VacBob Secure</td>
+    </tr>
+    <tr>
+      <td class="integer">18210</td>
+      <td class="integer">214</td>
+      <td>VacBob Kill the Player</td>
+    </tr>
+    <tr>
+      <td class="integer">19000</td>
+      <td class="integer">108</td>
+      <td>Walking in Water</td>
+    </tr>
+    <tr>
+      <td class="integer">19010</td>
+      <td class="integer">109</td>
+      <td title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Water<a href="#ftnt9" id="ftnt_ref9a">&#8317;&#8313;&#8318;</a></td>
+    </tr>
+    <tr>
+      <td class="integer">19020</td>
+      <td class="integer">110</td>
+      <td title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Water<a href="#ftnt9">&#8317;&#8313;&#8318;</a></td>
+    </tr>
+    <tr>
+      <td class="integer">19060</td>
+      <td class="integer">115</td>
+      <td title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Lava<a href="#ftnt9">&#8317;&#8313;&#8318;</a></td>
+    </tr>
+    <tr>
+      <td class="integer">19070</td>
+      <td class="integer">116</td>
+      <td title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Lava<a href="#ftnt9">&#8317;&#8313;&#8318;</a></td>
+    </tr>
+    <tr>
+      <td class="integer">19100</td>
+      <td class="integer">111</td>
+      <td>Small Water Splash</td>
+    </tr>
+    <tr>
+      <td class="integer">19120</td>
+      <td class="integer">113</td>
+      <td>Large Water Splash</td>
+    </tr>
+    <tr>
+      <td class="integer">19130</td>
+      <td class="integer">118</td>
+      <td>Small Lava Splash</td>
+    </tr>
+    <tr>
+      <td class="integer">19150</td>
+      <td class="integer">120</td>
+      <td>Large Lava Splash</td>
+    </tr>
+    <tr>
+      <td class="integer">19170</td>
+      <td class="integer">122</td>
+      <td title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Sewage<a href="#ftnt9" id="ftnt_ref9b">&#8317;&#8313;&#8318;</a></td>
+    </tr>
+    <tr>
+      <td class="integer">19180</td>
+      <td class="integer">121</td>
+      <td title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Sewage<a href="#ftnt9">&#8317;&#8313;&#8318;</a></td>
+    </tr>
+    <tr>
+      <td class="integer">19190</td>
+      <td class="integer">123</td>
+      <td>Small Sewage Splash</td>
+    </tr>
+    <tr>
+      <td class="integer">19210</td>
+      <td class="integer">125</td>
+      <td>Large Sewage Splash</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following classes are empty and have ID -1:</p>
+
+<p class="light" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
+
+<table style="width: 500px;">
+  <thead>
+    <tr>
+      <td style="width: 40px;" class="right">ID</td>
+      <td style="width: 40px;" class="right">#</td>
+      <td>Sound</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">0</td>
+      <td>Startup</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">6</td>
+      <td>Breathing</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">70</td>
+      <td>Cyborg Projectile Flyby</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">99</td>
+      <td>S&rsquo;pht Door</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">112</td>
+      <td>Medium Water Splash</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">114</td>
+      <td>Walking in Lava</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">118</td>
+      <td>Medium Lava Splash</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">120</td>
+      <td>Walking in Sewage</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">124</td>
+      <td>Medium Sewage Splash</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">126</td>
+      <td>Walking in Goo</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">127</td>
+      <td title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Goo<a href="#ftnt9" id="ftnt_ref9c">&#8317;&#8313;&#8318;</a></td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">128</td>
+      <td title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Goo<a href="#ftnt9">&#8317;&#8313;&#8318;</a></td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">129</td>
+      <td>Small Goo Splash</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">130</td>
+      <td>Medium Goo Splash</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">131</td>
+      <td>Large Goo Splash</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">150</td>
+      <td>Hunter Activate</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">152</td>
+      <td>Hunter Dying</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">165</td>
+      <td>F&rsquo;lickta Projectile Sewage Flyby</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">183</td>
+      <td>Tick Falling</td>
+    </tr>
+    <tr>
+      <td class="integer">-1</td>
+      <td class="integer">185</td>
+      <td>Tick Exploding</td>
+    </tr>
+  </tbody>
+</table>
+<p>You&rsquo;ll thus need to change their IDs if you add sounds to them; likewise with all new classes you create.</p>
+
+<h2 id="soundsources">Sound Sources</h2>
+
+<p>I&rsquo;ve been able to locate the sources of many vanilla <em>Marathon Infinity</em> sounds; others remain elusive. Nearly all the ones I&rsquo;ve found are from the <a href="https://www.sound-ideas.com/Product/42/The-Original-General-Series-6000-Sound-Effect-Library" target="_blank">General Series 6000</a>, a 40-disc collection by the Canadian company Sound Ideas. (Alternatively, see <a href="https://www.sound-ideas.com/Product/51/General-Series-6000-Combo" target="_blank">here</a> for a bundle of the General Series 6000 with, as of this writing, ten extensions, all of which are too recent to be sources for <em>Marathon</em>.) The one exception I&rsquo;ve been able to locate, <strong>Fist Hitting</strong>, comes from the <a href="https://www.sound-ideas.com/Product/414/Series-4000-Hollywood-Sound-Effects-Library" target="_blank">Series 4000 Hollywood</a> collection. The Series 6000 sounds are ubiquitous not just in games (<em>Doom</em> also used many of them, for example) but across all types of media, so while you may be hearing shout-outs to <em>Marathon</em> when someone uses one of these sounds, it&rsquo;s likelier that they just used an industry-standard stock sound library.</p>
+
+<p>The sources I&rsquo;ve been able to locate are, in order by disc/track/index:</span></p>
+
+<ul>
+  <li><strong>Fist Landing:</strong> Face Punch, Arm Swing and Jaw Sock (4003 track 50, index 2 &ndash; this is the one from Series 4000)</li>
+  <li><strong>Lh&rsquo;owon Loon:</strong> Common Loon (6003 track 19, indices 1, 2, and 4; 4 was sped up) with echo removed</li>
+  <li><strong>Tick Chatter</strong>, <strong>Fighter Scream</strong>, and <strong>F&rsquo;lickta Death</strong> are all taken from Porcupine (6003 track 94). Fighter Scream is shifted down an octave (twelve semitones) and slowed from about 100 to about 77 bpm. F&rsquo;lickta Death is shifted down an octave and a half (nineteen semitones) and slowed from 100 to 60 bpm.</li>
+  <li><strong>F&rsquo;lickta Lava Impact</strong> and <strong>S&rsquo;pht&rsquo;Kr Being Hit</strong>: Small Burst of Flames in Wood Stove (6015 track 20, index 3, excerpt). The latter is reversed and twice as fast (but the same pitch).</li>
+  <li><strong>Flamethrower</strong>: Flamethrower Long Burst (6015 track 23, index 1, excerpt)</li>
+  <li><strong>F&rsquo;lickta Lava Flyby</strong>: Short, Large Burst of Flame (6015 track 26. I can&rsquo;t recall the index, but it&rsquo;s sped up)</li>
+  <li><strong>S&rsquo;pht&rsquo;Kr Attack</strong>: Fireball Impact and Large Fire Burst (6015 track 28, excerpt)</li>
+  <li><strong>Transformer</strong>: Electric Transformer Hum (6018 track 39, index 2)</li>
+  <li><strong>S&rsquo;pht Platform</strong>: Passenger elevator (6018 track 42, index 4). The <strong>Marathon Platform</strong> is a different edit of the same sound. Bungie also mined a later part of the same sample for the <strong>Energy Recharger</strong>.</li>
+  <li><strong>Bullet Hitting Flesh</strong>: Horror Axe Chop, Human (6018 track 80, indices 1, 2, and 3, excerpts)</li>
+  <li><strong>Body Falling</strong>: probably Horror Blood Splat, Human (6018 track 82, index 1, excerpt), pitch-shifted down about three semitones</li>
+  <li><strong>F&rsquo;lickta Melee Hit</strong>: Horror Head Crunch, Human (6018 track 87, indices 1 and 2)</li>
+  <li><strong>Crushed Under Platform</strong>: probably Horror Head Crunch, Human (6018 track 87, either index 3 or 4, possibly pitch-shifted or slowed down)</li>
+  <li><strong>Wasp Glob Impact</strong>: probably Horror Head Crunch, Human (6018 track 88, index 1, maybe pitch-shifted)</li>
+  <li><strong>Switch On/Off</strong>: Small Breaker Switch (6021 track 44, indices 1/2)</li>
+  <li><strong>Machine Binder</strong>: Binder (6022 track 3)</li>
+  <li><strong>Light Machinery</strong>: Compressor (6022 track 5)</li>
+  <li><strong>Heavy Machinery</strong>: Wahlenberg cutter (6022 track 11)</li>
+  <li><strong>Heavy S&rsquo;pht Platform</strong>: Electric Hydraulic Machine (6022 track 18)</li>
+  <li><strong>Machine Bookpress</strong>: Book Press (6022 track 25)</li>
+  <li><strong>Machine Puncher</strong>: Auto Plant Punch Press (6022 track 36)</li>
+  <li><strong>Pfhor Door</strong>: Clothes Cleaning Plant Steam Release (6023 track 5). They reversed one of these to get the opening sound (mislabeled as the closing sound in most lists of sounds)</li>
+  <li><strong>Pfhor Platform</strong>: Clothes Cleaning Plant Steam Supply Generator (6023 track 6; the <strong>Oxygen Recharger</strong> may also come from this track, but it&rsquo;s such a short sample that it&rsquo;s hard to be sure)</li>
+  <li><strong>Magnum Firing</strong>: .44 Magnum (6025 track 6; index 2 is definitely one source, if not both; they may have used each channel for one of the sounds, or may have excerpted a later index to make the other sound)</li>
+  <li><strong>Grenade Launcher Firing</strong>: Anti-tank 20mm (6025 track 25, probably index 1 or 2)</li>
+  <li><strong>Bullet Ricochet</strong>: Gun Ricochet, Single Shot, Bullet (6025 track 28, probably indices 1 and 2)</li>
+  <li><strong>Rocket Exploding</strong>: Tank Howitzer (6025 track 31, index 2)</li>
+  <li><strong>Shotgun Firing</strong>: Tank Howitzer (6025 track 31, index 4; they used each channel to make one sound)</li>
+  <li><strong>Cyborg Firing</strong>: Small Grenade Blast (6025 track 55, index 1)</li>
+  <li><strong>Cyborg Projectile Hit</strong>: May be a pitch-shifted version of Small Grenade Blast (6025 track 55, index 3). The game doesn&rsquo;t actually use this sound; cyborgs may have used different projectiles earlier in development</li>
+  <li><strong>Cyborg Death</strong>: Small Grenade Blast (6025 track 55, indices 1-3) &amp; High Voltage Electricity Spark (6039 track 61, index 1)</li>
+  <li><strong>Surface Explosions</strong>/<strong>Thunder</strong>: Mostly Large Explosions (6025 track 56, various indices, and 6040 track 24, index 2), but they supplemented the first sound with another source I haven&rsquo;t yet found</li>
+  <li><strong>You Are It</strong>: Guitar Low Note, Bend Down (6027 track 33, index 5)</li>
+  <li><strong>Got the Ball</strong>: Human Vocal Voice, &ldquo;Play Ball&rdquo;, Male Baseball Umpire (6032 track 41, index 1)</li>
+  <li><strong>Jjaro Ship Creak</strong>: One sound comes from Metal Movement and Squeaks (6032 track 58, index 2, excerpt starting about 40 seconds in). I haven&rsquo;t yet found the other</li>
+  <li><strong>Large Water Splash</strong>: Rock, Splash into Water (6032 track 92, index 3)</li>
+  <li><strong>F&rsquo;lickta Projectile Sewage Hit</strong>: Rock, Fall on Dirt (6032 track 92, index 2)</li>
+  <li><strong>Waterfall</strong>: Small Waterfalls (6035 track 1)</li>
+  <li><strong>Water</strong>: Water, Lake Waves Coming In, Light (6035 track 7)</li>
+  <li><strong>Goo</strong>: Excerpts from Geyser, Underground Rumble, Water Spraying Out (6035 track 38)</li>
+  <li><strong>Under Media</strong>: Underwater Diver Jumping into Water, Air Release, Scuba (6035 track 42)</li>
+  <li><strong>Wind</strong>: Thunderclap and Rumble (6036 track 6) and Ghost Town Wind (6036 track 49)</li>
+  <li><strong>Night Wind</strong>: Eerie Wind (6036 track 46)</li>
+  <li><strong>Heavy S&rsquo;pht Door</strong>: Space Door Activate (6037 track 6, index 2) and Spaceship Door (6039 track 24, indices 3 and 4). Still haven&rsquo;t found the &lsquo;Heavy S&rsquo;pht Door Obstructed&rsquo; sound</li>
+  <li><strong>Drone Dying</strong> and <strong>Cyborg Hit</strong>: Steam Single Blast (6037 track 15, index 5). <strong>Cyborg Hit</strong> isn&rsquo;t actually used in the game and is a sped-up version of this sample</li>
+  <li><strong>Electric Hum</strong>: Electricity, Various Hums from Drone Tube (6038 track 46), pitch-shifted up five semitones. The in-game excerpt may start at approximately 8.107 seconds (357519 samples); I&rsquo;m not 100% sure</li>
+  <li><strong>Pfhor Switch On/Off</strong>: Hydraulic Activator (6038 track 58, excerpted). The &lsquo;off&rsquo; sound is slowed down and pitch-shifted down by two semitones</li>
+  <li><strong>Enforcer Exploding</strong>: Single Firing of Tank Gun (6038 track 90, probably index 1 but might be 2)</li>
+  <li><strong>Pfhor Ship #1</strong>/<strong>Alien Noise 2</strong>: Spaceship Control Room (6039 track 1)</li>
+  <li><strong>Jjaro Ship</strong>/<strong>Alien Harmonics</strong>: Alien Spacecraft Interior (6039 track 9)</li>
+  <li><strong>Pfhor Ship #1</strong>/<strong>Alien Noise 1</strong>: Spaceship Interior Rumble (6039 track 11)</li>
+  <li><strong>Pattern Buffer</strong>: Computer Spaceship Console Beep (6039 track 27, index 2)</li>
+  <li><strong>Drone Start Attack</strong>: slightly shortened version of Robot Servo Motor (6039 track 29, index 5)</li>
+  <li><strong>Juggernaut Start Attack</strong>: slightly shortened version of Robot Servo Motor (6039 track 31, index 2)</li>
+  <li><strong>Sparking Transformer</strong>: Electric Transformer Hum (6018 track 39, index 2) and High Voltage Electricity Spark (6039 track 61, various indices)</li>
+  <li><strong>Drone Attack</strong>: partly excerpted from Electronic Magical Swish (6039 track 51, index 1); I haven&rsquo;t located the sample&rsquo;s other component(s)</li>
+  <li><strong>Drone Projectile Flyby</strong>: Electronic Magical Zap (6039 track 56, index 2), possibly sped up a bit. (6039 track 57, index 1, is a close variant of the same sound)</li>
+  <li><strong>S&#39;pht&#39;Kr Projectile Hit</strong> and </span><strong>Flyby</strong>: Archery Whoosh and Impact (6039 track 71, excerpts of indices 1 and 2)</li>
+  <li><strong>Water Drip</strong>: Most likely excerpts from Water Dripping in Cave (6039 tracks 82 and/or 84)</li>
+  <li><strong>Juggernaut Explosion</strong>: Large Explosion (6040 track 24, index 3)</li>
+  <li><strong>Underground Explosion</strong>: Large Explosion (6040 track 26, index 1)</li>
+</ul>
+
+<p>Also, at least two chapter screen sounds come from the Series 6000 General:</p>
+
+<ul>
+  <li><strong><em>Marathon 2</em>, chapter 1</strong>: Thunderclap with Rumble (6039 track 63, index 3)</li>
+  <li><strong><em>Marathon 2</em>, chapter 2</strong> (I think): Entity Pass By (6018 track 92)</li>
+</ul>
+
+<p>And at least a few <em>Pathways into Darkness</em> sounds also come from the Series 6000 General:</p>
+
+<ul>
+  <li><strong>Nightmare Attack</strong>/<strong>Dying</strong>: Wild Cat: Hissing, Growl, Swat (6003 track 44, various indices)</li>
+  <li><strong>Phantasm Attack</strong>/<strong>Dying</strong>: Lion, Roaring (6003 track 88, various indices)</li>
+</ul>
+
+<p>And various mods have also mined these sounds, including:</p>
+
+<ul>
+  <li><strong><em>Tempus Irae</em> &ndash; Blue Jay</strong>: Blue Jay, Single Calls (6003 track 1, index 1&hellip; maybe?)</li>
+  <li><strong><em>Tempus Irae</em> &ndash; Owl</strong>: Owl, Calling (6003 track 21, index 2)</li>
+  <li><strong><em>Tempus Irae</em> &ndash; Horse Whinny</strong>: Horse, Interior, Whinny (6003 track 65, index 1)</li>
+  <li><strong><em>Rubicon</em> &ndash; Alarm</strong>: General Alarm on Aircraft Carrier (6025, track 66, index 1)</li>
+  <li><em>Eternal</em> and </span><em>Tempus Irae Redux</em> use several as well; I&rsquo;ll document them eventually.</li>
+</ul>
+
+<p>If you&rsquo;re aware of any sources of vanilla sounds not listed here, either for <em>Marathon 1</em>, <em>Marathon Infinity</em>, or even <em>Pathways into Darkness</em>, please let me know.</p>
+
+<p>Acknowledgements to <strong>W&rsquo;rkncacnter</strong> on the Discord for pointing out that the <strong>Fighter Dying</strong> sound is a pitch-shift of the Porcupine sound. I had already noticed that the Fighter and F&rsquo;lickta deaths had the same source, but it never occurred to me that the Tick also had the same source.</p>
+
+<hr />
+
+<h1 id="endnotes">Endnotes</h1>
+
+<table class="light endnotes">
+  <thead>
+    <tr>
+      <th class="integer"><strong>#</strong></th>
+      <th><strong>Note</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="integer"><a href="#ftnt_ref1" id="ftnt1"><strong>1</strong></a></td>
+      <td>One of the crossbeams has gone out of skew on the treadle.</td>
+    </tr>
+    <tr>
+      <td class="integer"><a href="#ftnt_ref2" id="ftnt2"><strong>2</strong></a></td>
+      <td>The Lua mnemonics have &lsquo;<strong>Got</strong> Powerup&rsquo;, but &lsquo;<strong>Get</strong> Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.</td>
+    </tr>
+    <tr>
+      <td class="integer"><a href="#ftnt_ref3" id="ftnt3"><strong>3</strong></a></td>
+      <td>The Lua mnemonics (but not Anvil or ShapeFusion) misspell this as &lsquo;Grenade <strong>Expolding</strong>&rsquo;. I&rsquo;ve corrected it.</td>
+    </tr>
+    <tr>
+      <td class="integer"><a href="#ftnt_ref4" id="ftnt4"><strong>4</strong></a></td>
+      <td>Misspelled in Anvil (and thus ShapeFusion) as &lsquo;Rocket <strong>Expoding</strong>&rsquo;. The Lua mnemonics get this one correct.</td>
+    </tr>
+    <tr>
+      <td class="integer"><a href="#ftnt_ref5" id="ftnt5"><strong>5</strong></a></td>
+      <td>In both Anvil/ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2022?</td>
+    </tr>
+    <tr>
+      <td class="integer"><a href="#ftnt_ref6" id="ftnt6"><strong>6</strong></a></td>
+      <td>Inexplicably labeled in the Lua mnemonics as &lsquo;Nuclear Hard Death&rsquo;, the physics&rsquo; name for the screen flash and sound effect made when Juggernauts die. (Worst Prince cover ever.) That sound is Juggernaut Exploding (#198, ID 14650).</td>
+    </tr>
+    <tr>
+      <td class="integer"><a href="#ftnt_ref7" id="ftnt7"><strong>7</strong></a></td>
+      <td>The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.</td>
+    </tr>
+    <tr>
+      <td class="integer"><a href="#ftnt_ref8" id="ftnt8"><strong>8</strong></a></td>
+      <td>Nice.</td>
+    </tr>
+    <tr>
+      <td class="integer"><a id="ftnt9"><strong>9</strong></span></a></td>
+      <td><a href="#ftnt_ref9a">&#8317;&#x1D43;&#8318;</a> <a href="#ftnt_ref9b">&#8317;&#x1D47;&#8318;</a> <a href="#ftnt_ref9c">&#8317;&#x1D9c;&#8318;</a> &lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

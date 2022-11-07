@@ -79,7 +79,7 @@ window.onload = function () {makeAllSortable();};
 </head>
 <body>
 
-<header><p>This document is a guide to content creation for Marathon Aleph One, an open-source engine based on Bungie's groundbreaking first-person shooter trilogy (1994-1996); it contains overviews of common problems creators may face (and solutions thereto), plus links to, editors, other useful guides/resources, and communities where users may be able to find solutions to problems not covered here. It is meant to help troubleshoot several problems with Marathon content creation that AFAIK aren&rsquo;t documented anywhere else well, if at all. With the exception the Weland setup guide, this is designed as an advanced document; see &lsquo;Other Tutorials & Resources&rsquo; for guides to basic mapmaking principles, which you should definitely familiarize yourself with before moving onto more advanced tricks.</p>
+<header><p>This document is a guide to content creation for <strong><a href="https://alephone.lhowon.org/" target="_blank">Marathon Aleph One</a></strong>, an open-source engine based on <strong>Bungie</strong>'s groundbreaking first-person shooter trilogy (1994-1996); it contains overviews of common problems creators may face (and solutions thereto), plus links to, editors, other useful guides/resources, and communities where users may be able to find solutions to problems not covered here. It is meant to help troubleshoot several problems with Marathon content creation that AFAIK aren’t documented anywhere else well, if at all. With the exception of the <a href="#welandsetup">Weland setup guide</a>, this is designed as an advanced document; see ‘<a href="#tutorialsother">Other Tutorials & Resources</a>’ for guides to basic mapmaking principles, which you should definitely familiarize yourself with before moving onto more advanced tricks.</p>
 
 <h1 id="bio">Who are you and what qualifies you to write this?</h1>
 
@@ -87,24 +87,13 @@ window.onload = function () {makeAllSortable();};
 
 <p>If you wish to contact me, the best way is via Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@Aaron#6608</strong>, though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I&rsquo;d recommend this only if you notice errors/omissions in this document (or have suggestions for additions; I can credit you for all three). If you need help, it&rsquo;s best to ask in <strong>#marathon-general</strong>, <strong>#forge</strong>, or <strong>#tech-support</strong> (<strong>#development</strong> is for engine/editor development). I&rsquo;m also on the <a href="https://pfhorums.com" target="_blank">Pfhorums</a> (as <a href="https://pfhorums.com/memberlist.php?mode=viewprofile&u=6618" target="_blank">The Man</a>) and <a href="https://reddit.com/r/marathon/" target="_blank">Reddit</a> (as <a href="https://reddit.com/u/aaronnotarobot" target="_blank">u/aaronnotarobot</a>), but I can&rsquo;t promise to respond to messages on either quickly.</p>
 
-<h1 id="thanks">Acknowledgements</h2>
-<ul>
-  <li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
-  <li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
-  <li><strong>W&rsquo;rkncacnter</strong> for pointing out a sound source that eluded me (namely the fighter death).</li>
-  <li>The numerous mapmakers I&rsquo;ve learned from or been influenced by over the years. I couldn&rsquo;t possibly hope to list them all, but <strong>James Hastings-Trew</strong>, <strong>CryoS</strong>, <strong>hypersleep</strong>, <strong>RyokoTK</strong>, <strong>windbreaker</strong>, <strong>Don-Martin Antell</strong>, <strong>Drictelt</strong>, <strong>Mike Trinder</strong>, <strong>Jason Harper</strong>, <strong>Chris Lund</strong>, <strong>Courtney Evans</strong>, <strong>Frank Rooke</strong>, <strong>Devon Belcher</strong>, <strong>Borzz</strong>, <strong>Shebob</strong>, <strong>Jason Jones</strong>, <strong>Greg Kirkpatrick</strong>, <strong>Randy Reddig</strong>, and <strong>FM</strong> have to number among them.</li>
-  <li>The numerous people who have helped maintain <strong>Aleph One</strong> over the years.</li>
-  <li><strong>Bungie</strong>, for obvious reasons.</li> 
-</ul>
-</header>
-
 <h1 id="toc">Table of Contents</h1>
 
 <div class="toc">
   <ol>
     <li><a href="#bio">Author Info</a></li>
-    <li><a href="#thanks">Acknowledgements</a></li>
     <li><a href="#toc">Table of Contents</a> (you’re looking at it?)</li>
+    <li><a href="#thanks">Acknowledgements</a></li>
     <li><a href="#resources">Resources</a>
       <ol>
         <li><a href="#resourcesa1">Aleph One Content Editing</a></li>
@@ -164,6 +153,17 @@ window.onload = function () {makeAllSortable();};
     <li><a href="#endnotes">Endnotes</a></li>
   </ol>
 </div>
+
+<h1 id="thanks">Acknowledgements</h2>
+<ul>
+  <li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
+  <li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
+  <li><strong>W&rsquo;rkncacnter</strong> for pointing out a sound source that eluded me (namely the fighter death).</li>
+  <li>The numerous mapmakers I&rsquo;ve learned from or been influenced by over the years. I couldn&rsquo;t possibly hope to list them all, but <strong>James Hastings-Trew</strong>, <strong>CryoS</strong>, <strong>hypersleep</strong>, <strong>RyokoTK</strong>, <strong>windbreaker</strong>, <strong>Don-Martin Antell</strong>, <strong>Drictelt</strong>, <strong>Mike Trinder</strong>, <strong>Jason Harper</strong>, <strong>Chris Lund</strong>, <strong>Courtney Evans</strong>, <strong>Frank Rooke</strong>, <strong>Devon Belcher</strong>, <strong>Borzz</strong>, <strong>Shebob</strong>, <strong>Jason Jones</strong>, <strong>Greg Kirkpatrick</strong>, <strong>Randy Reddig</strong>, and <strong>FM</strong> have to number among them.</li>
+  <li>The numerous people who have helped maintain <strong>Aleph One</strong> over the years.</li>
+  <li><strong>Bungie</strong>, for obvious reasons.</li> 
+</ul>
+</header>
 
 <h1 id="resources">Resources</h1>
 <h2 id="resourcesa1">Aleph One Content Editing (Marathon 2/Infinity Format)</h2>

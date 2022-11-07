@@ -383,10 +383,13 @@ To make this content compatible with modern Aleph One, you must run it through <
   </li>
   <li>There are several hazards with the <strong>Activates Only Once</strong> flag for platforms (i.e., lifts and doors). Misusing this is one of the most common causes of incompletable levels.
     <ul>
-      <li>These should always, <em>always</em>, <strong><em>ALWAYS</em></strong> have <strong>Can&rsquo;t Deactivate Externally</strong> checked.</li>
-      <li>Also, if such a door starts as <strong>Extended</strong>, it should deactivate either <strong>At Each Level</strong> or <strong>Never.</strong></li>
-      <li>Meanwhile, lifts that activate <strong>Only Once</strong> should probably deactivate <strong>Never</strong>.</li>
-      <li>The only <em>possible</em> acceptable exception to this is missable secrets, but I&rsquo;d strongly discourage even this. If you must have one, provide a way out for players caught on the wrong sides of doors. Make sure any teleporters are usable (i.e., test them in-game).</li>
+      <li>These should always, <em>always</em>, <strong><em>ALWAYS</em></strong> have <strong>Can&rsquo;t Deactivate Externally</strong> checked. I can&rsquo;t stress this strongly enough. If a door that&rsquo;s meant to open deactivates before it finishes doing so, that can render a level incompletable, and to compound the matter, players may save their games in such a state.
+         <ul><li>The only <em>possible</em> acceptable exception to this rule is for missable secrets, but I&rsquo;d strongly discourage even that. If you absolutely <em>must</em> have a missable secret (please don&rsquo;t make your secrets missable), provide a way out for players caught on the wrong sides of doors, and make sure any teleporters are usable (i.e., test them in-game).</li></ul>
+      </li>
+      <li>Also, if such a door is <strong>Initially Extended</strong>, it should deactivate either <strong>At Each Level</strong> or <strong>Never</strong>. If it isn&rsquo;t, it should deactivate either <strong>At Initial Level</strong> or <strong>Never</strong>.</li>
+      <li>Meanwhile, lifts that activate <strong>Only Once</strong> should probably deactivate <strong>Never</strong>. Otherwise, a player might be able to activate it, get off the lift, and be unable to get back up; this can also cause problems in cooperative games (if those are enabled).
+        <ul><li>Platforms that are <strong>Initially Extended</strong> and <strong>Deactivate at Each Level</strong> may be possible exceptions to this, but you should still test them extensively.</li></ul>
+      </li>
     </ul>
   </li>
   <li>Speaking of which, teleporters (and automatic exit polygons) behave oddly with media. If there&rsquo;s a liquid on the teleporter, it probably shouldn&rsquo;t have a current.</li>
@@ -395,12 +398,12 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <h2 id="tagsareterrible">Tags Are Terrible</h2>
 
-<ul><li>Tags must be possible to activate when players activate them. Thus, if a (tag switch/wires/chip slot) controls only something controllable by other means that:
+<ul><li>Tags must be possible to activate when players activate them. Thus, if a (tag switch/wires/chip slot) controls only something that is controllable by other means and:
   <ol>
-    <li>could be active when a player activates the tag, and/or</li>
+    <li>could be active when a player activates the tag and/or</li>
     <li>activates only once,</li>
   </ol>
-  That can cause an unbeatable level.</li>
+  that can make a level impossible to complete.</li>
   <li>If a player deactivates a tag switch set to <strong>Repair</strong> and can&rsquo;t reactivate it, they can&rsquo;t finish the mission. Tag switches can&rsquo;t be activated if nothing they control can be activated; rather than risk this, consider never <del>using them</del> marking them as <strong>Repair</strong>. <em>Usually</em> <strong>Repair</strong>-safe:
     <ul><li>Destructible wires (they stay toggled).</li>
       <li>Platform switches (the game remembers they were toggled even if they deactivate).</li>
@@ -408,7 +411,7 @@ To make this content compatible with modern Aleph One, you must run it through <
     </ul>
   </li>
   <li>Chip slots are a &lsquo;maybe&rsquo; on the <strong>Repair</strong> count. Unless set to the &lsquo;dummy&rsquo; tag 0, a chip slot&rsquo;s tag must control something, or it&rsquo;ll consume chips without activating (which also renders levels unbeatable).</li>
-  <li>These bugs can interact, as well. If a chip controls a tag that can&rsquo;t activate, it can&rsquo;t be marked <strong>Repair</strong>, and it will eat any chips a hapless player tries to insert.</li>
+  <li>These bugs can interact, as well. If a chip controls a tag that can&rsquo;t activate, it can&rsquo;t toggle the <strong>Repair</strong> mission flag (rendering the level incompletable) and will eat any chips a hapless player tries to insert (possibly rendering future levels incompletable as well, in case a player is meant to have them on said levels).</li>
   <li>Avoid having multiple (chip slots/wires/tag switches) control the same tag.</li>
   <li>There are also texturing issues (see below). Basically, tags are awful, and you should avoid them unless they&rsquo;re absolutely necessary. They often aren&rsquo;t; e.g., platforms can activate adjacent platforms and lights. Make underground platforms if needed (extending <strong>From Floor</strong> to reduce the odds of motion glitches); they may look ugly in Weland, but players won&rsquo;t see them. If you don&rsquo;t want to see them in the visual mode map, you can even give them landscape textures (just avoid doing that on walls that players can see the other side of, or they&rsquo;ll disappear from the map).</li>
 </ul>

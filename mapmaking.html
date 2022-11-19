@@ -83,7 +83,7 @@ window.onload = function () {makeAllSortable();};
 
 <h1 id="bio">Who are you and what qualifies you to write this?</h1>
 
-<p>I&rsquo;m Aaron; I&rsquo;m likely best-known in the community for co-directing <em>Eternal</em>, though I&rsquo;ve also worked in some capacity (not always mapping-related) on current or forthcoming mods like <em>Tempus Irae Redux</em>, <em>Where Monsters Are in Dreams</em>, <em>Marathon Chronicles</em>, <em>Hellpak</em>, <em>Apotheosis X</em>…basically I&rsquo;ve been busy mapping for this engine off and on since about 1997, during which I&rsquo;ve acquired all kinds of stupid arcane knowledge about it. Have you ever heard of ambient light delta? Neither had Aleph One&rsquo;s developers until I pointed it out. I&rsquo;m not saying that because I think it&rsquo;s worth being proud of having acquired so much useless and pointless knowledge, but what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me… oh, sorry, that&rsquo;s <em>Taken</em>. Anyway, I feel Aleph One content creation should have a lower barrier to entry, so here&rsquo;s an attempt to create a reference for solutions to some of its frustrating problems.</p>
+<p>I&rsquo;m Aaron; I&rsquo;m likely best-known in the community for co-directing <em><a href="http://eternal.bungie.org/development" target="_blank">Eternal</a></em>, though I&rsquo;ve also worked in some capacity (not always mapping-related) on current and forthcoming mods like <em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em>, <em><a href="https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors" target="_blank">Hellpak</em>, <em>Tempus Irae Redux</em>, <em>Where Monsters Are in Dreams</em>, <em>Marathon Chronicles</em>&hellip;basically, I&rsquo;ve been busy mapping for this engine off and on since about 1997, during which I&rsquo;ve acquired all kinds of stupid arcane knowledge about it. Have you ever heard of ambient light delta? Neither had Aleph One&rsquo;s developers until I pointed it out. I&rsquo;m not saying that because I think it&rsquo;s worth being proud of having acquired so much useless and pointless knowledge, but what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me&hellip; oh, sorry, that&rsquo;s <em>Taken</em>. Anyway, I feel Aleph One content creation should have a lower barrier to entry, so here&rsquo;s an attempt to create a reference for solutions to some of its frustrating problems.</p>
 
 <p>If you wish to contact me, the best way is via Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@Aaron#6608</strong>, though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I&rsquo;d recommend this only if you notice errors/omissions in this document (or have suggestions for additions; I can credit you for all three). If you need help, it&rsquo;s best to ask in <strong>#marathon-general</strong>, <strong>#forge</strong>, or <strong>#tech-support</strong> (<strong>#development</strong> is for engine/editor development). I&rsquo;m also on the <a href="https://pfhorums.com" target="_blank">Pfhorums</a> (as <a href="https://pfhorums.com/memberlist.php?mode=viewprofile&u=6618" target="_blank">The Man</a>) and <a href="https://reddit.com/r/marathon/" target="_blank">Reddit</a> (as <a href="https://reddit.com/u/aaronnotarobot" target="_blank">u/aaronnotarobot</a>), but I can&rsquo;t promise to respond to messages on either quickly.</p>
 
@@ -119,7 +119,7 @@ window.onload = function () {makeAllSortable();};
       <ol>
         <li><a href="#weaponsinhand">&lsquo;Weapons in Hand&rsquo; Sequences</a></li>
         <li><a href="#8bitsoftwareimages">The Images File</a></li>
-        <li><a href="#8bitchapterscreens">Chapter Screens</a></li>
+        <li><a href="#chapterscreens">Chapter Screens</a></li>
       </ol>
     </li>
     <li><a href="#mapmaking">Mapmaking</a>
@@ -330,9 +330,11 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p>Add 1,000 to each of these numbers for the &lsquo;24-bit&rsquo; versions. It&rsquo;s ideal to have separate 8-bit and 24-bit versions, as IIRC, Photoshop and GIMP dither images much better than Aleph One does.</p>
 
-<h2 id="8bitchapterscreens">Chapter Screens</h2>
+<h2 id="chapterscreens">Chapter Screens & Sounds</h2>
 
-<p>The game won&rsquo;t display a chapter screen in 8-bit software mode unless it has an associated CLUT resource (sharing the chapter screen&rsquo;s resource ID). Chapter screens go from 1500 (for level 0) to 1599 (for the end screen or, God help us all, level 99). Add 10,000 for &lsquo;24-bit&rsquo; versions. If there&rsquo;s an associated sound (sharing the 15xx ID), the game plays it. This includes ending screens (though Aleph One also plays the music file, so it&rsquo;s probably not worth including a sound 1599 unless you plan for your scenario not to have opening music).</p>
+<p>Aleph One won&rsquo;t display a chapter screen in 8-bit software mode unless it has an associated CLUT resource sharing the chapter screen&rsquo;s resource ID. Make sure to include these if you care about 8-bit software mode at all. Chapter screens go from 1500 (for level 0) to 1599 (for the end screen or, God help us all, level 99). Add 10,000 for &lsquo;24-bit&rsquo; versions and (I found this one out the hard way &ndash; by noticing it after a scenario release) 20,000 for &lsquo;32-bit&rsquo; versions. (This effectively makes 115xx and 215xx unusable if you have a level xx &ndash; but I&rsquo;m not sure if Aleph One will ever display the 115xx picture when the 215xx exists, so if you use 215xx for the chapter screen, you might be able to get away with using 115xx for a terminal picture.)</p>
+  
+<p>Also, if there&rsquo;s an associated sound sharing the 15xx ID, Aleph One will play it. This includes ending screens (though Aleph One also plays the music file, so it&rsquo;s probably not worth including a sound 1599 unless you plan for your scenario not to have opening music).</p>
 
 <h1 id="mapmaking">Mapmaking</h1>
 <h2 id="forgeerrata">Forge Manual Errata & Omissions</h2>

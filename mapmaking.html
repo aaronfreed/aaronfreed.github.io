@@ -150,7 +150,39 @@ window.onload = function () {makeAllSortable();};
         <li><a href="#soundsources">Sound Sources</a></li>
       </ol>
     </li>
-    <li><a href="#anvilhelp">Anvil Help Balloons</a></li>
+    <li><a href="#anvilhelp">Anvil Help Balloons</a>
+      <ol>
+        <li><a href="#physicsmodels">Physics Models</a>
+          <ol>
+            <li><a href="#anvilaliens">Aliens</a>
+              <ol>
+                <li><a href="#alienappearance">Appearance and Sounds</a></li>
+                <li><a href="#aliencombat">Combat Settings</a></li>
+                <li><a href="#alienphysics">Physical Constants</a></li>
+                <li><a href="#alienbehavior">Behavior Settings</a></li>
+                <li><a href="#alienimmunities">Immunities and Weaknesses</a></li>
+              </ol>
+            </li>
+            <li><a href="#anvileffects">Effects</a></li>
+            <li><a href="#anvilshots">Shots</a></li>
+            <li><a href="#anvilphysics">Physics</a></li>
+            <li><a href="#anvilweapons">Weapons</a>
+              <ol>
+                <li><a href="#weapondefinition">Weapon Definition</a></li>
+                <li><a href="#triggersettings">Trigger Settings</a></li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li><a href="#anvilsounds">Sounds</a></li>
+        <li><a href="#anvilshapes">Shapes</a>
+          <ol>
+            <li><a href="#anvilbitmaps">Bitmaps and Color Tables</a></li>
+            <li><a href="#anvilsequences">Frames and Sequences</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
     <li><a href="#endnotes">Endnotes</a></li>
   </ol>
 </div>
@@ -2134,18 +2166,17 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p>Acknowledgements to <strong>W&rsquo;rkncacnter</strong> on the Discord for pointing out that the <strong>Fighter Dying</strong> sound is a pitch-shift of the Porcupine sound. I had already noticed that the Fighter and F&rsquo;lickta deaths had the same source, but it never occurred to me that the Tick also had the same source.</p>
 
-<hr />
-
 <h1 id="anvilhelp">Anvil Help Balloons</h1>
 
 <p>Formatted with occasional asides and corrections, which I have marked in <em>[bracketed italics]</em>, ending with </em>-Ed.</em></p>
 
 <ul>
-	<li>Physics Models
+	<li><h2 id="physicsmodels">Physics Models</h2>
 		<ul>
-			<li><strong>Aliens:</strong> The "Aliens" section of the physics model stores information about all of the moving, thinking, and attacking objects in the game, such as monsters and BOBs.
+			<li><h3 id="anvilaliens">Aliens</h3>
+			The "Aliens" section of the physics model stores information about all of the moving, thinking, and attacking objects in the game, such as monsters and BOBs.
 				<ul>
-					<li><strong>Appearance and Sounds</strong>
+					<li><strong id="alienappearance">Appearance and Sounds</strong>
 						<ul>
 							<li><strong>Appearance:</strong> The appearance of a character is determined by a graphic collection index, a color table index, and a list of sequence IDs. Select each edit field for more information.
 								<ul>
@@ -2179,7 +2210,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 							</li>
 						</ul>
 					</li>
-					<li><strong>Combat Settings:</strong>
+					<li><strong id="aliencombat">Combat Settings:</strong>
 						<ul>
 							<li><strong>Attack Frequency:</strong> The attack frequency indicates how often the character will launch an attack (but not how many projectiles will be fired during that attack). The value measures the number of ticks between attacks (where 1 tick = 1/30th of a second).</li>
 							<li><strong>Melee Attack:</strong> The character will use its melee attack if it is within the melee attack range of the character and a melee attack exists (note that if the Chooses Weapon Randomly flag is checked the character will choose an attack at random).</li>
@@ -2213,7 +2244,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 							</li>
 						</ul>
 					</li>
-					<li><strong>Physical Constants</strong>
+					<li><strong id="alienphysics">Physical Constants</strong>
 						<ul>
 							<li><strong>Vitality:</strong> The vitality of the character measures how much damage it can endure before dying. Any projectile, polygon effect, or shrapnel effect that causes damage to the character decreases this value.</li>
 							<li><strong>Radius:</strong> The radius of the character measures how narrow a gap in the map it can pass through and need not match the radius of the graphic used to draw it.</li>
@@ -2242,8 +2273,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 							<li><strong>Contrail Effect:</strong> The contrail effect, if one is specified, will be played at periodical intervals whenever the character is moving. <em>[As far as I can tell, this should read "whenever the character is dying, if the 'delayed hard death' flag is set". -Ed.]</em></li>
 						</ul>
 					</li>
-
-					<li><strong>Behavior Settings</strong>
+					<li><strong id="alienbehavior">Behavior Settings</strong>
 						<ul>
 							<li><strong>Class:</strong> Every character has a "Class" which is used to determine friend and enemy relationships between the character and the other targets on the map.</li>
 							<li><strong>Friends:</strong> Any character class that is checked here will be treated as a "Friend." The character will not attack friends and will not attack a friend that accidentally hits it.</li>
@@ -2282,7 +2312,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 							</li>
 						</ul>
 					</li>
-					<li><strong>Immunities and Weaknesses</strong>
+					<li><strong id="alienimmunities">Immunities and Weaknesses</strong>
 						<ul>
 							<li><strong>Immunities:</strong> If a character is marked "Immune" to a type of damage, it will suffer no loss of vitality when it is hit by a projectile or shrapnel effect inflicting that class of damage. <em>[It will also not get angry at any monster or player that hits it with said damage type. -Ed.]</em></li>
 							<li><strong></strong> If a character is marked "Weak" to a type of damage, it will suffer a much greater loss of vitality when it is hit by a projectile or shrapnel effect inflicting that class of damage. <em>[Specifically, twice as much. -Ed.]</em></li>
@@ -2314,7 +2344,8 @@ To make this content compatible with modern Aleph One, you must run it through <
 					</li>
 				</ul>
 			</li>
-			<li><strong>Effects:</strong> The "Effects" section of the physics model stores information about small animated effects, such as explosions and splashes.
+			<li><h3 id="anvileffects">Effects</h3>
+			The "Effects" section of the physics model stores information about small animated effects, such as explosions and splashes.
 				<ul>
 					<li><strong>Graphic Collection:</strong> The Graphic Collection must be a number between 0 and 31. It indicates which collection of graphics in the Shapes file will be used to draw this effect. To preview the graphics collections, open a Shapes file.</li>
 					<li><strong>Color Table:</strong> The Color Table must be a number between 0 and the number of tables defined for this collection. It indicates which collection of colors will be used to draw this effect. To preview the color tables and graphics, open a Shapes file.</li>
@@ -2329,7 +2360,8 @@ To make this content compatible with modern Aleph One, you must run it through <
 					<!-- This flag is used internally by Marathon. You should not change it. -->
 				</ul>
 			</li>
-			<li><strong>Shots:</strong> The "Shots" section of the physics model stores information about objects that are fired by weapons or monsters and that travel until they hit a target.
+			<li><h3 id="anvilshots">Shots</h3>
+			The "Shots" section of the physics model stores information about objects that are fired by weapons or monsters and that travel until they hit a target.
 				<ul>
 					<li><strong>Graphic Collection:</strong> The Graphic Collection must be a number between 0 and 31. It indicates which collection of graphics in the Shapes file will be used to draw this projectile. Note that 31 is used as a special value for "no graphics".</li>
 					<li><strong>Color Table:</strong> The Color Table must be a number between 0 and the number of tables defined for this collection. It indicates which collection of colors will be used to draw this projectile. Note that if no graphic is to appear you should enter the value 7.</li>
@@ -2381,7 +2413,8 @@ To make this content compatible with modern Aleph One, you must run it through <
 					</li>
 				</ul>
 			</li>
-			<li>The "Physics" section of the physics model stores information about basic constants of the simulation, such as gravity and the player's top speed.
+			<li><h3 id="anvilphysics">Physics</h3>
+			The "Physics" section of the physics model stores information about basic constants of the simulation, such as gravity and the player's top speed.
 				<ul>
 					<li><strong>Max. forward velocity:</strong> Maximum forward velocity is the maximum speed that the player may move when the forward key is pressed.</li>
 					<li><strong>Max. backward velocity:</strong> Max backward velocity is the maximum speed that the player may move when the backward key is pressed.</li>
@@ -2411,10 +2444,10 @@ To make this content compatible with modern Aleph One, you must run it through <
 					<li><strong>Half camera separation:</strong> The half-camera separation determines the focal length of the perspective projection. Don't change it unless you know what you're doing.</li>
 				</ul>
 			</li>
-			<li><strong>Weapons:</strong> The "Weapons" section of the physics model stores information about the weapons that players may pick up and use, such as shot type, ammunition, and sounds.
-
+			<li><h3 id="anvilweapons">Weapons</h3>
+			The "Weapons" section of the physics model stores information about the weapons that players may pick up and use, such as shot type, ammunition, and sounds.
 				<ul>
-					<li><strong>Weapon Definition</strong>
+					<li><strong id="weapondefinition">Weapon Definition</strong>
 						<ul>
 							<li><strong>Item Type:</strong> This field establishes the connection between a type of item (that can be in the map) and a weapon class.</li>
 							<li><strong>Weapon Class:</strong> Melee weapons always use the melee impact effect. Single function weapons fire the main trigger on both keys. Dual function weapons can "charge" to perform their secondary trigger. Two-fisted weapons can be used two at once. Multipurpose weapons have two separate ammo types.
@@ -2468,7 +2501,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 							</li>
 						</ul>
 					</li>
-					<li><strong>Trigger Settings</strong>
+					<li><strong id="triggersettings">Trigger Settings</strong>
 						<ul>
 							<li><strong>Main/Secondary Triggers:</strong> Whenever a weapon is fired, Marathon will use the information in a trigger record to create the appropriate effect. Note that the secondary trigger information will not be used unless the weapon is a multi-purpose or dual-purpose weapon.</li>
 							<li><strong>Projectile:</strong> The type of projectile that will be created when the trigger fires is indicated here. To change projectile statistics, edit the "Shots" section of the model.</li>
@@ -2499,7 +2532,8 @@ To make this content compatible with modern Aleph One, you must run it through <
 			</li>
 		</ul>
 	</li>
-	<li><strong>Sounds</strong>: Each Sound may contain up to 5 permutations. You may select the Sound to edit from this menu and then select a permutation from the list box, below.
+	<li><h2 id="anvilsounds">Sounds</h2>
+	Each Sound may contain up to 5 permutations. You may select the Sound to edit from this menu and then select a permutation from the list box, below.
 		<ul>
 			<li><strong>8-Bit:</strong> Check this button to listen to and edit the 8-bit (lower-quality, smaller) sounds.</li>
 			<li><strong>16-Bit:</strong> Check this button to listen to and edit the 16-bit (high-quality, larger) sounds.</li>
@@ -2517,16 +2551,19 @@ To make this content compatible with modern Aleph One, you must run it through <
 		</ul>
 	</li>
 
-	<li><strong>Shapes</strong>
+	<li><h2 title="anvilshapes">Shapes</h2>
 		<ul>
 
-			<li><strong>Bitmaps:</strong> The Bitmaps fields of a Shape file contain the actual image data for the shapes and the color tables used to draw them. You may insert new shapes or change color tables by changing the Bitmaps records.
+			<li><h3 title="anvilbitmaps">Bitmaps and Color Tables</h3>
+				The Bitmaps fields of a Shape file contain the actual image data for the shapes and the color tables used to draw them. You may insert new shapes or change color tables by changing the Bitmaps records.
 				<ul>
 					<li><strong>Display:</strong> Choose "Bitmaps" from this menu to view and edit the bitmaps for this collection, or "Color Tables" to view and edit the color tables for the collection.</li>
 					<li><strong>Bitmaps:</strong> These are the bitmaps stored in the current collection. Click on one of them and choose Paste from the Edit menu to insert a new graphic, or choose "Import PICT" from the Shape menu to load a PICT graphic.</li>
+					<li><strong>Color Table:</strong> Choose the color table you want to view the current bitmaps with from this menu.</li>
 				</ul>
-			<li><strong>Color Table:</strong> Choose the color table you want to view the current bitmaps with from this menu.</li>
-			<li><strong>Sequences:</strong> The Sequences fields of a Shape file contain the lists of frames that are used to animate objects during the game and draw them from multiple perspectives. They also contain information about synchronized sounds to be played during the sequences.
+			</li>
+			<li><h3 title="anvilsequences">Frames and Sequences</h3>
+			The Sequences fields of a Shape file contain the lists of frames that are used to animate objects during the game and draw them from multiple perspectives. They also contain information about synchronized sounds to be played during the sequences.
 				<ul>
 					<li><strong>Sequences:</strong> Frames and Views are organized into Sequences, which is a single action taken by a Marathon character, weapon, or effect. You may edit the sequences here.
 						<ul>
@@ -2569,6 +2606,8 @@ To make this content compatible with modern Aleph One, you must run it through <
 		</ul>
 	</li>
 </ul>
+
+<hr />
 
 <h1 id="endnotes">Endnotes</h1>
 

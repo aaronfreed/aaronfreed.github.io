@@ -463,7 +463,12 @@ To make this content compatible with modern Aleph One, you must run it through <
 <h2 id="texturingissues">Texturing Issues in Visual Mode.lua and Vasara</h2>
 
 <ul>
-  <li>When you exit visual mode (or type <strong>.save level</strong>), platforms that extend <strong>From Ceiling</strong> or <strong>From Both</strong> should be in the same position they start the level in, or you&rsquo;ll get texture misalignments. (A forthcoming release of Aleph One will fix this and a related platform alignment bug that occurred even in the original engine; you can get these fixes early by building it from master.)</li>
+  <li>If you are using a version of Aleph One prior to 1.6:
+    <ol>
+      <li>Upgrade, for the love of Pthia.</li>
+      <li>When you exit visual mode (or type <strong>.save level</strong>), platforms that extend <strong>From Ceiling</strong> or <strong>From Both</strong> should be in the same position they start the level in, or you&rsquo;ll get texture misalignments. Aleph One largely fixes this and a related platform alignment bug that occurred even in the original engine. (Slight misalignments &ndash; we&rsquo;re talking a pixel or two &ndash; may still occur if you close the editor while such a platform is moving, but it seems to be entirely fine if the platform is at rest. If such platforms must move continually, one solution is to tie them to some specific action on the map, such as a platform trigger on a player spawn point, and then X+click to set the player start point elsewhere when you go to texture. If you don&rsquo;t set it on the player spawn point, you can also teleport around the map to avoid walking on it.)</li>
+    </ol>
+  </li>
   <li>When you exit visual mode, tags should be in the state they&rsquo;re meant to start the level in. Thus, if you tabbed a tag switch that starts the level inactive so you could open some doors, reset the tag to inactive. Take special care with wires and chip insertion switches &ndash; messing them up can render levels uncompletable. For this reason and more (see above), I&rsquo;d recommend avoiding tags where possible.</li>
   <li>Walking on a <strong>Must Be Explored</strong> polygon (or even looking at it if <strong>Exploration (M1)</strong> is set) resets it to <strong>Normal.</strong> Be sure to reset these after texturing (or just don&rsquo;t set them until you&rsquo;ve finished texturing).</li>
   <li>Frame interpolation can cause textures to jitter if you place them without paving first. Some players have also reported that placing textures without first paving can cause crashes (I haven&rsquo;t experienced this). However, paving occasionally crashes Weland (I haven&rsquo;t isolated the cause, but it seems to be an index mismatch), so it&rsquo;s ideal to save, pave, then go into visual mode.</li>
@@ -784,7 +789,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p>You get as close to the feeling of having climbed up a huge mountain as Aleph One is likely to provide, but as you can see in the first screenshot, the frame rate is bad in places, the texturing is quite dull, and the lamps just look silly. Subsequent releases of the map fixed the latter two aspects, but the frame rate problem persisted, which was the primary impetus for CryoS and me to remake it from scratch.</p>
 
-<p>Our new version - and I&rsquo;ll withhold its polygon count for a moment - looks like this in Weland (minus some map writing that I&rsquo;ve removed to make the screenshot more legible):</p>
+<p>Our new version &ndash; and I&rsquo;ll withhold its polygon count for a moment &ndash; looks like this in Weland (minus some map writing that I&rsquo;ve removed to make the screenshot more legible):</p>
 
 <p class="centred"><img alt="Where Giants Have Fallen 1.3 Draw Mode" src="wghf-13-0.png" width="512" height="512" title="Where Giants Have Fallen 1.3 Draw Mode"></p>
 

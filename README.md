@@ -13,6 +13,7 @@ I have at least slightly more than cursory knowledge of the following languages 
 * Java
 * BASIC
 * Pascal
+* Assembly
 
 Then I have *actually* cursory knowledge of:
 

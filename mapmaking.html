@@ -128,7 +128,11 @@ window.onload = function () {makeAllSortable();};
       <ol>
         <li><a href="#forgeerrata">Forge Manual Errata & Omissions</a></li>
         <li><a href="#generalmapmaking">General Notes</a></li>
-        <li><a href="#tagsareterrible">Tags Are Terrible</a></li>
+        <li><a href="#tagsareterrible">Tags Are Terrible (though sometimes inexorable)</a>
+          <ol>
+            <li><a href="#waysaroundtags">Ways to Avoid Tags</a></li>
+          </ol>
+        </li>
         <li><a href="#ambientsound">Ambient Sound</a></li>
         <li><a href="#texturingissues">Texturing Issues in Visual Mode.lua and Vasara</a>
           <ol>
@@ -466,13 +470,20 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
-<h2 id="tagsareterrible">Tags Are Terrible</h2>
+<h2 id="tagsareterrible">Tags Are Terrible (though sometimes inexorable)</h2>
 
-<ul><li>Tags must be possible to activate when players activate them. Thus, if a (tag switch/wires/chip slot) controls only something that is controllable by other means and:
-  <ol>
+<p>Don&rsquo;t get me wrong &ndash; in the right circumstances, they&rsquo;re <em>immensely</em> useful. But they can also break the game if you don&rsquo;t know what you&rsquo;re doing, especially if they&rsquo;re marked as <strong>Repair</strong>. If you take two things away from this admittedly opinionated section:</p>
+  
+  <ol><li>Avoid ever marking tag switches or chip insertion slots as <strong>Repair</strong>.</li>
+  <li>If you absolutely <em>must</em> mark such a switch as <strong>repair</strong>, make sure it controls a light &ndash; that will <em>probably</em> work around the worst bugs. <em>Probably</em>. (Though you&rsquo;d still be able to deactivate the tag switch, which would make it possible to change a level state from complete to incomplete &ndash; annoying design, to say the least.)</li></ol>
+  
+<p>Now, for the gory details:</p>
+  
+<ul><li>Tags must be possible to activate when players attempt to activate them. Thus, if a (tag switch/wires/chip slot) controls only something that&rsquo;s controllable by other means and:
+  <ul>
     <li>could be active when a player activates the tag and/or</li>
     <li>activates only once,</li>
-  </ol>
+  </ul>
   that can make a level impossible to complete.</li>
   <li>If a player deactivates a tag switch set to <strong>Repair</strong> and can&rsquo;t reactivate it, they can&rsquo;t finish the mission. Tag switches can&rsquo;t be activated if nothing they control can be activated; rather than risk this, consider never <del>using them</del> marking them as <strong>Repair</strong>. <em>Usually</em> <strong>Repair</strong>-safe:
     <ul><li>Destructible wires (they stay toggled).</li>
@@ -483,7 +494,25 @@ To make this content compatible with modern Aleph One, you must run it through <
   <li>Chip slots are a &lsquo;maybe&rsquo; on the <strong>Repair</strong> count. Unless set to the &lsquo;dummy&rsquo; tag 0, a chip slot&rsquo;s tag must control something, or it&rsquo;ll consume chips without activating (which also renders levels unbeatable).</li>
   <li>These bugs can interact, as well. If a chip controls a tag that can&rsquo;t activate, it can&rsquo;t toggle the <strong>Repair</strong> mission flag (rendering the level incompletable) and will eat any chips a hapless player tries to insert (possibly rendering future levels incompletable as well, in case a player is meant to have them on said levels).</li>
   <li>Avoid having multiple (chip slots/wires/tag switches) control the same tag.</li>
-  <li>There are also texturing issues (see below). Basically, tags are awful, and you should avoid them unless they&rsquo;re absolutely necessary. They often aren&rsquo;t; e.g., platforms can activate adjacent platforms and lights. Make underground platforms if needed (extending <strong>From Floor</strong> to reduce the odds of motion glitches); they may look ugly in Weland, but players won&rsquo;t see them. If you don&rsquo;t want to see them in the visual mode map, you can even give them landscape textures (just avoid doing that on walls that players can see the other side of, or they&rsquo;ll disappear from the map).</li>
+  <li>If a tag controls a light, it can activate&hellip; probably. Given the absolutely cursed mess I&rsquo;ve detailed above, I&rsquo;m no longer confident that there isn&rsquo;t some <em>other</em> weird edge case with lights that we haven&rsquo;t yet worked out.</li>
+  <li>There are also texturing issues (see below) &ndash; in short, if you toggle wires in visual mode, they will get set to not-wires and players will be unable to finish your level.</li>
+  <li>Basically, tags are awful; you should avoid marking them as <strong>Repair</strong> unless you&rsquo;re sure you know what you&rsquo;re doing, and otherwise use them with caution.</li></ul>
+  
+<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+
+  <h3 id="waysaroundtags">Ways to Avoid Tags</h3>
+    
+  <p>Tags aren&rsquo;t always necessary; the main cases where they are necessary are for destructible wires, chip insertion, or very odd arrangements of platforms. In most other cases, a sufficiently determined mapper can avoid using them. Some tips:</p>
+  <ul><li>Platforms can activate adjacent platforms when they activate. Or when they deactivate. And they can also deactivate platforms in those same places. Or when fully extended and when fully contracted (&ldquo;<strong>Activates Adjacent at Each Level</strong>&rdquo;).</li>
+      <li>Platforms can activate the lights on their floor and ceiling when they activate. They can also deactivate those lights when they deactivate.</li>
+      <li>If you have multiple adjoining platforms, it&rsquo;s generally <em>preferable</em> to use a platform switch and set <strong>Activates Adjacent Platforms</strong> for those platforms &ndash; that way, players won&rsquo;t have to hit a switch twice each time they want to raise or lower the platform.</li>
+      <li>If you want to get <em>really</em> adventurous, you can even make underground platform networks to connect otherwise unconnected platforms. Some notes on these:
+      <ul>
+        <li>Make them extend <strong>From Floor</strong> to reduce the odds of motion glitches, though you may still experience these occasionally.</li>
+        <li>These platform networks look ugly in Weland, but players won&rsquo;t see them. If you don&rsquo;t want to see them in the visual mode map either, you can even give them landscape textures. However, avoid doing that on walls that players can see the other side of, or those walls will disappear from the map).</li>
+        <li>&ldquo;The Midpoint of Somewhere&rdquo; contains several examples of this. I admittedly went overboard with it, partly to keep players from undoing their progression midlevel (it&rsquo;s already a convoluted enough level) and partly out of sheer stubbornness.</li>
+        </ul></li>
+    </ul>
 </ul>
 
 <p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>

@@ -2,8 +2,8 @@ I’m a political science and cybersecurity major from Sarasota, FL. Amateur gam
 
 Pages currently hosted here:
 
-* [*Marathon* / Aleph One content creation](mapmaking.html)
-* [*Marathon* soundtracks](soundtracks.html)
+* [*Marathon* / Aleph One content creation](https://aaronfreed.github.io/aaronfreed/mapmaking.html)
+* [*Marathon* soundtracks](https://aaronfreed.github.io/aaronfreed/soundtracks.html)
 
 Game mods I have contributed to:
 

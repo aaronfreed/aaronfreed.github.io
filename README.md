@@ -14,7 +14,7 @@ Game mods I have contributed to:
 * ***Where Monsters Are in Dreams*** (forthcoming): maps, sound, scripting, OST mastering, writing, graphics, codirector
 * ***Marathon Chronicles*** (in progress): maps, writing, sound, music, graphics, director
 
-I also run a YouTube channel: **https://youtube.com/@MarathonVidmaster**
+I also run a YouTube channel: **[https://youtube.com/@MarathonVidmaster](https://youtube.com/@MarathonVidmaster)**
 
 I have at least slightly more than cursory knowledge of the following languages (though in a few cases it was years or even decades ago):
 

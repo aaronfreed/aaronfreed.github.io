@@ -547,6 +547,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <ul>
   <li>Vasara gets weird with more than 56 lights. If you have both &lsquo;Apply Light&rsquo; and &lsquo;Apply Texture&rsquo; selected with a light &#8805; 56, the HUD disappears; reduce the light value to something &lt; 56 and hit the action key to restore it. If one is selected, but not the other, the HUD functions normally.</li>
+  <li>If you leave visual mode (or type <strong>.save level</strong>) while a polygon is flashing and highlighted on the map for the player to teleport to, the game will interpret this as being a <strong>Major Ouch</strong> polygon and will change the floor&rsquo;s transfer mode to <strong>Static</strong>. So&hellip; don&rsquo;t do that. This occurs because Vasara highlights the polygon on the map by changing it temporarily to a <strong>Major Ouch</strong> polygon (and physically changes its appearance in the game world to create the static effect on its floor).</li> 
 </ul>
 
 <p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>

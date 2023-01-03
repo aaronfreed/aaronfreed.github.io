@@ -23,6 +23,8 @@
     .toc ol {counter-reset: item; margin-top: 0px; margin-bottom: 0px;}
     .toc li:before {content: counters(item, ".")" "; counter-increment: item;}
     p {margin-top: 8px; margin-bottom: 8px;}
+    .image {margin-top: 12px; margin-bottom: 8px; text-align: center;}
+    .sectionbreak {margin-top: 16px; margin-bottom: 16px; font-size: 13px; text-align: center;}
     table {border-collapse: collapse; margin: auto;}
     td, th {padding-left: 12px; padding-right: 12px; padding-top: 4px; padding-bottom: 4px;}
     tbody:nth-child(even) tr:nth-child(even) {background-color: #eff0ff;}
@@ -36,6 +38,7 @@
     .centred {text-align: center;}
     .right {text-align: right;}
     pre {font-size: 115%;}
+    code {font-weight: bold; font-size: 115%;}
     .dotted {border-bottom: 1px dotted;}
     .light {font-family: "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif; font-weight: 100;}
     .light .integer, .light .decimal {font-family: "Corbel", "Avenir", "Calibri", monospace; font-weight: 100;}
@@ -133,6 +136,11 @@ window.onload = function () {makeAllSortable();};
       <ol>
         <li><a href="#forgeerrata">Forge Manual Errata & Omissions</a></li>
         <li><a href="#generalmapmaking">General Notes</a></li>
+        <li><a href="#scripts">Scripts, Monster Limits, & Music</a>
+          <ol>
+            <li><a href="#looper">Looping Music</a></li>
+          </ol>
+        </li>
         <li><a href="#tagsareterrible">Tags Are Terrible (though sometimes inexorable)</a>
           <ol>
             <li><a href="#waysaroundtags">Ways to Avoid Tags</a></li>
@@ -209,7 +217,7 @@ window.onload = function () {makeAllSortable();};
   <li><strong>Bungie</strong>, for obvious reasons.</li> 
 </ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
   
 </header>
 
@@ -229,7 +237,7 @@ window.onload = function () {makeAllSortable();};
 <li><strong>Aorta</strong> (DDS/parallax map creation): <a href="https://sourceforge.net/projects/aorta" target="_blank">sourceforge.net/projects/aorta</a></li>
 <li><strong>Default Infinity physics model:</strong> <a href="https://simplici7y.com/items/default-infinity-physics-model-2" target="_blank">simplici7y.com/items/default-infinity-physics-model-2</a></li></ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="resourcesm1"><em>Marathon 1</em> Content Editing for Aleph One</h2>
 
@@ -242,7 +250,7 @@ It&rsquo;s not supported on modern OSes, with one partial exception: You can ext
 
 To make this content compatible with modern Aleph One, you must run it through <a href="https://en.wikipedia.org/wiki/MacBinary" target="_blank">MacBinary</a> (I&rsquo;ve never gotten this to work) or extract it from an emulator disk image with a program like <a href="https://www.macintoshrepository.org/7358-hfvexplorer-1-3-1-for-windows-" target="_blank">HFV Explorer</a> (the method I used for my remastered <a href="http://simplici7y.com/items/marathon-1-remastered-sounds-2" target="_blank"><em>Marathon 1</em></a> and <a href="https://hhas01.itch.io/trojan-se" target="_blank"><em>Trojan</em></a> sounds).
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="resourcesother">Other Tutorials & Resources</h2>
 
@@ -255,7 +263,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 <li><strong>Anvil references:</strong> <a href="https://citadel.lhowon.org/litterbox/Anvil/Index.html" target="_blank">citadel.lhowon.org/litterbox/Anvil/Index.html</a></li>
 <li><strong>File format info:</strong> <a href="https://gist.github.com/marrub--/98af41f36e15a277088b220a6a9f4244" target="_blank">gist.github.com/marrub--/98af41f36e15a277088b220a6a9f4244</a> <em>(note: parts of this now appear to be outdated, but parts may still be helpful)</em></li></ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="resourcescommunity">Marathon Communities & Resources</h2>
 
@@ -274,7 +282,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 <a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/MarathonExpandedUniverse" target="_blank">tvtropes.org/pmwiki/pmwiki.php/VideoGame/MarathonExpandedUniverse</a> <em>(fan scenarios)</em></li>
 <li><strong>Marathon Soundtracks:</strong> <a href="https://www.themarathonmusic.com/downloads.html">themarathonmusic.com/downloads.html</a>, <a href="https://aaronfreed.github.io/aaronfreed/soundtracks.html">aaronfreed.github.io/aaronfreed/soundtracks.html</a></li></ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h1 id="general">General</h1>
 <h2 id="welandsetup">Weland Setup</h2>
@@ -284,7 +292,7 @@ To make this content compatible with modern Aleph One, you must run it through <
   <li>You&rsquo;ll need either <strong>Gtk#</strong> or <strong>Mono</strong>, depending on your OS; the readme tells you which to get. (You&rsquo;ll also need <strong>.NET</strong> on Windows; however, Windows 10 and 11 should already have this installed.) Installing the wrong one sometimes seems to make Weland not work, and they&rsquo;re on the same webpage, so users can get one thinking they&rsquo;ve gotten the other. Read carefully!</li>
   <li>After getting Weland to start, you&rsquo;ll next want to set up visual mode to function from within Weland. Go to <strong>Edit > Preferences</strong>. You&rsquo;ll want the <strong>Shapes</strong> and <strong>Visual Mode</strong> segments to resemble these settings:</li>
 
-<p class="centred"><img src="welandprefs.png" alt="Weland preferences" title="Weland preferences" height="184" width="316" /></p>
+<div class="image"><img src="welandprefs.png" alt="Weland preferences" title="Weland preferences" height="184" width="316" /></div>
 
     <ul>
       <li><strong>Shapes File:</strong> valid <em>Marathon 2</em>/<em>Infinity</em>-format shapes. <em>Marathon 1</em> shapes probably won&rsquo;t work, but I haven&rsquo;t tested this. This affects what Weland uses in visual mode and the overhead texture view.</li>
@@ -308,7 +316,7 @@ To make this content compatible with modern Aleph One, you must run it through <
      <p>I should perhaps note that several Windows users have reported that they&rsquo;ve only been able to get Weland to run correctly by using Gtk# 2.12.26 &ndash; a completely ancient release. No one has been able to produce a satisfactory hypothesis for why this is the case, but enough people have experienced it that it&rsquo;s ceased to look like coincidence. (For the record, I didn&rsquo;t have to do this to get Weland to work on Windows; in fact, the setup process was quite painless for me.)</p></li>
 </ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="ShapeFusion">ShapeFusion</h2>
 
@@ -322,7 +330,7 @@ To make this content compatible with modern Aleph One, you must run it through <
   <li>An annoying bug displays the <strong>Scale Factors</strong> of new frames as being above 0, but actually sets them to 0. The game doesn&rsquo;t display frames with 0 scale factors (i.e., &lsquo;multiply size by 0&rsquo;). Be sure to fix this.</li>
 </ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h1 id="shapes"><h1>Shapes & Palettes</h1>
 <h2 id="clutrestrictions">Restrictions on Number of Colors</h2>
@@ -344,7 +352,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p>Note that using non-vanilla palettes causes 8-bit software mode to look very, very stupid, in case anyone even cares about that in a scenario created in 2022. I don&rsquo;t actually know how it selects the colors for that.</p>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="transparency">Transparency & Landscapes</h2>
 
@@ -361,7 +369,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p>Either way. (I don&rsquo;t use GIMP, but I&rsquo;m guessing you can do something similar by making a 253-color bitmap, exporting the CLUT, and editing it in a text editor.)</p>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="sequencetiming">Sequence Timing & Film Compatibility</h2>
 
@@ -371,7 +379,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <li>Another surprising factor affecting film sync: &lsquo;Display a random frame&rsquo; (even if only one frame is defined) is different from &lsquo;Animation with 1 view&rsquo; (or any other number). Altering this alters the PRNG when the game loads maps, since it runs the PRNG for each sequence that uses &lsquo;Display a random frame&rsquo;, even if it only has one frame. Thus, changing a sequence from or to &lsquo;Display a random frame&rsquo; desyncs old films made with the same shapes. (I haven&rsquo;t tested whether this also desyncs network games.)</li></ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h1 id="8bitsoftware">8-bit Software Mode</h1>
 
@@ -385,7 +393,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p>By default, the only other collections with &lsquo;true color&rsquo; versions are the landscape palettes, and it&rsquo;s very rare (though not unthinkable) for something to call one of the sequences in these (assuming any are even defined). I think a classic Mac utility could create &lsquo;true color&rsquo; versions of other collections (all 32 collections can have them; it&rsquo;s just that, by default, only the Weapons in Hand and Landscapes did), and if a shapes file had these, their sequences should align between &lsquo;8-bit&rsquo; and &lsquo;true color&rsquo; wherever they&rsquo;re defined.</p>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="8bitsoftwareimages">The Images File</h2>
 
@@ -401,7 +409,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p>Add 1,000 to each of these numbers for the &lsquo;24-bit&rsquo; versions. It&rsquo;s ideal to have separate 8-bit and 24-bit versions, as IIRC, Photoshop and GIMP dither images much better than Aleph One does.</p>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="chapterscreens">Chapter Screens & Sounds</h2>
 
@@ -409,7 +417,7 @@ To make this content compatible with modern Aleph One, you must run it through <
   
 <p>Also, if there&rsquo;s an associated sound sharing the 15xx ID, Aleph One will play it. This includes ending screens (though Aleph One also plays the music file, so it&rsquo;s probably not worth including a sound 1599 unless you plan for your scenario not to have opening music).</p>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h1 id="mapmaking">Mapmaking</h1>
 <h2 id="forgeerrata">Forge Manual Errata & Omissions</h2>
@@ -424,35 +432,13 @@ To make this content compatible with modern Aleph One, you must run it through <
   <li>Monsters never drop items if they die on <strong>Item Impassable</strong>, <strong>Monster & Item Impassable</strong>, <strong>Platform</strong>, or <strong>Teleporter</strong> polygons, or on the edges of steps/ledges/cliffs.</li>
 </ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="generalmapmaking">General Notes</h2>
 
 <ul>
   <li>Test your maps extensively on Total Carnage. If you&rsquo;re not good enough, get someone who is to test it. If you <em>are</em> good enough, note that you have a sort of &lsquo;home field advantage&rsquo; in already knowing the maps and your intended strategies &ndash; other players will find your maps harder than you think they will. Also, if something annoys you, it&rsquo;ll annoy other players ten times more.</li>
   <li>Monsters can&rsquo;t move through lines shorter than their diameters, as <a href="https://citadel.lhowon.org/litterbox/Forge/hastursworkshop/things2.html" target="_blank">Hastur&rsquo;s Workshop explains</a>. This link also features plenty of other vital information about monster path building.</li>
-  <li>You can override monster activation limits with MML scripts. If you&rsquo;re making a scenario, override this in your scenario&rsquo;s Scripts folder. The code for this (which also raises some limits on rendered objects) is:
-<pre>&lt;marathon&gt;
-    &lt;dynamic_limits&gt;
-        &lt;objects value="1024"/&gt;
-        &lt;monsters value="512"/&gt;
-        &lt;paths value="512"/&gt;
-        &lt;projectiles value="256"/&gt;
-        &lt;effects value="2048"/&gt;
-        &lt;rendered value="1024"/&gt;
-        &lt;local_collision value="1024"/&gt;
-        &lt;global_collision value="1024"/&gt;
-    &lt;/dynamic_limits&gt;
-&lt;/marathon&gt;</pre>
-  Alter as needed. By contrast, if mapping for <em>Infinity</em>, I recommend merging in MML. You can do this by saving the above script as a TEXT resource (i.e., <strong>Resources/TEXT/10000.txt</strong>) and calling it in TEXT resource 128 (i.e., <strong>Resources/TEXT/00128.txt</strong>):</li>
-<pre>&lt;marathon_levels&gt;
-    &lt;level index="0"&gt;
-        &lt;mml resource="10000"/&gt;
-        &lt;music file="Eternal-Data/Music/Craig/SwirlsPiano.ogg"/&gt;
-    &lt;/level&gt;
-&lt;/marathon_levels&gt;</pre>
-  Or by including MML scripts in each individual level&rsquo;s folder (i.e., <strong>00 The Far Side of Nowhere/Monster Limits.mml</strong>). Either method should work fine, though I think the latter is preferred for net maps.</li>
-  <li>The above code excerpt also shows how to merge in music (i.e., the &lsquo;music file&rsquo; line).</li>
   <li>Aleph One removes the 1,024 polygon limit, but a factor called map indices still limits map complexity, as Aleph One developer treellama explained <a href="http://pfhorums.com/viewtopic.php?p=73316#p73316" target="_blank">on the Pfhorums</a> (though the limit is now 65,535, not 32,767). The tl;dr is:
     <ul>
       <li>Use as few sound objects as possible (but see below).</li>
@@ -475,14 +461,70 @@ To make this content compatible with modern Aleph One, you must run it through <
   <li>It isn&rsquo;t necessary to move the player&rsquo;s start point to texture maps in Weland; just select the arrow, hold down X, make sure caps lock is off, and click on a polygon to set a start point.</li>
 </ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+
+<h2 id="scripts">Scripts, Monster Limits, & Music</h2>
+<ul>
+  <li>If you&rsquo;re making a solo-only map, you have two ways to merge in scripts. You can save the above script as a TEXT resource (i.e., <strong>Resources/TEXT/10000.txt</strong>) and calling it in TEXT resource 128 (i.e., <strong>Resources/TEXT/00128.txt</strong>):</li>
+<pre>    &lt;marathon_levels&gt;
+      &lt;level index="0"&gt;
+        &lt;lua resource="420"&gt;
+        &lt;mml resource="10000"/&gt;
+        &lt;music file="Eternal-Data/Music/Craig/SwirlsPiano.ogg"/&gt;
+      &lt;/level&gt;
+    &lt;/marathon_levels&gt;</pre>
+  Or by including MML in each individual level&rsquo;s folder (i.e., <strong>00 The Far Side of Nowhere/Monster Limits.mml</strong>).
+
+  <div style="margin-top: 8px;">On the other hand, if you&rsquo;re making a multiplayer level for an existing scenario (this includes cooperative play), it&rsquo;s actually <em><strong>mandatory</strong></em> to use the latter method in most cases, since the game doesn&rsquo;t send TEXT resources to other players, so if you use it for something that affects the game world, which includes limit-removing MML and most Lua, players will desync almost immediately. If you don&rsquo;t know if your script will affect the game world, it&rsquo;s safest to just assume it will. MML texture replacements, fog, and Treellama&rsquo;s ephemera-based precipitation script are some examples of things that don&rsquo;t affect the game world.</div>
+
+  <div style="margin-top: 8px;"><span id="ftnt_ref1" class="dotted" title="What, you don&rsquo;t have a third hand? Then you must not be Zaphod Beeblebrox.">On the third hand<a href="#ftnt1">&#8317;&sup1;&#8318;</a></span>, if you&rsquo;re making a standalone scenario, you can include an MML script that includes the scenario and version number, which prevents anyone who <em>isn&rsquo;t</em> running that scenario and version number from joining network games. In these cases, you can safely assume anyone who <em>does</em> join your game already has the map, in which case they&rsquo;ll also have the scripts already and won&rsquo;t desync.</div>
+
+  <pre>
+    &lt;marathon&gt;
+      &lt;scenario id="Eternal X" name="Eternal X" version="1.3pre4" /&gt;
+    &lt;/marathon&gt;</pre>
+
+  <div style="margin-top: 8px;">(Moving the map file out of the scenario folder or overwriting it with a different version of the map would fall into what I&rsquo;d consider &lsquo;Play stupid games, win stupid prizes&rsquo; territory. You may wish to put a caveat about this in your game&rsquo;s documentation, but I&rsquo;d imagine this would be a relatively rare occurrence.)</div></li>
+  <li>The <code>&lt;marathon_levels&gt;</code> code excerpt above also shows how to merge in music (i.e., the &lsquo;music file&rsquo; line).</li>
+  <li>You can override monster activation limits with MML scripts. If you&rsquo;re making a scenario, override this in your scenario&rsquo;s Scripts folder. The code for this (which also raises some limits on rendered objects) is:
+<pre>    &lt;marathon&gt;
+      &lt;dynamic_limits&gt;
+        &lt;objects value="1024"/&gt;
+        &lt;monsters value="512"/&gt;
+        &lt;paths value="512"/&gt;
+        &lt;projectiles value="256"/&gt;
+        &lt;effects value="2048"/&gt;
+        &lt;rendered value="1024"/&gt;
+        &lt;local_collision value="1024"/&gt;
+        &lt;global_collision value="1024"/&gt;
+      &lt;/dynamic_limits&gt;
+    &lt;/marathon&gt;</pre>
+  Alter as needed. By contrast, if mapping for <em>Infinity</em>, you&rsquo;ll probably want to merge in MML, unless you&rsquo;re fine with monsters randomly deactivating when more than twenty are active. See the top of this section for how you should do that.</li>
+
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+
+<h3 id="looper">Looping Music</h3>
+
+<p>For the record, I&rsquo;m not talking about the music restarting after it fades out &ndash; Aleph One does that by default. I&rsquo;m talking about seamless loops, where the ending leads straight back into the beginning. Current releases of Aleph One <em>can</em> do this, but it&rsquo;s very finicky and is dependent upon a few things:</p>
+
+<ol>
+  <li>It doesn&rsquo;t work with MP3 files, only Ogg Vorbis, WAV, and AIFF. The reason for this is that MP3 inserts junk samples at the start and end of a track, and Aleph One&rsquo;s music player doesn&rsquo;t know enough to skip these. Transcoding directly from MP3 to one of these other formats won&rsquo;t help; you&rsquo;ll need to edit the junk samples out and save as another file. If you plan to save your audio as Ogg Vorbis, I recommend following my procedure for upmastering audio on <a href="soundtracks.html#remasterinfo">my soundtracks page</a>; otherwise, you&rsquo;ll experience generation loss.</li>
+  <li>Aleph One parses audio files in 512-sample chunks and won&rsquo;t reload the audio file (or load the next file) until it&rsquo;s in the final sample block. This means that the ideal number of samples for looping is <strong>(512 * <em>n</em>) &ndash; 1</strong>, where <em>n</em> is some integer. It&rsquo;s acceptable for it to be <strong>(512 * <em>n</em>) &ndash; 2</strong>, <strong>(512 * <em>n</em>) &ndash; 3</strong>, <strong>(512 * <em>n</em>) &ndash; 4</strong>, and so on, though you get slightly longer delays the more the distance increases. The longest delay results from <strong>512 * <em>n</em></strong> samples. Put another way, the number of samples modulo 512 should be as close to 511 as possible. You can find out how many samples your music file has in any audio editor worth its salt.</li>
+  <li>The song must start and end at a zero crossing &ndash; in both channels, in the case of stereo music. A zero crossing is a point where the waveform crosses the midpoint. Here&rsquo;s an example displayed in iZotope RX (zoomed in quite a bit both vertically and horizontally to make it clearly visible).</li>
+</ol>
+
+<div class="image"><img src="zerocrossing.png" width="800" height="700" title="Illustration of a zero crossing in iZotope RX" alt="Illustration of a zero crossing in iZotope RX" /></div>
+
+<ol start="4">
+  <li>Even this may not be sufficient to get a seamless loop, so I recommend avoiding starting your music file at a particularly loud point. A cymbal crash, for example, is far from ideal. An acoustic guitar strum is better.</li>
+</ol>
 
 <h2 id="tagsareterrible">Tags Are Terrible (though sometimes inexorable)</h2>
 
 <p>Don&rsquo;t get me wrong &ndash; in the right circumstances, they&rsquo;re <em>immensely</em> useful. But they can also break the game if you don&rsquo;t know what you&rsquo;re doing, especially if they&rsquo;re marked as <strong>Repair</strong>. If you take two things away from this admittedly opinionated section:</p>
   
   <ol><li>Avoid ever marking tag switches or chip insertion slots as <strong>Repair</strong>.</li>
-  <li>If you absolutely <em>must</em> mark such a switch as <strong>repair</strong>, make sure it controls a light &ndash; that will <em>probably</em> work around the worst bugs. <em>Probably</em>. (Though you&rsquo;d still be able to deactivate the tag switch, which would make it possible to change a level state from complete to incomplete &ndash; annoying design, to say the least. This aspect, at least, isn&rsquo;t a problem for chips &ndash; once a chip is inserted, it stays inserted.)</li></ol>
+  <li>If you absolutely <em>must</em> mark such a switch as <strong>repair</strong>, make sure it controls <em>both</em> a light <em>and</em> a platform that can <em>always</em> activate <em>or</em> deactivate &ndash; that will <em>probably</em> work around the worst bugs. <em>Probably</em>. (Though you&rsquo;d still be able to deactivate the tag switch, which would make it possible to change a level state from complete to incomplete &ndash; annoying design, to say the least. This aspect, at least, isn&rsquo;t a problem for chips &ndash; once a chip is inserted, it stays inserted.)</li></ol>
   
 <p>Now, for the gory details:</p>
   
@@ -501,28 +543,48 @@ To make this content compatible with modern Aleph One, you must run it through <
   <li>Chip slots are a &lsquo;maybe&rsquo; on the <strong>Repair</strong> count. Unless set to the &lsquo;dummy&rsquo; tag 0, a chip slot&rsquo;s tag must control something, or it&rsquo;ll consume chips without activating (which also renders levels unbeatable).</li>
   <li>These bugs can interact, as well. If a chip controls a tag that can&rsquo;t activate, it can&rsquo;t toggle the <strong>Repair</strong> mission flag (rendering the level incompletable) and will eat any chips a hapless player tries to insert (possibly rendering future levels incompletable as well, in case a player is meant to have them on said levels).</li>
   <li>Avoid having multiple (chip slots/wires/tag switches) control the same tag.</li>
-  <li>If a tag controls a light, it can activate&hellip; probably. Given the absolutely cursed mess I&rsquo;ve detailed above, I&rsquo;m no longer confident that there isn&rsquo;t some <em>other</em> weird edge case with lights that we haven&rsquo;t yet worked out.</li>
+  <li>If a tag switch controls <em>only</em> lights, it must match the state of at least one of the lights to be able to activate. This means that if you have a tag that controls only a light that starts out active, and the tag switch connected to that light starts out inactive, the tag switch will be impossible to activate. Note that <em>this</em> aspect of tag switch behaviour does not appear to apply to chip insertion &ndash; you will still be able to insert a chip. Confused yet? Good.</li>
+  <li>If a tag controls a light, it can activate Given the absolutely cursed mess I&rsquo;ve detailed above, I&rsquo;m no longer confident that there isn&rsquo;t <em>yet another</em> weird edge case with lights that we haven&rsquo;t yet worked out.</li>
   <li>There are also texturing issues (see below) &ndash; in short, if you toggle wires in visual mode, they will get set to not-wires and players will be unable to finish your level.</li>
   <li>Basically, tags are awful; you should avoid marking them as <strong>Repair</strong> unless you&rsquo;re sure you know what you&rsquo;re doing, and otherwise use them with caution.</li></ul>
   
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
   <h3 id="waysaroundtags">Ways to Avoid Tags</h3>
     
   <p>Tags aren&rsquo;t always necessary; the main cases where they are necessary are for destructible wires, chip insertion, or very odd arrangements of platforms. In most other cases, a sufficiently determined mapper can avoid using them. Some tips:</p>
-  <ul><li>Platforms can activate adjacent platforms when they activate. Or when they deactivate. And they can also deactivate platforms in those same places. Or when fully extended and when fully contracted (&ldquo;<strong>Activates Adjacent at Each Level</strong>&rdquo;).</li>
+  <ul><li>Platforms can activate adjacent platforms when they activate. Or when they deactivate. And they can also deactivate platforms in those same places. Or when fully extended and when fully contracted (&lsquo;<strong>Activates Adjacent at Each Level</strong>&rsquo;).
       <li>Platforms can activate the lights on their floor and ceiling when they activate. They can also deactivate those lights when they deactivate.</li>
-      <li>If you have multiple adjoining platforms, it&rsquo;s generally <em>preferable</em> to use a platform switch and set <strong>Activates Adjacent Platforms</strong> for those platforms &ndash; that way, players won&rsquo;t have to hit a switch twice each time they want to raise or lower the platform.</li>
+      <li>If you have multiple adjoining platforms, it&rsquo;s generally <em>preferable</em> to use a platform switch and set &lsquo;<strong>Activates: Activates Adjacent Platforms</strong>&rsquo; for those platforms &ndash; that way, players won&rsquo;t have to hit a switch twice each time they want to raise or lower the platform.</li>
       <li>If you want to get <em>really</em> adventurous, you can even make underground platform networks to connect otherwise unconnected platforms. Some notes on these:
       <ul>
-        <li>Make them extend <strong>From Floor</strong> to reduce the odds of motion glitches, though you may still experience these occasionally.</li>
+        <li>Make them extend &lsquo;<strong>From Floor</strong>&rsquo; to reduce the odds of motion glitches, though you may still experience these occasionally.</li>
         <li>These platform networks look ugly in Weland, but players won&rsquo;t see them. If you don&rsquo;t want to see them in the visual mode map either, you can even give them landscape textures. However, avoid doing that on walls that players can see the other side of, or those walls will disappear from the map).</li>
-        <li>&ldquo;The Midpoint of Somewhere&rdquo; contains several examples of this. I admittedly went overboard with it, partly to keep players from undoing their progression midlevel (it&rsquo;s already a convoluted enough level) and partly out of sheer stubbornness.</li>
-        </ul></li>
+        <li>&lsquo;The Midpoint of Somewhere&rsquo; contains several examples of this. I admittedly went overboard with it, partly to keep players from undoing their progression midlevel (it&rsquo;s already a convoluted enough level) and partly out of sheer stubbornness.</li>
+        </ul>
+      </li>
+      <li>So, maybe you have a tag switch that you want to use to control your mission state, but you&rsquo;re &ndash; justifiably, given the absolutely cursed mess detailed above &ndash; afraid to actually mark it as &lsquo;<strong>Repair</strong>&rsquo;. What&rsquo;s a mapmaker to do? The most reliable case is probably to have the tag switch control an otherwise inaccessible platform (for the sake of our example, we&rsquo;ll call it Platform 42) that starts out inactive (ideally, just completely inaccessible from the rest of the map), and set one of the walls of Platform 42 as a platform switch that&rsquo;s marked as &lsquo;<strong>Repair</strong>&rsquo;. Then set the tag switch to activate Platform 42. This also means that once you activate the tag switch, the game remembers that the platform switch was activated even if either the platform switch or the tag switch gets deactivated &ndash; thus working around another potential issue with using tag switches as &lsquo;<strong>Repair</strong>&rsquo;. I&rsquo;ve shown example settings for Platform 42 below.
+
+      <div class="image"><img src="platform42.png" width="637" height="427" alt="Settings for Platform 42, tag initially inactive" title="Settings for Platform 42, tag initially inactive" /></div>
+        
+        <ul>
+          <li>The tag switch in the above example must start out as &lsquo;<strong>Inactive</strong>&rsquo;. If you need your tag switch to start out as &lsquo;<strong>Active</strong>&rsquo;, connect another platform &ndash; we&rsquo;ll just call it Platform 43 &ndash; to Platform 42 (note that it <em>must</em> share at least one side, and it <em>must not</em> be the side that had the platform switch on it). Start Platform 43 as active, set it to &lsquo;<strong>Deactivates: Never</strong>&rsquo;, make sure &lsquo;<strong>Can&rsquo;t Deactivate Externally</strong>&rsquo; is <em><strong>unchecked</strong></em>, and make sure &lsquo;<strong>Deactivates: Activates Adjacent Platform</strong>&rsquo; is <em><strong>checked</strong></em>. In this example, you&rsquo;ll also want to remove the tag from Platform 42. Here are our settings for Platform 43.
+          <div class="image"><img src="platform43.png" width="637" height="427" alt="Settings for Platform 43, tag initially active" title="Settings for Platform 43, tag initially active" /></div>
+
+          <div style="margin-top: 12px;">And here are our revised settings for Platform 42.</div>
+
+          <div class="image"><img src="platform42a.png" width="637" height="427" alt="Settings for Platform 42, tag initially active" title="Settings for Platform 42, tag initially active" /></div>
+
+          <div style="margin-top: 12px;"><strong>Warning:</strong> I can&rsquo;t promise that either of these solutions are foolproof. If something messes with either platform&rsquo;s activation, it can still break the mission. And there are probably other potential ways to break them as well. I&rsquo;ve used wires, chip insertion switches, and tag switches as repair switches in some of my levels, but I&rsquo;ve also been doing this for some 26 years, and in 2023, I&rsquo;m still learning new things that can break tags. They&rsquo;re even more cursed than platforms, which is saying <em>a lot</em>.</div>
+
+          <div style="margin-top: 8px;">More importantly, given how convoluted all of the above is, I can almost guarantee you&rsquo;ll eventually misremember part of it and more than likely run afoul of one of the many things that can mess up tags. Bearing that in mind, isn&rsquo;t it safer to just avoid using them for repair missions at all? Of course it is.</div></li>
+        </ul>
+      </li>
     </ul>
+  </li>
 </ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="ambientsound">Ambient Sound</h2>
 
@@ -533,7 +595,7 @@ To make this content compatible with modern Aleph One, you must run it through <
   <li>At the same time, avoid overusing sound objects, which eat up map indices worst of all factors that use them: one per polygon within a 10-world unit X/Y radius (Z is irrelevant). If this all sounds like a delicate juggling act, it is! No one said making maps for an ancient engine was <em>easy</em>. I recommend avoiding complicated &lsquo;sound boundaries&rsquo; or too many discrete polygon sounds per level.</li>
 </ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="texturingissues">Texturing Issues in Visual Mode.lua and Vasara</h2>
 
@@ -557,7 +619,7 @@ To make this content compatible with modern Aleph One, you must run it through <
   <li>If you leave visual mode (or type <strong>.save level</strong>) while a polygon is flashing and highlighted on the map for the player to teleport to, this will be set as a <strong>Major Ouch</strong> polygon and the floor&rsquo;s transfer mode will change to <strong>Static</strong>. So&hellip; don&rsquo;t do that. This occurs because Vasara highlights the polygon on the map by changing it temporarily to a <strong>Major Ouch</strong> polygon (and physically changes its appearance in the game world to create the static effect on its floor).</li> 
 </ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="m1polygons">Those Weird Marathon 1 Polygon Types</h2>
 <ul>
@@ -571,7 +633,7 @@ To make this content compatible with modern Aleph One, you must run it through <
   <li>If <strong>Exploration (M1)</strong> is selected as a mission type, players must merely look at <strong>Must Be Explored</strong> polygons to complete the mission, rather than walk on them (as in <em>M2</em>/<em>Infinity</em>). As mentioned above, looking at these in visual mode resets them to <strong>&lsquo;Normal&rsquo;</strong>, so be careful.</li>
 </ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="directionality">Directionality</h2>
 <table>
@@ -616,7 +678,7 @@ To make this content compatible with modern Aleph One, you must run it through <
   </tbody>
 </table>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="circles">Circles and the Custom Grid</h2>
 
@@ -624,11 +686,11 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p>There are a few ways to construct circles in Weland. The simplest is probably to use shift+alt and draw points of equal length out from a central area. This will give you a regular sixteen-sided polygon, and for many cases, this is all you&rsquo;ll need. However, in many cases, you may want more points. There are a few options here. There&rsquo;s a <a href="http://simplici7y.com/items/circle-plugin-for-weland" target="_blank">circle plugin</a>, which is fine if you&rsquo;re OK doing a bit of math. Another option that doesn&rsquo;t require a plugin (but still requires a bit of math) is the custom grid, this little icon you may not have bothered to try out before:</p>
 
-<p class="centred"><img src="gridicon.png" width="647" height="73" alt="Custom Grid Icon" title="Custom Grid Icon"/>
+<div class="image"><img src="gridicon.png" width="647" height="73" alt="Custom Grid Icon" title="Custom Grid Icon"/></div>
 
 <p>When you click it, it brings up some sliders that may at first look intimidating. (I&rsquo;ve resized parts of this image to make its contents legible, but it&rsquo;s otherwise untouched.)</p>
 
-<p class="centred"><img src="gridsliders.png" width="740" height="35" alt="Custom Grid Sliders" title="Custom Grid Sliders"/>
+<div class="image"><img src="gridsliders.png" width="740" height="35" alt="Custom Grid Sliders" title="Custom Grid Sliders"/></div>
 
 <ul>
   <li><strong>Reset:</strong> Restores the default grid settings.</li>
@@ -647,25 +709,25 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p>For our &lsquo;circle&rsquo;, <strong>Origin</strong> will match its center and <strong>Scale</strong> will match its radius (at its vertices, anyhow). <strong>Rotation</strong> will vary, as we&rsquo;ll see. I&rsquo;ll demonstrate how to draw a 24-sided circle. We&rsquo;ll leave Origin as 0, 0. We&rsquo;ll start <strong>Rotation</strong> from 0&deg;. For <strong>Scale</strong>, we&rsquo;ll use the seemingly random number 3.831. Press 4 on the keyboard to get the grid to show at 1x size, then draw points out from (0, 0) in all four cardinal directions. We should have something like:</p>
 
-<p class="centred"><img src="circle0.png" width="550" height="546" alt="0&deg; Circle Vertices" title="0&deg; Circle Vertices"/>
+<div class="image"><img src="circle0.png" width="550" height="546" alt="0&deg; Circle Vertices" title="0&deg; Circle Vertices"/></div>
 
 <blockquote><strong>Protip:</strong> If you&rsquo;re having trouble finding (0, 0), you can rotate the grid forward and backward (it always rotates around the center point); or edit one point by double-clicking it; or start from 15&deg; and work back around to 0&deg;. (I don&rsquo;t recommend using a <strong>Rotation</strong> of 90&deg;; it&rsquo;s not quite accurate.)</blockquote>
 
 <p>From here, we must rotate the grid by regular increments (this might be the trickiest part). 360&deg; (the span of a circle) divided by 24 points (the number of vertices we&rsquo;re using) gives us 15&deg; increments, so our next angle is 15&deg;. Set <strong>Rotation</strong> to 15&deg; and draw lines out from the center. Rotating by another 15&deg; gives us 30&deg;, then 45&deg;, then 60&deg;, then 75&deg;. (We could do this with fewer rotations, but we&rsquo;ll save that for later.) All these steps are shown below.</p>
 
-<p class="centred"><img src="circle1.png" width="124" height="124" alt="15&deg; Circle Vertices" title="15&deg; Circle Vertices"/>
+<div class="image"><img src="circle1.png" width="124" height="124" alt="15&deg; Circle Vertices" title="15&deg; Circle Vertices"/>
 <img src="circle2.png" width="124" height="124" alt="30&deg; Circle Vertices" title="30&deg; Circle Vertices"/>
 <img src="circle3.png" width="124" height="124" alt="45&deg; Circle Vertices" title="45&deg; Circle Vertices"/>
 <img src="circle4.png" width="124" height="124" alt="60&deg; Circle Vertices" title="60&deg; Circle Vertices"/>
-<img src="circle5.png" width="124" height="124" alt="75&deg; Circle Vertices" title="75&deg; Circle Vertices"/></p>
+<img src="circle5.png" width="124" height="124" alt="75&deg; Circle Vertices" title="75&deg; Circle Vertices"/></div>
 
 <p>We now have our circle&rsquo;s points. Our next step is to draw our lines. It&rsquo;ll probably help to disable the grid or to reduce the grid size (i.e., press 1 on the keyboard).</p>
 
-<p class="centred"><img src="circle6.png" width="248" height="248" alt="Drawing the Lines of Our &lsquo;Circle&rsquo;"/></p>
+<div class="image"><img src="circle6.png" width="248" height="248" alt="Drawing the Lines of Our &lsquo;Circle&rsquo;"/></div>
 
 <p>The next task is to fill the circle (assuming we wish to do that). It&rsquo;s an inefficient allocation of map indices to fill all 24 triangles when we can use more sides per polygon; here, we can divide our circle into quadrants to get eight sides per polygon, which is perfect.</p>
 
-<p class="centred"><img src="circle7.png" width="248" height="248" alt="Filling Our &lsquo;Circle&rsquo;"/></p>
+<div class="image"><img src="circle7.png" width="248" height="248" alt="Filling Our &lsquo;Circle&rsquo;"/></div>
 
 <p>Now, some notes:</p>
 
@@ -678,7 +740,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 <p class="centred"><img src="circle8.png" width="247" height="246" alt="&lsquo;Circle&rsquo; with Vertical Lines"/></p>
   <li>If our number of vertices is not a multiple of four, we&rsquo;ll need to start at 0&deg; as usual, keep adding our angle increment until we exceed 90&deg;, subtract 90&deg; from our <strong>Rotation</strong>, and then continue as before. We also won&rsquo;t draw lines in all four directions &ndash; we&rsquo;ll either draw them in two directions (if our number of vertices is a multiple of 2) or one (if it isn&rsquo;t).</ol>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h3 id="radii">Radii and Rotations for 1 WU-long Sides with Regular Polygons</h3>
 
@@ -843,7 +905,7 @@ To make this content compatible with modern Aleph One, you must run it through <
   </tbody>
 </table>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="mapcomplexity">Map Complexity: A Case Study</h2>
 
@@ -851,69 +913,69 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p>This is a Weland view of <em>Eternal Mark V</em>&rsquo;s &lsquo;Where Giants Have Fallen&rsquo;:</p>
 
-<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Draw Mode" src="wghf-mv-0.png" width="512" height="512" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Draw Mode"></p>
+<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Draw Mode" src="wghf-mv-0.png" width="512" height="512" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Draw Mode"></div>
 
 <p>(I&rsquo;ve hidden all objects besides players and sounds; they&rsquo;re the only important objects for our purposes.)</p>
 
 <p>And here are some Vasara screenshots, with a few major caveats. First, I took these screenshots with 1.3 shapes because I wanted consistency between them. Second, the map had basically no shading to speak of, so I ran Auto Shade on it to make it easier to parse. Third, I rarely use hi-res textures when texturing, due partly to loading times, but mostly to memory usage: the game must load all textures into memory when it loads Vasara or Visual Mode.lua. That adds up fast. That said, the <em>Mark V</em> version looks like this:</p>
 
-<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1" src="wghf-mv-1.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1"></p>
+<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1" src="wghf-mv-1.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1"></div>
 
-<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2" src="wghf-mv-2.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2"></p>
+<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2" src="wghf-mv-2.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2"></div>
 
 <p>Beyond the obvious issues of the terrible shading and the sea of gray, this version, despite featuring only 509 polygons, is relatively slow for several reasons I&rsquo;ll discuss at length soon.</p>
 
 <p><em>Eternal X</em> 1.0 overhauled the level, but the new version was even slower. It looked like this in Weland:</p>
 
-<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode" src="wghf-10-0.png" width="512" height="512" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode"></p>
+<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode" src="wghf-10-0.png" width="512" height="512" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode"></div>
 
 <p>Despite only featuring 836 polygons, this one chugs even worse. Both of these maps have a major problem: they have essentially no negative space. To oversimplify slightly, Aleph One is effectively a <a href="https://en.wikipedia.org/wiki/Portal_rendering" target="_blank">portal engine</a>. Portal engines have several strengths, but rendering large, complex outdoor spaces is not one of them. As a result, whenever the player gets near one of the edges of one of these maps, the performance plummets, even on modern boxes. With frame interpolation now a feature in Aleph One, it&rsquo;s simply not acceptable for maps to get fewer than 60 fps on modern boxes, at least in areas of the map players are meant to access. Here are a few screenshots of what the 1.0 version looks like (again with 1.3 textures):</p>
 
-<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1" src="wghf-10-1.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1"></p>
+<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1" src="wghf-10-1.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1"></div>
 
-<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #2" src="wghf-10-2.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #2"></p>
+<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #2" src="wghf-10-2.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #2"></div>
 
 <p>You get as close to the feeling of having climbed up a huge mountain as Aleph One is likely to provide, but as you can see in the first screenshot, the frame rate is bad in places, the texturing is quite dull, and the lamps just look silly. Subsequent releases of the map fixed the latter two aspects, but the frame rate problem persisted, which was the primary impetus for CryoS and me to remake it from scratch.</p>
 
 <p>Our new version &ndash; and I&rsquo;ll withhold its polygon count for a moment &ndash; looks like this in Weland (minus some map writing that I&rsquo;ve removed to make the screenshot more legible):</p>
 
-<p class="centred"><img alt="Where Giants Have Fallen 1.3 Draw Mode" src="wghf-13-0.png" width="512" height="512" title="Where Giants Have Fallen 1.3 Draw Mode"></p>
+<div class="image"><img alt="Where Giants Have Fallen 1.3 Draw Mode" src="wghf-13-0.png" width="512" height="512" title="Where Giants Have Fallen 1.3 Draw Mode"></div>
 
-<p>This screenshot has some conspicuous features. First, the new map is a lot more circular. (I worked on the design, to the surprise of no one who knows my style.) Secondly, there are <span id="ftnt_ref1" class="dotted" title="One of the crossbeams has gone out of skew on the treadle.">crossbeams<a href="#ftnt1">&#8317;&sup1;&#8318;</a></span> extending through playable areas of the map that break it up into sextants (septants if we count the central structure). It&rsquo;s hard to tell from a Weland screenshot, but these actually create an optical illusion to make players think they&rsquo;re seeing much further than they actually are; landscape textures mostly conceal players&rsquo; inability to actually see past the crossbeams. Here are some screenshots I took in Vasara:</p>
+<p>This screenshot has some conspicuous features. First, the new map is a lot more circular. (I worked on the design, to the surprise of no one who knows my style.) Secondly, there are <span id="ftnt_ref2" class="dotted" title="One of the crossbeams has gone out of skew on the treadle.">crossbeams<a href="#ftnt2">&#8317;&sup2;&#8318;</a></span> extending through playable areas of the map that break it up into sextants (septants if we count the central structure). It&rsquo;s hard to tell from a Weland screenshot, but these actually create an optical illusion to make players think they&rsquo;re seeing much further than they actually are; landscape textures mostly conceal players&rsquo; inability to actually see past the crossbeams. Here are some screenshots I took in Vasara:</p>
 
-<p class="centred"><img alt="Where Giants Have Fallen 1.3 Visual Mode #1" src="wghf-13-1.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Visual Mode #1"></p>
+<div class="image"><img alt="Where Giants Have Fallen 1.3 Visual Mode #1" src="wghf-13-1.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Visual Mode #1"></div>
 
-<p class="centred"><img alt="Where Giants Have Fallen 1.3 Visual Mode #2" src="wghf-13-2.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Visual Mode #2"></p>
+<div class="image"><img alt="Where Giants Have Fallen 1.3 Visual Mode #2" src="wghf-13-2.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Visual Mode #2"></div>
 
 <p>Again, we notice a few things immediately. First, this area still <em>looks</em> wide-open, even though it constricts the view to a much smaller area; second, despite having a snow script (which can be a drag on performance), the map gets a much better frame rate. And here&rsquo;s where I&rsquo;ll note its polygon count: 2,028 (that&rsquo;s <em>not</em> a typo).</p>
 
 <p>But doesn&rsquo;t it look like you can see over the crossbeams? Yes. This <del>trick</del> <em>illusion</em> employs &lsquo;5D space&rsquo;, the engine&rsquo;s ability to overlap spaces in X/Y/Z coordinates. It can do this because it uses four dimensions to render spaces: X, Y, Z, and polygon. This is related to it being a portal engine: it determines what to render based on how lines connect polygons. I feel a bit like a magician revealing how to perform <del>a trick</del> <em>an illusion</em> here, but&hellip; if you could get to the area of the crossbeam with the blue pillars, you&rsquo;d see this:</p>
 
-<p class="centred"><img alt="Where Giants Have Fallen 1.3 Crossbeam Top #1" src="wghf-13-3.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Crossbeam Top #1"></p>
+<div class="image"><img alt="Where Giants Have Fallen 1.3 Crossbeam Top #1" src="wghf-13-3.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Crossbeam Top #1"></div>
 
 <p>And the other side of the crossbeam would look like this:</p>
 
-<p class="centred"><img alt="Where Giants Have Fallen 1.3 Crossbeam Top #2" src="wghf-13-4.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Crossbeam Top #2"></p>
+<div class="image"><img alt="Where Giants Have Fallen 1.3 Crossbeam Top #2" src="wghf-13-4.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Crossbeam Top #2"></div>
 
 <p>The only thing to the left of the last screenshot, and to the right of the one prior, is a landscape-textured wall. (These regions are, of course, inaccessible to players.) As long as we constrict players&rsquo; view to a reasonable segment of the level, the frame rate rarely dips below 120 fps and almost never below 60.</p>
 
 <p>But in a few cases, players can actually escape the constriction. One is if they fall to their deaths, which, who cares. In a few others, though, they can use the assault rifle (or a similar weapon) to boost themselves over onto the edges of the crossbeams, whence they&rsquo;ll get a clear view of two sextants at once:</p>
 
-<p class="centred"><img alt="Where Giants Have Fallen 1.3 Crossbeam Top #3" src="wghf-13-5.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Crossbeam Top #3"></p>
+<div class="image"><img alt="Where Giants Have Fallen 1.3 Crossbeam Top #3" src="wghf-13-5.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Crossbeam Top #3"></div>
 
 <p>Or even jump to an island, where they can see the sky texture clipping their view of the crossbeam in places:</p>
 
-<p class="centred"><img alt="Where Giants Have Fallen 1.3 Island View" src="wghf-13-6.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Island View"></p>
+<div class="image"><img alt="Where Giants Have Fallen 1.3 Island View" src="wghf-13-6.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Island View"></div>
 
 <p>I consider these secrets, so I don&rsquo;t really care to fix them. More importantly, this goes to show how important negative space is to keeping the frame rate within acceptable bounds.</p>
 
 <p>There are other seams in the level design as well, but there&rsquo;s usually enough going on in the level to distract players from noticing. Another case relates to the blue pillars. Two are clearly visible from here:</p>
 
-<p class="centred"><img alt="Where Giants Have Fallen 1.3: Now you see it&hellip;" src="wghf-13-7.png" width="600" height="300" title="Where Giants Have Fallen 1.3: Now you see it&hellip;"></p>
+<div class="image"><img alt="Where Giants Have Fallen 1.3: Now you see it&hellip;" src="wghf-13-7.png" width="600" height="300" title="Where Giants Have Fallen 1.3: Now you see it&hellip;"></div>
 
 <p>However, if we step a bit to the left:</p>
 
-<p class="centred"><img alt="Where Giants Have Fallen 1.3:&hellip;now you don&rsquo;t." src="wghf-13-8.png" width="600" height="300" title="Where Giants Have Fallen 1.3: &hellip;now you don&rsquo;t."></p>
+<div class="image"><img alt="Where Giants Have Fallen 1.3:&hellip;now you don&rsquo;t." src="wghf-13-8.png" width="600" height="300" title="Where Giants Have Fallen 1.3: &hellip;now you don&rsquo;t."></div>
 
 <p>The rear one disappears. This is a result of the engine&rsquo;s lack of any sort of &lsquo;bridges and balconies&rsquo;, owing to how it connects polygons. We can&rsquo;t stack one polygon on top of another, and the passage under the crossbeam blocks off the view above it, so the blue pillar in the back is impossible to show. Despite this, I felt the blue pillars were worth including, since they conceal more conspicuous blemishes in the view from the top of the level (which are again consequences of the passages beneath the crossbeams).</p>
 
@@ -921,55 +983,55 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p>Greeble, in this case, refers to map detailing. This may not be evident to anyone else but me, but the newest &lsquo;Where Giants Have Fallen&rsquo; was effectively my second attempt to make a pastiche of <em>Phoenix</em>&rsquo;s &lsquo;Stone Temple Pilates&rsquo;, in this case combining its style with those of <em>Apotheosis X</em> (hence all the hexagons, though I already felt obligated to use them due to Tacticus&rsquo; brilliant sky texture), <em>Eternal</em> itself, and of course my own compulsion to make everything as circular as possible. (Ironically, the one part I didn&rsquo;t create from scratch is the central structure, the most circular part of the whole level &ndash; that was CryoS&rsquo; work.)</p>
 
-<p class="centred"><img alt="&lsquo;Il grande silenzio&rsquo; Draw Mode" src="igs-0.png" width="512" height="512" title="&lsquo;Il grande silenzio&rsquo; 1.3 Draw Mode"></p>
+<div class="image"><img alt="&lsquo;Il grande silenzio&rsquo; Draw Mode" src="igs-0.png" width="512" height="512" title="&lsquo;Il grande silenzio&rsquo; 1.3 Draw Mode"></div>
 
 <p>My first pastiche of &lsquo;Stone Temple Pilates&rsquo;, seen above in its current, unfinished state (1,763 polygons), went a lot differently. It&rsquo;s called &lsquo;Il grande silenzio&rsquo; (after a brilliant Corbucci spaghetti western with an equally brilliant Morricone soundtrack); it&rsquo;s from a project that, as of this writing, still hasn&rsquo;t been released: <em>Tempus Irae Redux</em>. There are obvious stylistic differences; besides the mathematical regularity of &lsquo;Where Giants Have Fallen&rsquo;, we can also see how much more densely the sound, points, and polygons are clustered in many areas (and, as a direct consequence, how much less densely they are clustered in others).</p>
 
 <p>In fact, I first ran out of map indices at around 1,500 polygons and had to prune dozens of sound objects. This is partly because I was pastiching two brilliant mapmakers: <strong>RyokoTK</strong> and my co-conspirator <strong>James Hastings-Trew</strong>, who both tend to employ a lot of greeble. However, I greatly exceeded the amount they use, reasoning, &lsquo;Modern computers can handle it.&rsquo; (This was before Aleph One had frame interpolation.) But thanks to the snow script and the comparative lack of negative space, the map chugs in a few places:</p>
 
-<p class="centred"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #1" src="igs-1.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #1"></p>
+<div class="image"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #1" src="igs-1.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #1"></div>
 
-<p class="centred"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #2" src="igs-2.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #2"></p>
+<div class="image"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #2" src="igs-2.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #2"></div>
 
 <p>My further revisions will require me to fix that, which in turn will likely require removing a few parts and reconstructing them from scratch &ndash; a painful process.</p>
 
 <p>It might be more instructive to show screenshots of these maps consecutively:</p>
 
-<p class="centred"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #3" src="igs-3.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #3"></p>
+<div class="image"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #3" src="igs-3.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #3"></div>
 
-<p class="centred"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #9" src="wghf-13-9.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #9"></p>
+<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #9" src="wghf-13-9.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #9"></div>
 
 <p>Now, do I think the geometry in the <em>Tempus</em> map looks cool? Yes. Do I think it looks that much cooler than the <em>Eternal</em> map? Certainly not enough to justify the added difficulty it caused me.</p>
 
 <p>In any case, my main point in showing these screenshots isn&rsquo;t to show off the maps; it&rsquo;s to show how overusing greeble causes problems. It looks cool, but you have to know when to stop. There&rsquo;s probably no way to learn this except trial and error, but I urge you to examine mapmakers&rsquo; styles closely. Ryoko doesn&rsquo;t really use as much greeble as I thought he did when I made &lsquo;Il grande silenzio&rsquo;. As an example, &lsquo;Monument to All Your Sins&rsquo; from <em>Starlight</em>, which I believe has the highest polygon count of any map he&rsquo;s released (1,843):</p>
 
-<p class="centred"><img alt="&lsquo;Monument to All Your Sins&rsquo; Draw Mode" src="monument-0.png" width="512" height="512" title="&lsquo;Monument to All Your Sins&rsquo; Draw Mode"></p>
+<div class="image"><img alt="&lsquo;Monument to All Your Sins&rsquo; Draw Mode" src="monument-0.png" width="512" height="512" title="&lsquo;Monument to All Your Sins&rsquo; Draw Mode"></div>
 
 <p>Yes, there are parts with plenty of greeble, but there&rsquo;s really nothing approaching the density I was using. Regardless of this, when I got his permission to adapt it for <em>Chronicles</em> as a solo level, he warned me that it was near the map index limit, that he&rsquo;d had to simplify it during construction, and that it&rsquo;d probably crash if I added too much complexity or many more ambient sound objects &ndash; which, in fact, is exactly what happened. In any case, here are two views from the southeast of &lsquo;Monument&rsquo; (which, to be clear, is just about the upper bound of the detail I&rsquo;d suggest trying to incorporate):</p>
 
-<p class="centred"><img alt="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #1" src="monument-1.png" width="600" height="300" title="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #1"></p>
+<div class="image"><img alt="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #1" src="monument-1.png" width="600" height="300" title="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #1"></div>
 
-<p class="centred"><img alt="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #2" src="monument-2.png" width="600" height="300" title="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #2"></p>
+<div class="image"><img alt="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #2" src="monument-2.png" width="600" height="300" title="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #2"></div>
 
 <p>There are parts with a lot of greeble, but others with almost none. And it looks fantastic. This was a lesson I hadn&rsquo;t absorbed when I made &lsquo;Il grande silenzio&rsquo;, but &lsquo;Where Giants Have Fallen&rsquo; hammered it home for me.</p>
 
 <p>While I&rsquo;m at it, here&rsquo;s &lsquo;Stone Temple Pilates&rsquo;, which has 1,771 polygons. The Weland view looks like this:</p>
 
-<p class="centred"><img alt="&lsquo;Stone Temple Pilates&rsquo; Draw Mode" src="stp-0.png" width="512" height="512" title="&lsquo;Stone Temple Pilates&rsquo; Draw Mode"></p>
+<div class="image"><img alt="&lsquo;Stone Temple Pilates&rsquo; Draw Mode" src="stp-0.png" width="512" height="512" title="&lsquo;Stone Temple Pilates&rsquo; Draw Mode"></div>
 
 <p>I think the overall polygon density of the map is comparable to what I was trying to accomplish with &lsquo;Il grande silenzio&rsquo;, but there are some important differences. The clusters of small polygons aren&rsquo;t as densely packed together, and while there are a lot of sound objects, Ryoko has few of them near polygon clusters as dense as mine. (Scroll back to the &lsquo;Il grande silenzio&rsquo; Weland screenshot again and look at how densely clustered the polygons in some of my houses are.)</p>
 
 <p>&lsquo;Stone Temple Pilates&rsquo; looks like this in Vasara:</p>
 
-<p class="centred"><img alt="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #1" src="stp-1.png" width="600" height="300" title="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #1"></p>
+<div class="image"><img alt="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #1" src="stp-1.png" width="600" height="300" title="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #1"></div>
 
-<p class="centred"><img alt="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2" src="stp-2.png" width="600" height="300" title="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2"></p>
+<div class="image"><img alt="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2" src="stp-2.png" width="600" height="300" title="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2"></div>
 
 <p>This map slaps. Its influence on &lsquo;Il grande silenzio&rsquo; is probably especially obvious; its influence on &lsquo;Where Giants Have Fallen&rsquo; is probably less so, besides the isolated islands from which Enforcers snipe at players, but it&rsquo;s nonetheless there.</p>
 
 <p>Anyway, back to &lsquo;Where Giants Have Fallen&rsquo;. The other way I saved a lot of headache was by using as few sound objects as possible; to avoid using too many, I even went to the trouble of making new ambient sounds that combined existing sounds. For instance, this sound may <em>say</em> <strong>&lsquo;Waterfall&rsquo;</strong>:</p>
 
-<p><img alt="" src="wghf-13-a.png" width="800" height="416" title=""></p>
+<div class="image"><img alt="Sound in Where Giants Have Fallen" src="wghf-13-a.png" width="800" height="416" title="Sound in Where Giants Have Fallen"></div>
 
 <p>However, the following script is merged in with the level:</p>
 
@@ -1000,7 +1062,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p>An even better understanding can come from looking at <em><a href="http://simplici7y.com/items/starlight" target="_blank">Starlight</a></em>, <em><a href="http://simplici7y.com/items/marathon-phoenix-2" target="_blank">Phoenix</a></em>, and the <a href="http://eternal.bungie.org/development" target="_blank">latest preview build of <em>Eternal</em></a> (and <em>Tempus Irae Redux</em>, once it comes out) yourself. Learning from others is one of the best ways to improve. <strong>RyokoTK</strong>&rsquo;s other works (<em><a href="http://simplici7y.com/items/kindred-spirits" target="_blank">Kindred Spirits</a></em>, <em><a href="http://simplici7y.com/items/paradise-lost" target="_blank">Paradise Lost</a></em>, <em><a href="http://simplici7y.com/items/second-quest" target="_blank">Second Quest</a></em>, etc.) are also well worth looking at, as are the works of mappers like <strong>windbreaker</strong> (<em><a href="http://simplici7y.com/items/imperium" target="_blank">Imperium</a></em>, <em><a href="http://simplici7y.com/items/infra-apogee" target="_blank">Infra Apogee</a></em>, <em><a href="http://simplici7y.com/items/caustic-dystopia" target="_blank">Caustic Dystopia</a></em>, etc.); <strong>James Hastings-Trew</strong> and <strong>Borzz</strong> (<em><a href="http://simplici7y.com/items/megiddo-game" target="_blank">Megiddo Game</a></em>, <em><a href="http://nardo.bungie.org/alephone.php" target="_blank">Tempus Irae</a></em>, etc.); <strong>hypersleep</strong> and <strong>CryoS</strong> (<em><a href="http://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em>); and of course <strong>Bungie</strong> and <strong>Double Aught</strong> themselves. It&rsquo;s worth not just marveling at the pretty sights, but also closely considering where they use greeble and sounds and &ndash; just as importantly &ndash; where they don&rsquo;t.</p>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h1 id="sounds">Sounds</h1>
 <h2 id="sounds-general">General Notes</h2>
@@ -1042,246 +1104,205 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">3</td>
       <td>Crushed</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">10030</td>
       <td class="integer">5</td>
       <td>Absorbed</td>
-    </tr>
     </tr>
     <tr>
       <td class="integer">10040</td>
       <td class="integer">7</td>
       <td>Oxygen Warning</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">10050</td>
       <td class="integer">8</td>
       <td>Suffocation</td>
-    </tr>
     </tr>
     <tr style="font-weight: bold;">
       <td class="integer">10060</td>
       <td class="integer">9</td>
       <td>Energy Refuel</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">10070</td>
       <td class="integer">10</td>
       <td>Oxygen Refuel</td>
-    </tr>
     </tr>
     <tr>
       <td class="integer">10080</td>
       <td class="integer">11</td>
       <td>Can&rsquo;t Toggle Switch</td>
     </tr>
-    </tr>
     <tr style="font-weight: bold;">
       <td class="integer">10090</td>
       <td class="integer">12</td>
       <td>Switch On</td>
-    </tr>
     </tr>
     <tr style="font-weight: bold;">
       <td class="integer">10100</td>
       <td class="integer">13</td>
       <td>Switch Off</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">10110</td>
       <td class="integer">14</td>
       <td>Puzzle Switch</td>
-    </tr>
     </tr>
     <tr>
       <td class="integer">10120</td>
       <td class="integer">15</td>
       <td>Chip Insertion</td>
     </tr>
-    </tr>
     <tr style="font-weight: bold;">
       <td class="integer">10130</td>
       <td class="integer">16</td>
       <td>Pattern Buffer</td>
-    </tr>
     </tr>
     <tr>
       <td class="integer">10150</td>
       <td class="integer">18</td>
       <td>Adjust Volume</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">10160</td>
       <td class="integer">19</td>
-      <td><span class="dotted" id="ftnt_ref2" title="The Lua mnemonics have &lsquo;GOT Powerup&rsquo;, but GET Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.">Got Powerup<a href="#ftnt2">&#8317;&sup2;&#8318;</a></span></td>
-    </tr>
+      <td><span class="dotted" id="ftnt_ref3" title="The Lua mnemonics have &lsquo;GOT Powerup&rsquo;, but GET Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.">Got Powerup<a href="#ftnt3">&#8317;&sup3;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">10170</td>
       <td class="integer">20</td>
-      <td><span class="dotted" title="The Lua mnemonics have &lsquo;GOT Powerup&rsquo;, but GET Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.">Get Item<a href="#ftnt2">&#8317;&sup2;&#8318;</a></span></td>
-    </tr>
+      <td><span class="dotted" title="The Lua mnemonics have &lsquo;GOT Powerup&rsquo;, but GET Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.">Get Item<a href="#ftnt3">&#8317;&sup3;&#8318;</a></span></td>
     </tr>
     <tr style="font-weight: bold;">
       <td class="integer">11000</td>
       <td class="integer">21</td>
       <td>Bullet Ricochet</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">11010</td>
       <td class="integer">22</td>
       <td>Metallic Ricochet</td>
-    </tr>
     </tr>
     <tr>
       <td class="integer">11020</td>
       <td class="integer">23</td>
       <td>Empty Gun</td>
     </tr>
-    </tr>
     <tr style="font-weight: bold;">
       <td class="integer">11030</td>
       <td class="integer">34</td>
       <td>Fist Hitting</td>
-    </tr>
     </tr>
     <tr style="font-weight: bold;">
       <td class="integer">11040</td>
       <td class="integer">35</td>
       <td>Magnum Firing</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">11050</td>
       <td class="integer">36</td>
       <td>Magnum Reloading</td>
-    </tr>
     </tr>
     <tr>
       <td class="integer">11060</td>
       <td class="integer">37</td>
       <td>Assault Rifle Firing</td>
     </tr>
-    </tr>
     <tr style="font-weight: bold;">
       <td class="integer">11070</td>
       <td class="integer">38</td>
       <td>Grenade Launcher Firing</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">11080</td>
       <td class="integer">39</td>
-      <td><span class="dotted" id="ftnt_ref3" title="The Lua mnemonics (but not Anvil or ShapeFusion) misspell this as &lsquo;Grenade Expolding&rsquo;. I&rsquo;ve corrected it.">Grenade Exploding<a href="#ftnt3">&#8317;&sup3;&#8318;</a></span></td>
-    </tr>
+      <td><span class="dotted" id="ftnt_ref4" title="The Lua mnemonics (but not Anvil or ShapeFusion) misspell this as &lsquo;Grenade Expolding&rsquo;. I&rsquo;ve corrected it.">Grenade Exploding<a href="#ftnt4">&#8317;&#8308;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">11090</td>
       <td class="integer">40</td>
       <td>Grenade Flyby</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">11100</td>
       <td class="integer">41</td>
       <td>Fusion Pistol Firing</td>
-    </tr>
     </tr>
     <tr>
       <td class="integer">11110</td>
       <td class="integer">42</td>
       <td>Fusion Exploding</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">11120</td>
       <td class="integer">43</td>
       <td>Fusion Flyby</td>
-    </tr>
     </tr>
     <tr>
       <td class="integer">11130</td>
       <td class="integer">44</td>
       <td>Fusion Charging</td>
     </tr>
-    </tr>
     <tr style="font-weight: bold;">
       <td class="integer">11140</td>
       <td class="integer">45</td>
-      <td><span class="dotted" id="ftnt_ref4" title="Misspelled in Anvil (and thus ShapeFusion) as &lsquo;Rocket Expoding&rsquo;. The Lua mnemonics get this one correct.">Rocket Exploding<a href="#ftnt4">&#8317;&#8308;&#8318;</a></span></td>
-    </tr>
+      <td><span class="dotted" id="ftnt_ref5" title="Misspelled in Anvil (and thus ShapeFusion) as &lsquo;Rocket Expoding&rsquo;. The Lua mnemonics get this one correct.">Rocket Exploding<a href="#ftnt5">&#8317;&#8309;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">11150</td>
       <td class="integer">46</td>
       <td>Rocket Flyby</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">11160</td>
       <td class="integer">47</td>
       <td>Rocket Firing</td>
-    </tr>
     </tr>
     <tr style="font-weight: bold;">
       <td class="integer">11170</td>
       <td class="integer">48</td>
       <td>Flamethrower</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">11180</td>
       <td class="integer">49</td>
       <td>Body Falling</td>
-    </tr>
     </tr>
     <tr>
       <td class="integer">11190</td>
       <td class="integer">50</td>
       <td>Body Exploding</td>
     </tr>
-    </tr>
     <tr style="font-weight: bold;">
       <td class="integer">11200</td>
       <td class="integer">51</td>
       <td>Bullet Hit Flesh</td>
-    </tr>
     </tr>
     <tr>
       <td class="integer">11210</td>
       <td class="integer">134</td>
       <td>Assault Rifle Reloading</td>
     </tr>
-    </tr>
     <tr style="font-weight: bold;">
       <td class="integer">11220</td>
       <td class="integer">136</td>
       <td>Shotgun Firing</td>
-    </tr>
     </tr>
     <tr>
       <td class="integer">11230</td>
       <td class="integer">137</td>
       <td>Shotgun Reloading</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">11240</td>
       <td class="integer">141</td>
       <td>Computer Login</td>
     </tr>
-    </tr>
     <tr>
       <td class="integer">11250</td>
       <td class="integer">142</td>
       <td>Computer Logout</td>
-    </tr>
     </tr>
     <tr>
       <td class="integer">11260</td>
@@ -1326,12 +1347,12 @@ To make this content compatible with modern Aleph One, you must run it through <
     <tr>
       <td class="integer">12000</td>
       <td class="integer">124</td>
-      <td><span class="dotted" id="ftnt_ref5" title="In both Anvil/ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2022?">S&rsquo;pht Door Closing<a href="#ftnt5">&#8317;&#8309;&#8318;</a></span></td>
+      <td><span class="dotted" id="ftnt_ref6" title="In both Anvil/ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2022?">S&rsquo;pht Door Closing<a href="#ftnt6">&#8317;&#8310;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">12010</td>
       <td class="integer">25</td>
-      <td><span class="dotted" title="In both Anvil/ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2022?">S&rsquo;pht Door Opening<a href="#ftnt5">&#8317;&#8309;&#8318;</a></span></td>
+      <td><span class="dotted" title="In both Anvil/ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2022?">S&rsquo;pht Door Opening<a href="#ftnt6">&#8317;&#8310;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">12020</td>
@@ -1511,7 +1532,7 @@ To make this content compatible with modern Aleph One, you must run it through <
     <tr style="font-style: italic;">
       <td class="integer">14260</td>
       <td class="integer">4</td>
-      <td><span class="dotted" id="ftnt_ref6" title="Inexplicably labeled in the Lua mnemonics as &lsquo;Nuclear Hard Death&rsquo;, the physics&rsquo; name for the screen flash and sound effect made when Juggernauts die. (Worst Prince cover ever.) That sound is Juggernaut Exploding (#198, ID 14650).">Jjaro Ship Creak<a href="#ftnt5">&#8317;&#8310;&#8318;</a></span></td>
+      <td><span class="dotted" id="ftnt_ref7" title="Inexplicably labeled in the Lua mnemonics as &lsquo;Nuclear Hard Death&rsquo;, the physics&rsquo; name for the screen flash and sound effect made when Juggernauts die. (Worst Prince cover ever.) That sound is Juggernaut Exploding (#198, ID 14650).">Jjaro Ship Creak<a href="#ftnt6">&#8317;&#8311;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">14500</td>
@@ -1556,12 +1577,12 @@ To make this content compatible with modern Aleph One, you must run it through <
     <tr style="font-weight: bold;">
       <td class="integer">14570</td>
       <td class="integer">190</td>
-      <td><span class="dotted" id="ftnt_ref7" title="The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.">Pfhor Door Closing<a href="#ftnt7">&#8317;&#8311;&#8318;</a></span></td>
+      <td><span class="dotted" id="ftnt_ref8" title="The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.">Pfhor Door Closing<a href="#ftnt8">&#8317;&#8312;&#8318;</a></span></td>
     </tr>
     <tr style="font-weight: bold;">
       <td class="integer">14580</td>
       <td class="integer">191</td>
-      <td><span class="dotted" id="ftnt_ref7" title="The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.">Pfhor Door Opening<a href="#ftnt7">&#8317;&#8311;&#8318;</a></span></td>
+      <td><span class="dotted" id="ftnt_ref8" title="The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.">Pfhor Door Opening<a href="#ftnt8">&#8317;&#8312;&#8318;</a></span></td>
     </tr>
     <tr style="font-weight: bold;">
       <td class="integer">14590</td>
@@ -1670,7 +1691,7 @@ To make this content compatible with modern Aleph One, you must run it through <
     </tr>
     <tr>
       <td class="integer">15150</td>
-      <td class="integer"><span class="dotted" title="Nice." id="ftnt_ref8">69<a href="#ftnt8">&#8317;&#8312;&#8318;</a></span></td>
+      <td class="integer"><span class="dotted" title="Nice." id="ftnt_ref9">69<a href="#ftnt9">&#8317;&#8313;&#8318;</a></span></td>
       <td>Cyborg Projectile Hit</td>
     </tr>
     <tr>
@@ -1986,22 +2007,22 @@ To make this content compatible with modern Aleph One, you must run it through <
     <tr>
       <td class="integer">19010</td>
       <td class="integer">109</td>
-      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Water<a href="#ftnt9" id="ftnt_ref9a">&#8317;&#8313;&#8318;</a></span></td>
+      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Water<a href="#ftnt10" id="ftnt_ref10a">&#8317;&sup1;&#8304;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">19020</td>
       <td class="integer">110</td>
-      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Water<a href="#ftnt9">&#8317;&#8313;&#8318;</a></span></td>
+      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Water<a href="#ftnt10">&#8317;&sup1;&#8304;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">19060</td>
       <td class="integer">115</td>
-      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Lava<a href="#ftnt9">&#8317;&#8313;&#8318;</a></span></td>
+      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Lava<a href="#ftnt10">&#8317;&sup1;&#8304;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">19070</td>
       <td class="integer">116</td>
-      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Lava<a href="#ftnt9">&#8317;&#8313;&#8318;</a></span></td>
+      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Lava<a href="#ftnt10">&#8317;&sup1;&#8304;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">19100</td>
@@ -2026,12 +2047,12 @@ To make this content compatible with modern Aleph One, you must run it through <
     <tr>
       <td class="integer">19170</td>
       <td class="integer">122</td>
-      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Sewage<a href="#ftnt9" id="ftnt_ref9b">&#8317;&#8313;&#8318;</a></span></td>
+      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Sewage<a href="#ftnt10" id="ftnt_ref10b">&#8317;&sup1;&#8304;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">19180</td>
       <td class="integer">121</td>
-      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Sewage<a href="#ftnt9">&#8317;&#8313;&#8318;</a></span></td>
+      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Sewage<a href="#ftnt10">&#8317;&sup1;&#8304;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">19190</td>
@@ -2112,12 +2133,12 @@ To make this content compatible with modern Aleph One, you must run it through <
     <tr>
       <td class="integer">-1</td>
       <td class="integer">127</td>
-      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Goo<a href="#ftnt9" id="ftnt_ref9c">&#8317;&#8313;&#8318;</a></span></td>
+      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Goo<a href="#ftnt10" id="ftnt_ref10c">&#8317;&sup1;&#8304;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">-1</td>
       <td class="integer">128</td>
-      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Goo<a href="#ftnt9">&#8317;&#8313;&#8318;</a></span></td>
+      <td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Goo<a href="#ftnt10">&#8317;&sup1;&#8304;&#8318;</a></span></td>
     </tr>
     <tr>
       <td class="integer">-1</td>
@@ -2163,7 +2184,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 </table>
 <p>You&rsquo;ll thus need to change their IDs if you add sounds to them; likewise with all new classes you create.</p>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h2 id="soundsources">Sound Sources</h2>
 
@@ -2265,7 +2286,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <p>Acknowledgements to <strong>W&rsquo;rkncacnter</strong> on the Discord for pointing out that the <strong>Fighter Dying</strong> sound is a pitch-shift of the Porcupine sound. I had already noticed that the Fighter and F&rsquo;lickta deaths had the same source, but it never occurred to me that the Tick also had the same source.</p>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h1 id="anvilhelp">The Annotated Anvil Help Balloons</h1>
 
@@ -2708,7 +2729,7 @@ To make this content compatible with modern Aleph One, you must run it through <
   </li>
 </ul>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h1 id="defaultnames">Example DefaultNames.txt</h1>
 
@@ -3296,7 +3317,7 @@ item 33	Green Ball
 item 34	SMG
 item 35	SMG Ammo</pre>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <hr />
 
@@ -3312,44 +3333,48 @@ item 35	SMG Ammo</pre>
   <tbody>
     <tr>
       <td class="integer"><a href="#ftnt_ref1" id="ftnt1"><strong>1</strong></a></td>
-      <td>One of the crossbeams has gone out of skew on the treadle.</td>
+      <td>What, you don&rsquo;t have a third hand? Then you must not be Zaphod Beeblebrox.</td>
     </tr>
     <tr>
       <td class="integer"><a href="#ftnt_ref2" id="ftnt2"><strong>2</strong></a></td>
-      <td>The Lua mnemonics have &lsquo;<strong>Got</strong> Powerup&rsquo;, but &lsquo;<strong>Get</strong> Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.</td>
+      <td>One of the crossbeams has gone out of skew on the treadle.</td>
     </tr>
     <tr>
       <td class="integer"><a href="#ftnt_ref3" id="ftnt3"><strong>3</strong></a></td>
-      <td>The Lua mnemonics (but not Anvil or ShapeFusion) misspell this as &lsquo;Grenade <strong>Expolding</strong>&rsquo;. I&rsquo;ve corrected it.</td>
+      <td>The Lua mnemonics have &lsquo;<strong>Got</strong> Powerup&rsquo;, but &lsquo;<strong>Get</strong> Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.</td>
     </tr>
     <tr>
       <td class="integer"><a href="#ftnt_ref4" id="ftnt4"><strong>4</strong></a></td>
-      <td>Misspelled in Anvil (and thus ShapeFusion) as &lsquo;Rocket <strong>Expoding</strong>&rsquo;. The Lua mnemonics get this one correct.</td>
+      <td>The Lua mnemonics (but not Anvil or ShapeFusion) misspell this as &lsquo;Grenade <strong>Expolding</strong>&rsquo;. I&rsquo;ve corrected it.</td>
     </tr>
     <tr>
       <td class="integer"><a href="#ftnt_ref5" id="ftnt5"><strong>5</strong></a></td>
+      <td>Misspelled in Anvil (and thus ShapeFusion) as &lsquo;Rocket <strong>Expoding</strong>&rsquo;. The Lua mnemonics get this one correct.</td>
+    </tr>
+    <tr>
+      <td class="integer"><a href="#ftnt_ref5" id="ftnt6"><strong>6</strong></a></td>
       <td>In both Anvil/ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2022?</td>
     </tr>
     <tr>
-      <td class="integer"><a href="#ftnt_ref6" id="ftnt6"><strong>6</strong></a></td>
+      <td class="integer"><a href="#ftnt_ref7" id="ftnt7"><strong>7</strong></a></td>
       <td>Inexplicably labeled in the Lua mnemonics as &lsquo;Nuclear Hard Death&rsquo;, the physics&rsquo; name for the screen flash and sound effect made when Juggernauts die. (Worst Prince cover ever.) That sound is Juggernaut Exploding (#198, ID 14650).</td>
     </tr>
     <tr>
-      <td class="integer"><a href="#ftnt_ref7" id="ftnt7"><strong>7</strong></a></td>
+      <td class="integer"><a href="#ftnt_ref8" id="ftnt8"><strong>8</strong></a></td>
       <td>The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.</td>
     </tr>
     <tr>
-      <td class="integer"><a href="#ftnt_ref8" id="ftnt8"><strong>8</strong></a></td>
+      <td class="integer"><a href="#ftnt_ref9" id="ftnt9"><strong>9</strong></a></td>
       <td>Nice.</td>
     </tr>
     <tr>
-      <td class="integer"><a id="ftnt9"><strong>9</strong></span></a></td>
-      <td><a href="#ftnt_ref9a">&#8317;&#x1D43;&#8318;</a> <a href="#ftnt_ref9b">&#8317;&#x1D47;&#8318;</a> <a href="#ftnt_ref9c">&#8317;&#x1D9c;&#8318;</a> &lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.</td>
+      <td class="integer"><a id="ftnt10"><strong>10</strong></span></a></td>
+      <td><a href="#ftnt_ref10a">&#8317;&#x1D43;&#8318;</a> <a href="#ftnt_ref10b">&#8317;&#x1D47;&#8318;</a> <a href="#ftnt_ref10c">&#8317;&#x1D9c;&#8318;</a> &lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.</td>
     </tr>
   </tbody>
 </table>
 
-<p style="font-size: 13px; text-align: center;"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 </body>
 </html>

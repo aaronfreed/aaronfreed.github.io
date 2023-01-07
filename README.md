@@ -4,6 +4,7 @@ Pages currently hosted here:
 
 * [*Marathon* / Aleph One content creation](https://aaronfreed.github.io/aaronfreed/mapmaking.html)
 * [*Marathon* soundtracks](https://aaronfreed.github.io/aaronfreed/soundtracks.html)
+* [My discography](https://aaronfreed.github.io/aaronfreed/discography.html)
 
 Game mods I have contributed to:
 

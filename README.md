@@ -9,7 +9,7 @@ Pages currently hosted here:
 Game mods I have contributed to:
 
 * ***[Eternal X](http://eternal.bungie.org/)***: maps, music, sound, writing, scripting, graphics, codirector
-* ***[Apotheosis X](https://simplici7y.com/items/apotheosis-x-5)***: sound restoration, scripting
+* ***[Apotheosis X](https://simplici7y.com/items/apotheosis-x-5)***: sound, scripting
 * ***[Hellpak Vol. 1: Not Recommended by Doctors](https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors)***: maps, scripting, OST mastering, writing, graphics
 * ***Tempus Irae Redux*** (forthcoming): maps, sound, scripting, OST mastering
 * ***Where Monsters Are in Dreams*** (forthcoming): maps, sound, scripting, OST mastering, writing, graphics, codirector

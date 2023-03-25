@@ -488,30 +488,7 @@ To make this content compatible with modern Aleph One, you must run it through <
 
 <h2 id="scripts">Scripts, Monster Limits, & Music</h2>
 <ul>
-  <li>If you&rsquo;re making a solo-only map, you have two ways to merge in scripts. You can save the above script as a TEXT resource (i.e., <strong>Resources/TEXT/10000.txt</strong>) and calling it in TEXT resource 128 (i.e., <strong>Resources/TEXT/00128.txt</strong>):</li>
-<pre>    &lt;marathon_levels&gt;
-      &lt;level index="0"&gt;
-        &lt;lua resource="420"&gt;
-        &lt;mml resource="10000"/&gt;
-        &lt;music file="Eternal-Data/Music/Craig/SwirlsPiano.ogg"/&gt;
-      &lt;/level&gt;
-    &lt;/marathon_levels&gt;</pre>
-  Or by including MML in each individual level&rsquo;s folder (i.e., <strong>00 The Far Side of Nowhere/Monster Limits.mml</strong>).
-
-  <div style="margin-top: 8px;">On the other hand, if you&rsquo;re making a multiplayer level for an existing scenario (this includes cooperative play), it&rsquo;s actually <em><strong>mandatory</strong></em> to use the latter method in most cases, since the game doesn&rsquo;t send TEXT resources to other players, so if you use it for something that affects the game world, which includes limit-removing MML and most Lua, players will desync almost immediately. If you don&rsquo;t know if your script will affect the game world, it&rsquo;s safest to just assume it will. MML texture replacements, fog, and Treellama&rsquo;s ephemera-based precipitation script are some examples of things that don&rsquo;t affect the game world.</div>
-
-  <div style="margin-top: 8px;"><span id="ftnt_ref02" class="dotted" title="What, you don&rsquo;t have a third hand? Then you must not be Zaphod Beeblebrox.">On the third hand<a href="#ftnt02">&#8317;&sup2;&#8318;</a></span>, if you&rsquo;re making a standalone scenario, you can include an MML script that includes the scenario and version number, which prevents anyone who <em>isn&rsquo;t</em> running that scenario and version number from joining network games. In these cases, you can safely assume anyone who <em>does</em> join your game already has the map, in which case they&rsquo;ll also have the scripts already and won&rsquo;t desync.</div>
-
-  <pre>
-    &lt;marathon&gt;
-      &lt;scenario id="Eternal X" name="Eternal X" version="1.3pre4" /&gt;
-    &lt;/marathon&gt;</pre>
-
-  <div style="margin-top: 8px;">(Moving the map file out of the scenario folder or overwriting it with a different version of the map would fall into what I&rsquo;d consider &lsquo;Play stupid games, win stupid prizes&rsquo; territory. You may wish to put a caveat about this in your game&rsquo;s documentation, but I&rsquo;d imagine this would be a relatively rare occurrence.)</div></li>
-
-  <li>OpenGL replacement textures are a special case. They don&rsquo;t affect the game world, but they also shouldn&rsquo;t be merged in with the map. It&rsquo;s ideal to make these into a plugin so that players can choose whether to use them or not &ndash; some players may not like the extra loading time or may prefer chunky 128x128 pixel textures. (Although replacement textures could theoretically be included in a map for another scenario, that would be quite odd &ndash; if you&rsquo;re to the point that you have replacement textures for your map, I&rsquo;d advise making that into a standalone scenario.)</li>
-  <li>The <code>&lt;marathon_levels&gt;</code> code excerpt above also shows how to merge in music (i.e., the &lsquo;music file&rsquo; line).</li>
-  <li>You can override monster activation limits with MML scripts. If you&rsquo;re making a scenario, override this in your scenario&rsquo;s Scripts folder. The code for this (which also raises some limits on rendered objects) is:
+  <li>You can override monster activation limits with MML scripts. If you&rsquo;re making a standalone scenario, override this in your scenario&rsquo;s <strong>Scripts</strong> folder. The code for this (which also raises some limits on rendered objects) is:
 <pre>    &lt;marathon&gt;
       &lt;dynamic_limits&gt;
         &lt;objects value="1024"/&gt;
@@ -524,7 +501,28 @@ To make this content compatible with modern Aleph One, you must run it through <
         &lt;global_collision value="1024"/&gt;
       &lt;/dynamic_limits&gt;
     &lt;/marathon&gt;</pre>
-  Alter as needed. By contrast, if mapping for <em>Infinity</em>, you&rsquo;ll probably want to merge in MML, unless you&rsquo;re fine with monsters randomly deactivating when more than twenty are active. See the top of this section for how you should do that.</li>
+  Alter as needed. By contrast, if mapping for <em>Infinity</em>, you&rsquo;ll probably want to merge in MML, unless you&rsquo;re fine with monsters randomly deactivating when more than twenty are active. There are multiple ways to do this; which to use depends in large part on what kind of level you&rsquo;re creating.</li>
+  <li>If you&rsquo;re making a solo-only map, you have two ways to merge in scripts. You can save the above script as a TEXT resource (i.e., <strong>Resources/TEXT/10000.txt</strong>) and call it in TEXT resource 128 (i.e., <strong>Resources/TEXT/00128.txt</strong>):</li>
+<pre>    &lt;marathon_levels&gt;
+      &lt;level index="0"&gt;
+        &lt;lua resource="420"&gt;
+        &lt;mml resource="10000"/&gt;
+        &lt;music file="Eternal-Data/Music/Craig/SwirlsPiano.ogg"/&gt;
+      &lt;/level&gt;
+    &lt;/marathon_levels&gt;</pre>
+  Or by including MML in each individual level&rsquo;s folder (i.e., <strong>00 The Far Side of Nowhere/Monster Limits.mml</strong>).
+  <div style="margin-top: 8px;">On the other hand, if you&rsquo;re making a multiplayer level for an existing scenario (this includes cooperative play), it&rsquo;s actually <em><strong>mandatory</strong></em> to use the latter method in most cases, since the game doesn&rsquo;t send TEXT resources to other players. Thus, if you use it for something that affects the game world, which includes limit-removing MML and most Lua, players will desync almost immediately. If you don&rsquo;t know if your script will affect the game world, it&rsquo;s safest to just assume it will. MML texture replacements, fog, and Treellama&rsquo;s ephemera-based precipitation script are some examples of things that don&rsquo;t affect the game world.</div>
+  <div style="margin-top: 8px;"><span id="ftnt_ref02" class="dotted" title="What, you don&rsquo;t have a third hand? Then you must not be Zaphod Beeblebrox.">On the third hand<a href="#ftnt02">&#8317;&sup2;&#8318;</a></span>, if you&rsquo;re making a standalone scenario, you can include an MML script that includes the scenario and version number, which prevents anyone who <em>isn&rsquo;t</em> running that scenario and version number from joining network games. In these cases, you can safely assume anyone who <em>does</em> join your game already has the map, in which case they&rsquo;ll also have the scripts already and won&rsquo;t desync.</div>
+
+  <pre>
+    &lt;marathon&gt;
+      &lt;scenario id="Eternal X" name="Eternal X" version="1.3pre6" /&gt;
+    &lt;/marathon&gt;</pre>
+
+  <div style="margin-top: 8px;">(Moving the map file out of the scenario folder or overwriting it with a different version of the map would fall into what I&rsquo;d consider &lsquo;Play stupid games, win stupid prizes&rsquo; territory. You may wish to put a caveat about this in your game&rsquo;s documentation, but I&rsquo;d imagine this would be a relatively rare occurrence.)</div></li>
+
+  <li>OpenGL replacement graphics are a special case. They don&rsquo;t affect the game world, but they also shouldn&rsquo;t be merged in with the map. It&rsquo;s ideal to make these into a plugin so that players can choose whether to use them or not &ndash; some players may not like the extra loading time or may prefer chunky 128x128 pixel textures. (Although replacement textures could theoretically be included in a map for another scenario, that would be quite odd &ndash; if you&rsquo;re to the point that you have replacement textures for your map, I&rsquo;d advise making that into a standalone scenario.)</li>
+  <li>The <code>&lt;marathon_levels&gt;</code> code excerpt above also shows how to merge in music (i.e., the &lsquo;music file&rsquo; line). It&rsquo;s also possible to use Lua to implement music; doing so will in fact give you more options: you can control when to start the music (<em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em> contains some examples of this), or change the music midlevel based on game events (<em><a href="https://simplici7y.com/items/eternal-x">Eternal X</a></em> 1.3 contains some examples of this). A full explanation of Lua music is beyond the current scope of this guide &ndash; the music API&rsquo;s functionality is currently being expanded, so such a guide would become outdated almost immediately.</li>
 </ul>
 
 <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>

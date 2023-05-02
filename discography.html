@@ -15,6 +15,7 @@
 			h2 {font-weight: 700; color: #2F5496; font-size: 24px; margin-top: 16px; margin-bottom: 8px; text-align: center;}
 			h3 {font-weight: 700; color: #2F5496; font-size: 18px; margin-top: 16px; margin-bottom: 8px; text-align: center;}
 			h4 {font-weight: 500; color: #2F5496; font-size: 16px; margin-top: 16px; margin-bottom: 8px; text-align: center;}
+			.accent {color: #2F5496;}
 			p, blockquote {margin-top: 12px; margin-bottom: 6px;}
 			hr {margin-top: 24px; margin-bottom: 24px;}
 			div {margin-top: 4px; margin-bottom: 4px;}
@@ -30,25 +31,22 @@
 			.dotted {border-bottom: 1px dotted;}
 			table {border-collapse: collapse; margin: auto;}
 			td, th {padding: 4px 7px; vertical-align: top; font-weight: lighter; text-align: justify;}
-			.solo > tbody > tr:nth-child(4n), .solo > tbody > tr:nth-child(4n+3) > td {background-color: #eff0ff;}
-			.solo > tbody > tr:nth-child(4n+1) > td, .solo > tbody > tr:nth-child(4n+2) > td {background-color: #fff;}
-			.multi > tbody > tr:nth-child(6n) > td, .multi > tbody > tr:nth-child(6n+4) > td, .multi > tbody > tr:nth-child(6n+5) > td {background-color: #eff0ff;}
-			.multi > tbody > tr:nth-child(6n+1) > td, .multi > tbody > tr:nth-child(6n+2) > td, .multi > tbody > tr:nth-child(6n+3) > td {background-color: #fff;}
+			tbody > tr:nth-child(6n), tbody > tr:nth-child(6n+4) > td, tbody > tr:nth-child(6n+5) > td {background-color: #eff0ff;}
+			tbody > tr:nth-child(6n+1) > td, tbody > tr:nth-child(6n+2) > td, tbody > tr:nth-child(6n+3) > td {background-color: #fff;}
 			td:nth-child(1), th:nth-child(1) {border-left: 1px solid #d0d0ff;}
 			td:nth-last-child(1), th:nth-last-child(1) {border-right: 1px solid #d0d0ff;}
 			thead > tr:nth-child(1), tfoot > tr:nth-child(1) {border-top: 1px solid #d0d0ff;}
 			thead > tr:nth-last-child(1), tfoot > tr:nth-last-child(1) {border-bottom: 1px solid #d0d0ff;}
 			tbody > tr:nth-child(1) {border-top: 1px solid #d0d0ff;}
-			.solo > tbody > tr:nth-child(4n+2) {border-bottom: 1px solid #d0d0ff;}
-			.solo > tbody > tr:nth-child(4n) {border-bottom: 1px solid #d0d0ff;}
-			.multi > tbody > tr:nth-child(6n+3) {border-bottom: 1px solid #d0d0ff;}
-			.multi > tbody > tr:nth-child(6n) {border-bottom: 1px solid #d0d0ff;}
+			tbody > tr:nth-child(3n) {border-bottom: 1px solid #d0d0ff;}
 			thead {background-color: #eff0ff;}
 			.solo > tfoot {background-color: #eff0ff;}
-			.multi > tfoot {background-color: #fff;}
+			.multi > tfoot {background-color: #eff0ff;}
+			.master > tfoot {background-color: #fff;}
 			thead th {font-weight: 700;}
 			tfoot th {font-weight: 500;}
 			.date {font-family: "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif; text-align: right; white-space: nowrap; font-weight: 500;}
+			.normal {font-family: "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;}
 		</style>
 	</head>
   <body>
@@ -92,6 +90,9 @@
           <td class="dr">13</td>
         </tr>
         <tr>
+          <td colspan="5" style="text-align: center;" class="accent">original compositions</td>
+        </tr>
+        <tr>
           <td></td>
           <td colspan="2">These are juvenilia, but I&rsquo;m still proud of parts of them. Saying this has a <span class="number">1997</span> release date might not be strictly accurate, since I went back and revised parts of the arrangements in <span class="number">2008</span>, but the vast majority of this material dates to the years listed in the title, and all of it was previously released (albeit among a small circle of friends and family members). Most tracks are original compositions, but a few are arrangements of traditional songs, and one, &lsquo;The Colour of Night&rsquo;, was cowritten with a school friend, Austin Shoemaker.</td>
           <td colspan="2"></td>
@@ -103,6 +104,9 @@
           <td style="text-align: center;">Remix album</td>
           <td class="number">39:35</td>
           <td class="dr">12</td>
+        </tr>
+        <tr>
+          <td colspan="5" style="text-align: center;" class="accent">remixes of music by <strong>Alexander Seropian</strong></td>
         </tr>
         <tr>
           <td></td>
@@ -118,6 +122,9 @@
           <td class="dr">12</td>
         </tr>
         <tr>
+          <td colspan="5" style="text-align: center;" class="accent">original compositions</td>
+        </tr>
+        <tr>
           <td></td>
           <td colspan="2">Two different arrangements of a <em>Compositions 1993-1997</em> track called &lsquo;The Tempest&rsquo;, used as the theme for my still-unfinished scenario <em>Marathon Chronicles</em> (see <a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6k1ExcIEZMIOWc9wfgIkYmL">YouTube</a> for info).</td>
           <td colspan="2"></td>
@@ -129,6 +136,9 @@
           <td style="text-align: center;">Demo album</td>
           <td class="number">52:30</td>
           <td class="dr">15</td>
+        </tr>
+        <tr>
+          <td colspan="5" style="text-align: center;" class="accent">original compositions & covers of music by <strong>Genesis</strong>, <strong>Nobuo Uematsu</strong> (植松 伸夫), & <strong>Johann Pachelbel</strong></td>
         </tr>
         <tr>
           <td></td>
@@ -144,6 +154,9 @@
           <td class="dr">12</td>
         </tr>
         <tr>
+          <td colspan="5" style="text-align: center;" class="accent">remixes of music by <strong>K&#333;ji Kondo</strong> (近藤 浩治), <strong>Danny Baranowsky</strong>,<br /><strong>FamilyJules<span class="number">7</span>x</strong> (Jules Conroy), <strong>A_Rival</strong> (Alex Esquivel), & <strong>Chipzel</strong> (Niamh Houston)</strong></td>
+        </tr>
+	<tr>
           <td></td>
           <td colspan="2">Counting DLC, <em>Cadence of Hyrule</em> has up to six different versions of its songs, all with identical tempi and melodies. These remixes weave <span class="number">17</span> of its songs into dense, psychedelic listening experiences that are radically different from their sources.</td>
           <td colspan="2"></td>
@@ -155,6 +168,9 @@
           <td style="text-align: center;">Remix album</td>
           <td class="number">41:00</td>
           <td class="dr">12</td>
+        </tr>
+        <tr>
+          <td colspan="5" style="text-align: center;" class="accent">remixes of music by <strong>Alexander Seropian</strong></td>
         </tr>
         <tr>
           <td></td>
@@ -170,22 +186,30 @@
           <td class="dr">12</td>
         </tr>
         <tr>
+          <td colspan="5" style="text-align: center;" class="accent">remixes of music by <strong>Alexander Seropian</strong></td>
+        </tr>
+        <tr>
           <td></td>
           <td colspan="2"> The first <em>Marathon</em> remixes I did in GarageBand. They&rsquo;re less faithful in sound than my <span class="number">1997</span> remixes (I used ton of retro synth voices, especially the Mellotron), but more stylistically faithful than any of my following mixes, for which these still serve as the basis. &lsquo;Pistol Start&rsquo; refers to a form of challenge run done by hitting command-option-new game (ctrl-shift-new game on Windows or Linux); a player must complete a level with the starting loadout of a pistol and three clips, usually on the hardest difficulty.</td>
           <td colspan="2"></td>
         </tr>
 
         <tr>
-          <td class="date">2022-12-07<br />to present</td>
+          <td class="date">2022-12-07<br /><span class="normal">to present</span></td>
           <td style="text-align: center;"><strong><em><a href="https://1drv.ms/u/s!AuD0MykSsmaRpEIECjVvcyQb2Ijw?e=anBGFH" target="_blank">See You Starside: Interim Revisions<br />Violins Again: Rough Drafts</a></em></strong></td>
           <td style="text-align: center;">Remix/arrangement<br />anthology</td>
           <td class="number">4:23:42</td>
           <td class="dr">12</td>
         </tr>
         <tr>
+          <td colspan="5" style="text-align: center;" class="accent">remixes & expanded interpretations of music by <strong>Alexander Seropian</strong></td>
+        </tr>
+        <tr>
           <td></td>
-          <td colspan="2">Rather than remove old mixes entirely as I supersede them, I&rsquo;ve simply moved them to this folder so that people can trace their evolution. Dates are listed in ISO format, followed by <span class="number">24</span>-hour time (<span class="number">00.00</span> to <span class="number">23.59</span>). My lack of anything even charitably describable as a sleep schedule may be apparent from these filenames.<br /><br />
-          As of <span class="number">2023-01-17</span>, drafts of my orchestral remix project <em>Violins Again</em> and its companion <em>&hellip;And Beyond</em> are also found mixed in here &ndash; perhaps at some point, it&rsquo;ll be worth separating them, but for now, there aren&rsquo;t enough of either to make it worthwhile.</td>
+          <td colspan="2">
+            <p style="margin-top: 0px;">Rather than remove old mixes entirely as I supersede them, I&rsquo;ve simply moved them to this folder so that people can trace their evolution. Dates are listed in ISO format, followed by <span class="number">24</span>-hour time (<span class="number">00.00</span> to <span class="number">23.59</span>). My lack of anything even charitably describable as a sleep schedule may be apparent from these filenames.</p>
+            <p style="margin-bottom: 0px;">As of <span class="number">2023-01-17</span>, drafts of my orchestral remix project <em>Violins Again</em> and its companion <em>&hellip;And Beyond</em> are also found mixed in here &ndash; perhaps at some point, it&rsquo;ll be worth separating them, but for now, there aren&rsquo;t enough of either to make it worthwhile.</p>
+          </td>
           <td colspan="2"></td>
         </tr>
 
@@ -197,18 +221,26 @@
           <td class="dr">13</td>
         </tr>
         <tr>
+          <td colspan="5" style="text-align: center;" class="accent">expanded interpretations of music by <strong>Alexander Seropian</strong></td>
+        </tr>
+        <tr>
           <td></td>
-          <td colspan="2">What began as an endeavour to remix <em>Marathon</em>&rsquo;s OST grew into something closer to an arranged album, with <span class="number">38</span> minutes of new material. These intricate, dense, yet dynamic mixes are brimming with retro synths, arpeggiation, musical cross-references, reverb, and entirely new instrument parts. <em>See You Starside</em> is <em>Marathon</em>&rsquo;s OST by way of &rsquo;<span class="number">70</span>s progressive rock songwriting and arrangement, &rsquo;<span class="number">80</span>s pop production, and &rsquo;<span class="number">90</span>s Japanese games’ atmosphere, with secondary influences from genres as disparate as jazz, blues, disco, ambient, post-rock, classical, electronic music, Krautrock, and metal.<br /><br />
-          YouTube video <a href="https://youtu.be/bRiDh3PziWU" target="_blank">here</a>. However, I <em><strong>strongly</strong></em> encourage people to use an adblocker for any and all videos on my channel, since YouTube has decided to start running ads that I emphatically do not want on my videos and make absolutely no money from. uBlock Origin seems to work well for this purpose, but I&rsquo;m sure it&rsquo;s not the only viable option.</td>
+          <td colspan="2">
+            <p style="margin-top: 0px;">What began as an endeavour to remix <em>Marathon</em>&rsquo;s OST grew into something closer to an arranged album, with <span class="number">38</span> minutes of new material. These intricate, dense, yet dynamic mixes are brimming with retro synths, arpeggiation, musical cross-references, reverb, and entirely new instrument parts. <em>See You Starside</em> is <em>Marathon</em>&rsquo;s OST by way of &rsquo;<span class="number">70</span>s progressive rock songwriting and arrangement, &rsquo;<span class="number">80</span>s pop production, and &rsquo;<span class="number">90</span>s Japanese games’ atmosphere, with secondary influences from genres as disparate as jazz, blues, disco, ambient, post-rock, classical, electronic music, Krautrock, and metal.</p>
+            <p style="margin-bottom: 0px;">YouTube video <a href="https://youtu.be/bRiDh3PziWU" target="_blank">here</a>. However, I <em><strong>strongly</strong></em> encourage people to use an adblocker for any and all videos on my channel, since YouTube has decided to start running ads that I emphatically do not want on my videos and make absolutely no money from. uBlock Origin seems to work well for this purpose, but I&rsquo;m sure it&rsquo;s not the only viable option.</p>
+          </td>
           <td colspan="2"></td>
         </tr>
 
         <tr>
-          <td class="date">2023<br />(WIP)</td>
+          <td class="date">2023<span class="normal"> (WIP)</span></td>
           <td style="text-align: center;"><strong><em><a href="https://1drv.ms/u/s!AuD0MykSsmaRqEnfSORxEqDkl_UX?e=QHlbjK" target="_blank">Violins Again:<br />An Orchestral Marathon Soundtrack</a></em></strong></td>
           <td style="text-align: center;">Arrangement album</td>
           <td class="number">1:18:17</td>
           <td class="dr">13</td>
+        </tr>
+        <tr>
+          <td colspan="5" style="text-align: center;" class="accent">expanded interpretations of music by <strong>Alexander Seropian</strong></td>
         </tr>
         <tr>
           <td></td>
@@ -217,11 +249,14 @@
         </tr>
 
         <tr>
-          <td class="date">2023<br />(WIP)</td>
+          <td class="date">2023<span class="normal"> (WIP)</span></td>
           <td style="text-align: center;"><strong><em><a href="https://1drv.ms/u/s!AuD0MykSsmaRqH0LY06-Tz2pxu2A?e=FuoPFu" target="_blank">&hellip;And Beyond:<br />The Marathon Future Symphonic Mixes</a></em></strong></td>
           <td style="text-align: center;">Arrangement album</td>
           <td class="number">1:18:17</td>
           <td class="dr">13</td>
+        </tr>
+        <tr>
+          <td colspan="5" style="text-align: center;" class="accent">expanded interpretations of music by <strong>Alexander Seropian</strong></td>
         </tr>
         <tr>
           <td></td>
@@ -230,28 +265,34 @@
         </tr>
 
         <tr>
-          <td class="date">2023<br />(WIP)</td>
+          <td class="date">2023<span class="normal"> (WIP)</span></td>
           <td style="text-align: center;"><strong><em><a href="https://1drv.ms/u/s!AuD0MykSsmaRqjjdDEHCSQbBVC9L?e=N18xZg" target="_blank">Marathon ComposerCloud+ Mixes</a></em></strong></td>
           <td style="text-align: center;">Arrangement album</td>
           <td class="number">48:31</td>
           <td class="dr">14</td>
         </tr>
         <tr>
+          <td colspan="5" style="text-align: center;" class="accent">expanded interpretations of music by <strong>Alexander Seropian</strong></td>
+        </tr>
+        <tr>
           <td></td>
-          <td colspan="2">Early works in progress of re-instrumentations of <em>See You Starside</em>, <em>Violins Again</em>, and <em>&hellip;And Beyond</em> using EastWest ComposerCloud+ instruments. Of the above versions, only the <em>Violins Again</em> and <em>&hellip;And Beyond</em> versions of &lsquo;Aliens Again&rsquo; and &lsquo;Chomber&rsquo; used these; I plan to redo all 16 tracks of both <em>See You Starside</em> and <em>Violins Again</em> to use the ComposerCloud+ instruments at some point, though, because they have such phenomenal quality. I&rsquo;ve also made an &lsquo;Eastern&rsquo; version of &lsquo;What About Bob?&rsquo;; I may well end up creating world music-inspired versions of all sixteen tracks, but I&rsquo;d like to know a bit more about the traditions I&rsquo;d be working in before committing to it fully.</td>
+          <td colspan="2">Early works in progress of re-instrumentations of <em>See You Starside</em>, <em>Violins Again</em>, and <em>&hellip;And Beyond</em> using EastWest ComposerCloud+ instruments. Of the above versions, only the <em>Violins Again</em> and <em>&hellip;And Beyond</em> versions of &lsquo;Aliens Again&rsquo; and &lsquo;Chomber&rsquo; used these; I plan to redo all <span class="number">16</span> tracks of both <em>See You Starside</em> and <em>Violins Again</em> to use the ComposerCloud+ instruments at some point, though, because they have such phenomenal quality. I&rsquo;ve also made an &lsquo;Eastern&rsquo; version of &lsquo;What About Bob?&rsquo;; I may well end up creating world music-inspired versions of all sixteen tracks, but I&rsquo;d like to know a bit more about the traditions I&rsquo;d be working in before committing to it fully.</td>
           <td colspan="2"></td>
         </tr>
 
         <tr>
-          <td class="date">2023<br />(WIP)</td>
-          <td style="text-align: center;"><strong><em><a href="https://1drv.ms/u/s!AuD0MykSsmaRqjlL8OMFkfOHvEFU?e=RwTavK" target="_blank">Bearing Gifts:<br />Trojan Remixes</a></em></strong></td>
+          <td class="date">2023<span class="normal"> (WIP)</span></td>
+          <td style="text-align: center;"><strong><em><a href="https://1drv.ms/u/s!AuD0MykSsmaRqjlL8OMFkfOHvEFU?e=RwTavK" target="_blank">Bearing Gifts: Trojan Remixes</a></em></strong></td>
           <td style="text-align: center;">Arrangement album</td>
           <td class="number">1:07:40</td>
           <td class="dr">14</td>
         </tr>
         <tr>
+          <td colspan="5" style="text-align: center;" class="accent">remixes & expanded interpretations of music by <strong>Tom Worth</strong></td>
+        </tr>
+        <tr>
           <td></td>
-          <td colspan="2">Arrangements of the soundtrack for the <em>Marathon</em> mod <em>Trojan</em> (1997). I can&rsquo;t promise that I&rsquo;ll attempt to do new arrangements of all 20 proper songs from the OST, but I&rsquo;ll certainly at least do new arrangements of Tom Worth&rsquo;s ten tracks. As of <span class="number">2023-02-10</span>, many of these are currently still very early works in progress; only the first two tracks are really further along than being instrument swaps. The name comes from &ndash; what else? &ndash; the proverb &lsquo;Beware of Greeks bearing gifts,&rsquo; which of course refers to the Trojan horse. This one, at least, is unlikely to change, as I can&rsquo;t imagine anyone ever thinking of a better one.</td>
+          <td colspan="2">Arrangements of <strong>Tom Worth</strong>, <strong>John Carlo Maffei</strong>, <strong>Jason Aguiar</strong>, <strong>Steve Campbell</strong>, & <strong>Hamish Sanderson</strong>&rsquo;s OST for the <em>Marathon</em> mod <em>Trojan</em> (1997). I can&rsquo;t promise that I&rsquo;ll attempt to do new arrangements of all <span class="number">20</span> proper songs from the OST, but I&rsquo;ll certainly at least do new arrangements of Tom&rsquo;s ten tracks. As of <span class="number">2023-04-29</span>, many of these are currently still very early works in progress; only the first two tracks and the last track are really further along than being instrument swaps. The name comes from &ndash; what else? &ndash; the proverb &lsquo;Beware of Greeks bearing gifts,&rsquo; which of course refers to the Trojan horse. This one, at least, is unlikely to change, as I can&rsquo;t imagine anyone ever thinking of a better one.</td>
           <td colspan="2"></td>
         </tr>
       </tbody>
@@ -274,14 +315,18 @@
       </thead>
       <tbody>
         <tr>
-          <td class="date">2023 (WIP)</td>
+          <td class="date">2023<span class="normal"> (WIP)</span></td>
           <td style="text-align: center;"><strong><a href="https://1drv.ms/u/s!AuD0MykSsmaRnUJawmCYx8my2zSS?e=9rRYFa" target="_blank"><em>Eternal X</em> <span class="number">1.3</span> OST</a></strong></td>
           <td style="text-align: center;">Game soundtrack</td>
-          <td class="number">6:48:45</td>
+          <td class="number">6:53:34</td>
           <td class="dr">12</td>
         </tr>
         <tr>
-          <td colspan="5" style="text-align: center; font-weight: 500;">Aaron Freed, Dr Craig Hardgrove, wowbobwow, Talashar, wowbobwow, CKT<span class="number">1138</span>, Solar-Tron,<br />Dan Storm, Matrix_XV, Tommy T-Bone, Nicholas Singer, Trey J. Anderson, & Eike Steffen</td>
+          <td colspan="5" style="text-align: center;">
+            <div style="margin-top: 0px;"><strong>Aaron Freed</strong>, <strong>Dr Craig Hardgrove</strong>, <strong>wowbobwow</strong>, <strong>Talashar</strong>, <strong>wowbobwow</strong>, <strong>CKT<span class="number">1138</span></strong>, <strong>Solar-Tron</strong>,<br />
+            <strong>Dan Storm</strong>, <strong>Matrix_XV</strong>, <strong>Tommy T-Bone</strong>, <strong>Nicholas Singer</strong>, <strong>Trey J. Anderson</strong>, & <strong>Eike Steffen</strong></div>
+            <div class="accent" style="margin-bottom: 0px;">based on music by <strong>Alexander Seropian</strong>, <strong>Martin O&rsquo;Donnell</strong>, <strong>Michael Salvatori</strong>, & <strong>Chris Christodoulou</strong></div>
+          </td>
         </tr>
         <tr>
           <td></td>
@@ -290,18 +335,35 @@
         </tr>
 
         <tr>
-          <td class="date">2023 (WIP)</td>
+          <td class="date">2023<span class="normal"> (WIP)</span></td>
           <td style="text-align: center;"><strong><em><a href="https://1drv.ms/u/s!AuD0MykSsmaRpl4XwALWtP2PbwBB?e=luFHG5" target="_blank">dungeons presents hellpak: Vol. <span class="number">2</span> &ndash;<br />An Exercise in Questionable Taste</a></em></strong></td>
           <td style="text-align: center;">Game soundtrack</td>
-          <td class="number">3:37:32</td>
+          <td class="number">4:00:50</td>
           <td class="dr">12</td>
         </tr>
         <tr>
-          <td colspan="5" style="text-align: center; font-weight: 500;">Matrix_XV, tbcr, CKT<span class="number">1138</span>, Aaron Freed, & NEFX</td>
+          <td colspan="5" style="text-align: center;"><strong>Matrix_XV</strong>, <strong>tbcr</strong>, <strong>CKT<span class="number">1138</span></strong>, <strong>Aaron Freed</strong>, & <strong>NEFX</strong></span></td>
         </tr>
         <tr>
           <td></td>
           <td colspan="2">Forthcoming game soundtrack; I&rsquo;m working on some remixes of <em>hellpak: Vol. <span class="number">1</span></em> tracks and some original material for it.</td>
+          <td colspan="2"></td>
+        </tr>
+
+        <tr>
+          <td class="date">2023<span class="normal"> (WIP)</span></td>
+          <td style="text-align: center;"><strong><strong><em>Tempus Irae Redux</em> OST</strong></strong></td>
+          <td style="text-align: center;">Game soundtrack</td>
+          <td class="number">2:34:45</td>
+          <td class="dr">11</td>
+        </tr>
+          <td colspan="5" style="text-align: center;">
+            <strong>Alexander Nakarada</strong>, <strong>Rafael Krux</strong>, <strong>Kevin MacLeod</strong>, <strong>Bryan Teoh</strong>, <strong>Nine Inch Nails</strong>,<br />
+            <strong>Brian Boyko</strong>, <strong>Aaron Freed</strong>, <strong>Sean Magee</strong>, <strong>Rich Wilcox</strong>, & <strong>Fungus Amongus</strong>
+          </td>
+        <tr>
+          <td></td>
+          <td colspan="2">Forthcoming; a link should be available soon&#153;, since <em>Tempus Irae Redux</em> is nearing the end of its development and will hopefully be released in mid-<span class="number">2023</span>. In addition to mastering the OST, I created a metal remix of Brian Boyko&rsquo;s &ldquo;Ambush in Rattlesnake Gulch&rdquo; for <em>Redux</em> and have made various adjustments to other tracks as needed.</td>
           <td colspan="2"></td>
         </tr>
       </tbody>
@@ -312,14 +374,14 @@
 
     <h2 id="engineer">As Mastering/Remastering Engineer</h2>
 
-      <p>(I&rsquo;m not listing my own albums under this, because lol).</p>
+      <p>(I&rsquo;m not listing my own albums under this, because lol.)</p>
 
     <h3 id="engineerofficial">Official Releases</h3>
 
     <p>I mastered or remastered the soundtracks used in official releases of the following game mods:</p>
 
 
-    <table class="multi">
+    <table class="master">
       <thead>
         <tr>
           <th style="text-align: right;">Date</th>
@@ -338,7 +400,10 @@
           <td class="dr">12</td>
         </tr>
         <tr>
-          <td colspan="5" style="text-align: center; font-weight: 500;">Dr Craig Hardgrove, Tommy T-Bone, Nicholas Singer, & Eike Steffen</td>
+          <td colspan="5" style="text-align: center;">
+            <div style="margin-top: 0px;"><strong>Dr Craig Hardgrove</strong>, <strong>Tommy T-Bone</strong>, <strong>Nicholas Singer</strong>, & <strong>Eike Steffen</strong><br /></div>
+            <div class="accent" style="margin-bottom: 0px;">based on music by <strong>Alexander Seropian</strong>, <strong>Martin O&rsquo;Donnell</strong>, & <strong>Michael Salvatori</strong></div>
+          </td>
         </tr>
         <tr>
           <td></td>
@@ -354,11 +419,11 @@
           <td class="dr">11</td>
         </tr>
         <tr>
-          <td colspan="5" style="text-align: center; font-weight: 500;">Kevin MacLeod & CryoS</td>
+          <td colspan="5" style="text-align: center;"><strong>Kevin MacLeod</strong> & <strong>CryoS</strong></td>
         </tr>
         <tr>
           <td></td>
-          <td colspan="2">Included with <em>Phoenix</em> as of version <span class="number">1.4</span>, released <span class="number">2022-01-19</span>. (<em>Phoenix</em> <span class="number">1.4.1</span>, released <span class="number">2023-01-05</span>, is the latest release.) YouTube video <a href="https://youtu.be/KczNQR_K5Qc" target="_blank">here</a> (again, please use an adblocker). I also remastered the sounds, which you can get <a href="https://www.dropbox.com/s/2hepwmp5a9ig8kh/Marathon%20Phoenix%20Remastered%20Sounds%20%26%20Music.7z">here</a>, along with a remastered version of the theme music.</td>
+          <td colspan="2">Included with <em>Phoenix</em> as of version <span class="number">1.4</span>, released <span class="number">2022-01-19</span>. (<em>Phoenix</em> <span class="number">1.4.1</span>, released <span class="number">2023-01-05</span>, is the latest release and, per main scenario developer RyokoTK, the final word on this iteration of <em>Phoenix</em> &ndash; the next release will feature major overhauls to its content.) YouTube video <a href="https://youtu.be/KczNQR_K5Qc" target="_blank">here</a> (again, please use an adblocker). I also remastered the sounds, which you can get <a href="https://www.dropbox.com/s/2hepwmp5a9ig8kh/Marathon%20Phoenix%20Remastered%20Sounds%20%26%20Music.7z">here</a>, along with a remastered version of the theme music.</td>
           <td colspan="2"></td>
         </tr>
 
@@ -370,7 +435,7 @@
           <td class="dr">15</td>
         </tr>
         <tr>
-          <td colspan="5" style="text-align: center; font-weight: 500;">Tom Worth, John Carlo Maffei, Jason Aguiar, Steve Campbell, & Hamish Sanderson</td>
+          <td colspan="5" style="text-align: center;"><strong>Tom Worth</strong>, <strong>John Carlo Maffei</strong>, <strong>Jason Aguiar</strong>, <strong>Steve Campbell</strong>, & <strong>Hamish Sanderson</strong></td>
         </tr>
         <tr>
           <td></td>
@@ -386,7 +451,7 @@
           <td class="dr">12</td>
         </tr>
         <tr>
-          <td colspan="5" style="text-align: center; font-weight: 500;">tbcr, Matrix_XV, CKT<span class="number">1138</span>, & NEFX</td>
+          <td colspan="5" style="text-align: center;"><strong>tbcr</strong>, <strong>Matrix_XV</strong>, <strong>CKT<span class="number">1138</span></strong>, & <strong>NEFX</strong></td>
         </tr>
         <tr>
           <td></td>
@@ -395,14 +460,14 @@
         </tr>
 
         <tr>
-          <td class="date">2023 (WIP)</td>
+          <td class="date">2023<span class="normal"> (WIP)</span></td>
           <td style="text-align: center;"><strong><a href="https://1drv.ms/u/s!AuD0MykSsmaRpnli8zolUcqCjXEA?e=bZtayh" target="_blank"><em>dungeons presents hellpak: Vol. <span class="number">1</span> &ndash;<br />Not Recommended by Doctors</em> DLC</a></strong></td>
           <td style="text-align: center;">Multi-artist anthology</td>
           <td class="number">54:35</td>
           <td class="dr">11</td>
         </tr>
         <tr>
-          <td colspan="5" style="text-align: center; font-weight: 500;">Matrix_XV, tbcr, & CKT<span class="number">1138</span></td>
+          <td colspan="5" style="text-align: center;"><strong>Matrix_XV</strong>, <strong>tbcr</strong>, & <strong>CKT<span class="number">1138</span></strong></td>
         </tr>
         <tr>
           <td></td>
@@ -411,50 +476,57 @@
         </tr>
 
         <tr>
-          <td class="date">2023 (WIP)</td>
+          <td class="date">2023<span class="normal"> (WIP)</span></td>
           <td style="text-align: center;"><strong><em><a href="https://1drv.ms/u/s!AuD0MykSsmaRpl4XwALWtP2PbwBB?e=luFHG5" target="_blank">dungeons presents hellpak: Vol. <span class="number">2</span> &ndash;<br />An Exercise in Questionable Taste</a></em></strong></td>
           <td style="text-align: center;">Game soundtrack</td>
-          <td class="number">3:37:32</td>
+          <td class="number">4:00:50</td>
           <td class="dr">12</td>
         </tr>
         <tr>
-          <td colspan="5" style="text-align: center; font-weight: 500;">Matrix_XV, tbcr, CKT<span class="number">1138</span>, Aaron Freed, & NEFX</span></td>
+          <td colspan="5" style="text-align: center;"><strong>Matrix_XV</strong>, <strong>tbcr</strong>, <strong>CKT<span class="number">1138</span></strong>, <strong>Aaron Freed</strong>, & <strong>NEFX</strong></span></td>
         </tr>
         <tr>
           <td></td>
-          <td colspan="2">We haven&rsquo;t even begun to consider the song order yet, so these aren&rsquo;t tagged with song numbers. Some of these songs will likely be cut from the final release, though some of those will probably be held over for <em>Vol. 3</em>.</td>
+          <td colspan="2">We haven&rsquo;t even begun to consider the song order yet, so these aren&rsquo;t tagged with song numbers. Some of these songs will likely be cut from the final release, though some of those will probably be held over for <em>Vol. <span class="number">3</span></em>.</td>
           <td colspan="2"></td>
         </tr>
 
         <tr>
-          <td class="date">2023 (WIP)</td>
+          <td class="date">2023<span class="normal"> (WIP)</span></td>
           <td style="text-align: center;"><strong><strong><em>Tempus Irae Redux</em> OST</strong></strong></td>
           <td style="text-align: center;">Game soundtrack</td>
           <td class="number">2:34:45</td>
           <td class="dr">11</td>
         </tr>
         <tr>
-          <td colspan="5" style="text-align: center; font-weight: 500;">Alexander Nakarada, Rafael Krux, Kevin MacLeod, Bryan Teoh, Nine Inch Nails,<br />Brian Boyko, Sean Magee, Rich Wilcox, & Fungus Amongus</span></td>
+          <td colspan="5" style="text-align: center;">
+            <strong>Alexander Nakarada</strong>, <strong>Rafael Krux</strong>, <strong>Kevin MacLeod</strong>, <strong>Bryan Teoh</strong>, <strong>Nine Inch Nails</strong>,<br />
+            <strong>Brian Boyko</strong>, <strong>Aaron Freed</strong>, <strong>Sean Magee</strong>, <strong>Rich Wilcox</strong>, & <strong>Fungus Amongus</strong>
+          </td>
         </tr>
         <tr>
           <td></td>
-          <td colspan="2">Forthcoming; a link should be available soon&#153;, since <em>Tempus Irae Redux</em> is nearing the end of its development and will hopefully be released in early to mid-<span class="number">2023</span>.</td>
+          <td colspan="2">Forthcoming; a link should be available soon&#153;, since <em>Tempus Irae Redux</em> is nearing the end of its development and will hopefully be released in mid-<span class="number">2023</span>.</td>
           <td colspan="2"></td>
         </tr>
 
         <tr>
-          <td class="date">2023 (WIP)</td>
+          <td class="date">2023<span class="normal"> (WIP)</span></td>
           <td style="text-align: center;"><strong><a href="https://1drv.ms/u/s!AuD0MykSsmaRnUJawmCYx8my2zSS?e=9rRYFa" target="_blank"><em>Eternal X</em> <span class="number">1.3</span> OST</a></strong></td>
           <td style="text-align: center;">Game soundtrack</td>
-          <td class="number">6:48:45</td>
+          <td class="number">6:53:34</td>
           <td class="dr">12</td>
         </tr>
         <tr>
-          <td colspan="5" style="text-align: center; font-weight: 500;">Aaron Freed, Dr Craig Hardgrove, wowbobwow, Talashar, wowbobwow, CKT<span class="number">1138</span>, Solar-Tron,<br />Dan Storm, Matrix_XV, Tommy T-Bone, Nicholas Singer, Trey J. Anderson, & Eike Steffen</td>
+          <td colspan="5" style="text-align: center;">
+            <div style="margin-top: 0px;"><strong>Aaron Freed</strong>, <strong>Dr Craig Hardgrove</strong>, <strong>wowbobwow</strong>, <strong>Talashar</strong>, <strong>wowbobwow</strong>, <strong>CKT<span class="number">1138</span></strong>, <strong>Solar-Tron</strong>,<br />
+            <strong>Dan Storm</strong>, <strong>Matrix_XV</strong>, <strong>Tommy T-Bone</strong>, <strong>Nicholas Singer</strong>, <strong>Trey J. Anderson</strong>, & <strong>Eike Steffen</strong></div>
+            <div class="accent" style="margin-bottom: 0px;">based on music by <strong>Alexander Seropian</strong>, <strong>Martin O&rsquo;Donnell</strong>, <strong>Michael Salvatori</strong>, & <strong>Chris Christodoulou</strong></div>
+          </td>
         </tr>
         <tr>
           <td></td>
-          <td colspan="2"><span class="number">1.3</span> is still under construction, but at the current pace, it&rsquo;ll probably be finished in mid- to late <span class="number">2023</span>. The OST is now massive, thanks to new work from several new contributors (including me) and even two old ones. Each level (besides four brief interludes) now has unique music averaging (as of <span class="number">2023-01-29</span>) <span class="number">7:30</span> in length &ndash; so if players avoid dying, they&rsquo;ll hear very little repetition of music as they progress through the game. The OST&rsquo;s varied musical styles also make it an even more dynamic listening experience.</td>
+          <td colspan="2"><span class="number">1.3</span> is still under construction, but at the current pace, it&rsquo;ll probably be finished in mid- to late <span class="number">2023</span>. The OST is now massive, thanks to new work from several new contributors (including me) and even two old ones. Each level (besides four brief interludes) now has unique music averaging (as of <span class="number">2023-04-29</span>) eight minutes in length &ndash; so if players avoid dying, they&rsquo;ll hear very little repetition of music as they progress through the game. The OST&rsquo;s varied musical styles also make it an even more dynamic listening experience.</td>
           <td colspan="2"></td>
         </tr>
       </tbody>

@@ -7,18 +7,25 @@ Pages currently hosted here:
 * **[My discography](https://aaronfreed.github.io/aaronfreed/discography.html)**
 * **[Hathor&rsquo;s timeline in *Eternal X* 1.3 (major spoilers)](https://aaronfreed.github.io/aaronfreed/hathortimeline.html)** (please don&rsquo;t read this unless you&rsquo;ve completed a recent build of *Eternal X* 1.3: it spoils several of the game&rsquo;s major plot twists, and you&rsquo;ll lack the context to grasp their emotional significance)
 
-I&rsquo;ve contributed to the following (mostly) playable game mods:
+I&rsquo;ve contributed in varying degrees to the following (mostly) playable game mods. (Dates refer to my involvement with each project rather than its entire development cycle, though in a few cases these are identical.) See the *Marathon* soundtracks page above for links to soundtracks.
 
 * ***[Eternal X](http://eternal.bungie.org/)*** (2018-present): maps, music, sound, writing, scripting, graphics, soundtrack (re)mastering, codirector *(alongside **pfhorrest**, for versions 1.2.1 and later)*
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kiy7CaniLiZSRi-5P-SKEN)
    * This scenario remains under active development; a final release of version 1.3 is still forthcoming.
-* ***[Apotheosis X](https://simplici7y.com/items/apotheosis-x-5)*** (2020-2023): sound, scripting
+* ***[Apotheosis X](https://simplici7y.com/items/apotheosis-x-5)*** (2020-2023): sound, scripting, testing
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6mOBZaoKUAOqDsfuv-RIneq)
    * Further updates of *Apotheosis X* have not been ruled out but are not currently under active development.
 * ***[Dungeons Presents Hellpak Vol. 1: Not Recommended by Doctors](https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors)*** (2020-present): maps, scripting, soundtrack mastering, writing, graphics, bug fix releases
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kcfNGN3zh0BcsyaLRFkB0k)
    * [Discord server](https://discord.gg/DTMvjFqtTA)
    * This is an iteration of creator tbcr&rsquo;s long-running *Dungeons* show, hence its full title. One further bug fix update for this scenario is still planned, but I&rsquo;m burned out on updating it, so I can&rsquo;t say when it&rsquo;ll appear.
+* ***[Trojan]*** (2020): sound remastering, soundtrack remastering
+   * There are multiple versions of this game for Aleph One:
+      * [[https://simplici7y.com/items/marathon-trojan/ The first]] is a direct conversion of the original game files to Aleph One format by Shappie, which which treellama and I assisted. I did not directly create any content involved with this release.
+      * [[https://hhas01.itch.io/trojan-se The second]] is a more complicated conversion of the original game files by original creator Hamish Sanderson with some added extras, including my remastered music and sounds. This, unfortunately, does not run on current versions of Aleph One, but you can probably at least use the remastered music and sounds with Shappie&rsquo;s conversion above.
+* ***[Marathon Phoenix](https://simplici7y.com/items/marathon-phoenix-2/)*** (2020, tangentially): soundtrack remastering
+   * [https://www.youtube.com/playlist?list=PL-_EnUuI9PUoIncYlqgWainfOUoZAXhCY](Creator RyokoTK&rsquo;s gameplay and commentary)
+   * [https://www.youtube.com/playlist?list=PLoysJW6pXQ6k2XxgTocOm9kxC-y6jXAZI](Additional gameplay by me and others)
 
 I&rsquo;m also working on several forthcoming mods:
 
@@ -40,7 +47,8 @@ I&rsquo;m also working on several forthcoming mods:
 * ***Marathon Chronicles*** (1997-present, in progress): maps, writing, sound, music, graphics, soundtrack mastering, director
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6k1ExcIEZMIOWc9wfgIkYmL)
    * [Most recent public release](https://drive.google.com/open?id=1BtHg2LzQBth25hxB-AURAs8um3yyCaTE), which is now a few years old. I&rsquo;ll release a current build after we release *Tempus Irae Redux*, since *Chronicles* incorporates many of its textures; out of respect for James&rsquo; phenomenal efforts on *Tempus Irae* and *Redux*, I will not be releasing them in any form ahead of *Redux* itself.
-   * *Chronicles* is planned to be a sort of grand finale to a loose arc between the fan games *Rubicon*, *Eternal X*, *Phoenix*, *Where Monsters Are in Dreams* (listed in original release order rather than in-universe chronological order). It is planned to resolve Hathor&rsquo;s story, to address some ramifications of *Rubicon*&rsquo;s story, and to resolve the ramifications of the conflict revealed towards the end of *Eternal*. However, despite its having technically been in development for nearly two-thirds of my life, it&rsquo;s probably less than half complete. I plan for its second half to be fairly atypical for *Marathon* gameplay, with perhaps dozens of interconnected levels featuring nonlinear objectives and items that enable players to progress in several different ways; they&rsquo;ll be able to obtain these in nearly any order, meaning its objectives will have several possible solutions. However, none of this is implemented yet, and *Chronicles* is currently on the backburner while I help to finish several of the above projects.
+   * *Chronicles* is planned to be a sort of grand finale to a loose arc between the fan games *Rubicon*, *Eternal X*, *Phoenix*, *Where Monsters Are in Dreams* (listed in original release order rather than in-universe chronological order). It is planned to resolve Hathor&rsquo;s story, to address some ramifications of *Rubicon*&rsquo;s story, and to resolve the ramifications of the conflict revealed towards the end of *Eternal*.
+     However, despite its having technically been in development for nearly two-thirds of my life, it&rsquo;s probably less than half complete. I plan for its second half to be fairly atypical for *Marathon* gameplay, with perhaps dozens of interconnected levels featuring nonlinear objectives and items that enable players to progress in several different ways; they&rsquo;ll be able to obtain these in nearly any order, meaning its objectives will have several possible solutions. None of this is implemented yet, though, and *Chronicles* is currently on the backburner at least until *Tempus Irae Redux* is complete.
 
 In case that wasn&rsquo;t enough, I also run a **[YouTube channel](https://youtube.com/@MarathonVidmaster)**.
 

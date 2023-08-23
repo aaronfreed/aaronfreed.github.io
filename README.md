@@ -21,7 +21,7 @@ I&rsquo;ve contributed in varying degrees to the following (mostly) playable gam
    * This is an iteration of creator tbcr&rsquo;s long-running *Dungeons* show, hence its full title. One further bug fix update for this scenario is still planned, but I&rsquo;m burned out on updating it, so I can&rsquo;t say when it&rsquo;ll appear.
 * ***Trojan*** (2020-2021): sound remastering, soundtrack remastering
    * There are multiple versions of this game for Aleph One:
-      * [The first]([https://simplici7y.com/items/marathon-trojan/) is a direct conversion of the original game files to Aleph One format by Shappie, which which treellama and I assisted. I did not directly create any content involved with this release.
+      * [The first](https://simplici7y.com/items/marathon-trojan/) is a direct conversion of the original game files to Aleph One format by Shappie, which which treellama and I assisted. I did not directly create any content involved with this release.
       * [The second](https://hhas01.itch.io/trojan-se) is a more complicated conversion of the original game files by original creator Hamish Sanderson with some added extras, including my remastered music and sounds. This, unfortunately, does not run on current versions of Aleph One, but you can probably at least use the remastered music and sounds with Shappie&rsquo;s conversion above.
 * ***[Marathon Phoenix](https://simplici7y.com/items/marathon-phoenix-2/)*** (2020, tangentially): soundtrack remastering
    * [Creator RyokoTK&rsquo;s gameplay and commentary](https://www.youtube.com/playlist?list=PL-_EnUuI9PUoIncYlqgWainfOUoZAXhCY)

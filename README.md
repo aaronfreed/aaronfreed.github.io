@@ -1,4 +1,4 @@
-<span class="main">I&rsquo;m a political science and cybersecurity major from Sarasota, FL. Amateur game development, music creation and (re)mastering, and writing consume much of my spare time.
+<div class="main">I&rsquo;m a political science and cybersecurity major from Sarasota, FL. Amateur game development, music creation and (re)mastering, and writing consume much of my spare time.
 
 Pages currently hosted here:
 
@@ -79,4 +79,4 @@ You can contact me on Discord at **@Aaron#6608** or **@420aaron69** (I can&rsquo
 
 I&rsquo;m also a member of **[last.fm](http://last.fm/user/Cassandra-Leo)**, **[Rate Your Music](https://rateyourmusic.com/~Cassandra_Leo)**, and several other websites that I check even less often than I check my email; however, those interested in my musical influences may find them enlightening.
 
-More to come when I feel like updating this further.</span>
+More to come when I feel like updating this further.</div>

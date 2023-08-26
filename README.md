@@ -1,4 +1,4 @@
-I&rsquo;m a political science and cybersecurity major from Sarasota, FL. Amateur game development, music creation and (re)mastering, and writing consume much of my spare time.
+<span class="main">I&rsquo;m a political science and cybersecurity major from Sarasota, FL. Amateur game development, music creation and (re)mastering, and writing consume much of my spare time.
 
 Pages currently hosted here:
 
@@ -21,8 +21,8 @@ I&rsquo;ve contributed in varying degrees to the following (mostly) playable gam
    * This is an iteration of creator tbcr&rsquo;s long-running *Dungeons* show, hence its full title. One further bug fix update for this scenario is still planned, but I&rsquo;m burned out on updating it, so I can&rsquo;t say when it&rsquo;ll appear.
 * ***Trojan*** (2020-2021): sound remastering, soundtrack remastering
    * There are multiple versions of this game for Aleph One:
-      * [The first](https://simplici7y.com/items/marathon-trojan/) is a direct conversion of the original game files to Aleph One format by Shappie, which which treellama and I assisted. I did not directly create any content involved with this release.
-      * [The second](https://hhas01.itch.io/trojan-se) is a more complicated conversion of the original game files by original creator Hamish Sanderson with some added extras, including my remastered music and sounds. This, unfortunately, does not run on current versions of Aleph One, but you can probably at least use the remastered music and sounds with Shappie&rsquo;s conversion above.
+      * [The first](https://simplici7y.com/items/marathon-trojan/) is a direct conversion of the original game files to Aleph One format by Shappie, with which treellama and I assisted. I did not directly create any content involved with this release.
+      * [The second](https://hhas01.itch.io/trojan-se) is a more complicated conversion of the original game files by original creator Hamish Sanderson with some added extras, including my remastered music and sounds. This, unfortunately, does not run on current versions of Aleph One, but you can probably use the remastered music and sounds with Shappie&rsquo;s conversion above.
 * ***[Marathon Phoenix](https://simplici7y.com/items/marathon-phoenix-2/)*** (2020, tangentially): soundtrack remastering
    * [Creator RyokoTK&rsquo;s gameplay and commentary](https://www.youtube.com/playlist?list=PL-_EnUuI9PUoIncYlqgWainfOUoZAXhCY)
    * [Additional gameplay by me and others](https://www.youtube.com/playlist?list=PLoysJW6pXQ6k2XxgTocOm9kxC-y6jXAZI)
@@ -75,8 +75,8 @@ I have at least slightly more than cursory knowledge of the following languages 
 
 My knowledge of several of these languages is still only *slightly* more than cursory, but in some cases (e.g., Rust, OpenGL, and C++), it is improving. (In C++&rsquo;s case, this is quite begrudging, as every time I find myself writing C++ code, I find myself wishing I were writing Rust or Lua instead.)
 
-You can contact me on Discord at **@Aaron#6608** or **@420aaron69** (I can&rsquo;t stand the removal of username discriminators on Discord, so I just memed on the new username system). We&rsquo;ll need a server in common if you don&rsquo;t want to wait for me to check my message requests; the **[*Hellpak* Discord](https://discord.gg/DTMvjFqtTA)** and **[*Marathon* Discord](https://discord.gg/NmE66Mhq2a)** are two of your best bets. I don&rsquo;t check email often enough for that to be a reliable form of contact.
+You can contact me on Discord at **@Aaron#6608** or **@420aaron69** (I can&rsquo;t stand the removal of username discriminators on Discord, so I just memed on the new username system). We&rsquo;ll need a server in common if you don&rsquo;t want to wait for me to check my message requests; the **[*Hellpak* Discord](https://discord.gg/DTMvjFqtTA)** and **[*Marathon* Discord](https://discord.gg/NmE66Mhq2a)** are two of your best bets. You can also contact me through my **[YouTube channel](https://youtube.com/@MarathonVidmaster)**. I don&rsquo;t check email often enough for that to be a reliable form of contact.
 
 I&rsquo;m also a member of **[last.fm](http://last.fm/user/Cassandra-Leo)**, **[Rate Your Music](https://rateyourmusic.com/~Cassandra_Leo)**, and several other websites that I check even less often than I check my email; however, those interested in my musical influences may find them enlightening.
 
-More to come when I feel like updating this further.
+More to come when I feel like updating this further.</span>

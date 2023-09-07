@@ -1,0 +1,389 @@
+<html>
+	<head>
+	<title>Aaron Freed&rsquo;s Portfolio</title>
+		<style>
+				@font-face {
+					font-family: 'Numberwang';
+					src: local('Corbel Light'),
+					local(Avenir),
+					local('Calibri Light');
+					unicode-range: U+30-39;
+					font-weight: 100;
+				}
+				@font-face {
+					font-family: 'Numberwang Medium';
+					src: local('Corbel'),
+					local(Avenir),
+					local('Calibri');
+					unicode-range: U+30-39;
+				}
+			body {font-family: Numberwang, Candara, Corbel, Avenir, Calibri, "Trebuchet MS", sans-serif; width: 800px; text-align: justify; margin: auto; font-weight: 100; font-stretch: 100%;}
+			a {text-decoration: none;}
+			a:link {color: #09f; font-weight: 500;}
+			a:visited {color: #c0c; font-weight: 500;}
+			a:link:hover, a:visited:hover {text-decoration: underline; color: #c60; font-weight: 500;}
+			a:link:active, a:visited:active {color: #090; font-weight: 500;}
+			a:link>strong {font-weight: 700;}
+			strong {font-weight: 500;}
+			strong strong {font-weight: 700;}
+			h1 {font-weight: 700; color: #2F5496; font-size: 30px; margin-top: 24px; margin-bottom: 8px;}
+			h2 {font-weight: 700; color: #2F5496; font-size: 24px; margin-top: 24px; margin-bottom: 8px;}
+			h3 {font-weight: 700; color: #2F5496; font-size: 18px; margin-top: 24px; margin-bottom: 8px;}
+			h2.first, h3.first {margin-top: 8px;}
+			h4 {font-weight: 500; color: #2F5496; font-size: 16px; margin-top: 0px; margin-bottom: 8px;}
+			p, blockquote {margin-top: 12px; margin-bottom: 6px;}
+			hr {margin-top: 24px; margin-bottom: 24px;}
+			div {margin-top: 8px; margin-bottom: 8px;}
+			li {margin-top: 8px; margin-bottom: 8px;}
+			ul {margin-top: 16px; margin-bottom: 4px; padding-left: 30px; margin-left; 30px;}
+			ul > li > ul {margin-top: 4px;}
+			ol {margin-top: 16px; margin-bottom: 4px; padding-left: 30px; margin-left; 30px;}
+			ol li::marker {font-family: "Corbel", "Avenir", "Calibri", monospace;}
+			/*ol {padding-left: 30px; margin-left; 30px;}
+			ol li:before {font-family: "Corbel", "Avenir", "Calibri", monospace; font-weight: bold;}*/
+			ol.toc, .toc ol {counter-reset: item; margin-top: 0px; margin-bottom: 0px;}
+			.toc li {display: block; margin-top: 4px; margin-bottom: 4px;}
+			.toc li:before {content: "[" counters(item, ".")"] "; counter-increment: item; color: #004c80;}
+			ol.toc > li > ol > li:before {content: "(" counters(item, ".")") "; counter-increment: item; color: #004c80;}
+			ol.toc > li {font-weight: 500;}
+			ol.toc > li:before {font-weight: 500; font-family: "Numberwang Medium", Candara, Corbel, Avenir, Calibri;}
+			ol.toc > li > ol > li, ol.toc > li > ol > li > a:link {font-weight: 100;}
+			p {margin-top: 8px; margin-bottom: 8px;}
+			.image {margin-top: 12px; margin-bottom: 8px; text-align: center;}
+			.sectionbreak, p.sectionbreak {margin-top: 16px; margin-bottom: 16px; font-size: 13px; text-align: center;}
+			table {border-collapse: collapse; margin: auto;}
+			td, th {padding-left: 12px; padding-right: 12px; padding-top: 4px; padding-bottom: 4px;}
+			tbody:nth-child(even) tr:nth-child(even) {background-color: #eff0ff;}
+			tbody:nth-child(even) tr:nth-child(odd) {background-color: #fff;}
+			tbody:nth-child(even) tr:nth-child(even) .hidden {color: #eff0ff;}
+			tbody:nth-child(even) tr:nth-child(odd) .hidden {color: #fff;}
+			thead {font-weight: bold; background-color: #eff0ff;}
+			.endnotes td, .endnotes th {padding: 4px; vertical-align: top;}
+			.integer {font-family: "Corbel", "Avenir", "Calibri", monospace; text-align: right;}
+			.decimal {font-family: "Corbel", "Avenir", "Calibri", monospace;}
+			.centred {text-align: center; margin-top: 16px; margin-bottom: 24px;}
+			.centred a {font-weight: 100;}
+			.right {text-align: right;}
+			pre {font-size: 115%;}
+			code {font-weight: bold; font-size: 115%;}
+			.dotted {border-bottom: 1px dotted;}
+			h1 .light, h2 .light, h3 .light {font-weight: 400; font-size: 90%;}
+			h1 .light .decimal, h2 .light .decimal, h3 .light .decimal {font-weight: 400;}
+			.light strong {font-weight: 500;}
+			.light .integer strong, .light .decimal strong {font-weight: 500;}
+			.light {font-weight: 100;}
+		</style>
+	</head>
+	<body>
+		<h1>Aaron Freed&rsquo;s Creative Portfolio</h1>
+		<h2 title="intro" class="first">A Brief Introductory Note</h2>
+
+			<p>This is a portfolio of my creative work, either with others or solo. Much, though by no means all, relates to Bungie&rsquo;s <em>Marathon</em> trilogy, a series I&rsquo;ve been modding for since 1997. Much also relates to sound in some way, as not merely am I formally trained in performing, composing, and arranging music, but I&rsquo;ve learned numerous aspects of music and sound production from spending so much time using computers for music composition.</p>
+
+			<p>I&rsquo;m probably one of the most prolific modders in <em>Marathon</em>&rsquo;s history, with credits in five major published mods ranging from &ldquo;remastered the music&rdquo; (<em>Phoenix</em>) to &ldquo;co-led the scenario and contributed to every aspect of its development&rdquo; (<em>Eternal</em>). I&rsquo;ve remastered the 400+ sounds in the <em>Marathon</em> trilogy, plus hundreds of sounds from <em>Pathways into Darkness</em> and several major <em>Marathon</em> mods. Some of these were in especially rough shape (especially <em>Pathways</em>&rsquo;) and improved miraculously, while others already sounded pretty good and experienced only minor improvements. I also have an ongoing project to locate the CD-quality sources of <em>Marathon</em> sounds and remix them from their sources.</p>
+
+			<p>My other projects include a mapmaking guide for Aleph One, a <em>Marathon</em> Vidmaster&rsquo;s Challenge YouTube channel, a <em>Marathon</em> music repository, and a catalog of links to <em>Marathon</em> content. You may also be interested in:</p>
+
+				<ul style="margin-top: 8px;">
+					<li>This <a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6kTA-DquUYGZ9LNyuaW0com">YouTube playlist</a> of highlights from projects I&rsquo;ve worked on</li>
+					<li>My <a href="https://aaronfreed.github.io/aaronfreed/discography.html">discography page</a>, featuring free downloads of:
+						<ul>
+							<li>Nearly all music I&rsquo;ve released as a musician, composer, or arranger</li>
+							<li>Several albums I&rsquo;ve mastered or remastered</li>
+						</ul>
+					</li>
+				</ul>
+
+			<p><strong>Note:</strong> I listed the dates when I worked on a project, not its entire development cycle (e.g., I remastered <em>Phoenix</em>&rsquo;s music in 2020, but it&rsquo;s been in development since no later than 2010). Partly this is because the latter didn&rsquo;t seem as relevant for the purposes of this list, and partly it&rsquo;s because I didn&rsquo;t always know those dates.</p>
+
+		<h2 title="contents">Contents</h2>
+			<ol class="toc">
+				<li><a href="#intro">A Brief Introductory Note</a></li>
+				<li><a href="#contents">Contents</a></li>
+				<li><a href="#majorpublished">Major Game Credits (Published)</a>
+					<ol>
+						<li><a href="#eternal">Eternal X</a></li>
+						<li><a href="#apotheosis">Apotheosis X</a></li>
+						<li><a href="#hellpak"><em>Dungeons</em> Presents <em>Hellpak</em>: Vol. 1 &ndash; Not Recommended by Doctors</a></li>
+					</ol>
+				</li>
+				<li><a href="#majorunpublished">Major Game Credits (Unpublished/Incomplete)</a>
+					<ol>
+						<li><a href="#tempus">Tempus Irae Redux</a></li>
+						<li><a href="#wmaid">Where Monsters Are in Dreams</a></li>
+						<li><a href="#rtm">Return to Marathon Chapter 2</a></li>
+						<li><a href="#chronicles">Marathon Chronicles</a></li>
+						<li><a href="#hellpak2"><em>Dungeons</em> Presents <em>Hellpak</em>: Vol. 2 &ndash; An Exercise in Questionable Taste</a></li>
+					</ol>
+				</li>
+				<li><a href="#otherpublished">Other Game Credits (Published)</a>
+					<ol>
+						<li><a href="#trojan">Trojan Standalone Edition</a></li>
+						<li><a href="#phoenix">Marathon Phoenix SE</a></li>
+					</ol>
+				</li>
+				<li><a href="#discography">Selected Discography</a>
+					<ol>
+						<li><a href="#selectedworks">Selected Works, 2014-2023</a></li>
+						<li><a href="#seeyoustarside">See You Starside: The <em>Marathon</em> Soundtrack Reimagined</a></li>
+						<li><a href="#demos">Demos 2014</a></li>
+						<li><a href="#compositions">Compositions 1993-1997</a></li>
+						<li><a href="#remixes"><em>Marathon</em> Remixes (1997)</a></li>
+					</ol>
+				</li>
+				<li><a href="#other">Other <em>Marathon</em> Projects</a>
+					<ol>
+						<li><a href="#youtube">@MarathonVidmaster YouTube channel</a></li>
+						<li><a href="#mapmaking">Aleph One Mapmaking Guide</a></li>
+						<li><a href="#soundtracks"><em>Marathon</em> Remixes &amp; Fan Soundtracks</a></li>
+						<li><a href="#remasteredsounds">Remastered <em>Pathways into Darkness</em> & <em>Marathon</em> Trilogy Sounds</a></li>
+					</ol>
+				</li>
+			</ol>
+
+		<h2 title="majorpublished">Major Game Credits (Published)</h2>
+		<h3 title="eternal" class="first">Eternal X <span class="light">(<span class="decimal">2018</span>-)</span></h3>
+		<h4><span class="light">Website:</span> <a href="https://eternal.bungie.org/" target="_blank">eternal.bungie.org</a></h4>
+		<h4><span class="light">Reviews:</span> <a href="https://simplici7y.com/items/eternal-x/" target="_blank">simplici<span class="decimal">7</span>y.com/items/eternal-x</a></h4>
+			<ul>
+				<li>One of the <em>Marathon</em> trilogy&rsquo;s biggest, best-known, &amp; most acclaimed third-party scenarios</li>
+				<li>Codirector alongside Forrest Cameranesi; have been <em>de facto</em> project leader since 2020</li>
+				<li>Additional credits include music, sound design, level design, writing, Lua scripting, &amp; graphics</li>
+				<li>Personally remixed or remastered every sound effect in the game in iZotope RX Advanced</li>
+				<li>Arranged over eighty minutes of music for the soundtrack, collaborated on an additional thirty, &amp; pieced together multiple composers&rsquo; arrangements into suites averaging over eight minutes. OST runs for nearly seven hours</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="apotheosis">Apotheosis X <span class="light">(<span class="decimal">2020</span>-<span class="decimal">2023</span>)</span></h3>
+		<h4><span class="light">Download:</span> <a href="https://www.moddb.com/mods/apotheosis-x" target="_blank">moddb.com/mods/apotheosis-x</a></h4>
+		<h4><span class="light">Reviews & Screenshots:</span> <a href="https://simplici7y.com/items/apotheosis-x-5/">simplici<span class="decimal">7</span>y.com/items/apotheosis-<span class="decimal">x</span>-5</a></h4>
+		<h4><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6mOBZaoKUAOqDsfuv-RIneq">YouTube playlist</a></h4>
+			<ul>
+				<li>Wrote most of the scenario&rsquo;s Lua &ndash; first major <em>Marathon</em> scenario to use any form of dynamic music</li>
+				<li>My remastered <em>Marathon Infinity</em> sounds formed the backbone of scenario&rsquo;s sound design</li>
+				<li>Worked with project director hypersleep on remastering weapon sounds for 1.1 update</li>
+				<li>Featured in <em>PC Gamer</em> (<a href="https://pcgamer.com/marathon-mod-apotheosis-x" target="_blank">pcgamer.com/marathon-mod-apotheosis-x</a>)
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="hellpak"><em>Dungeons</em> Presents <em>Hellpak</em>: Vol. <span class="decimal">1</span> &ndash; Not Recommended by Doctors <span class="light">(<span class="decimal">2020</span>-)</span></h3>
+		<h4><span class="light">Download:</span> <a href="https://www.simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors" target="_blank">simplici7y.com/items/dungeons-hellpak-vol-<span class="decimal">1</span>-not-recommended-by-doctors</a></h4>
+		<h4><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6kcfNGN3zh0BcsyaLRFkB0k" target="_blank">YouTube playlist</a><span class="light"> (including soundtrack video & complete playthrough)</span></h4>
+		<h4><a href="https://1drv.ms/u/s!AuD0MykSsmaRnlBlixD0iXLX3NNO?e=r8YAh5" target="_blank">The soundtrack in FLAC</a></h4>
+			<ul>
+				<li>Mastered soundtrack &ndash; corrected audio flaws, edited tracks for pacing, helped with sequencing, made OST video</li>
+				<li>Wrote all the project&rsquo;s Lua</li>
+				<li>Maintained the master scenario directory for the latter part of its development cycle</li>
+				<li>Partly or solely responsible for five levels, several terminals, the scenario documentation, &amp; AI art prompts</li>
+				<li>Still working on bug fixes (we couldn&rsquo;t find testers due to the project&rsquo;s difficulty, so we missed a lot of bugs)</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+
+		<h2 title="majorunpublished">Major Game Credits (Unpublished/Incomplete)</h2>
+		<h3 title="tempus" class="first">Tempus Irae Redux <span class="light">(<span class="decimal">2020</span>-)</span></h3>
+		<h4><span class="light">Website:</span> <a href="https://nardo.bungie.org/" target="_blank">nardo.bungie.org</a></h4>
+		<h4><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6kpii7XfbzW65NP6IZxbK4n" target="_blank">YouTube playlist</a></h4>
+			<ul>
+				<li>Reimagining of one of <em>Marathon Infinity</em>&rsquo;s first &amp; best major scenarios with which I&rsquo;m assisting one of its original creators, James Hastings-Trew (the winner of Bungie&rsquo;s mapmaking contest)</li>
+				<li>Credits include sound, level design (including a new secret level, &ldquo;Il grande silenzio&rdquo;), music, soundtrack mastering, scripting, writing, &amp; fixes to innumerable problems ranging from game-breaking bugs to misaligned textures</li>
+				<li>Nardo website may not have been updated to mention <em>Redux</em> yet</li>
+				<li>Estimated completion date: late <span class="decimal">2023</span> (warning: My estimates are notoriously optimistic)</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="wmaid">Where Monsters Are in Dreams <span class="light">(<span class="decimal">2019</span>-)</span></h3>
+		<h4><span class="light">Website:</span> <a href="http://bighouse.bungie.org/wmaid" target="_blank">bighouse.bungie.org/wmaid</a></h4>
+		<h4><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6kB_7qLbTdgia1hiNOoYmEz">YouTube playlist</a></h4>
+			<ul>
+				<li>Codirector alongside Blayne Scott, thedoc, CryoS, &amp; hypersleep</li>
+				<li>Other credits include sound, level design, story, &amp; Lua</li>
+				<li><em>Eternal</em> sequel &amp; Rubicon prequel</li>
+				<li>Development began ca. <span class="decimal">2001</span>; has been completely overhauled several times</li>
+				<li>YouTube videos are already two years old &ndash; many graphics &amp; levels seen in them have since been replaced</li>
+				<li>Estimated completion date: late <span class="decimal">2024</span> or early <span class="decimal">2025</span></li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="rtm"><em>Return to Marathon</em> Chapter <span class="decimal">2</span> <span class="light">(<span class="decimal">2023</span>-)</span></h3>
+		<h4><span class="light">Website:</span> <a href="http://bighouse.bungie.org/rtm" target="_blank">bighouse.bungie.org/rtm</a></h4>
+		<h4><span class="light">Chapter 1:</span> <a href="https://citadel.lhowon.org/scenarios/return-to-marathon" target="_blank">citadel.lhowon.org/scenarios/return-to-marathon</a></h4>
+			<ul>
+				<li>To be clear, I didn&rsquo;t work on chapter 1, but chapter 2 &amp; onward will continue in the same style</li>
+				<li>No new assets to show yet: development only recently resumed after a hiatus of over 20 years</li>
+				<li>Big House site may not yet be updated to mention project&rsquo;s revival</li>
+				<li>Too early to estimate completion date yet</li>
+				<li>Planned roles include audio, soundtrack, Lua, story, &amp; level design</li>
+</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="chronicles"><em>Marathon Chronicles</em> <span class="light">(<span class="decimal">1997</span>-)</span></h3>
+		<h4><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6k1ExcIEZMIOWc9wfgIkYmL" target="_blank">YouTube playlist</a></h4>
+		<h4><a href="https://drive.google.com/open?id=1BtHg2LzQBth25hxB-AURAs8um3yyCaTE" target="_blank">Latest public build</a> <span class="light">(which is still a few years old)</span></h4>
+			<ul>
+				<li>Scenario I&rsquo;ve been developing off &amp; on since eighth grade (currently &ldquo;off&rdquo; until I complete other projects)</li>
+				<li>I&rsquo;m the project director &amp; have worked on maps, sounds, music, graphics, writing, scripting, &amp; more</li>
+				<li>Planned to be a sequel to both <em>Eternal</em> &amp; <em>Rubicon</em> &amp; to wrap up several unresolved plot elements of both
+				<li>Love letter to the trilogy &amp; several major fan scenarios, including hopefully dead-on <em>Tempus Irae</em> pastiches
+				<li>A build from a few years ago is linked from the above YouTube playlist. Much of its contents are far below my current capabilities (some of it is over two decades old) &amp; will likely be completely remade as time permits</li>
+				<li>Estimated completion date: late 2020s</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="hellpak2"><em>Dungeons</em> Presents <em>Hellpak</em>: Vol. <span class="decimal">2</em> &ndash; An Exercise in Questionable Taste</em> <span class="light">(<span class="decimal">2023</span>-)</span></h3>
+			<ul>
+				<li>Again doing level design, Lua, soundtrack mastering/video, writing, &amp; scenario documentation</li>
+				<li>Have also composed original tracks for the OST &amp; remixed tracks by other musicians</li>
+				<li>Estimated completion date: mid-2024</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+
+		<h2 title="otherpublished">Other Game Credits (Published)</h2>
+		<h3 title="trojan" class="first">Trojan Standalone Edition <span class="light">(<span class="decimal">2021</span>-<span class="decimal">2022</span>)</span></h3>
+		<h4><a href="https://hhas01.itch.io/trojan-se" target="_blank">hhas<span class="decimal">01</span>.itch.io/trojan-se</a></h4>
+			<ul>
+				<li>Standalone re-release of one of the most famous <em>Marathon <span class="decimal">1</span></em> total conversions with some added or revised content</li>
+				<li>Remastered all the game&rsquo;s sounds &amp; music</li>
+				<li>Several sounds remain quite rough, which was likely unavoidable unless I outright replaced them (which was outside the scope of what we aimed to do), but they&rsquo;re noticeable improvements over the originals</li>
+				<li>The music doesn&rsquo;t sound noticeably different, as it was already very dynamic</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="phoenix">Marathon Phoenix SE <span class="light">(<span class="decimal">2020</span>)</span></h3>
+		<h4><a href="https://simplici7y.com/items/marathon-phoenix-2" target="_blank">simplici<span class="decimal">7</span>y.com/items/marathon-phoenix-<span class="decimal">2</span></a></h4>
+			<ul>
+				<li>Remastered the soundtrack (note: my remaster of the title theme is not included with the game)</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+
+		<h2 title="discography">Selected Discography</h2>
+		<h4 class="first"><a href="https://aaronfreed.github.io/aaronfreed/discography.html" target="_blank">aaronfreed.github.io/aaronfreed/discography.html</a>
+
+		<h3 title="selectedworks">Selected Works, <span class="decimal">2014</span>-<span class="decimal">2023</span></h3>
+			<ul>
+				<li>A few of my favorite collaborations &amp; solo tracks I&rsquo;ve made in the last decade</li>
+				<li>Includes original compositions &amp; remixes of others&rsquo;s music</li>
+				<li>Some tracks are solo; some are collaborations with other artists</li>
+				<li>Includes liner notes with detailed credits and track-by-track commentary</li>
+			</ul>		
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="seeyoustarside">See You Starside: The <em>Marathon</em> Soundtrack Reimagined <span class="light">(released February <span class="decimal">4</span>, <span class="decimal">2023</span>)</span></h3>
+		<h4><a href="youtu.be/bRiDh3PziWU" target="_blank">youtu.be/bRiDh<span class="decimal">3</span>PziW</a></h4>
+			<ul>
+				<li>Completely new <em>Marathon</em> arrangements that nearly double the OST&rsquo;s length, often interweaving melodies from multiple tracks &amp; adding numerous new original melodies, most of which I wrote myself</li>
+				<li>Deliberately retro arrangement/production, with intricate, densely layered mixes that retain their dynamic range (album&rsquo;s TT Dynamic Range Meter score is DR13)</li>
+				<li>Main influences: &rsquo;70s progressive rock, &rsquo;80s pop, &rsquo;90s VGM</li>
+				<li>Secondary influences: blues, jazz, metal, classical, Baroque, choral music, ambient, post-rock, <em>kosmische musik</em>, electronica, disco</li>
+				<li>I made <em>See You Starside</em> entirely in GarageBand &amp; almost exclusively used GarageBand instruments; one of my goals was to show that it isn&rsquo;t necessary to spend a fortune to make music that sounds good.</li>
+				<li>I&rsquo;ve since made several variants using Logic Pro &amp; EastWest ComposerCloud+ instruments, which I&rsquo;m still refining</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="demos">Demos <span class="decimal">2014</span> <span class="light">(released November <span class="decimal">24</span>, <span class="decimal">2014</span>)</span></h3>
+			<ul>
+				<li>Competent piano demos of original material; Genesis, Nobuo Uematsu, &amp; Johann Pachelbel covers</li>
+				<li>All songs, including the covers, feature at least some improvisation</li>
+				<li>Last two tracks were somewhat successful attempts to learn jazz scales</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="compositions">Compositions <span class="decimal">1993</span>-<span class="decimal">1997</span> <span class="light">(released <span class="decimal">2008</span>)</span></h3>
+			<ul>
+				<li>While these are juvenilia, I remain proud of parts of them</li>
+				<li>I rearranged some segments in 2008, but most are as I arranged them in 1993-1997</li>
+				<li>The most conspicuous influences I can identify are Johann Sebastian Bach &amp; Pink Floyd, though I don&rsquo;t think I consciously modeled most of its compositions after any particular artist&rsquo;s style</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="remixes"><em>Marathon</em> Remixes <span class="light">(<span class="decimal">1997</span>)</span></h3>
+		<h4><a href="https://youtu.be/qVecMMHALOI" target="_blank">youtu.be/qVecMMHALOI</a></h4>
+			<ul>
+				<li>Much less sophisticated than See You Starside: imported into MIDI editor, added reverb &amp; panning, doubled up some tracks, reassigned voices, re-exported, saved as AIFF in QuickTime 2.5</li>
+				<li>Still interesting at times &ndash; &ldquo;Splash (Marathon)&rdquo;&rsquo;s main riff sounds especially cool due to how it alternates between stereo channels
+			</ul>
+
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+
+		<h2 title="other">Other <em>Marathon</em> Projects</h2>
+		<h3 title="youtube" class="first">@MarathonVidmaster YouTube channel <span class="light">(<span class="decimal">2018</span>-)</span></h3>
+		<h4><a href="https://www.youtube.com/@MarathonVidmaster" target="_blank">youtube.com/@MarathonVidmaster</a></h4>
+			<ul>
+				<li>Planned to encode the entire contents of Hamish Sinclair &amp; Jim Mitchell&rsquo;s Marathon Vidmasters&rsquo; Page</li>
+				<li>Never finished &ndash; plan to re-encode old films in 60 frames per second at 16:9 aspect ratio with treellama&rsquo;s Basic HUD</li>
+				<li>Have also posted films of third-party scenarios, new Vidmaster films, scenario previews, &amp; game soundtracks</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="mapmaking">Aleph One Mapmaking Guide <span class="light">(<span class="decimal">2023</span>-)</span></h4>
+		<h4><a href="https://aaronfreed.github.io/aaronfreed/mapmaking.html">aaronfreed.github.io/aaronfreed/mapmaking.html</a></h4>
+			<ul>
+				<li>No one had made a mapmaking guide in roughly a decade, so I wrote an (admittedly opinionated) guide detailing many pitfalls to mapmaking &amp; providing some solutions</li>
+				<li>Features include:
+					<ul>
+						<li>Weland setup guide</li>
+						<li>List of known sound sources</li>
+						<li>Link repositories for <em>Marathon</em> mapmaking content</li>
+					</ul>
+				</li>
+				<li>Remains work in progress &ndash; in particular, needs to be split up into multiple pages (some of the above categories belong on their own pages)</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="soundtracks"><em>Marathon</em> Remixes &amp; Fan Soundtracks <span class="light">(<span class="decimal">2023</span>-)</span></h3>
+		<h4><a href="https://aaronfreed.github.io/aaronfreed/soundtracks.html">aaronfreed.github.io/aaronfreed/soundtracks.html</a></h4>
+			<ul>
+				<li>A supplement to Dr Craig Hardgrove&rsquo;s page (<a href="http://www.themarathonmusic.com/" target="_blank">themarathonmusic.com</a>), which he is no longer updating</li>
+				<li>I may eventually add incomplete sets of remixes that I find especially noteworthy, but these are currently limited to complete projects, with exceptions for <em>Eternal</em> 1.3 (owing to its massive length) &amp; Tobacco &amp; Cannibal Whore Feast&rsquo;s remixes (since it&rsquo;s unlikely that they&rsquo;ll make any new ones)</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+
+		<h3 title="remasteredsounds">Remastered <em>Pathways into Darkness</em> & <em>Marathon</em> Trilogy Sounds <span class="light">(<span class="decimal">2020</span>)</span></h3>
+		<h4><a href="https://simplici7y.com/items/aleph-one-pathways-into-darkness-remastered-sounds/">simplici<span class="decimal">7</span>y.com/items/aleph-one-pathways-into-darkness-remastered-sounds</a></h4>
+		<h4><a href="https://simplici7y.com/items/marathon-1-remastered-sounds-2/">simplici<span class="decimal">7</span>y.com/items/marathon-<span class="decimal">1</span>-remastered-sounds-<span class="decimal">2</span></a></h4>
+		<h4><a href="https://simplici7y.com/items/remastered-sounds-for-marathon-infinity/" target="_blank">simplici<span class="decimal">7</span>y.com/items/remastered-sounds-for-marathon-infinity</a></h4>
+			<ul>
+				<li>Remastered to correct, as well as I could manage in 2020, flaws like digital clipping, hum, crackle, 8-bit dithering noise, &amp; low sample rate
+					<ul>
+						<li>Most of these flaws are impossible to correct perfectly, but they can be mitigated</li>
+						<li>Audio flaws with obvious artistic purposes (e.g., the VacBob sounds&rsquo; distortion and thin presence, which make them sound like they&rsquo;ve been transmitted over a cheap radio) were left intact</li>
+					</ul>
+				</li>
+				<li>The <em>Aleph One: Pathways into Darkness</em> sounds improved the most dramatically, as they were in the roughest shape to start with &ndash; they had 11 kHz sample rates, tons of 8-bit noise, & (in some cases) terrible hum</li>
+				<li>The <em>Marathon <span class="decimal">1</span></em> sounds, which had 22 kHz sample rates & plenty of 8-bit noise, also improved dramatically</li>
+				<li>I took a certain amount of artistic license in &ldquo;upmastering&rdquo; sounds to compensate for low sample rates, which may take some getting used to. I describe my process for doing so in detail in a PDF with the <em>Marathon Infinity</em> sounds; I also reproduced some related info on my <a href="https://aaronfreed.github.io/aaronfreed/soundtracks.html#remasterinfo">soundtracks page</a>
+					<ul>
+						<li>My ideal solution would be to keep the 44.1 kHz sample rate &amp; provide a low pass option for those who dislike the upmastering, but this currently isn&rsquo;t an option in Aleph One</li>
+						<li>Aleph One 1.7 will update the sound engine to OpenAL &amp; change the &ldquo;8-bit sounds&rdquo; option from &ldquo;read sounds from the 8-bit slots &amp; restrict sound output to 8 bits&rdquo; to &ldquo;read sounds from the 8-bit slots &amp; do not restrict the output bitrate&rdquo;. Once it does so, I may re-release these with their current contents in the 16-bit slots &amp; low-passed versions in the 8-bit slots. (&ldquo;8-bit slot&rdquo; is only a name; it can contain 16-bit sounds)</li>
+					</ul>
+				</li>
+				<li>I intend to upload remixed <em>Marathon Infinity</em> sounds once I locate all the sources. For these, I might place stereo versions in the 16-bit slots &amp; mono versions in the 8-bit slots
+					<ul>
+						<li><em>N.B.</em> I&rsquo;m using <em>remix</em> and <em>remaster</em> much as they&rsquo;re used in music production: <em>remastering</em> is modifying a finished master; <em>remixing</em> is returning to individual instrument tracks to make a completely new mix. Remixes can be very faithful (e.g., Steven Wilson&rsquo;s), but they&rsquo;re distinct from remasters. My remasters modify the sounds that shipped with the games; my remixes return to the original recordings &amp; reimplement most of Bungie&rsquo;s changes to the sounds from scratch. (<em>Most</em> &ndash; I hate digital clipping.)</li>
+			</ul>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> | <a href="#contents">Contents</a></p>
+</body>
+</html>

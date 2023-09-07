@@ -2,9 +2,10 @@ I&rsquo;m a political science and cybersecurity major from Sarasota, FL. Amateur
 
 Pages currently hosted here:
 
-* **[*Marathon* / Aleph One content creation guide](https://aaronfreed.github.io/aaronfreed/mapmaking.html)**
-* **[*Marathon* soundtracks](https://aaronfreed.github.io/aaronfreed/soundtracks.html)**
-* **[My discography](https://aaronfreed.github.io/aaronfreed/discography.html)**
+* **[*Marathon* / Aleph One content creation guide](https://aaronfreed.github.io/mapmaking.html)**
+* **[*Marathon* soundtracks](https://aaronfreed.github.io/soundtracks.html)**
+* **[My discography](https://aaronfreed.github.io/discography.html)**
+* **[My portfolio](https://aaronfreed.github.io/portfolio.html)**
 * **[Hathor&rsquo;s timeline in *Eternal X* 1.3 (major spoilers)](https://aaronfreed.github.io/aaronfreed/hathortimeline.html)** (please don&rsquo;t read this unless you&rsquo;ve completed a recent build of *Eternal X* 1.3: it spoils several of the game&rsquo;s major plot twists, and you&rsquo;ll lack the context to grasp their emotional significance)
 
 I&rsquo;ve contributed in varying degrees to the following (mostly) playable game mods. (Dates refer to my involvement with each project rather than its entire development cycle, though in a few cases these are identical.) See the *Marathon* soundtracks page above for links to soundtracks.

@@ -3,15 +3,32 @@
 <head>
   <title>Marathon Mapmaking: Setup, Snafus, & Solutions</title>
   <style>
+    @font-face {
+        font-family: 'Numberwang';
+        src: local('Corbel Light'),
+        local(Avenir),
+        local('Calibri Light');
+        unicode-range: U+30-39;
+    }
+    @font-face {
+        font-family: 'Numberwang Medium';
+        src: local('Corbel'),
+        local(Avenir),
+        local('Calibri');
+        unicode-range: U+30-39;
+    }
     a {text-decoration: none;}
-    a:link {color: #09f;}
-    a:visited {color: #c0c;}
+    a:link {color: #09f; font-weight: 500;}
+    a:visited {color: #c0c; font-weight: 500;}
     a:link:hover, a:visited:hover {text-decoration: underline; color: #c60;}
     a:link:active, a:visited:active {color: #090;}
-    body {width: 800px; font-family: "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif; text-align: justify; margin: auto; font-weight: 400; font-stretch: 100%;}
-    h1 {margin-top: 12px; margin-bottom: 12px;}
-    h2 {margin-top: 12px; margin-bottom: 12px;}
-    h3 {margin-top: 12px; margin-bottom: 12px;}
+    a:link>strong, a:visited>strong {font-weight: 500;}
+    strong {font-weight: 500;}
+    strong strong {font-weight: 700;}
+    body {width: 800px; font-family: Numberwang, "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif; text-align: justify; margin: auto; font-weight: 100; font-stretch: 100%;}
+    h1 {margin-top: 12px; margin-bottom: 12px; font-weight: 700; color: #2F5496;}
+    h2 {margin-top: 12px; margin-bottom: 12px; font-weight: 700; color: #2F5496;}
+    h3 {margin-top: 12px; margin-bottom: 12px; font-weight: 700; color: #2F5496;}
     div {margin-top: 8px; margin-bottom: 8px;}
     li {margin-top: 8px; margin-bottom: 8px;}
     ul {margin-top: 4px; margin-bottom: 4px; padding-left: 30px; margin-left; 30px;}
@@ -19,9 +36,18 @@
     ol li::marker {font-family: "Corbel", "Avenir", "Calibri", monospace;}
     /*ol {padding-left: 30px; margin-left; 30px;}
     ol li:before {font-family: "Corbel", "Avenir", "Calibri", monospace; font-weight: bold;}*/
-    .toc li {display: block; margin-top: 4px; margin-bottom: 4px;}
-    .toc ol {counter-reset: item; margin-top: 0px; margin-bottom: 0px;}
-    .toc li:before {content: counters(item, ".")" "; counter-increment: item; font-family: "Corbel", "Avenir", "Calibri", monospace;}
+    ol.toc, .toc ol {counter-reset: item; margin-top: 0px; margin-bottom: 0px;}
+    .toc li {display: block; margin-top: 4px; margin-bottom: 4px; font-weight: 100;}
+    .toc a:link, .toc a:visited {font-weight: 100;}
+    .toc li:before {content: "{" counters(item, ".")"} "; counter-increment: item; color: #004c80;}
+    ol.toc > li, ol.toc > li > a:link, ol.toc > li > a:visited {font-weight: 700;}
+    ol.toc > li:before {content: "(" counters(item, ".")") "; counter-increment: item; color: #004c80; font-weight: 700; font-family: "Corbel", "Avenir", "Calibri";}
+    ol.toc > li > ol > li, ol.toc > li > ol > li > a:link, ol.toc > li > ol > li > a:visited {font-weight: 500;}
+    ol.toc > li > ol > li:before {content: "[" counters(item, ".")"] "; counter-increment: item; color: #004c80; font-weight: 500; font-family: "Corbel", "Avenir", "Calibri";}
+    ol.toc > li > ol > li > ol > li, ol.toc > li > ol > li > ol > li > a:link, ol.toc > li > ol > li > ol > li > a:visited {font-weight: 300;}
+    ol.toc > li > ol > li > ol > li:before {content: "{" counters(item, ".")"} "; counter-increment: item; color: #004c80; font-weight: 300; font-family: "Corbel", "Avenir", "Calibri";}
+    ol.toc > li > ol > li > ol > li > ol > li, ol.toc > li > ol > li > ol > li > ol > li > a:link, ol.toc > li > ol > li > ol > li > ol > li > a:visited {font-weight: 100; font-style: italic;}
+    ol.toc > li > ol > li > ol > li > ol > li:before {content: "⟨" counters(item, ".")"⟩ "; counter-increment: item; color: #004c80; font-weight: 100; font-family: "Corbel", "Avenir", "Calibri"; font-style: normal;}
     p {margin-top: 8px; margin-bottom: 8px;}
     .image {margin-top: 12px; margin-bottom: 8px; text-align: center;}
     .sectionbreak {margin-top: 16px; margin-bottom: 16px; font-size: 13px; text-align: center;}
@@ -31,19 +57,21 @@
     tbody:nth-child(even) tr:nth-child(odd) {background-color: #fff;}
     tbody:nth-child(even) tr:nth-child(even) .hidden {color: #eff0ff;}
     tbody:nth-child(even) tr:nth-child(odd) .hidden {color: #fff;}
-    thead {font-weight: bold; background-color: #eff0ff;}
+    thead {font-weight: 500; background-color: #eff0ff;}
     .endnotes td, .endnotes th {padding: 4px; vertical-align: top;}
     .integer {font-family: "Corbel", "Avenir", "Calibri", monospace; text-align: right;}
     .decimal {font-family: "Corbel", "Avenir", "Calibri", monospace;}
     .centred {text-align: center;}
     .right {text-align: right;}
-    pre {font-size: 115%;}
-    code {font-size: 115%;}
+    pre {font-size: 115%; font-weight: 100;}
+    code {font-size: 115%; font-weight: 100;}
     .dotted {border-bottom: 1px dotted;}
     .light {font-family: "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif; font-weight: 100;}
     .light .integer, .light .decimal {font-family: "Corbel", "Avenir", "Calibri", monospace; font-weight: 100;}
     .light strong {font-weight: 500;}
     .light .integer strong, .light .decimal strong {font-weight: 500;}
+    .bold {font-weight: 500;}
+    .bold strong {font-weight: 700;}
   </style>
   <script>
 function sortTable(table, col, reverse) {
@@ -99,8 +127,7 @@ window.onload = function () {makeAllSortable();};
  
 <h1 id="toc">Table of Contents</h1>
 
-<div class="toc">
-  <ol>
+  <ol class="toc">
     <li><a href="#bio">Author Info</a></li>
     <li><a href="#toc">Table of Contents</a> (you&rsquo;re looking at it?)</li>
     <li><a href="#thanks">Acknowledgements</a></li>
@@ -205,7 +232,6 @@ window.onload = function () {makeAllSortable();};
     <li><a href="#defaultnames">Example DefaultNames.txt</a></li>
     <li><a href="#endnotes">Endnotes</a></li>
   </ol>
-</div>
 
 <h1 id="thanks">Acknowledgements</h2>
 <ul>
@@ -280,7 +306,7 @@ To make this content compatible with modern Aleph One, you must run it through <
     <li><strong>Marathon Story Forums:</strong> <a href="http://forums.bungie.org/story/" target="_blank">forums.bungie.org/story</a></li>
     <li><strong>Reddit:</strong> <a href="https://reddit.com/r/marathon/" target="_blank">reddit.com/r/marathon</a></li>
     <li><strong>Marathon&rsquo;s Story Page:</strong> <a href="http://marathon.bungie.org/story" target="_blank">marathon.bungie.org/story</a> <em>(if you have story questions, for the love of Yrro, go here first &ndash; <span class="decimal">90</span>% of them can be answered with a quick search here)</em></li>
-    <li><strong>Marathon Lore Archive:</strong> <a href="https://marathon.karnemir.com/" target="_blank">https://marathon.karnemir.com/</a> <em>(searchable archive of terminals from the trilogy and ARG material from Bungie&rsquo;s upcoming game; meant to be more mobile-friendly)</em></li>
+    <li><strong>Marathon Lore Archive:</strong> <a href="https://marathon.karnemir.com/" target="_blank">marathon.karnemir.com</a> <em>(searchable archive of terminals from the trilogy and ARG material from Bungie&rsquo;s upcoming game; meant to be more mobile-friendly)</em></li>
     <li><strong>Marathon Scenarios:</strong> <a href="http://lochnits.com/marathon/scenarios" target="_blank">lochnits.com/marathon/scenarios</a></li> <em>(contains links, maps, terminals, & level flowcharts for major & many lesser-known fan scenarios. These links are generally up-to-date, though it links to a version of </em>Eternal<em> from <span class="decimal">2021</span> since <span class="decimal">1.3</span> is still in development)</em></li>
     <li><strong>Marathon Spoiler Guide:</strong> <a href="http://marathon.bungie.org/spoiler" target="_blank">marathon.bungie.org/spoiler</a></li>
     <li><strong>Dr John Sumner&rsquo;s Spoiler Guides:</strong> <a href="https://1drv.ms/u/s!AuD0MykSsmaRmx_NxpRgTRM69vgn?e=AplygX" target="_blank"><span class="decimal">1</span>drv.ms/u/s!AuD<span class="decimal">0</span>MykSsmaRmx_NxpRgTRM69vgn?e=AplygX</a></li>
@@ -291,7 +317,7 @@ To make this content compatible with modern Aleph One, you must run it through <
     <li><strong>Wikipedia:</strong> <a href="https://en.wikipedia.org/wiki/Marathon_Trilogy" target="_blank">en.wikipedia.org/wiki/Marathon_Trilogy</a></li>
     <li><strong>TV Tropes:</strong> <a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/Marathon" target="_blank">tvtropes.org/pmwiki/pmwiki.php/VideoGame/Marathon</a> <em>(Bungie games),</em>
       <a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/MarathonExpandedUniverse" target="_blank">tvtropes.org/pmwiki/pmwiki.php/VideoGame/MarathonExpandedUniverse</a> <em>(fan scenarios)</em></li>
-    <li><strong>Marathon Soundtracks:</strong> <a href="https://www.themarathonmusic.com/downloads.html">themarathonmusic.com/downloads.html</a>, <a href="https://aaronfreed.github.io/aaronfreed/soundtracks.html">aaronfreed.github.io/aaronfreed/soundtracks.html</a></li></ul>
+    <li><strong>Marathon Soundtracks:</strong> <a href="https://www.themarathonmusic.com/downloads.html">themarathonmusic.com/downloads.html</a>, <a href="https://aaronfreed.github.io/soundtracks.html">aaronfreed.github.io/soundtracks.html</a></li></ul>
 
 <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
@@ -686,28 +712,28 @@ To make this content compatible with modern Aleph One, you must run it through <
   </thead>
   <tbody>
     <tr>
-      <td class="integer" style="font-weight: bold;">0&deg;</td>
+      <td class="integer"><strong>0&deg;</strong></td>
       <td>East to west</td>
       <td>Faces east</td>
       <td>West to east</td>
       <td>From west</td>
     </tr>
     <tr>
-      <td class="integer" style="font-weight: bold;">90&deg;</td>
+      <td class="integer"><strong>90&deg;</strong></td>
       <td>South to north</td>
       <td>Faces south</td>
       <td>South to north</td>
       <td>From north</td>
     </tr>
     <tr>
-      <td class="integer" style="font-weight: bold;">180&deg;</td>
+      <td class="integer"><strong>180&deg;</strong></td>
       <td>West to east</td>
       <td>Faces west</td>
       <td>East to west</td>
       <td>From east</td>
     </tr>
     <tr>
-      <td class="integer" style="font-weight: bold;">270&deg;</td>
+      <td class="integer"><strong>270&deg;</strong></td>
       <td>North to south</td>
       <td>Faces north</td>
       <td>North to south</td>
@@ -844,7 +870,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">2301</td>
       <td class="decimal"><span class="hidden">0</span>25.71428571&hellip;&deg;</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">16</td>
       <td class="integer">2.563</td>
       <td class="integer">2624</td>
@@ -874,7 +900,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">4574</td>
       <td class="decimal"><span class="hidden">0</span>12.85714285&hellip;&deg;</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">32</td>
       <td class="integer">5.102</td>
       <td class="integer">5224</td>
@@ -904,7 +930,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">7176</td>
       <td class="decimal"><span class="hidden">00</span>8.1818&hellip;&deg;</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">48</td>
       <td class="integer">7.647</td>
       <td class="integer">7830</td>
@@ -928,7 +954,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">9780</td>
       <td class="decimal"><span class="hidden">00</span>6.0&deg;</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">64</td>
       <td class="integer">10.190 (use 5.095)</td>
       <td class="integer">10435</td>
@@ -1137,7 +1163,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">2</td>
       <td>Teleport Out</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">10020</td>
       <td class="integer">3</td>
       <td>Crushed</td>
@@ -1157,7 +1183,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">8</td>
       <td>Suffocation</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">10060</td>
       <td class="integer">9</td>
       <td>Energy Refuel</td>
@@ -1172,12 +1198,12 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">11</td>
       <td>Can&rsquo;t Toggle Switch</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">10090</td>
       <td class="integer">12</td>
       <td>Switch On</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">10100</td>
       <td class="integer">13</td>
       <td>Switch Off</td>
@@ -1192,7 +1218,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">15</td>
       <td>Chip Insertion</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">10130</td>
       <td class="integer">16</td>
       <td>Pattern Buffer</td>
@@ -1212,7 +1238,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">20</td>
       <td><span class="dotted" title="The Lua mnemonics have &lsquo;GOT Powerup&rsquo;, but GET Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.">Get Item<a href="#ftnt04">&#8317;&#8308;&#8318;</a></span></td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">11000</td>
       <td class="integer">21</td>
       <td>Bullet Ricochet</td>
@@ -1227,12 +1253,12 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">23</td>
       <td>Empty Gun</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">11030</td>
       <td class="integer">34</td>
       <td>Fist Hitting</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">11040</td>
       <td class="integer">35</td>
       <td>Magnum Firing</td>
@@ -1247,7 +1273,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">37</td>
       <td>Assault Rifle Firing</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">11070</td>
       <td class="integer">38</td>
       <td>Grenade Launcher Firing</td>
@@ -1282,7 +1308,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">44</td>
       <td>Fusion Charging</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">11140</td>
       <td class="integer">45</td>
       <td><span class="dotted" id="ftnt_ref06" title="Misspelled in Anvil (and thus ShapeFusion) as &lsquo;Rocket Expoding&rsquo;. The Lua mnemonics get this one correct.">Rocket Exploding<a href="#ftnt06">&#8317;&#8310;&#8318;</a></span></td>
@@ -1297,7 +1323,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">47</td>
       <td>Rocket Firing</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">11170</td>
       <td class="integer">48</td>
       <td>Flamethrower</td>
@@ -1312,7 +1338,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">50</td>
       <td>Body Exploding</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">11200</td>
       <td class="integer">51</td>
       <td>Bullet Hit Flesh</td>
@@ -1322,7 +1348,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">134</td>
       <td>Assault Rifle Reloading</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">11220</td>
       <td class="integer">136</td>
       <td>Shotgun Firing</td>
@@ -1367,12 +1393,12 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">138</td>
       <td>Ball Bounce</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">11310</td>
       <td class="integer">139</td>
       <td>You Are It</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">11320</td>
       <td class="integer">140</td>
       <td>Got Ball</td>
@@ -1397,47 +1423,47 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">26</td>
       <td>S&rsquo;pht Door Obstructed</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">12030</td>
       <td class="integer">27</td>
       <td>S&rsquo;pht Platform Starting</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">12040</td>
       <td class="integer">28</td>
       <td>S&rsquo;pht Platform Stopping</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">12080</td>
       <td class="integer">32</td>
       <td>Heavy S&rsquo;pht Platform Starting</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">12090</td>
       <td class="integer">33</td>
       <td>Heavy S&rsquo;pht Platform Stopping</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">13000</td>
       <td class="integer">144</td>
       <td>Heavy S&rsquo;pht Door</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">13010</td>
       <td class="integer">145</td>
       <td>Heavy S&rsquo;pht Door Opening</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">13020</td>
       <td class="integer">146</td>
       <td>Heavy S&rsquo;pht Door Closing</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">13030</td>
       <td class="integer">147</td>
       <td>Heavy S&rsquo;pht Door Open</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">13040</td>
       <td class="integer">148</td>
       <td>Heavy S&rsquo;pht Door Closed</td>
@@ -1447,7 +1473,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">149</td>
       <td>Heavy S&rsquo;pht Door Obstructed</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14000</td>
       <td class="integer">90</td>
       <td>Water</td>
@@ -1462,22 +1488,22 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">92</td>
       <td>Lava</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14030</td>
       <td class="integer">93</td>
       <td>Goo</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14040</td>
       <td class="integer">94</td>
       <td>Underwater</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14050</td>
       <td class="integer">95</td>
       <td>Wind</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14060</td>
       <td class="integer">96</td>
       <td>Waterfall</td>
@@ -1492,57 +1518,57 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">98</td>
       <td>Fan</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14100</td>
       <td class="integer">100</td>
       <td>S&rsquo;pht Platform</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14120</td>
       <td class="integer">101</td>
       <td>Alien Harmonics (Jjaro Ship)</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14130</td>
       <td class="integer">102</td>
       <td>Heavy S&rsquo;pht Platform</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14140</td>
       <td class="integer">103</td>
       <td>Light Machinery</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14150</td>
       <td class="integer">104</td>
       <td>Heavy Machinery</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14160</td>
       <td class="integer">105</td>
       <td>Transformer</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14170</td>
       <td class="integer">106</td>
       <td>Sparking Transformer</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14180</td>
       <td class="integer">169</td>
       <td>Machine Binder</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14190</td>
       <td class="integer">170</td>
       <td>Machine Bookpress</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14200</td>
       <td class="integer">171</td>
       <td>Machine Puncher</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14210</td>
       <td class="integer">172</td>
       <td>Electric Hum</td>
@@ -1552,17 +1578,17 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">173</td>
       <td>Alarm</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14230</td>
       <td class="integer">174</td>
       <td>Night Wind</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14240</td>
       <td class="integer">201</td>
       <td>Alien Noise 1 (Pfhor Ship #1)</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14250</td>
       <td class="integer">202</td>
       <td>Alien Noise 2 (Pfhor Ship #2)</td>
@@ -1582,7 +1608,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">175</td>
       <td>Surface Explosion (Thunder)</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14520</td>
       <td class="integer">176</td>
       <td>Underground Explosion</td>
@@ -1592,52 +1618,52 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">186</td>
       <td>Lamp Exploding</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14540</td>
       <td class="integer">29</td>
       <td>Loon</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14545</td>
       <td class="integer">187</td>
       <td>Pfhor Platform Starting</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14550</td>
       <td class="integer">188</td>
       <td>Pfhor Platform Stopping</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14560</td>
       <td class="integer">189</td>
       <td>Pfhor Platform</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14570</td>
       <td class="integer">190</td>
       <td><span class="dotted" id="ftnt_ref09" title="The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.">Pfhor Door Closing<a href="#ftnt09">&#8317;&#8313;&#8318;</a></span></td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14580</td>
       <td class="integer">191</td>
       <td><span class="dotted" id="ftnt_ref09" title="The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.">Pfhor Door Opening<a href="#ftnt09">&#8317;&#8313;&#8318;</a></span></td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14590</td>
       <td class="integer">192</td>
       <td>Pfhor Door Obstructed</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14600</td>
       <td class="integer">193</td>
       <td>Pfhor Door</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14610</td>
       <td class="integer">194</td>
       <td>Pfhor Switch On</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14620</td>
       <td class="integer">195</td>
       <td>Pfhor Switch Off</td>
@@ -1652,7 +1678,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">197</td>
       <td>Juggernaut Warning</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14650</td>
       <td class="integer">198</td>
       <td>Juggernaut Exploding</td>
@@ -1662,7 +1688,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">199</td>
       <td>Juggernaut Start Attack</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">14670</td>
       <td class="integer">200</td>
       <td>Enforcer Exploding</td>
@@ -1672,7 +1698,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">71</td>
       <td>Drone Activate</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">15010</td>
       <td class="integer">72</td>
       <td>Drone Start Attack</td>
@@ -1682,7 +1708,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">73</td>
       <td>Drone Attack</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">15030</td>
       <td class="integer">74</td>
       <td>Drone Dying</td>
@@ -1697,7 +1723,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">76</td>
       <td>Drone Projectile Hit</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">15060</td>
       <td class="integer">77</td>
       <td>Drone Projectile Flyby</td>
@@ -1707,17 +1733,17 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">64</td>
       <td>Cyborg Moving</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">15110</td>
       <td class="integer">65</td>
       <td>Cyborg Attack</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">15120</td>
       <td class="integer">66</td>
       <td>Cyborg Hit</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">15130</td>
       <td class="integer">67</td>
       <td>Cyborg Death</td>
@@ -1767,7 +1793,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">53</td>
       <td>Fighter Wail</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">15320</td>
       <td class="integer">54</td>
       <td>Fighter Scream</td>
@@ -1902,7 +1928,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">161</td>
       <td>F&rsquo;lickta Melee Attack</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">15810</td>
       <td class="integer">162</td>
       <td>F&rsquo;lickta Melee Hit</td>
@@ -1912,37 +1938,37 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">163</td>
       <td>F&rsquo;lickta Projectile Attack</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">15830</td>
       <td class="integer">166</td>
       <td>F&rsquo;lickta Projectile Lava Hit</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">15840</td>
       <td class="integer">167</td>
       <td>F&rsquo;lickta Projectile Lava Flyby</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">15850</td>
       <td class="integer">168</td>
       <td>F&rsquo;lickta Dying</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">15860</td>
       <td class="integer">164</td>
       <td>F&rsquo;lickta Projectile Sewage Hit</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">16000</td>
       <td class="integer">177</td>
       <td>S&rsquo;pht&rsquo;Kr Attack</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">16010</td>
       <td class="integer">178</td>
       <td>S&rsquo;pht&rsquo;Kr Projectile Hit</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">16020</td>
       <td class="integer">179</td>
       <td>S&rsquo;pht&rsquo;Kr Projectile Flyby</td>
@@ -1957,7 +1983,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">181</td>
       <td>S&rsquo;pht&rsquo;Kr Exploding</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">17000</td>
       <td class="integer">182</td>
       <td>Tick Chatter</td>
@@ -2067,7 +2093,7 @@ To make this content compatible with modern Aleph One, you must run it through <
       <td class="integer">111</td>
       <td>Small Water Splash</td>
     </tr>
-    <tr style="font-weight: bold;">
+    <tr class="bold">
       <td class="integer">19120</td>
       <td class="integer">113</td>
       <td>Large Water Splash</td>
@@ -2505,9 +2531,9 @@ damage_type, damage_amount, projectile)
 	if damage_type == "oxygen drain" then
 		if p._previous_oxygen ~= nil
 		and p._previous_oxygen - damage_amount < 0 then
-			-- remove invincibility (i.e., immunity to suffocation)
-			p.invincibility_duration = 0 
-			p:damage(p.life + 1, "suffocation")
+    -- remove invincibility (i.e., immunity to suffocation)
+    p.invincibility_duration = 0 
+    p:damage(p.life + 1, "suffocation")
 		end
 		p._previous_oxygen = p.oxygen -- track player oxygen
 	end

@@ -474,15 +474,27 @@ window.onload = function () {makeAllSortable();};
 
 <ul>
   <li><strong>Platforms:</strong> The &lsquo;<strong>Locked Door</strong>&rsquo; flag is broken and doesn&rsquo;t do anything.</li>
-  <li><strong>Lights:</strong> The &lsquo;<strong>Stateless</strong>&rsquo; flag is broken and doesn&rsquo;t do anything.</li>
+  <li><strong>Lights:</strong>
+    <ul>
+      <li>The &lsquo;<strong>Stateless</strong>&rsquo; flag is broken and doesn&rsquo;t do anything.</li>
+      <li>The manual says &lsquo;<strong>&#916; Period</strong>&rsquo; is &lsquo;the maximum random amount of time added to or subtracted from&rsquo; the value of <strong>Period</strong>. In fact, the game never subtracts <strong>&#916; Period</strong> from <strong>Period</strong>; it only ever adds them together.</li>
+      <li>The manual&rsquo;s statement that &lsquo;<strong>&#916; Intensity</strong>&rsquo; &lsquo;does for <strong>Intensity</strong> what <strong>&#916; Period</strong> does for <strong>Period</strong>&rsquo; is technically correct (the best kind of correct!), but since its description of <strong>&#916; Period</strong> is wrong, I&rsquo;m listing it here for completeness&rsquo; sake.</li>
+    </ul>
+  </li>
   <li><strong>Environment Types:</strong> The manual&rsquo;s description of &lsquo;<strong>Rebellion</strong>&rsquo; is completely outdated; it is a correct description of &lsquo;<strong>Rebellion (M<span class="decimal">1</span>)</strong>&rsquo;. The &lsquo;<strong>Rebellion</strong>&rsquo; flag strips all players&rsquo; weapons and ammunition, and if their health is above <span class="decimal">37</span> (full <span class="decimal">1</span>x shields would be <span class="decimal">150</span>), the game strips their health to <span class="decimal">37</span>. (Conversely, if their health is below <span class="decimal">37</span>, it does <em>not</em> restore it to <span class="decimal">37</span>. Also, note that all these values can be customized with MML). Additionally, if the &lsquo;<strong>Extermination</strong>&rsquo; mission type is set on a <strong>Rebellion</strong> level, <em>all</em> monsters must be killed, <em>without exception</em>, for the mission status to be set as &lsquo;<strong>Complete</strong>&rsquo;.</li>
   <li><strong>Mission Types:</strong>
     <ul>
       <li>&lsquo;<strong>Rescue</strong>&rsquo; is broken. Use &lsquo;<strong>Rescue (M<span class="decimal">1</span>)</strong>&rsquo; if you want this behaviour. Additionally, the &lsquo;<strong>Rescue (M<span class="decimal">1</span>)</strong>&rsquo; mission affects whether the level completion state is set as &lsquo;<strong>Failed</strong>&rsquo;; it&rsquo;s still up to mapmakers to set the &lsquo;<strong>Finished</strong>&rsquo; or &lsquo;<strong>Unfinished</strong>&rsquo; states in other cases. aperturegrillz&rsquo;s <a href="https://youtu.be/rMSyuAsnIfc" target="_blank">speedrun of &lsquo;Bob-B-Q&rsquo;</a> shows us what can happen when a mapmaker neglects to set any mission types besides &lsquo;<strong>Rescue (M<span class="decimal">1</span>)</strong>&rsquo;.</li>
-      <li>&lsquo;<strong>Extermination</strong>&rsquo; doesn&rsquo;t require killing <em>everything</em> unless, as mentioned above, the &lsquo;<strong>Rebellion</strong>&rsquo; flag is set. Otherwise, the player is given a leeway of up to eight monsters that have the &lsquo;<strong>Alien</strong>&rsquo; flag set in their physics. The game does not count monsters without the &lsquo;<strong>Alien</strong>&rsquo; flag set, and whether they are set as being hostile to the player is of no importance. It is also possible to force certain monster types to be killed using MML.</li>
+      <li>&lsquo;<strong>Extermination</strong>&rsquo; doesn&rsquo;t require killing <em>everything</em> unless, as mentioned above, the &lsquo;<strong>Rebellion</strong>&rsquo; flag is <em>also</em> set. Otherwise, the player gets a leeway of up to eight monsters marked as &lsquo;<strong>Alien</strong>&rsquo; in the physics. The game doesn&rsquo;t count monsters that are not marked as &lsquo;<strong>Alien</strong>&rsquo;, and it doesn&rsquo;t matter whether they&rsquo;re set as hostile to the player. (You can force players to kill all monsters of one or more specific types using MML.)</li>
     </ul>
   </li>
-  <li><strong>Sound Objects:</strong> &lsquo;<strong>Is On Platform</strong>&rsquo; overrides the selected sound with the platform&rsquo;s ambient sound.</li>
+  <li><strong>Sound Objects:</strong>
+    <ul>
+      <li>&lsquo;<strong>Is On Platform</strong>&rsquo; overrides the selected sound with the platform&rsquo;s ambient sound.</li>
+      <li>&lsquo;<strong>&#916; Volume</strong>&rsquo;, &lsquo;<strong>&#916; Period</strong>&rsquo;, &lsquo;<strong>&#916; Pitch</strong>&rsquo;, and &lsquo;<strong>&#916; Direction</strong>&rsquo;, like the similar light values above, are only ever added to, respectively, <strong>Volume</strong>, <strong>Period</strong>, <strong>Pitch</strong>, and <strong>Direction</strong>; they are never subtracted. Additionally, for these values (but, curiously, <em>not</em> for the similar light variables), the game will never select the maximum delta value. Thus, if you set both <strong>Period</strong> and <strong>&#916; Period</strong> to 30, the game will select a value from 30 to 59, inclusive.</li>
+      <li>While this isn&rsquo;t truly an erratum, &lsquo;<strong>&#916; Direction</strong>&rsquo; deserves further mention for a questionable design choice that can create the misleading impression that, for a sound to play from a constant direction, <strong>&#916; Direction</strong> should <em>exactly</em> match <strong>Direction</strong>: in fact, <strong>&#916; Direction</strong> should be 0&deg;. (If <strong>Direction</strong> and <strong>&#916; Direction</strong> are both 135&deg;, for example, the results will range from 135&deg; to 269&deg; (nice), inclusive.)</li>
+    </ul>
+  </li>
   <li><strong>Polygon Types:</strong>
     <ul>
       <li>The manual&rsquo;s description of the &lsquo;<strong>Invisible Monster Trigger</strong>&rsquo; was probably the intended behaviour of the polygon type, but in practice, it is the same as the &lsquo;<strong>Dual Monster Trigger</strong>&rsquo;: it activates all monsters in a zone, not just teleporting ones.</li>
@@ -756,7 +768,7 @@ window.onload = function () {makeAllSortable();};
 
 <h2 id="circles">Circles and the Custom Grid</h2>
 
-<p>For the purposes of this tutorial, we are taking the term &lsquo;circle&rsquo; to mean &lsquo;regular polygon with sufficiently many sides to look like a circle&rsquo;. Aleph One is not actually capable of curves.</p>
+<p>For the purposes of this tutorial, we&rsquo;ll take the term &lsquo;circle&rsquo; to mean &lsquo;regular polygon with sufficiently many sides to look circular&rsquo;. Aleph One is not actually capable of curves.</p>
 
 <p>There are a few ways to construct circles in Weland. The simplest is probably to use shift+alt and draw points of equal length out from a central area. This will give you a regular <span class="decimal">16</span>-sided polygon, and for many cases, this is all you&rsquo;ll need. However, in many cases, you may want more points. There are a few options here. There&rsquo;s a <a href="http://simplici7y.com/items/circle-plugin-for-weland" target="_blank">circle plugin</a>, which is fine if you&rsquo;re OK doing a bit of math. (To get this to load on Windows, you may need to go to &lsquo;Properties&rsquo; and select &lsquo;Unblock&rsquo; next to &lsquo;Security&rsquo;. Obviously, don&rsquo;t make a habit of doing this with just <em>any</em> software downloaded from the Internet unless you trust the authors.) Another option that doesn&rsquo;t require a plugin (but still requires a bit of math) is the custom grid, this little icon you may not have bothered to try out before:</p>
 

@@ -374,8 +374,12 @@ window.onload = function () {makeAllSortable();};
       <ul>
         <li><strong>Visual Mode.lua:</strong> It&rsquo;s best to put this in the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data folder</a>. <em>Which</em> user data folder, though?
           <ul>
-            <li><strong><em>Infinity</em> all-in-one app:</strong> <blockquote><code>~/Library/Application Support/Marathon Infinity/Visual Mode.lua</code></blockquote></li>
-            <li><strong>Standalone Aleph One app:</strong> <blockquote><code>~/Library/Application Support/AlephOne/Visual Mode.lua</code></blockquote></li>
+            <li><strong><em>Infinity</em> all-in-one app:</strong> 
+              <blockquote class="wide"><pre>~/Library/Application Support/Marathon Infinity/Visual Mode.lua</pre></blockquote>
+            </li>
+            <li><strong>Standalone Aleph One app:</strong>
+              <blockquote class="wide"><pre>~/Library/Application Support/AlephOne/Visual Mode.lua</pre></blockquote>
+            </li>
             <li>Aleph One <em>only</em> makes this distinction on Macs: on Windows and Linux, it places all user data in one folder.</li>
             <li>Note also that the <strong>Library</strong> folder is normally hidden in the Finder, so to place Visual Mode.lua in one of its subfolders, you may need to use <strong>&lsquo;Go to Folder&rsquo;</strong>. Weland should be able to see it with no problem, though.</li>
           </ul>
@@ -383,16 +387,16 @@ window.onload = function () {makeAllSortable();};
         <li><strong>Vasara:</strong> There are a few options for this, which I&rsquo;ve chosen to list in descending order of how much they irk me.
           <ul>
             <li>Making a plugins folder in the same directory as an all-in-one app (e.g., <strong>Macintosh HD/Games/Marathon Infinity/Plugins/Vasara.zip</strong>) <em>won&rsquo;t work.</em> You&rsquo;d have to right-click or control-click the app, select &lsquo;<strong>Show Package Contents</strong>&rsquo;, <em>then</em> make a plugins folder <em>within</em> the app, e.g.:
-              <blockquote class="wide"><code>Macintosh HD/Games/Marathon Infinity/Marathon Infinity.app/Plugins/Vasara.zip</code></blockquote>
+              <blockquote class="wide"><pre>Macintosh HD/Games/Marathon Infinity/Marathon Infinity.app/Plugins/Vasara.zip</pre></blockquote>
               <ul>
                 <li>I <em>really</em> don&rsquo;t care for this approach. While Mac apps are typically self-contained, this approach creates major downsides for scenario developers. Not all users even manage to get this method to work, and users probably shouldn&rsquo;t be encouraged to mess with app packages when it&rsquo;s not strictly necessary; they could easily break the apps if they don&rsquo;t know what they&rsquo;re doing.</li>
               </ul>
             </li>
             <li>Another, less offensive solution for the all-in-one apps is the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data</a> <strong>plugins folder</strong>. On a Mac, the all-in-one <em>Infinity</em> app would use:
-              <blockquote class="wide"><code>~Library/Application Support/Marathon Infinity/Plugins/Vasara.zip</code></blockquote>
+              <blockquote class="wide"><pre>~Library/Application Support/Marathon Infinity/Plugins/Vasara.zip</pre></blockquote>
               The stand-alone Aleph One app would use:
-              <blockquote class="wide"><code>~Library/Application Support/AlephOne/Plugins/Vasara.zip</code></blockquote>
-              The Mac is also the only platform that separates the trilogy&rsquo;s user data folders from Aleph One&rsquo;s (another design choice I&rsquo;m not entirely on board with), hence why I&rsquo;ve noted both locations for Macs.
+              <blockquote class="wide"><pre>~Library/Application Support/AlephOne/Plugins/Vasara.zip</pre></blockquote>
+              The Mac is also the only platform that separates the trilogy&rsquo;s user data folders from Aleph One&rsquo;s (another design choice I&rsquo;m not fully on board with), hence why I&rsquo;ve noted both locations for Macs.
               <ul>
                 <li>This method actually isn&rsquo;t perfect either, since, as stated, the Library folder isn&rsquo;t visible by default &ndash; you have to navigate to it with <strong>&lsquo;Go to Folder&rsquo;</strong>. I find this much less bothersome than asking users to mess with app packages, though.</li>
               </ul>
@@ -409,14 +413,17 @@ window.onload = function () {makeAllSortable();};
   <ul>
     <li><strong>Visual Mode.lua</strong> is a solo Lua script, which is best placed in the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data folder</a>. Thus, my Windows 10 path for it is:
 
-      <blockquote class="wide"><code>C:/Users/Aaron/Documents/AlephOne/Visual Mode.lua</code></blockquote>
+      <blockquote class="wide"><pre>C:/Users/Aaron/Documents/AlephOne/Visual Mode.lua</pre></blockquote>
 
       Replace <strong>Aaron</strong> with your username to find where to place yours. (Linux and older versions of Windows will have different paths &ndash; and if you&rsquo;re running the latter, please get a new <del>computer</del> operating system: running an OS that&rsquo;s no longer being updated is a major security risk that puts all your data in jeopardy.)</li>
     <li><strong>Vasara</strong> is a plugin, so it belongs in the <strong>Plugins</strong> folder (if there isn&rsquo;t one already, make one called &lsquo;<strong>Plugins</strong>&rsquo;). This can be the scenario plugins folder:
-      <blockquote class="wide"><code>C:/Games/Marathon Infinity/Plugins/Vasara.zip</code></blockquote>
 
-      Or, if you&rsquo;d like it to be accessible to <em>all</em> scenarios, the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data</a> <strong>plugins folder</strong>, e.g., 
-        <blockquote class="wide"><code>C:/Users/Aaron/Documents/AlephOne/Plugins/Vasara.zip</code></blockquote>
+      <blockquote class="wide"><pre>C:/Games/Marathon Infinity/Plugins/Vasara.zip</pre></blockquote>
+
+      Or, if you&rsquo;d like it to be accessible to <em>all</em> scenarios, the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data</a> <strong>plugins folder</strong>, e.g.: 
+
+        <blockquote class="wide"><pre>C:/Users/Aaron/Documents/AlephOne/Plugins/Vasara.zip</pre></blockquote>
+
       Which may be more convenient if, like me, you&rsquo;re perverse enough to map for five scenarios at a time, but you&rsquo;ll have to disable it outside Weland!Aleph One for any scenario for which you&rsquo;re not already using a solo Lua script.
     </li>
   </ul>

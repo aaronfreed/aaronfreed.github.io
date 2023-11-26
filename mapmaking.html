@@ -341,8 +341,8 @@ window.onload = function () {makeAllSortable();};
   <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h1 id="general">General</h1>
-<h2 name="welandsetup">Weland Setup</h2>
-<h3 name="welandpreferences">Configuring Weland&rsquo;s Preferences</h3>
+<h2 id="welandsetup">Weland Setup</h2>
+<h3 id="welandpreferences">Configuring Weland&rsquo;s Preferences</h3>
 
   <ul>
     <li>Setting up Weland can be confusing; this doesn&rsquo;t aim to be an exhaustive list of the issues you may face in doing so. I can&rsquo;t possibly hope to provide that here; you&rsquo;ll find people who can help on the <a href="https://discord.gg/c7rEVgY">Discord</a>.</li>
@@ -366,7 +366,7 @@ window.onload = function () {makeAllSortable();};
     <li>Next, you&rsquo;ll need to set up an editor for visual mode. Despite the name, Weland&rsquo;s visual mode can use either <strong>Visual Mode.lua</strong> or <strong>Vasara</strong>, but whichever one you choose must be accessible to the scenario you wish to edit. I&rsquo;m going to divide this into different sections for Linux/Windows and MacOS.</li>
   </ul>
 
-<h3 name="visualmodemac">Installing Visual Mode & Vasara (MacOS)</h3>
+<h3 id="visualmodemac">Installing Visual Mode & Vasara (MacOS)</h3>
 
   <ul>
     <li>Owing to how the Mac version of Aleph One is built, setting up Visual Mode on Macs may be confusing. Effectively, on both the Mac and Windows, there are two ways to get Aleph One versions of the <em>Marathon</em> trilogy (there are, of course, even more on Linux), but which one you get is <em>vastly</em> more consequential on MacOS:
@@ -413,7 +413,7 @@ window.onload = function () {makeAllSortable();};
     </li>
   </ul>
 
-<h3 name="visualmodewinlin">Installing Visual Mode & Vasara (Linux & Windows)</h3>
+<h3 id="visualmodewinlin">Installing Visual Mode & Vasara (Linux & Windows)</h3>
 
   <ul>
     <li><strong>Visual Mode.lua</strong> is a solo Lua script, which is best placed in the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data folder</a>. Thus, my Windows 10 path for it is:
@@ -433,7 +433,7 @@ window.onload = function () {makeAllSortable();};
     </li>
   </ul>
 
-<h3 name="visualmodepreferences">Configuring Weland!Aleph One</h3>
+<h3 id="visualmodepreferences">Configuring Weland!Aleph One</h3>
   <ul>
     <li>The next steps may be slightly confusing. <em><strong>Without exiting Weland&rsquo;s preferences dialog,</strong></em> click the <strong>&lsquo;Edit Preferences&rsquo; button</strong>. This should launch Aleph One using the scenario you&rsquo;ve selected. <em><strong>This is entirely intended!</strong></em></li>
     <li><em><strong>Within Weland!Aleph One,</strong></em> click <strong>Settings</strong>. This creates a new preferences file (separate from the standard scenario preferences) that only affects the game&rsquo;s behavior <em>when it&rsquo;s launched from Weland</em> (e.g., launching <em>Marathon Infinity</em> from Weland creates a new &lsquo;<strong>Marathon Infinity Preferences Editor</strong>&rsquo; file within your Aleph One preferences folder).
@@ -656,7 +656,7 @@ window.onload = function () {makeAllSortable();};
 
   <pre>
     &lt;marathon&gt;
-      &lt;scenario id="Eternal X" name="Eternal X" version="1.3pre6" /&gt;
+      &lt;scenario id="Eternal X" id="Eternal X" version="1.3pre6" /&gt;
     &lt;/marathon&gt;</pre>
 
   <div style="margin-top: 8px;">(Moving the map file out of the scenario folder or overwriting it with a different version of the map would fall into what I&rsquo;d consider &lsquo;Play stupid games, win stupid prizes&rsquo; territory. You may wish to put a caveat about this in your game&rsquo;s documentation, but I&rsquo;d imagine this would be a relatively rare occurrence.)</div></li>

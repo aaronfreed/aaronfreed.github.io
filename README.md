@@ -13,11 +13,11 @@ I&rsquo;ve contributed in varying degrees to the following (mostly) playable gam
 
 * ***[Eternal X](http://eternal.bungie.org/)*** (2018-present): maps, music, sound, writing, scripting, graphics, soundtrack (re)mastering, codirector *(alongside **pfhorrest**, for versions 1.2.1 and later)*
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kiy7CaniLiZSRi-5P-SKEN)
-   * This scenario remains under active development; a final release of version 1.3 is still forthcoming.
+   * This scenario remains under active development; a final release of version 1.3 is still forthcoming. Five previews of 1.3 have been released; a sixth will likely appear in December 2023 or January 2024.
 * ***[Apotheosis X](https://simplici7y.com/items/apotheosis-x-5)*** (2020-2023): sound, scripting, testing
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6mOBZaoKUAOqDsfuv-RIneq)
    * Further updates of *Apotheosis X* have not been ruled out but are not currently under active development.
-* ***[Dungeons Presents Hellpak Vol. 1: Not Recommended by Doctors](https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors)*** (2020-present): maps, scripting, soundtrack mastering, writing, graphics, bug fix releases
+* ***[Dungeons Presents Hellpak Vol. 1: Not Recommended by Doctors](https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors)*** (2020-2023): maps, scripting, soundtrack mastering, writing, graphics, bug fix releases
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kcfNGN3zh0BcsyaLRFkB0k)
    * [Discord server](https://discord.gg/DTMvjFqtTA)
    * This is an iteration of creator tbcr&rsquo;s long-running *Dungeons* show, hence its full title. One further (hopefully final) bug fix update for this scenario will be released in December 2023.
@@ -37,7 +37,7 @@ I&rsquo;m also working on several forthcoming mods:
 * ***Tempus Irae Redux*** (2020-present, forthcoming): maps, music, sound, scripting, writing, soundtrack mastering
    * [Get the original *Tempus Irae* here](http://nardo.bungie.org/alephone.php)
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6nVJdLAfq0ZxS6WRv0bC3Fe)
-   * I didn&rsquo;t contribute to the original *Tempus Irae* but have been involved in *Redux*&rsquo;s development since it started in roughly May 2020. *Redux* isn&rsquo;t a straight remaster but more of a modern update; since it significantly changes several levels, players may find it interesting to play both. It also isn&rsquo;t planned to supersede the original *Tempus Irae*; the latter&rsquo;s original Aleph One release will continue to be available on Nardo&rsquo;s website after we release *Redux*. We entered a limited beta test in October 2023; we hope to release the game later this year.
+   * I didn&rsquo;t contribute to the original *Tempus Irae* but have been involved in *Redux*&rsquo;s development since it started in roughly May 2020. *Redux* isn&rsquo;t a straight remaster but more of a modern update; since it significantly changes several levels, players may find it interesting to play both. It also isn&rsquo;t planned to supersede the original *Tempus Irae*; the latter&rsquo;s original Aleph One release will continue to be available on Nardo&rsquo;s website after we release *Redux*. We entered a limited beta test in October 2023 with an aim to release the game in December 2023 or January 2024.
 * ***Where Monsters Are in Dreams*** (2019-present, forthcoming): maps, music, sound, scripting, soundtrack mastering, writing, graphics, codirector *(alongside **CryoS** and **hypersleep**)*
    * [Website](http://bighouse.bungie.org/wmaid/)
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kB_7qLbTdgia1hiNOoYmEz)

@@ -262,7 +262,11 @@ window.onload = function () {makeAllSortable();};
   <ul style="text-align: left;">
     <li><strong>Weland</strong> (most aspects of mapmaking): <a href="https://github.com/treellama/weland/releases" target="_blank">github.com/treellama/weland/releases</a>
     <div style="padding-left: 20px;"><strong><em>Make sure to grab the right dependency for your platform &ndash; the download page is confusingly laid out. I&rsquo;ve written a detailed setup guide; you can find it in &lsquo;Weland Setup&rsquo; under &lsquo;General&rsquo;.</em></strong></div></li>
-    <li><strong>Vasara</strong> (texturing, more like Windows): <a href="http://simplici7y.com/items/vasara" target="_blank">simplici<span class="decimal">7</span>y.com/items/vasara</a></li>
+    <li><strong>Vasara</strong> (texturing, more like Windows): <a href="http://simplici7y.com/items/vasara" target="_blank">simplici<span class="decimal">7</span>y.com/items/vasara</a>
+      <ul>
+        <li><strong>Vasara 2.0b</strong> (WIP): <a href="https://github.com/aaronfreed/vasara/" target="_blank">github.com/aaronfreed/vasara</a> (Fixes some bugs and adds several new features, but some features are not yet fully implemented, and it contains a bug not present in the original. Full disclosure: This update is largely my work.)</li>
+      </ul>
+    </li>
     <li><strong>Visual Mode.lua</strong> (texturing, more like DOS): <a href="http://simplici7y.com/items/visual-mode-lua" target="_blank">simplici<span class="decimal">7</span>y.com/items/visual-mode-lua</a></li>
     <li><strong>Atque</strong> (merging/splitting maps): <a href="https://github.com/treellama/atque/releases" target="_blank">github.com/treellama/atque/releases</a></li>
     <li><strong>Forge+</strong> (texturing/map viewing): <a href="https://github.com/deramscholzara/ForgePlus/releases" target="_blank">github.com/deramscholzara/ForgePlus/releases</a></li>
@@ -783,15 +787,23 @@ window.onload = function () {makeAllSortable();};
   </li>
   <li>When you exit visual mode, tags should be in the state they&rsquo;re meant to start the level in. Thus, if you tabbed a tag switch that starts the level inactive so you could open some doors, reset the tag to inactive. Take special care with wires and chip insertion switches &ndash; messing them up can render levels uncompletable. For this reason and more (see above), I&rsquo;d recommend avoiding tags where possible.</li>
   <li>Walking on a <strong>Must Be Explored</strong> polygon (or even looking at it if <strong>Exploration (M<span class="decimal">1</span>)</strong> is set) resets it to <strong>Normal.</strong> Be sure to reset these after texturing (or just don&rsquo;t set them until you&rsquo;ve finished texturing).</li>
-  <li>Frame interpolation can cause textures to jitter if you place them without paving first. Some players have also reported that placing textures without first paving can cause crashes (I haven&rsquo;t experienced this, and a recent Aleph One update reportedly fixes this &ndash; another reason to upgrade!). However, paving occasionally crashes Weland (I haven&rsquo;t isolated the cause, but it seems to be an index mismatch), so it&rsquo;s ideal to save, pave, then go into visual mode.</li>
+  <li>In old versions of Aleph One (prior to 1.6, if memory serves), frame interpolation could cause textures to jitter if you placed them without paving first. Some players also reported that placing textures without first paving could cause crashes (I never experienced this, and it was also supposedly fixed in the same Aleph One update). However, paving occasionally crashes Weland (I haven&rsquo;t isolated the cause, but it seems to be an index mismatch), so it&rsquo;s ideal to save, pave, then go into visual mode.</li>
   <li>By necessity, texturing always loads all texture sets, so you may want to avoid using hi-res textures while texturing. If you must use them, I recommend keeping as few other programs open as possible.</li>
 </ul>
 
 <h3 id="vasaratexturing">Further Texturing Issues in Vasara</h3>
 
 <ul>
-  <li>Vasara gets weird with more than <span class="decimal">56</span> lights. If you have both &lsquo;Apply Light&rsquo; and &lsquo;Apply Texture&rsquo; selected with a light &#8805; <span class="decimal">56</span>, the HUD disappears; reduce the light value to something &lt; <span class="decimal">56</span> and hit the action key to restore it. If one is selected, but not the other, the HUD functions normally.</li>
-  <li>If you leave visual mode (or type <strong>.save level</strong>) while a polygon is flashing and highlighted on the map for the player to teleport to, this will be set as a <strong>Major Ouch</strong> polygon and the floor&rsquo;s transfer mode will change to <strong>Static</strong>. So&hellip; don&rsquo;t do that. This occurs because Vasara highlights the polygon on the map by changing it temporarily to a <strong>Major Ouch</strong> polygon (and physically changes its appearance in the game world to create the static effect on its floor).</li> 
+  <li>Vasara gets weird with more than <span class="decimal">56</span> lights. If you have both &lsquo;Apply Light&rsquo; and &lsquo;Apply Texture&rsquo; selected with a light &#8805; <span class="decimal">56</span>, the HUD disappears; reduce the light value to something &lt; <span class="decimal">56</span> and hit the action key to restore it. If one is selected, but not the other, the HUD functions normally.
+    <ul>
+      <li>My <a href="github.com/aaronfreed/vasara" target="_blank">work-in-progress update of Vasara</a> fixes the Lua error spam. It currently does not display previews of lights greater than 55 correctly, but it lists lights from 0 to 97 in its options screen.</li>
+    </ul>
+  </li>
+  <li>If you leave visual mode (or type <strong>.save level</strong>) while a polygon is flashing and highlighted on the map for the player to teleport to, this will be set as a <strong>Major Ouch</strong> polygon and the floor&rsquo;s transfer mode will change to <strong>Static</strong>. So&hellip; don&rsquo;t do that. This occurs because Vasara highlights the polygon on the map by changing it temporarily to a <strong>Major Ouch</strong> polygon (and physically changes its appearance in the game world to create the static effect on its floor).
+    <ul>
+      <li>My update of Vasara fixes this at the cost of not highlighting the polygon on the map. I&rsquo;m working on a possible compromise for this.</li>
+    </ul>
+  </li>
 </ul>
 
 <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>

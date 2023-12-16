@@ -1,5 +1,9 @@
 I&rsquo;m a political science and cybersecurity major from Sarasota, FL. Amateur game development, music creation and (re)mastering, and writing consume much of my spare time.
 
+I’m currently heavily involved in developing the following code project:
+
+* **[Vasara 2.0b](https://github.com/aaronfreed/vasara/)**: A Lua texturing utility for **[*Marathon* Aleph One](https://alephone.lhowon.org/)** originally created by **[@Hopper262](https://github.com/Hopper262)** and **Ares Ex Machina**, building on **[Visual Mode.lua](https://github.com/treellama/visualmode)**, which in turn was written by **[@jonirons](https://github.com/jonirons)** and **[@treellama](https://github.com/treellama)** and effectively functions like the command line to Vasara&rsquo;s GUI. As neither plugin had been substantially updated since 2016, I&rsquo;ve taken it upon myself (with a bit of assistance from **[@SolraBizna](https://github.com/SolraBizna)** and **[@murbruksprodukt](https://github.com/murbruksprodukt)**) to update Vasara to implement new Aleph One features, fix longstanding bugs, and add new features to make texturing easier. This remains a work in progress; when I&rsquo;m satisfied with the results, I may backport some of these changes to Visual Mode.lua. This will only function with Aleph One 1.7 or later, and it is best used with **[Weland](https://github.com/treellama/weland/releases)** (see the readme for an abbreviated setup guide, or my content creation guide directly below for a detailed one).
+
 Pages currently hosted here:
 
 * **[*Marathon* / Aleph One content creation guide](https://aaronfreed.github.io/mapmaking.html)**

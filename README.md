@@ -6,7 +6,8 @@ I’m currently heavily involved in developing the following code project:
 
 Pages currently hosted here:
 
-* **[*Marathon* / Aleph One content creation guide](https://aaronfreed.github.io/mapmaking.html)**
+* **[Beginners’ *Marathon* / Aleph One content creation guide](https://aaronfreed.github.io/mapmaking101.html)**
+* **[Advanced *Marathon* / Aleph One content creation guide](https://aaronfreed.github.io/mapmaking.html)**
 * **[*Marathon* soundtracks](https://aaronfreed.github.io/soundtracks.html)**
 * **[My discography](https://aaronfreed.github.io/discography.html)**
 * **[My portfolio](https://aaronfreed.github.io/portfolio.html)**

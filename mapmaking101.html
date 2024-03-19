@@ -119,20 +119,10 @@ window.onload = function () {makeAllSortable();};
 
   <p>This abridgement contains links to modern editors for Aleph One, a guide to setting up Weland and a visual mode plugin (either Vasara or Visual Mode.lua) in Windows and MacOS (a Linux guide may be forthcoming), links to the first resources you should read and watch once you&rsquo;ve set Weland up, Forge manual errata, descriptions of a few aspects of modern mapmaking that aren&rsquo;t covered by the Forge tutorials, and links to more advanced resources.</p>
 
-<h1 id="bio">Who are you and what qualifies you to write this?</h1>
-
-  <p>I&rsquo;m Aaron; I&rsquo;m likely best-known in the community for co-directing <em><a href="http://eternal.bungie.org/development" target="_blank">Eternal</a></em>, though I&rsquo;ve also worked in some capacity (not always mapping-related) on current and forthcoming mods like <em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em>, <em><a href="https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors" target="_blank">Hellpak</a></em>, <em>Tempus Irae Redux</em>, <em>Where Monsters Are in Dreams</em>, <em>Marathon Chronicles</em>&hellip;basically, I&rsquo;ve been busy mapping for this engine off and on since about <span class="decimal">1997</span>, during which I&rsquo;ve acquired all kinds of stupid arcane knowledge about it. Have you ever heard of ambient light delta? Neither had Aleph One&rsquo;s developers until I pointed it out. I&rsquo;m not saying that because I think it&rsquo;s worth being proud of having acquired so much useless and pointless knowledge, but what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me&hellip; oh, sorry, that&rsquo;s <em>Taken</em>. Anyway, I feel Aleph One content creation should have a lower barrier to entry, so here&rsquo;s an attempt to create a reference for solutions to some of its frustrating problems.</p>
-
-  <p>If you wish to contact me, the best way is via Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@Aaron#<span class="decimal">6608</span></strong>, though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I&rsquo;d recommend this only if you notice errors/omissions in this document (or have suggestions for additions; I can credit you for all three). If you need help, it&rsquo;s best to ask in <strong>#marathon-general</strong>, <strong>#forge</strong>, or <strong>#tech-support</strong> (<strong>#development</strong> is for engine/editor development). I&rsquo;m also on the <a href="https://pfhorums.com" target="_blank">Pfhorums</a> (as <a href="https://pfhorums.com/memberlist.php?mode=viewprofile&u=6618" target="_blank">The Man</a>) and <a href="https://reddit.com/r/marathon/" target="_blank">Reddit</a> (as <a href="https://reddit.com/u/aaronnotarobot" target="_blank">u/aaronnotarobot</a>), but I can&rsquo;t promise to respond to messages on either quickly.</p>
-
-  <p>As mentioned, I have a much longer <a href="mapmaking.html">mapmaking page</a> that goes into much greater depth. You may also be interested in my <a href="soundtracks.html"><em>Marathon</em> soundtracks page</a>, which contains some technical information about remastering music and sounds that may be helpful to those working on sounds or music. A lot of my own creative work, much of which is <em>Marathon</em>-related, may be found on my <a href="discography.html">discography</a> and <a href="portfolio.html">portfolio</a> pages. </p>
- 
 <h1 id="toc">Table of Contents</h1>
 
   <ol class="toc">
-    <li><a href="#bio">Author Info</a></li>
     <li><a href="#toc">Table of Contents</a> (you&rsquo;re looking at it?)</li>
-    <li><a href="#thanks">Acknowledgements</a></li>
     <li><a href="#editors">Aleph One Content Editors</a>
       <ol>
         <li><a href="#editorsm2i"><em>Marathon <span class="decimal">2</span></em>/<em>Infinity</em> Format</a></li>
@@ -164,21 +154,12 @@ window.onload = function () {makeAllSortable();};
         <li><a href="#resourcescommunity">Marathon Communities & Resources</a></li>
       </ol>
     </li>
+    <li><a href="#contact">Contact Info</a></li>
+    <li><a href="#bio">What qualifies you to write this, anyway?</a></li>
+    <li><a href="#thanks">Acknowledgements</a></li>
     <li><a href="#endnotes">Endnote(s)</a></li>
   </ol>
    
-<h1 id="thanks">Acknowledgements</h2>
-
-  <ul>
-    <li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
-    <li>The numerous mapmakers I&rsquo;ve learned from or been influenced by over the years. I couldn&rsquo;t possibly hope to list them all, but <strong>James Hastings-Trew</strong>, <strong>CryoS</strong>, <strong>hypersleep</strong>, <strong>RyokoTK</strong>, <strong>windbreaker</strong>, <strong>Don-Martin Antell</strong>, <strong>Drictelt</strong>, <strong>Mike Trinder</strong>, <strong>Jason Harper</strong>, <strong>Chris Lund</strong>, <strong>Courtney Evans</strong>, <strong>Frank Rooke</strong>, <strong>Devon Belcher</strong>, <strong>Borzz</strong>, <strong>Rich Dierkes</strong>, <strong>Shebob</strong>, <strong>Jason Jones</strong>, <strong>Greg Kirkpatrick</strong>, <strong>Randy Reddig</strong>, <strong>Antonio de Llamas</strong>, and <strong>FM</strong> have to number among them.</li>
-    <li>The numerous people who have helped maintain <strong>Aleph One</strong> over the years.</li>
-    <li><strong>Bungie</strong>, for obvious reasons.</li> 
-  </ul>
-
-  <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
-  
-
 <h1 id="editors">Aleph One Content Editors</h1>
 <h2 id="editorsm2i"><em>Marathon <span class="decimal">2</span></em>/<em>Infinity</em> Format</h2>
 
@@ -453,7 +434,7 @@ A few problems occur when texturing in Aleph One that were not problems in Forge
   <ul style="text-align: left;">
     <li><strong>The Marathon trilogy (all-in-one releases):</strong> <a href="https://alephone.lhowon.org/" target="_blank">alephone.lhowon.org</a></li>
     <li><strong>Aleph One app:</strong> <a href="https://alephone.lhowon.org/download.html" target="_blank">alephone.lhowon.org/download.html</a></li>
-    <li><strong>Data files for the trilogy and <span id="ftnt_ref01" class="dotted" title="Trojan, EVIL, Tempus Irae, RED, Eternal X, Rubicon X, Phoenix, Mararthon Yuge, Apotheosis X, and Istoria. I&rsquo;d unconditionally recommend Tempus Irae, Eternal X, Phoenix, and Apotheosis X (note: I&rsquo;ve contributed in some capacity to current or forthcoming releases of all of these: remastered music for Phoenix; sounds and scripting for Apotheosis X; too many things to list for Eternal X and Tempus Irae Redux). Rubicon X and Istoria round out my top six with the caveats &lsquo;don&rsquo;t play Rubicon X above Normal&rsquo; and &lsquo;the Flame IADD fight can heck right off&rsquo;. If you&rsquo;re attuned to Yuge&rsquo;s irreverent humour, it&rsquo;ll reward you with fantastic gameplay and a remarkable demonstration of procedural level design. Trojan is great for those who wish Marathon 1 had been longer (even if you don&rsquo;t play it, check out the OST, which slaps. Also, I remastered the music and sounds for the standalone edition, which unfortunately doesn&rsquo;t work with current versions of Aleph One). RED&rsquo;s execution is occasionally sloppy, and it&rsquo;s probably too difficult, but it has some fantastic ideas and is remarkable for being almost entirely the work of a single person &ndash; who was a teenager at the time, to boot. EVIL&rsquo;s strengths include professional-quality sprites; fantastic sounds, monsters, and weapons; and sometimes brilliant (if frustratingly inconsistent) level design.">ten major Aleph One scenarios<a href="#ftnt01">&#8317;&sup1;&#8318;</a></span>:</strong> <a href="https://alephone.lhowon.org/scenarios.html">alephone.lhowon.org/scenarios.html</a></li>
+    <li><strong>Data files for the trilogy and ten major Aleph One scenarios:</strong> <a href="https://alephone.lhowon.org/scenarios.html">alephone.lhowon.org/scenarios.html</a></li>
     <li><strong>Aleph One GitHub:</strong> <a href="https://github.com/Aleph-One-Marathon/" target="_blank">github.com/Aleph-One-Marathon</a></li>
     <li><strong>Simplici<span class="decimal">7</span>y:</strong> <a href="https://simplici7y.com/" target="_blank">simplici<span class="decimal">7</span>y.com</a>, with a temporary mirror at <a href="https://lochnits.com/s7/" target="_blank">lochnits.com/s<span class="decimal">7</span></a> <em>(archive containing most of the newest content for the engine)</em></li>
     <li><strong>Fileball:</strong> <a href="http://fileball.whpress.com/" target="_blank">fileball.whpress.com</a> or <a href="http://www.rising-studios.com/Marathon/fileball/Fileball%20Archive/marathon/" target="_blank">rising-studios.com/Marathon/fileball</a> <em>(archive of content from the 2000s)</em></li>
@@ -480,23 +461,24 @@ A few problems occur when texturing in Aleph One that were not problems in Forge
 
   <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
-<hr />
+<h1 id="contact">Contact Info</h1>
 
-<h1 id="endnotes">Endnote(s)</h1>
+  <p>If you wish to contact me, the best way is via Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@Aaron#<span class="decimal">6608</span></strong>, though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I&rsquo;d recommend this only if you notice errors/omissions in this document (or have suggestions for additions; I can credit you for all three). If you need help, it&rsquo;s best to ask in <strong>#marathon-general</strong>, <strong>#forge</strong>, or <strong>#tech-support</strong> (<strong>#development</strong> is for engine/editor development). I&rsquo;m also on the <a href="https://pfhorums.com" target="_blank">Pfhorums</a> (as <a href="https://pfhorums.com/memberlist.php?mode=viewprofile&u=6618" target="_blank">The Man</a>) and <a href="https://reddit.com/r/marathon/" target="_blank">Reddit</a> (as <a href="https://reddit.com/u/aaronnotarobot" target="_blank">u/aaronnotarobot</a>), but I can&rsquo;t promise to respond to messages on either quickly.</p>
 
-<table class="light endnotes">
-  <thead>
-    <tr>
-      <th class="integer"><strong>#</strong></th>
-      <th><strong>Note</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="integer"><a href="#ftnt_ref01" id="ftnt01"><strong>1</strong></a></td>
-      <td><em>Trojan</em>, <em>EVIL</em>, <em>Tempus Irae</em>, <em>RED</em>, <em>Eternal X</em>, <em>Rubicon X</em>, <em>Phoenix</em>, <em>Mararthon Yuge</em>, <em>Apotheosis X</em>, and <em>Istoria</em>. I&rsquo;d unconditionally recommend <em>Tempus Irae</em>, <em>Eternal X</em>, <em>Phoenix</em>, and <em>Apotheosis X</em> (note: I&rsquo;ve contributed in some capacity to current or forthcoming releases of all of these: remastered music for <em>Phoenix</em>; sounds and scripting for <em>Apotheosis X</em>; too many things to list for <em>Eternal X</em> and <em>Tempus Irae Redux</em>). <em>Rubicon X</em> and <em>Istoria</em> round out my top six with the caveats &lsquo;don&rsquo;t play <em>Rubicon X</em> above Normal&rsquo; and &lsquo;the Flame IADD fight can heck right off&rsquo;. If you&rsquo;re attuned to <em>Yuge</em>&rsquo;s irreverent humour, it&rsquo;ll reward you with fantastic gameplay and a remarkable demonstration of procedural level design. <em>Trojan</em> is great for those who wish <em>Marathon <span class="decimal">1</span></em> had been longer (even if you don&rsquo;t play it, check out <a href="https://youtu.be/bKQnv8zg8rk" target="_blank">the OST</a>, which slaps. Also, I remastered the music and sounds for the <a href="https://hhas01.itch.io/trojan-se">standalone edition</a>, which unfortunately doesn&rsquo;t work with current versions of Aleph One). <em>RED</em>&rsquo;s execution is occasionally sloppy, and it&rsquo;s probably too difficult, but it has some fantastic ideas and is remarkable for being almost entirely the work of a single person &ndash; who was a teenager at the time, to boot. <em>EVIL</em>&rsquo;s strengths include professional-quality sprites; fantastic sounds, monsters, and weapons; and sometimes brilliant (if frustratingly inconsistent) level design.</td>
-    </tr>
-  </tbody>
-</table>
+<h1 id="bio">What qualifies you to write this, anyway?</h1>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+  <p>I&rsquo;ve been modding for this engine off and on since 1997 and have worked on a long list of projects over the years; rather than list them all here, you can just check my <a href="portfolio.html">portfolio page</a>. As mentioned, I also have a much longer <a href="mapmaking.html">mapmaking page</a> that goes into much more depth.</p>
+
+  <p>You may also be interested in my <a href="soundtracks.html"><em>Marathon</em> soundtracks page</a>, which contains some technical information about remastering music and sounds that may be helpful to those working on sounds or music; I have some additional <em>Marathon</em>-related music on my <a href="discography.html">discography page</a>.</p>
+
+<h1 id="thanks">Acknowledgements</h2>
+
+  <ul>
+    <li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
+    <li>The numerous mapmakers I&rsquo;ve learned from or been influenced by over the years. I couldn&rsquo;t possibly hope to list them all, but <strong>James Hastings-Trew</strong>, <strong>CryoS</strong>, <strong>hypersleep</strong>, <strong>RyokoTK</strong>, <strong>windbreaker</strong>, <strong>Don-Martin Antell</strong>, <strong>Drictelt</strong>, <strong>Mike Trinder</strong>, <strong>Jason Harper</strong>, <strong>Chris Lund</strong>, <strong>Courtney Evans</strong>, <strong>Frank Rooke</strong>, <strong>Devon Belcher</strong>, <strong>Borzz</strong>, <strong>Rich Dierkes</strong>, <strong>Shebob</strong>, <strong>Jason Jones</strong>, <strong>Greg Kirkpatrick</strong>, <strong>Randy Reddig</strong>, <strong>Antonio de Llamas</strong>, and <strong>FM</strong> have to number among them.</li>
+    <li>The numerous people who have helped maintain <strong>Aleph One</strong> over the years.</li>
+    <li><strong>Bungie</strong>, for obvious reasons.</li> 
+  </ul>
+
+  <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+  

@@ -2,77 +2,7 @@
 <html lang="en-us">
 <head>
   <title>Marathon Mapmaking: Setup, Snafus, & Solutions</title>
-  <style>
-    @font-face {
-        font-family: 'Numberwang';
-        src: local('Corbel Light'),
-        local(Avenir),
-        local('Calibri Light');
-        unicode-range: U+30-39;
-    }
-    @font-face {
-        font-family: 'Numberwang Medium';
-        src: local('Corbel'),
-        local(Avenir),
-        local('Calibri');
-        unicode-range: U+30-39;
-    }
-    a {text-decoration: none;}
-    a:link {color: #09f; font-weight: 500;}
-    a:visited {color: #c0c; font-weight: 500;}
-    a:link:hover, a:visited:hover {text-decoration: underline; color: #c60;}
-    a:link:active, a:visited:active {color: #090;}
-    a:link>strong, a:visited>strong {font-weight: 500;}
-    strong {font-weight: 500;}
-    strong strong {font-weight: 700;}
-    body {width: 800px; font-family: Numberwang, "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif; text-align: justify; margin: auto; font-weight: 100; font-stretch: 100%;}
-    h1 {margin-top: 12px; margin-bottom: 12px; font-weight: 700; color: #2F5496;}
-    h2 {margin-top: 12px; margin-bottom: 12px; font-weight: 700; color: #2F5496;}
-    h3 {margin-top: 12px; margin-bottom: 12px; font-weight: 700; color: #2F5496;}
-    div {margin-top: 8px; margin-bottom: 8px;}
-    li {margin-top: 8px; margin-bottom: 8px;}
-    ul {margin-top: 4px; margin-bottom: 4px; padding-left: 30px; margin-left; 30px;}
-    ol {margin-top: 4px; margin-bottom: 4px; padding-left: 30px; margin-left; 30px;}
-    ol li::marker {font-family: "Corbel", "Avenir", "Calibri", monospace;}
-    /*ol {padding-left: 30px; margin-left; 30px;}
-    ol li:before {font-family: "Corbel", "Avenir", "Calibri", monospace; font-weight: bold;}*/
-    ol.toc, .toc ol {counter-reset: item; margin-top: 0px; margin-bottom: 0px;}
-    .toc li {display: block; margin-top: 4px; margin-bottom: 4px; font-weight: 100;}
-    .toc a:link, .toc a:visited {font-weight: 100;}
-    .toc li:before {content: "{" counters(item, ".")"} "; counter-increment: item; color: #004c80;}
-    ol.toc > li, ol.toc > li > a:link, ol.toc > li > a:visited {font-weight: 700;}
-    ol.toc > li:before {content: "(" counters(item, ".")") "; counter-increment: item; color: #004c80; font-weight: 700; font-family: "Corbel", "Avenir", "Calibri";}
-    ol.toc > li > ol > li, ol.toc > li > ol > li > a:link, ol.toc > li > ol > li > a:visited {font-weight: 500;}
-    ol.toc > li > ol > li:before {content: "[" counters(item, ".")"] "; counter-increment: item; color: #004c80; font-weight: 500; font-family: "Corbel", "Avenir", "Calibri";}
-    ol.toc > li > ol > li > ol > li, ol.toc > li > ol > li > ol > li > a:link, ol.toc > li > ol > li > ol > li > a:visited {font-weight: 300;}
-    ol.toc > li > ol > li > ol > li:before {content: "{" counters(item, ".")"} "; counter-increment: item; color: #004c80; font-weight: 300; font-family: "Corbel", "Avenir", "Calibri";}
-    ol.toc > li > ol > li > ol > li > ol > li, ol.toc > li > ol > li > ol > li > ol > li > a:link, ol.toc > li > ol > li > ol > li > ol > li > a:visited {font-weight: 100; font-style: italic;}
-    ol.toc > li > ol > li > ol > li > ol > li:before {content: "⟨" counters(item, ".")"⟩ "; counter-increment: item; color: #004c80; font-weight: 100; font-family: "Corbel", "Avenir", "Calibri"; font-style: normal;}
-    p {margin-top: 8px; margin-bottom: 8px;}
-    .image {margin-top: 12px; margin-bottom: 8px; text-align: center;}
-    .sectionbreak {margin-top: 16px; margin-bottom: 16px; font-size: 13px; text-align: center;}
-    table {border-collapse: collapse; margin: auto;}
-    td, th {padding-left: 12px; padding-right: 12px; padding-top: 4px; padding-bottom: 4px;}
-    tbody:nth-child(even) tr:nth-child(even) {background-color: #eff0ff;}
-    tbody:nth-child(even) tr:nth-child(odd) {background-color: #fff;}
-    tbody:nth-child(even) tr:nth-child(even) .hidden {color: #eff0ff;}
-    tbody:nth-child(even) tr:nth-child(odd) .hidden {color: #fff;}
-    thead {font-weight: 500; background-color: #eff0ff;}
-    .endnotes td, .endnotes th {padding: 4px; vertical-align: top;}
-    .integer {font-family: "Corbel", "Avenir", "Calibri", monospace; text-align: right;}
-    .decimal {font-family: "Corbel", "Avenir", "Calibri", monospace;}
-    .centred {text-align: center;}
-    .right {text-align: right;}
-    pre {font-size: 115%; font-weight: 100;}
-    code {font-size: 115%; font-weight: 100;}
-    .dotted {border-bottom: 1px dotted;}
-    .light {font-family: "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif; font-weight: 100;}
-    .light .integer, .light .decimal {font-family: "Corbel", "Avenir", "Calibri", monospace; font-weight: 100;}
-    .light strong {font-weight: 500;}
-    .light .integer strong, .light .decimal strong {font-weight: 500;}
-    .bold {font-weight: 500;}
-    .bold strong {font-weight: 700;}
-  </style>
+  <link rel="stylesheet" type="text/css" href="css.css">
   <script>
 function sortTable(table, col, reverse) {
     var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
@@ -248,6 +178,7 @@ window.onload = function () {makeAllSortable();};
   <ul>
     <li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
     <li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
+    <li><strong>Solra Bizna</strong> for an incomprehensible amount of programming help, including the CSS that makes this exact page follow your computer&rsquo;s dark mode settings.</li>
     <li><strong>W&rsquo;rkncacnter</strong> for pointing out a sound source that eluded me (namely the fighter death).</li>
     <li>The numerous mapmakers I&rsquo;ve learned from or been influenced by over the years. I couldn&rsquo;t possibly hope to list them all, but <strong>James Hastings-Trew</strong>, <strong>CryoS</strong>, <strong>hypersleep</strong>, <strong>RyokoTK</strong>, <strong>windbreaker</strong>, <strong>Don-Martin Antell</strong>, <strong>Drictelt</strong>, <strong>Mike Trinder</strong>, <strong>Jason Harper</strong>, <strong>Chris Lund</strong>, <strong>Courtney Evans</strong>, <strong>Frank Rooke</strong>, <strong>Devon Belcher</strong>, <strong>Borzz</strong>, <strong>Rich Dierkes</strong>, <strong>Shebob</strong>, <strong>Jason Jones</strong>, <strong>Greg Kirkpatrick</strong>, <strong>Randy Reddig</strong>, <strong>Antonio de Llamas</strong>, and <strong>FM</strong> have to number among them.</li>
     <li>The numerous people who have helped maintain <strong>Aleph One</strong> over the years.</li>

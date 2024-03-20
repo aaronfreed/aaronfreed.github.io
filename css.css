@@ -9,6 +9,10 @@
     --heading-color: #2F5496;
     --toc-counter: #004c80;
     --main: #000;
+    --lightest: 100;
+    --medium: 300;
+    --bold: 500;
+    --boldest: 700;
 }
 @media (prefers-color-scheme: dark) {
     :root {
@@ -44,17 +48,25 @@
 }
 
 /* start main entry */
-body {width: 800px;
-    font-family: Numberwang, "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+body {
+    width: 800px;
+    font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
     text-align: justify;
     margin: auto;
-    font-weight: 100;
+    font-weight: var(--lightest);
     font-stretch: 100%;
     background-color: var(--background);
     color: var(--main);
 }
 .normal {
     font-family: "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+}
+.soundtracks strong,
+.soundtracks a:link,
+.soundtracks a:visited,
+.soundtracks h4 {
+    font-weight: var(--bold);
+    font-family: "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 }
 
 /* link stuff */
@@ -63,11 +75,11 @@ a {
 }
 a:link {
     color: var(--link);
-    font-weight: 500;
+    font-weight: var(--bold);
 }
 a:visited {
     color: var(--link-visited);
-    font-weight: 500;
+    font-weight: var(--bold);
 }
 a:link:hover,
 a:visited:hover {
@@ -80,44 +92,44 @@ a:visited:active {
 }
 a:link>strong,
 a:visited>strong {
-    font-weight: 500;
+    font-weight: var(--bold);
 }
 
 /* define font weights */
 strong {
-    font-weight: 500;
+    font-weight: var(--bold);
 }
 strong strong {
-    font-weight: 700;
+    font-weight: var(--boldest);
 }
 .light {
     font-family: "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-    font-weight: 100;
+    font-weight: var(--lightest);
 }
 .light .integer, .light .decimal {
     font-family: "Corbel", "Avenir", "Calibri", monospace;
-    font-weight: 100;
+    font-weight: var(--lightest);
 }
 .light strong {
-    font-weight: 500;
+    font-weight: var(--bold);
 }
 .light .integer strong,
 .light .decimal strong {
-    font-weight: 500;
+    font-weight: var(--bold);
 }
 .bold {
-    font-weight: 500;
+    font-weight: var(--bold);
 }
 .bold strong,
 .strong a,
 a .strong {
-    font-weight: 700;
+    font-weight: var(--boldest);
 }
 
 /* headers and accents */
 h1, h2, h3, h4 {
     margin: 12px 0px;
-    font-weight: 700;
+    font-weight: var(--boldest);
     color: var(--heading-color);
 }
 .music h1 {
@@ -157,7 +169,8 @@ p {
 .lowerpara {
     margin: 8px 0px 0px;
 }
-.discography p {
+.discography p,
+.soundtracks p {
     margin: 12px 0px 6px;
 }
 .discography p.upperpara {
@@ -165,6 +178,9 @@ p {
 }
 .discography p.lowerpara {
     margin: 12px 0px 0px;
+}
+.soundtracks div {
+    margin: 4px 0px;
 }
 
 /* lists */
@@ -180,26 +196,28 @@ ol li::marker {
     font-family: "Corbel", "Avenir", "Calibri", monospace;
 }
 
+.music li,
+.soundtracks li {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
 .music ul,
-.music ol {
+.music ol,
+.soundtracks ul,
+.soundtracks ol {
     margin: 12px 0px 6px 30px;
-    padding: 0px;
-}
-.music li {
-    margin: 6px 0px;
-}
-.music li > ul,
-.music li > ol {
-    margin: 6px 0px 6px 30px;
 }
 
 .discography ol {
     list-style-type: lower-roman;
-    margin: 0px 0px 6px;
+    margin-top: 0px;
 }
 .discography ol > li > ol {
     list-style-type: lower-alpha;
-    margin: 0px 0px 6px;
+    margin-top: 0px;
+}
+.soundtracks li {
+    margin: 6px 0px;
 }
 
 /* table of contents. this one is a doozy */
@@ -212,11 +230,11 @@ ol.toc, .toc ol {
     display: block;
     margin-top: 4px;
     margin-bottom: 4px;
-    font-weight: 100;
+    font-weight: var(--lightest);
 }
 .toc a:link,
 .toc a:visited {
-    font-weight: 100;
+    font-weight: var(--lightest);
 }
 .toc li:before {
     content: "{" counters(item, ".")"} ";
@@ -226,50 +244,50 @@ ol.toc, .toc ol {
 ol.toc > li,
 ol.toc > li > a:link,
 ol.toc > li > a:visited {
-    font-weight: 700;
+    font-weight: var(--boldest);
 }
 ol.toc > li:before {
     content: "(" counters(item, ".")") ";
     counter-increment: item;
     color: var(--toc-counter);
-    font-weight: 700;
+    font-weight: var(--boldest);
     font-family: "Corbel", "Avenir", "Calibri";
 }
 ol.toc > li > ol > li,
 ol.toc > li > ol > li > a:link,
 ol.toc > li > ol > li > a:visited {
-    font-weight: 500;
+    font-weight: var(--bold);
 }
 ol.toc > li > ol > li:before {
     content: "[" counters(item, ".")"] ";
     counter-increment: item;
     color: var(--toc-counter);
-    font-weight: 500;
+    font-weight: var(--bold);
     font-family: "Corbel", "Avenir", "Calibri";
 }
 ol.toc > li > ol > li > ol > li,
 ol.toc > li > ol > li > ol > li > a:link,
 ol.toc > li > ol > li > ol > li > a:visited {
-    font-weight: 300;
+    font-weight: var(--medium);
 }
 ol.toc > li > ol > li > ol > li:before {
     content: "{" counters(item, ".")"} ";
     counter-increment: item;
     color: var(--toc-counter);
-    font-weight: 300;
+    font-weight: var(--medium);
     font-family: "Corbel", "Avenir", "Calibri";
 }
 ol.toc > li > ol > li > ol > li > ol > li,
 ol.toc > li > ol > li > ol > li > ol > li > a:link,
 ol.toc > li > ol > li > ol > li > ol > li > a:visited {
-    font-weight: 100;
+    font-weight: var(--lightest);
     font-style: italic;
 }
 ol.toc > li > ol > li > ol > li > ol > li:before {
     content: "⟨" counters(item, ".")"⟩ ";
     counter-increment: item;
     color: var(--toc-counter);
-    font-weight: 100;
+    font-weight: var(--lightest);
     font-family: "Corbel", "Avenir", "Calibri";
     font-style: normal;
 }
@@ -319,7 +337,7 @@ tbody:nth-child(even) tr:nth-child(odd) .hidden {
     color: var(--background);
 }
 thead {
-    font-weight: 500;
+    font-weight: var(--bold);
     background-color: var(--table-offset-background);
 }
 .endnotes td,
@@ -377,10 +395,10 @@ thead {
     background-color: var(--background);
 }
 .discography thead th {
-    font-weight: 700;
+    font-weight: var(--boldest);
 }
 .discography tfoot th {
-    font-weight: 500;
+    font-weight: var(--bold);
 }
 
 .integer {
@@ -394,21 +412,38 @@ thead {
     font-family: "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
     text-align: right;
     white-space: nowrap;
-    font-weight: 500;
+    font-weight: var(--bold);
 }
-
-.centred, td.centred, th.centred {
+.number {
+    font-family: "Corbel", "Avenir", "Calibri", monospace;
+}
+.dr {
+    font-family: "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
     text-align: center;
 }
-.right, td.right, th.right {
+
+.centred,
+td.centred,
+th.centred,
+td.dr,
+th.dr {
+    text-align: center;
+}
+.right,
+td.right,
+th.right,
+.discography .number {
     text-align: right;
 }
 pre,
 code {
     font-size: 115%;
-    font-weight: 100;
+    font-weight: var(--lightest);
 }
 .dotted {
     border-bottom: 1px dotted;
 }
 
+.soundtracks hr {
+    margin: 24px 0px;
+}

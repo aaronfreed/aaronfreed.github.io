@@ -405,6 +405,7 @@ thead {
 .endnotes th {
     padding: 4px;
     vertical-align: top;
+    font-weight: var(--lightest)
 }
 
 /* the discography page has complicated table border stuff */

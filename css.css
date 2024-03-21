@@ -1,7 +1,9 @@
 :root {
     --background: #fff;
-    --table-offset-background: #eff0ff;
-    --table-border: #d0d0ff;
+    --offset-level-1: #eff0ff;
+    --offset-level-2: #e0e0ff;
+    --offset-level-3: #d0d0ff;
+    --offset-level-4: #a0a0ff;
     --link: #09f;
     --link-visited: #c0c;
     --link-active: #090;
@@ -17,8 +19,10 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #000;
-        --table-offset-background: #1c1e36;
-        --table-border: #383c6c;
+        --offset-level-1: #1c1e36;
+        --offset-level-2: #383c6c;
+        --offset-level-3: #383c6c;
+        --offset-level-4: #545aa2;
         --link: #73e8ff;
         --link-visited: #ff93ff;
         --link-active: #adffad;
@@ -110,13 +114,9 @@ strong strong {
     font-family: "Corbel", "Avenir", "Calibri", monospace;
     font-weight: var(--lightest);
 }
-.light strong {
-    font-weight: var(--bold);
-}
+.light strong,
 .light .integer strong,
-.light .decimal strong {
-    font-weight: var(--bold);
-}
+.light .decimal strong,
 .bold {
     font-weight: var(--bold);
 }
@@ -181,6 +181,12 @@ p {
 }
 .soundtracks div {
     margin: 4px 0px;
+}
+blockquote {
+    margin: 16px 30px;
+}
+blockquote.wide {
+    margin: 16px 0px 16px 30px;
 }
 
 /* lists */
@@ -325,20 +331,20 @@ td, th {
     padding: 4px;
 }
 tbody:nth-child(even) tr:nth-child(even) {
-    background-color: var(--table-offset-background);
+    background-color: var(--offset-level-1);
 }
 tbody:nth-child(even) tr:nth-child(odd) {
     background-color: var(--background);
 }
 tbody:nth-child(even) tr:nth-child(even) .hidden {
-    color: var(--table-offset-background);
+    color: var(--offset-level-1);
 }
 tbody:nth-child(even) tr:nth-child(odd) .hidden {
     color: var(--background);
 }
 thead {
     font-weight: var(--bold);
-    background-color: var(--table-offset-background);
+    background-color: var(--offset-level-1);
 }
 .endnotes td,
 .endnotes th {
@@ -350,7 +356,7 @@ thead {
 .discography tbody > tr:nth-child(6n),
 .discography tbody > tr:nth-child(6n+4) > td,
 .discography tbody > tr:nth-child(6n+5) > td {
-    background-color: var(--table-offset-background);
+    background-color: var(--offset-level-1);
 }
 .discography tbody > tr:nth-child(6n+1) > td,
 .discography tbody > tr:nth-child(6n+2) > td,
@@ -359,37 +365,37 @@ thead {
 }
 .discography td:nth-child(1),
 .discography th:nth-child(1) {
-    border-left: 1px solid var(--table-border);
+    border-left: 1px solid var(--offset-level-3);
 }
 .discography td:nth-last-child(1),
 .discography th:nth-last-child(1) {
-    border-right: 1px solid var(--table-border);
+    border-right: 1px solid var(--offset-level-3);
 }
 .discography thead > tr:nth-child(1),
 .discography tfoot > tr:nth-child(1) {
-    border-top: 1px solid var(--table-border);
+    border-top: 1px solid var(--offset-level-3);
 }
 .discography thead > tr:nth-last-child(1),
 .discography tfoot > tr:nth-last-child(1) {
-    border-bottom: 1px solid var(--table-border);
+    border-bottom: 1px solid var(--offset-level-3);
 }
 .discography tbody > tr:nth-child(1) {
-    border-top: 1px solid var(--table-border);
+    border-top: 1px solid var(--offset-level-3);
 }
 .discography tbody > tr:nth-child(3n) {
-    border-bottom: 1px solid var(--table-border);
+    border-bottom: 1px solid var(--offset-level-3);
 }
 .discography thead {
-    background-color: var(--table-offset-background);
+    background-color: var(--offset-level-1);
 }
 .solo > tfoot {
-    background-color: var(--table-offset-background);
+    background-color: var(--offset-level-1);
 }
 .multi > tfoot {
-    background-color: var(--table-offset-background);
+    background-color: var(--offset-level-1);
 }
 .master > tfoot {
-    background-color: var(--table-offset-background);
+    background-color: var(--offset-level-1);
 }
 .compilation > tfoot {
     background-color: var(--background);
@@ -399,6 +405,43 @@ thead {
 }
 .discography tfoot th {
     font-weight: var(--bold);
+}
+
+/* the istoria body messages also have some pretty complicated stuff */
+.istoria table {
+    margin-top: 16px;
+}
+.istoria td,
+.istoria th {
+    padding: 4px 12px;
+    font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+    font-weight: var(--lightest);
+    border: 1px solid var(--offset-level-4);
+}
+.istoria thead {
+    background-color: var(--offset-level-2);
+    font-size: 20px;}
+.istoria tfoot {
+    background-color: var(--offset-level-3);
+}
+.istoria td.topic {
+    font-family: "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+    font-weight: var(--bold);
+    text-align: right;}
+.istoria td.location {
+    background-color: var(--offset-level-1);
+}
+.istoria tbody:nth-child(even) tr:nth-child(even) {
+    background-color: var(--background);
+}
+.istoria tbody:nth-child(even) tr:nth-child(odd) {
+    background-color: var(--offset-level-1);
+}
+.istoria tbody:nth-child(even) tr:nth-child(even) .hidden {
+    color: var(--background);
+}
+.istoria tbody:nth-child(even) tr:nth-child(odd) .hidden {
+    color: var(--offset-level-1);
 }
 
 .integer {
@@ -426,13 +469,15 @@ thead {
 td.centred,
 th.centred,
 td.dr,
-th.dr {
+th.dr,
+.istoria .footer {
     text-align: center;
 }
 .right,
 td.right,
 th.right,
-.discography .number {
+.discography .number,
+.istoria .level {
     text-align: right;
 }
 pre,
@@ -446,4 +491,41 @@ code {
 
 .soundtracks hr {
     margin: 24px 0px;
+}
+
+spoiler {
+    color: transparent;
+}
+spoiler:hover,
+spoiler:focus {
+    color: inherit;
+}
+spoiler.chronicles::before {
+    content: "Chronicles spoiler, hover/select to view:";
+}
+spoiler.rubicon::before {
+    content: "Rubicon spoiler, hover/select to view:";
+}
+spoiler:before {
+    color: var(--link);
+    font-weight: var(--bold);
+    font-style: italic;
+    cursor: pointer;
+}
+spoiler:hover::before,
+spoiler:focus::before {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+spoiler:active::before {
+    color: var(--link-active);
+    text-decoration: underline;
+}
+
+.speaker {
+    margin-top: 6px;
+    margin-left: 16px;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--heading-color);
 }

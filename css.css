@@ -405,7 +405,7 @@ thead {
 .endnotes th {
     padding: 4px;
     vertical-align: top;
-    font-weight: var(--lightest)
+    font-weight: var(--lightest);
 }
 
 /* the discography page has complicated table border stuff */
@@ -535,6 +535,9 @@ th.right,
 .discography .number,
 .istoria .level {
     text-align: right;
+}
+.justify {
+    text-align: justify;
 }
 pre,
 code {

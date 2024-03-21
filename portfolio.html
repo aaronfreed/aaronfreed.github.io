@@ -158,7 +158,7 @@
 				</li>
 				<li><a href="#other">Other <em>Marathon</em> Projects</a>
 					<ol>
-						<li><a href="#vasara">Vasara 2.0b</a></li>
+						<li><a href="#vasara">Vasara AF</a></li>
 						<li><a href="#youtube">@MarathonVidmaster YouTube channel</a></li>
 						<li><a href="#mapmaking">Aleph One Mapmaking Guide</a></li>
 						<li><a href="#soundtracks"><em>Marathon</em> Remixes &amp; Fan Soundtracks</a></li>
@@ -435,7 +435,7 @@
 				<li>I&rsquo;ve contributed original compositions (which at times delve into unapologetic knockoffs of Nobuo Uematsu &amp; Hiroki Kikuta), an arrangement of Johann Sebastian Bach, &amp; remixes of several other composers&rsquo; tracks</li>
 				<li>I&rsquo;ve also done what might be considered &ldquo;pre-mastering&rdquo; &amp; compiled several tracks into suites (e.g., &ldquo;Impshanuh&rdquo;, &ldquo;Digitality&rdquo;, &ldquo;It&rsquo;s All Been Said and Done&rdquo;)</li>
 				<li>This doesn&rsquo;t yet contain any semblance of a coherent running order, but it contains some of the strongest work several of these composers have made, in my admittedly biased opinion</li>
-				<li>Our composers have been ridiculously prolific; this soundtrack currently contains over six hours of music</li>
+				<li>Our composers have been ridiculously prolific; this soundtrack currently contains over seven hours of music</li>
 				<li>As a result, much of this will undoubtedly not actually appear on <em>Vol. <span class="decimal">2</span></em>&rsquo;s OST; some may not even appear on <em>Vol. <span class="decimal">3</span></em>&rsquo;s</li>
 			</ul>
 
@@ -443,20 +443,27 @@
 
 		<h2 id="other">Other <em>Marathon</em> Projects</h3>
 
-		<h4 id="vasara" class="first">Vasara <span class="decimal">2</span>.<span class="decimal">0</span>b</h4>
+		<h4 id="vasara" class="first">Vasara AF</h4>
 		<h5><a href="https://github.com/aaronfreed/vasara" target="_blank">github.com/aaronfreed/vasara</a></h5>
 
 			<ul>
-				<li>Lua texturing utility for Aleph One, originally developed by <a href="https://github.com/Hopper262" target="_blank">@Hopper262</a> and <strong>Ares Ex Machina</strong> (based in turn on <a href="https://github.com/treellama" target="_blank">@treellama</a> and <a href="https://github.com/jonirons" target="_blank">@jonirons</a>&rsquo; <a href="https://github.com/treellama/visualmode" target="_blank">Visual Mode.lua</a>)</li>
-				<li>Neither Vasara nor Visual Mode.lua had been substantially updated since 2016</li>
+				<li>Lua texturing utility for Aleph One, based on <a href="https://github.com/Hopper262" target="_blank">@Hopper262</a> and <strong>Ares Ex Machina</strong>&rsquo;s Vasara (which in turn is based on <a href="https://github.com/treellama" target="_blank">@treellama</a> and <a href="https://github.com/jonirons" target="_blank">@jonirons</a>&rsquo; <a href="https://github.com/treellama/visualmode" target="_blank">Visual Mode.lua</a>)</li>
+				<li>At the time I began work on this project, neither Vasara nor Visual Mode.lua had been substantially updated since 2016 (though Visual Mode.lua is now being updated again)</li>
 				<li>Aleph One <span class="decimal">1</span>.<span class="decimal">7</span>&rsquo;s incorporation of several new transfer modes incited me to undertake a serious effort to update it, with a little help from <a href="https://github.com/SolraBizna" target="_blank">@SolraBizna</a> and <a href="https://github.com/murbruksprodukt" target="_blank">@murbruksprodukt</a></li>
 				<li>Several new features and bug fixes, documented in detail in the project repository. Highlights include, but are certainly not limited to:
 					<ul>
-						<li>Much more versatile and finely honed grid settings that provide mapmakers much greater control over texture alignment</li>
+						<li>Much more versatile and finely honed grid settings that provide mapmakers much greater control over texture alignment, including:
+							<ul>
+								<li>Separate X and Y alignment</li>
+								<li>Align textures to the center, left, right, bottom, north, south, east, or west</li>
+								<li>Over a dozen new grid sizes</li>
+							</ul>
+						</li>
 						<li>Overlays that identify the player’s target, which mapmakers can use to speed up their own scripting or to identify problems</li>
 						<li>Aleph One <span class="decimal">1</span>.<span class="decimal">7</span>&rsquo;s six new transfer modes</li>
 						<li>Option to edit transparent sides of the same line independently, allowing them to be lit, aligned, or textured differently, or even for a transparent texture to be applied to only one side of a line</li>
 						<li>Fixes a persistent and highly annoying Lua error that could occur when lights 56 or greater were selected</li>
+						<li>Fixes alignment for <em>most</em> textures placed on previously empty lines (transparent sides still, in certain cases, don&rsquo;t align correctly, but they don&rsquo;t align correctly in any other texturing utility either)</li>
 					</ul>
 				</li>
 				<li>Still a work in progress; several other planned features are not yet fully (or at all) implemented, and several persistent bugs remain in the code</li>

@@ -2,7 +2,7 @@ I&rsquo;m a political science and cybersecurity major from Sarasota, FL. Amateur
 
 I’m currently heavily involved in developing the following code project:
 
-* **[Vasara 2.0b](https://github.com/aaronfreed/vasara/)**: A Lua texturing utility for **[*Marathon* Aleph One](https://alephone.lhowon.org/)** originally created by **[@Hopper262](https://github.com/Hopper262)** and **Ares Ex Machina**, building on **[Visual Mode.lua](https://github.com/treellama/visualmode)**, which in turn was written by **[@jonirons](https://github.com/jonirons)** and **[@treellama](https://github.com/treellama)** and effectively functions like the command line to Vasara&rsquo;s GUI. As neither plugin had been substantially updated since 2016, I&rsquo;ve taken it upon myself (with a bit of assistance from **[@SolraBizna](https://github.com/SolraBizna)** and **[@murbruksprodukt](https://github.com/murbruksprodukt)**) to update Vasara to implement new Aleph One features, fix longstanding bugs, and add new features to make texturing easier. This remains a work in progress; when I&rsquo;m satisfied with the results, I may backport some of these changes to Visual Mode.lua. This will only function with Aleph One 1.7 or later, and it is best used with **[Weland](https://github.com/treellama/weland/releases)** (see the readme for an abbreviated setup guide, or my content creation guide directly below for a detailed one).
+* **[Vasara AF](https://github.com/aaronfreed/vasara/)**: A Lua texturing utility for **[*Marathon* Aleph One](https://alephone.lhowon.org/)**. Based on Vasara by **[@Hopper262](https://github.com/Hopper262)** and **Ares Ex Machina**, which in turn is based on **[Visual Mode.lua](https://github.com/treellama/visualmode)** by **[@jonirons](https://github.com/jonirons)** and **[@treellama](https://github.com/treellama)** (Visual Mode.lua is effectively the command line to Vasara&rsquo;s GUI). At the time I began this project, neither plugin had been substantially updated since 2016, so I took it upon myself (with a bit of assistance from **[@SolraBizna](https://github.com/SolraBizna)** and **[@murbruksprodukt](https://github.com/murbruksprodukt)**) to update Vasara to implement new Aleph One features, fix longstanding bugs, and add new features to make texturing easier. This remains a work in progress; when I&rsquo;m satisfied with the results, I may backport some of these changes to Visual Mode.lua. This will only function with Aleph One 1.7 or later, and it is best used with **[Weland](https://github.com/treellama/weland/releases)** (see the readme for an abbreviated setup guide, or my content creation guide directly below for a detailed one).
 
 Pages currently hosted here:
 
@@ -18,14 +18,14 @@ I&rsquo;ve contributed in varying degrees to the following (mostly) playable gam
 
 * ***[Eternal X](http://eternal.bungie.org/)*** (2018-present): maps, music, sound, writing, scripting, graphics, soundtrack (re)mastering, codirector *(alongside **pfhorrest**, for versions 1.2.1 and later)*
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kiy7CaniLiZSRi-5P-SKEN)
-   * This scenario remains under active development; a final release of version 1.3 is still forthcoming. Five previews of 1.3 have been released; a sixth will likely appear in December 2023 or January 2024.
+   * This scenario remains under active development; a final release of version 1.3 is still forthcoming. We&rsquo;ve released six public previews of 1.3, most recently on 2024-03-07, but still plan to make further revisions to the writing, music, and levels.
 * ***[Apotheosis X](https://simplici7y.com/items/apotheosis-x-5)*** (2020-2023): sound, scripting, testing
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6mOBZaoKUAOqDsfuv-RIneq)
    * Further updates of *Apotheosis X* have not been ruled out but are not currently under active development.
 * ***[Dungeons Presents Hellpak Vol. 1: Not Recommended by Doctors](https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors)*** (2020-2023): maps, scripting, soundtrack mastering, writing, graphics, bug fix releases
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kcfNGN3zh0BcsyaLRFkB0k)
    * [Discord server](https://discord.gg/DTMvjFqtTA)
-   * This is an iteration of creator tbcr&rsquo;s long-running *Dungeons* show, hence its full title. One further (hopefully final) bug fix update for this scenario will be released in December 2023.
+   * This is an iteration of creator tbcr&rsquo;s long-running *Dungeons* show, hence its full title. One further (hopefully final) bug fix update for this scenario is still forthcoming.
 * ***Trojan*** (2020-2021): sound remastering, soundtrack remastering
    * There are multiple versions of this game for Aleph One:
       * [The first](https://simplici7y.com/items/marathon-trojan/) is a direct conversion of the original game files to Aleph One format by Shappie, with which treellama and I assisted. I did not directly create any content involved with this release.
@@ -38,6 +38,7 @@ I&rsquo;m also working on several forthcoming mods:
 
 * ***Dungeons Presents Hellpak Vol. 2: An Exercise in Questionable Taste*** (2023-present, forthcoming): maps, scripting, music, soundtrack mastering, writing
    * [Discord server](https://discord.gg/DTMvjFqtTA)
+   * [Preview of music and levels](https://youtu.be/lebTkbIkt5I) (the first song and the first five levels of this video are my work)
    * We welcome most contributions from anyone, but please don&rsquo;t send us more music; we already have more than five hours, which is more than enough for both both *Vol. 2* and *Vol. 3*&rsquo;s soundtracks.
 * ***Tempus Irae Redux*** (2020-present, forthcoming): maps, music, sound, scripting, writing, soundtrack mastering
    * [Get the original *Tempus Irae* here](http://nardo.bungie.org/alephone.php)
@@ -85,5 +86,7 @@ My knowledge of several of these languages is still only *slightly* more than cu
 You can contact me on Discord at **@Aaron#6608** (or **@aaron6608**). We&rsquo;ll need a server in common if you don&rsquo;t want to wait for me to check my message requests; the **[*Hellpak* Discord](https://discord.gg/DTMvjFqtTA)** and **[*Marathon* Discord](https://discord.gg/NmE66Mhq2a)** are two of your best bets. You can also contact me through my **[YouTube channel](https://youtube.com/@MarathonVidmaster)**. I don&rsquo;t check email often enough for that to be a reliable form of contact.
 
 I&rsquo;m also a member of **[last.fm](http://last.fm/user/Cassandra-Leo)**, **[Rate Your Music](https://rateyourmusic.com/~Cassandra_Leo)**, and several other websites that I check even less often than I check my email; however, those interested in my musical influences may find them enlightening.
+
+Also, in case the insane amount of detail here didn’t make it obvious, I&rsquo;m neurodivergent.
 
 More to come when I feel like updating this further.

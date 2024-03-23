@@ -34,6 +34,32 @@
         --main: #fff;
     }
 }
+@media print {
+    .noprint
+    {
+        display: none !important;
+    }
+    .discography tbody > tr:nth-child(6n+1),
+    .discography tbody > tr:nth-child(6n+4) {
+        break-inside: avoid-page;
+        break-before: auto;
+    }
+    .discography tbody > tr:nth-child(6n),
+    .discography tbody > tr:nth-child(6n+2),
+    .discography tbody > tr:nth-child(6n+3),
+    .discography tbody > tr:nth-child(6n+5) {
+        break-before: avoid-page;
+        break-inside: avoid-page;
+    }
+    h1, h2, h3, h4, h5 {
+        break-after: avoid;
+    }
+}
+@media screen {
+    .noscreen {
+        display: none !important;
+    }
+}
 /* reminder to self about CSS variables:
    two entries (ah! ah! ah!): vertical, horizontal
  three entries (ah! ah! ah!): top, horizontal, bottom
@@ -413,6 +439,7 @@ thead {
 .discography tbody > tr:nth-child(6n+4) > td,
 .discography tbody > tr:nth-child(6n+5) > td {
     background-color: var(--offset-level-1);
+    print-color-adjust: economy;
 }
 .discography tbody > tr:nth-child(6n+1) > td,
 .discography tbody > tr:nth-child(6n+2) > td,
@@ -443,15 +470,19 @@ thead {
 }
 .discography thead {
     background-color: var(--offset-level-1);
+    print-color-adjust: economy;
 }
 .solo > tfoot {
     background-color: var(--offset-level-1);
+    print-color-adjust: economy;
 }
 .multi > tfoot {
     background-color: var(--offset-level-1);
+    print-color-adjust: economy;
 }
 .master > tfoot {
     background-color: var(--offset-level-1);
+    print-color-adjust: economy;
 }
 .compilation > tfoot {
     background-color: var(--background);

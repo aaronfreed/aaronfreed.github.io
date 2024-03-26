@@ -51,13 +51,23 @@
         break-before: avoid-page;
         break-inside: avoid-page;
     }
-    h1, h2, h3, h4, h5 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
         break-after: avoid;
+    }
+    a:visited {
+        color: var(--link);
     }
 }
 @media screen {
     .noscreen {
         display: none !important;
+    }
+    a:visited {
+        color: var(--link-visited);
     }
 }
 /* reminder to self about CSS variables:
@@ -110,7 +120,7 @@ a:link {
     font-weight: var(--bold);
 }
 a:visited {
-    color: var(--link-visited);
+    /*color: var(--link-visited);*/
     font-weight: var(--bold);
 }
 a:link:hover,
@@ -572,8 +582,8 @@ th.right,
 }
 pre,
 code {
-    font-size: 115%;
     font-weight: var(--lightest);
+    font-size: 112.5%;
 }
 .dotted {
     border-bottom: 1px dotted;

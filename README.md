@@ -6,8 +6,11 @@ I’m currently heavily involved in developing the following code project:
 
 Pages currently hosted here:
 
-* **[Beginners’ *Marathon* / Aleph One content creation guide](https://aaronfreed.github.io/mapmaking101.html)**
-* **[Advanced *Marathon* / Aleph One content creation guide](https://aaronfreed.github.io/mapmaking.html)**
+* ***Marathon* / Aleph One Content Creation Guides:**
+** **[Beginners’ guide](https://aaronfreed.github.io/mapmaking101.html)**
+** **[Advanced guide](https://aaronfreed.github.io/mapmaking.html)**
+** **[The Annotated Anvil Help Balloons (updated to work as a ShapeFusion reference)](https://aaronfreed.github.io/anvilhelp.html)**
+** **[Example DefaultNames.txt for ShapeFusion](https://aaronfreed.github.io/defaultnames.html)**
 * **[*Marathon* soundtracks](https://aaronfreed.github.io/soundtracks.html)**
 * **[My discography](https://aaronfreed.github.io/discography.html)**
 * **[My portfolio](https://aaronfreed.github.io/portfolio.html)**

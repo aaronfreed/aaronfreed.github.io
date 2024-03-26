@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>Marathon Mapmaking: Setup, Snafus, & Solutions: Example DefaultNames.txt</title>
+  <link rel="stylesheet" type="text/css" href="css.css">
+  <script>
+function sortTable(table, col, reverse) {
+    var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+        i;
+    reverse = -((+reverse) || -1);
+    tr = tr.sort(function (a, b) { // sort rows
+        return reverse // `-1 *` if want opposite order
+            * (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+                .localeCompare(b.cells[col].textContent.trim(), undefined, {numeric: true})
+               );
+    });
+    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+    var th = table.tHead, i;
+    th && (th = th.rows[0]) && (th = th.cells);
+    if (th) i = th.length;
+    else return; // if no `<thead>` then do nothing
+    while (--i >= 0) (function (i) {
+        var dir = 1;
+        th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+    }(i));
+}
+
+function makeAllSortable(parent) {
+    parent = parent || document.body;
+    var t = parent.getElementsByTagName('table'), i = t.length;
+    while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+</script>
+</head>
+</head>
+<body>
+<header><h1 id="defaultnames">Marathon Mapmaking: Example DefaultNames.txt</h1>
+
+<p>See <a href="mapmaking.html#ShapeFusion">reference</a> on main mapmaking page for complete explanation. Select the monospaced text below, copy it to a new text document, edit to suit your purposes, and save it in your ShapeFusion folder as DefaultNames.txt.</p></header>
+
+<pre># Default names for elements related to ShapeFusion
+#
+# This file lists names for Infinity-like scenarios, based *largely* on the default Lua
+# mnemonics, with exceptions falling into six categories:
+#
+# 1. Anything in [brackets], usually to clarify:
+#     a. stuff I thought might be confusing, or
+#     b. to note which sound classes are empty and which are (AFAIK) not used anywhere
+#        (these are not always the same).
+# 2. Apostrophes, which I added for readability. AFAIK, the only mnemonic that has an
+#    apostrophe is "Lh'owon" in the scenery, which ShapeFusion doesn't have names for.
+# 3. The scare quotes are also not in the mnemonics. I used these for a few sound names
+#    that are incorrect for at least the 16-bit sounds. Unfortunately, the default Lua
+#    mnemonics are what they are.
+# 4. For collections, I added numbers to the start that aren't part of the mnemonics
+#    (no one wants to count collection numbers).
+# 5. Numbers at the end of the sound list, so that if you've added sound classes, you
+#    can select them in your physics models.
+# 6. Tick -> Flappyboi. Clearly the most important change.
+
+
+# collection names (from Lua mnemonics)
+collection 0	0 Interface
+collection 1	1 Weapons in Hand
+collection 2	2 Juggernaut
+collection 3	3 Flappyboi
+collection 4	4 Explosions
+collection 5	5 Hunter
+collection 6	6 Player
+collection 7	7 Items
+collection 8	8 Trooper
+collection 9	9 Fighter
+collection 10	10 Defender
+collection 11	11 Yeti
+collection 12	12 Bob
+collection 13	13 VacBob
+collection 14	14 Enforcer
+collection 15	15 Drone
+collection 16	16 Compiler
+collection 17	17 Water
+collection 18	18 Lava
+collection 19	19 Sewage
+collection 20	20 Jjaro
+collection 21	21 Pfhor
+collection 22	22 Water Scenery
+collection 23	23 Lava Scenery
+collection 24	24 Sewage Scenery
+collection 25	25 Jjaro Scenery
+collection 26	26 Pfhor Scenery
+collection 27	27 Day
+collection 28	28 Night
+collection 29	29 Moon
+collection 30	30 Space
+collection 31	31 Cyborg
+
+
+# shot names (from Lua mnemonics)
+shot 0	Missile
+shot 1	Grenade
+shot 2	Pistol Bullet
+shot 3	Rifle Bullet
+shot 4	Shotgun Bullett
+shot 5	Staff
+shot 6	Staff Bolt
+shot 7	Flamethrower Burst
+shot 8	Compiler Bolt Minor
+shot 9	Compiler Bolt Major
+shot 10	Alien Weapon
+shot 11	Fusion Bolt Minor
+shot 12	Fusion Bolt Major
+shot 13	Hunter
+shot 14	Fist
+shot 15	Armageddon Sphere
+shot 16	Armageddon Electricity
+shot 17	Juggernaut Rocket
+shot 18	Trooper Bullet
+shot 19	Trooper Grenade
+shot 20	Minor Defender
+shot 21	Major Defender
+shot 22	Juggernaut Missile
+shot 23	Minor Energy Drain
+shot 24	Major Energy Drain
+shot 25	Oxygen Drain
+shot 26	Minor Hummer
+shot 27	Major Hummer
+shot 28	Durandal Hummer
+shot 29	Minor Cyborg Ball
+shot 30	Major Cyborg Ball
+shot 31	Ball
+shot 32	Minor Fusion Dispersal
+shot 33	Major Fusion Dispersal
+shot 34	Overloaded Fusion Dispersal
+shot 35	Yeti
+shot 36	Sewage Yeti
+shot 37	Lava Yeti
+shot 38	SMG Bullet
+
+
+
+# sound class names (from Lua mnemonics)
+sound 0	Startup
+sound 1	Teleport In
+sound 2	Teleport Out
+sound 3	Crushed
+sound 4	Nuclear Hard Death [Creak]
+sound 5	Absorbed
+sound 6	Breathing [empty]
+sound 7	Oxygen Warning
+sound 8	Suffocation
+sound 9	Energy Refuel
+sound 10	Oxygen Refuel
+sound 11	Can't Toggle Switch
+sound 12	Switch On
+sound 13	Switch Off
+sound 14	Puzzle Switch [unused]
+sound 15	Chip Insertion
+sound 16	Pattern Buffer
+sound 17	Destroy Control Panel
+sound 18	Adjust Volume
+sound 19	Got Powerup
+sound 20	Get Item
+sound 21	Bullet Ricochet
+sound 22	Metallic Ricochet
+sound 23	Empty Gun
+sound 24	S'pht Door "Opening"
+sound 25	S'pht Door "Closing"
+sound 26	S'pht Door Obstructed
+sound 27	S'pht Platform Starting
+sound 28	S'pht Platform Stopping
+sound 29	Loon
+sound 30	SMG Firing
+sound 31	SMG Reloading
+sound 32	Heavy S'pht Platform Starting
+sound 33	Heavy S'pht Platform Stopping
+sound 34	Fist Hitting
+sound 35	Pistol Firing
+sound 36	Pistol Reloading
+sound 37	Assault Rifle Firing
+sound 38	Grenade Launcher Firing
+sound 39	Grenade Expolding [sic]
+sound 40	Grenade Flyby
+sound 41	Fusion Firing
+sound 42	Fusion Exploding
+sound 43	Fusion Flyby
+sound 44	Fusion Charging
+sound 45	Rocket Exploding
+sound 46	Rocket Flyby
+sound 47	Rocket Firing
+sound 48	Flamethrower
+sound 49	Body Falling
+sound 50	Body Exploding
+sound 51	Bullet Hit Flesh
+sound 52	Fighter Activate
+sound 53	Fighter Wail
+sound 54	Fighter Scream
+sound 55	Fighter Chatter
+sound 56	Fighter Attack
+sound 57	Fighter Projectile Hit
+sound 58	Fighter Projectile Flyby
+sound 59	S'pht Attack
+sound 60	S'pht Death
+sound 61	S'pht Hit
+sound 62	S'pht Projectile Flyby
+sound 63	S'pht Projectile Hit
+sound 64	Cyborg Moving
+sound 65	Cyborg Attack
+sound 66	Cyborg Hit [unused]
+sound 67	Cyborg Death
+sound 68	Cyborg Projectile Bounce
+sound 69	Cyborg Projectile Hit [unused]
+sound 70	Cyborg Projectile Flyby [empty]
+sound 71	Drone Activate
+sound 72	Drone Start Attack
+sound 73	Drone Attack
+sound 74	Drone Dying
+sound 75	Drone Death
+sound 76	Drone Projectile Hit
+sound 77	Drone Projectile Flyby
+sound 78	Bob Wail
+sound 79	Bob Scream
+sound 80	Bob Hit
+sound 81	Bob Chatter
+sound 82	Assimilated Bob Chatter
+sound 83	Bob Trash Talk
+sound 84	Bob Apology
+sound 85	Bob Activation
+sound 86	Bob Clear
+sound 87	Bob Angry
+sound 88	Bob Secure
+sound 89	Bob Kill the Player
+sound 90	Water
+sound 91	Sewage
+sound 92	Lava
+sound 93	Goo
+sound 94	Underwater
+sound 95	Wind
+sound 96	Waterfall
+sound 97	Siren
+sound 98	Fan
+sound 99	S'pht Door [empty]
+sound 100	S'pht Platform
+sound 101	Alien Harmonics [Jjaro Ship]
+sound 102	Heavy S'pht Platform
+sound 103	Light Machinery
+sound 104	Heavy Machinery
+sound 105	Transformer
+sound 106	Sparking Transformer
+sound 107	Water Drip
+sound 108	Walking in Water
+sound 109	Exiting Water
+sound 110	Entering Water
+sound 111	Small Water Splash
+sound 112	Medium Water Splash [empty]
+sound 113	Large Water Splash
+sound 114	Walking in Lava [empty]
+sound 115	Entering Lava
+sound 116	Exiting Lava
+sound 117	Small Lava Splash
+sound 118	Medium Lava Splash [empty]
+sound 119	Large Lava Splash
+sound 120	Walking in Sewage [empty]
+sound 121	Exiting Sewage
+sound 122	Entering Sewage
+sound 123	Small Sewage Splash
+sound 124	Medium Sewage Splash [empty]
+sound 125	Large Sewage Splash
+sound 126	Walking in Goo [empty]
+sound 127	Exiting Goo [empty]
+sound 128	Entering Goo [empty]
+sound 129	Small Goo Splash [empty]
+sound 130	Medium Goo Splash [empty]
+sound 131	Large Goo Splash [empty]
+sound 132	Major Fusion Firing
+sound 133	Major Fusion Charged
+sound 134	Assault Rifle Reloading
+sound 135	Assault Rifle Shell Casings
+sound 136	Shotgun Firing
+sound 137	Shotgun Reloading
+sound 138	Ball Bounce
+sound 139	You Are It
+sound 140	Got Ball
+sound 141	Computer Login
+sound 142	Computer Logout
+sound 143	Computer Page
+sound 144	Heavy S'pht Door
+sound 145	Heavy S'pht Door Opening
+sound 146	Heavy S'pht Door Closing
+sound 147	Heavy S'pht Door Open
+sound 148	Heavy S'pht Door Closed
+sound 149	Heavy S'pht Door Obstructed
+sound 150	Hunter Activate [empty, unused]
+sound 151	Hunter Attack
+sound 152	Hunter Dying [empty, unused]
+sound 153	Hunter Landing
+sound 154	Hunter Exploding
+sound 155	Hunter Projectile Hit
+sound 156	Hunter Projectile Flyby
+sound 157	Enforcer Activate
+sound 158	Enforcer Attack
+sound 159	Enforcer Projectile Hit
+sound 160	Enforcer Projectile Flyby
+sound 161	F'lickta Melee Attack
+sound 162	F'lickta Melee Hit
+sound 163	F'lickta Projectile Attack
+sound 164	F'lickta Projectile Sewage Hit
+sound 165	F'lickta Projectile Sewage Flyby [empty]
+sound 166	F'lickta Projectile Lava Hit
+sound 167	F'lickta Projectile Lava Flyby
+sound 168	F'lickta Dying
+sound 169	Machine Binder
+sound 170	Machine Bookpress
+sound 171	Machine Puncher
+sound 172	Electric Hum
+sound 173	Alarm
+sound 174	Night Wind
+sound 175	Surface Explosion [Thunder]
+sound 176	Underground Explosion
+sound 177	S'pht'Kr Attack
+sound 178	S'pht'Kr Projectile Hit
+sound 179	S'pht'Kr Projectile Flyby
+sound 180	S'pht'Kr [Being] Hit
+sound 181	S'pht'Kr Exploding
+sound 182	Flappyboi Chatter
+sound 183	Flappyboi Falling [empty, unused]
+sound 184	Flappyboi Flapping
+sound 185	Flappyboi Exploding [empty, unused]
+sound 186	Ceiling Lamp Exploding
+sound 187	Pfhor Platform Starting
+sound 188	Pfhor Platform Stopping
+sound 189	Pfhor Platform
+sound 190	Pfhor Door "Opening"
+sound 191	Pfhor Door "Closing"
+sound 192	Pfhor Door Obstructed
+sound 193	Pfhor Door
+sound 194	Pfhor Switch Off
+sound 195	Pfhor Switch On
+sound 196	Juggernaut Firing
+sound 197	Juggernaut Warning
+sound 198	Juggernaut Exploding
+sound 199	Juggernaut Start Attack
+sound 200	Enforcer Exploding
+sound 201	Alien Noise 1 [Pfhor Ship #1]
+sound 202	Alien Noise 2 [Pfhor Ship #2]
+sound 203	VacBob Wail
+sound 204	VacBob Scream
+sound 205	VacBob Hit
+sound 206	VacBob Chatter
+sound 207	Assimilated VacBob Chatter
+sound 208	VacBob Trash Talk
+sound 209	VacBob Apology
+sound 210	VacBob Activation
+sound 211	VacBob Clear
+sound 212	VacBob Angry
+sound 213	VacBob Secure
+sound 214	VacBob Kill the Player
+sound 215	215
+sound 216	216
+sound 217	217
+sound 218	218
+sound 219	219
+sound 220	220
+sound 221	221
+sound 222	222
+sound 223	223
+sound 224	224
+sound 225	225
+sound 226	226
+sound 227	227
+sound 228	228
+sound 229	229
+sound 230	230
+sound 231	231
+sound 232	232
+sound 233	233
+sound 234	234
+sound 235	235
+sound 236	236
+sound 237	237
+sound 238	238
+sound 239	239
+sound 240	240
+sound 241	241
+sound 242	242
+sound 243	243
+sound 244	244
+sound 245	245
+sound 246	246
+sound 247	247
+sound 248	248
+sound 249	249
+sound 250	250
+sound 251	251
+sound 252	252
+sound 253	253
+sound 254	254
+sound 255	255
+
+
+# alien class names (from Lua mnemonics)
+alien 0	Player
+alien 1	Minor Flappyboi
+alien 2	Major Flappyboi
+alien 3	Kamikaze Flappyboi
+alien 4	Minor Compiler
+alien 5	Major Compiler
+alien 6	Minor Invisible Compiler
+alien 7	Major Invisible Compiler
+alien 8	Minor Fighter
+alien 9	Major Fighter
+alien 10	Minor Projectile Fighter
+alien 11	Major Projectile Fighter
+alien 12	Green Bob
+alien 13	Blue Bob
+alien 14	Security Bob
+alien 15	ExplodaBob
+alien 16	Minor Drone
+alien 17	Major Drone
+alien 18	Big Minor Drone
+alien 19	Big Major Drone
+alien 20	Possessed Drone
+alien 21	Minor Cyborg
+alien 22	Major Cyborg
+alien 23	Minor Flame Cyborg
+alien 24	Major Flame Cyborg
+alien 25	Minor Enforcer
+alien 26	Major Enforcer
+alien 27	Minor Hunter
+alien 28	Major Hunter
+alien 29	Minor Trooper
+alien 30	Major Trooper
+alien 31	Mother of All Cyborgs
+alien 32	Mother of All Hunters
+alien 33	Sewage Yeti
+alien 34	Water Yeti
+alien 35	Lava Yeti
+alien 36	Minor Defender
+alien 37	Major Defender
+alien 38	Minor Juggernaut
+alien 39	Major Juggernaut
+alien 40	Tiny Pfhor
+alien 41	Tiny Bob
+alien 42	Tiny Yeti
+alien 43	Green VacBob
+alien 44	Blue VacBob
+alien 45	Security VacBob
+alien 46	ExplodaVacBob
+
+
+# monster class names (from Lua mnemonics)
+class 0	Player
+class 1	Bob
+class 2	MADD
+class 3	Possessed Drone
+class 4	Defender
+class 5	Fighter
+class 6	Trooper
+class 7	Hunter
+class 8	Enforcer
+class 9	Juggernaut
+class 10	Drone
+class 11	Compiler
+class 12	Cyborg
+class 13	ExplodaBob
+class 14	Flappyboi
+class 15	Yeti
+
+
+# damage type names (from Lua mnemonics)
+damage 0	Explosion
+damage 1	Staff
+damage 2	Projectile
+damage 3	Absorbed
+damage 4	Flame
+damage 5	Claws
+damage 6	Alien Weapon
+damage 7	Hulk Slap
+damage 8	Compiler
+damage 9	Fusion
+damage 10	Hunter
+damage 11	Fists
+damage 12	Teleporter
+damage 13	Defender
+damage 14	Yeti Claws
+damage 15	Yeti Projectile
+damage 16	Crushing
+damage 17	Lava
+damage 18	Suffocation
+damage 19	Goo
+damage 20	Energy Drain
+damage 21	Oxygen Drain
+damage 22	Drone
+damage 23	Shotgun
+
+
+
+# effect class names (from Lua mnemonics)
+effect 0	Rocket Explosion
+effect 1	Rocket Contrail
+effect 2	Grenade Explosion
+effect 3	Grenade Contrail
+effect 4	Bullet Ricochet
+effect 5	Alien Weapon Ricochet
+effect 6	Flamethrower Burst
+effect 7	Fighter Blood Splash
+effect 8	Player Blood Splash
+effect 9	Civilian Blood Splash
+effect 10	Assimilated Civilian Blood Splash
+effect 11	Enforcer Blood Splash
+effect 12	Compiler Bolt Minor Detonation
+effect 13	Compiler Bolt Major Detonation
+effect 14	Compiler Bolt Major Contrail
+effect 15	Fighter Projectile Detonation
+effect 16	Fighter Melee Detonation
+effect 17	Hunter Projectile Detonation
+effect 18	Hunter Spark
+effect 19	Minor Fusion Detonation
+effect 20	Major Fusion Detonation
+effect 21	Major Fusion Contrail
+effect 22	Fist Detonation
+effect 23	Minor Defender Detonation
+effect 24	Major Defender Detonation
+effect 25	Defender Spark
+effect 26	Trooper Blood Splash
+effect 27	Water Lamp Breaking
+effect 28	Lava Lamp Breaking
+effect 29	Sewage Lamp Breaking
+effect 30	Alien Lamp Breaking
+effect 31	Metallic Clang
+effect 32	Teleport Object In
+effect 33	Teleport Object Out
+effect 34	Small Water Splash
+effect 35	Medium Water Splash
+effect 36	Large Water Splash
+effect 37	Large Water Emergence
+effect 38	Small Lava Splash
+effect 39	Medium Lava Splash
+effect 40	Large Lava Splash
+effect 41	Large Lava Emergence
+effect 42	Small Sewage Splash
+effect 43	Medium Sewage Splash
+effect 44	Large Sewage Splash
+effect 45	Large Sewage Emergence
+effect 46	Small Goo Splash
+effect 47	Medium Goo Splash
+effect 48	Large Goo Splash
+effect 49	Large Goo Emergence
+effect 50	Minor Hummer Projectile Detonation
+effect 51	Major Hummer Projectile Detonation
+effect 52	Durandal Hummer Projectile Detonation
+effect 53	Hummer Spark
+effect 54	Cyborg Projectile Detonation
+effect 55	Cyborg Blood Splash
+effect 56	Minor Fusion Dispersal
+effect 57	Major Fusion Dispersal
+effect 58	Overloaded Fusion Dispersal
+effect 59	Sewage Yeti Blood Splash
+effect 60	Sewage Yeti Projectile Detonation
+effect 61	Water Yeti Blood Splash
+effect 62	Lava Yeti Blood Splash
+effect 63	Lava Yeti Projectile Detonation
+effect 64	Yeti Melee Detonation
+effect 65	Juggernaut Spark
+effect 66	Juggernaut Missile Contrail
+effect 67	Small Jjaro Splash
+effect 68	Medium Jjaro Splash
+effect 69	Large Jjaro Splash
+effect 70	Large Jjaro Emergence
+effect 71	Civilian Fusion Blood Splash
+effect 72	Assimilated Civilian Fusion Blood Splash
+
+
+
+# weapon class names (from Lua mnemonics)
+weapon 0	Fist
+weapon 1	Pistol
+weapon 2	Fusion Pistol
+weapon 3	Assault Rifle
+weapon 4	Missile Launcher
+weapon 5	Flamethrower
+weapon 6	Alien Weapon
+weapon 7	Shotgun
+weapon 8	Ball
+weapon 9	SMG
+
+# item class names (from Lua mnemonics)
+item 0	Knife
+item 1	Pistol
+item 2	Pistol Ammo
+item 3	Fusion Pistol
+item 4	Fusion Pistol Ammo
+item 5	Assault Rifle
+item 6	Assault Rifle Ammo
+item 7	Assault Rifle Grenades
+item 8	Missile Launcher
+item 9	Missile Launcher Ammo
+item 10	Invisibility
+item 11	Invincibility
+item 12	Infravision
+item 13	Alien Weapon
+item 14	Alien Weapon Ammo
+item 15	Flamethrower
+item 16	Flamethrower Ammo
+item 17	Extravision
+item 18	Oxygen 
+item 19	Single Health
+item 20	Double Health
+item 21	Triple Health
+item 22	Shotgun
+item 23	Shotgun Ammo
+item 24	Key
+item 25	Uplink Chip
+item 26	Light Blue Ball
+item 27	Ball
+item 28	Violet Ball
+item 29	Yellow Ball
+item 30	Brown Ball
+item 31	Orange Ball
+item 32	Blue Ball
+item 33	Green Ball
+item 34	SMG
+item 35	SMG Ammo</pre>
+
+</body>
+</html>

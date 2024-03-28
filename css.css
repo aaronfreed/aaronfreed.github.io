@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --background: #fff;
     --offset-level-1: #eff0ff;
     --offset-level-2: #e0e0ff;
@@ -387,6 +387,34 @@ ol.toc > li > ol > li > ol > li > ol > li:before {
     font-weight: var(--lightest);
     font-family: "Corbel", "Avenir", "Calibri";
     font-style: normal;
+}
+
+/* counters for body of list. also a doozy */
+ol.nestednumbering:not(ul > li), .nestednumbering ol:not(ul > li) {
+    counter-reset: item;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.nestednumbering li:not(ul > li) {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+ol.nestednumbering {margin-left: 0px;}
+ol.nestednumbering > li > h1:before {
+    content: "" counters(item, ".")" \00B7  ";
+    counter-increment: item;
+    font-family: "Corbel", "Avenir", "Calibri";
+}
+ol.nestednumbering > li > ol > li > h2:before {
+    content: "" counters(item, ".")" \00B7  ";
+    counter-increment: item;
+    font-family: "Corbel", "Avenir", "Calibri";
+}
+ol.nestednumbering > li > ol > li > ol > li > h3:before {
+    content: "" counters(item, ".")" \00B7  ";
+    counter-increment: item;
+    font-family: "Corbel", "Avenir", "Calibri";
 }
 
 /* images */

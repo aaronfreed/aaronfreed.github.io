@@ -83,18 +83,19 @@ window.onload = function () {makeAllSortable();};
                     <li><a href="#frames">Frames</a></li>
                 </ol>
             </li>
+			<li><a href="#clone">Clone into Collection</a> <em class="light">(not currently implemented in ShapeFusion)</em></li>
 		</ol>
 	</li>
 </ol>
 
 </header>
-
-<ul>
+<main>
+<ol class="nestednumbering">
 	<li><h1 id="physicsmodels">Physics Models</h1>
-		<ul>
+		<ol>
 			<li><h2 id="anvilaliens">Aliens</h2>
 			The "Aliens" section of the physics model stores information about all of the moving, thinking, and attacking objects in the game, such as monsters and BOBs.
-				<ul>
+				<ol>
 					<li><h3 id="alienappearance">Appearance and Sounds</h3>
 						<ul>
 							<li><strong>Appearance:</strong> The appearance of a character is determined by a graphic collection index, a color table index, and a list of sequence IDs. Select each edit field for more information.
@@ -128,8 +129,8 @@ window.onload = function () {makeAllSortable();};
 								</ul>
 							</li>
 						</ul>
-					</li>
-					<li><h3 id="aliencombat">Combat Settings:</h3>
+					<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>	
+					<li><h3 id="aliencombat">Combat Settings</h3>
 						<ul>
 							<li><strong>Attack Frequency:</strong> The attack frequency indicates how often the character will launch an attack (but not how many projectiles will be fired during that attack). The value measures the number of ticks between attacks (where <span class="decimal">1</span> tick = <span class="decimal">1</span>/<span class="decimal">30</span>th of a second).</li>
 							<li><strong>Melee Attack:</strong> The character will use its melee attack if it is within the melee attack range of the character and a melee attack exists (note that if the Chooses Weapon Randomly flag is checked the character will choose an attack at random).</li>
@@ -149,7 +150,7 @@ window.onload = function () {makeAllSortable();};
 								<ul>
 									<li><strong>Shrapnel Radius:</strong> The shrapnel radius acts like the area of effect of a projectile. Every character within the radius of the character when it dies will suffer the damage described below.</li>
 									<li><strong>Damage Type:</strong> The damage type must be specified so that immunities and weaknesses can be applied to whatever the shrapnel hits. To change immunities and weaknesses, edit the Monsters section of the model.</li>
-									<li><strong>Alien Damage:</strong> If the shrapnel damage is inflicted by the aliens, Marathon needs to know so that it can make the Kindergarten and Easy levels easier, and the Major Damage and Total Carnage levels harder. <em>[The latter part of this is incorrect - Alien damage does not increase above Normal. -Ed.]</em></li>
+									<li><strong>Alien Damage:</strong> If the shrapnel damage is inflicted by the aliens, Marathon needs to know so that it can make the Kindergarten and Easy levels easier, and the Major Damage and Total Carnage levels harder. <em>[The latter part of this is incorrect &ndash; Alien damage does not increase above Normal. -Ed.]</em></li>
 									<li><strong>Base Damage:</strong> The damage base is the minimum amount of damage that will be applied to the target. A random amount between <span class="decimal">0</span> and the damage random (below) will also be applied.</li>
 									<li><strong>Random Damage:</strong> The damage base (above) is the minimum amount of damage that will be applied to the target. A random amount between <span class="decimal">0</span> and the damage random will also be applied. <em>[As far as I can tell, the game actually adds a random number from <span class="decimal">0</span> to (damage random - <span class="decimal">1</span>), inclusive, to the base damage; if damage random is 0, then it just ignores the field. -Ed.]</em></li>
 									<li><strong>Scale:</strong> The shrapnel damage scale should always be <span class="decimal">1</span>.<span class="decimal">0000</span>, if shrapnel is desired.</li>
@@ -162,7 +163,7 @@ window.onload = function () {makeAllSortable();};
 								</ul>
 							</li>
 						</ul>
-					</li>
+					<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>	
 					<li><h3 id="alienphysics">Physical Constants</h3>
 						<ul>
 							<li><strong>Vitality:</strong> The vitality of the character measures how much damage it can endure before dying. Any projectile, polygon effect, or shrapnel effect that causes damage to the character decreases this value.</li>
@@ -191,7 +192,7 @@ window.onload = function () {makeAllSortable();};
 							<li><strong>Carrying Item Type:</strong> When the character dies, if the damage that caused the death was not of type Explosion or Flame, it will create one of the items specified here.</li>
 							<li><strong>Contrail Effect:</strong> The contrail effect, if one is specified, will be played at periodical intervals whenever the character is moving. <em>[As far as I can tell, this too is incorrect: its dependent clause should be struck and replaced with "whenever the character is dying, if the 'delayed hard death' flag is set". -Ed.]</em></li>
 						</ul>
-					</li>
+					<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>	
 					<li><h3 id="alienbehavior">Behavior Settings</h3>
 						<ul>
 							<li><strong>Class:</strong> Every character has a "Class" which is used to determine friend and enemy relationships between the character and the other targets on the map.</li>
@@ -199,7 +200,7 @@ window.onload = function () {makeAllSortable();};
 							<li><strong>Enemies:</strong> Any character class that is checked here will be treated as an "Enemy." The character will immediately attack enemies and will move to decrease the range to any enemy that it is aware of.</li>
 							<li><strong>Flags:</strong> The flags are used to activate a range of useful and interesting behaviors on each character. Some of them require additional numeric fields to be set.
 								<ul>
-									<li>The omniscient flag is used internally by Marathon. You cannot change its value. <em>[I have never seen this flag, but it's in the help strings, so I listed it here. -Ed.]</em></li>
+									<!--<li>The omniscient flag is used internally by Marathon. You cannot change its value. <em>[I have never seen this flag, but it's in the help strings, so I listed it here. -Ed.]</em></li>-->
 									<li><strong>Flies:</strong> If this flag is set, the character can change its height at will instead of staying on the floor.</li>
 									<li><strong>Is Alien:</strong> If this flag is set, Marathon will make this monster tougher on hard difficulty settings and wimpier on easy difficulty settings. <em>[The Aleph One wiki has a <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/Changes-Based-on-Difficulty" target="_blank">complete list of changes</a>. -Ed.]</em></li>
 									<li><strong>Major:</strong> Each monster may have a Major and a Minor variant, which Marathon will choose between in order to make a level harder or easier. If this flag is set, the monster is a Major variant.</li>
@@ -230,7 +231,7 @@ window.onload = function () {makeAllSortable();};
 								</ul>
 							</li>
 						</ul>
-					</li>
+					<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>	
 					<li><h3 id="alienimmunities">Immunities and Weaknesses</h3>
 						<ul>
 							<li><strong>Immunities:</strong> If a character is marked "Immune" to a type of damage, it will suffer no loss of vitality when it is hit by a projectile or shrapnel effect inflicting that class of damage. <em>[It will also not get angry at any monster or player that hits it with said damage type. -Ed.]</em></li>
@@ -284,8 +285,8 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 							<li><strong>Shotgun:</strong> Shotgun damage is specified by the Damage Type field of a projectile or shrapnel effect.</li>
 						</ul>
 					</li>
-				</ul>
-			</li>
+				</ol>
+			<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>	
 			<li><h2 id="anvileffects">Effects</h2>
 			The "Effects" section of the physics model stores information about small animated effects, such as explosions and splashes.
 				<ul>
@@ -301,7 +302,7 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 					<li><strong>Media effect:</strong> This box must be checked if the effect is a "media effect", that is, an impact effect used when a projectile hits a media polygon layer (like a pool of water).</li>
 					<!-- This flag is used internally by Marathon. You should not change it. -->
 				</ul>
-			</li>
+			<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>	
 			<li><h2 id="anvilshots">Shots</h2>
 			The "Shots" section of the physics model stores information about objects that are fired by weapons or monsters and that travel until they hit a target.
 				<ul>
@@ -354,7 +355,7 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 						</ul>
 					</li>
 				</ul>
-			</li>
+			<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>	
 			<li><h2 id="anvilphysics">Physics</h2>
 			The "Physics" section of the physics model stores information about basic constants of the simulation, such as gravity and the player's top speed.
 				<ul>
@@ -385,10 +386,10 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 					<li><strong>Splash height:</strong> The splash height determines the elevation of the viewpoint that is drawn to the screen when the player has died.</li>
 					<li><strong>Half camera separation:</strong> The half-camera separation determines the focal length of the perspective projection. Don't change it unless you know what you're doing.</li>
 				</ul>
-			</li>
+			<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>	
 			<li><h2 id="anvilweapons">Weapons</h2>
 			The "Weapons" section of the physics model stores information about the weapons that players may pick up and use, such as shot type, ammunition, and sounds.
-				<ul>
+				<ol>
 					<li><h3 id="weapondefinition">Weapon Definition</h3>
 						<ul>
 							<li><strong>Item Type:</strong> This field establishes the connection between a type of item (that can be in the map) and a weapon class.</li>
@@ -442,7 +443,8 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 								</ul>
 							</li>
 						</ul>
-					</li>
+
+					<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>
 					<li><h3 id="triggersettings">Trigger Settings</h3>
 						<ul>
 							<li><strong>Main/Secondary Triggers:</strong> Whenever a weapon is fired, Marathon will use the information in a trigger record to create the appropriate effect. Note that the secondary trigger information will not be used unless the weapon is a multi-purpose or dual-purpose weapon.</li>
@@ -470,31 +472,34 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 							<li><strong>Shell casing type:</strong> If the weapon should have a shell-casing animation, select one here. Note that the SMG animation is only available in Marathon Infinity.</li>
 						</ul>
 					</li>
-				</ul>
+				</ol>
 			</li>
-		</ul>
-	</li>
+		</ol>
+
+	<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>	
+	
 	<li><h1 id="anvilsounds">Sounds</h1>
 	Each Sound may contain up to <span class="decimal">5</span> permutations. You may select the Sound to edit from this menu and then select a permutation from the list box, below.
-		<ul>
-			<li><strong><span class="decimal">8</span>-Bit:</strong> Check this button to listen to and edit the <span class="decimal">8</span>-bit (lower-quality, smaller) sounds. <em>[Note that &ldquo;8-bit&rdquo; and &ldquo;16-bit&rdquo; slots are </em>just names<em>. It&rsquo;s entirely possible to put 16-bit sounds into both, or 8-bit sounds into both, or a 16-bit sample in the 8-bit slot and an 8-bit sample in the 16-bit slot (why would you do this? Please don&rsquo;t do this). If a sound is present in only the &ldquo;8-bit&rdquo; slot and the player has 16-bit sound sources selected, Aleph One plays the sound in the &ldquo;8-bit&rdquo; slot. If both are present, it plays the sound in the &ldquo;16-bit&rdquo; slot. If a sound is only present in the &ldquo;16-bit&rdquo; slot and the player has 8-bit sound sources selected, the game won&rsquo;t play a sound. Thus, I </em>strongly recommend always<em> including sounds in the &ldquo;8-bit&rdquo; slot. -Ed.]</em></li>
-			<li><strong><span class="decimal">16</span>-Bit:</strong> Check this button to listen to and edit the <span class="decimal">16</span>-bit (high-quality, larger) sounds. <em>[Again, these are </em>just names<em>; see my note directly above for more. -Ed.]</em></li>
-			<li><strong>List Box:</strong> This list box displays a list of the permutations assigned to the current sound, above. You may change or insert new sounds by choosing "Insert Permutation" from the Sounds menu.</li>
-			<li><strong>Sounds:</strong> This displays the number of permutations stored in the current sound. You may insert new sounds by selecting "Insert Permutation" from the Sounds menu.
-			<!--The Sound Code doesn't seem to do anything.-->
-			<li><strong>Volume:</strong> The Volume setting can be used to play the sound more softly, or more loudly, than all other sounds. <em>[This is incorrect. Counter-intuitively, the Volume setting affects how far away the sound is audible, not its in-game volume. -Ed.]</em></li>
-			<li><strong>Cannot be restarted:</strong> If the cannot be restarted flag is checked, Marathon will check to see if the sound is already being played before playing it again (i.e. the Bob's voices).</li>
-			<!--Does not self-abort flag-->
-			<li><strong>Resists pitch changes:</strong> If the resist pitch changes flag is set, the sound will not be pitch-shifted, even if a monster is trying to pitch change all of its sounds.</li>
-			<li><strong>Can't change pitch:</strong> If the can't change pitch flag is set, the sound will never change pitch.</li>
-			<li><strong>Can't be obstructed:</strong> If the can't be obstructed flag is set, the sound will never be obstructed by walls.</li>
-			<li><strong>Can't be media obstructed:</strong> If the can't be media obstructed flag is set, the sound will never be obstructed by media layers.</li>
-			<li><strong>Is Ambient:</strong> The is ambient flag must be set for Marathon to save memory by not loading ambient sounds if they are disabled in the Marathon Preferences.</li>
-		</ul>
-	</li>
+	<ul>
+		<li><strong><span class="decimal">8</span>-Bit:</strong> Check this button to listen to and edit the <span class="decimal">8</span>-bit (lower-quality, smaller) sounds. <em>[Note that &ldquo;8-bit&rdquo; and &ldquo;16-bit&rdquo; slots are </em>just names<em>. It&rsquo;s entirely possible to put 16-bit sounds into both, or 8-bit sounds into both, or a 16-bit sample in the 8-bit slot and an 8-bit sample in the 16-bit slot (why would you do this? Please don&rsquo;t do this). If a sound is present in only the &ldquo;8-bit&rdquo; slot and the player has 16-bit sound sources selected, Aleph One plays the sound in the &ldquo;8-bit&rdquo; slot. If both are present, it plays the sound in the &ldquo;16-bit&rdquo; slot. If a sound is only present in the &ldquo;16-bit&rdquo; slot and the player has 8-bit sound sources selected, the game won&rsquo;t play a sound. Thus, I </em>strongly recommend always<em> including sounds in the &ldquo;8-bit&rdquo; slot. -Ed.]</em></li>
+		<li><strong><span class="decimal">16</span>-Bit:</strong> Check this button to listen to and edit the <span class="decimal">16</span>-bit (high-quality, larger) sounds. <em>[Again, these are </em>just names<em>; see my note directly above for more. -Ed.]</em></li>
+		<li><strong>List Box:</strong> This list box displays a list of the permutations assigned to the current sound, above. You may change or insert new sounds by choosing "Insert Permutation" from the Sounds menu.</li>
+		<li><strong>Sounds:</strong> This displays the number of permutations stored in the current sound. You may insert new sounds by selecting "Insert Permutation" from the Sounds menu.
+		<!--The Sound Code doesn't seem to do anything.-->
+		<li><strong>Volume:</strong> The Volume setting can be used to play the sound more softly, or more loudly, than all other sounds. <em>[This is incorrect. Counter-intuitively, the Volume setting affects how far away the sound is audible, not its in-game volume. -Ed.]</em></li>
+		<li><strong>Cannot be restarted:</strong> If the cannot be restarted flag is checked, Marathon will check to see if the sound is already being played before playing it again (i.e. the Bob's voices).</li>
+		<!--Does not self-abort flag-->
+		<li><strong>Resists pitch changes:</strong> If the resist pitch changes flag is set, the sound will not be pitch-shifted, even if a monster is trying to pitch change all of its sounds.</li>
+		<li><strong>Can't change pitch:</strong> If the can't change pitch flag is set, the sound will never change pitch.</li>
+		<li><strong>Can't be obstructed:</strong> If the can't be obstructed flag is set, the sound will never be obstructed by walls.</li>
+		<li><strong>Can't be media obstructed:</strong> If the can't be media obstructed flag is set, the sound will never be obstructed by media layers.</li>
+		<li><strong>Is Ambient:</strong> The is ambient flag must be set for Marathon to save memory by not loading ambient sounds if they are disabled in the Marathon Preferences.</li>
+	</ul>
+
+	<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>
 
 	<li><h1 id="anvilshapes">Shapes</h1>
-		<ul>
+		<ol>
 
 			<li><h2 id="anvilbitmaps">Bitmaps and Color Tables</h2>
 				The Bitmaps fields of a Shape file contain the actual image data for the shapes and the color tables used to draw them. You may insert new shapes or change color tables by changing the Bitmaps records.
@@ -503,12 +508,12 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 					<li><strong>Bitmaps:</strong> These are the bitmaps stored in the current collection. Click on one of them and choose Paste from the Edit menu to insert a new graphic, or choose "Import PICT" from the Shape menu to load a PICT graphic.</li>
 					<li><strong>Color Table:</strong> Choose the color table you want to view the current bitmaps with from this menu.</li>
 				</ul>
-			</li>
+			<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>	
 			<li><h2 id="anvilsequences">Frames and Sequences</h2>
 			The Sequences fields of a Shape file contain the lists of frames that are used to animate objects during the game and draw them from multiple perspectives. They also contain information about synchronized sounds to be played during the sequences.
-				<ul>
+				<ol>
 					<li><h3 id="sequences">Sequences</h3>
-                        Frames and Views are organized into Sequences, which is a single action taken by a Marathon character, weapon, or effect. You may edit the sequences here.
+						Frames and Views are organized into Sequences, which is a single action taken by a Marathon character, weapon, or effect. You may edit the sequences here.
 						<ul>
 							<li><strong>Collection:</strong> Select a graphic collection to edit from this menu. Note that not all of the fields visible in the Sequences editor will apply to all collections (especially walls and landscapes).</li>
 							<li><strong>Scale Factor:</strong> If a given sequence does not specify a scale factor, the scale factor given here will be used to scale up the graphics for that collection. <em>[In ShapeFusion, the scale factor must be specified, or it will default to <span class="decimal">0</span> and not display the graphic. Moreover, due to a bug, it sometimes shows you the default scale factor for a new frame for which it hasn't inserted said scale factor. You should always specify this manually when inserting a new frame. -Ed.]</em></li>
@@ -527,7 +532,7 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 							<li><strong>Loop Frame:</strong> If you enter a loop frame index here, the sequence will loop when the index is reached.</li>
 							<li><strong>Key Frame:</strong> Enter a key frame index here to mark when the key frame sound should be played, when damage should be applied, and when monsters should attack.</li>
 						</ul>
-					</li>
+					<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>	
 					<li><h3 id="frames">Frames</h3>
 						<ul>
 							<li>Select a frame from the list here. To create new frames, you must extend the views of a sequence. <em>[This is not true in ShapeFusion, wherein you must create frames independently of sequences. -Ed.]</em></li>
@@ -543,9 +548,14 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 							<!--The world coordinates are visible only for debugging purposes.-->
 						</ul>
 					</li>
-				</ul>
+				</ol>
 			</li>
-			<li><strong>Clone into Collection:</strong> When you "Clone" a collection, all of the bitmaps, color tables, sequences, and frames associated with that collection will be duplicated into the current collection. You may then edit the new collection as you wish. <em>[This functionality does not currently exist in ShapeFusion. -Ed.]</em></li>
-		</ul>
-	</li>
-</ul>
+			<li><h2 id="clone">Clone into Collection</h2>
+				When you "Clone" a collection, all of the bitmaps, color tables, sequences, and frames associated with that collection will be duplicated into the current collection. You may then edit the new collection as you wish. <em>[This functionality does not currently exist in ShapeFusion. -Ed.]</em>
+			</li>
+		</ol>
+
+	<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p></li>
+</ol>
+</main>
+

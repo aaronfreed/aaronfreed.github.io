@@ -9,6 +9,7 @@ Pages currently hosted here:
 * ***Marathon* / Aleph One Content Creation Guides:**
    * **[Beginners’ guide](https://aaronfreed.github.io/mapmaking101.html)**
    * **[Advanced guide](https://aaronfreed.github.io/mapmaking.html)**
+   * **[*Marathon Infinity* Sounds & Sources](marathonsounds.html)**
    * **[The Annotated Anvil Help Balloons (updated to work as a ShapeFusion reference)](https://aaronfreed.github.io/anvilhelp.html)**
    * **[Example DefaultNames.txt for ShapeFusion](https://aaronfreed.github.io/defaultnames.html)**
 * **[*Marathon* soundtracks](https://aaronfreed.github.io/soundtracks.html)**
@@ -42,11 +43,11 @@ I&rsquo;m also working on several forthcoming mods:
 * ***Dungeons Presents Hellpak Vol. 2: An Exercise in Questionable Taste*** (2023-present, forthcoming): maps, scripting, music, soundtrack mastering, writing
    * [Discord server](https://discord.gg/DTMvjFqtTA)
    * [Preview of music and levels](https://youtu.be/lebTkbIkt5I) (the first song and the first five levels of this video are my work)
-   * We welcome most contributions from anyone, but please don&rsquo;t send us more music; we already have more than five hours, which is more than enough for both both *Vol. 2* and *Vol. 3*&rsquo;s soundtracks.
+   * We welcome most contributions from anyone, but please don&rsquo;t send us more music; we already have more than seven hours, which is more than enough for both both *Vol. 2* and *Vol. 3*&rsquo;s soundtracks.
 * ***Tempus Irae Redux*** (2020-present, forthcoming): maps, music, sound, scripting, writing, soundtrack mastering
    * [Get the original *Tempus Irae* here](http://nardo.bungie.org/alephone.php)
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6nVJdLAfq0ZxS6WRv0bC3Fe)
-   * I didn&rsquo;t contribute to the original *Tempus Irae* but have been involved in *Redux*&rsquo;s development since it started in roughly May 2020. *Redux* isn&rsquo;t a straight remaster but more of a modern update; since it significantly changes several levels, players may find it interesting to play both. It also isn&rsquo;t planned to supersede the original *Tempus Irae*; the latter&rsquo;s original Aleph One release will continue to be available on Nardo&rsquo;s website after we release *Redux*. We entered a limited beta test in October 2023 with an aim to release the game in December 2023 or January 2024.
+   * I didn&rsquo;t contribute to the original *Tempus Irae* but have been involved in *Redux*&rsquo;s development since it started in roughly May 2020. *Redux* isn&rsquo;t a straight remaster but more of a modern update; since it significantly changes several levels, players may find it interesting to play both. It also isn&rsquo;t planned to supersede the original *Tempus Irae*; the latter&rsquo;s original Aleph One release will continue to be available on Nardo&rsquo;s website after we release *Redux*. We entered a limited beta test in October 2023 and presently aim to release the game in April 2024.
 * ***Where Monsters Are in Dreams*** (2019-present, forthcoming): maps, music, sound, scripting, soundtrack mastering, writing, graphics, codirector *(alongside **CryoS** and **hypersleep**)*
    * [Website](http://bighouse.bungie.org/wmaid/)
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kB_7qLbTdgia1hiNOoYmEz)

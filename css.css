@@ -155,7 +155,8 @@ strong strong {
 .light strong,
 .light .integer strong,
 .light .decimal strong,
-.bold {
+.bold,
+.bold .integer {
     font-weight: var(--bold);
 }
 .bold strong,

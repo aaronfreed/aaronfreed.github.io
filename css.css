@@ -570,6 +570,37 @@ thead {
     color: var(--offset-level-1);
 }
 
+/* it was a graveyard smash */
+.monstermash table {
+    border: 1px solid var(--offset-level-2);
+}
+.monstermash thead, .monstermash tr:not(:last-child) {
+    border-bottom: 1px solid var(--offset-level-2);
+}
+.monstermash td:not(:first-child), .monstermash th:not(:first-child) {
+    border-left: 1px solid var(--offset-level-2);
+}
+.monstermash tr td:nth-child(1) {
+    font-family: "Corbel", "Avenir", "Calibri", monospace;
+    font-weight: 500;
+    text-align: right;
+}
+.monstermash tr td:nth-child(2) {
+    font-weight: 500;
+}
+.monstermash table.endnotes td:nth-child(1) {
+    font-weight: 500;
+    text-align: right;
+}
+.monstermash table.endnotes td:nth-child(2) {
+    font-weight: 100;
+    text-align: justify;
+}
+/* i have no idea why this works this way but it does. css is a black art */
+.monstermash h1 + ul:not(.sectionbreak + ul) {
+    padding: 0px 0px 8px;
+}
+
 .integer {
     font-family: "Corbel", "Avenir", "Calibri", monospace;
     text-align: right;

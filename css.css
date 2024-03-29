@@ -22,8 +22,8 @@
         --background: #000;
         --offset-level-1: #1c1e36;
         --offset-level-2: #383c6c;
-        --offset-level-3: #383c6c;
-        --offset-level-4: #545aa2;
+        --offset-level-3: #545aa2;
+        --offset-level-4: #7078d8;
         --link: #73e8ff;
         --link-visited: #ff93ff;
         --link-active: #adffad;
@@ -436,18 +436,22 @@ table {
     border-collapse: collapse;
     margin: auto;
 }
-td, th {
+td,
+th {
     padding: 4px 12px;
 }
-.music td, .music th {
+.music td,
+.music th {
     vertical-align: top;
     font-weight: lighter;
     text-align: justify;
 }
-.discography td, .discography th {
+.discography td,
+.discography th {
     padding: 4px 7px;
 }
-.soundtracks td, .soundtracks th {
+.soundtracks td,
+.soundtracks th {
     padding: 4px;
 }
 tbody:nth-child(even) tr:nth-child(even) {
@@ -474,57 +478,60 @@ thead {
 }
 
 /* the discography page has complicated table border stuff */
-.discography tbody > tr:nth-child(6n),
-.discography tbody > tr:nth-child(6n+4) > td,
-.discography tbody > tr:nth-child(6n+5) > td {
-    background-color: var(--offset-level-1);
-    print-color-adjust: economy;
-}
-.discography tbody > tr:nth-child(6n+1) > td,
-.discography tbody > tr:nth-child(6n+2) > td,
-.discography tbody > tr:nth-child(6n+3) > td {
-    background-color: var(--background);
-}
-.discography td:nth-child(1),
-.discography th:nth-child(1) {
-    border-left: 1px solid var(--offset-level-3);
-}
-.discography td:nth-last-child(1),
-.discography th:nth-last-child(1) {
-    border-right: 1px solid var(--offset-level-3);
-}
-.discography thead > tr:nth-child(1),
-.discography tfoot > tr:nth-child(1) {
-    border-top: 1px solid var(--offset-level-3);
-}
-.discography thead > tr:nth-last-child(1),
-.discography tfoot > tr:nth-last-child(1) {
-    border-bottom: 1px solid var(--offset-level-3);
-}
-.discography tbody > tr:nth-child(1) {
-    border-top: 1px solid var(--offset-level-3);
-}
-.discography tbody > tr:nth-child(3n) {
-    border-bottom: 1px solid var(--offset-level-3);
-}
-.discography thead {
-    background-color: var(--offset-level-1);
-    print-color-adjust: economy;
-}
-.solo > tfoot {
-    background-color: var(--offset-level-1);
-    print-color-adjust: economy;
-}
-.multi > tfoot {
-    background-color: var(--offset-level-1);
-    print-color-adjust: economy;
-}
+.multi tbody > tr:nth-child(6n+1),
+.multi tbody > tr:nth-child(6n+2),
+.multi tbody > tr:nth-child(6n+3),
+.solo tbody > tr:nth-child(6n+4),
+.solo tbody > tr:nth-child(6n+5),
+.solo tbody > tr:nth-child(6n+6),
+.compilation tbody > tr:nth-child(6n+4),
+.compilation tbody > tr:nth-child(6n+5),
+.compilation tbody > tr:nth-child(6n+6),
+.master tbody > tr:nth-child(6n+4),
+.master tbody > tr:nth-child(6n+5),
+.master tbody > tr:nth-child(6n+6),
+.solo > thead, 
+.solo > tfoot,
+.compilation > thead,
 .master > tfoot {
     background-color: var(--offset-level-1);
     print-color-adjust: economy;
 }
-.compilation > tfoot {
+.solo tbody > tr:nth-child(6n+1),
+.solo tbody > tr:nth-child(6n+2),
+.solo tbody > tr:nth-child(6n+3),
+.multi tbody > tr:nth-child(6n+4),
+.multi tbody > tr:nth-child(6n+5),
+.multi tbody > tr:nth-child(6n+6),
+.compilation tbody > tr:nth-child(6n+1),
+.compilation tbody > tr:nth-child(6n+2),
+.compilation tbody > tr:nth-child(6n+3),
+.master tbody > tr:nth-child(6n+1),
+.master tbody > tr:nth-child(6n+2),
+.master tbody > tr:nth-child(6n+3),
+.compilation > tfoot,
+.multi > thead,
+.multi > tfoot
+{
     background-color: var(--background);
+}
+.discography td:nth-child(1),
+.discography th:nth-child(1) {
+    border-left: 1px solid var(--offset-level-2);
+}
+.discography td:nth-last-child(1),
+.discography th:nth-last-child(1) {
+    border-right: 1px solid var(--offset-level-2);
+}
+.discography thead > tr:nth-child(1),
+.discography tfoot > tr:nth-child(1),
+.discography tbody > tr:nth-child(1) {
+    border-top: 1px solid var(--offset-level-2);
+}
+.discography thead > tr:nth-last-child(1),
+.discography tfoot > tr:nth-last-child(1),
+.discography tbody > tr:nth-child(3n) {
+    border-bottom: 1px solid var(--offset-level-2);
 }
 .discography thead th {
     font-weight: var(--boldest);
@@ -572,13 +579,21 @@ thead {
 
 /* it was a graveyard smash */
 .monstermash table {
-    border: 1px solid var(--offset-level-2);
+    border: 1px solid var(--offset-level-4);
+}
+.monstermash th {
+    white-space: nowrap;
+    padding: 4px 8px;
+    background: var(--offset-level-2);
+}
+.monstermash td {
+    padding: 4px 8px;
 }
 .monstermash thead, .monstermash tr:not(:last-child) {
-    border-bottom: 1px solid var(--offset-level-2);
+    border-bottom: 1px solid var(--offset-level-4);
 }
 .monstermash td:not(:first-child), .monstermash th:not(:first-child) {
-    border-left: 1px solid var(--offset-level-2);
+    border-left: 1px solid var(--offset-level-4);
 }
 .monstermash tr td:nth-child(1) {
     font-family: "Corbel", "Avenir", "Calibri", monospace;

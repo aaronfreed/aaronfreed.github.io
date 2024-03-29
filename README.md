@@ -8,15 +8,27 @@ Pages currently hosted here:
 
 * ***Marathon* / Aleph One Content Creation Guides:**
    * **[Beginners’ guide](https://aaronfreed.github.io/mapmaking101.html)**
+      * What editors to use, how to set them up, what guides to follow to get started making content, what those guides get wrong or leave out, and what to do once you&rsquo;ve mastered the basics.
    * **[Advanced guide](https://aaronfreed.github.io/mapmaking.html)**
+      * In the process of being split up. A guide to some intractable problems that weren&rsquo;t documented anywhere else and how you can fix them.
    * **[*Marathon Infinity* Sounds & Sources](marathonsounds.html)**
+      * Invaluable information for anyone working with <em>Marathon Infinity</em>&rsquo;s sound file &ndash; or anyone curious where many of its sounds came from.
    * **[The Annotated Anvil Help Balloons (updated to work as a ShapeFusion reference)](https://aaronfreed.github.io/anvilhelp.html)**
+      * Based on the help strings for Anvil, Bungie&rsquo;s official physics, shapes, and sound file editor; with corrections and amendments for its modern replacement ShapeFusion.
    * **[Example DefaultNames.txt for ShapeFusion](https://aaronfreed.github.io/defaultnames.html)**
+      * Customize almost every ShapeFusion string to match your own scenario&rsquo;s data.
+   * **[Monster Placement in the *Marathon* Trilogy](https://aaronfreed.github.io/marathonmonsters.html)**
+      * A case study into how restricting variety within individual levels sometimes, counterintuitively, leads to more variety across an entire game.
 * **[*Marathon* soundtracks](https://aaronfreed.github.io/soundtracks.html)**
+   * Remixes and arrangements of Alexander Seropian&rsquo;s soundtrack for <em>Marathon</em> (1994), plus soundtracks for several major <em>Marathon</em> scenarios. I have personally remastered many of these.
 * **[My discography](https://aaronfreed.github.io/discography.html)**
+   * Including <em>Marathon</em> content, covers, and original material alike.
 * **[My portfolio](https://aaronfreed.github.io/portfolio.html)**
-* **[Hathor&rsquo;s timeline in *Eternal X* 1.3 (major spoilers)](https://aaronfreed.github.io/hathortimeline.html)** (please don&rsquo;t read this unless you&rsquo;ve completed a recent build of *Eternal X* 1.3: it spoils several of the game&rsquo;s major plot twists, and you&rsquo;ll lack the context to grasp their emotional significance)
-* **[*Marathon Istoria*: Conversations with the Dead (major spoilers)](https://aaronfreed.github.io/istoria_body_messages.html)**: A catalog of all Yellow Crystal messages in the Aleph One scenario *Istoria*, the keywords used to display them, and the locations of all 28 bodies in the scenario. (Again, please don&rsquo;t read this until you&rsquo;ve finished *Istoria* at least once.)
+   * An overview of my creative output from the past several years, with a heavy focus on <em>Marathon</em> content I&rsquo;ve worked on.
+* **[Hathor&rsquo;s timeline in *Eternal X* 1.3 (major spoilers)](https://aaronfreed.github.io/hathortimeline.html)**
+   * Please don&rsquo;t read this unless you&rsquo;ve completed a recent build of *Eternal X* 1.3: it spoils several of the game&rsquo;s major plot twists, and you&rsquo;ll lack the context to grasp their emotional significance.
+* **[*Marathon Istoria*: Conversations with the Dead (major spoilers)](https://aaronfreed.github.io/istoria_body_messages.html)**
+   * A catalog of all Yellow Crystal messages in the Aleph One scenario *Istoria*, the keywords used to display them, and the locations of all 28 bodies in the scenario. (Again, please don&rsquo;t read this until you&rsquo;ve finished *Istoria* at least once.)
 
 I&rsquo;ve contributed in varying degrees to the following (mostly) playable game mods. (Dates refer to my involvement with each project rather than its entire development cycle, though in a few cases these are identical.) See the *Marathon* soundtracks page above for links to soundtracks.
 

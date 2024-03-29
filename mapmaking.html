@@ -49,20 +49,11 @@ window.onload = function () {makeAllSortable();};
 
   <p>This guide contains overviews of common problems creators may face (and solutions thereto), plus links to editors, other useful guides/resources, and communities where users may be able to find solutions to problems not covered here. It&rsquo;s meant to help troubleshoot several problems with <em>Marathon</em> content creation that, as far as I know, aren&rsquo;t documented anywhere else well, if at all.</p>
 
-<h1 id="bio">Who are you and what qualifies you to write this?</h1>
-
-  <p>I&rsquo;m Aaron; I&rsquo;m likely best-known in the community for co-directing <em><a href="http://eternal.bungie.org/development" target="_blank">Eternal</a></em>, though I&rsquo;ve also worked in some capacity (not always mapping-related) on current and forthcoming mods like <em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em>, <em><a href="https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors" target="_blank">Hellpak</a></em>, <em>Tempus Irae Redux</em>, <em>Where Monsters Are in Dreams</em>, <em>Marathon Chronicles</em>&hellip;basically, I&rsquo;ve been busy mapping for this engine off and on since about <span class="decimal">1997</span>, during which I&rsquo;ve acquired all kinds of stupid arcane knowledge about it. Have you ever heard of ambient light delta? Neither had Aleph One&rsquo;s developers until I pointed it out. I&rsquo;m not saying that because I think it&rsquo;s worth being proud of having acquired so much useless and pointless knowledge, but what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me&hellip; oh, sorry, that&rsquo;s <em>Taken</em>. Anyway, I feel Aleph One content creation should have a lower barrier to entry, so here&rsquo;s an attempt to create a reference for solutions to some of its frustrating problems.</p>
-
-  <p>If you wish to contact me, the best way is via Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@Aaron#<span class="decimal">6608</span></strong>, though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I&rsquo;d recommend this only if you notice errors/omissions in this document (or have suggestions for additions; I can credit you for all three). If you need help, it&rsquo;s best to ask in <strong>#marathon-general</strong>, <strong>#forge</strong>, or <strong>#tech-support</strong> (<strong>#development</strong> is for engine/editor development). I&rsquo;m also on the <a href="https://pfhorums.com" target="_blank">Pfhorums</a> (as <a href="https://pfhorums.com/memberlist.php?mode=viewprofile&u=6618" target="_blank">The Man</a>) and <a href="https://reddit.com/r/marathon/" target="_blank">Reddit</a> (as <a href="https://reddit.com/u/aaronnotarobot" target="_blank">u/aaronnotarobot</a>), but I can&rsquo;t promise to respond to messages on either quickly.</p>
-
-  <p>You may also be interested in my <a href="soundtracks.html"><em>Marathon</em> soundtracks page</a>, which contains some technical information about remastering music and sounds that may be helpful to those working on sounds or music. A lot of my own creative work, much of which is <em>Marathon</em>-related, may be found on my <a href="discography.html">discography</a> and <a href="portfolio.html">portfolio</a> pages.</p>
- 
 <h1 id="toc">Table of Contents</h1>
 
   <ol class="toc">
-    <li><a href="#bio">Author Info</a></li>
+    <li><a href="#top">Introduction</a></li>
     <li><a href="#toc">Table of Contents</a> (you&rsquo;re looking at it?)</li>
-    <li><a href="#thanks">Acknowledgements</a></li>
     <li><a href="#resources">Resources</a>
       <ol>
         <li><a href="#resourcesa1">Aleph One Content Editing (<em>Marathon <span class="decimal">2</span></em>/<em>Infinity</em> Format)</a></li>
@@ -169,23 +160,11 @@ window.onload = function () {makeAllSortable();};
       </ol>-->
     </li>
     <li><a href="#defaultnames">Example DefaultNames.txt</a></li>
+    <li><a href="#thanks">Acknowledgements</a></li>
+    <li><a href="#bio">Author Info</a></li>
     <li><a href="#endnotes">Endnotes</a></li>
   </ol>
 
-<h1 id="thanks">Acknowledgements</h2>
-
-  <ul>
-    <li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
-    <li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
-    <li><strong>Solra Bizna</strong> for an incomprehensible amount of programming help, including the CSS that makes this exact page follow your computer&rsquo;s dark mode settings.</li>
-    <li><strong>W&rsquo;rkncacnter</strong> for pointing out a sound source that eluded me (namely the fighter death).</li>
-    <li>The numerous mapmakers I&rsquo;ve learned from or been influenced by over the years. I couldn&rsquo;t possibly hope to list them all, but <strong>James Hastings-Trew</strong>, <strong>CryoS</strong>, <strong>hypersleep</strong>, <strong>RyokoTK</strong>, <strong>windbreaker</strong>, <strong>Don-Martin Antell</strong>, <strong>Drictelt</strong>, <strong>Mike Trinder</strong>, <strong>Jason Harper</strong>, <strong>Chris Lund</strong>, <strong>Courtney Evans</strong>, <strong>Frank Rooke</strong>, <strong>Devon Belcher</strong>, <strong>Borzz</strong>, <strong>Rich Dierkes</strong>, <strong>Shebob</strong>, <strong>Jason Jones</strong>, <strong>Greg Kirkpatrick</strong>, <strong>Randy Reddig</strong>, <strong>Antonio de Llamas</strong>, and <strong>FM</strong> have to number among them.</li>
-    <li>The numerous people who have helped maintain <strong>Aleph One</strong> over the years.</li>
-    <li><strong>Bungie</strong>, for obvious reasons.</li> 
-  </ul>
-
-  <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
-  
 </header>
 
 <h1 id="resources">Resources</h1>
@@ -1202,7 +1181,29 @@ window.onload = function () {makeAllSortable();};
 
 <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
-<hr />
+<h1 id="thanks">Acknowledgements</h2>
+
+  <ul>
+    <li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
+    <li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
+    <li><strong>Solra Bizna</strong> for an incomprehensible amount of programming help, including the CSS that makes this exact page follow your computer&rsquo;s dark mode settings.</li>
+    <li><strong>W&rsquo;rkncacnter</strong> for pointing out a sound source that eluded me (namely the fighter death).</li>
+    <li>The numerous mapmakers I&rsquo;ve learned from or been influenced by over the years. I couldn&rsquo;t possibly hope to list them all, but <strong>James Hastings-Trew</strong>, <strong>CryoS</strong>, <strong>hypersleep</strong>, <strong>RyokoTK</strong>, <strong>windbreaker</strong>, <strong>Don-Martin Antell</strong>, <strong>Drictelt</strong>, <strong>Mike Trinder</strong>, <strong>Jason Harper</strong>, <strong>Chris Lund</strong>, <strong>Courtney Evans</strong>, <strong>Frank Rooke</strong>, <strong>Devon Belcher</strong>, <strong>Borzz</strong>, <strong>Rich Dierkes</strong>, <strong>Shebob</strong>, <strong>Jason Jones</strong>, <strong>Greg Kirkpatrick</strong>, <strong>Randy Reddig</strong>, <strong>Antonio de Llamas</strong>, and <strong>FM</strong> have to number among them.</li>
+    <li>The numerous people who have helped maintain <strong>Aleph One</strong> over the years.</li>
+    <li><strong>Bungie</strong>, for obvious reasons.</li> 
+  </ul>
+
+  <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
+  
+<h1 id="bio">Who are you and what qualifies you to write this?</h1>
+
+  <p>I&rsquo;m Aaron; I&rsquo;m likely best-known in the community for co-directing <em><a href="http://eternal.bungie.org/development" target="_blank">Eternal</a></em>, though I&rsquo;ve also worked in some capacity (not always mapping-related) on current and forthcoming mods like <em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em>, <em><a href="https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors" target="_blank">Hellpak</a></em>, <em>Tempus Irae Redux</em>, <em>Where Monsters Are in Dreams</em>, <em>Marathon Chronicles</em>&hellip;basically, I&rsquo;ve been busy mapping for this engine off and on since about <span class="decimal">1997</span>, during which I&rsquo;ve acquired all kinds of stupid arcane knowledge about it. Have you ever heard of ambient light delta? Neither had Aleph One&rsquo;s developers until I pointed it out. I&rsquo;m not saying that because I think it&rsquo;s worth being proud of having acquired so much useless and pointless knowledge, but what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me&hellip; oh, sorry, that&rsquo;s <em>Taken</em>. Anyway, I feel Aleph One content creation should have a lower barrier to entry, so here&rsquo;s an attempt to create a reference for solutions to some of its frustrating problems.</p>
+
+  <p>If you wish to contact me, the best way is via Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@Aaron#<span class="decimal">6608</span></strong>, though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I&rsquo;d recommend this only if you notice errors/omissions in this document (or have suggestions for additions; I can credit you for all three). If you need help, it&rsquo;s best to ask in <strong>#marathon-general</strong>, <strong>#forge</strong>, or <strong>#tech-support</strong> (<strong>#development</strong> is for engine/editor development). I&rsquo;m also on the <a href="https://pfhorums.com" target="_blank">Pfhorums</a> (as <a href="https://pfhorums.com/memberlist.php?mode=viewprofile&u=6618" target="_blank">The Man</a>) and <a href="https://reddit.com/r/marathon/" target="_blank">Reddit</a> (as <a href="https://reddit.com/u/aaronnotarobot" target="_blank">u/aaronnotarobot</a>), but I can&rsquo;t promise to respond to messages on either quickly.</p>
+
+  <p>You may also be interested in my <a href="soundtracks.html"><em>Marathon</em> soundtracks page</a>, which contains some technical information about remastering music and sounds that may be helpful to those working on sounds or music. A lot of my own creative work, much of which is <em>Marathon</em>-related, may be found on my <a href="discography.html">discography</a> and <a href="portfolio.html">portfolio</a> pages.</p>
+ 
+  <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
 <h1 id="endnotes">Endnotes</h1>
 

@@ -3,40 +3,7 @@
 <head>
   <title>Marathon Mapmaking: Setup, Snafus, & Solutions</title>
   <link rel="stylesheet" type="text/css" href="css.css">
-  <script>
-function sortTable(table, col, reverse) {
-    var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
-        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
-        i;
-    reverse = -((+reverse) || -1);
-    tr = tr.sort(function (a, b) { // sort rows
-        return reverse // `-1 *` if want opposite order
-            * (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
-                .localeCompare(b.cells[col].textContent.trim(), undefined, {numeric: true})
-               );
-    });
-    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
-}
-
-function makeSortable(table) {
-    var th = table.tHead, i;
-    th && (th = th.rows[0]) && (th = th.cells);
-    if (th) i = th.length;
-    else return; // if no `<thead>` then do nothing
-    while (--i >= 0) (function (i) {
-        var dir = 1;
-        th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
-    }(i));
-}
-
-function makeAllSortable(parent) {
-    parent = parent || document.body;
-    var t = parent.getElementsByTagName('table'), i = t.length;
-    while (--i >= 0) makeSortable(t[i]);
-}
-
-window.onload = function () {makeAllSortable();};
-</script>
+  <script src="sorttable.js"></script>
 </head>
 <body>
 
@@ -116,18 +83,20 @@ window.onload = function () {makeAllSortable();};
             <li><a href="#radii">Radii and Rotations for <span class="decimal">1</span> WU-long Sides with Regular Polygons</a></li>
           </ol>
         </li>
-        <li><a href="#mapcomplexity">Map Complexity: A Case Study</a></li>
+        <!--<li><a href="#mapcomplexity">Map Complexity: A Case Study</a></li>-->
       </ol>
     </li>
+    <li><a href="#appendices">Appendices</a></li>
+    <!--
     <li><a href="#sounds">Sounds</a>
-      <!--<ol>
+        <ol>
         <li><a href="#sounds-general">General Notes</a></li>
         <li><a href="#soundids">Vanilla <em>Infinity</em> Sound ID List</a></li>
         <li><a href="#soundsources">Sound Sources</a></li>
-      </ol>-->
+      </ol>
     </li>
     <li><a href="#anvilhelp">The Annotated Anvil Help Balloons</a>
-<!--      <ol>
+      <ol>
         <li><a href="#physicsmodels">Physics Models</a>
           <ol>
             <li><a href="#anvilaliens">Aliens</a>
@@ -157,9 +126,10 @@ window.onload = function () {makeAllSortable();};
             <li><a href="#anvilsequences">Frames and Sequences</a></li>
           </ol>
         </li>
-      </ol>-->
+      </ol>
     </li>
     <li><a href="#defaultnames">Example DefaultNames.txt</a></li>
+    -->
     <li><a href="#thanks">Acknowledgements</a></li>
     <li><a href="#bio">Author Info</a></li>
     <li><a href="#endnotes">Endnotes</a></li>
@@ -1006,178 +976,16 @@ window.onload = function () {makeAllSortable();};
 
 <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
-<h2 id="mapcomplexity">Map Complexity: A Case Study</h2>
-
-<p>I mentioned above in <strong>General Notes</strong> that map indices are the primary limit on map complexity, and advised avoiding too many small polygons in a given area. Two more reasons to avoid too much complexity, though, are to avoid frustration and to improve map performance. This case study largely centers on the once-infamous <em>Eternal</em> level <strong>&lsquo;Where Giants Have Fallen&rsquo;</strong>. I apologize in advance for the length and number of images; the main lessons can be summarized as &lsquo;Don&rsquo;t overuse greeble or sound objects,&rsquo; but I think illustrating what that means would be helpful.</p>
-
-<p>This is a Weland view of <em>Eternal Mark V</em>&rsquo;s &lsquo;Where Giants Have Fallen&rsquo;:</p>
-
-<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Draw Mode" src="wghf-mv-0.png" width="512" height="512" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Draw Mode"></div>
-
-<p>(I&rsquo;ve hidden all objects besides players and sounds; they&rsquo;re the only important objects for our purposes.)</p>
-
-<p>And here are some Vasara screenshots, with a few major caveats. First, I took these screenshots with <span class="decimal">1</span>.<span class="decimal">3</span> shapes because I wanted consistency between them. Second, the map had basically no shading to speak of, so I ran Auto Shade on it to make it easier to parse. Third, I rarely use hi-res textures when texturing, due partly to loading times, but mostly to memory usage: the game must load all textures into memory when it loads Vasara or Visual Mode.lua. That adds up fast. That said, the <em>Mark V</em> version looks like this:</p>
-
-<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1" src="wghf-mv-1.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1"></div>
-
-<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2" src="wghf-mv-2.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2"></div>
-
-<p>Beyond the obvious issues of the terrible shading and the sea of gray, this version, despite featuring only <span class="decimal">509</span> polygons, is relatively slow for several reasons I&rsquo;ll discuss at length soon.</p>
-
-<p><em>Eternal X</em> <span class="decimal">1</span>.<span class="decimal">0</span> overhauled the level, but the new version was even slower. It looked like this in Weland:</p>
-
-<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode" src="wghf-10-0.png" width="512" height="512" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode"></div>
-
-<p>Despite only featuring <span class="decimal">836</span> polygons, this one chugs even worse. Both of these maps have a major problem: they have essentially no negative space. To oversimplify slightly, Aleph One is effectively a <a href="https://en.wikipedia.org/wiki/Portal_rendering" target="_blank">portal engine</a>. Portal engines have several strengths, but rendering large, complex outdoor spaces is not one of them. As a result, whenever the player gets near one of the edges of one of these maps, the performance plummets, even on modern boxes. With frame interpolation now a feature in Aleph One, it&rsquo;s simply not acceptable for maps to get fewer than <span class="decimal">60</span> fps on modern boxes, at least in areas of the map players are meant to access. Here are a few screenshots of what the <span class="decimal">1</span>.<span class="decimal">0</span> version looks like (again with <span class="decimal">1</span>.<span class="decimal">3</span> textures):</p>
-
-<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1" src="wghf-10-1.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1"></div>
-
-<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #2" src="wghf-10-2.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #2"></div>
-
-<p>You get as close to the feeling of having climbed up a huge mountain as Aleph One is likely to provide (which is admittedly not very close), but as you can see in the first screenshot, the frame rate is bad in places, the texturing is quite dull, and the lamps just look silly. Subsequent releases of the map fixed the latter two aspects, but the frame rate problem persisted, which was the primary impetus for CryoS and me to remake it from scratch.</p>
-
-<p>Our new version &ndash; and I&rsquo;ll withhold its polygon count for a moment &ndash; looks like this in Weland (minus some map writing that I&rsquo;ve removed to make the screenshot more legible):</p>
-
-<div class="image"><img alt="Where Giants Have Fallen 1.3 Draw Mode" src="wghf-13-0.png" width="512" height="512" title="Where Giants Have Fallen 1.3 Draw Mode"></div>
-
-<p>This screenshot has some conspicuous features. First, the new map is a lot more circular. (I worked on the design, to the surprise of no one who knows my style.) Secondly, there are <span id="ftnt_ref03" class="dotted" title="One of the crossbeams has gone out of skew on the treadle.">crossbeams<a href="#ftnt03">&#8317;&sup3;&#8318;</a></span> extending through playable areas of the map that break it up into sextants (septants if we count the central structure). It&rsquo;s hard to tell from a Weland screenshot, but these actually create an optical illusion to make players think they&rsquo;re seeing much further than they actually are; landscape textures mostly conceal players&rsquo; inability to actually see past the crossbeams. Here are some screenshots I took in Vasara:</p>
-
-<div class="image"><img alt="Where Giants Have Fallen 1.3 Visual Mode #1" src="wghf-13-1.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Visual Mode #1"></div>
-
-<div class="image"><img alt="Where Giants Have Fallen 1.3 Visual Mode #2" src="wghf-13-2.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Visual Mode #2"></div>
-
-<p>Again, we notice a few things immediately. First, this area still <em>looks</em> wide-open, even though it constricts the view to a much smaller area; second, despite having a snow script (which can be a drag on performance), the map gets a much better frame rate. And here&rsquo;s where I&rsquo;ll note its polygon count: <span class="decimal">2</span>,<span class="decimal">028</span>. That&rsquo;s <em>not</em> a typo.</p>
-
-<p>But doesn&rsquo;t it look like you can see over the crossbeams? Yes. This <del>trick</del> <em>illusion</em> employs &lsquo;<span class="decimal">5</span>D space&rsquo;, the engine&rsquo;s ability to overlap spaces in X/Y/Z coordinates. It can do this because it uses <em>four</em> dimensions to render spaces: <strong>X</strong>, <strong>Y</strong>, <strong>Z</strong>, and <strong>polygon</strong>. This is related to it being a portal engine: it determines what to render based on how lines connect polygons. I feel a bit like a magician revealing how to perform <del>a trick</del> <em>an illusion</em> here, but&hellip; if you could get to the area of the crossbeam with the blue pillars, you&rsquo;d see this:</p>
-
-<div class="image"><img alt="Where Giants Have Fallen 1.3 Crossbeam Top #1" src="wghf-13-3.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Crossbeam Top #1"></div>
-
-<p>And the other side of the crossbeam would look like this:</p>
-
-<div class="image"><img alt="Where Giants Have Fallen 1.3 Crossbeam Top #2" src="wghf-13-4.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Crossbeam Top #2"></div>
-
-<p>The only thing to the left of the last screenshot, and to the right of the one prior, is a landscape-textured wall. (These regions are, of course, inaccessible to players.) As long as we constrict players&rsquo; view to a reasonable segment of the level, the frame rate rarely dips below <span class="decimal">120</span> fps and almost never below <span class="decimal">60</span> (on my eight-year-old Windows box, no less).</p>
-
-<p>But in a few cases, players can actually escape the constriction. One is if they fall to their deaths, which, who cares. In a few others, though, they can use the assault rifle (or a similar weapon) to boost themselves over onto the edges of the crossbeams, whence they&rsquo;ll get a clear view of two sextants at once:</p>
-
-<div class="image"><img alt="Where Giants Have Fallen 1.3 Crossbeam Top #3" src="wghf-13-5.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Crossbeam Top #3"></div>
-
-<p>Or even jump to an island, where they can see the sky texture clipping their view of the crossbeam in places:</p>
-
-<div class="image"><img alt="Where Giants Have Fallen 1.3 Island View" src="wghf-13-6.png" width="600" height="300" title="Where Giants Have Fallen 1.3 Island View"></div>
-
-<p>I consider these secrets, so I don&rsquo;t really care to fix them. More importantly, this goes to show how important negative space is to keeping the frame rate within acceptable bounds.</p>
-
-<p>There are other seams in the level design as well, but there&rsquo;s usually enough going on in the level to distract players from noticing. Another case relates to the blue pillars. Two are clearly visible from here:</p>
-
-<div class="image"><img alt="Where Giants Have Fallen 1.3: Now you see it&hellip;" src="wghf-13-7.png" width="600" height="300" title="Where Giants Have Fallen 1.3: Now you see it&hellip;"></div>
-
-<p>However, if we step a bit to the left:</p>
-
-<div class="image"><img alt="Where Giants Have Fallen 1.3:&hellip;now you don&rsquo;t." src="wghf-13-8.png" width="600" height="300" title="Where Giants Have Fallen 1.3: &hellip;now you don&rsquo;t."></div>
-
-<p>The rear one disappears. This is a result of the engine&rsquo;s lack of any sort of &lsquo;bridges and balconies&rsquo;, owing to how it connects polygons. We can&rsquo;t stack one polygon on top of another, and the passage under the crossbeam blocks off the view above it, so the blue pillar in the back is impossible to show. Despite this, I felt the blue pillars were worth including, since they conceal more conspicuous blemishes in the view from the top of the level (which are again consequences of the passages beneath the crossbeams).</p>
-
-<p>This is the largest map I&rsquo;ve constructed (mostly) from scratch that never once exceeded the map index limit. There are a few reasons for this, but I think the two biggest are ambient sounds and greeble.</p>
-
-<p>Greeble, in this case, refers to map detailing. This may not be evident to anyone else but me, but the newest &lsquo;Where Giants Have Fallen&rsquo; was effectively my second attempt to make a pastiche of <em>Phoenix</em>&rsquo;s &lsquo;Stone Temple Pilates&rsquo;, in this case combining its style with those of <em>Apotheosis X</em> (hence all the hexagons, though I already felt obligated to use them due to Tacticus&rsquo; brilliant sky texture), <em>Eternal</em> itself, and of course my own compulsion to make everything as circular as possible. (Ironically, the one part I didn&rsquo;t create from scratch is the central structure, the most circular part of the whole level &ndash; that was CryoS&rsquo; work.)</p>
-
-<div class="image"><img alt="&lsquo;Il grande silenzio&rsquo; Draw Mode" src="igs-0.png" width="512" height="512" title="&lsquo;Il grande silenzio&rsquo; 1.3 Draw Mode"></div>
-
-<p>My first pastiche of &lsquo;Stone Temple Pilates&rsquo;, seen above in its current, unfinished state (<span class="decimal">1</span>,<span class="decimal">763</span> polygons), went a lot differently. It&rsquo;s called &lsquo;Il grande silenzio&rsquo; (after a brilliant Corbucci spaghetti western with an equally brilliant Morricone soundtrack); it&rsquo;s from a project that, as of this writing, still hasn&rsquo;t been released: <em>Tempus Irae Redux</em>. There are obvious stylistic differences; besides the mathematical regularity of &lsquo;Where Giants Have Fallen&rsquo;, we can also see how much more densely the sound, points, and polygons are clustered in many areas (and, as a direct consequence, how much less densely they are clustered in others).</p>
-
-<p>In fact, I first ran out of map indices at around <span class="decimal">1</span>,<span class="decimal">500</span> polygons and had to prune dozens of sound objects. This is partly because I set almost all my doors to Heavy S&rsquo;pht Doors (well, Heavy Italian Doors, as we might call them in <em>Tempus Irae Redux</em>), which each require sound objects to keep their ambient sounds from cutting off; and partly because I was pastiching two brilliant mapmakers: <strong>RyokoTK</strong> and my co-conspirator <strong>James Hastings-Trew</strong>, who both tend to employ a lot of greeble. However, I greatly exceeded the amount they use, reasoning, &lsquo;Modern computers can handle it.&rsquo; (This was before Aleph One had frame interpolation.) But thanks to the snow script and the comparative lack of negative space, the map chugs in a few places:</p>
-
-<div class="image"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #1" src="igs-1.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #1"></div>
-
-<div class="image"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #2" src="igs-2.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #2"></div>
-
-<p>My further revisions will require me to fix that, which in turn will likely require removing a few parts and reconstructing them from scratch &ndash; a painful process.</p>
-
-<p>It might be more instructive to show screenshots of these maps consecutively:</p>
-
-<div class="image"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #3" src="igs-3.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #3"></div>
-
-<div class="image"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #9" src="wghf-13-9.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #9"></div>
-
-<p>Now, do I think the geometry in the <em>Tempus</em> map looks cool? Yes. Do I think it looks that much cooler than the <em>Eternal</em> map? Certainly not enough to justify the added difficulty it caused me.</p>
-
-<p>In any case, my main point in showing these screenshots isn&rsquo;t to show off the maps; it&rsquo;s to show how overusing greeble causes problems. It looks cool, but you have to know when to stop. There&rsquo;s probably no way to learn this except trial and error, but I urge you to examine mapmakers&rsquo; styles closely. Ryoko doesn&rsquo;t really use as much greeble as I thought he did when I made &lsquo;Il grande silenzio&rsquo;. As an example, &lsquo;Monument to All Your Sins&rsquo; from <em>Starlight</em>, which I believe has the highest polygon count of any map he&rsquo;s released (<span class="decimal">1</span>,<span class="decimal">843</span>):</p>
-
-<div class="image"><img alt="&lsquo;Monument to All Your Sins&rsquo; Draw Mode" src="monument-0.png" width="512" height="512" title="&lsquo;Monument to All Your Sins&rsquo; Draw Mode"></div>
-
-<p>Yes, there are parts with plenty of greeble, but there&rsquo;s really nothing approaching the density I was using. Regardless of this, when I got his permission to adapt it for <em>Chronicles</em> as a solo level, he warned me that it was near the map index limit, that he&rsquo;d had to simplify it during construction, and that it&rsquo;d probably crash if I added too much complexity or many more ambient sound objects &ndash; which, in fact, is exactly what happened. In any case, here are two views from the southeast of &lsquo;Monument&rsquo; (which, to be clear, is just about the upper bound of the detail I&rsquo;d suggest trying to incorporate):</p>
-
-<div class="image"><img alt="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #1" src="monument-1.png" width="600" height="300" title="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #1"></div>
-
-<div class="image"><img alt="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #2" src="monument-2.png" width="600" height="300" title="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #2"></div>
-
-<p>There are parts with a lot of greeble, but others with almost none. And it looks fantastic. This was a lesson I hadn&rsquo;t absorbed when I made &lsquo;Il grande silenzio&rsquo;, but &lsquo;Where Giants Have Fallen&rsquo; hammered it home for me.</p>
-
-<p>While I&rsquo;m at it, here&rsquo;s &lsquo;Stone Temple Pilates&rsquo;, which has <span class="decimal">1</span>,<span class="decimal">771</span> polygons. The Weland view looks like this:</p>
-
-<div class="image"><img alt="&lsquo;Stone Temple Pilates&rsquo; Draw Mode" src="stp-0.png" width="512" height="512" title="&lsquo;Stone Temple Pilates&rsquo; Draw Mode"></div>
-
-<p>I think the map&rsquo;s overall polygon density is comparable to what I wanted &lsquo;Il grande silenzio&rsquo; to have, but there are some important differences. The clusters of small polygons aren&rsquo;t as densely packed together, and while there are a lot of sound objects, Ryoko has few of them near polygon clusters as dense as mine. (Scroll back to the &lsquo;Il grande silenzio&rsquo; Weland screenshot again and look at how densely clustered the polygons in some of my houses are.)</p>
-
-<p>&lsquo;Stone Temple Pilates&rsquo; looks like this in Vasara:</p>
-
-<div class="image"><img alt="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #1" src="stp-1.png" width="600" height="300" title="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #1"></div>
-
-<div class="image"><img alt="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2" src="stp-2.png" width="600" height="300" title="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2"></div>
-
-<p>This map slaps. Its influence on &lsquo;Il grande silenzio&rsquo; is probably especially obvious; its influence on &lsquo;Where Giants Have Fallen&rsquo; is probably less so, besides the isolated islands from which Enforcers snipe at players, but it&rsquo;s nonetheless there.</p>
-
-<p>Anyway, back to &lsquo;Where Giants Have Fallen&rsquo;. The other way I saved a lot of headache was by using as few sound objects as possible; to avoid using too many, I even went to the trouble of making new ambient sounds that combined existing sounds. For instance, this sound may <em>say</em> <strong>&lsquo;Waterfall&rsquo;</strong>:</p>
-
-<div class="image"><img alt="Sound in Where Giants Have Fallen" src="wghf-13-a.png" width="800" height="416" title="Sound in Where Giants Have Fallen"></div>
-
-<p>However, the following script is merged in with the level:</p>
-
-<pre>&lt;marathon&gt;
-    &lt;!-- puts Water &amp; Waterfall into the Waterfall slot --&gt;
-    &lt;sounds&gt;
-        &lt;ambient index=&quot;6&quot; sound=&quot;251&quot;/&gt;
-    &lt;/sounds&gt;
-    &lt;!-- sets Water to use the Waterfall sound slot --&gt;
-    &lt;liquid index=&quot;0&quot;&gt;
-        &lt;sound type=&quot;5&quot; which=&quot;6&quot;/&gt;
-    &lt;/liquid&gt;
-&lt;/marathon&gt;
-</pre>
-
-<p>As the comments suggest, this reassigns the &lsquo;Waterfall&rsquo; ambient sound to use a separate ambient sound created by mix-pasting the &lsquo;Water&rsquo; and &lsquo;Waterfall&rsquo; sounds; and it plays that sound whenever the player&rsquo;s head is above water. This effectively cuts in half the number of sounds I need water to play, and cuts the number of sound objects on the level by eight.</p>
-
-<p>On dream versions of the level (of which there are four), I embed another script to combine the &lsquo;Wind&rsquo; sound (or, in one case, the &lsquo;Wind &amp; Rain&rsquo; sound) and the &lsquo;Dream Ambience&rsquo; sound, thus saving further sound objects. The expense is three sound slots and about a dozen megabytes in the sound file (these sounds are CD-quality stereo, so they&rsquo;re not small), but hey, that&rsquo;s nothing by the standards of modern games, and it means the map runs without any issues.</p>
-
-<p>We can boil down the lessons of this case study to two major principles:</p>
-
-<ol>
-  <li>Don&rsquo;t overuse greeble.</li>
-  <li>Don&rsquo;t overuse sound objects.</li>
-</ol>
-
-<p>However, if I just wrote that &ndash; or even &lsquo;don&rsquo;t overuse greeble and sound objects so you don&rsquo;t run out of map indices&rsquo; &ndash; you might not grasp what &lsquo;overuse&rsquo; means. Hopefully, you at least now have reference points.</p>
-
-<p>An even better understanding can come from looking at <em><a href="https://simplici7y.com/items/starlight" target="_blank">Starlight</a></em>, <em><a href="https://simplici7y.com/items/marathon-phoenix-2" target="_blank">Phoenix</a></em>, and the <a href="http://eternal.bungie.org/development" target="_blank">latest preview build of <em>Eternal</em></a> (and <em>Tempus Irae Redux</em>, once it comes out) yourself. Learning from others is one of the best ways to improve. <strong>RyokoTK</strong>&rsquo;s other works (<em><a href="https://simplici7y.com/items/kindred-spirits" target="_blank">Kindred Spirits</a></em>, <em><a href="https://simplici7y.com/items/paradise-lost" target="_blank">Paradise Lost</a></em>, <em><a href="https://simplici7y.com/items/second-quest" target="_blank">Second Quest</a></em>, etc.) are also well worth looking at, as are the works of mappers like <strong>windbreaker</strong> (<em><a href="https://lochnits.com/marathon/istoria/">Istoria</a></em>, <em><a href="https://simplici7y.com/items/imperium" target="_blank">Imperium</a></em>, <em><a href="https://simplici7y.com/items/infra-apogee" target="_blank">Infra Apogee</a></em>, <em><a href="https://simplici7y.com/items/caustic-dystopia" target="_blank">Caustic Dystopia</a></em>, etc.); <strong>James Hastings-Trew</strong> and <strong>Borzz</strong> (<em><a href="https://simplici7y.com/items/megiddo-game" target="_blank">Megiddo Game</a></em>, <em><a href="http://nardo.bungie.org/alephone.php" target="_blank">Tempus Irae</a></em>, etc.); <strong>hypersleep</strong> and <strong>CryoS</strong> (<em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em>); and of course <strong>Bungie</strong> and <strong>Double Aught</strong> themselves. It&rsquo;s worth not just marveling at the pretty sights, but also closely considering where they use greeble and sounds and &ndash; just as importantly &ndash; where they don&rsquo;t.</p>
-
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
-
-<h1 id="sounds"><span id="sounds-general"></span><span id="soundids"></span><span id="soundsources"></span>Sounds</h1>
-
-<p>This section has moved to <a href="marathonsounds.html">aaronfreed.github.io/marathonsounds.html</a>. Please update your links.</p>
-
-<h1 id="anvilhelp">The Annotated Anvil Help Balloons</h1>
-
-<p>This section has moved to <a href="anvilhelp.html">aaronfreed.github.io/anvilhelp.html</a>. Please update your links.</p>
-
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
-
-<h1 id="defaultnames">Example DefaultNames.txt</h1>
-
-<p>This section has moved to <a href="defaultnames.html">aaronfreed.github.io/defaultnames.html</a>. Please update your links.</p>
-
-<p>(See <a href="#ShapeFusion">reference</a> above.)</p>
+<h1 id="appendices">Appendices</h1>
+
+I have split several sections off onto their own pages. Please update your links accordingly:
+
+<ul>
+  <li><strong id="mapcomplexity">Map Complexity: A Case Study</strong> has moved to <a href="mapcomplexity.html">aaronfreed.github.io/mapcomplexity.html</a>.</li>
+  <li>The <strong id="sounds"><span id="sounds-general"></span><span id="soundids"></span><span id="soundsources"></span>Sounds</strong> section has moved to <a href="marathonsounds.html">aaronfreed.github.io/marathonsounds.html</a>.</li>
+  <li><strong id="anvilhelp">The Annotated Anvil Help Balloons</strong> has moved to <a href="anvilhelp.html">aaronfreed.github.io/anvilhelp.html</a>.</li>
+  <li><strong id="defaultnames">Example DefaultNames.txt</strong> (see <a href="#ShapeFusion">reference</a> above) has moved to <a href="defaultnames.html">aaronfreed.github.io/defaultnames.html</a>.</p>
+</ul>
 
 <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a></p>
 
@@ -1222,10 +1030,6 @@ window.onload = function () {makeAllSortable();};
     <tr>
       <td class="integer"><a href="#ftnt_ref02" id="ftnt02"><strong>2</strong></a></td>
       <td>What, you don&rsquo;t have a third hand? Then you must not be Zaphod Beeblebrox.</td>
-    </tr>
-    <tr>
-      <td class="integer"><a href="#ftnt_ref03" id="ftnt03"><strong>3</strong></a></td>
-      <td>One of the crossbeams has gone out of skew on the treadle.</td>
     </tr>
   </tbody>
 </table>

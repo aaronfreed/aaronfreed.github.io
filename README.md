@@ -11,6 +11,8 @@ Pages currently hosted here:
       * What editors to use, how to set them up, what guides to follow to get started making content, what those guides get wrong or leave out, and what to do once you&rsquo;ve mastered the basics.
    * **[Advanced guide](https://aaronfreed.github.io/mapmaking.html)**
       * In the process of being split up. A guide to some intractable problems that weren&rsquo;t documented anywhere else and how you can fix them.
+   * **[Map Complexity: A Case Study](mapcomplexity.html)**
+      * A lengthy examination of *Eternal*&rsquo;s &ldquo;Where Giants Have Fallen&rdquo;, *Tempus Irae Redux*&rsquo;s &ldquo;Il grande silenzio&rdquo;, *Phoenix*&rsquo;s &ldquo;Stone Temple Pilates&rsquo;s, and *Starlight*&rsquo;s &ldquo;Monument to All Your Sins&rdquo; that attempts to demonstrate how much map detail is too much and how much is just enough.
    * **[*Marathon Infinity* Sounds & Sources](marathonsounds.html)**
       * Invaluable information for anyone working with <em>Marathon Infinity</em>&rsquo;s sound file &ndash; or anyone curious where many of its sounds came from.
    * **[The Annotated Anvil Help Balloons (updated to work as a ShapeFusion reference)](https://aaronfreed.github.io/anvilhelp.html)**

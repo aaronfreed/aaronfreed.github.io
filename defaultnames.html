@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-  <title>Marathon Mapmaking: Setup, Snafus, & Solutions: Example DefaultNames.txt</title>
-  <link rel="stylesheet" type="text/css" href="css.css">
+	<title>Marathon Mapmaking: Setup, Snafus, & Solutions: Example DefaultNames.txt</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
 </head>
-<body>
+<body class="defaultnames">
 <header><h1 id="defaultnames">Marathon Mapmaking: Example DefaultNames.txt</h1>
 
-<p>See <a href="mapmaking.html#ShapeFusion">reference</a> on main mapmaking page for complete explanation. Select the monospaced text below, copy it to a new text document, edit to suit your purposes, and save it in your ShapeFusion folder as DefaultNames.txt.</p></header>
+<p>See <a href="mapmaking.html#ShapeFusion">reference</a> on main mapmaking page for complete explanation. Customize your ShapeFusion strings in the following six easy steps:</p>
 
-<pre># Default names for elements related to ShapeFusion
+<ol>
+    <li>Select the monospaced text between the table of contents and the links at the bottom of the page.</li>
+    <li>Copy it.</li>
+    <li>Create a new <em>plaintext</em> document.</li>
+    <li>Paste the text you just copied.</li>
+    <li>Edit it to suit your purposes.</li>
+    <li>Save it in your ShapeFusion folder as <code>DefaultNames.txt</code> (<em>plaintext</em> format, <em>not</em> <code>.rtf</code>, <code>.doc</code>, <code>.pdf</code>, or similar).</li>
+</ol>
+
+<h1 id="toc">Table of Contents</h1>
+<ol class="toc">
+	<li><a href="#top">Page Intro</a></li>
+	<li><a href="#toc">Table of Contents</a> (you&rsquo;re looking at it)</li>
+	<li><a href="#intro">DefaultNames.txt</a>
+		<ol>
+			<li><a href="#shapes">Shape Collections</a></li>
+			<li><a href="#shots">Shots</a></li>
+			<li><a href="#sounds">Sounds</a></li>
+			<li><a href="#monsters">Monster Types</a></li>
+			<li><a href="#monsterclasses">Monster Classes</a></li>
+			<li><a href="#damage">Damage</a></li>
+			<li><a href="#effects">Effects</a></li>
+			<li><a href="#weapons">Weapons</a></li>
+			<li><a href="#items">Items</a></li>
+		</ol>
+	</li>
+</ol>
+</header>
+
+<pre id="intro"># Default names for elements related to ShapeFusion
 #
 # This file lists names for Infinity-like scenarios, based *largely* on the default Lua
 # mnemonics, with exceptions falling into six categories:
@@ -30,6 +59,7 @@
 # 6. Tick -> Flappyboi. Clearly the most important change.
 
 
+</pre><pre name="shapes">
 # collection names (from Lua mnemonics)
 collection 0	0 Interface
 collection 1	1 Weapons in Hand
@@ -65,6 +95,7 @@ collection 30	30 Space
 collection 31	31 Cyborg
 
 
+</pre><pre name="shots">
 # shot names (from Lua mnemonics)
 shot 0	Missile
 shot 1	Grenade
@@ -107,7 +138,7 @@ shot 37	Lava Yeti
 shot 38	SMG Bullet
 
 
-
+</pre><pre name="sounds">
 # sound class names (from Lua mnemonics)
 sound 0	Startup
 sound 1	Teleport In
@@ -367,6 +398,7 @@ sound 254	254
 sound 255	255
 
 
+</pre><pre name="monsters">
 # alien class names (from Lua mnemonics)
 alien 0	Player
 alien 1	Minor Flappyboi
@@ -417,6 +449,7 @@ alien 45	Security VacBob
 alien 46	ExplodaVacBob
 
 
+</pre><pre name="monsterclasses">
 # monster class names (from Lua mnemonics)
 class 0	Player
 class 1	Bob
@@ -436,6 +469,7 @@ class 14	Flappyboi
 class 15	Yeti
 
 
+</pre><pre name="damage">
 # damage type names (from Lua mnemonics)
 damage 0	Explosion
 damage 1	Staff
@@ -463,7 +497,7 @@ damage 22	Drone
 damage 23	Shotgun
 
 
-
+</pre><pre name="effects">
 # effect class names (from Lua mnemonics)
 effect 0	Rocket Explosion
 effect 1	Rocket Contrail
@@ -540,7 +574,7 @@ effect 71	Civilian Fusion Blood Splash
 effect 72	Assimilated Civilian Fusion Blood Splash
 
 
-
+</pre><pre name="weapons">
 # weapon class names (from Lua mnemonics)
 weapon 0	Fist
 weapon 1	Pistol
@@ -553,6 +587,8 @@ weapon 7	Shotgun
 weapon 8	Ball
 weapon 9	SMG
 
+
+</pre><pre name="items">
 # item class names (from Lua mnemonics)
 item 0	Knife
 item 1	Pistol
@@ -589,7 +625,9 @@ item 31	Orange Ball
 item 32	Blue Ball
 item 33	Green Ball
 item 34	SMG
-item 35	SMG Ammo</pre>
+item 35	SMG Ammo
+</pre>
 
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="mapmaking.html">Beginners&rsquo; mapmaking guide</a> &middot; <a href="mapmaking.html">Advanced mapmaking guide</a> &middot; <a href="/">Website index</a></p>
 </body>
 </html>

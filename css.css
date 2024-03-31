@@ -660,6 +660,18 @@ code {
     font-weight: var(--lightest);
     font-size: 112.5%;
 }
+.defaultnames pre {
+    margin: 0px;
+    padding: 0px;
+}
+.defaultnames pre:first-of-type {
+    margin: 0px;
+    padding: 12px 0px 0px;
+}
+.defaultnames pre:last-of-type {
+    margin: 0px;
+    padding: 0px 0px 8px;
+}
 .dotted {
     border-bottom: 1px dotted;
 }

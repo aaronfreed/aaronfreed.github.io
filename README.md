@@ -10,7 +10,9 @@ Pages currently hosted here:
    * **[Beginners’ guide](https://aaronfreed.github.io/mapmaking101.html)**
       * What editors to use, how to set them up, what guides to follow to get started making content, what those guides get wrong or leave out, and what to do once you&rsquo;ve mastered the basics.
    * **[Advanced guide](https://aaronfreed.github.io/mapmaking.html)**
-      * In the process of being split up. A guide to some intractable problems that weren&rsquo;t documented anywhere else and how you can fix them.
+      * In the process of being split up. A guide to some intractable problems that weren&rsquo;t documented anywhere else and ways to fix them.
+   * **[Circles and *Marathon* Mapmaking](marathoncircles.html)**
+      * Aleph One can&rsquo;t *exactly* use circles, but it can create rough approximations. I&rsquo;m kind of (in)famous for using them in my maps. I address a few ways to create them and provide some tips for using them effectively, including a table to produce regular polygons with several common side counts and side lengths of 1 World Units.
    * **[Map Complexity: A Case Study](mapcomplexity.html)**
       * A lengthy examination of *Eternal*&rsquo;s &ldquo;Where Giants Have Fallen&rdquo;, *Tempus Irae Redux*&rsquo;s &ldquo;Il grande silenzio&rdquo;, *Phoenix*&rsquo;s &ldquo;Stone Temple Pilates&rdquo;, and *Starlight*&rsquo;s &ldquo;Monument to All Your Sins&rdquo; that attempts to demonstrate how much map detail is too much and how much is just enough.
    * **[*Marathon Infinity* Sounds & Sources](marathonsounds.html)**

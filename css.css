@@ -106,62 +106,62 @@ body {
 .soundtracks strong,
 .soundtracks a:link,
 .soundtracks a:visited,
-.soundtracks h4 {
+.soundtracks :where(h1, h2, h3, h4) {
     font-weight: var(--bold);
     font-family: "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 }
 
 /* link stuff */
-a {
+
+a:where(:link, :visited):where(:not(:hover, :active)) {
     text-decoration: none;
 }
 a:link {
     color: var(--link);
-    font-weight: var(--bold);
 }
 a:visited {
-    /*color: var(--link-visited);*/
-    font-weight: var(--bold);
+    color: var(--link-visited);
 }
-a:link:hover,
-a:visited:hover {
-    text-decoration: underline;
+a:where(:link, :visited):hover {
     color: var(--link-hover);
 }
-a:link:active,
-a:visited:active {
+a:where(:link, :visited):active {
     color: var(--link-active);
-}
-a:link>strong,
-a:visited>strong {
-    font-weight: var(--boldest);
 }
 
 /* define font weights */
-strong {
+strong,
+a:link,
+a:visited,
+.bold,
+.light :where(.integer, .decimal, .number, .date) :where(strong, .bold, a:link, a:visited),
+.light :where(strong, .bold, a:link, a:visited) :where(.integer, .decimal, .number, .date),
+:where(.bold, strong, a:link, a:visited) :where(.integer, .decimal, .number, .date),
+:where(.integer, .decimal, .number, .date) :where(.bold, strong, a:link, a:visited) {
     font-weight: var(--bold);
 }
-strong strong {
+.light :where(strong, .bold, a:link, a:visited) {
+    font-weight: var(--medium);
+}
+
+:is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited)
+{
     font-weight: var(--boldest);
 }
 .light {
     font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
     font-weight: var(--lightest);
 }
-.light .integer, .light .decimal {
+.light .integer:not(a:link, a:visited, a:hover, a:active),
+.light .decimal:not(a:link, a:visited, a:hover, a:active) {
     font-family: "Corbel", "Avenir", "Calibri", monospace;
     font-weight: var(--lightest);
 }
-.light strong,
-.light .integer strong,
-.light .decimal strong,
-.bold,
-.bold .integer {
-    font-weight: var(--bold);
-}
 .bold strong,
-.strong a,
-a .strong {
+.strong a:link,
+.strong a:visited,
+a:link strong,
+a:visited .strong {
     font-weight: var(--boldest);
 }
 
@@ -178,45 +178,41 @@ h5
 }
 .music h1 {
     font-size: 30px;
-    margin: 16px 0px 8px;
 }
 .music h2 {
     font-size: 24px;
-    margin: 16px 0px 8px;
 }
 .music h3 {
     font-size: 18px;
-    margin: 16px 0px 8px;
 }
 .music h4 {
     font-size: 16px;
+}
+.music :where( h1, h2, h3, h4) {
     margin: 16px 0px 8px;
 }
 .accent {
     color: var(--heading-color);
 }
-.discography h1,
-.discography h2,
-.discography h3,
-.discography h4 {
+.discography :where(h1, h2, h3, h4)
+{
     text-align: center;
 }
 
+.portfolio :where(h1, h2, h3, h4) {
+    margin: 24px 0px 8px;
+}
 .portfolio h1 {
     font-size: 36px;
-    margin: 24px 0px 8px;
 }
 .portfolio h2 {
     font-size: 30px;
-    margin: 24px 0px 8px;
 }
 .portfolio h3 {
     font-size: 24px;
-    margin: 24px 0px 8px;
 }
 .portfolio h4 {
     font-size: 18px;
-    margin: 24px 0px 8px;
 }
 .portfolio h2.first,
 .portfolio h3.first,
@@ -230,10 +226,10 @@ h5
     margin: 0px 0px 8px;
 }
 
-
-/* paragraph and div stuff */
+/* paragraph, div, and list stuff */
 div,
-p {
+p,
+li {
     margin: 8px 0px;
 }
 .upperpara {
@@ -242,9 +238,7 @@ p {
 .lowerpara {
     margin: 8px 0px 0px;
 }
-.discography p,
-.soundtracks p,
-.portfolio p {
+:where(.discography, .soundtracks, .portfolio) p {
     margin: 12px 0px 6px;
 }
 .discography p.upperpara {
@@ -266,10 +260,6 @@ blockquote.wide {
     margin: 12px 30px 6px;
 }
 
-/* lists */
-li {
-    margin: 8px 0px;
-}
 ul,
 ol {
     margin: 4px 0px 4px 30px;
@@ -391,7 +381,7 @@ ol.toc > li > ol > li > ol > li > ol > li:before {
 }
 
 /* counters for body of list. also a doozy */
-ol.nestednumbering:not(ul > li), .nestednumbering ol:not(ul > li) {
+:where(.nestednumbering ol, ol.nestednumbering):not(ul > li) {
     counter-reset: item;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -401,7 +391,9 @@ ol.nestednumbering li:not(ul > li) {
     margin-top: 4px;
     margin-bottom: 4px;
 }
-ol.nestednumbering {margin-left: 0px;}
+ol.nestednumbering {
+    margin-left: 0px;
+}
 ol.nestednumbering > li > h1:before {
     content: "" counters(item, ".")" \00B7  ";
     counter-increment: item;
@@ -440,18 +432,15 @@ td,
 th {
     padding: 4px 12px;
 }
-.music td,
-.music th {
+.music :where(td, th) {
     vertical-align: top;
     font-weight: lighter;
     text-align: justify;
 }
-.discography td,
-.discography th {
+.discography :where(td, th) {
     padding: 4px 7px;
 }
-.soundtracks td,
-.soundtracks th {
+.soundtracks :where(td, th) {
     padding: 4px;
 }
 tbody:nth-child(even) tr:nth-child(even) {
@@ -470,26 +459,15 @@ thead {
     font-weight: var(--bold);
     background-color: var(--offset-level-1);
 }
-.endnotes td,
-.endnotes th {
+.endnotes :where(td, th) {
     padding: 4px;
     vertical-align: top;
     font-weight: var(--lightest);
 }
 
 /* the discography page has complicated table border stuff */
-.multi tbody > tr:nth-child(6n+1),
-.multi tbody > tr:nth-child(6n+2),
-.multi tbody > tr:nth-child(6n+3),
-.solo tbody > tr:nth-child(6n+4),
-.solo tbody > tr:nth-child(6n+5),
-.solo tbody > tr:nth-child(6n+6),
-.compilation tbody > tr:nth-child(6n+4),
-.compilation tbody > tr:nth-child(6n+5),
-.compilation tbody > tr:nth-child(6n+6),
-.master tbody > tr:nth-child(6n+4),
-.master tbody > tr:nth-child(6n+5),
-.master tbody > tr:nth-child(6n+6),
+.multi tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
+:is(.solo, .compilation, .master) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
 .solo > thead, 
 .solo > tfoot,
 .compilation > thead,
@@ -497,39 +475,24 @@ thead {
     background-color: var(--offset-level-1);
     print-color-adjust: economy;
 }
-.solo tbody > tr:nth-child(6n+1),
-.solo tbody > tr:nth-child(6n+2),
-.solo tbody > tr:nth-child(6n+3),
-.multi tbody > tr:nth-child(6n+4),
-.multi tbody > tr:nth-child(6n+5),
-.multi tbody > tr:nth-child(6n+6),
-.compilation tbody > tr:nth-child(6n+1),
-.compilation tbody > tr:nth-child(6n+2),
-.compilation tbody > tr:nth-child(6n+3),
-.master tbody > tr:nth-child(6n+1),
-.master tbody > tr:nth-child(6n+2),
-.master tbody > tr:nth-child(6n+3),
+.multi tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
+:is(.solo, .compilation, .master) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
 .compilation > tfoot,
 .multi > thead,
 .multi > tfoot
 {
     background-color: var(--background);
 }
-.discography td:nth-child(1),
-.discography th:nth-child(1) {
+.discography :is(td, th):nth-child(1) {
     border-left: 1px solid var(--offset-level-2);
 }
-.discography td:nth-last-child(1),
-.discography th:nth-last-child(1) {
+.discography :is(td, th):nth-last-child(1) {
     border-right: 1px solid var(--offset-level-2);
 }
-.discography thead > tr:nth-child(1),
-.discography tfoot > tr:nth-child(1),
-.discography tbody > tr:nth-child(1) {
+.discography :is(thead, tfoot, tbody) > tr:nth-child(1) {
     border-top: 1px solid var(--offset-level-2);
 }
-.discography thead > tr:nth-last-child(1),
-.discography tfoot > tr:nth-last-child(1),
+.discography :is(thead, tfoot) > tr:nth-last-child(1),
 .discography tbody > tr:nth-child(3n) {
     border-bottom: 1px solid var(--offset-level-2);
 }
@@ -538,14 +501,14 @@ thead {
 }
 .discography tfoot th {
     font-weight: var(--bold);
+    font-size: 13px;
 }
 
 /* the istoria body messages also have some pretty complicated stuff */
 .istoria table {
     margin-top: 16px;
 }
-.istoria td,
-.istoria th {
+.istoria :is(td, th) {
     padding: 4px 12px;
     font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
     font-weight: var(--lightest);
@@ -579,7 +542,7 @@ thead {
 
 /* it was a graveyard smash */
 .monstermash table {
-    border: 1px solid var(--offset-level-4);
+    border: 1px solid var(--offset-level-3);
 }
 .monstermash th {
     white-space: nowrap;
@@ -589,11 +552,11 @@ thead {
 .monstermash td {
     padding: 4px 8px;
 }
-.monstermash thead, .monstermash tr:not(:last-child) {
-    border-bottom: 1px solid var(--offset-level-4);
+.monstermash :where(thead, tr:not(:last-child)) {
+    border-bottom: 1px solid var(--offset-level-3);
 }
-.monstermash td:not(:first-child), .monstermash th:not(:first-child) {
-    border-left: 1px solid var(--offset-level-4);
+.monstermash :where(td, th):not(:first-child) {
+    border-left: 1px solid var(--offset-level-3);
 }
 .monstermash tr td:nth-child(1) {
     font-family: "Corbel", "Avenir", "Calibri", monospace;
@@ -616,21 +579,16 @@ thead {
     padding: 0px 0px 8px;
 }
 
-.integer {
-    font-family: "Corbel", "Avenir", "Calibri", monospace;
-    text-align: right;
-}
-.decimal {
+.integer,
+.decimal,
+.number {
     font-family: "Corbel", "Avenir", "Calibri", monospace;
 }
-.date, td.date, th.date {
+.date, :where(td, th).date {
     font-family: "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
     text-align: right;
     white-space: nowrap;
     font-weight: var(--bold);
-}
-.number {
-    font-family: "Corbel", "Avenir", "Calibri", monospace;
 }
 .dr {
     font-family: "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
@@ -638,18 +596,16 @@ thead {
 }
 
 .centred,
-td.centred,
-th.centred,
-td.dr,
-th.dr,
+:where(td, th):where(.centred, .dr),
 .istoria .footer {
     text-align: center;
 }
 .right,
-td.right,
-th.right,
+.date,
+:where(td, th):where(.right, .date),
 .discography .number,
-.istoria .level {
+.istoria .level,
+.integer {
     text-align: right;
 }
 .justify {
@@ -665,11 +621,9 @@ code {
     padding: 0px;
 }
 .defaultnames pre:first-of-type {
-    margin: 0px;
     padding: 12px 0px 0px;
 }
 .defaultnames pre:last-of-type {
-    margin: 0px;
     padding: 0px 0px 8px;
 }
 .dotted {

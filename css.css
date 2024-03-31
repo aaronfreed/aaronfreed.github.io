@@ -145,7 +145,7 @@ strong strong {
     font-weight: var(--boldest);
 }
 .light {
-    font-family: "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+    font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
     font-weight: var(--lightest);
 }
 .light .integer, .light .decimal {

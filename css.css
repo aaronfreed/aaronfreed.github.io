@@ -409,6 +409,18 @@ ol.nestednumbering > li > ol > li > ol > li > h3:before {
     counter-increment: item;
     font-family: "Corbel", "Avenir", "Calibri";
 }
+ol.loweralpha {
+    list-style-type: lower-alpha;
+}
+ol.lowerlatin {
+    list-style-type: lower-latin;
+}
+ol.upperalpha {
+    list-style-type: upper-alpha;
+}
+ol.upperlatin {
+    list-style-type: upper-latin;
+}
 
 /* images */
 .image {

@@ -15,6 +15,8 @@ Pages currently hosted here:
       * Aleph One can&rsquo;t *exactly* use circles, but it can create rough approximations. I&rsquo;m kind of (in)famous for using them in my maps. I address a few ways to create them and provide some tips for using them effectively, including a table to produce regular polygons with several common side counts and side lengths of 1 World Units.
    * **[Map Complexity: A Case Study](mapcomplexity.html)**
       * A lengthy examination of *Eternal*&rsquo;s &ldquo;Where Giants Have Fallen&rdquo;, *Tempus Irae Redux*&rsquo;s &ldquo;Il grande silenzio&rdquo;, *Phoenix*&rsquo;s &ldquo;Stone Temple Pilates&rdquo;, and *Starlight*&rsquo;s &ldquo;Monument to All Your Sins&rdquo; that attempts to demonstrate how much map detail is too much and how much is just enough.
+   * **[Reducing Map Index Use](mapindexreduction.html)**
+      * What to do if you&rsquo;ve made a map so complex it won&rsquo;t load.
    * **[*Marathon Infinity* Sounds & Sources](marathonsounds.html)**
       * Invaluable information for anyone working with <em>Marathon Infinity</em>&rsquo;s sound file &ndash; or anyone curious where many of its sounds came from.
    * **[The Annotated Anvil Help Balloons (updated to work as a ShapeFusion reference)](https://aaronfreed.github.io/anvilhelp.html)**

@@ -209,35 +209,37 @@ window.onload = function () {makeAllSortable();};
 <h2 id="scripts">Scripts, Monster Limits, & Music</h2>
 <ul>
 	<li>You can override monster activation limits with MML scripts. If you&rsquo;re making a standalone scenario, override this in your scenario&rsquo;s <strong>Scripts</strong> folder. The code for this (which also raises some limits on rendered objects) is:
-<pre>		&lt;marathon&gt;
-			&lt;dynamic_limits&gt;
-				&lt;objects value="1024"/&gt;
-				&lt;monsters value="512"/&gt;
-				&lt;paths value="512"/&gt;
-				&lt;projectiles value="256"/&gt;
-				&lt;effects value="2048"/&gt;
-				&lt;rendered value="1024"/&gt;
-				&lt;local_collision value="1024"/&gt;
-				&lt;global_collision value="1024"/&gt;
-			&lt;/dynamic_limits&gt;
-		&lt;/marathon&gt;</pre>
+
+<pre>&lt;marathon&gt;
+	&lt;dynamic_limits&gt;
+		&lt;objects value="1024"/&gt;
+		&lt;monsters value="512"/&gt;
+		&lt;paths value="512"/&gt;
+		&lt;projectiles value="256"/&gt;
+		&lt;effects value="2048"/&gt;
+		&lt;rendered value="1024"/&gt;
+		&lt;local_collision value="1024"/&gt;
+		&lt;global_collision value="1024"/&gt;
+	&lt;/dynamic_limits&gt;
+&lt;/marathon&gt;</pre>
+
 	Alter as needed. By contrast, if mapping for <em>Infinity</em>, you&rsquo;ll probably want to merge in MML, unless you&rsquo;re fine with monsters randomly deactivating when more than twenty are active. There are multiple ways to do this; which to use depends in large part on what kind of level you&rsquo;re creating.</li>
 	<li>If you&rsquo;re making a solo-only map, you have two ways to merge in scripts. You can save the above script as a TEXT resource (i.e., <strong>Resources/TEXT/<span class="decimal">10000</span>.txt</strong>) and call it in TEXT resource <span class="decimal">128</span> (i.e., <strong>Resources/TEXT/<span class="decimal">00128</span>.txt</strong>):</li>
-<pre>		&lt;marathon_levels&gt;
-			&lt;level index="0"&gt;
-				&lt;lua resource="420"&gt;
-				&lt;mml resource="10000"/&gt;
-				&lt;music file="Eternal-Data/Music/Craig/SwirlsPiano.ogg"/&gt;
-			&lt;/level&gt;
-		&lt;/marathon_levels&gt;</pre>
+
+<pre>&lt;marathon_levels&gt;
+	&lt;level index="0"&gt;
+		&lt;lua resource="420"&gt;
+		&lt;mml resource="10000"/&gt;
+		&lt;music file="Eternal-Data/Music/Craig/SwirlsPiano.ogg"/&gt;
+	&lt;/level&gt;
+&lt;/marathon_levels&gt;</pre>
 	Or by including MML in each individual level&rsquo;s folder (i.e., <strong><span class="decimal">00</span> The Far Side of Nowhere/Monster Limits.mml</strong>).
 	<div style="margin-top: 8px;">On the other hand, if you&rsquo;re making a multiplayer level for an existing scenario (this includes cooperative play), it&rsquo;s actually <em><strong>mandatory</strong></em> to use the latter method in most cases, since the game doesn&rsquo;t send TEXT resources to other players. Thus, if you use it for something that affects the game world, which includes limit-removing MML and most Lua, players will desync almost immediately. If you don&rsquo;t know if your script will affect the game world, it&rsquo;s safest to just assume it will. MML texture replacements, fog, and Treellama&rsquo;s ephemera-based precipitation script are some examples of things that don&rsquo;t affect the game world.</div>
 	<div style="margin-top: 8px;"><span id="ftnt_ref01" class="dotted" title="What, you don&rsquo;t have a third hand? Then you must not be Zaphod Beeblebrox.">On the third hand<a href="#ftnt01">&#8317;&sup1;&#8318;</a></span>, if you&rsquo;re making a standalone scenario, you can include an MML script that includes the scenario and version number, which prevents anyone who <em>isn&rsquo;t</em> running that scenario and version number from joining network games. In these cases, you can safely assume anyone who <em>does</em> join your game already has the map, in which case they&rsquo;ll also have the scripts already and won&rsquo;t desync.</div>
 
-	<pre>
-		&lt;marathon&gt;
-			&lt;scenario id="Eternal X" id="Eternal X" version="1.3pre6" /&gt;
-		&lt;/marathon&gt;</pre>
+<pre>&lt;marathon&gt;
+	&lt;scenario id="Eternal X" id="Eternal X" version="1.3pre6" /&gt;
+&lt;/marathon&gt;</pre>
 
 	<div style="margin-top: 8px;">(Moving the map file out of the scenario folder or overwriting it with a different version of the map would fall into what I&rsquo;d consider &lsquo;Play stupid games, win stupid prizes&rsquo; territory. You may wish to put a caveat about this in your game&rsquo;s documentation, but I&rsquo;d imagine this would be a relatively rare occurrence.)</div></li>
 

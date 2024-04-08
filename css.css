@@ -79,14 +79,14 @@
     src: local('Corbel Light'),
     local(Avenir),
     local('Calibri Light');
-    unicode-range: U+30-39;
+    unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
 }
 @font-face {
     font-family: 'Numberwang Medium';
     src: local('Corbel'),
     local(Avenir),
     local('Calibri');
-    unicode-range: U+30-39;
+    unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
 }
 
 /* start main entry */
@@ -144,7 +144,13 @@ a:visited,
     font-weight: var(--medium);
 }
 
-:is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited)
+.bold strong,
+.strong a:link,
+.strong a:visited,
+a:link strong,
+a:visited .strong,
+:is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited),
+:is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) :where(.integer, .decimal, .number, .date)
 {
     font-weight: var(--boldest);
 }
@@ -156,13 +162,6 @@ a:visited,
 .light .decimal:not(a:link, a:visited, a:hover, a:active) {
     font-family: "Corbel", "Avenir", "Calibri", monospace;
     font-weight: var(--lightest);
-}
-.bold strong,
-.strong a:link,
-.strong a:visited,
-a:link strong,
-a:visited .strong {
-    font-weight: var(--boldest);
 }
 
 /* headers and accents */

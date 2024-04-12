@@ -83,9 +83,9 @@ window.onload = function () {makeAllSortable();};
 				<!--<li><a href="#forgeerrata">Forge Manual Errata & Omissions</a></li>-->
 				<li><a href="#generalmapmaking">General Notes</a></li>
 				<li><a href="#scripts">Scripts, Monster Limits, & Music</a>
-					<ol>
+					<!--<ol>
 						<li><a href="#looper">Looping Music</a></li>
-					</ol>
+					</ol>-->
 				</li>
 				<li><a href="#tagsareterrible">Tags Are Terrible (though sometimes inexorable)</a>
 					<ol>
@@ -254,26 +254,6 @@ window.onload = function () {makeAllSortable();};
 </ul>
 
 <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
-
-<h3 id="looper">Looping Music</h3>
-
-<p>For the record, I&rsquo;m not talking about the music restarting after it fades out &ndash; Aleph One does that by default. I&rsquo;m talking about seamless loops, where the ending leads straight back into the beginning. Current releases of Aleph One <em>can</em> do this, but it&rsquo;s very finicky and is dependent upon a few things:</p>
-
-<ol>
-	<li>It doesn&rsquo;t work with MP<span class="decimal">3</span> files, only Ogg Vorbis, WAV, AIFF, and (in Aleph One <span class="decimal">1.6.1</span> and later) FLAC. The reason for this is that MP<span class="decimal">3</span> inserts junk samples at the start and end of a track, and Aleph One&rsquo;s music player doesn&rsquo;t know enough to skip these. Transcoding directly from MP<span class="decimal">3</span> to one of these other formats won&rsquo;t help; you&rsquo;ll need to edit the junk samples out and save as another file. If you plan to save your audio as Ogg Vorbis, I recommend following my procedure for upmastering audio on <a href="soundtracks.html#remasterinfo">my soundtracks page</a>; otherwise, you&rsquo;ll experience <a href="https://en.wikipedia.org/wiki/Generation_loss">generation loss</a>. (Upmastering does not produce a perfect replica of the sound that got lost during MP<span class="decimal">3</span> compression &ndash; that&rsquo;s impossible. If you can find a lossless source, you should definitely use that as the source of your in-game audio. Upmastering does help to counteract generation loss, though.)</li>
-	<li>By default, Aleph One parses audio files in <span class="decimal">1,024</span>-sample chunks (roughly <span class="decimal">23</span> milliseconds with a <span class="decimal">44.1</span> kHz sample rate) and won&rsquo;t reload the audio file (or load the next file) until it&rsquo;s in the final sample block. Annoyingly, the chunk size can vary based on a setting in the preferences file (and you must actually load the preferences in a text editor to see the setting), but it&rsquo;s usually <span class="decimal">1,024</span> or <span class="decimal">512</span> (thus, I&rsquo;m oversimplifying here and assuming <span class="decimal">1,024</span>-sample blocks).<br /><br />
-		
-		Thus, in this case, the number of samples modulo <span class="decimal">1024</span> should be as close to <span class="decimal">1023</span> as possible. (You can find out how many samples your music file has in any audio editor worth its salt.) In other words, the ideal number of samples for a loop is <strong>(<span class="decimal">1024</span> * <em>n</em>) &ndash; <span class="decimal">1</span></strong>, where <em>n</em> is some integer. It&rsquo;s acceptable for it to be <strong>(<span class="decimal">1024</span> * <em>n</em>) &ndash; <span class="decimal">2</span></strong>, <strong>(<span class="decimal">1024</span> * <em>n</em>) &ndash; <span class="decimal">3</span></strong>, <strong>(<span class="decimal">1024</span> * <em>n</em>) &ndash; <span class="decimal">4</span></strong>, and so on, but the more the distance increases, the longer and more perceptible the delay gets. The longest delay results from <strong><span class="decimal">1024</span> * <em>n</em></strong> samples.<br/ ><br />
-		
-		Manipulating your song&rsquo;s length by fewer than <span class="decimal">23</span> milliseconds probably won&rsquo;t audibly affect the rhythm if you&rsquo;re careful to fill up the space you add with audio information that isn&rsquo;t out of place (or to trim audio congruously). If silence ends up getting tossed into there, though, you&rsquo;ve got a problem.</li>
-	<li>The song must start and end at a zero crossing &ndash; in both channels, in the case of stereo music. A zero crossing is a point where the waveform crosses the midpoint. Here&rsquo;s an example displayed in iZotope RX (zoomed in quite a bit both vertically and horizontally to make it clearly visible).</li>
-</ol>
-
-<div class="image"><img src="zerocrossing.png" width="800" height="700" title="Illustration of a zero crossing in iZotope RX" alt="Illustration of a zero crossing in iZotope RX" /></div>
-
-<ol start="4">
-	<li>Even this may not be sufficient to get a seamless loop, so I recommend avoiding starting your music file at a particularly loud point. A cymbal crash, for example, is far from ideal. An acoustic guitar strum is better.</li>
-</ol>
 
 <h2 id="tagsareterrible">Tags Are Terrible (though sometimes inexorable)</h2>
 
@@ -537,6 +517,7 @@ window.onload = function () {makeAllSortable();};
 	<li>The <strong id="sounds"><span id="sounds-general"></span><span id="soundids"></span><span id="soundsources"></span>Sounds</strong> section has moved to <a href="marathonsounds.html">aaronfreed.github.io/marathonsounds.html</a>.</li>
 	<li><strong id="anvilhelp">The Annotated Anvil Help Balloons</strong> has moved to <a href="anvilhelp.html">aaronfreed.github.io/anvilhelp.html</a>.</li>
 	<li><strong id="defaultnames">Example DefaultNames.txt</strong> (see <a href="#ShapeFusion">reference</a> above) has moved to <a href="defaultnames.html">aaronfreed.github.io/defaultnames.html</a>.</p>
+	<li><strong id="looper">Looping Music</strong> has moved to <a href="marathonlooper.html">marathonlooper.html</a> (Aleph One 1.7 renders it mostly superfluous).</li>
 	<li>Another new appendix is my examination of what monsters appear on what <em>Marathon</em> trilogy levels, which demonstrates an important mapmaking principle: sometimes decreasing variety <em>within</em> a small span of a game can paradoxically <em>increase</em> variety <em>across</em> a much larger span of the game (or the entire game). It can be found at <a href="marathonmonsters.html">aaronfreed.github.io/marathonmonsters.html</a>.</a></li>
 </ul>
 

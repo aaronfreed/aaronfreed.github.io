@@ -29,7 +29,7 @@ Pages currently hosted here:
       * How to loop songs in Aleph One prior to 1.7. Split off to its own page because the process it describes is no longer necessary with releases targeting only Aleph One 1.7 or later.
 * **Music & Audio**
    * **[My notes on remastering audio](https://aaronfreed.github.io/remastering.html)**
-      * An in-depth description of my cleanup process for poorly mastered or low-quality music and sounds. Written for <a href="https://www.izotope.com/en/products/rx.html" target="_blank">iZotope RX</a>, but its principles are usable in any sufficiently powerful audio cleanup software.
+      * An in-depth description of my cleanup process for music and sounds with poor mastering, lossy compression artifacts, or low sample rates, including an explanation of &ldquo;upmastering&rdquo;. Written for <a href="https://www.izotope.com/en/products/rx.html" target="_blank">iZotope RX</a>, but its principles are usable in any sufficiently powerful audio cleanup software.
    * **[*Marathon* soundtracks](https://aaronfreed.github.io/soundtracks.html)**
       * Remixes and arrangements of Alexander Seropian&rsquo;s soundtrack for <em>Marathon</em> (1994), plus soundtracks for several major <em>Marathon</em> scenarios. I have personally remastered many of these.
    * **[My discography](https://aaronfreed.github.io/discography.html)**

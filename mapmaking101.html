@@ -366,7 +366,7 @@ window.onload = function () {makeAllSortable();};
 	<li>Forge&rsquo;s &ldquo;align heights in visual mode&rdquo; feature doesn&rsquo;t exist in any modern editor; it&rsquo;s necessary to exit visual mode, change the polygon&rsquo;s heights, then go back to visual mode to texture it (or use Lua to do that, if you know it; one of several reasons I added overlays to Vasara AF was to facilitate this). If you&rsquo;re on the obsessive-compulsive spectrum like me, you probably hated Forge&rsquo;s implementation of this feature because it didn&rsquo;t actually align heights correctly (see <a href="https://github.com/aaronfreed/vasara#planned-features" target="_blank">my discussion in in Vasara&rsquo;s readme</a> for specifics). However, I plan to add a less sloppy implementation to Vasara AF once I&rsquo;m satisfied with my UI design. (I&rsquo;m not a UI specialist and have long held that UI is far too important to be left up to programmers that aren&rsquo;t UI specialists.)</li>
 	<li>Occasional issues with platforms&rsquo; texture alignment.
 		<ul>
-			<li>If you&rsquo;e using a version of Aleph One prior to <span class="decimal">1.6</span>:
+			<li>If you&rsquo;re using a version of Aleph One prior to <span class="decimal">1.6</span>:
 				<ol>
 					<li>Upgrade, for the love of Pthia.</li>
 					<li>When you exit visual mode (or type <strong>.save level</strong>), platforms that extend <strong>From Ceiling</strong> or <strong>From Both</strong> <em>must</em> be in the same position they start the level in, or you&rsquo;ll get texture misalignments.</li>

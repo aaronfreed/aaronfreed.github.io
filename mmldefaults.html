@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Marathon Markup Language Defaults (WIP)</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script>
+function sortTable(table, col, reverse) {
+	var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+		tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+		i;
+	reverse = -((+reverse) || -1);
+	tr = tr.sort(function (a, b) { // sort rows
+		return reverse // `-1 *` if want opposite order
+			* (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+				.localeCompare(b.cells[col].textContent.trim(), undefined, {numeric: true})
+			);
+	});
+	for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+	var th = table.tHead, i;
+	th && (th = th.rows[0]) && (th = th.cells);
+	if (th) i = th.length;
+	else return; // if no `<thead>` then do nothing
+	while (--i >= 0) (function (i) {
+		var dir = 1;
+		th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+	}(i));
+}
+
+function makeAllSortable(parent) {
+	parent = parent || document.body;
+	var t = parent.getElementsByTagName('table'), i = t.length;
+	while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+	</script>
+</head>
+<body>
+
+
+<p>This page will eventually list all default values for Marathon Markup Language, one of two scripting languages for Aleph One, the open-source extension of Bungie&rsquo;s <em>Marathon</em> trilogy. However, it is highly likely to be a work in progress for quite some time.</p>
+
+<h1 id="colors">Default Colors</h1>
+<p>All values are 16-bit unsigned integers, corresponding to how the Mac stored color information; divide by 65,535 to get values usable in MML.</p>
+
+<table class="light">
+	<thead>
+		<tr>
+			<th class="right">#</th>
+			<th>Element</th>
+			<th class="right">R</th>
+			<th class="right">G</th>
+			<th class="right">B</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="integer">0</td>
+			<td>Ammo box display full</td>
+			<td class="integer">0</td>
+			<td class="integer">65535</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">1</td>
+			<td>Ammo box display empty</td>
+			<td class="integer">0</td>
+			<td class="integer">5140</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">2</td>
+			<td>Black</td>
+			<td class="integer">0</td>
+			<td class="integer">0</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">3</td>
+			<td>Inventory text</td>
+			<td class="integer">0</td>
+			<td class="integer">65535</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">4</td>
+			<td>Inventory header background</td>
+			<td class="integer">0</td>
+			<td class="integer">12956</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">5</td>
+			<td>Inventory background</td>
+			<td class="integer">0</td>
+			<td class="integer">5100</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">6</td>
+			<td>Slate player</td>
+			<td class="integer">9216</td>
+			<td class="integer">24320</td>
+			<td class="integer">41728</td>
+		</tr>
+		<tr>
+			<td class="integer">7</td>
+			<td>Red player</td>
+			<td class="integer">65535</td>
+			<td class="integer">0</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">8</td>
+			<td>Violet player</td>
+			<td class="integer">45056</td>
+			<td class="integer">0</td>
+			<td class="integer">24064</td>
+		</tr>
+		<tr>
+			<td class="integer">9</td>
+			<td>Yellow player</td>
+			<td class="integer">65535</td>
+			<td class="integer">65535</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">10</td>
+			<td>White player</td>
+			<td class="integer">60000</td>
+			<td class="integer">60000</td>
+			<td class="integer">60000</td>
+		</tr>
+		<tr>
+			<td class="integer">11</td>
+			<td>Orange player</td>
+			<td class="integer">62976</td>
+			<td class="integer">22528</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">12</td>
+			<td>Blue player</td>
+			<td class="integer">3072</td>
+			<td class="integer">0</td>
+			<td class="integer">65535</td>
+		</tr>
+		<tr>
+			<td class="integer">13</td>
+			<td>Green player</td>
+			<td class="integer">0</td>
+			<td class="integer">65535</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">14</td>
+			<td>White</td>
+			<td class="integer">65535</td>
+			<td class="integer">65535</td>
+			<td class="integer">65535</td>
+		</tr>
+		<tr>
+			<td class="integer">15</td>
+			<td>Invalid weapon</td>
+			<td class="integer">0</td>
+			<td class="integer">5140</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">16</td>
+			<td>Computer border text background</td>
+			<td class="integer">10000</td>
+			<td class="integer">0</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">17</td>
+			<td>Computer border text</td>
+			<td class="integer">65535</td>
+			<td class="integer">0</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">18</td>
+			<td>Computer text</td>
+			<td class="integer">0</td>
+			<td class="integer">65535</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">19</td>
+			<td>Computer white text</td>
+			<td class="integer">65535</td>
+			<td class="integer">65535</td>
+			<td class="integer">65535</td>
+		</tr>
+		<tr>
+			<td class="integer">20</td>
+			<td>Computer red text</td>
+			<td class="integer">65535</td>
+			<td class="integer">0</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">21</td>
+			<td>Computer dark green text</td>
+			<td class="integer">0</td>
+			<td class="integer">40000</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">22</td>
+			<td>Computer cyan text</td>
+			<td class="integer">0</td>
+			<td class="integer">45232</td>
+			<td class="integer">51657</td>
+		</tr>
+		<tr>
+			<td class="integer">23</td>
+			<td>Computer yellow text</td>
+			<td class="integer">65535</td>
+			<td class="integer">59367</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">24</td>
+			<td>Computer dark red text</td>
+			<td class="integer">45000</td>
+			<td class="integer">0</td>
+			<td class="integer">0</td>
+		</tr>
+		<tr>
+			<td class="integer">25</td>
+			<td>Computer blue text</td>
+			<td class="integer">3084</td>
+			<td class="integer">0</td>
+			<td class="integer">65535</td>
+		</tr>
+	</tbody>
+</table>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; mapmaking guide</a> &middot; <a href="mapmaking.html">Advanced mapmaking guide</a> &middot; <a href="/">Website index</a></p>
+</body>
+</html>

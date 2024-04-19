@@ -19,17 +19,17 @@ Pages currently hosted here:
       * What to do if you&rsquo;ve made a map so complex it won&rsquo;t load.
    * **[*Marathon Infinity* Sounds & Sources](marathonsounds.html)**
       * Invaluable information for anyone working with <em>Marathon Infinity</em>&rsquo;s sound file &ndash; or anyone curious where many of its sounds came from.
-   * **[The Annotated Anvil Help Balloons (updated to work as a ShapeFusion reference)](https://aaronfreed.github.io/anvilhelp.html)**
+   * **[The Annotated Anvil Help Balloons](https://aaronfreed.github.io/anvilhelp.html)** (updated to work as a ShapeFusion reference)
       * Based on the help strings for Anvil, Bungie&rsquo;s official physics, shapes, and sound file editor; with corrections and amendments for its modern replacement ShapeFusion.
    * **[Example DefaultNames.txt for ShapeFusion](https://aaronfreed.github.io/defaultnames.html)**
       * Customize almost every ShapeFusion string to match your own scenario&rsquo;s data.
-   * **[Monster Placement in the *Marathon* Trilogy](https://aaronfreed.github.io/marathonmonsters.html)**
-      * A case study into how restricting variety within individual levels sometimes, counterintuitively, leads to more variety across an entire game.
+   * **[Where Are Monsters in Marathon...Maps](https://aaronfreed.github.io/marathonmonsters.html)**
+      * A case study of monster placement in the *Marathon* trilogy as a microcosm of how restricting variety within individual levels can, counterintuitively, lead to more variety across an entire game.
    * **[Marathon: Looper](https://aaronfreed.github.io/marathonlooper.html)**
       * How to loop songs in Aleph One prior to 1.7. Split off to its own page because the process it describes is no longer necessary with releases targeting only Aleph One 1.7 or later.
 * **Music & Audio**
    * **[My notes on remastering audio](https://aaronfreed.github.io/remastering.html)**
-      * An in-depth description of my cleanup process for music and sounds with poor mastering, lossy compression artifacts, or low sample rates, including an explanation of &ldquo;upmastering&rdquo;. Written for <a href="https://www.izotope.com/en/products/rx.html" target="_blank">iZotope RX</a>, but its principles are usable in any sufficiently powerful audio cleanup software.
+      * An in-depth description of my cleanup process for music and sounds with poor mastering, lossy compression artifacts, or low sample rates, including an explanation of. Written for <a href="https://www.izotope.com/en/products/rx.html" target="_blank">iZotope RX</a>, but its principles are usable in any sufficiently powerful audio cleanup software.
    * **[*Marathon* soundtracks](https://aaronfreed.github.io/soundtracks.html)**
       * Remixes and arrangements of Alexander Seropian&rsquo;s soundtrack for <em>Marathon</em> (1994), plus soundtracks for several major <em>Marathon</em> scenarios. I have personally remastered many of these.
    * **[My discography](https://aaronfreed.github.io/discography.html)**

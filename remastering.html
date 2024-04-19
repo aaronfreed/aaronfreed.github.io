@@ -12,6 +12,8 @@
 
 				<p>Note that, while I wrote this guide with iZotope RX in mind (the gold standard of audio repair software, in my book), it&rsquo;s perfectly possible to adapt its principles in other audio processing software. The quality of your results may vary, depending on how good your chosen software is at declipping and pitch-shifting audio.</p>
 
+                <p>Please <a href="aboutme.html">contact me</a> if you have any questions.</p>
+
 			<h1 id="contents">Table of Contents</h1>
 				<ol class="toc">
 					<li><a href="#top">Intro</a></li>
@@ -43,15 +45,15 @@
 
                 <p>(Notably, iZotope themselves <a href="https://www.izotope.com/en/learn/order-of-audio-repair-operations.html" target="_blank">recommend declipping before performing any other audio repair</a>.)</p>
 
-				<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="/">Website index</a></p>
+                <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="/">Website index</a></p>
 
 			<h2 name="phaserotation">Step Two: Phase Rotation</h2>
 
 				<p>Next, I ran most songs <span class="number">90</span>&deg; through a phase rotation filter; this mostly affects subsonic (&leq;<span class="number">20</span> Hz) frequencies, but also usually increases dynamic range. I have no hypothesis for why this reduces listener fatigue; it shouldn&rsquo;t be perceptibly different at all. However, this is the only palatable way I&rsquo;ve found to listen to various albums that are too distorted to salvage with declipping (i.e., <span class="dotted" id="ftnt_ref01" title="I wouldn&rsquo;t even think to mess with Merzbow&rsquo;s work when listening to it on speakers, but this is the only way I know of to listen to those albums on headphones without risking deafness. They are, to my knowledge, the two loudest albums ever pressed to CD.">Merzbow&rsquo;s <em>Venereology</em> and <em>Pulse Demon</em><a href="#ftnt01" class="normal">&#8317;<span class="number">&sup1;</span>&#8318;</a></span>; the Psychic Paramount&rsquo;s <em>Gamelan into the Mink Supernatural</em>). Since it performed wonders for those recordings, it&rsquo;s now a standard part of my remastering process.</p>
 
-				<blockquote>[<strong>Warning:</strong> You should generally only use phase rotation on a finished mix, unless there are phase issues with a recording you&rsquo;re mixing; phase rotation can be destructive. In the most extreme case, phase rotating a recording by </em><span class="number">180</span>&deg; and mix pasting it with its original produces silence!]</blockquote>
+				<blockquote><em>[<strong>Warning:</strong> You should generally only use phase rotation on a finished mix, unless there are phase issues with a recording you&rsquo;re mixing; phase rotation can be destructive. In the most extreme case, phase rotating a recording by <span class="number">180</span>&deg; and mix pasting it with its original produces silence!]</em></blockquote>
 
-				<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="/">Website index</a></p>
+                <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="/">Website index</a></p>
 
 			<h2 name="upmastering">Step Three: Upmastering</h2>
 
@@ -61,11 +63,11 @@
 
 				<p>Once it finishes, roll off the lower frequencies of your pitch-raised copy with the Corrective EQ filter. You&rsquo;ll want to discard everything below about <span class="number">14</span> kHz, depending upon the quality of MP<span class="number">3</span> compression. I used the analogue filter &lsquo;low shelf&rsquo; for most of the bands, but the exact slope and gain I used depended on the track. Lastly, mix paste the results with your original track. You may have to experiment with several different EQ settings to find the best-sounding version; unfortunately, there&rsquo;s no one-size-fits-all solution here, and simply eyeballing the results won&rsquo;t suffice. Use your best judgement. Once you&rsquo;re satisfied, normalise to -0.1 dB, export as FLAC, and you&rsquo;re done.</p>
 
-				<blockquote>[Note: Modern versions of iZotope call this filter simply &lsquo;EQ&rsquo;, and rather than using the low shelf, you can just use a high pass filter with it. I&rsquo;ve also taken to adding a much subtler low pass filter as well.]</blockquote>
+				<blockquote><em>[<strong>Note:</strong> Modern versions of iZotope call this filter simply &lsquo;EQ&rsquo;, and rather than using the low shelf, you can just use a high pass filter with it. I&rsquo;ve also taken to adding a much subtler low pass filter as well.]</em></blockquote>
 
 				<p>This process may be able to salvage many modern recordings that you may otherwise find fatiguing. To be honest, I find myself putting about 90% of the music I download these days through at least some of these steps, but I admit to being obsessive about this sort of thing. Regardless, I hope some readers find it useful for some of the worst offenders.</p>
 
-				<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="/">Website index</a></p>
+                <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="/">Website index</a></p>
 
 			<h2 name="harmonics">A Note on Harmonics, or Why Upmastering (Sometimes) Works</h2>
 
@@ -73,7 +75,7 @@
 
 				<p>As it so happens, nearly every instrument prominent in rock music &ndash; drums, bass, guitar, organ, and piano &ndash; has fairly substantial even harmonics. This is less reliable for jazz and classical instruments &ndash; closed-end wind instruments tend to be based almost entirely on odd harmonics, so a clarinet will have almost no resonant frequencies an octave apart, while a trumpet will only have some. Synthesizers are a complete mixed bag; some synth voices have no even harmonics at all, while others have plenty. <a href="https://forums.stevehoffman.tv/threads/harmonics-and-musical-instruments.1057484/">This Steve Hoffman Forums thread</a> may be enlightening on this count.</p>
 
-				<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="/">Website index</a></p>
+                <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="/">Website index</a></p>
 
 			<h2 name="orderofoperations">Order of Operations</h2>
 
@@ -95,8 +97,7 @@
 
 				<p>A final warning: <strong>The spectrogram isn&rsquo;t an EQ tool.</strong> It&rsquo;s more important that your remasters <em>sound</em> good than that their spectrogram <em>looks</em> good. At most, the spectrogram can help you <em>guess</em> what levels and EQ to use for your first attempt, but you should rely on your ears for sounds, not your eyes.</p>
 
-				<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="/">Website index</a></p>
-			
+                <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="/">Website index</a></p>			
 
 		<footer>
 
@@ -121,7 +122,7 @@
 				</tbody>
 			</table>
 			
-			<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="/">Website index</a></p>
+            <p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="/">Website index</a></p>
 
 		</footer>
 

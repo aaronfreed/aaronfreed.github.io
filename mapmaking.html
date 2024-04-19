@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<title>Marathon Mapmaking: Setup, Snafus, & Solutions</title>
+	<title>Marathon Mapmaking: Setup, Snafus, &amp; Solutions</title>
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<script>
 function sortTable(table, col, reverse) {
@@ -41,7 +41,7 @@ window.onload = function () {makeAllSortable();};
 <body>
 
 <header>
-<h1>Marathon Mapmaking: Setup, Snafus, & Solutions</h1>
+<h1>Marathon Mapmaking: Setup, Snafus, &amp; Solutions</h1>
 	
 	<p>This document is a guide to content creation for <strong><a href="https://alephone.lhowon.org/" target="_blank">Marathon Aleph One</a></strong>, an open-source engine based on <strong>Bungie</strong>&rsquo;s groundbreaking first-person shooter trilogy (<span class="decimal">1994-1996</span>) &ndash; <em>not</em> its upcoming extraction shooter (though I&rsquo;m quite intrigued by the latter).</p>
 
@@ -53,6 +53,8 @@ window.onload = function () {makeAllSortable();};
 
 	<p>I&rsquo;m currently reorganizing this guide into smaller, more digestible pages &ndash; apologies for the inconvenience, but the ultimate form should be both more accessible and more logically organized.</p>
 
+	<p>Should you have any suggestions for improvements to this guide or notice any errors, please either <a href="aboutme.html">contact me or submit to this page&rsquo;s GitHub repository</a>. (If you&rsquo;d like to be credited, please let me know.)</p>
+
 <h1 id="toc">Table of Contents</h1>
 
 	<ol class="toc">
@@ -62,8 +64,8 @@ window.onload = function () {makeAllSortable();};
 			<ol>
 				<li><a href="#resourcesa1">Aleph One Content Editing (<em>Marathon <span class="decimal">2</span></em>/<em>Infinity</em> Format)</a></li>
 				<li><a href="#resourcesm1"><em>Marathon <span class="decimal">1</span></em> Content Editing for Aleph One</a></li>
-				<li><a href="#tutorialsother">Other Tutorials & Resources</a></li>
-				<li><a href="#resourcescommunity">Marathon Communities & Resources</a></li>
+				<li><a href="#tutorialsother">Other Tutorials &amp; Resources</a></li>
+				<li><a href="#resourcescommunity">Marathon Communities &amp; Resources</a></li>
 			</ol>
 		</li>-->
 		<li><a href="#general">General</a>
@@ -71,8 +73,8 @@ window.onload = function () {makeAllSortable();};
 				<!--<li><a href="#welandsetup">Weland Setup</a>
 					<ol>
 						<li><a href="#welandpreferences">Configuring Weland&rsquo;s Preferences</a></li>
-						<li><a href="#visualmodemac">Installing Visual Mode & Vasara (MacOS)</a></li>
-						<li><a href="#visualmodewinlin">Installing Visual Mode & Vasara (Linux & Windows)</a></li>
+						<li><a href="#visualmodemac">Installing Visual Mode &amp; Vasara (MacOS)</a></li>
+						<li><a href="#visualmodewinlin">Installing Visual Mode &amp; Vasara (Linux &amp; Windows)</a></li>
 						<li><a href="#visualmodepreferences">Configuring Weland!Aleph One</a></li>
 					</ol>
 				</li>-->
@@ -80,9 +82,9 @@ window.onload = function () {makeAllSortable();};
 		</li>
 		<li><a href="#mapmaking">Mapmaking</a>
 			<ol>
-				<!--<li><a href="#forgeerrata">Forge Manual Errata & Omissions</a></li>-->
+				<!--<li><a href="#forgeerrata">Forge Manual Errata &amp; Omissions</a></li>-->
 				<li><a href="#generalmapmaking">General Notes</a></li>
-				<li><a href="#scripts">Scripts, Monster Limits, & Music</a>
+				<li><a href="#scripts">Scripts, Monster Limits, &amp; Music</a>
 					<!--<ol>
 						<li><a href="#looper">Looping Music</a></li>
 					</ol>-->
@@ -98,7 +100,13 @@ window.onload = function () {makeAllSortable();};
 						<li><a href="#vasaratexturing">Further Texturing Issues in Vasara</a></li>
 					</ol>
 				</li>-->
-				<li><a href="#m1polygons">Those Weird <em>Marathon <span class="decimal">1</span></em> Polygon Types</a></li>
+				<li><a href="#m1legacy"><em>Marathon <span class="decimal">1</span></em> Legacy Compatibility</a>
+					<ol>
+						<li><a href="#m1polygons">Those Weird <em>Marathon <span class="decimal">1</span></em> Polygon Types</a></li>
+						<li><a href="#m1missions"><em>Marathon <span class="decimal">1</span></em> Mission Types</a></li>
+						<li><a href="#m1compatibility"><em>Marathon <span class="decimal">1</span></em> Compatibility Flags</a></li>
+					</ol>
+				</li>
 				<li><a href="#8bitsoftware">8-bit Software Mode</a>
 					<ol>
 						<li><a href="#8bitsoftwareimages">The Images File</a></li>
@@ -118,12 +126,12 @@ window.onload = function () {makeAllSortable();};
 			<ol>
 				<li><a href="#general">General</a>
 				<li><a href="#clutrestrictions">Restrictions on Number of Colors</a></li>
-				<li><a href="#transparency">Transparency & Landscapes</a></li>
-				<li><a href="#sequencetiming">Sequence Timing & Film Compatibility</a></li>
+				<li><a href="#transparency">Transparency &amp; Landscapes</a></li>
+				<li><a href="#sequencetiming">Sequence Timing &amp; Film Compatibility</a></li>
 				<li><a href="#weaponsinhand">&lsquo;Weapons in Hand&rsquo; Sequences</a></li>
 			</ol>
 		</li>
-		<li><a href="#appendices">Appendices & Transplanted Content</a></li>
+		<li><a href="#appendices">Appendices &amp; Transplanted Content</a></li>
 		<!--
 		<li><a href="#sounds">Sounds</a>
 				<ol>
@@ -168,7 +176,6 @@ window.onload = function () {makeAllSortable();};
 		<li><a href="#defaultnames">Example DefaultNames.txt</a></li>
 		-->
 		<li><a href="#thanks">Acknowledgements</a></li>
-		<li><a href="#bio">Author Info</a></li>
 		<li><a href="#endnotes">Endnotes</a></li>
 	</ol>
 
@@ -210,9 +217,9 @@ window.onload = function () {makeAllSortable();};
 	<li>Trying to create a new scenery object using Lua leads to a similar freeze if the scenery object&rsquo;s sequence is set to &ldquo;Display a random frame&rdquo; with no defined frames (this is the equivalent of division by zero). This is probably also true for effects, ephemera, items, and monsters, and it may be true if the scenery object is created normally as well. (Again, this is a bug; the game should print an assertion failure explaining the problem, and hopefully it will in a future release.)</li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
-<h2 id="scripts">Scripts, Monster Limits, & Music</h2>
+<h2 id="scripts">Scripts, Monster Limits, &amp; Music</h2>
 <ul>
 	<li>You can override monster activation limits with MML scripts. If you&rsquo;re making a standalone scenario, override this in your scenario&rsquo;s <strong>Scripts</strong> folder. The code for this (which also raises some limits on rendered objects) is:
 
@@ -253,7 +260,7 @@ window.onload = function () {makeAllSortable();};
 	<li>The <code>&lt;marathon_levels&gt;</code> code excerpt above also shows how to merge in music (i.e., the &lsquo;music file&rsquo; line). It&rsquo;s also possible to use Lua to implement music; doing so will in fact give you more options: you can control when to start the music (<em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em> contains some examples of this), or change the music midlevel based on game events (<em><a href="https://simplici7y.com/items/eternal-x">Eternal X</a></em> <span class="decimal">1.3</span> contains some examples of this). A full explanation of Lua music is beyond the current scope of this guide &ndash; the music API&rsquo;s functionality is currently being expanded, so such a guide would become outdated almost immediately.</li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="tagsareterrible">Tags Are Terrible (though sometimes inexorable)</h2>
 
@@ -288,7 +295,7 @@ window.onload = function () {makeAllSortable();};
 	<li>There are also <a href="mapmaking101.html#texturingissues">texturing issues</a> &ndash; in short, if you toggle wires in visual mode, they will get set to not-wires and players will be unable to finish your level. There may be others.</li>
 	<li>Basically, tags are awful; you should avoid marking them as &lsquo;<strong>Repair</strong>&rsquo; unless you&rsquo;re <em>completely</em> sure you know what you&rsquo;re doing, and even then, you should be sure you&rsquo;re not falling prey to the <a href="https://en.wikipedia.org/wiki/Dunning-Kruger_effect" target="_blank">Dunning-Kruger effect</a>. In all cases, I recommend using them with caution.</li></ul>
 	
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 	<h3 id="waysaroundtags">Ways to Avoid Tags</h3>
 		
@@ -326,7 +333,7 @@ window.onload = function () {makeAllSortable();};
 	</li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="ambientsound">Ambient Sound</h2>
 
@@ -337,34 +344,70 @@ window.onload = function () {makeAllSortable();};
 	<li>At the same time, avoid overusing sound objects, which eat up map indices worst of all factors that use them: one per polygon within a <span class="decimal">10</span>-world unit X/Y radius (Z is irrelevant). If this all sounds like a delicate juggling act, it is! No one said making maps for an ancient engine was <em>easy</em>. I recommend avoiding complicated &lsquo;sound boundaries&rsquo; or too many discrete polygon sounds per level.</li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
-<h2 id="m1polygons">Those Weird <em>Marathon <span class="decimal">1</span></em> Polygon Types</h2>
+<h2 id="m1legacy"><em>Marathon <span class="decimal">1</span></em> Legacy Compatibility</h2>
+<h3 id="m1polygons">Those Weird <em>Marathon <span class="decimal">1</span></em> Polygon Types</h3>
 <ul>
-	<li><strong>Superglue</strong>, <strong>Glue Trigger</strong>, and <strong>Glue</strong> only function if <strong>Glue</strong> is selected under <strong>M<span class="decimal">1</span> Compatibility</strong> in the <strong>Map Parameters</strong>.</li>
-	<li>If <strong>Ouch Is Lava</strong> is selected, monsters won&rsquo;t leave corpses on <strong>Minor Ouch</strong> or <strong>Major Ouch</strong> polygons; however, those polygons will still damage players and monsters even if it isn&rsquo;t.</li>
 	<li><strong>Minor Ouch</strong> behaves like <em>M1</em> lava: it only damages monsters and players that are touching the ground.</li>
 	<li><strong>Major Ouch</strong> behaves like <em>M1</em> Pfhor goo: it damages monsters and players even if they&rsquo;re airborne.</li>
-	<li>Monsters on <strong>Glue</strong> act deaf (but not blind) until players walk onto their polygons (or they&rsquo;re activated by other means). Sounds don&rsquo;t enter Glue polygons but can leave them.</li>
-	<li>A <strong>Glue Trigger</strong> activates all monsters that aren&rsquo;t on or beyond Superglue or Zone Borders.</li>
-	<li><strong>Superglue</strong> is <em>M<span class="decimal">1</span></em>&rsquo;s zone border equivalent; it stops Glue Trigger monster activation (as do Zone Borders).</li>
-	<li>If <strong>Exploration (M<span class="decimal">1</span>)</strong> is selected as a mission type, players must merely look at <strong>Must Be Explored</strong> polygons to complete the mission, rather than walk on them (as in <em>M<span class="decimal">2</span></em>/<em>Infinity</em>). As mentioned above, looking at these in visual mode resets them to <strong>&lsquo;Normal&rsquo;</strong>, so be careful.</li>
-	<li>If <strong>Repair (M<span class="decimal">1</span>)</strong> is selected as the mission type (but <em>not</em> regular <strong>Repair</strong>), toggling one repair switch will typically satisfy the <strong>Repair (M<span class="decimal">1</span>)</strong> mission flag.</li>
+	<li>Both <strong>Ouch</strong> polygon types have additional behavior that only becomes active if <strong>Ouch Is Lava</strong> is checked in the <strong>Level Parameters</strong> box&rsquo;s <strong>M1 Compatibility</strong> section (see <a href="#m1compatibility">below</a>).</li>
+	<li>If and only if <strong>Glue</strong> is checked in <strong>M1 Compatibility</strong>:
+		<ul>
+			<li>Monsters on <strong>Glue</strong> act deaf (but not blind) until players walk onto their polygons (or they&rsquo;re activated by other means). Sounds don&rsquo;t enter Glue polygons but can leave them.</li>
+			<li>A <strong>Glue Trigger</strong> activates all monsters that aren&rsquo;t on or beyond Superglue or Zone Borders.</li>
+			<li><strong>Superglue</strong> is <em>M<span class="decimal">1</span></em>&rsquo;s zone border equivalent; it stops Glue Trigger monster activation (as do Zone Borders).</li>
+		</ul>
+	</li>
+	<li>Otherwise, these three related polygon types behave like <strong>Normal</strong> polygons.</li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+
+<h3 id="m1missions"><em>Marathon <span class="decimal">1</span></em> Mission Types</h3>
+
+<ul>
+	<li><strong>Exploration (M<span class="decimal">1</span>)</strong>: Like regular <strong>Exploration</strong>, except that rather than requiring players to walk on all <strong>Must Be Explored</strong> polygons (as in <em>M<span class="decimal">2</span></em>/<em>Infinity</em>-style <strong>Exploration</strong> missions), it merely requires players to look at them..
+		<ul>
+			<li>As mentioned above, looking at these in <strong>Visual Mode.lua</strong> or <strong>Vasara <span class="decimal">1</span>.<span class="decimal">0</span>.<span class="decimal">3</span></strong> resets them to <strong>&lsquo;Normal&rsquo;</strong>, so be careful. (<strong>Vasara AF</strong> overrides this behavior at the cost of making it impossible to complete <strong>Exploration</strong> missions while <strong>Vasara AF</strong> is active, but that&rsquo;s not what it&rsquo;s for, anyway; if all you want is to play the game without monsters, just use <a href="https://simplici7y.com/items/nature-s-peace/" target="_blank">Nature&rsquo;s Peace</a> instead.)</li>
+			<li>If recollection serves, <em>Marathon <span class="decimal">1</span></em>&rsquo;s vanilla 64&deg; field of view (how did anyone cope?) is used to decide what players should be able to see. I&rsquo;ll eventually perform a deep dive of the code to confirm this.</li>
+			<li>If both this and <strong>Exploration</strong> are set, I suspect this may take precedence. I&rsquo;ll confirm whether this is the case later, as well.</li>
+		</ul>
+	</li>
+	<li><strong>Rescue (M<span class="decimal">1</span>):</strong> Does what the Forge manual <a href="mapmaking101.html#forgeerrata">erroneously claims</a> the <strong>Repair</strong> mission flag does. Remember to set at least one other mission type if you want this to have any significant impact on gameplay.</li>
+	<li><strong>Repair (M<span class="decimal">1</span>):</strong> Like <strong>Repair</strong> except that the player must only activate one repair switch to successfully complete the mission. This raises the obvious question, &lsquo;Why would anyone program this into their game?&rsquo; The answer is that they probably wouldn&rsquo;t do it on purpose &ndash; unless they were maintaining legacy compatibility with a rather buggy 1994 game by a relatively inexperienced Macintosh developer.</li>
+</ul>
+
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+
+<h3 id="m1compatibility"><em>Marathon <span class="decimal">1</span></em> Compatibility Flags</h3>
+
+All of these are found under <strong>Special</strong> &rightarrow; <strong>Level Parameters</strong> &rightarrow; <strong>M<span class="decimal">1</span> Compatibility</strong>.
+
+<ul>
+	<li><strong>Glue:</strong> <strong>Superglue</strong>, <strong>Glue Trigger</strong>, and <strong>Glue</strong> (see <a href="#m1polygons">above</a>) only function if this is selected.</li>
+	<li><strong>Ouch Is Lava:</strong> Prevents monsters from leaving corpses on <strong>Minor Ouch</strong> or <strong>Major Ouch</strong> polygons if it&rsquo;s checked. (Those polygons will still damage players and monsters even if it isn&rsquo;t.)</li>
+	<li><strong>Use Song Index:</strong> Overrides the landscape collection selector with a number used to select a song index. I believe that, e.g., music index 0 <strong>must</strong> be stored at a path like <strong>Music/00.mp3</strong>, <strong>Music/00.ogg</strong>, <strong>Music/00.wav</strong>, or <strong>Music/00.aif</strong>, and to my knowledge, these are the only four audio formats that will work with this method of playing music. I strongly recommend using any other method instead.</li>
+	<li><strong>Terminals Stop Time:</strong> In the single-player game, game time will stop whenever the player is reading a terminal: oxygen won&rsquo;t deplete, monsters won&rsquo;t attack or move, the player won&rsquo;t even fall. In multiplayer games, this has no effect (because cooperative games literally do not exist in vanilla <em>Marathon <span class="decimal">1</span></em>, the game mode has no legacy compatibility requirements).</li>
+	<li><strong>Activation Range:</strong> Something to do with switch or monster activation, maybe? I can&rsquo;t find the reference for it right now. Watch this space.</li>
+	<li><strong>Weapon Behavior:</strong> On Total Carnage, walking over a weapon that the player already has will cause the player to undergo <em>M<span class="decimal">1</span></em>&rsquo;s fun equivalent of &lsquo;picking up&rsquo; the weapon. In reality, this actually overwrites the player&rsquo;s shot counter for that weapon with however many shots the new weapon would have had (which may or may not actually be greater than the player&rsquo;s current shot count, thanks to the alien weapon having random shot counts). The player will not actually be able to use any of this backlog of weapons.
+		
+		<p>If this sounds extremely unfun (and against the purpose of a first-person <em>shooter</em>), you&rsquo;re right! It&rsquo;s a vanilla <em>Marathon <span class="decimal">1</span></em> bug. Please don&rsquo;t use this flag for anything that isn&rsquo;t a painstakingly accurate <em>Marathon <span class="decimal">1</span></em> remake (we&rsquo;re talking a &lsquo;didn&rsquo;t even touch the &ldquo;Colony Ship&rdquo; puzzle&rsquo; level of).</p></li>
+</ul>
+
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="8bitsoftware"><span class="decimal">8</span>-bit Software Mode</h1>
 
 <p>Aleph One <span class="decimal">1.4</span> restored <span class="decimal">8</span>-bit software mode after it had been unavailable for over a decade. This causes potential havoc in territory related to both ShapeFusion (shapes sequences) and Atque (images files, map resources). I address the latter immediately below; see the ShapeFusion section further below for the former.</p>
 	
-<h3 id="chapterscreens">Chapter Screens & Sounds</h3>
+<h3 id="chapterscreens">Chapter Screens &amp; Sounds</h3>
 
 <p>Aleph One won&rsquo;t display a chapter screen in <span class="decimal">8</span>-bit software mode unless it has an associated CLUT resource sharing the chapter screen&rsquo;s resource ID. Make sure to include these if you care about <span class="decimal">8</span>-bit software mode at all. Chapter screens go from <span class="decimal">1500</span> (for level <span class="decimal">0</span>) to <span class="decimal">1599</span> (for the end screen or, God help us all, level <span class="decimal">99</span>). Add <span class="decimal">10,000</span> for &lsquo;<span class="decimal">24</span>-bit&rsquo; versions and (I found this one out the hard way &ndash; by noticing it after a scenario release) <span class="decimal">20,000</span> for &lsquo;<span class="decimal">32</span>-bit&rsquo; versions. (This effectively makes <span class="decimal">115</span>xx and <span class="decimal">215</span>xx unusable if you have a level xx &ndash; but I&rsquo;m not sure if Aleph One will ever display the <span class="decimal">115</span>xx picture when the <span class="decimal">215</span>xx exists, so if you use <span class="decimal">215</span>xx for the chapter screen, you might be able to get away with using <span class="decimal">115</span>xx for a terminal picture.)</p>
 	
 <p>Also, if there&rsquo;s an associated sound sharing the <span class="decimal">15</span>xx ID, Aleph One will play it. This includes ending screens (though Aleph One also plays the music file, so it&rsquo;s probably not worth including a sound <span class="decimal">1599</span> unless you plan for your scenario not to have opening music).</p>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h3 id="8bitsoftwareimages">The Images File</h3>
 
@@ -380,7 +423,7 @@ window.onload = function () {makeAllSortable();};
 
 <p>Add <span class="decimal">1,000</span> to each of these numbers for the &lsquo;<span class="decimal">24</span>-bit&rsquo; versions. It&rsquo;s ideal to have separate <span class="decimal">8</span>-bit and <span class="decimal">24</span>-bit versions, as IIRC, Photoshop and GIMP dither images much better than Aleph One does.</p>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="directionality">Directionality</h2>
 <table>
@@ -425,7 +468,7 @@ window.onload = function () {makeAllSortable();};
 	</tbody>
 </table>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h1 id="ShapeFusion"><span id="shapes">ShapeFusion</span></h1>
 
@@ -443,7 +486,7 @@ window.onload = function () {makeAllSortable();};
 	<li>ShapeFusion can read FLAC on Windows. Again, I don&rsquo;t think the Mac version can do this, and I have no idea about Linux.</li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="clutrestrictions">Restrictions on Number of Colors</h2>
 
@@ -464,9 +507,9 @@ window.onload = function () {makeAllSortable();};
 
 <p>Note that using non-vanilla palettes causes <span class="decimal">8</span>-bit software mode to look very, very stupid, in case anyone even cares about that in a scenario created in <span class="decimal">2023</span>. I don&rsquo;t actually know how it selects the colors for that.</p>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
-<h2 id="transparency">Transparency & Landscapes</h2>
+<h2 id="transparency">Transparency &amp; Landscapes</h2>
 
 <p><em>Marathon</em> counts the first three colors of each CLUT as transparent, whether you want it to or not. Why does it need three? Why not just one? In all likelihood, only Jason Jones might be able to answer this question, assuming he even remembers the answer. This poses problems with custom landscape CLUTs. Why do landscapes even have transparency? Another question Jason Jones probably doesn&rsquo;t recall the answer to. The first three colors in a landscape CLUT are still considered transparent, and in OpenGL mode, <em>Marathon</em> changes anything it regards as transparent to show up as white.</p>
 
@@ -481,9 +524,9 @@ window.onload = function () {makeAllSortable();};
 
 <p>Either way. (I don&rsquo;t use GIMP, but I&rsquo;m guessing you can do something similar by making a <span class="decimal">253</span>-color bitmap, exporting the CLUT, and editing it in a text editor.)</p>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
-<h2 id="sequencetiming">Sequence Timing & Film Compatibility</h2>
+<h2 id="sequencetiming">Sequence Timing &amp; Film Compatibility</h2>
 
 <ul><li>Ideally, &lsquo;Transfer mode period&rsquo; should equal &lsquo;Frames per view&rsquo; times &lsquo;Number of frames&rsquo;.</li>
 
@@ -491,7 +534,7 @@ window.onload = function () {makeAllSortable();};
 
 <li>Another surprising factor affecting film sync: &lsquo;Display a random frame&rsquo; (even if only one frame is defined) is different from &lsquo;Animation with <span class="decimal">1</span> view&rsquo; (or any other number). Altering this alters the PRNG when the game loads maps, since it runs the PRNG for each sequence that uses &lsquo;Display a random frame&rsquo;, even if it only has one frame. Thus, changing a sequence from or to &lsquo;Display a random frame&rsquo; desyncs old films made with the same shapes. (I haven&rsquo;t tested whether this also desyncs network games.)</li></ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="weaponsinhand">&lsquo;Weapons in Hand&rsquo; Sequences</h2>
 
@@ -501,24 +544,24 @@ window.onload = function () {makeAllSortable();};
 
 <p>By default, the only other collections with &lsquo;true color&rsquo; versions are the landscape palettes, and it&rsquo;s very rare (though not unthinkable) for something to call one of the sequences in these (assuming any are even defined). I think a classic Mac utility could create &lsquo;true color&rsquo; versions of other collections (all <span class="decimal">32</span> collections can have them; it&rsquo;s just that, by default, only the Weapons in Hand and Landscapes did), and if a shapes file had these, their sequences should align between &lsquo;<span class="decimal">8</span>-bit&rsquo; and &lsquo;true color&rsquo; wherever they&rsquo;re defined.</p>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h1 id="appendices">Appendices &amp; Transplanted Content</h1>
 
-<p>I have split several sections off onto their own pages. Please update your links accordingly:</p>
+<p>I&rsquo;ve split several sections off onto their own pages. Please update your links accordingly:</p>
 
 <ul>
-	<li><strong id="circles">Circles and the Custom Grid</strong> and its subsection <strong id="radii">Radii and Rotations for <span class="decimal">1</span> WU-long Sides with Regular Polygons</strong> have moved to <a href="marathoncircles.html">aaronfreed.github.io/marathoncircles.html</a>.</li>
+	<li>I&rsquo;ve moved <strong id="circles">Circles and the Custom Grid</strong> and its subsection <strong id="radii">Radii and Rotations for <span class="decimal">1</span> WU-long Sides with Regular Polygons</strong> to <a href="marathoncircles.html">aaronfreed.github.io/marathoncircles.html</a>.</li>
 	<li><strong id="mapcomplexity">Map Complexity: A Case Study</strong> has moved to <a href="mapcomplexity.html">aaronfreed.github.io/mapcomplexity.html</a>.
 		<ul>
-			<li><strong>Reducing Map Index Use</strong> (<a href="mapindexreduction.html">aaronfreed.github.io/mapindexreduction.html</a>) is a follow-up I wrote after splitting this page up.</li>
+			<li>I wrote a follow-up, <strong>Reducing Map Index Use</strong> (<a href="mapindexreduction.html">aaronfreed.github.io/mapindexreduction.html</a>), partway through splitting up this page.</li>
 		</ul>
 	</li>
 	<li>The <strong id="sounds"><span id="sounds-general"></span><span id="soundids"></span><span id="soundsources"></span>Sounds</strong> section has moved to <a href="marathonsounds.html">aaronfreed.github.io/marathonsounds.html</a>.</li>
 	<li><strong id="anvilhelp">The Annotated Anvil Help Balloons</strong> has moved to <a href="anvilhelp.html">aaronfreed.github.io/anvilhelp.html</a>.</li>
 	<li><strong id="defaultnames">Example DefaultNames.txt</strong> (see <a href="#ShapeFusion">reference</a> above) has moved to <a href="defaultnames.html">aaronfreed.github.io/defaultnames.html</a>.</p>
 	<li><strong id="looper">Looping Music</strong> has moved to <a href="marathonlooper.html">marathonlooper.html</a> (Aleph One 1.7 renders it mostly superfluous).</li>
-	<li>Another new appendix is my examination of what monsters appear on what <em>Marathon</em> trilogy levels, which demonstrates an important mapmaking principle: sometimes decreasing variety <em>within</em> a small span of a game can paradoxically <em>increase</em> variety <em>across</em> a much larger span of the game (or the entire game). It can be found at <a href="marathonmonsters.html">aaronfreed.github.io/marathonmonsters.html</a>.</a></li>
+	<li>Another new appendix, <strong>Where Are Monsters in Marathon&hellip;Maps</strong>, examines what monsters appear in what <em>Marathon</em> trilogy levels to demonstrate an important game design paradox: sometimes decreasing variety <em>within</em> a small span of a game can <em>increase</em> variety <em>across</em> a much larger span of it (or all of it). It is found at <a href="marathonmonsters.html">aaronfreed.github.io/marathonmonsters.html</a>.</a></li>
 </ul>
 
 <p>Additionally, to avoid duplicating content, I&rsquo;ve moved several sections to the <a href="mapmaking101.html">beginners&rsquo; mapmaking page</a>. Here are direct links to the relevant sections:</p>
@@ -527,24 +570,24 @@ window.onload = function () {makeAllSortable();};
 			<ul>
 				<li><a href="mapmaking101.html#editorsm2i" id="resourcesa1">Aleph One Content Editing (<em>Marathon <span class="decimal">2</span></em>/<em>Infinity</em> Format)</a></li>
 				<li><a href="mapmaking101.html#editorsm1" id="resourcesm1"><em>Marathon <span class="decimal">1</span></em> Content Editing for Aleph One</a></li>
-				<li>I&rsquo;ve also split <strong id="tutorialsother">Other Tutorials & Resources</strong>:
+				<li>I&rsquo;ve also split <strong id="tutorialsother">Other Tutorials &amp; Resources</strong>:
 					<ul>
-						<li><a href="mapmaking101.html#startertutorials">Tutorials & Resources for Beginning Mapmakers</a></li>
-						<li><a href="mapmaking101.html#advancedtutorials">Advanced Tutorials & Resources</a></li>
+						<li><a href="mapmaking101.html#startertutorials">Tutorials &amp; Resources for Beginning Mapmakers</a></li>
+						<li><a href="mapmaking101.html#advancedtutorials">Advanced Tutorials &amp; Resources</a></li>
 					</ul>
 				</li>
-				<li><a href="mapmaking101.html#resourcescommunity">Marathon Communities & Resources</a></li>
+				<li><a href="mapmaking101.html#resourcescommunity">Marathon Communities &amp; Resources</a></li>
 			</ul>
 		</li>
 		<li><a href="mapmaking101.html#welandsetup" id="welandsetup">Weland Setup</a>
 			<ul>
 				<li><a href="mapmaking101.html#welandpreferences" id="welandpreferences">Configuring Weland&rsquo;s Preferences</a></li>
-				<li><a href="mapmaking101.html#visualmodemac" id="visualmodemac">Installing Visual Mode & Vasara (MacOS)</a></li>
-				<li><a href="mapmaking101.html#visualmodewin" id="visualmodewinlin">Installing Visual Mode & Vasara (Windows)</a></li>
+				<li><a href="mapmaking101.html#visualmodemac" id="visualmodemac">Installing Visual Mode &amp; Vasara (MacOS)</a></li>
+				<li><a href="mapmaking101.html#visualmodewin" id="visualmodewinlin">Installing Visual Mode &amp; Vasara (Windows)</a></li>
 				<li><a href="mapmaking101.html#visualmodepreferences" id="visualmodepreferences">Configuring Weland!Aleph One</a></li>
 			</ul>
 		</li>
-		<li><a href="mapmaking101.html#forgeerrata" id="forgeerrata">Forge Manual Errata & Omissions</a></li>
+		<li><a href="mapmaking101.html#forgeerrata" id="forgeerrata">Forge Manual Errata &amp; Omissions</a></li>
 		<li><a href="mapmaking101.html#texturingissues" id="texturingissues">Texturing Issues in Visual Mode.lua and Vasara</a>
 			<ul>
 				<li><a href="mapmaking101.html#vasaratexturing" id="vasaratexturing">Further Texturing Issues in Vasara</a></li>
@@ -552,8 +595,10 @@ window.onload = function () {makeAllSortable();};
 		</li>
 	</ul>
 
+	<p>Lastly, I&rsquo;ve moved my <a href="aboutme.html"aboutme.html"" id="bio">biography</a> and <a href="aboutme.html#contact" id="contact">contact info</a> to a dedicated page: <a href="aboutme.html">aaronfreed.github.io/aboutme.html</a>.</p>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h1 id="thanks">Acknowledgements</h2>
 
@@ -567,17 +612,28 @@ window.onload = function () {makeAllSortable();};
 		<li><strong>Bungie</strong>, for obvious reasons.</li> 
 	</ul>
 
-	<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+	<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 	
-<h1 id="bio">Who are you and what qualifies you to write this?</h1>
+<!--<h1 id="bio">Who are you and what qualifies you to write this?</h1>
 
 	<p>I&rsquo;m Aaron; I&rsquo;m likely best-known in the community for co-directing <em><a href="http://eternal.bungie.org/development" target="_blank">Eternal</a></em>, though I&rsquo;ve also worked in some capacity (not always mapping-related) on current and forthcoming mods like <em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em>, <em><a href="https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors" target="_blank">Hellpak</a></em>, <em>Tempus Irae Redux</em>, <em>Where Monsters Are in Dreams</em>, <em>Marathon Chronicles</em>&hellip;basically, I&rsquo;ve been busy mapping for this engine off and on since about <span class="decimal">1997</span>, during which I&rsquo;ve acquired all kinds of stupid arcane knowledge about it. Have you ever heard of ambient light delta? Neither had Aleph One&rsquo;s developers until I pointed it out. I&rsquo;m not saying that because I think it&rsquo;s worth being proud of having acquired so much useless and pointless knowledge, but what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me&hellip; oh, sorry, that&rsquo;s <em>Taken</em>. Anyway, I feel Aleph One content creation should have a lower barrier to entry, so here&rsquo;s an attempt to create a reference for solutions to some of its frustrating problems.</p>
 
-	<p>If you wish to contact me, the best way is via Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@Aaron#<span class="decimal">6608</span></strong>, though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I&rsquo;d recommend this only if you notice errors/omissions in this document (or have suggestions for additions; I can credit you for all three). If you need help, it&rsquo;s best to ask in <strong>#marathon-general</strong>, <strong>#forge</strong>, or <strong>#tech-support</strong> (<strong>#development</strong> is for engine/editor development). I&rsquo;m also on the <a href="https://pfhorums.com" target="_blank">Pfhorums</a> (as <a href="https://pfhorums.com/memberlist.php?mode=viewprofile&u=6618" target="_blank">The Man</a>) and <a href="https://reddit.com/r/marathon/" target="_blank">Reddit</a> (as <a href="https://reddit.com/u/aaronnotarobot" target="_blank">u/aaronnotarobot</a>), but I can&rsquo;t promise to respond to messages on either quickly.</p>
-
 	<p>You may also be interested in my <a href="soundtracks.html"><em>Marathon</em> soundtracks page</a>, which contains some technical information about remastering music and sounds that may be helpful to those working on sounds or music. A lot of my own creative work, much of which is <em>Marathon</em>-related, may be found on my <a href="discography.html">discography</a> and <a href="portfolio.html">portfolio</a> pages.</p>
- 
-	<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+
+<h1 id="contact">Contact Info</h1>
+
+	<p>The fastest way to contact me is Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@aaron6608</strong> (or <strong>@Aaron#<span class="decimal">6608</span></strong>), though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I recommend this only if you notice errors/omissions in this document (or have suggestions for additions; if you remind me, I can credit you for any of the above). If you need help, I recommend asking in <strong>#classic-marathon</strong>, <span id="ftnt_ref02" class="dotted" title="Which, despite carrying the name of a program hardly anyone has actively used for fifteen years, is meant for all map, physics, shapes, and sound creation for the Marathon trilogy."></span><strong>#forge</strong><a href="#ftnt02">&#8317;&sup2;&#8318;</a></span>, or <strong>#tech-support</strong>. (<strong>#development</strong> is intended only for engine and editor development, so unless you&rsquo;re specifically discussing Vasara AF, you should probably ping me in one of the other three channels.)</p>
+	
+	<p>I&rsquo;m also on GitHub as <a href="https://github.com/aaronfreed" target="_blank">aaronfreed</a>, naturally. You can <a href="https://github.com/aaronfreed/aaronfreed.github.io/issues/" target="_blank">create an issue</a>, <a href="https://github.com/aaronfreed/aaronfreed.github.io/pulls" target="_blank">submit a pull request</a>, or <a href="https://github.com/aaronfreed/aaronfreed.github.io/discussions" target="_blank">start a discussion</a>. I do ask that users be respectful (both of me and of others) and note that I maintain this page on my own time, for free, while also juggling multiple active development projects that I&rsquo;m also working on, also for free. The <a href="https://github.com/aaronfreed/aaronfreed.github.io/discussions/1" target="_blank">rules I outline for my discussion section</a> apply equally well to issues and pull requests.</p>
+
+	<p>I&rsquo;m also on the <a href="https://pfhorums.com" target="_blank">Pfhorums</a> (as <a href="https://pfhorums.com/memberlist.php?mode=viewprofile&u=6618" target="_blank">The Man</a>) and <a href="https://reddit.com/r/marathon/" target="_blank">Reddit</a> (as <a href="https://reddit.com/u/aaronnotarobot" target="_blank">u/aaronnotarobot</a>), but I can&rsquo;t promise to respond to messages on either quickly. Lastly, I do, of course, have an email address, but:</p>
+
+	<ol class="loweralpha">
+		<li>Email is very nearly the <em>worst</em> way to contact me.</li>
+		<li>The days when it was a good idea to post an email address on a public webpage are long over.</li>
+	</ol>
+
+	<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p> -->
 
 <h1 id="endnotes">Endnotes</h1>
 
@@ -593,10 +649,14 @@ window.onload = function () {makeAllSortable();};
 			<td class="integer"><a href="#ftnt_ref01" id="ftnt01"><strong>1</strong></a></td>
 			<td>What, you don&rsquo;t have a third hand? Then you must not be Zaphod Beeblebrox.</td>
 		</tr>
+<!--		<tr>
+			<td class="integer"><a href="#ftnt_ref02" id="ftnt02"><strong>2</strong></a></td>
+			<td>Which, despite carrying the name of a program hardly anyone has actively used for fifteen years, is meant for <em>all</em> map, physics, shapes, and sound creation for Aleph One or the <em>Marathon</em> trilogy.</td>
+		</tr>-->
 	</tbody>
 </table>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 </body>
 </html>

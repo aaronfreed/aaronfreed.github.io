@@ -78,6 +78,7 @@ window.onload = function () {makeAllSortable();};
 			<ol>
 				<li><a href="#startertutorials">Tutorials & Resources for Beginning Mapmakers</a></li>
 				<li><a href="#forgeerrata">Forge Manual Errata & Omissions</a></li>
+				<li><a href="#welandissues">Mapping Issues in Weland</a></li>
 				<li><a href="#texturingissues">Texturing Issues in Visual Mode.lua and Vasara</a>
 					<ol>
 						<li><a href="#vasaratexturing">Further Texturing Issues in Vasara</a></li>
@@ -349,11 +350,25 @@ window.onload = function () {makeAllSortable();};
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="/">Website index</a></p>
 
+<h2 id="welandissues">Mapping Issues in Weland</h2>
+
+<p>Weland differs from Forge in a few ways and has a few (mostly minor) bugs. Some issues users may currently encounter:</p>
+
+<ul>
+	<li>Forge threw an error if you attempted to enter Visual Mode or save a map with any concave polygons. Weland just lets you do it. However, Forge&rsquo;s more aggressive treatment of the matter was justified in that the engine crashes if a player ever enters those polygons. By default, Weland colors concave polygons orange in Draw Mode, but if a lot of your polygons overlap in X/Y space, concave polygons may not be visible at a given time. Thus, be especially careful when moving lines, points, or polygons.</li>
+	<li>Pressing &ldquo;Undo&rdquo; in any top-down view besides draw mode causes the selection to be reverted to the first item in the palette.</li>
+	<li>&lsquo;<strong>Remember Deleted Sides</strong>&rsquo; is a wonderful Weland addition &ndash; it remembers the texturing and lighting of a side when you delete a polygon and refill it (e.g., with lines divided differently). Unfortunately, it doesn&rsquo;t always work.</li>
+	<li>&lsquo;<strong>Split Lines Attached to Polygons</strong>&rsquo;, another wonderful Weland addition, currently always results in lines being marked solid and transparent, regardless of whether they were originally.</li>
+</ul>
+
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="/">Website index</a></p>
+
 <h2 id="texturingissues">Texturing Issues in Visual Mode.lua and Vasara</h2>
 
 <p>A few problems occur when texturing in Aleph One that were not problems in Forge. These include:</p>
 
 <ul>
+	<li></li>
 	<li>When you exit visual mode, tags should be in the state they&rsquo;re meant to start the level in. Thus, if you tabbed a tag switch that starts the level inactive so you could open some doors, reset the tag to inactive. Take special care with wires and chip insertion switches &ndash; messing them up can render levels uncompletable. This is one of several reasons I&rsquo;d recommend avoiding tags where possible &ndash; this is just the tip of the iceberg (you don&rsquo;t need to worry about <a href="mapmaking.html#tagsareterrible">the other reasons</a> until later).</li>
 	<li>In Visual Mode.lua and Vasara 1.0.x, walking on a <strong>Must Be Explored</strong> polygon (or even looking at it if <strong>Exploration (M<span class="decimal">1</span>)</strong> is set) resets it to <strong>Normal.</strong> Be sure to reset these after texturing (or just don&rsquo;t set them until you&rsquo;ve finished texturing).
 		<ul>
@@ -462,7 +477,16 @@ window.onload = function () {makeAllSortable();};
 
 <h1 id="contact">Contact Info</h1>
 
-	<p>If you wish to contact me, the best way is via Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@Aaron#<span class="decimal">6608</span></strong>, though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I&rsquo;d recommend this only if you notice errors/omissions in this document (or have suggestions for additions; I can credit you for all three). If you need help, it&rsquo;s best to ask in <strong>#classic-marathon</strong>, <strong>#forge</strong>, or <strong>#tech-support</strong> (<strong>#development</strong> is for engine/editor development). I&rsquo;m also on the <a href="https://pfhorums.com" target="_blank">Pfhorums</a> (as <a href="https://pfhorums.com/memberlist.php?mode=viewprofile&u=6618" target="_blank">The Man</a>) and <a href="https://reddit.com/r/marathon/" target="_blank">Reddit</a> (as <a href="https://reddit.com/u/aaronnotarobot" target="_blank">u/aaronnotarobot</a>), but I can&rsquo;t promise to respond to messages on either quickly.</p>
+	<p>The fastest way to contact me is Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@aaron6608</strong> (or <strong>@Aaron#<span class="decimal">6608</span></strong>), though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I recommend this only if you notice errors/omissions in this document (or have suggestions for additions; if you remind me, I can credit you for any of the above). If you need help, I recommend asking in <strong>#classic-marathon</strong>, <span id="ftnt_ref04" class="dotted" title="Which, despite carrying the name of a program hardly anyone has actively used for fifteen years, is meant for all map, physics, shapes, and sound creation for the Marathon trilogy."></span><strong>#forge</strong><a href="#ftnt04">&#8317;&#8308;&#8318;</a></span>, or <strong>#tech-support</strong>. (<strong>#development</strong> is intended only for engine and editor development, so unless you&rsquo;re specifically discussing Vasara AF, you should probably ping me in one of the other three channels.)</p>
+	
+	<p>I&rsquo;m also on GitHub as <a href="https://github.com/aaronfreed" target="_blank">aaronfreed</a>, naturally. You can <a href="https://github.com/aaronfreed/aaronfreed.github.io/issues/" target="_blank">create an issue</a>, <a href="https://github.com/aaronfreed/aaronfreed.github.io/pulls" target="_blank">submit a pull request</a>, or <a href="https://github.com/aaronfreed/aaronfreed.github.io/discussions" target="_blank">start a discussion</a>. I do ask that users be respectful (both of me and of others) and note that I maintain this page on my own time, for free, while also juggling multiple active development projects that I&rsquo;m also working on, also for free. The <a href="https://github.com/aaronfreed/aaronfreed.github.io/discussions/1" target="_blank">rules I outline for my discussion section</a> apply equally well to issues and pull requests.</p>
+
+	<p>I&rsquo;m also on the <a href="https://pfhorums.com" target="_blank">Pfhorums</a> (as <a href="https://pfhorums.com/memberlist.php?mode=viewprofile&u=6618" target="_blank">The Man</a>) and <a href="https://reddit.com/r/marathon/" target="_blank">Reddit</a> (as <a href="https://reddit.com/u/aaronnotarobot" target="_blank">u/aaronnotarobot</a>), but I can&rsquo;t promise to respond to messages on either quickly. Lastly, I do, of course, have an email address, but:</p>
+
+	<ol class="loweralpha">
+		<li>Email is very nearly the <em>worst</em> way to contact me.</li>
+		<li>The days when it was a good idea to post an email address on a public webpage are long over.</li>
+	</ol>
 
 <h1 id="bio">What qualifies you to write this, anyway?</h1>
 
@@ -519,6 +543,10 @@ window.onload = function () {makeAllSortable();};
 						<li style="margin-bottom: 0px;">Lastly, <em>EVIL</em>&rsquo;s strengths include professional-quality sprites; fantastic sounds, monsters, and weapons; and sometimes brilliant (if frustratingly inconsistent) level design.</li>
 					</ul>
 				</td>
+			</tr>
+			<tr>
+				<td class="integer"><a href="#ftnt_ref04" id="ftnt04"><strong>4</strong></a></td>
+				<td>Which, despite carrying the name of a program hardly anyone has actively used for fifteen years, is meant for <em>all</em> map, physics, shapes, and sound creation for Aleph One or the <em>Marathon</em> trilogy.</td>
 			</tr>
 		</tbody>
 	</table>

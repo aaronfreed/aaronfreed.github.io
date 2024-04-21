@@ -150,17 +150,21 @@ a:visited,
 a:link strong,
 a:visited .strong,
 :is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited),
-:is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) :where(.integer, .decimal, .number, .date)
+:is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) :where(.integer, .decimal, .number, .date),
+ol.toc > :where(a:link, a:visited) :where(.integer, .decimal)
 {
     font-weight: var(--boldest);
+}
+ol.toc > li > ol > li > ol :where(.integer, .decimal) {
+    font-family: "Corbel", "Avenir", "Calibri", monospace;
+    font-weight: var(--medium);
 }
 .light {
     font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
     font-weight: var(--lightest);
 }
 .light .integer:not(a:link, a:visited, a:hover, a:active),
-.light .decimal:not(a:link, a:visited, a:hover, a:active),
-ol.toc > li > ol > li > ol :where(.integer, .decimal) {
+.light .decimal:not(a:link, a:visited, a:hover, a:active) {
     font-family: "Corbel", "Avenir", "Calibri", monospace;
     font-weight: var(--lightest);
 }

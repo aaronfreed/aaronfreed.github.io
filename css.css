@@ -159,7 +159,8 @@ a:visited .strong,
     font-weight: var(--lightest);
 }
 .light .integer:not(a:link, a:visited, a:hover, a:active),
-.light .decimal:not(a:link, a:visited, a:hover, a:active) {
+.light .decimal:not(a:link, a:visited, a:hover, a:active),
+ol.toc > li > ol > li > ol :where(.integer, .decimal) {
     font-family: "Corbel", "Avenir", "Calibri", monospace;
     font-weight: var(--lightest);
 }

@@ -1,0 +1,606 @@
+<!doctype html>
+<head>
+  <title>Marathon 1 Physics to JSON converter (by @magical_beetle_40501 on Discord, with minor changes by me)</title>
+  <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<h1><em>Marathon 1</em> Physics to JSON Converter</h1>
+<h2>by @magical_beetle_40501, with minor changes by Aaron Freed</h2>
+<p><strong>Instructions:</strong> Upload a <em>Marathon 1</em> physics model (its filename should end in <code>.phys</code>). The text output here will be saved as JSON, which you&rsquo;ll be able to edit in any editor that can read and write JSON files; if you don&rsquo;t make any syntax errors, you can then convert it back using this tool&rsquo;s <a href="json-to-m1-phys.html">counterpart</a>.</p>
+
+<p>A huge thanks to <strong>@magical_beetle_40501</strong> on Discord for putting this together and releasing the code under the GNU General Public License. I&rsquo;ve made slight changes to some of the monster names (corrected &ldquo;hound&rdquo; to &ldquo;looker&rdquo;, added &ldquo;unused&rdquo; after &ldquo;major juggernaut&rdquo;) and to enable it to run on GitHub&rsquo;s website (which does not like embedded JavaScript), but it is otherwise unchanged.</p>
+
+<p>I provide this utility in the hopes that it will be useful, but with <strong><em>absolutely no warranty</em></strong> &ndash; I&rsquo;m not responsible for any damage to your files, computer, hard drive, or marriage that may occur as a result of its use. Please <a href="aboutme.html">contact me</a> if you have any questions, or see my <a href="mapmaking101.html">beginners&rsquo;</a> and <a href="mapmaking.html">advanced</a> mapmaking guides if you want to learn more about <em>Marathon</em> mapmaking.</p>
+
+<p class="sectionbreak"><a href="aboutme.html">Contact me</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="discography.html">Discography</a> &middot; <a href="portfolio.html">Portfolio</a> &middot; <a href="/">Website index</a></p>
+
+<label for="file-upload" class="custom-file-upload">
+  <i class="fa fa-cloud-upload"></i> Upload M1 Physics Model
+  <input id="file-upload" type="file"/>
+</label>
+<textarea id="json" style="width: 800px; height: 600px;"></textarea>
+<script>
+function toTag(string) {
+  return (string.charCodeAt(0) << 24) | (string.charCodeAt(1) << 16) | (string.charCodeAt(2) << 8) | string.charCodeAt(3);
+}
+
+const monsterNames = [
+  "player",
+  "explodabob",
+  "minor fighter",
+  "major fighter",
+  "minor projectile fighter",
+  "major projectile fighter",
+  "green bob",
+  "yellow bob",
+  "blue bob",
+  "red bob",
+  "unused 1",
+  "unused 2",
+  "minor enforcer",
+  "major enforcer",
+  "minor compiler",
+  "major compiler",
+  "minor invisible compiler",
+  "major invisible compiler",
+  "minor hulk",
+  "major hulk",
+  "minor hunter",
+  "major hunter",
+  "minor juggernaut",
+  "major juggernaut (unused)",
+  "minor looker",
+  "major looker",
+  "invisible looker",
+  "madd",
+  "unused 3",
+  "unused 4",
+  "minor trooper",
+  "major trooper",
+  "minor wasp",
+  "major wasp",
+  "unused 5",
+  "unused 6",
+  "unused 7",
+  "unused 8",
+  "alien leader",
+  "bad madd"
+];
+
+function getMonsterName(index) {
+  return monsterNames[index];
+}
+
+function getMonsterIndex(name) {
+  return monsterNames.indexOf(name);
+}
+
+const effectNames = [
+  "rocket explosion",
+  "rocket contrail",
+  "grenade explosion",
+  "grenade contrail",
+  "bullet ricochet",
+  "alien weapon ricochet",
+  "flamethrower burst",
+  "fighter blood splash",
+  "player blood splash",
+  "civilian blood splash",
+  "assimilated civilian blood splash",
+  "unused 1",
+  "unused 2",
+  "enforcer blood splash",
+  "minor hulk splash",
+  "major hulk splash",
+  "hulk melee detonation",
+  "compiler bolt minor detonation",
+  "compiler bolt major detonation",
+  "compiler bolt major contrail",
+  "fighter projectile detonation",
+  "fighter melee detonation",
+  "hunter projectile detonation",
+  "hunter spark",
+  "minor fusion detonation",
+  "major fusion detonation",
+  "major fusion contrail",
+  "fist detonation",
+  "unused 3",
+  "wasp melee detonation",
+  "wasp projectile detonation",
+  "wasp blood splash",
+  "trooper blood splash",
+  "unused 4",
+  "madd spark",
+  "juggernaut spark",
+  "alien leader blood splash",
+  "metallic clang"
+];
+
+function getEffectName(index) {
+  return effectNames[index];
+}
+
+function getEffectIndex(name) {
+  return effectNames.indexOf(name);
+}
+
+const projectileNames = [
+  "missile",
+  "grenade",
+  "pistol bullet",
+  "rifle bullet",
+  "staff",
+  "staff bolt",
+  "flamethrower burst",
+  "unused 1",
+  "hulk slap minor",
+  "hulk slap major",
+  "compiler bolt minor",
+  "compiler bolt major",
+  "alien weapon",
+  "fusion bolt minor",
+  "fusion bolt major",
+  "hunter",
+  "fist",
+  "unused 2",
+  "unused 3",
+  "juggernaut rocket",
+  "trooper bullet",
+  "trooper grenade",
+  "wasp sting",
+  "wasp goo",
+  "juggernaut missile"
+];
+
+function getProjectileName(index) {
+  return projectileNames[index];
+}
+
+function getProjectileIndex(name) {
+  return projectileNames.indexOf(name);
+}
+
+const physicsDivisionNames = [
+  "walking",
+  "running"
+];
+
+function getPhysicsDivisionName(index) {
+  return physicsDivisionNames[index];
+}
+
+function getPhysicsDivisionIndex(name) {
+  physicsDivisionNames.indexOf(name);
+}
+
+const weaponNames = [
+  "fist",
+  "pistol",
+  "fusion pistol",
+  "assault rifle",
+  "missile launcher",
+  "flamethrower",
+  "alien weapon"
+];
+
+function getWeaponName(index) {
+  return weaponNames[index];
+}
+
+function getWeaponIndex(name) {
+  return weaponNames.indexOf(name);
+}
+
+const damageNames = [
+  "explosion",
+  "staff",
+  "projectile",
+  "absorbed",
+  "flame",
+  "unused 1",
+  "alien weapon",
+  "hulk slap",
+  "compiler",
+  "fusion",
+  "hunter",
+  "fists",
+  "teleporter",
+  "wasp",
+  "unused 1",
+  "unused 2",
+  "crushing",
+  "polygon",
+  "suffocation",
+  "major polygon"
+];
+
+function getDamageName(index) {
+  return damageNames[index];
+}
+
+function getDamageIndex(name) {
+  return damageNames.indexOf(name);
+}
+
+document.body.onload = () => {
+  document.querySelector("input").value = null;
+  document.querySelector("textarea").value = "";
+};
+
+document.querySelector("input").onchange = () => {
+  document.querySelector("textarea").value = "";
+  const file = document.querySelector("input").files[0];
+  const arrayBuffer = file.arrayBuffer();
+
+  arrayBuffer.then(arrayBuffer => {
+    const data = importM1PhysicsData(arrayBuffer);
+    document.querySelector("textarea").value = JSON.stringify(data, null, 2);
+  });
+};
+
+function importM1PhysicsData(arrayBuffer) {
+  const stream0 = new Stream(arrayBuffer);
+  const physicsData = {};
+
+  while (!stream0.isEmpty()) {
+    const tag = stream0.getUint32();
+    stream0.getUint32(); // unused
+    const count = stream0.getUint16();
+    const size = stream0.getUint16();
+    
+    const data = new Uint8Array(count * size);
+    
+    for (let i = 0; i < count * size; i++) {
+      data[i] = stream0.getUint8();
+    }
+    
+    const stream1 = new Stream(data.buffer);
+    console.log(tag, count, size);
+
+    switch (tag) {
+      case toTag("mons"):
+        physicsData["mons"] = unpackM1MonsterDefinitions(stream1, count);
+        break;
+
+      case toTag("effe"):
+        physicsData["effe"] = unpackM1EffectDefinitions(stream1, count);
+        break;
+
+      case toTag("proj"):
+        physicsData["proj"] = unpackM1ProjectileDefinitions(stream1, count);
+        break;
+      
+      case toTag("phys"):
+        physicsData["phys"] = unpackM1PhysicsConstants(stream1, count);
+        break;
+
+      case toTag("weap"):
+        physicsData["weap"] = unpackM1WeaponDefinitions(stream1, count);
+        break;
+    }
+  }
+
+  return physicsData;
+}
+
+class Stream {
+  constructor(arrayBuffer) {
+    this._dataView = new DataView(arrayBuffer);
+    this._position = 0;
+  }
+
+  isEmpty() {
+    return this._position >= this._dataView.byteLength;
+  }
+
+  getInt8() {
+    return this._getInt(8);
+  }
+
+  getInt16() {
+    return this._getInt(16);
+  }
+
+  getInt32() {
+    return this._getInt(32);
+  }
+
+  getUint8() {
+    return this._getUint(8);
+  }
+
+  getUint16() {
+    return this._getUint(16);
+  }
+
+  getUint32() {
+    return this._getUint(32);
+  }
+
+  _getInt(T) {
+    const data = this._dataView["getInt" + T](this._position);
+    this._position += T / 8;
+    return data;
+  }
+
+  _getUint(T) {
+    const data = this._dataView["getUint" + T](this._position);
+    this._position += T / 8;
+    return data;
+  }
+}
+
+function unpackM1MonsterDefinitions(stream, count) {
+  const monsterDefinitions = {};
+
+  for (let i = 0; i < count; i++) {
+    monsterDefinitions[getMonsterName(i)] = {};
+    const monsterDefinition = monsterDefinitions[getMonsterName(i)];
+
+    monsterDefinition.collection = stream.getInt16();
+    
+    monsterDefinition.vitality = stream.getInt16();
+    monsterDefinition.immunities = stream.getUint32();
+    monsterDefinition.weaknesses = stream.getUint32();
+    monsterDefinition.flags = stream.getUint32();
+    
+    monsterDefinition.monsterClass = stream.getInt32();
+    monsterDefinition.friends = stream.getInt32();
+    monsterDefinition.enemies = stream.getInt32();
+    
+    monsterDefinition.activationSound = stream.getInt16();
+    stream.getInt16(); // unused in A1
+    
+    monsterDefinition.flamingSound = stream.getInt16();
+    monsterDefinition.randomSound = stream.getInt16();
+    monsterDefinition.randomSoundMask = stream.getInt16();
+
+    monsterDefinition.carryingItemType = stream.getInt16();
+    
+    monsterDefinition.radius = stream.getInt16();
+    monsterDefinition.height = stream.getInt16();
+    monsterDefinition.preferredHoverHeight = stream.getInt16();
+    monsterDefinition.minimumLedgeDelta = stream.getInt16();
+    monsterDefinition.maximumLedgeDelta = stream.getInt16();
+    monsterDefinition.externalVelocityScale = stream.getInt32();
+    
+    monsterDefinition.impactEffect = stream.getInt16();
+    monsterDefinition.meleeImpactEffect = stream.getInt16();
+    
+    monsterDefinition.halfVisualArc = stream.getInt16();
+    monsterDefinition.halfVerticalVisualArc = stream.getInt16();
+    monsterDefinition.visualRange = stream.getInt16();
+    monsterDefinition.darkVisualRange = stream.getInt16();
+    monsterDefinition.intelligence = stream.getInt16();
+    monsterDefinition.speed = stream.getInt16();
+    monsterDefinition.gravity = stream.getInt16();
+    monsterDefinition.terminalVelocity = stream.getInt16();
+    monsterDefinition.doorRetryMask = stream.getInt16();
+    monsterDefinition.shrapnelRadius = stream.getInt16();
+
+    monsterDefinition.shrapnelDamage = unpackDamageDefinitions(stream, 1);
+
+    monsterDefinition.hitShapes = stream.getUint16();
+    monsterDefinition.hardDyingShape = stream.getUint16();
+    monsterDefinition.softDyingShape = stream.getUint16();
+    monsterDefinition.hardDeadShapes = stream.getUint16();
+    monsterDefinition.softDeadShapes = stream.getUint16();
+    monsterDefinition.stationaryShape = stream.getUint16();
+    monsterDefinition.movingShape = stream.getUint16();
+
+    monsterDefinition.attackFrequency = stream.getInt16();
+    monsterDefinition.meleeAttack = unpackAttackDefinition(stream);
+    monsterDefinition.rangedAttack = unpackAttackDefinition(stream);
+  }
+
+  return monsterDefinitions;
+}
+
+function unpackM1EffectDefinitions(stream, count) {
+  const effectDefinitions = {};
+
+  for (let i = 0; i < count; i++) {
+    effectDefinitions[getEffectName(i)] = {};
+    const effectDefinition = effectDefinitions[getEffectName(i)];
+
+    effectDefinition.collection = stream.getInt16();
+    effectDefinition.shape = stream.getInt16();
+    effectDefinition.flags = stream.getUint16();
+  }
+
+  return effectDefinitions;
+}
+
+function unpackM1ProjectileDefinitions(stream, count) {
+  const projectileDefinitions = {};
+
+  for (let i = 0; i < count; i++) {
+    projectileDefinitions[getProjectileName(i)] = {};
+    const projectileDefinition = projectileDefinitions[getProjectileName(i)];
+
+    projectileDefinition.collection = stream.getInt16();
+    projectileDefinition.shape = stream.getInt16();
+    projectileDefinition.detonationEffect = stream.getInt16();
+    projectileDefinition.contrailEffect = stream.getInt16();
+    projectileDefinition.ticksBetweenContrails = stream.getInt16();
+    projectileDefinition.maximumContrails = stream.getInt16();
+
+    projectileDefinition.radius = stream.getInt16();
+    projectileDefinition.areaOfEffect = stream.getInt16();
+    projectileDefinition.damage = unpackDamageDefinitions(stream, 1);
+
+    projectileDefinition.flags = stream.getInt16();
+
+    projectileDefinition.speed = stream.getInt16();
+    projectileDefinition.maximumRange = stream.getInt16();
+
+    projectileDefinition.flybySound = stream.getInt16();
+  }
+
+  return projectileDefinitions;
+}
+
+function unpackM1PhysicsConstants(stream, count) {
+  const physicsConstants = {};
+
+  for (let i = 0; i < 100; i++) {
+    stream.getInt8(); // "editor" record in the Bungie physics editor
+  }
+
+  for (let i = 0; i < count - 1; i++) {
+    physicsConstants[getPhysicsDivisionName(i)] = {};
+    const physicsDivision = physicsConstants[getPhysicsDivisionName(i)];
+
+    physicsDivision.maximumForwardVelocity = stream.getInt32();
+    physicsDivision.maximumBackwardVelocity = stream.getInt32();
+    physicsDivision.maximumPerpendicularVelocity = stream.getInt32();
+    physicsDivision.acceleration = stream.getInt32();
+    physicsDivision.deceleration = stream.getInt32();
+    physicsDivision.airborneDeceleration = stream.getInt32();
+    physicsDivision.gravitationalAcceleration = stream.getInt32();
+    physicsDivision.climbingAcceleration = stream.getInt32();
+    physicsDivision.terminalVelocity = stream.getInt32();
+    physicsDivision.externalDeceleration = stream.getInt32();
+
+    physicsDivision.angularAcceleration = stream.getInt32();
+    physicsDivision.angularDeceleration = stream.getInt32();
+    physicsDivision.maximumAngularVelocity = stream.getInt32();
+    physicsDivision.angularRecenteringVelocity = stream.getInt32();
+    physicsDivision.fastAngularVelocity = stream.getInt32();
+    physicsDivision.fastAngularMaximum = stream.getInt32();
+    physicsDivision.maximumElevation = stream.getInt32();
+    physicsDivision.externalAngularDeceleration = stream.getInt32();
+
+    physicsDivision.stepDelta = stream.getInt32();
+    physicsDivision.stepAmplitude = stream.getInt32();
+    physicsDivision.radius = stream.getInt32();
+    physicsDivision.height = stream.getInt32();
+    physicsDivision.deadHeight = stream.getInt32();
+    physicsDivision.cameraHeight = stream.getInt32();
+
+    physicsDivision.halfCameraSeparation = stream.getInt32();
+  }
+
+  return physicsConstants;
+}
+
+function unpackM1WeaponDefinitions(stream, count) {
+  const weaponDefinitions = {};
+
+  for (let i = 0; i < count; i++) {
+    weaponDefinitions[getWeaponName(i)] = {};
+    const weaponDefinition = weaponDefinitions[getWeaponName(i)];
+
+    weaponDefinition.itemType = stream.getInt16();
+    weaponDefinition.weaponClass = stream.getInt16();
+    weaponDefinition.flags = stream.getInt16();
+
+    weaponDefinition.trigger0 = {};
+    weaponDefinition.trigger1 = {};
+    const trigger0 = weaponDefinition.trigger0;
+    const trigger1 = weaponDefinition.trigger1;
+
+    trigger0.ammunitionType = stream.getInt16();;
+    trigger0.roundsPerMagazine = stream.getInt16();
+    trigger1.ammunitionType = stream.getInt16();
+    trigger1.roundsPerMagazine = stream.getInt16();
+
+    weaponDefinition.firingLightIntensity = stream.getInt32();
+    weaponDefinition.firingIntensityDecayTicks = stream.getInt16();
+
+    weaponDefinition.idleHeight = stream.getInt32();
+    weaponDefinition.bobAmplitude = stream.getInt32();
+    weaponDefinition.kickHeight = stream.getInt32();	
+    weaponDefinition.reloadHeight = stream.getInt32();
+    weaponDefinition.idleWidth = stream.getInt32();
+    weaponDefinition.horizontalAmplitude = stream.getInt32();
+
+    weaponDefinition.collection = stream.getInt16();
+    weaponDefinition.idleShape = stream.getInt16();
+    weaponDefinition.firingShape = stream.getInt16();
+    weaponDefinition.reloadingShape = stream.getInt16();
+    weaponDefinition.unused = stream.getInt16();
+    weaponDefinition.chargingShape = stream.getInt16();
+    weaponDefinition.chargedShape = stream.getInt16();
+
+    trigger0.ticksPerRound = stream.getInt16();
+    trigger1.ticksPerRound = stream.getInt16();
+
+    weaponDefinition.awaitReloadTicks = stream.getInt16();
+    weaponDefinition.readyTicks = stream.getInt16();
+
+    trigger0.recoveryTicks = stream.getInt16();
+    trigger1.recoveryTicks = stream.getInt16();
+    trigger0.chargingTicks = stream.getInt16();
+    trigger1.chargingTicks = stream.getInt16();
+
+    trigger0.recoilMagnitude = stream.getInt16();
+    trigger1.recoilMagnitude = stream.getInt16();
+
+    trigger0.firingSound = stream.getInt16();
+    trigger1.firingSound = stream.getInt16();
+    trigger0.clickSound = stream.getInt16();
+    trigger1.clickSound = stream.getInt16();
+
+    trigger0.reloadingSound = stream.getInt16();
+
+    trigger0.chargingSound = stream.getInt16();
+    trigger1.chargingSound = trigger0.chargingSound;
+
+    trigger0.shellCasingSound = stream.getInt16();
+    trigger1.shellCasingSound = stream.getInt16();
+
+    trigger0.soundActivationRange = stream.getInt16();
+    trigger1.soundActivationRange = stream.getInt16();
+
+    trigger0.projectileType = stream.getInt16();
+    trigger1.projectileType = stream.getInt16();
+
+    trigger0.thetaError = stream.getInt16();
+    trigger1.thetaError = stream.getInt16();
+
+    trigger0.dx = stream.getInt16();
+    trigger0.dz = stream.getInt16();
+    trigger1.dx = stream.getInt16();
+    trigger1.dz = stream.getInt16();
+
+    trigger0.burstCount = stream.getInt16();
+    trigger1.burstCount = stream.getInt16();
+
+    stream.getInt16();
+  }
+
+  return weaponDefinitions;
+}
+
+function unpackDamageDefinitions(stream, count) {
+  const damageDefinitions = {};
+
+  for (let i = 0; i < count; i++) {
+    damageDefinitions[getDamageName(i)] = {};
+    const damageDefinition = damageDefinitions[getDamageName(i)];
+
+    damageDefinition.type = stream.getInt16();
+    damageDefinition.flags = stream.getInt16();
+    damageDefinition.base = stream.getInt16();
+    damageDefinition.random = stream.getInt16();
+    damageDefinition.scale = stream.getInt32();
+  }
+
+  return damageDefinitions;
+}
+
+function unpackAttackDefinition(stream) {
+  const attackDefinition = {};
+
+  attackDefinition.type = stream.getInt16();
+  attackDefinition.repetitions = stream.getInt16();
+  attackDefinition.error = stream.getInt16();
+  attackDefinition.range = stream.getInt16();
+  attackDefinition.attackShape = stream.getInt16();
+
+  attackDefinition.dx = stream.getInt16();
+  attackDefinition.dy = stream.getInt16();
+  attackDefinition.dz = stream.getInt16();
+
+  return attackDefinition;
+}</script>

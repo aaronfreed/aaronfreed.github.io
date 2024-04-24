@@ -100,7 +100,7 @@ body {
     background-color: var(--background);
     color: var(--main);
 }
-.normal {
+.normal, button {
     font-family: "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 }
 .soundtracks strong,
@@ -229,6 +229,9 @@ h5
     font-size: 16px;
     margin: 0px 0px 8px;
 }
+.portfolio h5.light {font-weight: var(--lightest);}
+.portfolio h5.light strong {font-weight: var(--bold);}
+.portfolio h5.light strong strong {font-weight: var(--boldest);}
 
 /* paragraph, div, and list stuff */
 div,
@@ -479,6 +482,37 @@ thead {
     padding: 4px;
     vertical-align: top;
     font-weight: var(--lightest);
+}
+
+textarea, button {
+    background-color: var(--offset-level-1);
+    color: var(--main);
+}
+button, .custom-file-upload {
+    border: 2px outset var(--offset-level-4); border-radius: 12px; font-size: 16px;
+}
+textarea {
+    border: 2px inset var(--offset-level-4); border-radius: 4px;
+}
+.custom-file-upload input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0px;
+}
+.custom-file-upload {
+    display: inline-block;
+    border: 2px outset var(--offset-level-4); border-radius: 12px;
+    padding: 0px 6px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+.custom-file-upload:active {
+    border: 2px inset var(--offset-level-4); border-radius: 12px;
 }
 
 /* the discography page has complicated table border stuff */

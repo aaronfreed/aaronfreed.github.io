@@ -203,20 +203,31 @@ h5
     text-align: center;
 }
 
-.portfolio :where(h1, h2, h3, h4) {
-    margin: 24px 0px 8px;
-}
-.portfolio h1 {
+:where(.portfolio, .forgemanual) h1 {
     font-size: 36px;
 }
-.portfolio h2 {
+:where(.portfolio, .forgemanual) h2 {
     font-size: 30px;
 }
-.portfolio h3 {
+:where(.portfolio, .forgemanual) h3 {
     font-size: 24px;
 }
-.portfolio h4 {
+:where(.portfolio, .forgemanual) h4 {
     font-size: 18px;
+}
+:where(.portfolio, .forgemanual) h5 {
+    font-size: 16px;
+}
+
+.forgemanual :where(h1, h2, h3, h4, h5) {
+    margin: 16px 0px 4px;
+}
+.forgemanual :where(h1 + h2, h2 + h3, h3 + h4, h4 + h5) {
+    margin: 4px 0px;
+}
+
+.portfolio :where(h1, h2, h3, h4) {
+    margin: 24px 0px 8px;
 }
 .portfolio h2.first,
 .portfolio h3.first,
@@ -226,7 +237,6 @@ h5
 .portfolio h5 {
     font-weight: var(--bold);
     color: var(--portfolio-heading);
-    font-size: 16px;
     margin: 0px 0px 8px;
 }
 .portfolio h5.light {font-weight: var(--lightest);}
@@ -434,6 +444,10 @@ ol.upperlatin {
     margin: 12px 0px 8px 0px;
     text-align: center;
 }
+.inlay-image {
+    float: left;
+    margin: 0px 8px 0px 0px;
+}
 
 /* section breaks */
 .sectionbreak {
@@ -628,6 +642,24 @@ textarea {
 .monstermash h1 + ul:not(.sectionbreak + ul) {
     padding: 0px 0px 8px;
 }
+
+.forgemanual td {padding: 8px;}
+.forgemanual tr.note > td {
+    padding: 0px 8px 8px;
+}
+.forgemanual td:nth-child(1) {
+    padding-left: 0px;
+}
+.forgemanual td:last-child {
+    padding-right: 0px;
+}
+.forgemanual td :where(h3, h4, h5, p, blockquote):first-child {
+    margin-top: 0px;
+}
+.forgemanual td :where(p, blockquote):last-child {
+    margin-bottom: 0px;
+}
+.forgemanual blockquote {margin: 4px 30px;}
 
 .integer,
 .decimal,

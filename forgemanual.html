@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Marathon Mapmaking: Setup, Snafus, &amp; Solutions</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script>
+function sortTable(table, col, reverse) {
+	var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+		tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+		i;
+	reverse = -((+reverse) || -1);
+	tr = tr.sort(function (a, b) { // sort rows
+		return reverse // `-1 *` if want opposite order
+			* (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+				.localeCompare(b.cells[col].textContent.trim(), undefined, {numeric: true})
+			);
+	});
+	for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+	var th = table.tHead, i;
+	th && (th = th.rows[0]) && (th = th.cells);
+	if (th) i = th.length;
+	else return; // if no `<thead>` then do nothing
+	while (--i >= 0) (function (i) {
+		var dir = 1;
+		th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+	}(i));
+}
+
+function makeAllSortable(parent) {
+	parent = parent || document.body;
+	var t = parent.getElementsByTagName('table'), i = t.length;
+	while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+	</script>
+</head>
+<body class="forgemanual">
+	<h1>The Annotated Forge Manual (WIP)</h1>
+
+	<p>With annotations specifically detailing how Weland and Atque, Forge&rsquo;s modern replacements, differ from Forge, and correcting numerous errata found within the manual. (However, thus far, I&rsquo;ve only done the first six pages &ndash; twenty-eight are left.)</p>
+	
+	<h2>Introduction</h2>
+		<p>Forge is the powerful map-making tool used by Bungie to create levels for <em>Marathon</em>, <em>Marathon <span class="decimal">2</span></em>, and now <em>Marathon Infinity</em>. We&rsquo;ve included Forge with the <em>Marathon</em> Trilogy so that you can create your own fantastic Marathon worlds and share them with friends or upload them to the &rsquo;net.</p>
+
+		<p>Forge uses a simple 2D perspective to create lines, polygons, and to place objects, sounds, and lights. It also utilizes a cool 3D perspective for texturing, adjusting heights, and fine-tuning the map&rsquo;s look and feel.</p>
+
+		<p>Although Forge is a complicated tool, it is extremely intuitive and easy to learn (provided you&rsquo;re willing to read a little and watch the tutorials we&rsquo;ve included on the CD-ROM). In the following pages we&rsquo;ll be covering key definitions and descriptions you&rsquo;ll need to get familiar with (computer geeks like us love to use weird definitions so bear with us). Later on, we&rsquo;ll be going through a few step-by-step tutorials that&rsquo;ll walk you through the map making process. But first, watch the Forge tutorial movies included on the Trilogy CD-ROM and then come back to the tutorials in this manual for more detailed instructions.</p>
+
+	<h2 id="definitions">Key Definitions</h2>
+		<h3 id="leveldef">Level</h3>
+			<p>A single environment, with an entrance and exit, that uses a single texture collection.</p>
+
+				<blockquote><em>[Aleph One no longer requires that maps use a single texture collection; thus, Visual Mode.lua and Vasara allow mapmakers to texture levels using textures from any collection. However, I advise using multiple texture sets sparingly for two reasons: first, textures from multiple collections do not always mesh well aesthetically; and second, using a single texture from any collection will cause Aleph One to load the entire collection, regardless of how many textures you load from it. -Ed.]</em></blockquote>
+
+			<p>Designed for single or multiplayer play. Also known as a Map Level.</p>
+
+		<h3 id="netleveldef">Network Level</h3>
+			<p>A single environment, with at least a single entrance but without a user-activated exit, that uses a single texture collection.</p>
+				
+				<blockquote><em>[As with solo levels, Aleph One does not require network levels to use a single texture collection; however, for the same reasons, I advise using multiple texture sets judiciously. -Ed]</em></blockquote>
+				
+			<p>Designed for multiplayer combat, without save stations or computer terminals.</p>
+
+		<h3 id="mapdef">Map</h3>
+			<p>A collection of levels and/or network levels that have been &lsquo;merged&rsquo; into a single, stand-alone collection.</p>
+
+		<h3 id="mergedef">Merge (Merging)</h3>
+			<p>The process of stringing together a collection of levels, like the map included with the <em>Infinity</em> application. In addition, a merged map may contain terminal text, terminal pictures, and for <em>Marathon Infinity</em> levels, level-specific physics models. <blockquote><em>[This is one of the few things you would use Atque to do rather than Weland. -Ed.]</em></blockquote></p>
+
+		<h3 id="polygondef">Polygon</h3>
+			<p>A level in <em>Marathon</em> is basically a bunch of polygons connected together. What&rsquo;s a polygon, you ask? Well, the technical term is, &ldquo;a closed figure bounded by three or more line segments.&rdquo; For example, a triangle is a polygon with 3 sides, while a square is a polygon with 4 equal sides. A polygon in <em>Marathon</em> can have a maximum of 8 sides (octagon) and a minimum of three (triangle). In <em>Marathon</em>, these polygons have to be convex (not concave). This means that all angles inside a given polygon must be &gt;180&deg;. <em>[This is incorrect; it should read &ldquo;&le;180&deg;&rdquo;, or alternatively, &ldquo; all angles inside a given polygon must <strong>not</strong> be &gt;180&deg;.&rdquo; -Ed.]</em> A good way to think about convex polygons is if you tried to put an imaginary rubberband around a polygon and the rubberband does not completely touch one of the sides, then the polygon is not convex. If the rubberband touches all sides, then the polygon is convex.</p>
+
+			<p>In the diagram below, the second polygon is not fillable (a term discussed later) because it is not convex. However, by adding a line (where the two dark circles are in the right diagram below), you can make two different polygons that are convex.</p>
+
+			<div class="image"><a href="images/fillable.png"><img src="images/fillable.png" width="492" height="259"/></a></div>
+
+		<h3 id="linedef">Line</h3>
+			<p>A line connects two vertices. Lines can be either solid, transparent, or empty.</p>
+
+				<blockquote><em>[This is not strictly accurate: lines can be both solid and transparent; they can also be neither solid nor transparent, which can be a clever way to hide secrets. &ldquo;Empty&rdquo; corresponds roughly to &ldquo;Remove Textures&rdquo; in Weland; Aleph One also adds a new &ldquo;Decorative&rdquo; option, which means that if and only if a side has a transparent texture on it, projectiles will </em>always<em> pass through it. -Ed.]</em></blockquote>
+
+			<p>Players cannot pass through solid sides.</p>
+
+				<blockquote><em>[This is also not strictly accurate: a solid side must have a texture on it to be impassable to players, either as a primary or transparent texture. The primary texture need not be visible; adjusting the adjoining polygon to have a higher floor or lower ceiling, applying a texture to the side, and then restoring said polygon to its original height will make the side impassable. Note that this will also make it impassable to projectiles (unless a transparent texture is applied and it is marked as &ldquo;decorative&rdquo;); additionally, be aware that it is possible to make one-way gates this way. -Ed.]</em></blockquote>
+
+			<p>If a line is transparent, you can see and walk through it.</p>
+
+				<blockquote><em>[This, too, is not strictly accurate: it is possible for sides to be both solid and transparent. If a texture is applied to the side, said side is impassable. -Ed.]</em></blockquote>
+
+			If a line is empty, then there&rsquo;s no texture on it.
+
+		<h3 id="vertexdef">Vertex (pl. <em>vertices</em>)</h3>
+			<p>A vertex is a point at either end of a bounding line that defines the edge of a polygon. Every line has two vertices.</p>
+
+		<h3 id="platformdef">Platform</h3>
+			<p>A platform is a polygon which has the ability to move up and/or down. A platform may be one of two types: Doors are special types of platforms and can be opened and closed by the action key, or a platform, which is a movable polygon which the player can stand on and be transported up or down.</p>
+
+		<h3 id="drawmodedef">Draw Mode</h3>
+			<p>Forge has two editing modes. Draw Mode is Forge&rsquo;s 2D representation of a map. This looks similar to the map view in the game when the player presses &lsquo;M&rsquo; except that additional information is available.</p>
+
+		<h3 id="visualmodedef">Visual Mode</h3>
+			<p>Visual mode, Forge&rsquo;s secondary mode, uses a 3D representation of the world which is similar to playing the game. In this mode the weapons manifest is replaced by a palette containing the current texture collection. Furthermore, the mouse can be used to place and move textures around on the sides of polygons. Lastly, there are no monsters or weapons visible, though scenery will be displayed.</p>
+
+	<h2 id="menu">Menu Descriptions</h2>
+		<h3 id="file">File Menu</h3>
+			<h4 id="newlevel">New Level</h4>
+				<p>Creates a new level.</p>
+
+			<h4 id="open">Open</h4>
+				<p>Allows you to open an existing level or map.</p>
+
+			<h4 id="close">Close</h4>
+				<p>Closes the current file.</p>
+					<blockquote><em>[Weland does not have this option. -Ed.]</em></blockquote>
+
+			<h4 id="save">Save Scenario</h4>
+				<p>Allows the current level to be saved. Merged maps cannot be edited and saved.</p>
+					<blockquote><em>[Weland simply calls this &ldquo;Save&rdquo;. -Ed.]</em></blockquote>
+
+			<h4 id="saveas">Save Scenario as...</h4>
+				<p>Allows the current level to be saved under a different name.</p>
+					<blockquote><em>[Weland simply calls this &ldquo;Save As&rdquo;. -Ed.]</em></blockquote>
+
+			<h4 id="merge">Merge Levels...</h4>
+				<p>Compiles individual levels into a single Map file.</p>
+					<blockquote><em>[Weland does not have this function; Weland levels should be merged with Atque. -Ed.]</em></blockquote>
+
+			<h4 id="export">Export Level...</h4>
+				<p>Allows a level to be exported from a previously merged Map file. This process extracts only the level and not terminal texts or the embedded physics model.</p>
+					<blockquote><em>[In Weland, this is accomplished simply by selecting &ldquo;Save&rdquo; or &ldquo;Save As&rdquo; after loading a merged map file. Note that this </em>will<em> save the level with its corresponding terminal texts and script files; I advise using Atque to strip those afterwards, as including them in a split map folder can cause problems. -Ed.]</em></blockquote>
+
+			<em><blockquote><blockquote><h4 id="exportobj">Export OBJ...</h4>
+				<p>A feature added to Weland that exports the map geometry as a <a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file" target="_blank">WaveFront .obj file</a>, which can be loaded in programs such as Blender, Maya, AutoCAD, and Photoshop. -Ed.</p></blockquote></blockquote></em>
+
+			<h4 id="quit">Quit</h4>
+				<p>Quits Forge.</p>
+
+		<h3 id="edit">Edit Menu</h3>
+			<h4 id="undo">Undo</h4>
+				<p>Will undo the most recently performed action.</p>
+
+			<h4 id="preferences">Preferences...</h4>
+				<p>There are three Preferences in this section. <strong>Graphics</strong> lets you modify Visual Mode resolutions and brightness. <strong>Key Settings</strong> allows you to modify keyboard settings.</p>
+
+					<blockquote><em>[In Weland, you edit both of these by clicking &lsquo;<strong>Edit Preferences</strong>&rsquo; underneath <strong>Scenario</strong> in the <strong>Visual Mode</strong> section, then editing Aleph One&rsquo;s settings. For detailed information on setting up Visual Mode, see <a href="mapmaking101.html#welandsetup">my Weland setup guide</a>. -Ed.]</em></blockquote>
+
+				<p><strong>Colors</strong> lets you change the most prominent colors used in Draw Mode.</p>
+
+					<blockquote><em>[Weland adds multiple new sections to its Preferences.
+						
+						<ul>
+							<li>&lsquo;<strong>Draw Mode</strong>&rsquo; contains two options:
+								<ul>
+									<li>&lsquo;<strong>Smooth Lines</strong>&rsquo; affects the display of lines in draw mode.</li>
+									<li>&lsquo;<strong>Show Hidden Vertices</strong>&rsquo; affects whether the height slider hides vertices that are unattached to any visible lines.</li>
+								</ul>
+							</li>
+							<li>&lsquo;<strong>Editor</strong>&rsquo; also contains two options, both of which are new to Weland:
+								<ul>
+									<li>&lsquo;<strong>Split Lines Attached to Polygons</strong>&rsquo; allows mapmakers to split lines of filled polygons that have fewer than 8 vertices. Note that all sides that are split in this way will currently be marked as &lsquo;Solid&rsquo;, regardless of whether they originally were.</li>
+									<li>&lsquo;<strong>Remember Deleted Sides</strong>&rsquo; (sometimes) remembers the textures of sides attached to polygons that are deleted and then re-filled.</li>
+								</ul>
+							</li>
+							<li>&lsquo;<strong>Shapes File</strong>&rsquo; selects the shapes file to be used in Visual Mode and Weland&rsquo;s top-down texture view.</li>
+							<li>&lsquo;<strong>Visual Mode</strong>&rsquo; has two options:
+								<ul>
+									<li>&lsquo;<strong>Aleph One</strong>&rsquo; selects the Aleph One application that Visual Mode launches.</li>
+									<li>&lsquo;<strong>Scenario</strong>&rsquo; selects the scenario that Visual Mode uses. If you&rsquo;re new to mapping, I recommend starting with <span style="font-style: normal;">Marathon Infinity</span>.</li>
+								</ul>
+							</li>
+							<li>&lsquo;<strong>Edit Preferences</strong>&rsquo; launches the Aleph One application and scenario selected above, in which you can then:
+								<ul>
+									<li>enable <strong>Visual Mode.lua</strong>, Vasara, or Vasara AF as desired,</li>
+									<li>configure your keyboard and mouse settings as needed,</li>
+									<li>configure graphics and sound settings to taste,</li>
+									<li>enable or disable other plugins (e.g., if you wish to use high-definition textures while texturing). -Ed.]</em></li>
+								</ul>
+							</li>
+						</ul>
+					</blockquote>
+
+		<h3 id="levels">Levels Menu</h3>
+			<p>This menu will display the name of the currently active level. In an unmerged level this will be just one name. However, in a merged map you can navigate between individual levels.</p>
+
+		<h3 id="view">View Menu</h3>
+			<h4 id="drawmode">Draw Mode</h4>
+				<p>Switches to the 2D overhead map view. All polygon creation and object placement is done in this mode.</p>
+
+			<h4 id="visualmode">Visual Mode</h4>
+				<p>Switches to the 3D view. Texture placement, alignment, and height adjustments are done in this mode.</p>
+					<blockquote><em>[Currently, no visual mode plugins for Aleph One support height adjustments, although I plan to add it to Vasara AF someday. For now, you must use &lsquo;Elevation&rsquo; to set polygon heights. -Ed.]</em></blockquote>
+
+			<table>
+				<tr>
+					<td style="text-wrap: nowrap; width: 102px; vertical-align: middle; text-align: center;"><img src="images/floorheights.png" height="34" width="34" alt="Floor Heights" title="Floor Heights" /><img src="images/ceilingheights.png" height="34" width="34" alt="Ceiling Heights" title="Ceiling Heights" /></td>
+					<td style="vertical-align: middle; width: 698px;"><h4 id="elevation">Elevation</h4>
+							<p>Shows a 2D view of ceiling and floor elevations by color-coding heights. Elevations may range from &minus;9 W.U. to &plus;9 W.U.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><blockquote><em>[Weland allows heights to range from &minus;32 WU (&minus;32,768 IU) to &plus;31.999 WU (&plus;32,767 IU); however, be aware that if any side the player can view extends more than 32 WU above or below the player&rsquo;s camera height, a hall-of-mirrors glitch will result. Additionally, game behavior will get very glitchy below &minus;31 WU (&minus;31,744 IU) or above &plus;31 WU (&plus;31,744 IU). -Ed.]</em></blockquote></td>
+				</tr>
+				<tr>
+					<td style="text-wrap: nowrap; width: 102px; vertical-align: middle; text-align: center;"><img src="images/floortextures.png" height="34" width="34" alt="Floor Textures" title="Floor Textures" /><img src="images/ceilingtextures.png" height="34" width="34" alt="Ceiling Textures" title="Ceiling Textures" /></td>
+					<td style="vertical-align: middle; width: 698px;">
+						<h4 id="textures">Textures</h4>
+						<p>Allows you to modify floor and ceiling textures.</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-wrap: nowrap; width: 102px; vertical-align: middle; text-align: center;"><img src="images/polygontypes.png" height="34" width="34" alt="Polygon Types" title="Polygon Types" /></td>
+					<td style="vertical-align: middle; width: 698px;">
+						<h4 id="polygontype">Polygon Type</h4>
+						<p>Used to assign specific values to polygons (ie. Monster Impassible, hill, etc.).</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-wrap: nowrap; width: 102px; vertical-align: middle; text-align: center;"><img src="images/floorlights.png" height="34" width="34" alt="Floor Lights" title="Floor Lights" /><img src="images/ceilinglights.png" height="34" width="34" alt="Ceiling Lights" title="Ceiling Lights" /><img src="images/liquidlights.png" height="34" width="34" alt="Liquid Lights" title="Liquid Lights" /></td>
+					<td style="vertical-align: middle; width: 698px;">
+						<h4 id="lights">Lights</h4>
+						<p>Shows ceiling, floor and liquid light intensities. Also allows these settings to be edited and new light types to be defined.</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-wrap: nowrap; width: 102px; vertical-align: middle; text-align: center;"><img src="images/liquids.png" height="34" width="34" alt="Liquids" title="Liquids" /></td>
+					<td style="vertical-align: middle; width: 698px;">
+						<h4 id="liquids">Liquids</h4>
+						<p>The liquids menu lets you create and edit new liquid types and assign them to polygons.</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-wrap: nowrap; width: 102px; vertical-align: middle; text-align: center;"><img src="images/ambientsounds.png" height="34" width="34" alt="Ambient Sounds" title="Ambient Sounds" /><img src="images/randomsounds.png" height="34" width="34" alt="Random Sounds" title="Random Sounds" /></td>
+					<td style="vertical-align: middle; width: 698px;">
+						<h4 id="sounds">Sounds</h4>
+						<p>Here you can create and edit new <del>liquid</del> <em>[sound -Ed.]</em> types and assign them to polygons.</p>
+					</td>
+				</tr>
+			</table>
+						
+		<h3 id="special">Special Menu</h3>
+			<h4 id="zoomer">Zoom In/Zoom Out</h4>
+				<p>Allows the visible level area to be enlarged or reduced.</p>
+
+			<h4 id="mapmanager">Map Manager</h4>
+				<p>This palette lets you customize some Draw Mode Parameters. The options are:</p>
+
+				<table>
+					<tr>
+						<td style="text-wrap: nowrap; width: 178px; vertical-align: middle; text-align: center;"><img src="images/gridsizes.png" width="178" height="34" alt="Grid Sizes" title="Grid Sizes" /></td>
+						<td style="vertical-align: middle; width: 622px;">
+							<h5 id="gridsize">Grid Size</h5>
+							<p>Selects the resolution of the grid.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-wrap: nowrap; width: 178px; vertical-align: middle; text-align: center;"><img src="images/displaygrid.png" width="34" height="34" alt="Display Grid" title="Display Grid" /></td>
+						<td style="vertical-align: middle; width: 622px;">
+							<h5 id="displaygrid">Display Grid</h5>
+							<p>Toggles the grid on or off.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-wrap: nowrap; width: 178px; vertical-align: middle; text-align: center;"><img src="images/constraintogrid.png" width="34" height="34" alt="Constrain to Grid" title="Constrain to Grid" /></td>
+						<td style="vertical-align: middle; width: 622px;">
+							<h5 id="constraintogrid">Constrain to Grid</h5>
+							<p>This will constrain all line vertices to the currently displayed grid. It only constrains when you create a new line, not when you move it.</p>
+						</td>
+					</tr>
+					<tr class="note">
+						<td>&nbsp;</td>
+						<td><blockquote><em>[Note that, while &lsquo;<strong>Constrain to Grid</strong>&rsquo; doesn&rsquo;t constrain lines or polygons that you move, it does constrain vertices. -Ed.]</em></blockquote></td>
+					</tr>
+					<tr>
+						<td style="text-wrap: nowrap; width: 178px; vertical-align: middle; text-align: center;"><img src="images/customgrid.png" width="34" height="34" alt="Custom Grid" title="Custom Grid" /></td>
+						<td style="vertical-align: middle; width: 622px;">
+							<blockquote><em><h5 id="customgrid">Custom Grid</h5>
+							<p>[Rotate, resize, or move the grid. See <a href="marathoncircles.html">Circles and the Custom Grid</a> for a detailed explanation. -Ed.]</p></em></blockquote>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-wrap: nowrap; width: 178px; vertical-align: middle; text-align: center; line-height: 0px;"><img src="images/showmonsters.png" width="34" height="34" alt="Show Monsters" title="Show Monsters" /><img src="images/showitems.png" width="34" height="34" alt="Show Items" title="Show Items" /><img src="images/showscenery.png" width="34" height="34" alt="Show Scenery" title="Show Scenery" /><br /><img src="images/showplayers.png" width="34" height="34" alt="Show Players" title="Show Players" /><img src="images/showsounds.png" width="34" height="34" alt="Show Sounds" title="Show Sounds" /><img src="images/showgoals.png" width="34" height="34" alt="Show Goals" title="Show Goals" /></td>
+						<td style="vertical-align: middle; width: 622px;"><h5 id="showmonsters">Show Monsters, etc.</h5>
+							<p>These checkboxes allow you to toggle objects and annotations on or off in 2D mode.</p>
+							<blockquote><em>[Weland currently has no toggle for the display of annotations. -Ed.]</em></blockquote>
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>
+							<h5 id="visualmodecrosshairs">Visual Mode Crosshairs</h5>
+							<p>The crosshairs are used as a visual aid to place textures in 3D mode (when using the spacebar). This checkbox allows you to toggle the crosshair on or off.</p>
+							<blockquote><em>[Whether this setting is available is entirely up to the plugin used for visual mode. Pressing F<span class="decimal">8</span> in visual mode will toggle crosshairs if the plugin supports it. -Ed.]</em></blockquote>
+						</td>
+					</tr>
+				</table>
+			<blockquote><em>[Apart from Visual Mode Crosshairs (which is controlled directly within visual mode itself), Weland replaces the Map Manager with a palette directly below the main menu. Hover over each icon to see what it does. Additionally. Also, be aware of the custom grid, a feature I explain in my <a href="marathoncircles.html">appendix on circles</a>. -Ed.]</em></blockquote>
+
+			<h4 id="viewheight">View Height Window</h4>
+			<p>These two vertical sliders control the currently visible floor to ceiling region. If a level has a lot of overlapping polygons at different heights, this feature lets you isolate the view to show only the polygons you&rsquo;re working on.</p>
+			<blockquote><em>[This window has been replaced with two horizontal sliders at the bottom of the window. -Ed.]</em></blockquote>
+
+			<h4 id="goto">Goto...</h4>
+			<p>Sometimes an error message will indicate that a specific polygon is convex or that something else is wrong. The error message will indicate the offending polygon by its number. Use the Goto command to quickly locate that polygon, line or vertex.</p>
+
+			<h4 id="levelparameters">Set Level Parameters</h4>
+				<p>This allows you to make changes to a level&rsquo;s parameters. Here you can change texture collections, landscapes, etc. The dialog will also indicate whether or not the current level is compatible with both <em>Marathon 2</em> and <em>Marathon Infinity</em> or just <em>Marathon Infinity</em>.</p>
+				<blockquote><em>[Weland does not display the compatibility information, presumably because hardly anyone runs vanilla </em>Marathon 2<em> anymore. -Ed.]</em></blockquote>
+
+			<h4 id="itemparameters">Set Item Parameters</h4>
+				<p>Allows the number, frequency and randomness of placed objects to be edited.</p>
+
+			<h4 id="monsterparameters">Set Monster Parameters</h4>
+				<p>Allows the number, frequency and randomness of monsters to be edited.</p>
+
+			<h4 id="recenter">Recenter Level</h4>
+				<p>This command will take your entire map and physically recenter it to the map.</p>
+				<blockquote><em>[Forge veterans should note that Weland will only move maps by multiples of <span class="decimal">1</span> WU (<span class="decimal">1</span>,<span class="decimal">024</span> IU) when recentering them. Forge was not so picky. -Ed.]</em></blockquote>
+
+			<h4 id="pave">Pave Level</h4>
+				<p>Will take three generic textures from the current collection and texture all polygons in the level. One texture for the floor, one for the ceiling, and one for the walls.</p>
+				<blockquote><em>[This only applies to untextured floors, ceilings, or sides that would be visible at the time the command is run (i.e., its reverse polygon&rsquo;s floor is higher than its obverse polygon&rsquo;s, or its reverse polygon&rsquo;s ceiling is lower than its obverse polygon&rsquo;s, or it has no reverse polygon. For an explanation of the terms </em>obverse polygon<em> and </em>reverse polygon<em>, see <a href="https://github.com/aaronfreed/vasara/blob/main/README.md#lines-sides-and-surfaces" target="_blank">Vasara AF&rsquo;s readme</a>).
+					
+					<p>Both Forge and Weland always pave walls with the sixth texture in the set selected in <strong>Level Parameters</strong>, floors with the seventh texture in the set, and ceilings with the eighth texture. -Ed.]</p></em></blockquote>
+
+			<blockquote><blockquote><em><h4 id="nuketextures">Nuke Textures</h4>
+				<p>Resets all textures in the level to the following:</p>
+
+				<ul>
+					<li><strong>Walls:</strong> Frame <span class="decimal">5</span> (the sixth texture) of the <strong>Environment</strong> set in <strong>Level Parameters</strong></li>
+					<li><strong>Floors:</strong> Frame <span class="decimal">6</span> (the seventh texture) of the <strong>Environment</strong> set in <strong>Level Parameters</strong></li>
+					<li><strong>Ceilings:</strong> Frame <span class="decimal">7</span> (the eighth texture) of the <strong>Environment</strong> set in <strong>Level Parameters</strong></li>
+				</ul>
+
+				Also resets all transfer modes to &ldquo;Normal&rdquo;, removes all transparent textures, and resets lights of all walls (but not all floors or ceilings) to 0. -Ed.</em></blockquote></blockquote>
+
+			<h4 id="nukeobjects">Nuke Objects Only</h4>
+				<p>Will remove all objects from the level.</p>
+				<blockquote><em>[This is simply called <strong>Nuke Objects</strong> in Weland. -Ed.]</em></blockquote>
+			
+			<h4 id="nukeandpave">Nuke & Pave Level</h4>
+				<p>This will remove all textures and objects from the map (but not liquids). If you want to import maps created in Pfhorte (a shareware Marathon level editor), you need to Nuke and Pave the map before working with it in Forge. This will eliminate most map incompatibilities.</p>
+				<blockquote><em>[Weland separates this command into &ldquo;<strong>Nuke Textures</strong>&rdquo; and &ldquo;<strong>Nuke Objects</strong>&rdquo;. -Ed.]</em></blockquote>
+				</h4>
+
+		<em><blockquote><blockquote>
+			<h3>Plugins</h3>
+			<p>Lists all Weland plugins you have installed. Weland comes with two, although you may have to enable them in your OS&rsquo; security settings. They are:</p>
+
+			<h4 id="autoshade">Auto Shade Level</h4>
+			<p>Sets all floors &rsquo; lights to 5, all ceilings&rsquo; lights to 10, and all walls&rsquo; lights to values from 3 (for walls facing south) to 13 (for walls facing north). <strong>Warning:</strong> if you have already begun to light your map, this </em>will<em> override the lighting you have applied &ndash; be careful!</p>
+
+			<h4 id="enumeratetags">Enumerate Tags</h4>
+			<p>Lists all tags used in your map, what lights and platforms are set to use them, and what lines are attached to switches that control them. Note that if a tag is associated with a terminal script rather than a switch of some sort, this plugin will not see it. -Ed.</p>
+
+		</blockquote></blockquote></em>
+
+	<h2 id="tools">The Tools</h2>
+		<p>These tools are available from the tools palette in Draw Mode. Keyboard shortcuts are in parentheses.</p>
+		<table>
+			<tr>
+				<td style="width: 34px; vertical-align: middle;"><img src="images/arrow.png" width="34" height="34" alt="Arrow (A)" title="Arrow (A)" /></td>
+				<td style="width: 766px; vertical-align: middle;"><h3 id="arrow">Arrow (A)</h3>
+					<p>Used to select vertices, lines, polygons and objects. Double-click on a vertex or line to make even finer adjustments.</p>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 34px; vertical-align: middle;"><img src="images/line.png" width="34" height="34" alt="Line (L)" title="Line (L)" /></td>
+				<td style="width: 766px; vertical-align: middle;"><h3 id="line">Line (L)</h3>
+				<p>Used to draw polygon outlines.</p>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 34px; vertical-align: middle;"><img src="images/fill.png" width="34" height="34" alt="Fill Tool (F)" title="Fill Tool (F)" /></td>
+				<td style="width: 766px; vertical-align: middle;"><h3 id="filltool">Fill Tool (F)</h3>
+				<p>Fills the polygon created with the line tool. This assigns the polygon default floor and ceiling elevations and turns it into a valid 3D space.</p>
+				</td>
+			</tr>
+			<tr class="note">
+				<td>&nbsp;</td>
+				<td><blockquote style="margin: 0px 30px;"><em>[This is not strictly true &ndash; Forge and Weland both attempt to read floor and ceiling elevations, as well as texture and light information, from nearby polygons. If no polygons share a line, both programs will give the new polygon default heights and lighting; it will also be untextured if no nearby polygons are textured. -Ed.]</em></blockquote></td>
+			</tr>
+			<tr>
+				<td style="width: 36px; vertical-align: middle;"><img src="images/polygon.png" width="36" height="32" alt="Polygon Tool (P)" title="Polygon Tool (P)" /></td>
+				<td style="width: 764px; vertical-align: middle;"><h3 id="polygontool">Polygon (P)</h3>
+					<p>Used to create generic polygon outlines with a fixed number of sides. Double-click on this tool to set the polygon type. Note: the vertices generated by this tool aren&rsquo;t linked to any outside of this polygon so they have to be manually connected to other polygons.</p>
+				</td>
+			</tr>
+			<tr class="note">
+				<td>&nbsp;</td>
+				<td><blockquote style="margin: 0px 30px;"><em>[This tool does not exist in Weland. If you need to make polygons with a specific number of vertices, I wrote <a href="marathoncircles.html">a guide to using the custom grid to do precisely that</a>. -Ed.]</em></blockquote></td>
+			</tr>
+			<tr>
+				<td style="width: 34px; vertical-align: middle;"><img src="images/move.png" width="34" height="34" alt="Move Tool (D)" title="Move Tool (D)" /></td>
+				<td style="width: 766px; vertical-align: middle;"><h3 id="move">Move Tool (D)</h3>
+					<p>Drags the visible region of the level. Hold down the spacebar in any top-down view mode to change the current tool into the move tool.</p>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 34px; vertical-align: middle;"><img src="images/zoom.png" width="34" height="34" alt="Zoom Tool (Z)" title="Zoom Tool (Z)" /></td>
+				<td style="width: 766px; vertical-align: middle;"><h3 id="zoom">Zoom Tool (Z)</h3>
+					<p>Zooms the map in large increments. Hold down the option key to zoom back out. Command + and command - also zoom the map in and out but in much smaller increments.</p>
+				</td>
+			</tr>
+			<tr class="note">
+				<td>&nbsp;</td>
+				<td><blockquote style="margin: 0px 30px;"><em>[In Weland, these zoom by the same increment. Additionally, as is commonly the case, replace &lsquo;Command&rsquo; with &lsquo;Control&rsquo; on Windows and Linux. -Ed.]</em></blockquote></td>
+			</tr>
+			<tr>
+				<td style="width: 34px; vertical-align: middle;"><img src="images/text.png" width="34" height="34" alt="Text Tool (T)" title="Text Tool (T)" /></td>
+				<td><h3>Text Tool (T)</h3>
+					<p>Places text notes <em>[also called annotations -Ed.]</em> inside the current polygon. This text will be visible from within the game when the user views the map. It&rsquo;s used to name rooms or regions of a level. To modify existing annotations, double-click on them with the arrow.</p>
+				</td>				
+			</tr>
+			<tr>
+				<td style="width: 34px; vertical-align: middle;"><img src="images/object.png" width="34" height="34" alt="Object Tool (O)" title="Object Tool (O)" /></td>
+				<td><h3>Object Tool (O)</h3>
+					<p>Places objects on the map. Objects include items, player locations, monsters, fixed sound sources, scenery, and level goals.</p>
+				</td>				
+			</tr>
+
+		</table>
+
+
+</body>
+</html>

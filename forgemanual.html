@@ -57,7 +57,7 @@ window.onload = function () {makeAllSortable();};
 		<h3 id="leveldef">Level</h3>
 			<p>A single environment, with an entrance and exit, that uses a single texture collection.</p>
 
-				<blockquote><em>[Aleph One no longer requires that maps use a single texture collection; thus, Visual Mode.lua and Vasara allow mapmakers to texture levels using textures from any collection. However, I advise using multiple texture sets sparingly for two reasons: first, textures from multiple collections do not always mesh well aesthetically; and second, using a single texture from any collection will cause Aleph One to load the entire collection, regardless of how many textures you load from it. -Ed.]</em></blockquote>
+				<blockquote><em>[Aleph One no longer requires that maps use a single texture collection; thus, Visual Mode.lua and Vasara allow mapmakers to texture levels using textures from any collection. However, I advise using multiple texture sets sparingly for two reasons: first, textures from different collections do not always mesh well aesthetically; and second, using a single texture from any collection will cause Aleph One to load the entire collection, regardless of how many textures you load from it. -Ed.]</em></blockquote>
 
 			<p>Designed for single or multiplayer play. Also known as a Map Level.</p>
 
@@ -207,7 +207,7 @@ window.onload = function () {makeAllSortable();};
 				</tr>
 				<tr>
 					<td>&nbsp;</td>
-					<td><blockquote><em>[Weland allows heights to range from &minus;32 WU (&minus;32,768 IU) to &plus;31.999 WU (&plus;32,767 IU); however, be aware that if any side the player can view extends more than 32 WU above or below the player&rsquo;s camera height, a hall-of-mirrors glitch will result. Additionally, game behavior will get very glitchy below &minus;31 WU (&minus;31,744 IU) or above &plus;31 WU (&plus;31,744 IU). -Ed.]</em></blockquote></td>
+					<td><blockquote><em>[Weland allows heights to range from &minus;<span class="decimal">32</span> WU (&minus;<span class="decimal">32</span>,<span class="decimal">768</span> IU) to &plus;<span class="decimal">31</span>.<span class="decimal">999</span> WU (&plus;<span class="decimal">32</span>,<span class="decimal">767</span> IU); however, be aware that if any side the player can view extends more than <span class="decimal">32</span> WU above or below the player&rsquo;s camera height, a hall-of-mirrors glitch will result. Additionally, game behavior will get very glitchy below &minus;<span class="decimal">31</span> WU (&minus;<span class="decimal">31</span>,<span class="decimal">744</span> IU) or above &plus;<span class="decimal">31</span> WU (&plus;<span class="decimal">31</span>,<span class="decimal">744</span> IU). -Ed.]</em></blockquote></td>
 				</tr>
 				<tr>
 					<td style="text-wrap: nowrap; width: 102px; vertical-align: middle; text-align: center;"><img src="images/floortextures.png" height="34" width="34" alt="Floor Textures" title="Floor Textures" /><img src="images/ceilingtextures.png" height="34" width="34" alt="Ceiling Textures" title="Ceiling Textures" /></td>
@@ -355,7 +355,7 @@ window.onload = function () {makeAllSortable();};
 			<p>Lists all Weland plugins you have installed. Weland comes with two, although you may have to enable them in your OS&rsquo; security settings. They are:</p>
 
 			<h4 id="autoshade">Auto Shade Level</h4>
-			<p>Sets all floors &rsquo; lights to 5, all ceilings&rsquo; lights to 10, and all walls&rsquo; lights to values from 3 (for walls facing south) to 13 (for walls facing north). <strong>Warning:</strong> if you have already begun to light your map, this </em>will<em> override the lighting you have applied &ndash; be careful!</p>
+			<p>Sets all floors &rsquo; lights to <span class="decimal">5</span>, all ceilings&rsquo; lights to <span class="decimal">10</span>, and all walls&rsquo; lights to values from <span class="decimal">3</span> (for walls facing south) to <span class="decimal">13</span> (for walls facing north). <strong>Warning:</strong> if you have already begun to light your map, this </em>will<em> overwrite the lighting you have applied &ndash; be careful!</p>
 
 			<h4 id="enumeratetags">Enumerate Tags</h4>
 			<p>Lists all tags used in your map, what lights and platforms are set to use them, and what lines are attached to switches that control them. Note that if a tag is associated with a terminal script rather than a switch of some sort, this plugin will not see it. -Ed.</p>
@@ -399,14 +399,18 @@ window.onload = function () {makeAllSortable();};
 			</tr>
 			<tr class="note">
 				<td>&nbsp;</td>
-				<td><blockquote style="margin: 0px 30px;"><em>[This tool does not exist in Weland. If you need to make polygons with a specific number of vertices, I wrote <a href="marathoncircles.html">a guide to using the custom grid to do precisely that</a>. -Ed.]</em></blockquote></td>
+				<td><blockquote style="margin: 0px 30px;"><em>[This tool does not exist in Weland. If you need to make a regular polygon with a specific number of vertices, I wrote <a href="marathoncircles.html">a guide to using the custom grid to do precisely that</a>. -Ed.]</em></blockquote></td>
 			</tr>
 			<tr>
 				<td style="width: 34px; vertical-align: middle;"><img src="images/move.png" width="34" height="34" alt="Move Tool (D)" title="Move Tool (D)" /></td>
 				<td style="width: 766px; vertical-align: middle;">
-					<h3 id="move">Move Tool (D)</h3>
-						<p>Drags the visible region of the level. Hold down the spacebar in any top-down view mode to change the current tool into the move tool.</p>
+					<h3 id="move">Hand Tool (D)</h3>
+						<p>Drags the visible region of the level. Hold down the spacebar in any top-down view mode to change the current tool into the hand tool.</p>
 				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><blockquote><em>[Weland renames this to the Drag Tool, but it functions in exactly the same way. -Ed.]</em></blockquote></td>
 			</tr>
 			<tr>
 				<td style="width: 34px; vertical-align: middle;"><img src="images/zoom.png" width="34" height="34" alt="Zoom Tool (Z)" title="Zoom Tool (Z)" /></td>
@@ -444,7 +448,7 @@ window.onload = function () {makeAllSortable();};
 				<li>contains the SMG, or</li>
 				<li>contains SMG ammo.</li>
 			</ul>
-				<blockquote><em>[Weland does not mention which games a map is compatible with. -Ed.]</em></blockquote>
+				<blockquote><em>[Weland does not mention whether a map is compatible with </em>Marathon 2<em> or </em>Marathon Infinity<em>, largely because there&rsquo;s no guarantee that a map made with Weland will be compatible with either of them! -Ed.]</em></blockquote>
 
 			<h3 id="parametersoptions">Options</h3>
 				<h4 id="environment">Environment</h4>
@@ -453,7 +457,7 @@ window.onload = function () {makeAllSortable();};
 
 				<h4 id="landscape">Landscape</h4>
 					<p>Sets the background image (sky) for the entire level.</p>
-						<blockquote><em>[Again, changing these will not change the existing texture assignments in Weland. In Forge, this would automatically change all landscapes to the new landscape collection; moreover, it wouldn&rsquo;t renumber them, so anything that was textured with the second landscape in its collection would remain the second landscape in its new collection. This could pose problems if landscape collections had varying numbers of textures, since Marathon Infinity was not nearly as forgiving of missing graphics as Aleph One is. -Ed.]</em></blockquote>
+						<blockquote><em>[Again, changing these will not change the existing texture assignments in Weland. In Forge, this would automatically change all landscapes to the new landscape collection; moreover, it wouldn&rsquo;t renumber them, so anything that was textured with the second landscape in its collection would remain the second landscape in its new collection. This could pose problems if landscape collections had varying numbers of textures, since </em>Marathon Infinity<em> was not nearly as forgiving of missing graphics as Aleph One is. -Ed.]</em></blockquote>
 
 				<h4 id="gametype">Game Type</h4>
 					<p>This sets the gameplay options for the map.</p>
@@ -464,11 +468,11 @@ window.onload = function () {makeAllSortable();};
 
 					<h5 id="rebellion">Rebellion</h5>
 						<p>Some monsters, such as the Compilers, will fight on the side of the player. </p>
-							<blockquote><em>[This is incorrect; this is only an element of &lsquo;Rebellion (M1)&rsquo;. -Ed.]</em></blockquote>
+							<blockquote><em>[This is incorrect; this is only an element of &lsquo;Rebellion (M<span class="decimal">1</span>)&rsquo;. -Ed.]</em></blockquote>
 						<p>The player also starts out with no weapons and low health, and in &lsquo;hands-down&rsquo; mode.</p>
-							<blockquote><em>[To be precise, players&rsquo; health, if it is greater than 37, is reduced to 37; however, if it is below 37, it will not be increased. Players ordinarily start with 150 health and die if their health falls below 0. The values of 37 and 150 are both customizable using MML. -Ed.]</em></blockquote>
+							<blockquote><em>[To be precise, players&rsquo; health, if it is greater than <span class="decimal">37</span>, is reduced to <span class="decimal">37</span>; however, if it is below <span class="decimal">37</span>, it will not be increased. Players ordinarily start with <span class="decimal">150</span> health and die if their health falls below <span class="decimal">0</span>. The values of <span class="decimal">37</span> and <span class="decimal">150</span> are both customizable using MML. -Ed.]</em></blockquote>
 						<p>Rebellious aliens are set by changing the physics model for that level with Anvil.</p>
-							<blockquote><em>[They actually aren&rsquo;t, nor are they set with ShapeFusion. -Ed.]</em></blockquote>
+							<blockquote><em>[They actually aren&rsquo;t, nor are they set with ShapeFusion. In fact, I don&rsquo;t know if they&rsquo;re even customizable. -Ed.]</em></blockquote>
 
 					<h5 id="lowgravity">Low Gravity</h5>
 						<p>Gravity is low. Duh.</p>
@@ -483,7 +487,7 @@ window.onload = function () {makeAllSortable();};
 
 					<h5 id="exploration">Exploration</h5>
 						<p>The player must explore all polygons labeled as &lsquo;Must Be Explored&rsquo;.</p>
-							<blockquote><em>[Visual Mode.lua and Vasara 1.0.x will reset these to Normal if the player walks over them (or, if &lsquo;Exploration (M<span class="decimal">1</span>)&rsquo; is set as the mission type, even looks at them). Be careful. By default, Vasara AF fixes this at the cost of making Exploration missions impossible to complete while it is running. -Ed.]</em></blockquote>
+							<blockquote><em>[Visual Mode.lua and Vasara <span class="decimal">1</span>.<span class="decimal">0</span>.x will reset these to Normal if the player walks over them (or, if &lsquo;Exploration (M<span class="decimal">1</span>)&rsquo; is set as the mission type, even looks at them). Be careful. By default, Vasara AF fixes this at the cost of making Exploration missions impossible to complete while it is running. -Ed.]</em></blockquote>
 
 					<h5 id="retrieval">Retrieval</h5>
 						<p>The player must find items, ie. all the Uplink Chips and S&rsquo;pht keys placed on the Map.</p>
@@ -500,16 +504,16 @@ window.onload = function () {makeAllSortable();};
 			<p>In this section we&rsquo;ll be creating our first two polygon room. You&rsquo;ll find that making a level is nearly as fun and challenging as playing it. Using the 2D Draw Mode we&rsquo;ll be creating two interconnected polygons, and then &ldquo;fill&rdquo; them to make a valid 3D space. We&rsquo;ll then go into the 3D Visual Mode to texture our newly-created room.</p>
 			<h3 id="worldunits">World Units Explained</h3>
 				<p>In <em>Marathon</em> and Forge, the common unit of measurement is the World Unit (WU).</p>
-					<blockquote><em>[This is actually less than half-true: to avoid using floating-point math (which was </em>extremely<em> costly in the 1990s), </em>Marathon<em> almost exclusively uses what I typically refer to as Internal Units. 1,024 Internal Units equate to 1 World Unit. This isn&rsquo;t entirely true of Forge or Weland, either; some measurements, such as the ones you&rsquo;ll get when you double-click on a point, are in Internal Units. -Ed.]</em></blockquote>
+					<blockquote><em>[This is actually not at all true of </em>Marathon<em>: to avoid using floating-point math (which was </em>extremely<em> costly in the <span class="decimal">1990</span>s), it almost exclusively uses what I typically refer to as Internal Units. <span class="decimal">1</span>,<span class="decimal">024</span> Internal Units equate to <span class="decimal">1</span> World Unit. It isn&rsquo;t entirely true of Forge or Weland, either; some measurements, such as the ones you&rsquo;ll get when you double-click on a point, are in Internal Units. -Ed.]</em></blockquote>
 				<p>In the real world, a World Unit would be about 2 meters.</p>
-					<blockquote><em>[Or would it? The official answer seems to be </em>&lsquo;<strong><strong>&macr;\&deg;_o/&macr;</strong></strong>&rsquo;<em>. See the indispensable <a href="https://marathon.bungie.org/story/ourheight.html">Marathon&rsquo;s Story page</a> for coverage of the player&rsquo;s height, which is 819 Internal Units or roughly 0.7998 World Units. -Ed.]</em></blockquote>
+					<blockquote><em>[Or would it? The official answer seems to be </em>&lsquo;<strong><strong>&macr;\&deg;_o/&macr;</strong></strong>&rsquo;<em>. See the indispensable <a href="https://marathon.bungie.org/story/ourheight.html">Marathon&rsquo;s Story page</a> for coverage of the player&rsquo;s height, which is <span class="decimal">819</span> Internal Units or roughly <span class="decimal">0</span>.<span class="decimal">7998</span> World Units. -Ed.]</em></blockquote>
 				
 				<p>Let&rsquo;s take a closer look at some dimensions in Marathon&hellip;</p>
 
 				<p>Maps in Marathon can be up to 64 WU &times; 64 WU in area.</p>
 
-					<blockquote><em>[It is inadvisable, however, to use the outermost <span class="decimal">&frac12;</span> WU of the map boundary: thanks to a variable overflow, projectiles can wrap around to the other edge of the map. Because Aleph One is coded in C++, a language in which it is extremely costly to check for variable overflows, this bug is unlikely to be fixed anytime soon. Because the vanilla physics model has no projectiles that travel faster than 1 WU per game tick, this leaves us with roughly 63 &times; 63 WU<span class="decimal">&sup2;</span> of usable space. This is also why it is inadvisable to make projectiles travel faster than 1 WU per tick.
-						<p>Incidentally, a more conservative guide than mine would probably recommend leaving 1 WU boundaries around maps, leaving 62 &times; 62 WU<span class="decimal">&sup2;</span> of usable space; a less conservative one might argue that it&rsquo;s entirely OK for maps to extend to the exact edge of usable space as long as mapmakers are fully aware of the circumstances in which projectiles wrap around and avoid spaces on the opposite sides of maps where they can do that. I see valid merits to both arguments, but I think &lsquo;avoid the outermost <span class="decimal">&frac12;</span> WU&rsquo; is a reasonable compromise for beginning mapmakers. -Ed.]</p></em></blockquote>
+					<blockquote><em>[It is inadvisable, however, to use the outermost <span class="decimal">&frac12;</span> WU of the map boundary: thanks to a variable overflow, projectiles can wrap around to the other edge of the map. Because Aleph One is coded in C++, a language in which it is extremely costly to check for variable overflows, this bug is unlikely to be fixed anytime soon. Because the vanilla physics model has no projectiles that travel faster than <span class="decimal">1</span> WU per game tick, this leaves us with roughly <span class="decimal">63</span> &times; <span class="decimal">63</span> WU<span class="decimal">&sup2;</span> of usable space. This is also why it is inadvisable to make projectiles travel faster than <span class="decimal">1</span> WU per tick.
+						<p>Incidentally, a more conservative guide than mine would probably recommend leaving <span class="decimal">1</span> WU boundaries around maps, leaving <span class="decimal">62</span> &times; <span class="decimal">62</span> WU<span class="decimal">&sup2;</span> of usable space; a less conservative one might argue that it&rsquo;s entirely OK for maps to extend to the exact edge of usable space as long as mapmakers are fully aware of the circumstances in which projectiles wrap around and avoid spaces on the opposite sides of maps where they can do that. I see valid merits to both arguments, but I think &lsquo;avoid the outermost <span class="decimal">&frac12;</span> WU&rsquo; is a reasonable compromise for beginning mapmakers. -Ed.]</p></em></blockquote>
 					
 				<p>Heights can range from &minus;9 WU to &plus;9 WU.</p>
 					<blockquote><em>[Weland gives you &minus;32 WU to &plus;31.999 WU, though for similar reasons, I recommend avoiding the top or bottom 1 WU. -Ed.]</em></blockquote>
@@ -520,7 +524,7 @@ window.onload = function () {makeAllSortable();};
 					
 				<p>All textures are 1 WU &times; 1WU.</p>
 				
-					<blockquote><em>[In Aleph One 1.7, the 2&times; and 4&times; transfer modes mean this is no longer true: textures may also be 2 WU &times; 2 WU or 4 WU &times; 4 WU. Note that, because it is a recent edition, you must use Vasara AF or a recent version of Visual Mode to use the 2&times; or 4&times; transfer modes.</em></blockquote>
+					<blockquote><em>[In Aleph One <span class="decimal">1</span>.<span class="decimal">7</span>, the <span class="decimal">2</span>&times; and <span class="decimal">4</span>&times; transfer modes mean this is no longer true: textures may also be <span class="decimal">2</span> WU &times; <span class="decimal">2</span> WU or <span class="decimal">4</span> WU &times; <span class="decimal">4</span> WU. Note that, because it is a recent edition, you must use Vasara AF or a recent version of Visual Mode to use the <span class="decimal">2</span>&times; or <span class="decimal">4</span>&times; transfer modes.</em></blockquote>
 				
 				<p>To avoid obvious seams between the walls and floor, most corridors in <em>Marathon</em> are 1 WU tall and 1 WU wide. The player, which is 0.8 WU tall, can easily go blasting down these corridors. The highest step which the player can climb per step is about 0.2 WU tall.</p>
 

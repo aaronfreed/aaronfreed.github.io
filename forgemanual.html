@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<title>Marathon Mapmaking: Setup, Snafus, &amp; Solutions</title>
+	<title>The Annotated Forge Manual</title>
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<script>
 function sortTable(table, col, reverse) {
@@ -41,7 +41,7 @@ window.onload = function () {makeAllSortable();};
 <body class="forgemanual">
 	<h1>The Annotated Forge Manual (WIP)</h1>
 
-	<p>With annotations specifically detailing how Weland and Atque, Forge&rsquo;s modern replacements, differ from Forge, and correcting numerous errata found within the manual. (However, thus far, I&rsquo;ve only done the first six pages &ndash; twenty-eight are left.)</p>
+	<p>With annotations specifically detailing how Weland and Atque, Forge&rsquo;s modern replacements, differ from Forge, and correcting numerous errata found within the manual. (However, thus far, I&rsquo;ve only done the first seven pages &ndash; twenty-seven are left.)</p>
 	
 	<h2>Introduction</h2>
 		<p>Forge is the powerful map-making tool used by Bungie to create levels for <em>Marathon</em>, <em>Marathon <span class="decimal">2</span></em>, and now <em>Marathon Infinity</em>. We&rsquo;ve included Forge with the <em>Marathon</em> Trilogy so that you can create your own fantastic Marathon worlds and share them with friends or upload them to the &rsquo;net.</p>
@@ -425,6 +425,62 @@ window.onload = function () {makeAllSortable();};
 
 		</table>
 
+		<h2 id="mapparameters">Setting Up Basic Map Parameters</h2>
+		The Level Parameters dialog shows whether or not a level is compatible with <em>Marathon <span class="decimal">2</span></em> and <em>Marathon Infinity</em> or just <em>Infinity</em>. Your map is compatible only with <em>Infinity</em> if it:
+		<ul>
+			<li>Uses the Jjaro texture collection,</li>
+			<li>contains vacuum Bobs,</li>
+			<li>contains the SMG, or</li>
+			<li>contains SMG ammo.</li>
+		</ul>
+		<blockquote><em>[Weland does not mention which games a map is compatible with. -Ed.]</em></blockquote>
 
+		<h3 id="parametersoptions">Options</h3>
+		<h4 id="environment">Environment</h4>
+		<p>This selects the texture set for the level. The available sets are: Water, Lava, Sewage, Jjaro and Pfhor. You can change texture collections at anytime during your map making process by changing the environment.</p>
+		<blockquote><em>[Note, however, that this will not change the existing texture assignments &ndash; in fact, in Weland, the only thing it meaningfully affects is which texture collection and scenery set are </em>guaranteed<em> to load, and which textures will be assigned by &lsquo;Pave Level&rsquo;. -Ed.]</em></blockquote>
+
+		<h4 id="landscape">Landscape</h4>
+		<p>Sets the background image (sky) for the entire level.</p>
+		<blockquote><em>[Again, changing these will not change the existing texture assignments. -Ed.]</em></blockquote>
+
+		<h4 id="gametype">Game Type</h4>
+		<p>This sets the gameplay options for the map.</p>
+
+		<h4 id="environmenttype">Environment Type</h4>
+		<h5 id="vacuum">Vacuum</h5>
+		<p>In a vacuum level, the player uses his internal oxygen supply (which will diminish over time), and only the pistol, fusion pistol, SMG, Shotgun, and Alien Weapon work.</p>
+
+		<h5 id="rebellion">Rebellion</h5>
+		<p>Some monsters, such as the Compilers, will fight on the side of the player. </p>
+		<blockquote><em>[This is incorrect; this is only an element of &lsquo;Rebellion (M1)&rsquo;. -Ed.]</em></blockquote>
+		<p>The player also starts out with no weapons and low health, and in &lsquo;hands-down&rsquo; mode. Rebellious aliens are set by changing the physics model for that level with Anvil.</p>
+		<blockquote><em>[They actually aren&rsquo;t, nor are they set with ShapeFusion. -Ed.]</em></blockquote>
+
+		<h5 id="lowgravity">Low Gravity</h5>
+		<p>Gravity is low. Duh.</p>
+
+		<h5 id="magnetic">Magnetic</h5>
+		The motion sensor is inoperative most of the time and gives false readings.
+
+		<h4 id="missiontype">Mission Type</h4>
+		<h5 id="extermination">Extermination</h5>
+		<p>The player must kill everything.</p>
+		<blockquote><em>[Nope. Players must only kill monsters that are marked as &lsquo;Alien&rsquo; in the physics, regardless of whether they&rsquo;re hostile to players, and players are allowed to leave as many as eight of them alive unless &lsquo;Rebellion&rsquo; (</em>not<em> &lsquo;Rebellion (M<span class="decimal">1</span>)&rsquo;) is set under <strong>Environment Types</strong>. Exception: Monsters set as <strong>must_be_exterminated</strong> in MML must, in fact, be exterminated. Also, monsters that teleport out are counted as killed for the purposes of Extermination missions. -Ed.]</em></blockquote>
+
+		<h5 id="exploration">Exploration</h5>
+		<p>The player must explore all polygons labeled as &lsquo;Must Be Explored&rsquo;.</p>
+		<blockquote><em>[Visual Mode.lua and Vasara 1.0.x will reset these to Normal if the player walks over them (or, if &lsquo;Exploration (M<span class="decimal">1</span>)&rsquo; is set as the mission type, even looks at them). Be careful. By default, Vasara AF fixes this at the cost of making Exploration missions impossible to complete while it is running. -Ed.]</em></blockquote>
+
+		<h5 id="retrieval">Retrieval</h5>
+		<p>The player must find items, ie. all the Uplink Chips and S&rsquo;pht keys placed on the Map.</p>
+		<blockquote><em>[This depends more specifically on what is classified in the &lsquo;Generic Items&rsquo; category (category <span class="decimal">3</span>) in MML. If other items are also added to this category, then the player must also collect all of them. -Ed.]</em></blockquote>
+
+		<h5 id="repair">Repair</h5>
+		The player must reset all switches flagged as repairable.
+		<h5 id="rescue">Rescue</h5>
+		<p>The player must make sure that 50% of the civilians (Bobs) survive.</p>
+		<blockquote><em>[This mission type is non-functional. Use &lsquo;Rescue (M<span class="decimal">1</span>&rsquo; if you want this behavior. -Ed.]</em></blockquote>
+		
 </body>
 </html>

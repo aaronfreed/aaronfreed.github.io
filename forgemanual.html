@@ -43,7 +43,7 @@ window.onload = function () {makeAllSortable();};
 
 	<p>With annotations specifically detailing how <a href="github.com/treellama/weland/releases" target="_blank">Weland</a> and <a href="github.com/treellama/atque/releases" target="_blank">Atque</a>, Forge&rsquo;s modern replacements, differ from Forge, and correcting numerous errata found within the manual. (However, thus far, I&rsquo;ve only done the first eight pages &ndash; twenty-six are left.)</p>
 
-	<p>My annotations are all <em>italicized</em>; are all either [bracketed], indented, or both; and always conclude with <em>-Ed.</em> After this note, all text outside annotations will be Bungie&rsquo;s (with occasional minor spelling or grammar corrections).</p>
+	<p>My annotations are all <em>italicized</em>; are all either [bracketed], indented, or both; and always conclude with <em>&ndash;&#8288;Ed.</em> After this note, all text outside annotations will be Bungie&rsquo;s (with occasional minor spelling or grammar corrections).</p>
 	&ndash;<strong><strong>Aaron</strong></strong>
 
 	<h2>Introduction</h2>
@@ -57,14 +57,14 @@ window.onload = function () {makeAllSortable();};
 		<h3 id="leveldef">Level</h3>
 			<p>A single environment, with an entrance and exit, that uses a single texture collection.</p>
 
-				<blockquote><em>[Aleph One no longer requires that maps use a single texture collection; thus, Visual Mode.lua and Vasara allow mapmakers to texture levels using textures from any collection. However, I advise using multiple texture sets sparingly for two reasons: first, textures from different collections do not always mesh well aesthetically; and second, using a single texture from any collection will cause Aleph One to load the entire collection, regardless of how many textures you load from it. -Ed.]</em></blockquote>
+				<blockquote><em>[Aleph One no longer requires that maps use a single texture collection; thus, Visual Mode.lua and Vasara allow mapmakers to texture levels using textures from any collection. However, I advise using multiple texture sets sparingly for two reasons: first, textures from different collections do not always mesh well aesthetically; and second, using a single texture from any collection will cause Aleph One to load the entire collection, regardless of how many textures you load from it. &ndash;&#8288;Ed.]</em></blockquote>
 
 			<p>Designed for single or multiplayer play. Also known as a Map Level.</p>
 
 		<h3 id="netleveldef">Network Level</h3>
 			<p>A single environment, with at least a single entrance but without a user-activated exit, that uses a single texture collection.</p>
 				
-				<blockquote><em>[As with solo levels, Aleph One does not require network levels to use a single texture collection; however, for the same reasons, I advise using multiple texture sets judiciously. -Ed]</em></blockquote>
+				<blockquote><em>[As with solo levels, Aleph One does not require network levels to use a single texture collection; however, for the same reasons, I advise using multiple texture sets judiciously. &ndash;&#8288;Ed.</em></blockquote>
 				
 			<p>Designed for multiplayer combat, without save stations or computer terminals.</p>
 
@@ -72,10 +72,10 @@ window.onload = function () {makeAllSortable();};
 			<p>A collection of levels and/or network levels that have been &lsquo;merged&rsquo; into a single, stand-alone collection.</p>
 
 		<h3 id="mergedef">Merge (Merging)</h3>
-			<p>The process of stringing together a collection of levels, like the map included with the <em>Infinity</em> application. In addition, a merged map may contain terminal text, terminal pictures, and for <em>Marathon Infinity</em> levels, level-specific physics models. <blockquote><em>[This is one of the few things you would use Atque to do rather than Weland. -Ed.]</em></blockquote></p>
+			<p>The process of stringing together a collection of levels, like the map included with the <em>Infinity</em> application. In addition, a merged map may contain terminal text, terminal pictures, and for <em>Marathon Infinity</em> levels, level-specific physics models. <blockquote><em>[This is one of the few things you would use Atque to do rather than Weland. &ndash;&#8288;Ed.]</em></blockquote></p>
 
 		<h3 id="polygondef">Polygon</h3>
-			<p>A level in <em>Marathon</em> is basically a bunch of polygons connected together. What&rsquo;s a polygon, you ask? Well, the technical term is, &ldquo;a closed figure bounded by three or more line segments.&rdquo; For example, a triangle is a polygon with 3 sides, while a square is a polygon with 4 equal sides. A polygon in <em>Marathon</em> can have a maximum of 8 sides (octagon) and a minimum of three (triangle). In <em>Marathon</em>, these polygons have to be convex (not concave). This means that all angles inside a given polygon must be &gt;180&deg;. <em>[This is incorrect; it should read &ldquo;&le;180&deg;&rdquo;, or alternatively, &ldquo; all angles inside a given polygon must <strong>not</strong> be &gt;180&deg;.&rdquo; -Ed.]</em> A good way to think about convex polygons is if you tried to put an imaginary rubberband around a polygon and the rubberband does not completely touch one of the sides, then the polygon is not convex. If the rubberband touches all sides, then the polygon is convex.</p>
+			<p>A level in <em>Marathon</em> is basically a bunch of polygons connected together. What&rsquo;s a polygon, you ask? Well, the technical term is, &ldquo;a closed figure bounded by three or more line segments.&rdquo; For example, a triangle is a polygon with 3 sides, while a square is a polygon with 4 equal sides. A polygon in <em>Marathon</em> can have a maximum of 8 sides (octagon) and a minimum of three (triangle). In <em>Marathon</em>, these polygons have to be convex (not concave). This means that all angles inside a given polygon must be &gt;180&deg;. <em>[This is incorrect; it should read &ldquo;&le;180&deg;&rdquo;, or alternatively, &ldquo; all angles inside a given polygon must <strong>not</strong> be &gt;180&deg;.&rdquo; &ndash;&#8288;Ed.]</em> A good way to think about convex polygons is if you tried to put an imaginary rubberband around a polygon and the rubberband does not completely touch one of the sides, then the polygon is not convex. If the rubberband touches all sides, then the polygon is convex.</p>
 
 			<p>In the diagram below, the second polygon is not fillable (a term discussed later) because it is not convex. However, by adding a line (where the two dark circles are in the right diagram below), you can make two different polygons that are convex.</p>
 
@@ -84,15 +84,15 @@ window.onload = function () {makeAllSortable();};
 		<h3 id="linedef">Line</h3>
 			<p>A line connects two vertices. Lines can be either solid, transparent, or empty.</p>
 
-				<blockquote><em>[This is not strictly accurate: lines can be both solid and transparent; they can also be neither solid nor transparent, which can be a clever way to hide secrets. &ldquo;Empty&rdquo; corresponds roughly to &ldquo;Remove Textures&rdquo; in Weland; Aleph One also adds a new &ldquo;Decorative&rdquo; option, which means that if and only if a side has a transparent texture on it, projectiles will </em>always<em> pass through it. -Ed.]</em></blockquote>
+				<blockquote><em>[This is not strictly accurate: lines can be both solid and transparent; they can also be neither solid nor transparent, which can be a clever way to hide secrets. &ldquo;Empty&rdquo; corresponds roughly to &ldquo;Remove Textures&rdquo; in Weland; Aleph One also adds a new &ldquo;Decorative&rdquo; option, which means that if and only if a side has a transparent texture on it, projectiles will </em>always<em> pass through it. &ndash;&#8288;Ed.]</em></blockquote>
 
 			<p>Players cannot pass through solid sides.</p>
 
-				<blockquote><em>[This is also not strictly accurate: a solid side must have a texture on it to be impassable to players, either as a primary or transparent texture. The primary texture need not be visible; adjusting the adjoining polygon to have a higher floor or lower ceiling, applying a texture to the side, and then restoring said polygon to its original height will make the side impassable. Note that this will also make it impassable to projectiles (unless a transparent texture is applied and it is marked as &ldquo;decorative&rdquo;); additionally, be aware that it is possible to make one-way gates this way. -Ed.]</em></blockquote>
+				<blockquote><em>[This is also not strictly accurate: a solid side must have a texture on it to be impassable to players, either as a primary or transparent texture. The primary texture need not be visible; adjusting the adjoining polygon to have a higher floor or lower ceiling, applying a texture to the side, and then restoring said polygon to its original height will make the side impassable. Note that this will also make it impassable to projectiles (unless a transparent texture is applied and it is marked as &ldquo;decorative&rdquo;); additionally, be aware that it is possible to make one-way gates this way. &ndash;&#8288;Ed.]</em></blockquote>
 
 			<p>If a line is transparent, you can see and walk through it.</p>
 
-				<blockquote><em>[This, too, is not strictly accurate: it is possible for sides to be both solid and transparent. If a texture is applied to the side, said side is impassable. -Ed.]</em></blockquote>
+				<blockquote><em>[This, too, is not strictly accurate: it is possible for sides to be both solid and transparent. If a texture is applied to the side, said side is impassable. &ndash;&#8288;Ed.]</em></blockquote>
 
 			If a line is empty, then there&rsquo;s no texture on it.
 
@@ -118,26 +118,26 @@ window.onload = function () {makeAllSortable();};
 
 			<h4 id="close">Close</h4>
 				<p>Closes the current file.</p>
-					<blockquote><em>[Weland does not have this option. -Ed.]</em></blockquote>
+					<blockquote><em>[Weland does not have this option. &ndash;&#8288;Ed.]</em></blockquote>
 
 			<h4 id="save">Save Scenario</h4>
 				<p>Allows the current level to be saved. Merged maps cannot be edited and saved.</p>
-					<blockquote><em>[Weland simply calls this &ldquo;Save&rdquo;. -Ed.]</em></blockquote>
+					<blockquote><em>[Weland simply calls this &ldquo;Save&rdquo;. &ndash;&#8288;Ed.]</em></blockquote>
 
 			<h4 id="saveas">Save Scenario as...</h4>
 				<p>Allows the current level to be saved under a different name.</p>
-					<blockquote><em>[Weland simply calls this &ldquo;Save As&rdquo;. -Ed.]</em></blockquote>
+					<blockquote><em>[Weland simply calls this &ldquo;Save As&rdquo;. &ndash;&#8288;Ed.]</em></blockquote>
 
 			<h4 id="merge">Merge Levels...</h4>
 				<p>Compiles individual levels into a single Map file.</p>
-					<blockquote><em>[Weland does not have this function; Weland levels should be merged with Atque. -Ed.]</em></blockquote>
+					<blockquote><em>[Weland does not have this function; Weland levels should be merged with Atque. &ndash;&#8288;Ed.]</em></blockquote>
 
 			<h4 id="export">Export Level...</h4>
 				<p>Allows a level to be exported from a previously merged Map file. This process extracts only the level and not terminal texts or the embedded physics model.</p>
-					<blockquote><em>[In Weland, this is accomplished simply by selecting &ldquo;Save&rdquo; or &ldquo;Save As&rdquo; after loading a merged map file. Note that this </em>will<em> save the level with its corresponding terminal texts and script files; I advise using Atque to strip those afterwards, as including them in a split map folder can cause problems. -Ed.]</em></blockquote>
+					<blockquote><em>[In Weland, this is accomplished simply by selecting &ldquo;Save&rdquo; or &ldquo;Save As&rdquo; after loading a merged map file. Note that this </em>will<em> save the level with its corresponding terminal texts and script files; I advise using Atque to strip those afterwards, as including them in a split map folder can cause problems. &ndash;&#8288;Ed.]</em></blockquote>
 
 			<em><blockquote><blockquote><h4 id="exportobj">Export OBJ...</h4>
-				<p>A feature added to Weland that exports the map geometry as a <a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file" target="_blank">WaveFront .obj file</a>, which can be loaded in programs such as Blender, Maya, AutoCAD, and Photoshop. -Ed.</p></blockquote></blockquote></em>
+				<p>A feature added to Weland that exports the map geometry as a <a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file" target="_blank">WaveFront .obj file</a>, which can be loaded in programs such as Blender, Maya, AutoCAD, and Photoshop. &ndash;&#8288;Ed.</p></blockquote></blockquote></em>
 
 			<h4 id="quit">Quit</h4>
 				<p>Quits Forge.</p>
@@ -149,7 +149,7 @@ window.onload = function () {makeAllSortable();};
 			<h4 id="preferences">Preferences...</h4>
 				<p>There are three Preferences in this section. <strong>Graphics</strong> lets you modify Visual Mode resolutions and brightness. <strong>Key Settings</strong> allows you to modify keyboard settings.</p>
 
-					<blockquote><em>[In Weland, you edit both of these by clicking &lsquo;<strong>Edit Preferences</strong>&rsquo; underneath <strong>Scenario</strong> in the <strong>Visual Mode</strong> section, then editing Aleph One&rsquo;s settings. For detailed information on setting up Visual Mode, see <a href="mapmaking101.html#welandsetup">my Weland setup guide</a>. -Ed.]</em></blockquote>
+					<blockquote><em>[In Weland, you edit both of these by clicking &lsquo;<strong>Edit Preferences</strong>&rsquo; underneath <strong>Scenario</strong> in the <strong>Visual Mode</strong> section, then editing Aleph One&rsquo;s settings. For detailed information on setting up Visual Mode, see <a href="mapmaking101.html#welandsetup">my Weland setup guide</a>. &ndash;&#8288;Ed.]</em></blockquote>
 
 				<p><strong>Colors</strong> lets you change the most prominent colors used in Draw Mode.</p>
 
@@ -180,7 +180,7 @@ window.onload = function () {makeAllSortable();};
 									<li>enable <strong>Visual Mode.lua</strong>, <strong>Vasara</strong>, or <strong>Vasara AF</strong> as desired,</li>
 									<li>configure your keyboard and mouse settings as needed,</li>
 									<li>configure graphics and sound settings to taste,</li>
-									<li>enable or disable other plugins (e.g., if you wish to use high-definition textures while texturing). -Ed.]</em></li>
+									<li>enable or disable other plugins (e.g., if you wish to use high-definition textures while texturing). &ndash;&#8288;Ed.]</em></li>
 								</ul>
 							</li>
 						</ul>
@@ -195,7 +195,7 @@ window.onload = function () {makeAllSortable();};
 
 			<h4 id="visualmode">Visual Mode</h4>
 				<p>Switches to the 3D view. Texture placement, alignment, and height adjustments are done in this mode.</p>
-					<blockquote><em>[Currently, no visual mode plugins for Aleph One support height adjustments, although I plan to add it to Vasara AF someday. For now, you must use &lsquo;Elevation&rsquo; to set polygon heights. -Ed.]</em></blockquote>
+					<blockquote><em>[Currently, no visual mode plugins for Aleph One support height adjustments, although I plan to add it to Vasara AF someday. For now, you must use &lsquo;Elevation&rsquo; to set polygon heights. &ndash;&#8288;Ed.]</em></blockquote>
 
 			<table>
 				<tr>
@@ -207,7 +207,7 @@ window.onload = function () {makeAllSortable();};
 				</tr>
 				<tr>
 					<td>&nbsp;</td>
-					<td><blockquote><em>[Weland allows heights to range from &minus;<span class="decimal">32</span> WU (&minus;<span class="decimal">32</span>,<span class="decimal">768</span> IU) to &plus;<span class="decimal">31</span>.<span class="decimal">999</span> WU (&plus;<span class="decimal">32</span>,<span class="decimal">767</span> IU); however, be aware that if any side the player can view extends more than <span class="decimal">32</span> WU above or below the player&rsquo;s camera height, a hall-of-mirrors glitch will result. Additionally, game behavior will get very glitchy below &minus;<span class="decimal">31</span> WU (&minus;<span class="decimal">31</span>,<span class="decimal">744</span> IU) or above &plus;<span class="decimal">31</span> WU (&plus;<span class="decimal">31</span>,<span class="decimal">744</span> IU). -Ed.]</em></blockquote></td>
+					<td><blockquote><em>[Weland allows heights to range from &minus;<span class="decimal">32</span> WU (&minus;<span class="decimal">32</span>,<span class="decimal">768</span> IU) to &plus;<span class="decimal">31</span>.<span class="decimal">999</span> WU (&plus;<span class="decimal">32</span>,<span class="decimal">767</span> IU); however, be aware that if any side the player can view extends more than <span class="decimal">32</span> WU above or below the player&rsquo;s camera height, a hall-of-mirrors glitch will result. Additionally, game behavior will get very glitchy below &minus;<span class="decimal">31</span> WU (&minus;<span class="decimal">31</span>,<span class="decimal">744</span> IU) or above &plus;<span class="decimal">31</span> WU (&plus;<span class="decimal">31</span>,<span class="decimal">744</span> IU). &ndash;&#8288;Ed.]</em></blockquote></td>
 				</tr>
 				<tr>
 					<td style="text-wrap: nowrap; width: 102px; vertical-align: middle; text-align: center;"><img src="images/floortextures.png" height="34" width="34" alt="Floor Textures" title="Floor Textures" /><img src="images/ceilingtextures.png" height="34" width="34" alt="Ceiling Textures" title="Ceiling Textures" /></td>
@@ -241,7 +241,7 @@ window.onload = function () {makeAllSortable();};
 					<td style="text-wrap: nowrap; width: 102px; vertical-align: middle; text-align: center;"><img src="images/ambientsounds.png" height="34" width="34" alt="Ambient Sounds" title="Ambient Sounds" /><img src="images/randomsounds.png" height="34" width="34" alt="Random Sounds" title="Random Sounds" /></td>
 					<td style="vertical-align: middle; width: 698px;">
 						<h4 id="sounds">Sounds</h4>
-							<p>Here you can create and edit new <del>liquid</del> <em>[sound -Ed.]</em> types and assign them to polygons.</p>
+							<p>Here you can create and edit new <del>liquid</del> <em>[sound &ndash;&#8288;Ed.]</em> types and assign them to polygons.</p>
 					</td>
 				</tr>
 			</table>
@@ -277,20 +277,20 @@ window.onload = function () {makeAllSortable();};
 					</tr>
 					<tr class="note">
 						<td>&nbsp;</td>
-							<td><blockquote><em>[Note that, while &lsquo;<strong>Constrain to Grid</strong>&rsquo; doesn&rsquo;t constrain lines or polygons that you move, it does constrain vertices. -Ed.]</em></blockquote></td>
+							<td><blockquote><em>[Note that, while &lsquo;<strong>Constrain to Grid</strong>&rsquo; doesn&rsquo;t constrain lines or polygons that you move, it does constrain vertices. &ndash;&#8288;Ed.]</em></blockquote></td>
 					</tr>
 					<tr>
 						<td style="text-wrap: nowrap; width: 178px; vertical-align: middle; text-align: center;"><img src="images/customgrid.png" width="34" height="34" alt="Custom Grid" title="Custom Grid" /></td>
 						<td style="vertical-align: middle; width: 622px;">
 							<blockquote><em><h5 id="customgrid">Custom Grid</h5>
-								<p>[Rotate, resize, or move the grid. See <a href="marathoncircles.html">Circles and the Custom Grid</a> for a detailed explanation. -Ed.]</p></em></blockquote>
+								<p>[Rotate, resize, or move the grid. See <a href="marathoncircles.html">Circles and the Custom Grid</a> for a detailed explanation. &ndash;&#8288;Ed.]</p></em></blockquote>
 						</td>
 					</tr>
 					<tr>
 						<td style="text-wrap: nowrap; width: 178px; vertical-align: middle; text-align: center; line-height: 0px;"><img src="images/showmonsters.png" width="34" height="34" alt="Show Monsters" title="Show Monsters" /><img src="images/showitems.png" width="34" height="34" alt="Show Items" title="Show Items" /><img src="images/showscenery.png" width="34" height="34" alt="Show Scenery" title="Show Scenery" /><br /><img src="images/showplayers.png" width="34" height="34" alt="Show Players" title="Show Players" /><img src="images/showsounds.png" width="34" height="34" alt="Show Sounds" title="Show Sounds" /><img src="images/showgoals.png" width="34" height="34" alt="Show Goals" title="Show Goals" /></td>
 						<td style="vertical-align: middle; width: 622px;"><h5 id="showmonsters">Show Monsters, etc.</h5>
 							<p>These checkboxes allow you to toggle objects and annotations on or off in 2D mode.</p>
-								<blockquote><em>[Weland currently has no toggle for the display of annotations. -Ed.]</em></blockquote>
+								<blockquote><em>[Weland currently has no toggle for the display of annotations. &ndash;&#8288;Ed.]</em></blockquote>
 						</td>
 					</tr>
 					<tr>
@@ -298,22 +298,22 @@ window.onload = function () {makeAllSortable();};
 						<td>
 							<h5 id="visualmodecrosshairs">Visual Mode Crosshairs</h5>
 								<p>The crosshairs are used as a visual aid to place textures in 3D mode (when using the spacebar). This checkbox allows you to toggle the crosshair on or off.</p>
-									<blockquote><em>[Whether the Weland toolchain has an equivalent of this setting is entirely up to the plugin used for visual mode. Pressing F<span class="decimal">8</span> in visual mode will toggle crosshairs if the plugin supports it. -Ed.]</em></blockquote>
+									<blockquote><em>[Whether the Weland toolchain has an equivalent of this setting is entirely up to the plugin used for visual mode. Pressing F<span class="decimal">8</span> in visual mode will toggle crosshairs if the plugin supports it. &ndash;&#8288;Ed.]</em></blockquote>
 						</td>
 					</tr>
 				</table>
-				<blockquote><em>[Apart from Visual Mode Crosshairs (which is controlled directly within visual mode itself), Weland replaces the Map Manager with a palette directly below the main menu. Hover over each icon to see what it does. -Ed.]</em></blockquote>
+				<blockquote><em>[Apart from Visual Mode Crosshairs (which is controlled directly within visual mode itself), Weland replaces the Map Manager with a palette directly below the main menu. Hover over each icon to see what it does. &ndash;&#8288;Ed.]</em></blockquote>
 
 			<h4 id="viewheight">View Height Window</h4>
 				<p>These two vertical sliders control the currently visible floor to ceiling region. If a level has a lot of overlapping polygons at different heights, this feature lets you isolate the view to show only the polygons you&rsquo;re working on.</p>
-					<blockquote><em>[This window has been replaced with two horizontal sliders at the bottom of the window. -Ed.]</em></blockquote>
+					<blockquote><em>[This window has been replaced with two horizontal sliders at the bottom of the window. &ndash;&#8288;Ed.]</em></blockquote>
 
 			<h4 id="goto">Goto...</h4>
 				<p>Sometimes an error message will indicate that a specific polygon is convex or that something else is wrong. The error message will indicate the offending polygon by its number. Use the Goto command to quickly locate that polygon, line or vertex.</p>
 
 			<h4 id="levelparameters">Set Level Parameters</h4>
 				<p>This allows you to make changes to a level&rsquo;s parameters. Here you can change texture collections, landscapes, etc. The dialog will also indicate whether or not the current level is compatible with both <em>Marathon 2</em> and <em>Marathon Infinity</em> or just <em>Marathon Infinity</em>.</p>
-					<blockquote><em>[Weland does not display the compatibility information, presumably because hardly anyone runs vanilla </em>Marathon 2<em> anymore. -Ed.]</em></blockquote>
+					<blockquote><em>[Weland does not display the compatibility information, presumably because hardly anyone runs vanilla </em>Marathon 2<em> anymore. &ndash;&#8288;Ed.]</em></blockquote>
 
 			<h4 id="itemparameters">Set Item Parameters</h4>
 				<p>Allows the number, frequency and randomness of placed objects to be edited.</p>
@@ -323,12 +323,12 @@ window.onload = function () {makeAllSortable();};
 
 			<h4 id="recenter">Recenter Level</h4>
 				<p>This command will take your entire map and physically recenter it to the map.</p>
-					<blockquote><em>[Forge veterans should note that Weland will only move maps by multiples of <span class="decimal">1</span> WU (<span class="decimal">1</span>,<span class="decimal">024</span> IU) when recentering them. Forge was not so picky. -Ed.]</em></blockquote>
+					<blockquote><em>[Forge veterans should note that Weland will only move maps by multiples of <span class="decimal">1</span> WU (<span class="decimal">1</span>,<span class="decimal">024</span> IU) when recentering them. Forge was not so picky. &ndash;&#8288;Ed.]</em></blockquote>
 
 			<h4 id="pave">Pave Level</h4>
 				<p>Will take three generic textures from the current collection and texture all polygons in the level. One texture for the floor, one for the ceiling, and one for the walls.</p>
 					<blockquote><em>[This only applies to untextured floors, ceilings, or sides that would be visible at the time the command is run (i.e., its reverse polygon&rsquo;s floor is higher than its obverse polygon&rsquo;s, or its reverse polygon&rsquo;s ceiling is lower than its obverse polygon&rsquo;s, or it has no reverse polygon. For an explanation of the terms </em>obverse polygon<em> and </em>reverse polygon<em>, see <a href="https://github.com/aaronfreed/vasara/blob/main/README.md#lines-sides-and-surfaces" target="_blank">Vasara AF&rsquo;s readme</a>).
-					<p>Both Forge and Weland always pave walls with the sixth texture in the set selected in <strong>Level Parameters</strong>, floors with the seventh texture in the set, and ceilings with the eighth texture. -Ed.]</p></em></blockquote>
+					<p>Both Forge and Weland always pave walls with the sixth texture in the set selected in <strong>Level Parameters</strong>, floors with the seventh texture in the set, and ceilings with the eighth texture. &ndash;&#8288;Ed.]</p></em></blockquote>
 
 					<blockquote><blockquote><em><h4 id="nuketextures">Nuke Textures</h4>
 						<p>Resets all textures in the level to the following:</p>
@@ -339,15 +339,15 @@ window.onload = function () {makeAllSortable();};
 							<li><strong>Ceilings:</strong> Frame <span class="decimal">7</span> (the eighth texture) of the <strong>Environment</strong> set in <strong>Level Parameters</strong></li>
 						</ul>
 
-						Also resets all transfer modes to &ldquo;Normal&rdquo;, removes all transparent textures, and resets lights of all walls (but not all floors or ceilings) to 0. -Ed.</em></blockquote></blockquote>
+						Also resets all transfer modes to &ldquo;Normal&rdquo;, removes all transparent textures, and resets lights of all walls (but not all floors or ceilings) to 0. &ndash;&#8288;Ed.</em></blockquote></blockquote>
 
 			<h4 id="nukeobjects">Nuke Objects Only</h4>
 				<p>Will remove all objects from the level.</p>
-					<blockquote><em>[Weland simply calls this &lsquo;<strong>Nuke Objects</strong>&rsquo;. -Ed.]</em></blockquote>
+					<blockquote><em>[Weland simply calls this &lsquo;<strong>Nuke Objects</strong>&rsquo;. &ndash;&#8288;Ed.]</em></blockquote>
 			
 			<h4 id="nukeandpave">Nuke & Pave Level</h4>
 				<p>This will remove all textures and objects from the map (but not liquids). If you want to import maps created in Pfhorte (a shareware Marathon level editor), you need to Nuke and Pave the map before working with it in Forge. This will eliminate most map incompatibilities.</p>
-					<blockquote><em>[Weland separates this command into &lsquo;<strong>Nuke Textures</strong>&rsquo; and &lsquo;<strong>Nuke Objects</strong>&rsquo;. -Ed.]</em></blockquote>
+					<blockquote><em>[Weland separates this command into &lsquo;<strong>Nuke Textures</strong>&rsquo; and &lsquo;<strong>Nuke Objects</strong>&rsquo;. &ndash;&#8288;Ed.]</em></blockquote>
 				</h4>
 
 		<em><blockquote><blockquote>
@@ -358,7 +358,7 @@ window.onload = function () {makeAllSortable();};
 			<p>Sets all floors &rsquo; lights to <span class="decimal">5</span>, all ceilings&rsquo; lights to <span class="decimal">10</span>, and all walls&rsquo; lights to values from <span class="decimal">3</span> (for walls facing south) to <span class="decimal">13</span> (for walls facing north). <strong>Warning:</strong> if you have already begun to light your map, this </em>will<em> overwrite the lighting you have applied &ndash; be careful!</p>
 
 			<h4 id="enumeratetags">Enumerate Tags</h4>
-			<p>Lists all tags used in your map, what lights and platforms are set to use them, and what lines are attached to switches that control them. Note that if a tag is associated with a terminal script rather than a switch of some sort, this plugin will not see it. -Ed.</p>
+			<p>Lists all tags used in your map, what lights and platforms are set to use them, and what lines are attached to switches that control them. Note that if a tag is associated with a terminal script rather than a switch of some sort, this plugin will not see it. &ndash;&#8288;Ed.</p>
 
 		</blockquote></blockquote></em>
 
@@ -388,7 +388,7 @@ window.onload = function () {makeAllSortable();};
 			</tr>
 			<tr class="note">
 				<td>&nbsp;</td>
-				<td><blockquote style="margin: 0px 30px;"><em>[This is not strictly true &ndash; Forge and Weland both attempt to read floor and ceiling elevations, as well as texture and light information, from nearby polygons. If no polygons share a line, both programs will give the new polygon default heights and lighting; it will also be untextured if no nearby polygons are textured. -Ed.]</em></blockquote></td>
+				<td><blockquote style="margin: 0px 30px;"><em>[This is not strictly true &ndash; Forge and Weland both attempt to read floor and ceiling elevations, as well as texture and light information, from nearby polygons. If no polygons share a line, both programs will give the new polygon default heights and lighting; it will also be untextured if no nearby polygons are textured. &ndash;&#8288;Ed.]</em></blockquote></td>
 			</tr>
 			<tr>
 				<td style="width: 36px; vertical-align: middle;"><img src="images/polygon.png" width="36" height="32" alt="Polygon Tool (P)" title="Polygon Tool (P)" /></td>
@@ -399,7 +399,7 @@ window.onload = function () {makeAllSortable();};
 			</tr>
 			<tr class="note">
 				<td>&nbsp;</td>
-				<td><blockquote style="margin: 0px 30px;"><em>[This tool does not exist in Weland. If you need to make a regular polygon with a specific number of vertices, I wrote <a href="marathoncircles.html">a guide to using the custom grid to do precisely that</a>. -Ed.]</em></blockquote></td>
+				<td><blockquote style="margin: 0px 30px;"><em>[This tool does not exist in Weland. If you need to make a regular polygon with a specific number of vertices, I wrote <a href="marathoncircles.html">a guide to using the custom grid to do precisely that</a>. &ndash;&#8288;Ed.]</em></blockquote></td>
 			</tr>
 			<tr>
 				<td style="width: 34px; vertical-align: middle;"><img src="images/move.png" width="34" height="34" alt="Move Tool (D)" title="Move Tool (D)" /></td>
@@ -410,7 +410,7 @@ window.onload = function () {makeAllSortable();};
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
-				<td><blockquote><em>[Weland renames this to the Drag Tool, but it functions in exactly the same way. -Ed.]</em></blockquote></td>
+				<td><blockquote><em>[Weland renames this to the Drag Tool, but it functions in exactly the same way. &ndash;&#8288;Ed.]</em></blockquote></td>
 			</tr>
 			<tr>
 				<td style="width: 34px; vertical-align: middle;"><img src="images/zoom.png" width="34" height="34" alt="Zoom Tool (Z)" title="Zoom Tool (Z)" /></td>
@@ -421,13 +421,13 @@ window.onload = function () {makeAllSortable();};
 			</tr>
 			<tr class="note">
 				<td>&nbsp;</td>
-				<td><blockquote style="margin: 0px 30px;"><em>[In Weland, these zoom by the same increment. Additionally, as is commonly the case, replace &lsquo;Command&rsquo; with &lsquo;Control&rsquo; on Windows and Linux. -Ed.]</em></blockquote></td>
+				<td><blockquote style="margin: 0px 30px;"><em>[In Weland, these zoom by the same increment. Additionally, as is commonly the case, replace &lsquo;Command&rsquo; with &lsquo;Control&rsquo; on Windows and Linux. &ndash;&#8288;Ed.]</em></blockquote></td>
 			</tr>
 			<tr>
 				<td style="width: 34px; vertical-align: middle;"><img src="images/text.png" width="34" height="34" alt="Text Tool (T)" title="Text Tool (T)" /></td>
 				<td style="width: 766px; vertical-align: middle;">
 					<h3>Text Tool (T)</h3>
-						<p>Places text notes <em>[also called annotations -Ed.]</em> inside the current polygon. This text will be visible from within the game when the user views the map. It&rsquo;s used to name rooms or regions of a level. To modify existing annotations, double-click on them with the arrow.</p>
+						<p>Places text notes <em>[also called annotations &ndash;&#8288;Ed.]</em> inside the current polygon. This text will be visible from within the game when the user views the map. It&rsquo;s used to name rooms or regions of a level. To modify existing annotations, double-click on them with the arrow.</p>
 				</td>				
 			</tr>
 			<tr>
@@ -448,16 +448,16 @@ window.onload = function () {makeAllSortable();};
 				<li>contains the SMG, or</li>
 				<li>contains SMG ammo.</li>
 			</ul>
-				<blockquote><em>[Weland does not mention whether a map is compatible with </em>Marathon 2<em> or </em>Marathon Infinity<em>, largely because there&rsquo;s no guarantee that a map made with Weland will be compatible with either of them! -Ed.]</em></blockquote>
+				<blockquote><em>[Weland does not mention whether a map is compatible with </em>Marathon 2<em> or </em>Marathon Infinity<em>, largely because there&rsquo;s no guarantee that a map made with Weland will be compatible with either of them! &ndash;&#8288;Ed.]</em></blockquote>
 
 			<h3 id="parametersoptions">Options</h3>
 				<h4 id="environment">Environment</h4>
 					<p>This selects the texture set for the level. The available sets are: Water, Lava, Sewage, Jjaro and Pfhor. You can change texture collections at anytime during your map making process by changing the environment.</p>
-						<blockquote><em>[Note, however, that in Weland, this does not change the existing texture assignments &ndash; in fact, in Weland, the only thing it meaningfully affects is which texture collection and scenery set are </em>guaranteed<em> to load, and which textures will be assigned by &lsquo;Pave Level&rsquo;. In Forge, changing a map&rsquo;s environment is effectively the equivalent of nuking all textures that are not from a landscape collection. -Ed.]</em></blockquote>
+						<blockquote><em>[Note, however, that in Weland, this does not change the existing texture assignments &ndash; in fact, in Weland, the only thing it meaningfully affects is which texture collection and scenery set are </em>guaranteed<em> to load, and which textures will be assigned by &lsquo;Pave Level&rsquo;. In Forge, changing a map&rsquo;s environment is effectively the equivalent of nuking all textures that are not from a landscape collection. &ndash;&#8288;Ed.]</em></blockquote>
 
 				<h4 id="landscape">Landscape</h4>
 					<p>Sets the background image (sky) for the entire level.</p>
-						<blockquote><em>[Again, changing these will not change the existing texture assignments in Weland. In Forge, this would automatically change all landscapes to the new landscape collection; moreover, it wouldn&rsquo;t renumber them, so anything that was textured with the second landscape in its collection would remain the second landscape in its new collection. This could pose problems if landscape collections had varying numbers of textures, since </em>Marathon Infinity<em> was not nearly as forgiving of missing graphics as Aleph One is. -Ed.]</em></blockquote>
+						<blockquote><em>[Again, changing these will not change the existing texture assignments in Weland. In Forge, this would automatically change all landscapes to the new landscape collection; moreover, it wouldn&rsquo;t renumber them, so anything that was textured with the second landscape in its collection would remain the second landscape in its new collection. This could pose problems if landscape collections had varying numbers of textures, since </em>Marathon Infinity<em> was not nearly as forgiving of missing graphics as Aleph One is. &ndash;&#8288;Ed.]</em></blockquote>
 
 				<h4 id="gametype">Game Type</h4>
 					<p>This sets the gameplay options for the map.</p>
@@ -468,11 +468,11 @@ window.onload = function () {makeAllSortable();};
 
 					<h5 id="rebellion">Rebellion</h5>
 						<p>Some monsters, such as the Compilers, will fight on the side of the player. </p>
-							<blockquote><em>[This is incorrect; this is only an element of &lsquo;Rebellion (M<span class="decimal">1</span>)&rsquo;. -Ed.]</em></blockquote>
+							<blockquote><em>[This is incorrect; this is only an element of &lsquo;Rebellion (M<span class="decimal">1</span>)&rsquo;. &ndash;&#8288;Ed.]</em></blockquote>
 						<p>The player also starts out with no weapons and low health, and in &lsquo;hands-down&rsquo; mode.</p>
-							<blockquote><em>[To be precise, players&rsquo; health, if it is greater than <span class="decimal">37</span>, is reduced to <span class="decimal">37</span>; however, if it is below <span class="decimal">37</span>, it will not be increased. Players ordinarily start with <span class="decimal">150</span> health and die if their health falls below <span class="decimal">0</span>. The values of <span class="decimal">37</span> and <span class="decimal">150</span> are both customizable using MML. -Ed.]</em></blockquote>
+							<blockquote><em>[To be precise, players&rsquo; health, if it is greater than <span class="decimal">37</span>, is reduced to <span class="decimal">37</span>; however, if it is below <span class="decimal">37</span>, it will not be increased. Players ordinarily start with <span class="decimal">150</span> health and die if their health falls below <span class="decimal">0</span>. The values of <span class="decimal">37</span> and <span class="decimal">150</span> are both customizable using MML. &ndash;&#8288;Ed.]</em></blockquote>
 						<p>Rebellious aliens are set by changing the physics model for that level with Anvil.</p>
-							<blockquote><em>[They actually aren&rsquo;t, nor are they set with ShapeFusion. In fact, I don&rsquo;t know if they&rsquo;re even customizable. -Ed.]</em></blockquote>
+							<blockquote><em>[They actually aren&rsquo;t, nor are they set with ShapeFusion. In fact, I don&rsquo;t know if they&rsquo;re even customizable. &ndash;&#8288;Ed.]</em></blockquote>
 
 					<h5 id="lowgravity">Low Gravity</h5>
 						<p>Gravity is low. Duh.</p>
@@ -483,58 +483,92 @@ window.onload = function () {makeAllSortable();};
 				<h4 id="missiontype">Mission Type</h4>
 					<h5 id="extermination">Extermination</h5>
 						<p>The player must kill everything.</p>
-							<blockquote><em>[Nope. Players must only kill monsters that are marked as &lsquo;Alien&rsquo; in the physics, regardless of whether they&rsquo;re hostile to players, and players are allowed to leave as many as eight of them alive unless &lsquo;Rebellion&rsquo; (</em>not<em> &lsquo;Rebellion (M<span class="decimal">1</span>)&rsquo;) is set under <strong>Environment Types</strong>. Exception: Monsters set as <strong>must_be_exterminated</strong> in MML must, in fact, be exterminated. Also, monsters that teleport out are counted as killed for the purposes of Extermination missions. -Ed.]</em></blockquote>
+							<blockquote><em>[Nope. Players must only kill monsters that are marked as &lsquo;Alien&rsquo; in the physics, regardless of whether they&rsquo;re hostile to players, and players are allowed to leave as many as eight of them alive unless &lsquo;Rebellion&rsquo; (</em>not<em> &lsquo;Rebellion (M<span class="decimal">1</span>)&rsquo;) is set under <strong>Environment Types</strong>. Exception: Monsters set as <strong>must_be_exterminated</strong> in MML must, in fact, be exterminated. Also, monsters that teleport out are counted as killed for the purposes of Extermination missions. &ndash;&#8288;Ed.]</em></blockquote>
 
 					<h5 id="exploration">Exploration</h5>
 						<p>The player must explore all polygons labeled as &lsquo;Must Be Explored&rsquo;.</p>
-							<blockquote><em>[Visual Mode.lua and Vasara <span class="decimal">1</span>.<span class="decimal">0</span>.x will reset these to Normal if the player walks over them (or, if &lsquo;Exploration (M<span class="decimal">1</span>)&rsquo; is set as the mission type, even looks at them). Be careful. By default, Vasara AF fixes this at the cost of making Exploration missions impossible to complete while it is running. -Ed.]</em></blockquote>
+							<blockquote><em>[Visual Mode.lua and Vasara <span class="decimal">1</span>.<span class="decimal">0</span>.x will reset these to Normal if the player walks over them (or, if &lsquo;Exploration (M<span class="decimal">1</span>)&rsquo; is set as the mission type, even looks at them). Be careful. By default, Vasara AF fixes this at the cost of making Exploration missions impossible to complete while it is running. &ndash;&#8288;Ed.]</em></blockquote>
 
 					<h5 id="retrieval">Retrieval</h5>
 						<p>The player must find items, ie. all the Uplink Chips and S&rsquo;pht keys placed on the Map.</p>
-							<blockquote><em>[This depends more specifically on what is classified in the &lsquo;Generic Items&rsquo; category (category <span class="decimal">3</span>) in MML. If other items are also added to this category, then the player must also collect all of them. -Ed.]</em></blockquote>
+							<blockquote><em>[This depends more specifically on what is classified in the &lsquo;Generic Items&rsquo; category (category <span class="decimal">3</span>) in MML. If other items are also added to this category, then the player must also collect all of them. &ndash;&#8288;Ed.]</em></blockquote>
 
 					<h5 id="repair">Repair</h5>
 						<p>The player must reset all switches flagged as repairable.</p>
 
 					<h5 id="rescue">Rescue</h5>
 						<p>The player must make sure that 50% of the civilians (Bobs) survive.</p>
-							<blockquote><em>[This mission type is non-functional. Use &lsquo;Rescue (M<span class="decimal">1</span>)&rsquo; if you want this behavior. -Ed.]</em></blockquote>
+							<blockquote><em>[This mission type is non-functional. Use &lsquo;Rescue (M<span class="decimal">1</span>)&rsquo; if you want this behavior. &ndash;&#8288;Ed.]</em></blockquote>
 
 		<h2 id="tutorial1">Tutorial One: A Simple two-polygon Room</h2>
 			<p>In this section we&rsquo;ll be creating our first two polygon room. You&rsquo;ll find that making a level is nearly as fun and challenging as playing it. Using the 2D Draw Mode we&rsquo;ll be creating two interconnected polygons, and then &ldquo;fill&rdquo; them to make a valid 3D space. We&rsquo;ll then go into the 3D Visual Mode to texture our newly-created room.</p>
 			<h3 id="worldunits">World Units Explained</h3>
 				<p>In <em>Marathon</em> and Forge, the common unit of measurement is the World Unit (WU).</p>
-					<blockquote><em>[This is actually not at all true of </em>Marathon<em>: to avoid using floating-point math (which was </em>extremely<em> costly in the <span class="decimal">1990</span>s), it almost exclusively uses what I typically refer to as Internal Units. <span class="decimal">1</span>,<span class="decimal">024</span> Internal Units equate to <span class="decimal">1</span> World Unit. It isn&rsquo;t entirely true of Forge or Weland, either; some measurements, such as the ones you&rsquo;ll get when you double-click on a point, are in Internal Units. -Ed.]</em></blockquote>
+					<blockquote><em>[This is actually not at all true of </em>Marathon<em>: to avoid using floating-point math (which was </em>extremely<em> costly in the <span class="decimal">1990</span>s), it almost exclusively uses what I typically refer to as Internal Units. <span class="decimal">1</span>,<span class="decimal">024</span> Internal Units equate to <span class="decimal">1</span> World Unit. It isn&rsquo;t entirely true of Forge or Weland, either; some measurements, such as the ones you&rsquo;ll get when you double-click on a point, are in Internal Units. &ndash;&#8288;Ed.]</em></blockquote>
 				<p>In the real world, a World Unit would be about 2 meters.</p>
-					<blockquote><em>[Or would it? The official answer seems to be </em>&lsquo;<strong><strong>&macr;\&deg;_o/&macr;</strong></strong>&rsquo;<em>. See the indispensable <a href="https://marathon.bungie.org/story/ourheight.html">Marathon&rsquo;s Story page</a> for coverage of the player&rsquo;s height, which is <span class="decimal">819</span> Internal Units or roughly <span class="decimal">0</span>.<span class="decimal">7998</span> World Units. -Ed.]</em></blockquote>
+					<blockquote><em>[Or would it? The official answer seems to be </em>&lsquo;<strong><strong>&macr;\&deg;_o/&macr;</strong></strong>&rsquo;<em>. See the indispensable <a href="https://marathon.bungie.org/story/ourheight.html">Marathon&rsquo;s Story page</a> for coverage of the player&rsquo;s height, which is <span class="decimal">819</span> Internal Units or roughly <span class="decimal">0</span>.<span class="decimal">7998</span> World Units. &ndash;&#8288;Ed.]</em></blockquote>
 				
 				<p>Let&rsquo;s take a closer look at some dimensions in Marathon&hellip;</p>
 
 				<p>Maps in Marathon can be up to 64 WU &times; 64 WU in area.</p>
 
 					<blockquote><em>[It is inadvisable, however, to use the outermost <span class="decimal">&frac12;</span> WU of the map boundary: thanks to a variable overflow, projectiles can wrap around to the other edge of the map. Because Aleph One is coded in C++, a language in which it is extremely costly to check for variable overflows, this bug is unlikely to be fixed anytime soon. Because the vanilla physics model has no projectiles that travel faster than <span class="decimal">1</span> WU per game tick, this leaves us with roughly <span class="decimal">63</span> &times; <span class="decimal">63</span> WU<span class="decimal">&sup2;</span> of usable space. This is also why it is inadvisable to make projectiles travel faster than <span class="decimal">1</span> WU per tick.
-						<p>Incidentally, a more conservative guide than mine would probably recommend leaving <span class="decimal">1</span> WU boundaries around maps, leaving <span class="decimal">62</span> &times; <span class="decimal">62</span> WU<span class="decimal">&sup2;</span> of usable space; a less conservative one might argue that it&rsquo;s entirely OK for maps to extend to the exact edge of usable space as long as mapmakers are fully aware of the circumstances in which projectiles wrap around and avoid spaces on the opposite sides of maps where they can do that. I see valid merits to both arguments, but I think &lsquo;avoid the outermost <span class="decimal">&frac12;</span> WU&rsquo; is a reasonable compromise for beginning mapmakers. -Ed.]</p></em></blockquote>
+						<p>Incidentally, a more conservative guide than mine would probably recommend leaving <span class="decimal">1</span> WU boundaries around maps, leaving <span class="decimal">62</span> &times; <span class="decimal">62</span> WU<span class="decimal">&sup2;</span> of usable space; a less conservative one might argue that it&rsquo;s entirely OK for maps to extend to the exact edge of usable space as long as mapmakers are fully aware of the circumstances in which projectiles wrap around and avoid spaces on the opposite sides of maps where they can do that. I see valid merits to both arguments, but I think &lsquo;avoid the outermost <span class="decimal">&frac12;</span> WU&rsquo; is a reasonable compromise for beginning mapmakers. &ndash;&#8288;Ed.]</p></em></blockquote>
 					
 				<p>Heights can range from &minus;9 WU to &plus;9 WU.</p>
-					<blockquote><em>[Weland gives you &minus;32 WU to &plus;31.999 WU, though for similar reasons, I recommend avoiding the top or bottom 1 WU. -Ed.]</em></blockquote>
+					<blockquote><em>[Weland gives you &minus;32 WU to &plus;31.999 WU, though for similar reasons, I recommend avoiding the top or bottom 1 WU. &ndash;&#8288;Ed.]</em></blockquote>
 
 				<p>This means you get a volume of 64 &times; 64 &times; 18 = 73,000 cubic world units or about 590,000 cubic meters to play around with in Forge. That&rsquo;s a lot of space!</p>
 
-					<blockquote><em>[Or, in Weland, with my suggested guidelines: 63 &times; 63 &times; 62 WU<span class="decimal">&sup3;</span> = 246,078 WU<span class="decimal">&sup3;</span> &approxeq; 1,968,624 m<span class="decimal">&sup3;</span>. -Ed.]</em></blockquote>
+					<blockquote><em>[Or, in Weland, with my suggested guidelines: 63 &times; 63 &times; 62 WU<span class="decimal">&sup3;</span> = 246,078 WU<span class="decimal">&sup3;</span> &approxeq; 1,968,624 m<span class="decimal">&sup3;</span>. &ndash;&#8288;Ed.]</em></blockquote>
 					
 				<p>All textures are 1 WU &times; 1WU.</p>
 				
-					<blockquote><em>[In Aleph One <span class="decimal">1</span>.<span class="decimal">7</span>, the <span class="decimal">2</span>&times; and <span class="decimal">4</span>&times; transfer modes mean this is no longer true: textures may also be <span class="decimal">2</span> WU &times; <span class="decimal">2</span> WU or <span class="decimal">4</span> WU &times; <span class="decimal">4</span> WU. Note that, because it is a recent edition, you must use Vasara AF or a recent version of Visual Mode to use the <span class="decimal">2</span>&times; or <span class="decimal">4</span>&times; transfer modes. -Ed.]</em></blockquote>
+					<blockquote><em>[In Aleph One <span class="decimal">1</span>.<span class="decimal">7</span>, the <span class="decimal">2</span>&times; and <span class="decimal">4</span>&times; transfer modes mean this is no longer true: textures may also be <span class="decimal">2</span> WU &times; <span class="decimal">2</span> WU or <span class="decimal">4</span> WU &times; <span class="decimal">4</span> WU. Note that, because it is a recent edition, you must use Vasara AF or a recent version of Visual Mode to use the <span class="decimal">2</span>&times; or <span class="decimal">4</span>&times; transfer modes. &ndash;&#8288;Ed.]</em></blockquote>
 				
 				<p>To avoid obvious seams between the walls and floor, most corridors in <em>Marathon</em> are 1 WU tall and 1 WU wide. The player, which is 0.8 WU tall, can easily go blasting down these corridors. The highest step which the player can climb per step is about 0.2 WU tall.</p>
 
-					<blockquote><em>[This is not remotely true. The highest step players can climb without any prior momentum is 341 Internal Units &approxeq; 0.3330 WU, or just under <span class="decimal">&frac13;</span> WU. With prior momentum, players can climb even taller steps. However, I advise avoiding steps taller than 0.25 WU, or <span class="decimal">&frac14;</span> WU, because they feel very awkward to climb. In fact, I almost exclusively use measurements of 0.125 WU, or <span class="decimal">&frac18;</span> WU, for my staircases and for most elements of my maps, since this provides very fluid motion and plays quite nicely with Weland&rsquo;s <span class="decimal">&frac18;</span> WU grid size. However, 0.1 WU or 0.2 WU increments are also common. Note that the heights players can climb are among the few physics elements that are hard-coded into the engine. -Ed.]</em></blockquote>
+					<blockquote><em>[This is not remotely true. The highest step players can climb without any prior momentum is 341 Internal Units &approxeq; 0.3330 WU, or just under <span class="decimal">&frac13;</span> WU. With prior momentum, players can climb even taller steps. However, I advise avoiding steps taller than 0.25 WU, or <span class="decimal">&frac14;</span> WU, because they feel very awkward to climb. In fact, I almost exclusively use measurements of 0.125 WU, or <span class="decimal">&frac18;</span> WU, for my staircases and for most elements of my maps, since this provides very fluid motion and plays quite nicely with Weland&rsquo;s <span class="decimal">&frac18;</span> WU grid size. However, 0.1 WU or 0.2 WU increments are also common. Note that the heights players can climb are among the few physics elements that are hard-coded into the engine. &ndash;&#8288;Ed.]</em></blockquote>
 
 				<p>When a map is created, Forge displays a window with what looks like a blank piece of graph paper. Evenly spaced on the grid there are vertices slightly darker than the others; these are the bounding corners of rectangles that are exactly one WU in size. The resolution of the map&rsquo;s grid can be changed by using the Grid Manager (in the Special menu) or alternatively through use of the numeric keys 1 through 5. Pressing 1 will give a grid size of <span class="decimal">&frac18;</span>th WU and 5 a size of 2 WUs.</p>
 
 			<h3 id="letsmakealevel">Let&rsquo;s Make a Level!</h3>
 				<p>Open Forge and create a new level (select the New Level menu item or type Command-N). Next, give your level a name and select an environment and landscape. Finally, click on the Multiplayer Carnage checkbox since we&rsquo;ll be creating a network level. That&rsquo;s it, now hit the OK button.</p>
 
+				<p>You&rsquo;ll be presented with a large size grid. Go to the tool bar and select the line tool. Now, click and hold at any vertex on the grid and drag the line to the next dark vertex so that the line is 1 WU in length. Notice that the line just dropped has a red point at each end; these are the vertices. Continue creating lines until a square is created. The outline should look something like this:</p>
+
+				<div class="image"><img src="images/square-outline.png" width="577" height="193" alt="The World Is Square" title="The World Is Square" /></div>
+
+				<p>Now comes the most important step: select the Fill Tool from the palette and click inside the polygon outline you&rsquo;ve just created. It will fill the newly-created outline, turning its insides white and making it a valid space in the 3D world. If all goes well, it should turn white.</p>
+
+				<div class="image"><img src="images/square-filled.png" width="193" height="193" alt="ERAU QSSI DLRO WEHT" title="ERAU QSSI DLRO WEHT" /></div>
+
+				<p>To fill properly, a polygon must be convex. That means all its internal angles have to be less than <em>[or equal to &ndash;&#8288;Ed.]</em> 180&deg;. It also cannot have more than eight vertices. To build larger rooms or polygon shapes, make them out of multiple smaller polygons. Also, keep in mind that you cannot connect two lines together by dragging the vertex of one line onto the other. For example, if you create two parallel lines (that are not connected to each other in any way) and try to drag the vertex of one line onto the vertex of the other line, the points will not connect.</p>
+
+				<p>If you select one of the vertices of the square you just built and dragged it towards the diagonally opposite corner, you&rsquo;ll notice that a red striped texture will appear in the polygon. This means that the polygon is now concave (non-convex).</p>
+					<blockquote><em>[In Weland&rsquo;s default color scheme, concave polygons appear as orange rather than as striped red, but this nonetheless signifies the same thing. &ndash;&#8288;Ed.]</em></blockquote>
+				
+				<p>When you attempt to save a map that has a concave polygon or switch view modes, Forge will bring up a dialog with the polygon&rsquo;s id number. When you hit OK, it will goto that polygon and select it for you. Here you can fix the polygon.</p>
+
+					<blockquote><em>[Weland is a lot more forgiving with this &ndash; it will not provide any such warning. Which can actually be a serious problem, because if the player is ever able to stand within a concave polygon, the game will crash. Additionally, if you have a lot of overlapping geometry, it may not even be noticeable that a polygon is concave. In short, be careful when moving points. &ndash;&#8288;Ed.]</em></blockquote>
+
+				<p>Now that the first polygon has been filled, the temptation might be to go into Visual mode and see what it looks like. All movement in <em>Marathon</em> is based on the connectivity between polygons. If you ever drop the player into a room with no adjacent polygons, weird things will happen...try it and see!</p>
+
+				<p>Once a polygon has been filled, new lines can only be attached to its vertices, not along one of its sides.</p>
+				
+				<blockquote><em>[This is not strictly true in Weland, as long as it does not already have eight vertices. The &lsquo;<strong>Split Lines Attached to Polygons</strong>&rsquo; option in Preferences makes it possible to do precisely this. Note that it currently has a bug wherein sides that are attached to multiple polygons will be marked solid, regardless of whether they were originally. &ndash;&#8288;Ed.]</em></blockquote>
+
+				<p>Go ahead and add another polygon adjacent to your square. It should look something like this:</p>
+
+				<div class="image"><img src="images/squares-filled.png" width="321" height="193" alt="Hip to Be Square" title="Hip to Be Square" /></div>
+				
+				<p>Once filled, this new polygon will connect with the first one as long as they share a common side. Before you can go into Visual Mode, you will need to create a starting position (or entry point for the player).</p>
+				
+				<blockquote><em>[If there is not already a player object anywhere on a map that contains at least one polygon, Weland will automatically create one at the center of the first polygon filled whenever you attempt to save it or go into Visual Mode, so this step is only necessary in Forge. &ndash;&#8288;Ed.]</em></em></blockquote>
+
+				<p>Select the Object tool (<del>skull</del> [<em>pepper</em> &ndash;&#8288;Ed.]) and click in one of your polygons. The Edit Object <del>dialog</del> [<em>panel</em> &ndash;&#8288;Ed.] will appear:</p>
+				
+				<div class="image"><img src="images/edit-object.png" width="588" height="194" alt="Edit Object" title="Edit Object" /></div>
 				<p>(To be continued)</p>
 </body>
 </html>

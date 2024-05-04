@@ -603,6 +603,9 @@ textarea {
 .istoria tbody:nth-child(even) tr:nth-child(odd) .hidden {
     color: var(--offset-level-1);
 }
+.istoria .name {
+    font-weight: var(--bold);
+}
 
 /* it was a graveyard smash */
 .monstermash table {

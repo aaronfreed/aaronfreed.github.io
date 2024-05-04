@@ -680,7 +680,7 @@ textarea {
 .centred,
 :where(td, th):where(.centred, .dr),
 .istoria .footer {
-    text-align: center;
+    text-align: center; font-size: 13px;
 }
 .right,
 .date,

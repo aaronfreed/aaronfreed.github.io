@@ -61,6 +61,14 @@
     a:visited {
         color: var(--link);
     }
+    .istoria thead {
+        font-size: 16px;
+        display: table-row-group;
+    }
+    .istoria thead tr:first-child th,
+    .istoria thead tr:last-child th {
+        display: table-header-group;
+    }
 }
 @media screen {
     .noscreen {
@@ -69,6 +77,59 @@
     a:visited {
         color: var(--link-visited);
     }
+    .istoria table.body {
+        border-collapse: separate;
+        border-spacing: 0px;
+        border-style: none;
+    }
+    .istoria .body :is(td, th) {
+        border-left: 1px solid var(--offset-level-4);
+        border-top: 1px solid var(--offset-level-4);
+        border-right: none !important;
+        border-bottom: none !important;
+    }
+    .istoria .body :is(th:last-child, td:last-child) {
+        border-right: 1px solid var(--offset-level-4) !important;
+    }
+    .istoria .body :is(thead, tfoot) tr:last-child th {
+        border-bottom: 1px solid var(--offset-level-4) !important;
+    }
+    .istoria .body tbody tr:first-child td {
+        border-top: none !important;
+    }
+    .istoria .body tbody tr:last-child td {
+        border-bottom: none !important;
+    }
+    .istoria .body table tfoot tr:last-child {
+        border-bottom: 1px solid var(--offset-level-4);
+    }
+    .istoria .body th:lastchild, .istoria td:last-child {
+        border-right: 1px solid var(--offset-level-4); 
+    }
+    .istoria .body td, .istoria th {
+        border-left: 1px solid var(--offset-level-4); border-top: 1px solid var(--offset-level-4);
+    }
+    .istoria thead tr:first-child {
+        font-size: 20px;
+    }
+    .istoria .body thead tr:is(:first-child, :last-child) {
+        position: sticky;
+        inset-block-start: 0;
+        border-top: 1px solid var(--offset-level-4);
+    }
+    .istoria .body thead tr:first-child {
+        top: 0px;
+    }
+    .istoria .body thead tr:last-child {
+        top: 36px;
+        align-self: end;
+    }
+    .istoria .body tfoot {
+        position: sticky;
+        bottom: 0px;
+        inset-block-start: 0;
+    }
+    .istoria .body thead th {border-top: 1px solid var(--offset-level-4);}
 }
 /* reminder to self about CSS variables:
    two entries (ah! ah! ah!): vertical, horizontal
@@ -439,6 +500,17 @@ ol.upperlatin {
     list-style-type: upper-latin;
 }
 
+/* right-align Istoria's TOC numbers */
+.istoria ol.toc {
+    margin-left: 0px;
+}
+.istoria .toc li:before {
+    float: left;
+    text-align: right;
+    padding-right: 5px;
+    width: 55px;
+}
+
 /* images */
 .image {
     margin: 12px 0px 8px 0px;
@@ -578,17 +650,28 @@ textarea {
     font-weight: var(--lightest);
     border: 1px solid var(--offset-level-4);
 }
-.istoria thead {
-    background-color: var(--offset-level-2);
-    font-size: 20px;}
-.istoria tfoot {
+.istoria thead tr:nth-child(even) {
+    background-color: var(--offset-level-1);
+}
+.istoria thead tr:nth-child(odd) {
+    background-color: var(--background);
+}
+.istoria thead tr:first-child {
     background-color: var(--offset-level-3);
 }
-.istoria td.topic {
+.istoria thead tr:last-child {
+    background-color: var(--offset-level-2);
+    font-weight: var(--boldest);
+}
+.istoria tfoot {
+    background-color: var(--offset-level-3);
+    font-size: 13px;
+}
+.istoria :where(td, th).topic {
     font-family: "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
     font-weight: var(--bold);
     text-align: right;}
-.istoria td.location {
+.istoria :where(td, th).location {
     background-color: var(--offset-level-1);
 }
 .istoria tbody:nth-child(even) tr:nth-child(even) {

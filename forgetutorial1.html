@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>The Annotated Forge Manual</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script>
+function sortTable(table, col, reverse) {
+	var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+		tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+		i;
+	reverse = -((+reverse) || -1);
+	tr = tr.sort(function (a, b) { // sort rows
+		return reverse // `-1 *` if want opposite order
+			* (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+				.localeCompare(b.cells[col].textContent.trim(), undefined, {numeric: true})
+			);
+	});
+	for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+	var th = table.tHead, i;
+	th && (th = th.rows[0]) && (th = th.cells);
+	if (th) i = th.length;
+	else return; // if no `<thead>` then do nothing
+	while (--i >= 0) (function (i) {
+		var dir = 1;
+		th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+	}(i));
+}
+
+function makeAllSortable(parent) {
+	parent = parent || document.body;
+	var t = parent.getElementsByTagName('table'), i = t.length;
+	while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+	</script>
+</head>
+<body class="forgemanual">
+	<h1>The Annotated Forge Manual (WIP)</h1>
+	<h2>Tutorial One</h2>
+
+	<p>This is currently part two of <a href="forgemanual.html">The Annotated Forge Manual</a>, which remains a work in progress. This section is incomplete; I provide a link to the full manual at the end. I&rsquo;ve also compiled <a href="forgemanualcontents.html">a complete table of contents</a>.</p>
+
+	<p>With annotations specifically detailing how <a href="github.com/treellama/weland/releases" target="_blank">Weland</a> and <a href="github.com/treellama/atque/releases" target="_blank">Atque</a>, Forge&rsquo;s modern replacements, differ from Forge, and correcting numerous errata found within the manual. (However, thus far, I&rsquo;ve only done the first nine pages &ndash; twenty-five are left.)</p>
+
+	<p>My annotations are all <em>italicized</em>; are all either [bracketed], indented, or both; and always conclude with <em>&ndash;&#8288;Ed.</em> After this note, all text outside annotations will be Bungie&rsquo;s (with occasional minor spelling or grammar corrections).</p>
+	
+	<p>Please <a href="aboutme.html">contact me</a> if you notice any errors or omissions (besides the parts of the manual I haven&rsquo;t gotten to, natch). If you need more context for this, I have <a href="mapmaking101.html">a beginners&rsquo; mapmaking page</a> that should hopefully provide precisely that.</p>
+	&ndash;<strong><strong>Aaron</strong></strong>
+
+	<h2 id="contents">Table of Contents</h2>
+	<ol class="toc">
+		<li><a href="#top">Aaron&rsquo;s Introduction</a></li>
+		<li><a href="#contents">Table of Contents</a> (you&rsquo;re looking at it)</li>
+		<li class="light"><a href="forgemanual.html#intro" style="font-weight: 300;">Bungie&rsquo;s Introduction</h2>
+			<li class="light"><a href="forgemanual.html#definitions" style="font-weight: 300;">Key Definitions</a></li>
+			<li class="light"><a href="forgemanual.html#menu" style="font-weight: 300;">Menu Descriptions</a>
+				<ol>
+					<li class="light"><a href="forgemanual.html#file" style="font-weight: 300;">File Menu</a></li>
+					<li class="light"><a href="forgemanual.html#edit" style="font-weight: 300;">Edit Menu</a></li>
+					<li class="light"><a href="forgemanual.html#levels" style="font-weight: 300;">Levels Menu</a></li>
+					<li class="light"><a href="forgemanual.html#view" style="font-weight: 300;">View Menu</a></li>
+					<li class="light"><a href="forgemanual.html#special" style="font-weight: 300;">Special Menu</a></li>
+					<li class="light" style="font-style: italic;"><a href="forgemanual.html#plugins" style="font-weight: 300;">Plugins</a></li>
+				</ol>
+			</li>
+			<li class="light"><a href="forgemanual.html#tools" style="font-weight: 300;">The Tools</a></li>
+			<li class="light"><a href="forgemanual.html#mapparameters" style="font-weight: 300;">Setting Up Basic Map Parameters</a>
+				<ol>
+					<li class="light"><a href="forgemanual.html#parametersoptions" style="font-weight: 300;">Options</a></li>
+				</ol>
+			</li>
+			<li><a href="#tutorial1">Tutorial One: A Simple two-polygon Room</a>
+			<ol>
+				<li><a href="#worldunits">World Units Explained</a></li>
+				<li><a href="#letsmakealevel">Let&rsquo;s Make a Level!</a></li>
+			</ol>
+		</li>
+	</ol>
+	<p><em>[Note: List items in a lighter font weight than others at their level link to a different page. See also <a href="forgemanualcontents.html">the detailed table of contents</a> for heading layers below the first two. &ndash;&#8288;Ed.]</em></p>
+
+	<h2 id="tutorial1">Tutorial One: A Simple Two-Polygon Room</h2>
+			<p>In this section we&rsquo;ll be creating our first two polygon room. You&rsquo;ll find that making a level is nearly as fun and challenging as playing it. Using the 2D Draw Mode we&rsquo;ll be creating two interconnected polygons, and then &ldquo;fill&rdquo; them to make a valid 3D space. We&rsquo;ll then go into the 3D Visual Mode to texture our newly-created room.</p>
+			<h3 id="worldunits">World Units Explained</h3>
+				<p>In <em>Marathon</em> and Forge, the common unit of measurement is the World Unit (WU).</p>
+					<blockquote><em>[This is actually not at all true of </em>Marathon<em>: to avoid using floating-point math (which was </em>extremely<em> costly in the <span class="decimal">1990</span>s), it almost exclusively uses what I typically refer to as Internal Units. <span class="decimal">1</span>,<span class="decimal">024</span> Internal Units equate to <span class="decimal">1</span> World Unit. It isn&rsquo;t entirely true of Forge or Weland, either; some measurements, such as the ones you&rsquo;ll get when you double-click on a point, are in Internal Units. &ndash;&#8288;Ed.]</em></blockquote>
+				<p>In the real world, a World Unit would be about 2 meters.</p>
+					<blockquote><em>[Or would it? The official answer seems to be </em>&lsquo;<strong><strong>&macr;\&deg;_o/&macr;</strong></strong>&rsquo;<em>. See the indispensable <a href="https://marathon.bungie.org/story/ourheight.html">Marathon&rsquo;s Story page</a> for coverage of the player&rsquo;s height, which is <span class="decimal">819</span> Internal Units or roughly <span class="decimal">0</span>.<span class="decimal">7998</span> World Units. &ndash;&#8288;Ed.]</em></blockquote>
+				
+				<p>Let&rsquo;s take a closer look at some dimensions in Marathon&hellip;</p>
+
+				<p>Maps in Marathon can be up to 64 WU &times; 64 WU in area.</p>
+
+					<blockquote><em>[It is inadvisable, however, to use the outermost <span class="decimal">1</span>/<span class="decimal">2</span> WU of the map boundary: thanks to a variable overflow, projectiles can wrap around to the other edge of the map. Because Aleph One is coded in C++, a language in which it is extremely costly to check for variable overflows, this bug is unlikely to be fixed anytime soon. Because the vanilla physics model has no projectiles that travel faster than <span class="decimal">1</span> WU per game tick, this leaves us with roughly <span class="decimal">63</span> &times; <span class="decimal">63</span> WU<span class="decimal">&sup2;</span> of usable space. This is also why it is inadvisable to make projectiles travel faster than <span class="decimal">1</span> WU per tick.
+						<p>Incidentally, a more conservative guide than mine would probably recommend leaving <span class="decimal">1</span> WU boundaries around maps, leaving <span class="decimal">62</span> &times; <span class="decimal">62</span> WU<span class="decimal">&sup2;</span> of usable space; a less conservative one might argue that it&rsquo;s entirely OK for maps to extend to the exact edge of usable space as long as mapmakers are fully aware of the circumstances in which projectiles wrap around and avoid spaces on the opposite sides of maps where they can do that. I see valid merits to both arguments, but I think &lsquo;avoid the outermost <span class="decimal">1</span>/<span class="decimal">2</span> WU&rsquo; is a reasonable compromise for beginning mapmakers. &ndash;&#8288;Ed.]</p></em></blockquote>
+					
+				<p>Heights can range from &minus;9 WU to &plus;9 WU.</p>
+					<blockquote><em>[Weland gives you &minus;<span class="decimal">32</span> WU to &plus;<span class="decimal">31</span>.<span class="decimal">999</span> WU, though for similar reasons, I recommend avoiding the top or bottom <span class="decimal">1</span> WU. Also, note that if players are able to view any textures that extend more than <span class="decimal">32</span> WU above or below their camera height, a hall of mirrors glitch will result. &ndash;&#8288;Ed.]</em></blockquote>
+
+				<p>This means you get a volume of 64 &times; 64 &times; 18 = 73,000 cubic world units or about 590,000 cubic meters to play around with in Forge. That&rsquo;s a lot of space!</p>
+
+					<blockquote><em>[Or, in Weland, with my suggested guidelines: <span class="decimal">63</span> &times; <span class="decimal">63</span> &times; <span class="decimal">62</span> WU<span class="decimal">&sup3;</span> = <span class="decimal">246</span>,<span class="decimal">078</span> WU<span class="decimal">&sup3;</span> &asymp; <span class="decimal">1</span>,<span class="decimal">968</span>,<span class="decimal">624</span> m<span class="decimal">&sup3;</span>. &ndash;&#8288;Ed.]</em></blockquote>
+					
+				<p>All textures are 1 WU &times; 1WU.</p>
+				
+					<blockquote><em>[In Aleph One <span class="decimal">1</span>.<span class="decimal">7</span>, the <span class="decimal">2</span>&times; and <span class="decimal">4</span>&times; transfer modes mean this is no longer true: textures may also be <span class="decimal">2</span> WU &times; <span class="decimal">2</span> WU or <span class="decimal">4</span> WU &times; <span class="decimal">4</span> WU. Note that, because the <span class="decimal">2</span>&times; or <span class="decimal">4</span>&times; transfer modes are a recent addition, you must use Vasara AF or a recent version of Visual Mode to use them. &ndash;&#8288;Ed.]</em></blockquote>
+				
+				<p>To avoid obvious seams between the walls and floor, most corridors in <em>Marathon</em> are 1 WU tall and 1 WU wide. The player, which is 0.8 WU tall, can easily go blasting down these corridors. The highest step which the player can climb per step is about 0.2 WU tall.</p>
+
+					<blockquote><em>[This is not remotely true. The highest step players can climb without any prior momentum is <span class="decimal">341</span> Internal Units &asymp; <span class="decimal">0</span>.<span class="decimal">3330</span> WU, or just under <span class="decimal">1</span>/<span class="decimal">3</span> WU. With prior momentum, players can climb even taller steps. However, I advise avoiding steps taller than <span class="decimal">0</span>.<span class="decimal">25</span> WU, or <span class="decimal">1</span>/<span class="decimal">4</span> WU, because they feel very awkward to climb. In fact, I almost exclusively use measurements of <span class="decimal">0</span>.<span class="decimal">125</span> WU, or <span class="decimal">1</span>/<span class="decimal">8</span> WU, for my staircases and for most elements of my maps, since this provides very fluid motion and plays quite nicely with Weland&rsquo;s <span class="decimal">1</span>/<span class="decimal">8</span> WU grid size. However, <span class="decimal">0</span>.<span class="decimal">1</span> WU or <span class="decimal">0</span>.<span class="decimal">2</span> WU increments are also common. Note that the heights players can climb are among the few physics elements that are hard-coded into the engine. &ndash;&#8288;Ed.]</em></blockquote>
+
+				<p>When a map is created, Forge displays a window with what looks like a blank piece of graph paper. Evenly spaced on the grid there are vertices slightly darker than the others; these are the bounding corners of rectangles that are exactly one WU in size. The resolution of the map&rsquo;s grid can be changed by using the Grid Manager <del>(in the Special menu)</del> <em>[beneath the menubar &ndash;&#8288;Ed.]</em> or alternatively through use of the numeric keys 1 through 5. Pressing 1 will give a grid size of <span class="decimal">1</span>/<span class="decimal">8</span>th WU and 5 a size of 2 WUs.</p>
+
+			<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
+
+			<h3 id="letsmakealevel">Let&rsquo;s Make a Level!</h3>
+				<p>Open Forge and create a new level (select the New Level menu item or type Command-N). Next, give your level a name and select an environment and landscape. Finally, click on the Multiplayer Carnage checkbox since we&rsquo;ll be creating a network level. That&rsquo;s it, now hit the OK button.</p>
+
+				<p>You&rsquo;ll be presented with a large size grid. Go to the tool bar and select the line tool. Now, click and hold at any vertex on the grid and drag the line to the next dark vertex so that the line is 1 WU in length. Notice that the line just dropped has a red point at each end; these are the vertices. Continue creating lines until a square is created. The outline should look something like this:</p>
+
+				<div class="image"><img src="images/square-outline.png" width="577" height="193" alt="The World Is Square" title="The World Is Square" /></div>
+
+				<p>Now comes the most important step: select the Fill Tool from the palette and click inside the polygon outline you&rsquo;ve just created. It will fill the newly-created outline, turning its insides white and making it a valid space in the 3D world. If all goes well, it should turn white.</p>
+
+				<div class="image"><img src="images/square-filled.png" width="193" height="193" alt="ERAU QSSI DLRO WEHT" title="ERAU QSSI DLRO WEHT" /></div>
+
+				<p>To fill properly, a polygon must be convex. That means all its internal angles have to be less than <em>[or equal to &ndash;&#8288;Ed.]</em> 180&deg;. It also cannot have more than eight vertices. To build larger rooms or polygon shapes, make them out of multiple smaller polygons. Also, keep in mind that you cannot connect two lines together by dragging the vertex of one line onto the other. For example, if you create two parallel lines (that are not connected to each other in any way) and try to drag the vertex of one line onto the vertex of the other line, the points will not connect.</p>
+
+				<p>If you select one of the vertices of the square you just built and dragged it towards the diagonally opposite corner, you&rsquo;ll notice that a red striped texture will appear in the polygon. This means that the polygon is now concave (non-convex).</p>
+					<blockquote><em>[In Weland&rsquo;s default color scheme, concave polygons appear as orange rather than as striped red, but this nonetheless signifies the same thing. &ndash;&#8288;Ed.]</em></blockquote>
+				
+				<p>When you attempt to save a map that has a concave polygon or switch view modes, Forge will bring up a dialog with the polygon&rsquo;s id number. When you hit OK, it will goto that polygon and select it for you. Here you can fix the polygon.</p>
+
+					<blockquote><em>[Weland is a lot more forgiving with this &ndash; it will not provide any such warning. Which can actually be a serious problem, because if the player is ever able to stand within a concave polygon, the game will crash. Additionally, if you have a lot of overlapping geometry, it may not even be noticeable that a polygon is concave. In short, be careful when moving points. &ndash;&#8288;Ed.]</em></blockquote>
+
+				<p>Now that the first polygon has been filled, the temptation might be to go into Visual mode and see what it looks like. All movement in <em>Marathon</em> is based on the connectivity between polygons. If you ever drop the player into a room with no adjacent polygons, weird things will happen...try it and see!</p>
+
+				<p>Once a polygon has been filled, new lines can only be attached to its vertices, not along one of its sides.</p>
+				
+				<blockquote><em>[This is not strictly true in Weland, as long as it does not already have eight vertices. The &lsquo;<strong>Split Lines Attached to Polygons</strong>&rsquo; option in Preferences makes it possible to do precisely this. Note that it currently has a bug wherein sides that are attached to multiple polygons will be marked solid, regardless of whether they were originally. &ndash;&#8288;Ed.]</em></blockquote>
+
+				<p>Go ahead and add another polygon adjacent to your square. It should look something like this:</p>
+
+				<div class="image"><img src="images/squares-filled.png" width="321" height="193" alt="Hip to Be Square" title="Hip to Be Square" /></div>
+				
+				<p>Once filled, this new polygon will connect with the first one as long as they share a common side. Before you can go into Visual Mode, you will need to create a starting position (or entry point for the player).</p>
+				
+				<blockquote><em>[If there is not already a player object anywhere on a map that contains at least one polygon, Weland will automatically create one at the center of the first polygon filled whenever you attempt to save it or go into Visual Mode, so this step is only necessary in Forge. &ndash;&#8288;Ed.]</em></em></blockquote>
+
+				<p>Select the Object tool (<del>skull</del> [<em>pepper</em> &ndash;&#8288;Ed.]) and click in one of your polygons. The Edit Object <del>dialog</del> [<em>panel</em> &ndash;&#8288;Ed.] will appear:</p>
+				
+				<div class="image"><img src="images/edit-object.png" width="588" height="194" alt="Edit Object" title="Edit Object" /></div>
+			
+				<p>(To be continued &ndash; for now, you can read the rest <a href="http://archives2.bungie.org/manuals/Trilogy_Manual.pdf" target="_blank">here</a>)</p>
+
+				<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	

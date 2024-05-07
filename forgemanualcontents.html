@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>The Annotated Forge Manual</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script>
+function sortTable(table, col, reverse) {
+	var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+		tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+		i;
+	reverse = -((+reverse) || -1);
+	tr = tr.sort(function (a, b) { // sort rows
+		return reverse // `-1 *` if want opposite order
+			* (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+				.localeCompare(b.cells[col].textContent.trim(), undefined, {numeric: true})
+			);
+	});
+	for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+	var th = table.tHead, i;
+	th && (th = th.rows[0]) && (th = th.cells);
+	if (th) i = th.length;
+	else return; // if no `<thead>` then do nothing
+	while (--i >= 0) (function (i) {
+		var dir = 1;
+		th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+	}(i));
+}
+
+function makeAllSortable(parent) {
+	parent = parent || document.body;
+	var t = parent.getElementsByTagName('table'), i = t.length;
+	while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+	</script>
+</head>
+<body class="forgemanual forgecontents">
+
+	<h1>The Annotated Forge Manual</h1>
+<h2>Detailed Table of Contents</h2>
+
+<p>A complete table of contents for my annotated Forge manual, which I plan to split across several pages. The pages themselves contain significantly abridged tables of contents, since it&rsquo;s possible to Ctrl+F or &#8984;+F a webpage to find anything on it; however, since it&rsquo;s impossible to Ctrl+F or &#8984;+F the entire manual at once, I&rsquo;ve listed every single section heading here.</p>
+
+<p>For reference, the manual is currently broken up into the following pages:</p>
+<ol start="0">
+	<li><a href="forgemanual.html">Introduction, Key Definitions, Menus, Tools, Basic Map Parameters</a></li>
+	<li><a href="forgetutorial.html">Tutorial One</a></li>
+</ol>
+<hr />
+
+	<h2 id="contents">Table of Contents</h2>
+	<ol class="toc">
+		<li><a href="forgemanual.html#top">The Annotated Forge Manual: Detailed Table of Contents</a>
+			<ol>
+				<li><a href="forgemanualcontents.html#top">Introduction</a></li>
+				<li><a href="forgemanualcontents.html#contents">Table of Contents</a> (you&rsquo;re looking at it)</li>
+			</ol>
+		</li>
+		<li><a href="forgemanual.html">The Annotated Forge Manual</a>
+			<ol>
+				<li><a href="forgemanual.html#intro">Bungie&rsquo;s Introduction</a></li>
+				<li><a href="forgemanual.html#definitions">Key Definitions</a>
+					<ol>
+						<li><a href="forgemanual.html#leveldef">Level</a></li>
+						<li><a href="forgemanual.html#netleveldef">Network Level</a></li>
+						<li><a href="forgemanual.html#mapdef">Map</a></li>
+						<li><a href="forgemanual.html#mergedef">Merge (Merging)</a></li>
+						<li><a href="forgemanual.html#polygondef">Polygon</a></li>
+						<li><a href="forgemanual.html#linedef">Line</a></li>
+						<li><a href="forgemanual.html#vertexdef">Vertex (pl. <em>vertices</em>)</a></li>
+						<li><a href="forgemanual.html#platformdef">Platform</a></li>
+						<li><a href="forgemanual.html#drawmodedef">Draw Mode</a></li>
+						<li><a href="forgemanual.html#visualmodedef">Visual Mode</a></li>
+					</ol>
+				</li>
+				<li><a href="forgemanual.html#menu">Menu Descriptions</a>
+					<ol>
+						<li><a href="forgemanual.html#file">File Menu</a>
+							<ol>
+								<li><a href="forgemanual.html#newlevel">New Level</a></li>
+								<li><a href="forgemanual.html#open">Open</a></li>
+								<li><a href="forgemanual.html#close">Close</a></li>
+								<li><a href="forgemanual.html#save">Save Scenario</a></li>
+								<li><a href="forgemanual.html#saveas">Save Scenario as...</a></li>
+								<li><a href="forgemanual.html#merge">Merge Levels...</a></li>
+								<li><a href="forgemanual.html#export">Export Level...</a></li>
+								<li style="font-style: italic;"><a href="forgemanual.html#exportobj">Export OBJ...</a></li>
+								<li><a href="forgemanual.html#quit">Quit</a></li>
+							</ol>
+						</li>
+						<li><a href="forgemanual.html#edit">Edit Menu</a>
+							<ol>
+								<li><a href="forgemanual.html#undo">Undo</a></li>
+								<li><a href="forgemanual.html#preferences">Preferences...</a></li>
+							</ol>
+						</li>
+						<li><a href="forgemanual.html#levels">Levels Menu</a></li>
+						<li><a href="forgemanual.html#view">View Menu</a>
+							<ol>
+								<li><a href="forgemanual.html#drawmode">Draw Mode</a></li>
+								<li><a href="forgemanual.html#visualmode">Visual Mode</a></li>
+								<li><a href="forgemanual.html#elevation">Elevation</a></li>
+								<li><a href="forgemanual.html#textures">Textures</a></li>
+								<li><a href="forgemanual.html#lights">Lights</a></li>
+								<li><a href="forgemanual.html#sounds">Sounds</a></li>
+							</ol>
+						</li>
+						<li><a href="forgemanual.html#special">Special Menu</a>
+							<ol>
+								<li><a href="forgemanual.html#zoomer">Zoom In/Zoom Out</a></li>
+								<li><a href="forgemanual.html#mapmanager">Map Manager</a>
+									<ol>
+										<li><a href="forgemanual.html#gridsize">Grid Size</a></li>
+										<li><a href="forgemanual.html#displaygrid">Display Grid</a></li>
+										<li><a href="forgemanual.html#constraintogrid">Constrain to Grid</a></li>
+										<li style="font-style: italic;"><a href="forgemanual.html#customgrid">Custom Grid</a></li>
+										<li><a href="forgemanual.html#showmonsters">Show Monsters, etc.</a></li>
+										<li><a href="forgemanual.html#visualmodecrosshairs">Visual Mode Crosshairs</a></li>
+									</ol>
+								</li>
+								<li><a href="forgemanual.html#viewheight">View Height Window</a></li>
+								<li><a href="forgemanual.html#goto">Goto...</a></li>
+								<li><a href="forgemanual.html#levelparameters">Set Level Parameters</a></li>
+								<li><a href="forgemanual.html#itemparameters">Set Item Parameters</a></li>
+								<li><a href="forgemanual.html#monsterparameters">Set Monster Parameters</a></li>
+								<li><a href="forgemanual.html#recenter">Recenter Level</a></li>
+								<li><a href="forgemanual.html#pave">Pave Level</a></li>
+								<li style="font-style: italic;"><a href="forgemanual.html#nuketextures">Nuke Textures</a></li>
+								<li><a href="forgemanual.html#nukeobjects">Nuke Objects Only</a></li>
+								<li><a href="forgemanual.html#nukeandpave">Nuke & Pave Level</a></li>
+							</ol>
+						</li>
+						<li style="font-style: italic;"><a href="forgemanual.html#plugins">Plugins</a>
+							<ol>
+								<li><a href="forgemanual.html#autoshade">Auto Shade Level</a></li>
+								<li><a href="forgemanual.html#enumeratetags">Enumerate Tags</a></li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li><a href="forgemanual.html#tools">The Tools</a>
+					<ol>
+						<li><a href="forgemanual.html#arrow">Arrow (A)</a></li>
+						<li><a href="forgemanual.html#line">Line (L)</a></li>
+						<li><a href="forgemanual.html#filltool">Fill Tool (F)</a></li>
+						<li><a href="forgemanual.html#polygontool">Polygon (P)</a></li>
+						<li><a href="forgemanual.html#move">Hand Tool (D)</a></li>
+						<li><a href="forgemanual.html#zoom">Zoom Tool (Z)</a></li>
+						<li><a href="forgemanual.html#texttool">Text Tool (T)</a></li>
+						<li><a href="forgemanual.html#objecttool">Object Tool (O)</a></li>
+					</ol>
+				</li>
+				<li><a href="forgemanual.html#mapparameters">Setting Up Basic Map Parameters</a>
+					<ol>
+						<li><a href="forgemanual.html#parametersoptions">Options</a>
+							<ol>
+								<li><a href="forgemanual.html#environment">Environment</a></li>
+								<li><a href="forgemanual.html#landscape">Landscape</a></li>
+								<li><a href="forgemanual.html#gametype">Game Type</a></li>
+								<li><a href="forgemanual.html#environmenttype">Environment Type</a>
+									<ol>
+										<li><a href="forgemanual.html#vacuum">Vacuum</a></li>
+										<li><a href="forgemanual.html#rebellion">Rebellion</a></li>
+										<li><a href="forgemanual.html#lowgravity">Low Gravity</a></li>
+										<li><a href="forgemanual.html#magnetic">Magnetic</a></li>
+									</ol>
+								</li>
+								<li><a href="forgemanual.html#missiontype">Mission Type</a>
+									<ol>
+										<li><a href="forgemanual.html#extermination">Extermination</a></li>
+										<li><a href="forgemanual.html#exploration">Exploration</a></li>
+										<li><a href="forgemanual.html#retrieval">Retrieval</a></li>
+										<li><a href="forgemanual.html#repair">Repair</a></li>
+										<li><a href="forgemanual.html#rescue">Rescue</a></li>
+									</ol>
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+		<li><a href="forgetutorial1.html">The Annotated Forge Manual: Tutorial One</a>
+			<ol>
+				<li><a href="forgetutorial1.html#tutorial1">Tutorial One: A Simple Two-Polygon Room</a>
+					<ol>
+						<li><a href="forgetutorial1.html#worldunits">World Units Explained</a></li>
+						<li><a href="forgetutorial1.html#letsmakealevel">Let&rsquo;s Make a Level!</a></li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+	</ol>
+	<p>(To be continued&hellip;)</p>
+</body>
+</html>

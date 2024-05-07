@@ -1,193 +1,195 @@
 ﻿:root {
-    --background: #fff;
-    --offset-level-1: #eff0ff;
-    --offset-level-2: #e0e0ff;
-    --offset-level-3: #d0d0ff;
-    --offset-level-4: #a0a0ff;
-    --link: #09f;
-    --link-visited: #c0c;
-    --link-active: #090;
-    --link-hover: #c60;
-    --heading-color: #2F5496;
-    --portfolio-heading: #2f5496;
-    --toc-counter: #004c80;
-    --main: #000;
-    --lightest: 100;
-    --medium: 300;
-    --bold: 500;
-    --boldest: 700;
+	--background: #fff;
+	--offset-level-1: #eff0ff;
+	--offset-level-2: #e0e0ff;
+	--offset-level-3: #d0d0ff;
+	--offset-level-4: #a0a0ff;
+	--link: #09f;
+	--link-visited: #c0c;
+	--link-active: #090;
+	--link-hover: #c60;
+	--heading-color: #2F5496;
+	--portfolio-heading: #2f5496;
+	--toc-counter: #004c80;
+	--main: #000;
+	--lightest: 100;
+	--medium: 300;
+	--bold: 500;
+	--boldest: 700;
 }
 @media (prefers-color-scheme: dark) {
-    :root {
-        --background: #000;
-        --offset-level-1: #1c1e36;
-        --offset-level-2: #383c6c;
-        --offset-level-3: #545aa2;
-        --offset-level-4: #7078d8;
-        --link: #73e8ff;
-        --link-visited: #ff93ff;
-        --link-active: #adffad;
-        --link-hover: #ffb57b;
-        --heading-color: #74d4ff;
-        --portfolio-heading: #b8f0ff;
-        --toc-counter: #a8f0ff;
-        --main: #fff;
-    }
+	:root {
+		--background: #000;
+		--offset-level-1: #1c1e36;
+		--offset-level-2: #383c6c;
+		--offset-level-3: #545aa2;
+		--offset-level-4: #7078d8;
+		--link: #73e8ff;
+		--link-visited: #ff93ff;
+		--link-active: #adffad;
+		--link-hover: #ffb57b;
+		--heading-color: #74d4ff;
+		--portfolio-heading: #b8f0ff;
+		--toc-counter: #a8f0ff;
+		--main: #fff;
+	}
 }
 @media print {
-    .noprint
-    {
-        display: none !important;
-    }
-    .discography tbody > tr:nth-child(6n+1),
-    .discography tbody > tr:nth-child(6n+4) {
-        break-inside: avoid-page;
-        break-before: auto;
-    }
-    .discography tbody > tr:nth-child(6n),
-    .discography tbody > tr:nth-child(6n+2),
-    .discography tbody > tr:nth-child(6n+3),
-    .discography tbody > tr:nth-child(6n+5) {
-        break-before: avoid-page;
-        break-inside: avoid-page;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        break-after: avoid;
-    }
-    a:visited {
-        color: var(--link);
-    }
-    .istoria thead {
-        font-size: 16px;
-        display: table-row-group;
-    }
-    .istoria thead tr:first-child th,
-    .istoria thead tr:last-child th {
-        display: table-header-group;
-    }
+	.noprint
+	{
+		display: none !important;
+	}
+	.discography tbody > tr:nth-child(6n+1),
+	.discography tbody > tr:nth-child(6n+4) {
+		break-inside: avoid-page;
+		break-before: auto;
+	}
+	.discography tbody > tr:nth-child(6n),
+	.discography tbody > tr:nth-child(6n+2),
+	.discography tbody > tr:nth-child(6n+3),
+	.discography tbody > tr:nth-child(6n+5) {
+		break-before: avoid-page;
+		break-inside: avoid-page;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		break-after: avoid;
+	}
+	a:visited {
+		color: var(--link);
+	}
+	.istoria thead {
+		font-size: 16px;
+		display: table-row-group;
+	}
+	.istoria thead tr:first-child th,
+	.istoria thead tr:last-child th {
+		display: table-header-group;
+	}
 }
 @media screen {
-    .noscreen {
-        display: none !important;
-    }
-    a:visited {
-        color: var(--link-visited);
-    }
-    .istoria table.body {
-        border-collapse: separate;
-        border-spacing: 0px;
-        border-style: none;
-    }
-    .istoria .body :is(td, th) {
-        border-left: 1px solid var(--offset-level-4);
-        border-top: 1px solid var(--offset-level-4);
-        border-right: none !important;
-        border-bottom: none !important;
-    }
-    .istoria .body :is(th:last-child, td:last-child) {
-        border-right: 1px solid var(--offset-level-4) !important;
-    }
-    .istoria .body :is(thead, tfoot) tr:last-child th {
-        border-bottom: 1px solid var(--offset-level-4) !important;
-    }
-    .istoria .body tbody tr:first-child td {
-        border-top: none !important;
-    }
-    .istoria .body tbody tr:last-child td {
-        border-bottom: none !important;
-    }
-    .istoria .body table tfoot tr:last-child {
-        border-bottom: 1px solid var(--offset-level-4);
-    }
-    .istoria .body th:lastchild, .istoria td:last-child {
-        border-right: 1px solid var(--offset-level-4); 
-    }
-    .istoria .body td, .istoria th {
-        border-left: 1px solid var(--offset-level-4); border-top: 1px solid var(--offset-level-4);
-    }
-    .istoria thead tr:first-child {
-        font-size: 20px;
-    }
-    .istoria .body thead tr:is(:first-child, :last-child) {
-        position: sticky;
-        inset-block-start: 0;
-        border-top: 1px solid var(--offset-level-4);
-    }
-    .istoria .body thead tr:first-child {
-        top: 0px;
-    }
-    .istoria .body thead tr:last-child {
-        top: 33px;
-        align-self: end;
-    }
-    .istoria .body tfoot {
-        position: sticky;
-        bottom: 0px;
-        inset-block-start: 0;
-    }
-    .istoria .body thead th {border-top: 1px solid var(--offset-level-4);}
+	.noscreen {
+		display: none !important;
+	}
+	a:visited {
+		color: var(--link-visited);
+	}
+
+	/* sticky position stuff on the Istoria page (that I still can’t decide whether I like) */
+	.istoria table.body {
+		border-collapse: separate;
+		border-spacing: 0px;
+		border-style: none;
+	}
+	.istoria .body :is(td, th) {
+		border-left: 1px solid var(--offset-level-4);
+		border-top: 1px solid var(--offset-level-4);
+		border-right: none !important;
+		border-bottom: none !important;
+	}
+	.istoria .body :is(th:last-child, td:last-child) {
+		border-right: 1px solid var(--offset-level-4) !important;
+	}
+	.istoria .body :is(thead, tfoot) tr:last-child th {
+		border-bottom: 1px solid var(--offset-level-4) !important;
+	}
+	.istoria .body tbody tr:first-child td {
+		border-top: none !important;
+	}
+	.istoria .body tbody tr:last-child td {
+		border-bottom: none !important;
+	}
+	.istoria .body table tfoot tr:last-child {
+		border-bottom: 1px solid var(--offset-level-4);
+	}
+	.istoria .body th:lastchild, .istoria td:last-child {
+		border-right: 1px solid var(--offset-level-4); 
+	}
+	.istoria .body td, .istoria th {
+		border-left: 1px solid var(--offset-level-4); border-top: 1px solid var(--offset-level-4);
+	}
+	.istoria thead tr:first-child {
+		font-size: 20px;
+	}
+	.istoria .body thead tr:is(:first-child, :last-child) {
+		position: sticky;
+		inset-block-start: 0;
+		border-top: 1px solid var(--offset-level-4);
+	}
+	.istoria .body thead tr:first-child {
+		top: 0px;
+	}
+	.istoria .body thead tr:last-child {
+		top: 33px;
+		align-self: end;
+	}
+	.istoria .body tfoot {
+		position: sticky;
+		bottom: 0px;
+		inset-block-start: 0;
+	}
+	.istoria .body thead th {border-top: 1px solid var(--offset-level-4);}
 }
 /* reminder to self about CSS variables:
    two entries (ah! ah! ah!): vertical, horizontal
  three entries (ah! ah! ah!): top, horizontal, bottom
   four entries (ah! ah! ah!): clockwise from top */
 @font-face {
-    font-family: 'Numberwang';
-    src: local('Corbel Light'),
-    local(Avenir),
-    local('Calibri Light');
-    unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
+	font-family: 'Numberwang';
+	src: local('Corbel Light'),
+	local(Avenir),
+	local('Calibri Light');
+	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
 }
 @font-face {
-    font-family: 'Numberwang Medium';
-    src: local('Corbel'),
-    local(Avenir),
-    local('Calibri');
-    unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
+	font-family: 'Numberwang Medium';
+	src: local('Corbel'),
+	local(Avenir),
+	local('Calibri');
+	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
 }
 
 /* start main entry */
 body {
-    width: 800px;
-    font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-    text-align: justify;
-    margin: auto;
-    font-weight: var(--lightest);
-    font-stretch: 100%;
-    background-color: var(--background);
-    color: var(--main);
+	width: 800px;
+	font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	text-align: justify;
+	margin: auto;
+	font-weight: var(--lightest);
+	font-stretch: 100%;
+	background-color: var(--background);
+	color: var(--main);
 }
 .normal, button {
-    font-family: "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 }
 .soundtracks strong,
 .soundtracks a:link,
 .soundtracks a:visited,
 .soundtracks :where(h1, h2, h3, h4) {
-    font-weight: var(--bold);
-    font-family: "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-weight: var(--bold);
+	font-family: "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 }
 
 /* link stuff */
 
 a:where(:link, :visited):where(:not(:hover, :active)) {
-    text-decoration: none;
+	text-decoration: none;
 }
 a:link {
-    color: var(--link);
+	color: var(--link);
 }
 a:visited {
-    color: var(--link-visited);
+	color: var(--link-visited);
 }
 a:where(:link, :visited):hover {
-    color: var(--link-hover);
+	color: var(--link-hover);
 }
 a:where(:link, :visited):active {
-    color: var(--link-active);
+	color: var(--link-active);
 }
 
 /* define font weights */
@@ -199,10 +201,10 @@ a:visited,
 .light :where(strong, .bold, a:link, a:visited) :where(.integer, .decimal, .number, .date),
 :where(.bold, strong, a:link, a:visited) :where(.integer, .decimal, .number, .date),
 :where(.integer, .decimal, .number, .date) :where(.bold, strong, a:link, a:visited) {
-    font-weight: var(--bold);
+	font-weight: var(--bold);
 }
 .light :where(strong, .bold, a:link, a:visited) {
-    font-weight: var(--medium);
+	font-weight: var(--medium);
 }
 
 .bold strong,
@@ -214,20 +216,24 @@ a:visited .strong,
 :is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) :where(.integer, .decimal, .number, .date),
 ol.toc > :where(a:link, a:visited) :where(.integer, .decimal)
 {
-    font-weight: var(--boldest);
+	font-weight: var(--boldest);
 }
 ol.toc > li > ol > li > ol :where(.integer, .decimal) {
-    font-family: "Corbel", "Avenir", "Calibri", monospace;
-    font-weight: var(--medium);
+	font-family: "Corbel", "Avenir", "Calibri", monospace;
+	font-weight: var(--medium);
 }
 .light {
-    font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-    font-weight: var(--lightest);
+	font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-weight: var(--lightest);
 }
 .light .integer:not(a:link, a:visited, a:hover, a:active),
 .light .decimal:not(a:link, a:visited, a:hover, a:active) {
-    font-family: "Corbel", "Avenir", "Calibri", monospace;
-    font-weight: var(--lightest);
+	font-family: "Corbel", "Avenir", "Calibri", monospace;
+	font-weight: var(--lightest);
+}
+
+.italic {
+	font-style: italic;
 }
 
 /* headers and accents */
@@ -237,68 +243,68 @@ h3,
 h4,
 h5
 {
-    margin: 12px 0px;
-    font-weight: var(--boldest);
-    color: var(--heading-color);
+	margin: 12px 0px;
+	font-weight: var(--boldest);
+	color: var(--heading-color);
 }
 .music h1 {
-    font-size: 30px;
+	font-size: 30px;
 }
 .music h2 {
-    font-size: 24px;
+	font-size: 24px;
 }
 .music h3 {
-    font-size: 18px;
+	font-size: 18px;
 }
 .music h4 {
-    font-size: 16px;
+	font-size: 16px;
 }
 .music :where( h1, h2, h3, h4) {
-    margin: 16px 0px 8px;
+	margin: 16px 0px 8px;
 }
 .accent {
-    color: var(--heading-color);
+	color: var(--heading-color);
 }
 .discography :where(h1, h2, h3, h4)
 {
-    text-align: center;
+	text-align: center;
 }
 
 :where(.portfolio, .forgemanual) h1 {
-    font-size: 36px;
+	font-size: 36px;
 }
 :where(.portfolio, .forgemanual) h2 {
-    font-size: 30px;
+	font-size: 30px;
 }
 :where(.portfolio, .forgemanual) h3 {
-    font-size: 24px;
+	font-size: 24px;
 }
 :where(.portfolio, .forgemanual) h4 {
-    font-size: 18px;
+	font-size: 18px;
 }
 :where(.portfolio, .forgemanual) h5 {
-    font-size: 16px;
+	font-size: 16px;
 }
 
 .forgemanual :where(h1, h2, h3, h4, h5) {
-    margin: 16px 0px 4px;
+	margin: 16px 0px 4px;
 }
 .forgemanual :where(h1 + h2, h2 + h3, h3 + h4, h4 + h5) {
-    margin: 4px 0px;
+	margin: 4px 0px;
 }
 
 .portfolio :where(h1, h2, h3, h4) {
-    margin: 24px 0px 8px;
+	margin: 24px 0px 8px;
 }
 .portfolio h2.first,
 .portfolio h3.first,
 .portfolio h4.first {
-    margin: 8px 0px;
+	margin: 8px 0px;
 }
 .portfolio h5 {
-    font-weight: var(--bold);
-    color: var(--portfolio-heading);
-    margin: 0px 0px 8px;
+	font-weight: var(--bold);
+	color: var(--portfolio-heading);
+	margin: 0px 0px 8px;
 }
 .portfolio h5.light {font-weight: var(--lightest);}
 .portfolio h5.light strong {font-weight: var(--bold);}
@@ -308,297 +314,365 @@ h5
 div,
 p,
 li {
-    margin: 8px 0px;
+	margin: 8px 0px;
 }
 .upperpara {
-    margin: 0px 0px 8px;
+	margin: 0px 0px 8px;
 }
 .lowerpara {
-    margin: 8px 0px 0px;
+	margin: 8px 0px 0px;
 }
 :where(.discography, .soundtracks, .portfolio) p {
-    margin: 12px 0px 6px;
+	margin: 12px 0px 6px;
 }
 .discography p.upperpara {
-    margin: 0px 0px 6px;
+	margin: 0px 0px 6px;
 }
 .discography p.lowerpara {
-    margin: 12px 0px 0px;
+	margin: 12px 0px 0px;
 }
 .soundtracks div {
-    margin: 4px 0px;
+	margin: 4px 0px;
 }
 blockquote {
-    margin: 16px 30px;
+	margin: 16px 30px;
 }
 blockquote.wide {
-    margin: 16px 0px 16px 30px;
+	margin: 16px 0px 16px 30px;
 }
 .portfolio blockquote {
-    margin: 12px 30px 6px;
+	margin: 12px 30px 6px;
 }
 
 ul,
 ol {
-    margin: 4px 0px 4px 30px;
-    padding: 0px;
+	margin: 4px 0px 4px 30px;
+	padding: 0px;
 }
 ol li::marker {
-    font-family: "Corbel", "Avenir", "Calibri", monospace;
+	font-family: "Corbel", "Avenir", "Calibri", monospace;
 }
 
 .music li,
 .soundtracks li {
-    margin-top: 6px;
-    margin-bottom: 6px;
+	margin-top: 6px;
+	margin-bottom: 6px;
 }
 .music ul,
 .music ol,
 .soundtracks ul,
 .soundtracks ol {
-    margin: 12px 0px 6px 30px;
+	margin: 12px 0px 6px 30px;
 }
 
 .discography ol {
-    list-style-type: lower-roman;
-    margin-top: 0px;
+	list-style-type: lower-roman;
+	margin-top: 0px;
 }
 .discography ol > li > ol {
-    list-style-type: lower-alpha;
-    margin-top: 0px;
+	list-style-type: lower-alpha;
+	margin-top: 0px;
 }
 .soundtracks li {
-    margin: 6px 0px;
+	margin: 6px 0px;
 }
 
 .portfolio ul {
-    margin: 16px 0px 4px 30px;
+	margin: 16px 0px 4px 30px;
 }
 .portfolio ul > li > ul {
-    margin-top: 8px;
-    margin-bottom: 8px;
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 .portfolio ol {
-    margin: 16px 0px 4px 30px;
+	margin: 16px 0px 4px 30px;
 }
 .portfolio li {
-    margin-top: 8px;
-    margin-bottom: 8px;
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 
 /* table of contents. this one is a doozy */
 ol.toc, .toc ol {
-    counter-reset: item;
-    margin-top: 0px;
-    margin-bottom: 0px;
+	counter-reset: item;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 .toc li {
-    display: block;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    font-weight: var(--lightest);
+	display: block;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	font-weight: var(--lightest);
 }
 .toc a:link,
 .toc a:visited {
-    font-weight: var(--lightest);
+	font-weight: var(--lightest);
 }
 .toc li:before {
-    content: "{" counters(item, ".")"} ";
-    counter-increment: item;
-    color: var(--toc-counter);
+	content: "{" counters(item, ".")"} ";
+	counter-increment: item;
+	color: var(--toc-counter);
 }
-ol.toc > li,
-ol.toc > li > a:link,
-ol.toc > li > a:visited {
-    font-weight: var(--boldest);
+ol.toc :is(li, li a:link, li a:visited) {
+	font-weight: var(--boldest);
 }
-ol.toc > li:before {
-    content: "(" counters(item, ".")") ";
-    counter-increment: item;
-    color: var(--toc-counter);
-    font-weight: var(--boldest);
-    font-family: "Corbel", "Avenir", "Calibri";
+ol.toc li:before {
+	content: "(" counters(item, ".")") ";
+	counter-increment: item;
+	color: var(--toc-counter);
+	font-weight: var(--boldest);
+	font-family: "Corbel", "Avenir", "Calibri";
 }
-ol.toc > li > ol > li,
-ol.toc > li > ol > li > a:link,
-ol.toc > li > ol > li > a:visited {
-    font-weight: var(--bold);
+ol.toc ol :is(li, li a:link, li a:visited) {
+	font-weight: var(--bold);
 }
-ol.toc > li > ol > li:before {
-    content: "[" counters(item, ".")"] ";
-    counter-increment: item;
-    color: var(--toc-counter);
-    font-weight: var(--bold);
-    font-family: "Corbel", "Avenir", "Calibri";
+ol.toc ol li:before {
+	content: "[" counters(item, ".")"] ";
+	counter-increment: item;
+	color: var(--toc-counter);
+	font-weight: var(--bold);
+	font-family: "Corbel", "Avenir", "Calibri";
 }
-ol.toc > li > ol > li > ol > li,
-ol.toc > li > ol > li > ol > li > a:link,
-ol.toc > li > ol > li > ol > li > a:visited {
-    font-weight: var(--medium);
+ol.toc ol ol :is(li, li a:link, li a:visited) {
+	font-weight: var(--medium);
 }
-ol.toc > li > ol > li > ol > li:before {
-    content: "{" counters(item, ".")"} ";
-    counter-increment: item;
-    color: var(--toc-counter);
-    font-weight: var(--medium);
-    font-family: "Corbel", "Avenir", "Calibri";
+ol.toc ol ol li:before {
+	content: "{" counters(item, ".")"} ";
+	counter-increment: item;
+	color: var(--toc-counter);
+	font-weight: var(--medium);
+	font-family: "Corbel", "Avenir", "Calibri";
 }
-ol.toc > li > ol > li > ol > li > ol > li,
-ol.toc > li > ol > li > ol > li > ol > li > a:link,
-ol.toc > li > ol > li > ol > li > ol > li > a:visited {
-    font-weight: var(--lightest);
-    font-style: italic;
+ol.toc ol ol ol :is(li, li a:link, li a:visited) {
+	font-weight: var(--lightest);
+	font-style: italic;
 }
-ol.toc > li > ol > li > ol > li > ol > li:before {
-    content: "⟨" counters(item, ".")"⟩ ";
-    counter-increment: item;
-    color: var(--toc-counter);
-    font-weight: var(--lightest);
-    font-family: "Corbel", "Avenir", "Calibri";
-    font-style: normal;
+ol.toc ol ol ol li:before {
+	content: "⟨" counters(item, ".")"⟩ ";
+	counter-increment: item;
+	color: var(--toc-counter);
+	font-weight: var(--lightest);
+	font-family: "Corbel", "Avenir", "Calibri";
+	font-style: normal;
+}
+ol li.light:before, ol ol li.light:before, ol ol ol li.light:before {
+	font-weight: var(--lightest);
+}
+
+/* a bunch of weird stuff for the Forge manual table of contents */
+.forgecontents ol.toc {
+	counter-set: i1 -1;
+}
+.forgecontents ol.toc li {
+	font-size: 20px;
+}
+.forgecontents ol.toc li:before {
+	counter-increment: i1;
+	content: counter(i1, upper-roman) ". ";
+}
+.forgecontents ol.toc ol,
+.forgecontents ol.toc ol li,
+.forgecontents ol.toc ol li a:is(:link, :visited)
+{
+	font-weight: var(--bold);
+}
+.forgecontents ol.toc ol {
+	counter-reset: i2;
+}
+.forgecontents ol.toc ol :is(li, li a:link, li a:visited) {
+	font-weight: var(--boldest);
+	font-size: 18px;
+}
+.forgecontents ol.toc ol li:before {
+	font-weight: var(--boldest);
+	counter-increment: i2;
+	content: "(" counter(i1, upper-roman) "." counter(i2, decimal) ") "
+}
+.forgecontents ol.toc ol ol {
+	counter-reset: i3;
+	font-weight: var(--boldest);
+}
+.forgecontents ol.toc ol ol :is(li a:link, li a:visited, li)
+{
+	font-weight: var(--boldest);
+	font-size: 16px;
+}
+.forgecontents ol.toc ol ol li:before {
+	font-weight: var(--boldest);
+	counter-increment: i3;
+	content: "[" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "] "
+}
+.forgecontents ol.toc ol ol ol {
+	counter-reset: i4;
+	font-weight: var(--bold);
+}
+.forgecontents ol.toc ol ol ol :is(li, li a:link, li a:visited) {
+	font-size: 16px;
+	font-weight: var(--bold);
+	font-style: inherit;
+}
+.forgecontents ol.toc ol ol ol li:before {
+	font-weight: var(--bold);
+	counter-increment: i4;
+	font-style: inherit;
+	content: "{" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "." counter(i4, decimal) "} "
+}
+.forgecontents ol.toc ol ol ol ol {
+	counter-reset: i5;
+	font-weight: var(--medium);
+}
+.forgecontents ol.toc ol ol ol ol :is(li, a:link, a:visited) {
+	font-weight: var(--medium);
+	font-size: 16px;
+}
+.forgecontents ol.toc ol ol ol ol li:before {
+	font-weight: var(--medium);
+	counter-increment: i5;
+	content: "\0027E8" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "." counter(i4, decimal) "." counter(i4, decimal) "\0027E9\000020";
+	font-style: inherit;
 }
 
 /* counters for body of list. also a doozy */
 :where(.nestednumbering ol, ol.nestednumbering):not(ul > li) {
-    counter-reset: item;
-    margin-top: 0px;
-    margin-bottom: 0px;
+	counter-reset: item;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 ol.nestednumbering li:not(ul > li) {
-    display: block;
-    margin-top: 4px;
-    margin-bottom: 4px;
+	display: block;
+	margin-top: 4px;
+	margin-bottom: 4px;
 }
 ol.nestednumbering {
-    margin-left: 0px;
+	margin-left: 0px;
 }
 ol.nestednumbering > li > h1:before {
-    content: "" counters(item, ".")" \00B7  ";
-    counter-increment: item;
-    font-family: "Corbel", "Avenir", "Calibri";
+	content: "" counters(item, ".")" \00B7  ";
+	counter-increment: item;
+	font-family: "Corbel", "Avenir", "Calibri";
 }
 ol.nestednumbering > li > ol > li > h2:before {
-    content: "" counters(item, ".")" \00B7  ";
-    counter-increment: item;
-    font-family: "Corbel", "Avenir", "Calibri";
+	content: "" counters(item, ".")" \00B7  ";
+	counter-increment: item;
+	font-family: "Corbel", "Avenir", "Calibri";
 }
 ol.nestednumbering > li > ol > li > ol > li > h3:before {
-    content: "" counters(item, ".")" \00B7  ";
-    counter-increment: item;
-    font-family: "Corbel", "Avenir", "Calibri";
+	content: "" counters(item, ".")" \00B7  ";
+	counter-increment: item;
+	font-family: "Corbel", "Avenir", "Calibri";
 }
 ol.loweralpha {
-    list-style-type: lower-alpha;
+	list-style-type: lower-alpha;
 }
 ol.lowerlatin {
-    list-style-type: lower-latin;
+	list-style-type: lower-latin;
 }
 ol.upperalpha {
-    list-style-type: upper-alpha;
+	list-style-type: upper-alpha;
 }
 ol.upperlatin {
-    list-style-type: upper-latin;
+	list-style-type: upper-latin;
 }
 
 /* right-align Istoria's TOC numbers */
 .istoria ol.toc {
-    margin-left: 0px;
+	margin-left: 0px;
 }
 .istoria .toc li:before {
-    float: left;
-    text-align: right;
-    padding-right: 5px;
-    width: 55px;
+	float: left;
+	text-align: right;
+	padding-right: 5px;
+	width: 55px;
 }
 
 /* images */
 .image {
-    margin: 12px 0px 8px 0px;
-    text-align: center;
+	margin: 12px 0px 8px 0px;
+	text-align: center;
 }
 .inlay-image {
-    float: left;
-    margin: 0px 8px 0px 0px;
+	float: left;
+	margin: 0px 8px 0px 0px;
 }
 
 /* section breaks */
 .sectionbreak {
-    margin: 16px 0px;
-    font-size: 13px;
-    text-align: center;
+	margin: 16px 0px;
+	font-size: 13px;
+	text-align: center;
 }
 
 /* tables */
 table {
-    border-collapse: collapse;
-    margin: auto;
+	border-collapse: collapse;
+	margin: auto;
 }
 td,
 th {
-    padding: 4px 12px;
+	padding: 4px 12px;
 }
 .music :where(td, th) {
-    vertical-align: top;
-    font-weight: lighter;
-    text-align: justify;
+	vertical-align: top;
+	font-weight: lighter;
+	text-align: justify;
 }
 .discography :where(td, th) {
-    padding: 4px 7px;
+	padding: 4px 7px;
 }
 .soundtracks :where(td, th) {
-    padding: 4px;
+	padding: 4px;
 }
 tbody:nth-child(even) tr:nth-child(even) {
-    background-color: var(--offset-level-1);
+	background-color: var(--offset-level-1);
 }
 tbody:nth-child(even) tr:nth-child(odd) {
-    background-color: var(--background);
+	background-color: var(--background);
 }
 tbody:nth-child(even) tr:nth-child(even) .hidden {
-    color: var(--offset-level-1);
+	color: var(--offset-level-1);
 }
 tbody:nth-child(even) tr:nth-child(odd) .hidden {
-    color: var(--background);
+	color: var(--background);
 }
 thead {
-    font-weight: var(--bold);
-    background-color: var(--offset-level-1);
+	font-weight: var(--bold);
+	background-color: var(--offset-level-1);
 }
 .endnotes :where(td, th) {
-    padding: 4px;
-    vertical-align: top;
-    font-weight: var(--lightest);
+	padding: 4px;
+	vertical-align: top;
+	font-weight: var(--lightest);
 }
 
 textarea, button {
-    background-color: var(--offset-level-1);
-    color: var(--main);
+	background-color: var(--offset-level-1);
+	color: var(--main);
 }
 button, .custom-file-upload {
-    border: 2px outset var(--offset-level-4); border-radius: 12px; font-size: 16px;
+	border: 2px outset var(--offset-level-4); border-radius: 12px; font-size: 16px;
 }
 textarea {
-    border: 2px inset var(--offset-level-4); border-radius: 4px;
+	border: 2px inset var(--offset-level-4); border-radius: 4px;
 }
 .custom-file-upload input[type="file"] {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0px;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0px;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0px;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0px;
 }
 .custom-file-upload {
-    display: inline-block;
-    border: 2px outset var(--offset-level-4); border-radius: 12px;
-    padding: 0px 6px;
-    cursor: pointer;
-    margin-bottom: 8px;
+	display: inline-block;
+	border: 2px outset var(--offset-level-4); border-radius: 12px;
+	padding: 0px 6px;
+	cursor: pointer;
+	margin-bottom: 8px;
 }
 .custom-file-upload:active {
-    border: 2px inset var(--offset-level-4); border-radius: 12px;
+	border: 2px inset var(--offset-level-4); border-radius: 12px;
 }
 
 /* the discography page has complicated table border stuff */
@@ -608,8 +682,8 @@ textarea {
 .solo > tfoot,
 .compilation > thead,
 .master > tfoot {
-    background-color: var(--offset-level-1);
-    print-color-adjust: economy;
+	background-color: var(--offset-level-1);
+	print-color-adjust: economy;
 }
 .multi tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
 :is(.solo, .compilation, .master) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
@@ -617,156 +691,156 @@ textarea {
 .multi > thead,
 .multi > tfoot
 {
-    background-color: var(--background);
+	background-color: var(--background);
 }
 .discography :is(td, th):nth-child(1) {
-    border-left: 1px solid var(--offset-level-2);
+	border-left: 1px solid var(--offset-level-2);
 }
 .discography :is(td, th):nth-last-child(1) {
-    border-right: 1px solid var(--offset-level-2);
+	border-right: 1px solid var(--offset-level-2);
 }
 .discography :is(thead, tfoot, tbody) > tr:nth-child(1) {
-    border-top: 1px solid var(--offset-level-2);
+	border-top: 1px solid var(--offset-level-2);
 }
 .discography :is(thead, tfoot) > tr:nth-last-child(1),
 .discography tbody > tr:nth-child(3n) {
-    border-bottom: 1px solid var(--offset-level-2);
+	border-bottom: 1px solid var(--offset-level-2);
 }
 .discography thead th {
-    font-weight: var(--boldest);
+	font-weight: var(--boldest);
 }
 .discography tfoot th {
-    font-weight: var(--bold);
-    font-size: 13px;
+	font-weight: var(--bold);
+	font-size: 13px;
 }
 
 /* the istoria body messages also have some pretty complicated stuff */
 .istoria table {
-    margin-top: 16px;
+	margin-top: 16px;
 }
 .istoria :is(td, th) {
-    padding: 4px 12px;
-    font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-    font-weight: var(--lightest);
-    border: 1px solid var(--offset-level-4);
+	padding: 4px 12px;
+	font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-weight: var(--lightest);
+	border: 1px solid var(--offset-level-4);
 }
 .istoria thead tr:nth-child(even) {
-    background-color: var(--offset-level-1);
+	background-color: var(--offset-level-1);
 }
 .istoria thead tr:nth-child(odd) {
-    background-color: var(--background);
+	background-color: var(--background);
 }
 .istoria thead tr:first-child {
-    background-color: var(--offset-level-3);
+	background-color: var(--offset-level-3);
 }
 .istoria thead tr:last-child {
-    background-color: var(--offset-level-2);
-    font-weight: var(--boldest);
+	background-color: var(--offset-level-2);
+	font-weight: var(--boldest);
 }
 .istoria tfoot {
-    background-color: var(--offset-level-3);
-    font-size: 13px;
+	background-color: var(--offset-level-3);
+	font-size: 13px;
 }
 .istoria :where(td, th).topic {
-    font-family: "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-    font-weight: var(--bold);
-    text-align: right;}
+	font-family: "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-weight: var(--bold);
+	text-align: right;}
 .istoria :where(td, th).location {
-    background-color: var(--offset-level-1);
+	background-color: var(--offset-level-1);
 }
 .istoria tbody:nth-child(even) tr:nth-child(even) {
-    background-color: var(--background);
+	background-color: var(--background);
 }
 .istoria tbody:nth-child(even) tr:nth-child(odd) {
-    background-color: var(--offset-level-1);
+	background-color: var(--offset-level-1);
 }
 .istoria tbody:nth-child(even) tr:nth-child(even) .hidden {
-    color: var(--background);
+	color: var(--background);
 }
 .istoria tbody:nth-child(even) tr:nth-child(odd) .hidden {
-    color: var(--offset-level-1);
+	color: var(--offset-level-1);
 }
 .istoria .name {
-    font-weight: var(--bold);
+	font-weight: var(--bold);
 }
 
 /* it was a graveyard smash */
 .monstermash table {
-    border: 1px solid var(--offset-level-3);
+	border: 1px solid var(--offset-level-3);
 }
 .monstermash th {
-    white-space: nowrap;
-    padding: 4px 8px;
-    background: var(--offset-level-2);
+	white-space: nowrap;
+	padding: 4px 8px;
+	background: var(--offset-level-2);
 }
 .monstermash td {
-    padding: 4px 8px;
+	padding: 4px 8px;
 }
 .monstermash :where(thead, tr:not(:last-child)) {
-    border-bottom: 1px solid var(--offset-level-3);
+	border-bottom: 1px solid var(--offset-level-3);
 }
 .monstermash :where(td, th):not(:first-child) {
-    border-left: 1px solid var(--offset-level-3);
+	border-left: 1px solid var(--offset-level-3);
 }
 .monstermash tr td:nth-child(1) {
-    font-family: "Corbel", "Avenir", "Calibri", monospace;
-    font-weight: 500;
-    text-align: right;
+	font-family: "Corbel", "Avenir", "Calibri", monospace;
+	font-weight: 500;
+	text-align: right;
 }
 .monstermash tr td:nth-child(2) {
-    font-weight: 500;
+	font-weight: 500;
 }
 .monstermash table.endnotes td:nth-child(1) {
-    font-weight: 500;
-    text-align: right;
+	font-weight: 500;
+	text-align: right;
 }
 .monstermash table.endnotes td:nth-child(2) {
-    font-weight: 100;
-    text-align: justify;
+	font-weight: 100;
+	text-align: justify;
 }
 /* i have no idea why this works this way but it does. css is a black art */
 .monstermash h1 + ul:not(.sectionbreak + ul) {
-    padding: 0px 0px 8px;
+	padding: 0px 0px 8px;
 }
 
 .forgemanual td {padding: 8px;}
 .forgemanual tr.note > td {
-    padding: 0px 8px 8px;
+	padding: 0px 8px 8px;
 }
 .forgemanual td:nth-child(1) {
-    padding-left: 0px;
+	padding-left: 0px;
 }
 .forgemanual td:last-child {
-    padding-right: 0px;
+	padding-right: 0px;
 }
 .forgemanual td :where(h3, h4, h5, p, blockquote):first-child {
-    margin-top: 0px;
+	margin-top: 0px;
 }
 .forgemanual td :where(p, blockquote):last-child {
-    margin-bottom: 0px;
+	margin-bottom: 0px;
 }
 .forgemanual blockquote {margin: 4px 30px;}
 
 .integer,
 .decimal,
 .number {
-    font-family: "Corbel", "Avenir", "Calibri", monospace;
+	font-family: "Corbel", "Avenir", "Calibri", monospace;
 }
 .date, :where(td, th).date {
-    font-family: "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-    text-align: right;
-    white-space: nowrap;
-    font-weight: var(--bold);
+	font-family: "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	text-align: right;
+	white-space: nowrap;
+	font-weight: var(--bold);
 }
 .dr {
-    font-family: "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-    text-align: center;
+	font-family: "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	text-align: center;
 }
 
 .centred,
 :where(td, th):where(.centred, .dr),
 .istoria .footer {
-    text-align: center; font-size: 13px;
+	text-align: center; font-size: 13px;
 }
 .right,
 .date,
@@ -774,67 +848,76 @@ textarea {
 .discography .number,
 .istoria .level,
 .integer {
-    text-align: right;
+	text-align: right;
 }
 .justify {
-    text-align: justify;
+	text-align: justify;
 }
 pre,
 code {
-    font-weight: var(--lightest);
-    font-size: 112.5%;
+	font-weight: var(--lightest);
+	font-size: 112.5%;
 }
 .defaultnames pre {
-    margin: 0px;
-    padding: 0px;
+	margin: 0px;
+	padding: 0px;
 }
 .defaultnames pre:first-of-type {
-    padding: 12px 0px 0px;
+	padding: 12px 0px 0px;
 }
 .defaultnames pre:last-of-type {
-    padding: 0px 0px 8px;
+	padding: 0px 0px 8px;
 }
 .dotted {
-    border-bottom: 1px dotted;
+	border-bottom: 1px dotted;
 }
 
 .soundtracks hr {
-    margin: 24px 0px;
+	margin: 24px 0px;
 }
 
 spoiler {
-    color: transparent;
+	color: transparent;
 }
 spoiler:hover,
 spoiler:focus {
-    color: inherit;
+	color: inherit;
 }
 spoiler.chronicles::before {
-    content: "Chronicles spoiler, hover/select to view:";
+	content: "Chronicles spoiler, hover/select to view:";
 }
 spoiler.rubicon::before {
-    content: "Rubicon spoiler, hover/select to view:";
+	content: "Rubicon spoiler, hover/select to view:";
 }
 spoiler:before {
-    color: var(--link);
-    font-weight: var(--bold);
-    font-style: italic;
-    cursor: pointer;
+	color: var(--link);
+	font-weight: var(--bold);
+	font-style: italic;
+	cursor: pointer;
 }
 spoiler:hover::before,
 spoiler:focus::before {
-    color: var(--link-hover);
-    text-decoration: underline;
+	color: var(--link-hover);
+	text-decoration: underline;
 }
 spoiler:active::before {
-    color: var(--link-active);
-    text-decoration: underline;
+	color: var(--link-active);
+	text-decoration: underline;
 }
 
 .speaker {
-    margin-top: 6px;
-    margin-left: 16px;
-    font-size: 15px;
-    font-style: italic;
-    color: var(--heading-color);
+	margin-top: 6px;
+	margin-left: 16px;
+	font-size: 15px;
+	font-style: italic;
+	color: var(--heading-color);
+}
+
+hr {
+	border-block: 1px dashed var(--heading-color);
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	list-style-position: inside;
+	margin: 16px 0px;
 }

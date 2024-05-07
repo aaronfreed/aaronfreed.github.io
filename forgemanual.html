@@ -44,16 +44,151 @@ window.onload = function () {makeAllSortable();};
 	<p>With annotations specifically detailing how <a href="github.com/treellama/weland/releases" target="_blank">Weland</a> and <a href="github.com/treellama/atque/releases" target="_blank">Atque</a>, Forge&rsquo;s modern replacements, differ from Forge, and correcting numerous errata found within the manual. (However, thus far, I&rsquo;ve only done the first nine pages &ndash; twenty-five are left.)</p>
 
 	<p>My annotations are all <em>italicized</em>; are all either [bracketed], indented, or both; and always conclude with <em>&ndash;&#8288;Ed.</em> After this note, all text outside annotations will be Bungie&rsquo;s (with occasional minor spelling or grammar corrections).</p>
+	
+	<p>Please <a href="aboutme.html">contact me</a> if you notice any errors or omissions (besides the parts of the manual I haven&rsquo;t gotten to, natch). If you need more context for this, I have <a href="mapmaking101.html">a beginners&rsquo; mapmaking page</a> that should hopefully provide precisely that.</p>
 	&ndash;<strong><strong>Aaron</strong></strong>
 
-	<p>Please <a href="aboutme.html">contact me</a> if you notice any errors or omissions (besides the parts of the manual I haven&rsquo;t gotten to, natch). If you need more context for this, I have <a href="mapmaking101.html">a beginners&rsquo; mapmaking page</a> that should hopefully provide precisely that.</p>
+	<h2 id="contents">Table of Contents</h2>
+	<ol class="toc">
+		<li><a href="#top">Aaron&rsquo;s Introduction</a></li>
+		<li><a href="#contents">Table of Contents</a> (you&rsquo;re looking at it)</li>
+		<li><a href="#intro">Bungie&rsquo;s Introduction</h2>
+		<li><a href="#definitions">Key Definitions</a>
+			<ol>
+				<li><a href="#leveldef">Level</a></li>
+				<li><a href="#netleveldef">Network Level</a></li>
+				<li><a href="#mapdef">Map</a></li>
+				<li><a href="#mergedef">Merge (Merging)</a></li>
+				<li><a href="#polygondef">Polygon</a></li>
+				<li><a href="#linedef">Line</a></li>
+				<li><a href="#vertexdef">Vertex (pl. <em>vertices</em>)</a></li>
+				<li><a href="#platformdef">Platform</a></li>
+				<li><a href="#drawmodedef">Draw Mode</a></li>
+				<li><a href="#visualmodedef">Visual Mode</a></li>
+			</ol>
+		</li>
+		<li><a href="#menu">Menu Descriptions
+			<ol>
+				<li><a href="#file">File Menu</a>
+					<ol>
+						<li><a href="#newlevel">New Level</a></li>
+						<li><a href="#open">Open</a></li>
+						<li><a href="#close">Close</a></li>
+						<li><a href="#save">Save Scenario</a></li>
+						<li><a href="#saveas">Save Scenario as...</a></li>
+						<li><a href="#merge">Merge Levels...</a></li>
+						<li><a href="#export">Export Level...</a></li>
+						<li><a href="#exportobj" style="font-style: italic;">Export OBJ...</a></li>
+						<li><a href="#quit">Quit</a></li>
+					</ol>
+				</li>
+				<li><a href="#edit">Edit Menu</a>
+					<ol>
+						<li><a href="#undo">Undo</a></li>
+						<li><a href="#preferences">Preferences...</a></li>
+					</ol>
+				</li>
+				<li><a href="#levels">Levels Menu</a></li>
+				<li><a href="#view">View Menu</a>
+					<ol>
+						<li><a href="#drawmode">Draw Mode</a></li>
+						<li><a href="#visualmode">Visual Mode</a></li>
+						<li><a href="#elevation">Elevation</a></li>
+						<li><a href="#textures">Textures</a></li>
+						<li><a href="#lights">Lights</a></li>
+						<li><a href="#sounds">Sounds</a></li>
+					</ol>
+				</li>
+				<li><a href="#special">Special Menu</a>
+					<ol>
+						<li><a href="#zoomer">Zoom In/Zoom Out</a></li>
+						<li><a href="#mapmanager">Map Manager</a>
+							<ol>
+								<li><a href="#gridsize">Grid Size</a></li>
+								<li><a href="#displaygrid">Display Grid</a></li>
+								<li><a href="#constraintogrid">Constrain to Grid</a></li>
+								<li><a href="#customgrid">Custom Grid</a></li>
+								<li><a href="#showmonsters">Show Monsters, etc.</a></li>
+								<li><a href="#visualmodecrosshairs">Visual Mode Crosshairs</a></li>
+							</ol>
+						</li>
+						<li><a href="#viewheight">View Height Window</a></li>
+						<li><a href="#goto">Goto...</a></li>
+						<li><a href="#levelparameters">Set Level Parameters</a></li>
+						<li><a href="#itemparameters">Set Item Parameters</a></li>
+						<li><a href="#monsterparameters">Set Monster Parameters</a></li>
+						<li><a href="#recenter">Recenter Level</a></li>
+						<li><a href="#pave">Pave Level</a></li>
+						<li><a href="#nuketextures" span style="font-style: italic;">Nuke Textures</a></li>
+						<li><a href="#nukeobjects">Nuke Objects Only</a></li>
+						<li><a href="#nukeandpave">Nuke & Pave Level</a></li>
+					</ol>
+				</li>
+				<li><a href="#plugins">Plugins</a>
+					<ol>
+						<li><a href="#autoshade">Auto Shade Level</a></li>
+						<li><a href="#enumeratetags">Enumerate Tags</a></li>
+					</ol>
+				</li>
+			</ol>
+		</a>
+		<li><a href="#tools">The Tools</a>
+			<ol>
+				<li><a href="#arrow">Arrow (A)</a></li>
+				<li><a href="#line">Line (L)</a></li>
+				<li><a href="#filltool">Fill Tool (F)</a></li>
+				<li><a href="#polygontool">Polygon (P)</a></li>
+				<li><a href="#move">Hand Tool (D)</a></li>
+				<li><a href="#zoom">Zoom Tool (Z)</a></li>
+				<li><a href="#texttool">Text Tool (T)</a></li>
+				<li><a href="#objecttool">Object Tool (O)</a></li>
+			</ol>
+		</li>
+		<li><a href="#mapparameters">Setting Up Basic Map Parameters
+			<ol>
+				<li><a href="#parametersoptions">Options</a>
+					<ol>
+						<li><a href="#environment">Environment</a></li>
+						<li><a href="#landscape">Landscape</a></li>
+						<li><a href="#gametype">Game Type</a></li>
+						<li><a href="#environmenttype">Environment Type</a>
+							<ol>
+								<li><a href="#vacuum">Vacuum</a></li>
+								<li><a href="#rebellion">Rebellion</a></li>
+								<li><a href="#lowgravity">Low Gravity</a></li>
+								<li><a href="#magnetic">Magnetic</a></li>
+							</ol>
+						</li>
+						<li><a href="#missiontype">Mission Type</a>
+							<ol>
+								<li><a href="#extermination">Extermination</a></li>
+								<li><a href="#exploration">Exploration</a></li>
+								<li><a href="#retrieval">Retrieval</a></li>
+								<li><a href="#repair">Repair</a></li>
+								<li><a href="#rescue">Rescue</a></li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</a>
+		<li><a href="#tutorial1">Tutorial One: A Simple two-polygon Room</a>
+			<ol>
+				<li><a href="#worldunits">World Units Explained</a></li>
+				<li><a href="#letsmakealevel">Let&rsquo;s Make a Level!</a></li>
+			</ol>
+		</li>
+	</ol>
+	
 
-	<h2>Introduction</h2>
+	<h2 id="intro">Introduction</h2>
 		<p>Forge is the powerful map-making tool used by Bungie to create levels for <em>Marathon</em>, <em>Marathon <span class="decimal">2</span></em>, and now <em>Marathon Infinity</em>. We&rsquo;ve included Forge with the <em>Marathon</em> Trilogy so that you can create your own fantastic Marathon worlds and share them with friends or upload them to the &rsquo;net.</p>
 
 		<p>Forge uses a simple 2D perspective to create lines, polygons, and to place objects, sounds, and lights. It also utilizes a cool 3D perspective for texturing, adjusting heights, and fine-tuning the map&rsquo;s look and feel.</p>
 
 		<p>Although Forge is a complicated tool, it is extremely intuitive and easy to learn (provided you&rsquo;re willing to read a little and watch the tutorials we&rsquo;ve included on the CD-ROM). In the following pages, we&rsquo;ll be covering key definitions and descriptions you&rsquo;ll need to get familiar with (computer geeks like us love to use weird definitions, so bear with us). Later on, we&rsquo;ll be going through a few step-by-step tutorials that&rsquo;ll walk you through the map making process. But first, watch the <a href="https://youtu.be/E8yqfvNc0HM" target="_blank">Forge tutorial movies</a> included on the Trilogy CD-ROM and then come back to the tutorials in this manual for more detailed instructions.</p>
+
+	<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
 
 	<h2 id="definitions">Key Definitions</h2>
 		<h3 id="leveldef">Level</h3>
@@ -78,6 +213,8 @@ window.onload = function () {makeAllSortable();};
 		<h3 id="mergedef">Merge (Merging)</h3>
 			<p>The process of stringing together a collection of levels, like the map included with the <em>Infinity</em> application. In addition, a merged map may contain terminal text, terminal pictures, and for <em>Marathon Infinity</em> levels, level-specific physics models. <blockquote><em>[This is one of the few things you would use Atque to do rather than Weland. &ndash;&#8288;Ed.]</em></blockquote></p>
 
+		<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
+
 		<h3 id="polygondef">Polygon</h3>
 			<p>A level in <em>Marathon</em> is basically a bunch of polygons connected together. What&rsquo;s a polygon, you ask? Well, the technical term is, &ldquo;a closed figure bounded by three or more line segments.&rdquo; For example, a triangle is a polygon with 3 sides, while a square is a polygon with 4 equal sides. A polygon in <em>Marathon</em> can have a maximum of 8 sides (octagon) and a minimum of three (triangle). In <em>Marathon</em>, these polygons have to be convex (not concave). This means that all angles inside a given polygon must be &gt;180&deg;.</p>
 			
@@ -88,6 +225,8 @@ window.onload = function () {makeAllSortable();};
 			<p>In the diagram below, the second polygon is not fillable (a term discussed later) because it is not convex. However, by adding a line (where the two dark circles are in the right diagram below), you can make two different polygons that are convex.</p>
 
 			<div class="image"><a href="images/fillable.png"><img src="images/fillable.png" width="492" height="259"/></a></div>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>
 
 		<h3 id="linedef">Line</h3>
 			<p>A line connects two vertices. Lines can be either solid, transparent, or empty.</p>
@@ -104,6 +243,8 @@ window.onload = function () {makeAllSortable();};
 
 			If a line is empty, then there&rsquo;s no texture on it.
 
+			<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
+
 		<h3 id="vertexdef">Vertex (pl. <em>vertices</em>)</h3>
 			<p>A vertex is a point at either end of a bounding line that defines the edge of a polygon. Every line has two vertices.</p>
 
@@ -115,6 +256,8 @@ window.onload = function () {makeAllSortable();};
 
 		<h3 id="visualmodedef">Visual Mode</h3>
 			<p>Visual mode, Forge&rsquo;s secondary mode, uses a 3D representation of the world which is similar to playing the game. In this mode the weapons manifest is replaced by a palette containing the current texture collection. Furthermore, the mouse can be used to place and move textures around on the sides of polygons. Lastly, there are no monsters or weapons visible, though scenery will be displayed.</p>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
 
 	<h2 id="menu">Menu Descriptions</h2>
 		<h3 id="file">File Menu</h3>
@@ -149,6 +292,8 @@ window.onload = function () {makeAllSortable();};
 
 			<h4 id="quit">Quit</h4>
 				<p>Quits Forge.</p>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
 
 		<h3 id="edit">Edit Menu</h3>
 			<h4 id="undo">Undo</h4>
@@ -195,6 +340,8 @@ window.onload = function () {makeAllSortable();};
 							</li>
 						</ul>
 					</blockquote>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
 
 		<h3 id="levels">Levels Menu</h3>
 			<p>This menu will display the name of the currently active level. In an unmerged level this will be just one name. However, in a merged map you can navigate between individual levels.</p>
@@ -255,7 +402,9 @@ window.onload = function () {makeAllSortable();};
 					</td>
 				</tr>
 			</table>
-						
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
+
 		<h3 id="special">Special Menu</h3>
 			<h4 id="zoomer">Zoom In/Zoom Out</h4>
 				<p>Allows the visible level area to be enlarged or reduced.</p>
@@ -360,8 +509,10 @@ window.onload = function () {makeAllSortable();};
 					<blockquote><em>[Weland separates this command into &lsquo;<strong>Nuke Textures</strong>&rsquo; and &lsquo;<strong>Nuke Objects</strong>&rsquo;. &ndash;&#8288;Ed.]</em></blockquote>
 				</h4>
 
+		<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
+
 		<em><blockquote><blockquote>
-			<h3>Plugins</h3>
+			<h3 id="plugins">Plugins</h3>
 			<p>Lists all Weland plugins you have installed. Weland comes with two, although you may have to enable them in your OS&rsquo; security settings. They are:</p>
 
 			<h4 id="autoshade">Auto Shade Level</h4>
@@ -371,6 +522,8 @@ window.onload = function () {makeAllSortable();};
 			<p>Lists all tags used in your map, what lights and platforms are set to use them, and what lines are attached to switches that control them. Note that if a tag is associated with a terminal script rather than a switch of some sort, this plugin will not see it. &ndash;&#8288;Ed.</p>
 
 		</blockquote></blockquote></em>
+
+	<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
 
 	<h2 id="tools">The Tools</h2>
 		<p>These tools are available from the tools palette in Draw Mode. Keyboard shortcuts are in parentheses.</p>
@@ -436,19 +589,21 @@ window.onload = function () {makeAllSortable();};
 			<tr>
 				<td style="width: 34px; vertical-align: middle;"><img src="images/text.png" width="34" height="34" alt="Text Tool (T)" title="Text Tool (T)" /></td>
 				<td style="width: 766px; vertical-align: middle;">
-					<h3>Text Tool (T)</h3>
+					<h3 id="texttool">Text Tool (T)</h3>
 						<p>Places text notes <em>[also called annotations &ndash;&#8288;Ed.]</em> inside the current polygon. This text will be visible from within the game when the user views the map. It&rsquo;s used to name rooms or regions of a level. To modify existing annotations, double-click on them with the arrow.</p>
 				</td>				
 			</tr>
 			<tr>
 				<td style="width: 34px; vertical-align: middle;"><img src="images/object.png" width="34" height="34" alt="Object Tool (O)" title="Object Tool (O)" /></td>
 				<td style="width: 766px; vertical-align: middle;">
-					<h3>Object Tool (O)</h3>
+					<h3 id="objecttool">Object Tool (O)</h3>
 						<p>Places objects on the map. Objects include items, player locations, monsters, fixed sound sources, scenery, and level goals.</p>
 				</td>				
 			</tr>
 
 		</table>
+
+		<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
 
 		<h2 id="mapparameters">Setting Up Basic Map Parameters</h2>
 			<p>The Level Parameters dialog shows whether or not a level is compatible with <em>Marathon <span class="decimal">2</span></em> and <em>Marathon Infinity</em> or just <em>Infinity</em>. Your map is compatible only with <em>Infinity</em> if it:</p>
@@ -510,6 +665,8 @@ window.onload = function () {makeAllSortable();};
 						<p>The player must make sure that 50% of the civilians (Bobs) survive.</p>
 							<blockquote><em>[This mission type is non-functional. Use &lsquo;Rescue (M<span class="decimal">1</span>)&rsquo; if you want this behavior. &ndash;&#8288;Ed.]</em></blockquote>
 
+		<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
+
 		<h2 id="tutorial1">Tutorial One: A Simple two-polygon Room</h2>
 			<p>In this section we&rsquo;ll be creating our first two polygon room. You&rsquo;ll find that making a level is nearly as fun and challenging as playing it. Using the 2D Draw Mode we&rsquo;ll be creating two interconnected polygons, and then &ldquo;fill&rdquo; them to make a valid 3D space. We&rsquo;ll then go into the 3D Visual Mode to texture our newly-created room.</p>
 			<h3 id="worldunits">World Units Explained</h3>
@@ -541,6 +698,8 @@ window.onload = function () {makeAllSortable();};
 					<blockquote><em>[This is not remotely true. The highest step players can climb without any prior momentum is <span class="decimal">341</span> Internal Units &asymp; <span class="decimal">0</span>.<span class="decimal">3330</span> WU, or just under <span class="decimal">1</span>/<span class="decimal">3</span> WU. With prior momentum, players can climb even taller steps. However, I advise avoiding steps taller than <span class="decimal">0</span>.<span class="decimal">25</span> WU, or <span class="decimal">1</span>/<span class="decimal">4</span> WU, because they feel very awkward to climb. In fact, I almost exclusively use measurements of <span class="decimal">0</span>.<span class="decimal">125</span> WU, or <span class="decimal">1</span>/<span class="decimal">8</span> WU, for my staircases and for most elements of my maps, since this provides very fluid motion and plays quite nicely with Weland&rsquo;s <span class="decimal">1</span>/<span class="decimal">8</span> WU grid size. However, <span class="decimal">0</span>.<span class="decimal">1</span> WU or <span class="decimal">0</span>.<span class="decimal">2</span> WU increments are also common. Note that the heights players can climb are among the few physics elements that are hard-coded into the engine. &ndash;&#8288;Ed.]</em></blockquote>
 
 				<p>When a map is created, Forge displays a window with what looks like a blank piece of graph paper. Evenly spaced on the grid there are vertices slightly darker than the others; these are the bounding corners of rectangles that are exactly one WU in size. The resolution of the map&rsquo;s grid can be changed by using the Grid Manager <del>(in the Special menu)</del> <em>[beneath the menubar &ndash;&#8288;Ed.]</em> or alternatively through use of the numeric keys 1 through 5. Pressing 1 will give a grid size of <span class="decimal">1</span>/<span class="decimal">8</span>th WU and 5 a size of 2 WUs.</p>
+
+			<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
 
 			<h3 id="letsmakealevel">Let&rsquo;s Make a Level!</h3>
 				<p>Open Forge and create a new level (select the New Level menu item or type Command-N). Next, give your level a name and select an environment and landscape. Finally, click on the Multiplayer Carnage checkbox since we&rsquo;ll be creating a network level. That&rsquo;s it, now hit the OK button.</p>
@@ -581,5 +740,8 @@ window.onload = function () {makeAllSortable();};
 				<div class="image"><img src="images/edit-object.png" width="588" height="194" alt="Edit Object" title="Edit Object" /></div>
 			
 				<p>(To be continued &ndash; for now, you can read the rest <a href="http://archives2.bungie.org/manuals/Trilogy_Manual.pdf" target="_blank">here</a>)</p>
+
+				<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
+
 </body>
 </html>

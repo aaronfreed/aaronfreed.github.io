@@ -217,7 +217,7 @@ window.onload = function () {makeAllSortable();};
 	<li>Trying to create a new scenery object using Lua leads to a similar freeze if the scenery object&rsquo;s sequence is set to &ldquo;Display a random frame&rdquo; with no defined frames (this is the equivalent of division by zero). This is probably also true for effects, ephemera, items, and monsters, and it may be true if the scenery object is created normally as well. (Again, this is a bug; the game should print an assertion failure explaining the problem, and hopefully it will in a future release.)</li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="scripts">Scripts, Monster Limits, &amp; Music</h2>
 <ul>
@@ -257,10 +257,10 @@ window.onload = function () {makeAllSortable();};
 	<div style="margin-top: 8px;">(Moving the map file out of the scenario folder or overwriting it with a different version of the map would fall into what I&rsquo;d consider &lsquo;Play stupid games, win stupid prizes&rsquo; territory. You may wish to put a caveat about this in your game&rsquo;s documentation, but I&rsquo;d imagine this would be a relatively rare occurrence.)</div></li>
 
 	<li>OpenGL replacement graphics are a special case. They don&rsquo;t affect the game world, but they also shouldn&rsquo;t be merged in with the map. It&rsquo;s ideal to make these into a plugin so that players can choose whether to use them or not &ndash; some players may dislike the extra loading time or prefer chunky <span class="decimal">128</span>x<span class="decimal">128</span> pixel textures. (While replacement textures could theoretically be included in a map for another scenario, that would be quite odd &ndash; if you&rsquo;re to the point that you have replacement textures for your map, I&rsquo;d advise making that into a standalone scenario.)</li>
-	<li>The <code>&lt;marathon_levels&gt;</code> code excerpt above also shows how to merge in music (i.e., the &lsquo;music file&rsquo; line). It&rsquo;s also possible to use Lua to implement music; doing so will in fact give you more options: you can control when to start the music (<em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em> contains some examples of this), or change the music midlevel based on game events (<em><a href="https://simplici7y.com/items/eternal-x">Eternal X</a></em> <span class="decimal">1.3</span> contains some examples of this). A full explanation of Lua music is beyond the current scope of this guide &ndash; the music API&rsquo;s functionality is currently being expanded, so such a guide would become outdated almost immediately.</li>
+	<li>The <code>&lt;marathon_levels&gt;</code> code excerpt above also shows how to merge in music (i.e., the &lsquo;music file&rsquo; line). It&rsquo;s also possible to use Lua to implement music; doing so will in fact give you more options: you can control when to start the music (<em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em> contains some examples of this), or change the music midlevel based on game events (<a href="https://simplici7y.com/items/eternal-x"><em>Eternal X</em> <span class="decimal">1.3</span></a> contains some examples of this). A full explanation of Lua music is beyond the current scope of this guide &ndash; the music API&rsquo;s functionality is currently being expanded, so such a guide would become outdated almost immediately.</li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="tagsareterrible">Tags Are Terrible (though sometimes inexorable)</h2>
 
@@ -295,7 +295,7 @@ window.onload = function () {makeAllSortable();};
 	<li>There are also <a href="mapmaking101.html#texturingissues">texturing issues</a> &ndash; in short, if you toggle wires in visual mode, they will get set to not-wires and players will be unable to finish your level. There may be others.</li>
 	<li>Basically, tags are awful; you should avoid marking them as &lsquo;<strong>Repair</strong>&rsquo; unless you&rsquo;re <em>completely</em> sure you know what you&rsquo;re doing, and even then, you should be sure you&rsquo;re not falling prey to the <a href="https://en.wikipedia.org/wiki/Dunning-Kruger_effect" target="_blank">Dunning-Kruger effect</a>. In all cases, I recommend using them with caution.</li></ul>
 	
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 	<h3 id="waysaroundtags">Ways to Avoid Tags</h3>
 		
@@ -333,7 +333,7 @@ window.onload = function () {makeAllSortable();};
 	</li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="ambientsound">Ambient Sound</h2>
 
@@ -344,7 +344,7 @@ window.onload = function () {makeAllSortable();};
 	<li>At the same time, avoid overusing sound objects, which eat up map indices worst of all factors that use them: one per polygon within a <span class="decimal">10</span>-world unit X/Y radius (Z is irrelevant). If this all sounds like a delicate juggling act, it is! No one said making maps for an ancient engine was <em>easy</em>. I recommend avoiding complicated &lsquo;sound boundaries&rsquo; or too many discrete polygon sounds per level.</li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="m1legacy"><em>Marathon <span class="decimal">1</span></em> Legacy Compatibility</h2>
 <h3 id="m1polygons">Those Weird <em>Marathon <span class="decimal">1</span></em> Polygon Types</h3>
@@ -362,7 +362,7 @@ window.onload = function () {makeAllSortable();};
 	<li>Otherwise, these three related polygon types behave like <strong>Normal</strong> polygons.</li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h3 id="m1missions"><em>Marathon <span class="decimal">1</span></em> Mission Types</h3>
 
@@ -378,7 +378,7 @@ window.onload = function () {makeAllSortable();};
 	<li><strong>Repair (M<span class="decimal">1</span>):</strong> Like <strong>Repair</strong> except that the player must only activate one repair switch to successfully complete the mission. This raises the obvious question, &lsquo;Why would anyone program this into their game?&rsquo; The answer is that they probably wouldn&rsquo;t do it on purpose &ndash; unless they were maintaining legacy compatibility with a rather buggy 1994 game by a relatively inexperienced Macintosh developer.</li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h3 id="m1compatibility"><em>Marathon <span class="decimal">1</span></em> Compatibility Flags</h3>
 
@@ -395,7 +395,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 		<p>If this sounds extremely unfun (and against the purpose of a first-person <em>shooter</em>), you&rsquo;re right! It&rsquo;s a vanilla <em>Marathon <span class="decimal">1</span></em> bug. Please don&rsquo;t use this flag for anything that isn&rsquo;t a painstakingly accurate <em>Marathon <span class="decimal">1</span></em> remake (we&rsquo;re talking a &lsquo;didn&rsquo;t even touch the &ldquo;Colony Ship&rdquo; puzzle&rsquo; level of accuracy).</p></li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="8bitsoftware"><span class="decimal">8</span>-bit Software Mode</h1>
 
@@ -407,7 +407,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 	
 <p>Also, if there&rsquo;s an associated sound sharing the <span class="decimal">15</span>xx ID, Aleph One will play it. This includes ending screens (though Aleph One also plays the music file, so it&rsquo;s probably not worth including a sound <span class="decimal">1599</span> unless you plan for your scenario not to have opening music).</p>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h3 id="8bitsoftwareimages">The Images File</h3>
 
@@ -423,7 +423,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 
 <p>Add <span class="decimal">1,000</span> to each of these numbers for the &lsquo;<span class="decimal">24</span>-bit&rsquo; versions. It&rsquo;s ideal to have separate <span class="decimal">8</span>-bit and <span class="decimal">24</span>-bit versions, as IIRC, Photoshop and GIMP dither images much better than Aleph One does.</p>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="directionality">Directionality</h2>
 <table>
@@ -468,7 +468,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 	</tbody>
 </table>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h1 id="ShapeFusion"><span id="shapes">ShapeFusion</span></h1>
 
@@ -488,7 +488,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 	<li>ShapeFusion can read FLAC on Windows. Again, I don&rsquo;t think the Mac version can do this, and I have no idea about Linux.</li>
 </ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="clutrestrictions">Restrictions on Number of Colors</h2>
 
@@ -509,7 +509,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 
 <p>Note that using non-vanilla palettes causes <span class="decimal">8</span>-bit software mode to look very, very stupid, in case anyone even cares about that in a scenario created in <span class="decimal">2023</span>. I don&rsquo;t actually know how it selects the colors for that.</p>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="transparency">Transparency &amp; Landscapes</h2>
 
@@ -526,7 +526,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 
 <p>Either way. (I don&rsquo;t use GIMP, but I&rsquo;m guessing you can do something similar by making a <span class="decimal">253</span>-color bitmap, exporting the CLUT, and editing it in a text editor.)</p>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="sequencetiming">Sequence Timing &amp; Film Compatibility</h2>
 
@@ -536,7 +536,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 
 <li>Another surprising factor affecting film sync: &lsquo;Display a random frame&rsquo; (even if only one frame is defined) is different from &lsquo;Animation with <span class="decimal">1</span> view&rsquo; (or any other number). Altering this alters the PRNG when the game loads maps, since it runs the PRNG for each sequence that uses &lsquo;Display a random frame&rsquo;, even if it only has one frame. Thus, changing a sequence from or to &lsquo;Display a random frame&rsquo; desyncs old films made with the same shapes. (I haven&rsquo;t tested whether this also desyncs network games.)</li></ul>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="weaponsinhand">&lsquo;Weapons in Hand&rsquo; Sequences</h2>
 
@@ -546,29 +546,34 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 
 <p>By default, the only other collections with &lsquo;true color&rsquo; versions are the landscape palettes, and it&rsquo;s very rare (though not unthinkable) for something to call one of the sequences in these (assuming any are even defined). I think a classic Mac utility could create &lsquo;true color&rsquo; versions of other collections (all <span class="decimal">32</span> collections can have them; it&rsquo;s just that, by default, only the Weapons in Hand and Landscapes did), and if a shapes file had these, their sequences should align between &lsquo;<span class="decimal">8</span>-bit&rsquo; and &lsquo;true color&rsquo; wherever they&rsquo;re defined.</p>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h1 id="appendices">Appendices &amp; Transplanted Content</h1>
 
 <p>I&rsquo;ve split several sections off onto their own pages. Please update your links accordingly:</p>
 
 <ul>
-	<li>I&rsquo;ve moved <strong id="circles">Circles and the Custom Grid</strong> and its subsection <strong id="radii">Radii and Rotations for <span class="decimal">1</span> WU-long Sides with Regular Polygons</strong> to <a href="marathoncircles.html">aaronfreed.github.io/marathoncircles.html</a>.</li>
-	<li><strong id="mapcomplexity">Map Complexity: A Case Study</strong> has moved to <a href="mapcomplexity.html">aaronfreed.github.io/mapcomplexity.html</a>.
+	<li>I&rsquo;ve moved <strong id="circles">Circles and the Custom Grid</strong> and its subsection <strong id="radii">Radii and Rotations for <span class="decimal">1</span> WU-long Sides with Regular Polygons</strong> to <a href="marathoncircles.html" class="url">aaronfreed.github.io/marathoncircles.html</a>.</li>
+	<li><strong id="mapcomplexity">Map Complexity: A Case Study</strong> has moved to <a href="mapcomplexity.html" class="url">aaronfreed.github.io/mapcomplexity.html</a>.
 		<ul>
-			<li>I wrote a follow-up, <strong>Reducing Map Index Use</strong> (<a href="mapindexreduction.html">aaronfreed.github.io/mapindexreduction.html</a>), partway through splitting up this page.</li>
+			<li>I wrote a follow-up, <strong>Reducing Map Index Use</strong> (<a href="mapindexreduction.html" class="url">aaronfreed.github.io/mapindexreduction.html</a>), partway through splitting up this page.</li>
 		</ul>
 	</li>
-	<li>The <strong id="sounds"><span id="sounds-general"></span><span id="soundids"></span><span id="soundsources"></span>Sounds</strong> section has moved to <a href="marathonsounds.html">aaronfreed.github.io/marathonsounds.html</a>.</li>
-	<li><strong id="anvilhelp">The Annotated Anvil Help Balloons</strong> has moved to <a href="anvilhelp.html">aaronfreed.github.io/anvilhelp.html</a>. The following corollaries were very likely inevitable:
+	<li>The <strong id="sounds"><span id="sounds-general"></span><span id="soundids"></span><span id="soundsources"></span>Sounds</strong> section has moved to <a href="marathonsounds.html" class="url">aaronfreed.github.io/marathonsounds.html</a>.</li>
+	<li><strong id="anvilhelp">The Annotated Anvil Help Balloons</strong> has moved to <a href="anvilhelp.html" class="url">aaronfreed.github.io/anvilhelp.html</a>. The following corollaries were very likely inevitable:
 		<ul>
-			<li><strong id="forgemanual">The Annotated Forge Manual</strong>, although still incomplete, is at <a href="forgemanual.html">aaronfreed.github.io/forgemanual.html</a>.</li>
+			<li><strong id="forgemanual">The Annotated Forge Manual</strong>, which remains a work in progress, currently consists of:
+				<ul>
+					<li><a href="forgemanualcontents.html" class="url">aaronfreed.github.io/forgemanualcontents.html</a> &ndash; Detailed Table of Contents</li>
+					<li><a href="forgemanual.html" class="url">aaronfreed.github.io/forgemanual.html</a> &ndash; Intro, Key Definitions, Menus, Tools, Map Parameters</li>
+					<li><a href="forgetutorial1.html" class="url">aaronfreed.github.io/forgetutorial1.html</a> &ndash; Tutorial One: A Simple Two-Polygon Room</li>
+				</ul>
 			<li><strong>The Annotated Anvil Manual</strong> will, naturally, follow that.</li>
 			<li>I&rsquo;d like to remake the Forge tutorial videos for Weland. I don&rsquo;t know when I&rsquo;ll find time, but I&rsquo;d like to.</li>
 		</ul>
 	</li>
-	<li><strong id="defaultnames">Example DefaultNames.txt</strong> (see <a href="#ShapeFusion">reference</a> above) has moved to <a href="defaultnames.html">aaronfreed.github.io/defaultnames.html</a>.</p>
-	<li><strong id="looper">Looping Music</strong> has moved to <a href="marathonlooper.html">marathonlooper.html</a> (Aleph One 1.7 renders it mostly superfluous).</li>
+	<li><strong id="defaultnames">Example DefaultNames.txt</strong> (see <a href="#ShapeFusion">reference</a> above) has moved to <a href="defaultnames.html" class="url">aaronfreed.github.io/defaultnames.html</a>.</p>
+	<li><strong id="looper">Looping Music</strong> has moved to <a href="marathonlooper.html" class="url">aaronfreed.github.io/marathonlooper.html</a> (Aleph One 1.7 renders it mostly superfluous).</li>
 	<li>Another new appendix, <strong>Where Are Monsters in Marathon&hellip;Maps</strong>, examines what monsters appear in what <em>Marathon</em> trilogy levels to demonstrate an important game design paradox: sometimes decreasing variety <em>within</em> a small span of a game can <em>increase</em> variety <em>across</em> a much larger span of it (or all of it). It is found at <a href="marathonmonsters.html">aaronfreed.github.io/marathonmonsters.html</a>.</a></li>
 </ul>
 
@@ -606,7 +611,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 	<p>Lastly, I&rsquo;ve moved my <a href="aboutme.html#bio" id="bio">biography</a> and <a href="aboutme.html#contact" id="contact">contact info</a> to a dedicated page: <a href="aboutme.html">aaronfreed.github.io/aboutme.html</a>.</p>
 
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h1 id="thanks">Acknowledgements</h2>
 
@@ -620,7 +625,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 		<li><strong>Bungie</strong>, for obvious reasons.</li> 
 	</ul>
 
-	<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+	<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 	
 <!--<h1 id="bio">Who are you and what qualifies you to write this?</h1>
 
@@ -641,7 +646,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 		<li>The days when it was a good idea to post an email address on a public webpage are long over.</li>
 	</ol>
 
-	<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p> -->
+	<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p> -->
 
 <h1 id="endnotes">Endnotes</h1>
 
@@ -664,7 +669,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 	</tbody>
 </table>
 
-<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 </body>
 </html>

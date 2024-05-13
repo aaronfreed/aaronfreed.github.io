@@ -58,8 +58,13 @@
 	h5 {
 		break-after: avoid;
 	}
-	a:visited {
+	a:visited,
+	a:link:hover,
+	a:link:active,
+	a:visited:active,
+	a:visited:hover {
 		color: var(--link);
+		text-decoration: none;
 	}
 	.istoria thead {
 		font-size: 16px;
@@ -68,6 +73,12 @@
 	.istoria thead tr:first-child th,
 	.istoria thead tr:last-child th {
 		display: table-header-group;
+	}
+	a:after {
+		font-weight: lighter !important;
+		content: " (" attr(href) ") ";
+		color: var(--link-hover) !important;
+		font-size: 81.25%;
 	}
 }
 @media screen {
@@ -143,13 +154,43 @@
 	local(Avenir),
 	local('Calibri Light');
 	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
+	font-weight: var(--lightest);
 }
+@font-face {
+	font-family: 'Numberwang';
+	src: local('Corbel Light'),
+	local(Avenir),
+	local('Calibri Light');
+	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
+	font-weight: var(--medium);
+}
+@font-face {
+	font-family: 'Numberwang';
+	src: local('Corbel'),
+	local(Avenir),
+	local('Calibri');
+	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
+	font-weight: var(--bold);
+}
+@font-face {
+	font-family: 'Numberwang';
+	src: local('Corbel'),
+	local(Avenir),
+	local('Calibri');
+	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
+	font-weight: var(--boldest);
+}
+
 @font-face {
 	font-family: 'Numberwang Medium';
 	src: local('Corbel'),
 	local(Avenir),
 	local('Calibri');
 	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
+}
+@font-face {
+	font-family: 'Numberwang Bold';
+	src: local('Corbel')
 }
 
 /* start main entry */
@@ -185,10 +226,10 @@ a:link {
 a:visited {
 	color: var(--link-visited);
 }
-a:where(:link, :visited):hover {
+a:hover {
 	color: var(--link-hover);
 }
-a:where(:link, :visited):active {
+a:active {
 	color: var(--link-active);
 }
 
@@ -840,7 +881,7 @@ textarea {
 .centred,
 :where(td, th):where(.centred, .dr),
 .istoria .footer {
-	text-align: center; font-size: 13px;
+	text-align: center;
 }
 .right,
 .date,

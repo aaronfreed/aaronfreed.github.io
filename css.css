@@ -165,7 +165,7 @@
 	font-weight: var(--medium);
 }
 @font-face {
-	font-family: 'Numberwang';
+	font-family: 'Numberwang Medium';
 	src: local('Corbel'),
 	local(Avenir),
 	local('Calibri');
@@ -173,24 +173,12 @@
 	font-weight: var(--bold);
 }
 @font-face {
-	font-family: 'Numberwang';
+	font-family: 'Numberwang Bold';
 	src: local('Corbel'),
 	local(Avenir),
 	local('Calibri');
 	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
 	font-weight: var(--boldest);
-}
-
-@font-face {
-	font-family: 'Numberwang Medium';
-	src: local('Corbel'),
-	local(Avenir),
-	local('Calibri');
-	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
-}
-@font-face {
-	font-family: 'Numberwang Bold';
-	src: local('Corbel')
 }
 
 /* start main entry */

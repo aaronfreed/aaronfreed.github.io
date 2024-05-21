@@ -74,7 +74,7 @@
 	.istoria thead tr:last-child th {
 		display: table-header-group;
 	}
-	a:after {
+	a:not(.noprintlink):after {
 		font-weight: lighter !important;
 		content: " (" attr(href) ") ";
 		color: var(--link-hover) !important;

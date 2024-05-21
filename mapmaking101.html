@@ -91,7 +91,22 @@ window.onload = function () {makeAllSortable();};
 		<li><a href="#furtherreading">Further Reading</a>
 			<ol>
 				<li><a href="#advancedtutorials">Advanced Tutorials & Resources</a></li>
-				<li><a href="#resourcescommunity">Marathon Communities & Resources</a></li>
+				<li><a href="#resourcescommunity">Marathon Communities & Resources</a>
+					<ol>
+						<li><a href="#resourcesfiles">Game Files</a></li>
+						<li><a href="#resourceshd">Hi-Res Graphics</a>
+							<ol>
+								<li><a href="#resourceshdbespoke">Bespoke Graphics</a></li>
+								<li><a href="#resourceshdupscales">Upscaled Game Assets</a></li>
+							</ol>
+						</li>
+						<li><a href="#resourcescommunities">Communities</a></li>
+						<li><a href="#resourcesstory">Story &amp; Lore References</a></li>
+						<li><a href="#resourcesgameplay">Gameplay Resources</a></li>
+						<li><a href="#resourceswikis">Wikis</a></li>
+						<li><a href="#resourcesmusic">Music Resources</a></li>
+					</ol>
+				</li>
 			</ol>
 		</li>
 		<li><a href="#contact">Contact Info</a></li>
@@ -106,21 +121,21 @@ window.onload = function () {makeAllSortable();};
 	<p>Bungie&rsquo;s two official editors were Forge (mapmaking) and Anvil (physics, shapes, sounds). I won&rsquo;t address how to run these in this guide, because they don&rsquo;t run on any operating system past MacOS 9.2.2, and there are vastly better replacements for both programs that actually run on modern operating systems. The next section, &ldquo;Comparison of Texturing Utilities&rdquo;, may help you decide which visual mode replacement you want.</p>
 
 	<ul style="text-align: left;">
-		<li><strong>Weland</strong> (most aspects of mapmaking, replaces Forge&rsquo;s overhead view): <a href="https://github.com/treellama/weland/releases" target="_blank">github.com/treellama/weland/releases</a>
+		<li><strong><a href="https://github.com/treellama/weland/releases" target="_blank">Weland</a></strong> (most aspects of mapmaking, replaces Forge&rsquo;s overhead view)</a>
 		<div style="padding-left: 20px;"><strong><em>Make sure to grab the right dependency for your platform &ndash; the download page is confusingly laid out. I&rsquo;ve written a detailed setup guide; you can find it in &lsquo;Weland Setup&rsquo; under &lsquo;Mapmaking Basics&rsquo;.</em></strong></div></li>
 		<li><strong>Vasara</strong> (texturing, more like Windows/MacOS&rsquo; graphical user interfaces; Forge visual mode replacement #1):
 			<ul>
-				<li><strong>Vasara <span class="decimal">1</span>.<span class="decimal">0</span>.<span class="decimal">3</span></strong>: <a href="https://simplici7y.com/items/vasara" target="_blank">simplici<span class="decimal">7</span>y.com/items/vasara</a> <em>(last updated around eight years ago)</em><br /></li>
-				<li><strong>Vasara AF</strong> (WIP): <a href="https://github.com/aaronfreed/vasara/" target="_blank">github.com/aaronfreed/vasara</a> <em>(requires Aleph One 1.7 or later; <strong>full disclosure:</strong> this update is largely my work)</em><br /></li>
+				<li><a href="https://simplici7y.com/items/vasara" target="_blank"><strong>Vasara <span class="decimal">1</span>.<span class="decimal">0</span>.<span class="decimal">3</span></strong></a> <em>(last updated around eight years ago)</em><br /></li>
+				<li><a href="https://github.com/aaronfreed/vasara/" target="_blank"><strong>Vasara AF</strong> (WIP)</a> <em>(requires Aleph One 1.7 or later; <strong>full disclosure:</strong> this update is largely my work)</em><br /></li>
 			</ul>
 		</li>
-		<li><strong>Visual Mode.lua</strong> (texturing, more like DOS&rsquo; command prompt; Forge visual mode replacement #2): <a href="https://simplici7y.com/items/visual-mode-lua" target="_blank">simplici<span class="decimal">7</span>y.com/items/visual-mode-lua</a>.</li>
-		<li><strong>Forge+</strong> (texturing/map viewing; Forge visual mode replacement #3; see below): <a href="https://github.com/deramscholzara/ForgePlus/releases" target="_blank">github.com/deramscholzara/ForgePlus/releases</a></li>
-		<li><strong>Atque</strong> (merging/splitting maps; replaces Forge&rsquo;s &ldquo;merge&rdquo; command): <a href="https://github.com/treellama/atque/releases" target="_blank">github.com/treellama/atque/releases</a></li>
-		<li><strong>ShapeFusion</strong> (physics/shapes/sounds; replaces Anvil): <a href="https://github.com/treellama/shapefusion/releases" target="_blank">github.com/treellama/shapefusion/releases</a></li>
-		<li><strong>Charlemagne</strong> (viewing differences between physics, converting physics to JSON and back, converting <em>M<span class="decimal">2</span></em> physics to <em>M&infin;</em> physics, etc.): <a href="https://jonirons.net/code/go/charlemagne.html" target="_blank">jonirons.net/code/go/charlemagne.html</a></li>
-		<li><strong>Hux</strong> (terminal editor): <a href="https://github.com/janos-ijgyarto/HuxQt/releases" target="_blank">github.com/janos-ijgyarto/HuxQt/releases</a> (currently Windows binaries only)</li>
-		<li><strong>Aorta</strong> (DDS/parallax map creation): <a href="https://sourceforge.net/projects/aorta" target="_blank">sourceforge.net/projects/aorta</a></li>
+		<li><a href="https://simplici7y.com/items/visual-mode-lua" target="_blank"><strong>Visual Mode.lua</strong></a> (texturing, more like DOS&rsquo; command prompt; Forge visual mode replacement #2)</li>
+		<li><a href="https://github.com/deramscholzara/ForgePlus/releases" target="_blank"><strong>Forge+</strong></a> (texturing/map viewing; Forge visual mode replacement #3; see below)</li>
+		<li><a href="https://github.com/treellama/atque/releases" target="_blank"><strong>Atque</strong></a> (merging/splitting maps; replaces Forge&rsquo;s &ldquo;merge&rdquo; command)</li>
+		<li><a href="https://github.com/treellama/shapefusion/releases" target="_blank"><strong>ShapeFusion</strong></a> (physics/shapes/sounds; replaces Anvil)</li>
+		<li><a href="https://jonirons.net/code/go/charlemagne.html" target="_blank"><strong>Charlemagne</strong></a> (viewing differences between physics, converting physics to JSON and back, converting <em>M<span class="decimal">2</span></em> physics to <em>M&infin;</em> physics, etc.)</li>
+		<li><a href="https://github.com/janos-ijgyarto/HuxQt/releases" target="_blank"><strong>Hux</strong></a> (terminal editor; currently Windows binaries only)</li>
+		<li><a href="https://sourceforge.net/projects/aorta" target="_blank"><strong>Aorta</strong></a> (DDS/parallax map creation)</li>
 	</ul>
 
 	<p>While you might expect Forge+ to be roughly equivalent to Forge, Weland is actually much closer to it, to the extent that roughly 90% of the Forge tutorials can be applied wholesale to Weland. I list all the important differences I&rsquo;m aware of below, and they make up a relatively small portion of this document; for most users, setup will be by far the most complicated difference to navigate.</p>
@@ -173,12 +188,28 @@ window.onload = function () {makeAllSortable();};
 	<p>The &lsquo;Classic OS&rsquo; resources below require a Mac or emulator running Classic Mac OS (i.e., System <span class="decimal">7</span> through <span class="decimal">9</span>). Setting one up is also well beyond this document&rsquo;s scope.</p>
 
 	<ul style="text-align: left;">
-		<li><strong>Maps:</strong> Pfhorte (classic OS, <a href="http://archives2.bungie.org/m1.tools/pfhorte1.0d26.hqx" target="_blank">archives<span class="decimal">2</span>.bungie.org/m<span class="decimal">1</span>.tools/pfhorte<span class="decimal">1</span>.<span class="decimal">0</span>d<span class="decimal">26</span>.hqx</a>)</li>
-		<li><strong>Physics:</strong> Web-based <a href="m1-phys-to-json.html">M<span class="decimal">1</span> .phys to JSON</a> and <a href="json-to-m1-phys.html">JSON to M<span class="decimal">1</span> .phys</a> converters by <strong>@magical_beetle_40501</strong></li>
-		<li><strong>Physics:</strong> Marathon Physics Model Editor (classic OS, <a href="http://archives2.bungie.org/m1.tools/MaraModelEdit1.1.sit.hqx" target="_blank">archives<span class="decimal">2</span>.bungie.org/m<span class="decimal">1</span>.tools/MaraModelEdit<span class="decimal">1</span>.<span class="decimal">1</span>.sit.hqx</a>)</li>
-		<li><strong>Shapes:</strong> Pfhred (classic OS, <a href="http://archives2.bungie.org/m1.tools/pfhred.131.hqx" target="_blank">archives<span class="decimal">2</span>.bungie.org/m<span class="decimal">1</span>.tools/pfhred.<span class="decimal">131</span>.hqx</a>)</li>
-		<li><strong>Shapes:</strong> Perl utilities by <strong>@Hopper262</strong>: <a href="https://github.com/Hopper262/marathon-utils" target="_blank">github.com/Hopper<span class="decimal">262</span>/marathon-utils</a></a></li>
-		<li><strong>Sounds and Terminals:</strong> ResEdit (classic OS, <a href="https://www.macintoshrepository.org/1317-resedit-2-1-3" target="_blank">macintoshrepository.org/<span class="decimal">1317</span>-resedit-<span class="decimal">2</span>-<span class="decimal">1</span>-<span class="decimal">3</span></a>). Terminals are TEXT resources in the Marathon application. Explaining the terminal format is beyond the current scope of this guide, though I may cover it eventually.</li>
+		<li><strong>Maps:</strong>
+			<ul>
+				<li><a href="http://archives2.bungie.org/m1.tools/pfhorte1.0d26.hqx" target="_blank"><strong>Pfhorte</strong></a> (classic OS)</li>
+			</ul>
+		</li>
+		<li><strong>Physics:</strong> 
+			<ul>
+				<li><strong>Web-based <a href="m1-phys-to-json.html">M<span class="decimal">1</span> .phys to JSON</a> and <a href="json-to-m1-phys.html">JSON to M<span class="decimal">1</span> .phys</a> converters</strong> by <strong>@magical_beetle_40501</strong></li>
+				<li><a href="http://archives2.bungie.org/m1.tools/MaraModelEdit1.1.sit.hqx" target="_blank"><strong>Marathon Physics Model Editor</strong></a> (classic OS)</li>
+			</ul>
+		</li>
+		<li><strong>Shapes:</strong>
+			<ul>
+				<li><a href="https://github.com/Hopper262/marathon-utils" target="_blank"><strong>Perl utilities</strong></a> by <strong>@Hopper262</strong></li>
+				<li><a href="http://archives2.bungie.org/m1.tools/pfhred.131.hqx" target="_blank"><strong>Pfhred</strong></a> (classic OS)</li>
+			</ul>
+		</li>
+		<li><strong>Sounds and Terminals:</strong>
+			<ul>
+				<li><a href="https://www.macintoshrepository.org/1317-resedit-2-1-3" target="_blank"><strong>ResEdit</strong></a> (classic OS). Terminals are TEXT resources in the Marathon application. Explaining the terminal format is beyond the current scope of this guide, though I may cover it eventually.</li>
+			</ul>
+		</li>
 	</ul>
 
 	<p>To make <em>Marathon <span class="decimal">1</span></em> content from the classic Mac OS work with modern Aleph One, you must run it through <a href="https://en.wikipedia.org/wiki/MacBinary" target="_blank">MacBinary</a> (I&rsquo;ve never gotten this to work) or extract it from an emulator disk image with a program like <a href="https://www.macintoshrepository.org/7358-hfvexplorer-1-3-1-for-windows-" target="_blank">HFV Explorer</a> (the method I used for my remastered <a href="https://simplici7y.com/items/marathon-1-remastered-sounds-2" target="_blank"><em>Marathon <span class="decimal">1</span></em></a> and <a href="https://hhas01.itch.io/trojan-se" target="_blank"><em>Trojan</em></a> sounds).</p>
@@ -313,16 +344,16 @@ window.onload = function () {makeAllSortable();};
 
 	<p>The modern replacement for Anvil is ShapeFusion; its feature set is very nearly identical to Anvil&rsquo;s, although it does a few things differently. Nonetheless, the annotated Anvil help balloons will be essential, since they&rsquo;re one of the few Anvil features not integrated into ShapeFusion. The default <em>Infinity</em> physics model is also essential because the &ldquo;Standard&rdquo; physics model distributed with <em>Marathon Infinity</em> is actually a <em>Marathon 2</em> physics model (thanks, Bungie), so if you want to edit VacBob or SMG physics, you&rsquo;ll have to grab the one from Simplici7y.</p>
 
-	<ul style="text-align: left;">
-		<li><strong>Bungie&rsquo;s Forge & Anvil Manuals:</strong> <a href="http://archives2.bungie.org/manuals/Trilogy_Manual.pdf" target="_blank">archives<span class="decimal">2</span>.bungie.org/manuals/Trilogy_Manual.pdf</a	>
+	<ul>
+		<li><a href="http://archives2.bungie.org/manuals/Trilogy_Manual.pdf" target="_blank"><strong>Bungie&rsquo;s Forge & Anvil Manuals</strong></a>
 			<ul>
-				<li><strong>Annotated Forge Manual:</strong> <a href="forgemanual.html">aaronfreed.github.io/forgemanual.html</a> <em><strong>(<strong>work in progress</strong> &ndash; I have not finished annotating the whole manual yet)</strong></em></li>
+				<li><a href="forgemanual.html"><strong>Annotated Forge Manual</strong></a> <em><strong>(<strong>work in progress</strong> &ndash; I have not finished annotating the whole manual yet)</strong></em></li>
 			</ul>
 		</li>
-		<li><strong>Bungie&rsquo;s Forge Video Tutorials:</strong> <a href="https://youtu.be/E8yqfvNc0HM" target="_blank">youtu.be/E<span class="decimal">8</span>yqfvNc<span class="decimal">0</span>HM</a></li>
-		<li><strong>Annotated Anvil Help Balloons:</strong> <a href="anvilhelp.html">aaronfreed.github.io/anvilhelp.html</a>, as it so happens</li>
-		<li><strong><em>Marathon Infinity</em> physics model:</strong> <a href="https://simplici7y.com/items/default-infinity-physics-model-2" target="_blank">simplici<span class="decimal">7</span>y.com/items/default-infinity-physics-model-<span class="decimal">2</span></a></li>
-		<li><strong>Aleph One Github Wiki:</strong> <a href="https://github.com/Aleph-One-Marathon/alephone/wiki" target="_blank">github.com/Aleph-One-Marathon/alephone/wiki</a> <em>(the only still-extant Marathon wiki almost </em>guaranteed<em> to be accurate)</em></li>
+		<li><a href="https://youtu.be/E8yqfvNc0HM" target="_blank"><strong>Bungie&rsquo;s Forge Video Tutorials</strong></a></li>
+		<li><a href="anvilhelp.html"><strong>Annotated Anvil Help Balloons</strong></a> <em>(with corrections to errata &amp; information about ShapeFusion)</em></li>
+		<li><a href="https://simplici7y.com/items/default-infinity-physics-model-2" target="_blank"><strong>Default <em>Marathon Infinity</em> physics model</strong></a> <em>(Warning: The &lsquo;<strong>Standard</strong>&rsquo; physics model included with </em>Marathon Infinity<em> is </em><strong><em>actually a </em>Marathon 2<em> physics model</em></strong><em>. We can blame Bungie for this. Since ShapeFusion doesn&rsquo;t have a &lsquo;<strong>New Physics Model</strong>&rsquo; feature, anyone that wants to make new physics models should absolutely keep a copy of this with them at all times.)</em></li>
+		<li><a href="https://github.com/Aleph-One-Marathon/alephone/wiki" target="_blank"><strong>Aleph One Github Wiki</strong></a> <em>(the only still-extant Marathon wiki almost </em>guaranteed<em> to be accurate)</em></li>
 	</ul>
 
 	<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
@@ -431,12 +462,19 @@ window.onload = function () {makeAllSortable();};
 	<p>I can&rsquo;t vouch for the accuracy of all of this info (except, I hope, my own page), and you definitely shouldn&rsquo;t worry about most of this stuff until later &ndash; you need to familiarize yourself with the fundamentals before moving onto more advanced techniques. (If you don&rsquo;t know how to play a paradiddle, you aren&rsquo;t ready to cover a Neil Peart solo.) Hastur&rsquo;s Workshop is listed first here because it&rsquo;s the first advanced tutorial you should read &ndash; while not all of it is still relevant, you can still find helpful nuggets even in the seemingly irrelevant bits (e.g., viewing distances are no longer limited to 30 World Units, but the tips on that page can still be helpful for making spaces seem larger than they are, which is especially helpful since there are really only about 63 usable World Units in each direction).</p>
 
 	<ul>
-		<li><strong>Hastur&rsquo;s Workshop:</strong> <a href="https://citadel.lhowon.org/litterbox/Forge/hastursworkshop" target="_blank">citadel.lhowon.org/litterbox/Forge/hastursworkshop</a> (<em>Infinity</em>&rsquo;s creators&rsquo; advanced tips)</li>
-		<li><strong>My advanced mapmaking page:</strong> <a href="mapmaking.html">aaronfreed.github.io/mapmaking.html</a>
-		<li><strong>Additional Forge tutorials:</strong> <a href="https://citadel.lhowon.org/litterbox/Forge/index.html" target="_blank">citadel.lhowon.org/litterbox/Forge/index.html</a></li>
-		<li><strong>Anvil references:</strong> <a href="https://citadel.lhowon.org/litterbox/Anvil/Index.html" target="_blank">citadel.lhowon.org/litterbox/Anvil/Index.html</a></li>
-		<li><strong>File format info:</strong> <a href="https://gist.github.com/marrub--/98af41f36e15a277088b220a6a9f4244" target="_blank">gist.github.com/marrub--/<span class="decimal">98</span>af<span class="decimal">41</span>f<span class="decimal">36</span>e<span class="decimal">15</span>a<span class="decimal">277088</span>b<span class="decimal">220</span>a<span class="decimal">6</span>a<span class="decimal">9</span>f<span class="decimal">4244</span></a> <em>(note: parts of this now appear to be outdated, but parts may still be helpful)</em></li>
-		<li><strong><em>M2</em>-flavored <em>Infinity</em> shapes:</strong> <a href="https://simplici7y.com/items/marathon-2-texture-replacements-for-marathon-infinity/" target="_blank">simplici<span class="decimal">7</span>y.com/items/marathon-<span class="decimal">2</span>-texture-replacements-for-marathon-infinity</a>
+		<li><a href="https://citadel.lhowon.org/litterbox/Forge/hastursworkshop" target="_blank"><strong>Hastur&rsquo;s Workshop</strong></a> <em>(advanced tips from <em>Marathon Infinity</em>&rsquo;s creators)</em></li>
+		<li><a href="mapmaking.html"><strong>My advanced mapmaking page</strong></a>
+		<li><a href="https://citadel.lhowon.org/litterbox/Forge/index.html" target="_blank"><strong>Forge tutorials</strong></a> from <strong>the Battle Cat</strong>, <strong>Jason Harper</strong>, <strong>Even Steven</strong>, &amp; <strong>Chris Komarnicki</strong></li>
+		<li><a href="https://citadel.lhowon.org/litterbox/Anvil/Index.html" target="_blank"><strong>Anvil references</strong></a> from <strong>Hamish Sanderson</strong>, <strong>Quartz</strong>, <strong>Mark Levin</strong>, <strong>Claude Errera</strong>, &amp; <strong>Ra&uacute;l Bonilla</strong></li>
+		<li><strong>Current Aleph One scripting documentation:</strong>
+			<ul>
+				<li><a href="https://htmlpreview.github.io/?https://github.com/Aleph-One-Marathon/alephone/blob/master/docs/MML.html" target="_blank"><strong>Marathon Markup Language<br /></strong></a></li>
+				<li><a href="https://htmlpreview.github.io/?https://github.com/Aleph-One-Marathon/alephone/blob/master/docs/Lua.html" target="_blank"><strong>Lua</strong> (Solo &amp; net scripting)<br /></strong></a></li>
+				<li><a href="https://htmlpreview.github.io/?https://github.com/Aleph-One-Marathon/alephone/blob/master/docs/Lua_HUD.html" target="_blank"><strong>Lua</strong> (Heads-Up Display scripting)<br /></strong></a></li>
+			</ul>
+		</li>
+		<li><strong><a href="https://gist.github.com/marrub--/98af41f36e15a277088b220a6a9f4244" target="_blank">File format info</a></strong> <em>(note: parts of this now appear to be outdated, but parts may still be helpful)</em></li>
+		<li><strong><a href="https://simplici7y.com/items/marathon-2-texture-replacements-for-marathon-infinity/" target="_blank"><em>M2</em>-flavored <em>Infinity</em> shapes</a></strong>
 			<ul>
 				<li>If you want to make <em>Marathon <span class="decimal">2</span></em> maps, I recommend configuring Weland to use <em>Marathon Infinity</em> as the scenario and this as the shapes. <strong>Vasara</strong> and <strong>Visual Mode.lua</strong> look for the Jjaro collection by default, and weird things happen if they don&rsquo;t find it. (You can edit them to prevent this, but this prevents the need for that, or for changing Weland&rsquo;s scenario from <em>Marathon Infinity</em> to <em>Marathon <span class="decimal">2</span></em> and back.)</li>
 			</ul>
@@ -447,47 +485,114 @@ window.onload = function () {makeAllSortable();};
 
 <h2 id="resourcescommunity">Marathon Communities & Resources</h2>
 	
+	<h3 id="resourcesfiles">Game Files</h3>
 	<ul style="text-align: left;">
-		<li><strong>The Marathon trilogy (all-in-one releases):</strong> <a href="https://alephone.lhowon.org/" target="_blank">alephone.lhowon.org</a></li>
-		<li><strong>Aleph One app:</strong> <a href="https://alephone.lhowon.org/download.html" target="_blank">alephone.lhowon.org/download.html</a></li>
-		<li><strong>Data files for the trilogy and <span id="ftnt_ref04" class="dotted" title="Trojan, EVIL, Tempus Irae, RED, Eternal X, Rubicon X, Phoenix, Mararthon Yuge, Apotheosis X, and Istoria. [See endnote for my thoughts on each]">ten major Aleph One scenarios<a href="#ftnt04">&#8317;<span class="decimal">&#8308;</span>&#8318;</a></span>:</strong> <a href="https://alephone.lhowon.org/scenarios.html">alephone.lhowon.org/scenarios.html</a></li>
-		<li><strong>Aleph One GitHub:</strong> <a href="https://github.com/Aleph-One-Marathon/" target="_blank">github.com/Aleph-One-Marathon</a></li>
-		<li><strong>Simplici<span class="decimal">7</span>y:</strong> <a href="https://simplici7y.com/" target="_blank">simplici<span class="decimal">7</span>y.com</a> <em>(archive containing most of the newest content for the engine)</em></li>
+		<li><strong><a href="https://alephone.lhowon.org/" target="_blank">The Marathon trilogy (all-in-one releases)</a></strong></li>
+		<li><strong><a href="https://alephone.lhowon.org/download.html" target="_blank">Stand-alone Aleph One app</a></strong> </li>
+		<li><strong><a href="https://alephone.lhowon.org/scenarios.html" target="_blank">Data files</a> for the trilogy and <span id="ftnt_ref04" class="dotted" title="Trojan, EVIL, Tempus Irae, RED, Eternal X, Rubicon X, Phoenix, Mararthon Yuge, Apotheosis X, and Istoria. [See endnote for my thoughts on each]">ten major Aleph One scenarios<a href="#ftnt04">&#8317;<span class="decimal">&#8308;</span>&#8318;</a></span></strong></li>
+		<li><a href="https://github.com/Aleph-One-Marathon/" target="_blank"><strong>Aleph One GitHub</strong></a></li>
+		<li><a href="https://simplici7y.com/" target="_blank"><strong>Simplici<span class="decimal">7</span>y</strong></a> <em>(archive containing most of the newest content for the engine)</em></li>
 		<li><strong>Fileball:</strong> <a href="http://fileball.whpress.com/" target="_blank">fileball.whpress.com</a> or <a href="http://www.rising-studios.com/Marathon/fileball/Fileball%20Archive/marathon/" target="_blank">rising-studios.com/Marathon/fileball</a> <em>(archive of content from the 2000s)</em></li>
-		<li><strong>Bungie.org Archives:</strong> <a href="http://archives.bungie.org/" target="_blank">archives.bungie.org</a> <em>(the oldest extant archive of third-party </em>Marathon<em> content; much of this requires an emulator or a Mac running the classic OS to run)</em></li>
-		<li><strong>Discord:</strong> <a href="https://discord.gg/NmE66Mhq2a" target="_blank">discord.gg/NmE<span class="decimal">66</span>Mhq<span class="decimal">2</span>a</a></li>
-		<li><strong>The Pfhorums:</strong> <a href="https://pfhorums.com/" target="_blank">pfhorums.com</a></li>
-		<li><strong>Marathon Story Forums:</strong> <a href="http://forums.bungie.org/story/" target="_blank">forums.bungie.org/story</a></li>
-		<li><strong>Reddit:</strong> <a href="https://reddit.com/r/marathon/" target="_blank">reddit.com/r/marathon</a></li>
-		<li><strong>Marathon&rsquo;s Story Page:</strong> <a href="http://marathon.bungie.org/story" target="_blank">marathon.bungie.org/story</a> <em>(if you have story questions, for the love of Yrro, go here first &ndash; <span class="decimal">90</span>% of them can be answered with a quick search here)</em></li>
-		<li><strong>Marathon Lore Archive:</strong> <a href="https://marathon.karnemir.com/" target="_blank">marathon.karnemir.com</a> <em>(searchable archive of terminals from the trilogy and ARG material from Bungie&rsquo;s upcoming game; meant to be more mobile-friendly)</em></li>
-		<li><strong>Marathon Scenarios:</strong> <a href="http://lochnits.com/marathon/scenarios" target="_blank">lochnits.com/marathon/scenarios</a> <em>(contains links, maps, terminals, & level flowcharts for major & many lesser-known fan scenarios)</em></li>
-		<li><strong>Marathon Spoiler Guide:</strong> <a href="http://marathon.bungie.org/spoiler" target="_blank">marathon.bungie.org/spoiler</a></li>
-		<li><strong>Dr John Sumner&rsquo;s Spoiler Guides:</strong> <a href="https://1drv.ms/u/s!AuD0MykSsmaRmx_NxpRgTRM69vgn?e=AplygX" target="_blank"><span class="decimal">1</span>drv.ms/u/s!AuD<span class="decimal">0</span>MykSsmaRmx_NxpRgTRM<span class="decimal">69</span>vgn?e=AplygX</a></li>
-		<li><strong>Marathon Vidmasters&rsquo; Page:</strong> <a href="http://marathon.bungie.org/vidmaster" target="_blank">marathon.bungie.org/vidmaster</a></li>
+		<li><a href="http://archives.bungie.org/" target="_blank"><strong>Bungie.org Archives</strong></a> <em>(the oldest extant archive of third-party </em>Marathon<em> content; much of this requires an emulator or a Mac running the classic OS to run)</em></li>
+		<li><a href="https://lochnits.com/marathon/shapes/" target="_blank"><strong><em>Marathon</em> trilogy &amp; fan scenario graphics</strong> on Lochnits.com</a></li>
+	</ul>
+
+	<h3 id="resourceshd">Hi-Res Graphics</h3>
+		<h4 id="resourceshdbespoke">Bespoke Graphics</h4>
+			<ul>
+				<li><strong>Global</strong>
+					<ul>
+						<li><a href="https://simplici7y.com/items/maratoon-infinity-3/" target="_blank"><strong>MaraToon</strong> by <strong>Juzo-kun</strong></a> (<em>Marathon <span class="integer">2</span></em>/<em>Infinity</em>)</li>
+					</ul>
+				</li>
+				<li><strong>Monsters</strong>
+					<ul>
+						<li><em>Marathon <span class="decimal">1</span></em>: nothin&rsquo; but upscales available, sorry</li>
+						<li><em>Marathon <span class="decimal">2</span></em>/<em>&infin;</em>: <a href="https://simplici7y.com/items/community-freeverse-plugin-monsters/" target="_blank">Community/Freeverse Monsters</a> (these are much higher-resolution than the ones that shipped with the XBLA release and look immeasurably better)</li>
+						<li><em>Marathon &infin;</em>: <a href="https://simplici7y.com/items/hi-res-critters-and-vacbobs/" target="_blank">General Tacticus&rsquo; Hi-Res Critters & VacBobs</a></li>
+					</ul>
+				</li>
+				<li><strong>Scenery</strong>
+					<ul>
+						<li><em>Marathon <span class="decimal">1</span></em>: <a href="https://simplici7y.com/items/3d-scenery-for-m1/" target="_blank">General Tacticus&rsquo; <span class="decimal">3</span>D Scenery for M<span class="decimal">1</span></a></li>
+						<li><em>Marathon <span class="decimal">2</span></em>/<em>&infin;</em>: <a href="http://simplici7y.com/items/community-freeverse-plugin-scenery">Community/Freeverse Scenery Plugin</a></li>
+						<li><em>Marathon &infin;</em>: <a href="https://simplici7y.com/items/hi-res-jjarro-scenery-replacement/" target="_blank">General Tacticus&rsquo; Jjaro Scenery</a></li>
+					</ul>
+				</li>
+				<li><strong>Textures</strong>
+					<ul>
+						<li><em>Marathon <span class="decimal">1</span></em>: <a href="https://simplici7y.com/items/ttep-updated-plugin-m1-1024x1024/" target="_blank">Total Texture Enhancement Pack (TTEP) by Tim Vogel &amp; Jay Faircloth</a></li>
+						<li><em>Marathon <span class="decimal">2</span></em>: <a href="https://simplici7y.com/items/community-freeverse-plugin-walls-m2/" target="_blank">Hi-res XBLA Walls by Freeverse</a></li>
+						<li><em>Marathon &infin;</em>: <a href="https://simplici7y.com/items/high-definition-marathon-infinity-textures-all-in-one-repackaging/" target="_blank">Goran Svensson&rsquo;s textures</a></li>
+					</ul>
+				</li>
+				<li><strong>Weapons</strong>
+					<ul>
+						<li><em>Marathon <span class="decimal">1</span></em>: <a href="https://simplici7y.com/items/tacticus-m1-weapons-redux-2/" target="_blank">General Tacticus&rsquo; M<span class="decimal">1</span> Weapons Redux</a></li>
+
+					</ul>
+				</li>
+			</ul>
+
+		<h4 id="resourceshdupscales">Upscaled Game Assets</h4>
+		<ul>
+			<li>Entire Trilogy: <a href="https://lochnits.com/marathon/upscales/" target="_blank">Topaz Gigapixel upscales by W&rsquo;rkncacnter</a></li>
+			<li><strong><em>Marathon &infin;</em></strong> Pixelmator Pro upscales by treellama:
+				<ul>
+					<li><a href="https://simplici7y.com/items/ml-super-res-monsters-infinity-plugin-2/" target="_blank">Monsters &amp; Scenery</a></li>
+					<li><a href="https://simplici7y.com/items/ml-super-res-walls-infinity-plugin/" target="_blank">Textures</a></li>
+					<li><a href="https://simplici7y.com/items/ml-super-res-weapons-infinity-plugin/" target="_blank">Weapons, Items, &amp; Projectiles</a></li>
+				</ul>
+			</li>
+		</ul>
+
+	<h3 id="resourcescommunities">Communities</h3>
+	<ul style="text-align: left;">
+		<li><a href="https://discord.gg/NmE66Mhq2a" target="_blank"><strong>Discord Server</strong></a></li>
+		<li><a href="https://pfhorums.com/" target="_blank"><strong>The Pfhorums</strong></a></li>
+		<li><a href="http://forums.bungie.org/story/" target="_blank"><strong>Marathon&rsquo;s Story Forums</strong></a></li>
+		<li><a href="https://reddit.com/r/marathon/" target="_blank"><strong>r/Marathon Subreddit</strong></a></li>
+	</ul>
+
+	<h3 id="resourcesstory">Story &amp; Lore References</h3>
+	<ul>
+		<li><a href="http://marathon.bungie.org/story" target="_blank"><strong>Marathon&rsquo;s Story Page</strong></a> <em>(if you have story questions, for the love of Yrro, go here first &ndash; <span class="decimal">90</span>% of them can be answered with a quick search here)</em></li>
+		<li><a href="https://marathon.karnemir.com/" target="_blank"><strong>Marathon Lore Archive</strong></a> <em>(searchable archive of terminals from the trilogy and ARG material from Bungie&rsquo;s upcoming game; mobile-friendlier, but excludes fourth-wall-breaking content like credit terminals)</em></li>
+		<li><a href="http://lochnits.com/marathon/scenarios" target="_blank"><strong>Marathon Scenarios on Lochnits</strong></a> <em>(links, maps, terminals, & level flowcharts for major & many lesser-known fan scenarios)</em></li>
+	</ul>
+
+	<h3 id="resourcesgameplay">Gameplay Resources</h3>
+	<ul>
+		<li><a href="http://marathon.bungie.org/spoiler" target="_blank"><strong>Marathon Spoiler Guide</strong></a></li>
+		<li><a href="https://1drv.ms/u/s!AuD0MykSsmaRmx_NxpRgTRM69vgn?e=AplygX" target="_blank"><strong>Dr John Sumner&rsquo;s Spoiler Guides</strong></a> <em>(like playing on Total Carnage or fists-only? Then these extremely detailed spoiler guides may be for you. They&rsquo;re the only resources available for certain scenarios.)</em></li>
+		<li><a href="http://marathon.bungie.org/vidmaster" target="_blank"><strong>Marathon Vidmasters&rsquo; Page</strong></a></li>
 		<li><strong>Vidmaster films on YouTube:</strong>
 			<ul>
-				<li>My channel: <a href="https://www.youtube.com/@MarathonVidmaster" target="_blank">youtube.com/@MarathonVidmaster</a></li>
-				<li>jteg&rsquo;s channel: <a href="https://www.youtube.com/@VidmasterChallenge" target="_blank">youtube.com/@VidmasterChallenge</a></li>
+				<li><a href="https://www.youtube.com/@MarathonVidmaster" target="_blank"><strong>My channel</strong></a></li>
+				<li><a href="https://www.youtube.com/@VidmasterChallenge" target="_blank"><strong>jteg&rsquo;s channel</strong></a></li>
 			</ul>
 		</li>
-		<li><strong>Fracai&rsquo;s maps:</strong> <a href="https://fracai.github.io/marathon-svg/" target="_blank">fracai.github.io/marathon-svg</a> <em>(detailed maps of all three games)</em></li>
-		<li><strong>Level maps on Lhowon.org:</strong> <a href="https://lhowon.org/level/" target="_blank">lhowon.org/level</a></li>
-		<li><strong>CyberAcme:</strong> <a href="https://www.marathonwiki.com/" target="_blank">marathonwiki.com</a> <em>(while this is still getting started, it at least has actual standards for its articles. Please don&rsquo;t link to Pfhorpedia; not only is it a Fandom wiki, but it&rsquo;s so full of misinformation as to be entirely unsalvageable.)</em>
-		<li><strong>Wikipedia:</strong> <a href="https://en.wikipedia.org/wiki/Marathon_Trilogy" target="_blank">en.wikipedia.org/wiki/Marathon_Trilogy</a></li>
+		<li><a href="https://fracai.github.io/marathon-svg/" target="_blank">Fracai&rsquo;s maps</a> <em>(detailed maps of all three games)</em></li>
+		<li><a href="https://lhowon.org/level/" target="_blank">Level maps on Lhowon.org</a></li>
+	</ul>
+
+	<h3 id="resourceswikis">Wikis</h3>
+	<ul>
+		<li><a href="https://www.marathonwiki.com/" target="_blank"><strong>CyberAcme</strong> (Marathon wiki)</a> <em>(while this is still getting started, it at least has actual standards for its articles. Please don&rsquo;t link to Pfhorpedia; not only is it a Fandom wiki, but it&rsquo;s so full of misinformation as to be entirely unsalvageable.)</em></li>
+		<li><a href="https://en.wikipedia.org/wiki/Marathon_Trilogy" target="_blank"><strong>Wikipedia</strong>&rsquo;s <strong><em>Marathon</em> Trilogy</strong> article</strong></a></li>
 		<li><strong>TV Tropes:</strong> 
 			<ul>
-				<li>Bungie games: <a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/Marathon" target="_blank">tvtropes.org/pmwiki/pmwiki.php/VideoGame/Marathon</a> </li>
-				<li>Fan scenarios: <a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/MarathonExpandedUniverse" target="_blank">tvtropes.org/pmwiki/pmwiki.php/VideoGame/MarathonExpandedUniverse</a> <em>(fan scenarios)</em></li>
-			</ul>
-		</li>
-		<li><strong><em>Marathon</em> soundtracks:</strong>
-			<ul>
-				<li>Dr Craig Hardgrove&rsquo;s page: <a href="https://www.themarathonmusic.com/downloads.html">themarathonmusic.com/downloads.html</a> <em>(mostly older releases)</em></li>
-				<li>My page: <a href="soundtracks.html">aaronfreed.github.io/soundtracks.html</a> <em>(newer releases and remasters of some older releases)</em></li>
+				<li><a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/Marathon" target="_blank"><em>Marathon</em> Trilogy</a></li>
+				<li><a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/MarathonExpandedUniverse" target="_blank"><em>Marathon</em> Expanded Universe</a> <em>(fan scenarios)</em></li>
 			</ul>
 		</li>
 	</ul>
+
+	<h3 id="resourcesmusic">Music Resources</h3>
+		<ul>
+			<li><a href="https://www.themarathonmusic.com/downloads.html">Dr Craig Hardgrove&rsquo;s soundtrack page</a> <em>(mostly older releases)</em></li>
+			<li><a href="soundtracks.html">My soundtrack page</a> <em>(newer releases and remasters of some older releases)</em></li>
+		</ul>
 
 	<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 

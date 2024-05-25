@@ -367,14 +367,14 @@ window.onload = function () {makeAllSortable();};
 <h3 id="m1missions"><em>Marathon <span class="decimal">1</span></em> Mission Types</h3>
 
 <ul>
-	<li><strong>Exploration (M<span class="decimal">1</span>)</strong>: Like regular <strong>Exploration</strong>, except that rather than requiring players to walk on all <strong>Must Be Explored</strong> polygons (as in <em>M<span class="decimal">2</span></em>/<em>Infinity</em>-style <strong>Exploration</strong> missions), it merely requires players to look at them..
+	<li><strong>Exploration (M<span class="decimal">1</span>)</strong>: Like regular <strong>Exploration</strong>, except that rather than requiring players to walk on all <strong>Must Be Explored</strong> polygons (as in <em>M<span class="decimal">2</span></em>/<em>Infinity</em>-style <strong>Exploration</strong> missions), it merely requires players to look at them.
 		<ul>
 			<li>As mentioned above, looking at these in <strong>Visual Mode.lua</strong> or <strong>Vasara <span class="decimal">1</span>.<span class="decimal">0</span>.<span class="decimal">3</span></strong> resets them to <strong>&lsquo;Normal&rsquo;</strong>, so be careful. (<strong>Vasara AF</strong> overrides this behavior at the cost of making it impossible to complete <strong>Exploration</strong> missions while <strong>Vasara AF</strong> is active, but that&rsquo;s not what it&rsquo;s for, anyway; if all you want is to play the game without monsters, just use <a href="https://simplici7y.com/items/nature-s-peace/" target="_blank">Nature&rsquo;s Peace</a> instead.)</li>
 			<li>If recollection serves, <em>Marathon <span class="decimal">1</span></em>&rsquo;s vanilla 64&deg; field of view (how did anyone cope?) is used to decide what players should be able to see. I&rsquo;ll eventually perform a deep dive of the code to confirm this.</li>
 			<li>If both this and <strong>Exploration</strong> are set, I suspect this may take precedence. I&rsquo;ll confirm whether this is the case later, as well.</li>
 		</ul>
 	</li>
-	<li><strong>Rescue (M<span class="decimal">1</span>):</strong> Does what the Forge manual <a href="mapmaking101.html#forgeerrata">erroneously claims</a> the <strong>Repair</strong> mission flag does. Remember to set at least one other mission type if you want this to have any significant impact on gameplay.</li>
+	<li><strong>Rescue (M<span class="decimal">1</span>):</strong> Does what the Forge manual <a href="mapmaking101.html#forgeerrata">erroneously claims</a> the <strong>Rescue</strong> mission flag does. Remember to set at least one other mission type if you want this to have any significant impact on gameplay.</li>
 	<li><strong>Repair (M<span class="decimal">1</span>):</strong> Like <strong>Repair</strong> except that the player must only activate one repair switch to successfully complete the mission. This raises the obvious question, &lsquo;Why would anyone program this into their game?&rsquo; The answer is that they probably wouldn&rsquo;t do it on purpose &ndash; unless they were maintaining legacy compatibility with a rather buggy 1994 game by a relatively inexperienced Macintosh developer.</li>
 </ul>
 

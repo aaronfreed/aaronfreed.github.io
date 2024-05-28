@@ -2,6 +2,7 @@
 <html lang="en-us">
 <head>
 	<title>Marathon Mapmaking: Setup, Snafus, &amp; Solutions</title>
+	<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<script>
 function sortTable(table, col, reverse) {
@@ -43,7 +44,7 @@ window.onload = function () {makeAllSortable();};
 <header>
 <h1>Marathon Mapmaking: Setup, Snafus, &amp; Solutions</h1>
 	
-	<p>This document is a guide to content creation for <strong><a href="https://alephone.lhowon.org/" target="_blank">Marathon Aleph One</a></strong>, an open-source engine based on <strong>Bungie</strong>&rsquo;s groundbreaking first-person shooter trilogy (<span class="decimal">1994-1996</span>) &ndash; <em>not</em> its upcoming extraction shooter (though I&rsquo;m quite intrigued by the latter).</p>
+	<p>This document is a guide to content creation for <strong><a href="https://alephone.lhowon.org/" target="_blank">Marathon Aleph One</a></strong>, an open-source engine based on <strong>Bungie</strong>&rsquo;s groundbreaking first-person shooter trilogy (1994-1996) &ndash; <em>not</em> its upcoming extraction shooter (though I&rsquo;m quite intrigued by the latter).</p>
 
 	<p>This is primarily designed as an advanced document and contains far more information than beginners will need (or even want) to know; if you&rsquo;re just getting started, you should consult my <a href="mapmaking101.html">beginner&rsquo;s guide</a> instead. However, I recommend bookmarking this link so you can return here when you&rsquo;ve mastered the basics.</p>
 	
@@ -57,13 +58,13 @@ window.onload = function () {makeAllSortable();};
 
 <h1 id="toc">Table of Contents</h1>
 
-	<ol class="toc">
+	<ol class="toclite">
 		<li><a href="#top">Introduction</a></li>
 		<li><a href="#toc">Table of Contents</a> (you&rsquo;re looking at it?)</li>
 		<!--<li><a href="#resources">Resources</a>
 			<ol>
-				<li><a href="#resourcesa1">Aleph One Content Editing (<em>Marathon <span class="decimal">2</span></em>/<em>Infinity</em> Format)</a></li>
-				<li><a href="#resourcesm1"><em>Marathon <span class="decimal">1</span></em> Content Editing for Aleph One</a></li>
+				<li><a href="#resourcesa1">Aleph One Content Editing (<em>Marathon 2</em>/<em>Infinity</em> Format)</a></li>
+				<li><a href="#resourcesm1"><em>Marathon 1</em> Content Editing for Aleph One</a></li>
 				<li><a href="#tutorialsother">Other Tutorials &amp; Resources</a></li>
 				<li><a href="#resourcescommunity">Marathon Communities &amp; Resources</a></li>
 			</ol>
@@ -100,14 +101,14 @@ window.onload = function () {makeAllSortable();};
 						<li><a href="#vasaratexturing">Further Texturing Issues in Vasara</a></li>
 					</ol>
 				</li>-->
-				<li><a href="#m1legacy"><em>Marathon <span class="decimal">1</span></em> Legacy Compatibility</a>
+				<li><a href="#m1legacy"><em>Marathon 1</em> Legacy Compatibility</a>
 					<ol>
-						<li><a href="#m1polygons">Those Weird <em>Marathon <span class="decimal">1</span></em> Polygon Types</a></li>
-						<li><a href="#m1missions"><em>Marathon <span class="decimal">1</span></em> Mission Types</a></li>
-						<li><a href="#m1compatibility"><em>Marathon <span class="decimal">1</span></em> Compatibility Flags</a></li>
+						<li><a href="#m1polygons">Those Weird <em>Marathon 1</em> Polygon Types</a></li>
+						<li><a href="#m1missions"><em>Marathon 1</em> Mission Types</a></li>
+						<li><a href="#m1compatibility"><em>Marathon 1</em> Compatibility Flags</a></li>
 					</ol>
 				</li>
-				<li><a href="#8bitsoftware"><span class="decimal">8</span>-bit Software Mode</a>
+				<li><a href="#8bitsoftware">8-bit Software Mode</a>
 					<ol>
 						<li><a href="#8bitsoftwareimages">The Images File</a></li>
 						<li><a href="#chapterscreens">Chapter Screens</a></li>
@@ -116,7 +117,7 @@ window.onload = function () {makeAllSortable();};
 				<li><a href="#directionality">Directionality</a></li>
 				<!--<li><a href="#circles">Circles and the Custom Grid</a>
 					<ol>
-						<li><a href="#radii">Radii and Rotations for <span class="decimal">1</span> WU-long Sides with Regular Polygons</a></li>
+						<li><a href="#radii">Radii and Rotations for 1 WU-long Sides with Regular Polygons</a></li>
 					</ol>
 				</li>-->
 				<!--<li><a href="#mapcomplexity">Map Complexity: A Case Study</a></li>-->
@@ -187,7 +188,7 @@ window.onload = function () {makeAllSortable();};
 <ul>
 	<li>Test your maps extensively on Total Carnage. If you&rsquo;re not good enough, get someone who is to test it. If you <em>are</em> good enough, note that you have a sort of &lsquo;home field advantage&rsquo; in already knowing the maps and your intended strategies &ndash; other players will find your maps harder than you think they will. Also, if something annoys you, it&rsquo;ll annoy other players ten times more.</li>
 	<li>Monsters can&rsquo;t move through lines shorter than their diameters, as <a href="https://citadel.lhowon.org/litterbox/Forge/hastursworkshop/things2.html" target="_blank">Hastur&rsquo;s Workshop explains</a>. This link also features plenty of other vital information about monster path building.</li>
-	<li>Aleph One lifts the vanilla <span class="decimal">1,024</span>-polygon limit (and several others), but a factor called map indices still limits map complexity, as <a href="http://pfhorums.com/viewtopic.php?p=73316#p73316" target="_blank">Aleph One developer treellama explained</a> (though the limit is now <span class="decimal">65,535</span>, not <span class="decimal">32,767</span>). The tl;dr:
+	<li>Aleph One lifts the vanilla 1,024-polygon limit (and several others), but a factor called map indices still limits map complexity, as <a href="http://pfhorums.com/viewtopic.php?p=73316#p73316" target="_blank">Aleph One developer treellama explained</a> (though the limit is now 65,535, not 32,767). The tl;dr:
 		<ul>
 			<li>Use as few sound objects as possible (but see below).</li>
 			<li>Avoid clusters of small polygons and/or short lines.</li>
@@ -237,7 +238,7 @@ window.onload = function () {makeAllSortable();};
 &lt;/marathon&gt;</pre>
 
 	Alter as needed. By contrast, if mapping for <em>Infinity</em>, you&rsquo;ll probably want to merge in MML, unless you&rsquo;re fine with monsters randomly deactivating when more than twenty are active. There are multiple ways to do this; which to use depends in large part on what kind of level you&rsquo;re creating.</li>
-	<li>If you&rsquo;re making a solo-only map, you have two ways to merge in scripts. You can save the above script as a TEXT resource (i.e., <strong>Resources/TEXT/<span class="decimal">10000</span>.txt</strong>) and call it in TEXT resource <span class="decimal">128</span> (i.e., <strong>Resources/TEXT/<span class="decimal">00128</span>.txt</strong>):</li>
+	<li>If you&rsquo;re making a solo-only map, you have two ways to merge in scripts. You can save the above script as a TEXT resource (e.g., <strong>Resources/TEXT/10000.txt</strong>) and call it in <strong>Resources/TEXT/00128.txt</strong>:</li>
 
 <pre>&lt;marathon_levels&gt;
 	&lt;level index="0"&gt;
@@ -246,9 +247,9 @@ window.onload = function () {makeAllSortable();};
 		&lt;music file="Eternal-Data/Music/Craig/SwirlsPiano.ogg"/&gt;
 	&lt;/level&gt;
 &lt;/marathon_levels&gt;</pre>
-	Or by including MML in each individual level&rsquo;s folder (i.e., <strong><span class="decimal">00</span> The Far Side of Nowhere/Monster Limits.mml</strong>).
+	Or by including MML in each individual level&rsquo;s folder (i.e., <strong>00 The Far Side of Nowhere/Monster Limits.mml</strong>).
 	<div style="margin-top: 8px;">On the other hand, if you&rsquo;re making a multiplayer level for an existing scenario (this includes cooperative play), it&rsquo;s actually <em><strong>mandatory</strong></em> to use the latter method in most cases, since the game doesn&rsquo;t send TEXT resources to other players. Thus, if you use it for something that affects the game world, which includes limit-removing MML and most Lua, players will desync almost immediately. If you don&rsquo;t know if your script will affect the game world, it&rsquo;s safest to just assume it will. MML texture replacements, fog, and Treellama&rsquo;s ephemera-based precipitation script are some examples of things that don&rsquo;t affect the game world.</div>
-	<div style="margin-top: 8px;"><span id="ftnt_ref01" class="dotted" title="What, you don&rsquo;t have a third hand? Then you must not be Zaphod Beeblebrox.">On the third hand<a href="#ftnt01" class="noprintlink">&#8317;<span class="decimal">&sup1;</span>&#8318;</a></span>, if you&rsquo;re making a standalone scenario, you can include an MML script that includes the scenario and version number, which prevents anyone who <em>isn&rsquo;t</em> running that scenario and version number from joining network games. In these cases, you can safely assume anyone who <em>does</em> join your game already has the map, in which case they&rsquo;ll also have the scripts already and won&rsquo;t desync.</div>
+	<div style="margin-top: 8px;"><span id="ftnt_ref01" class="dotted" title="What, you don&rsquo;t have a third hand? Then you must not be Zaphod Beeblebrox.">On the third hand<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span>, if you&rsquo;re making a standalone scenario, you can include an MML script that includes the scenario and version number, which prevents anyone who <em>isn&rsquo;t</em> running that scenario and version number from joining network games. In these cases, you can safely assume anyone who <em>does</em> join your game already has the map, in which case they&rsquo;ll also have the scripts already and won&rsquo;t desync.</div>
 
 <pre>&lt;marathon&gt;
 	&lt;scenario id="Eternal X" id="Eternal X" version="1.3pre6" /&gt;
@@ -256,8 +257,8 @@ window.onload = function () {makeAllSortable();};
 
 	<div style="margin-top: 8px;">(Moving the map file out of the scenario folder or overwriting it with a different version of the map would fall into what I&rsquo;d consider &lsquo;Play stupid games, win stupid prizes&rsquo; territory. You may wish to put a caveat about this in your game&rsquo;s documentation, but I&rsquo;d imagine this would be a relatively rare occurrence.)</div></li>
 
-	<li>OpenGL replacement graphics are a special case. They don&rsquo;t affect the game world, but they also shouldn&rsquo;t be merged in with the map. It&rsquo;s ideal to make these into a plugin so that players can choose whether to use them or not &ndash; some players may dislike the extra loading time or prefer chunky <span class="decimal">128</span>x<span class="decimal">128</span> pixel textures. (While replacement textures could theoretically be included in a map for another scenario, that would be quite odd &ndash; if you&rsquo;re to the point that you have replacement textures for your map, I&rsquo;d advise making that into a standalone scenario.)</li>
-	<li>The <code>&lt;marathon_levels&gt;</code> code excerpt above also shows how to merge in music (i.e., the &lsquo;music file&rsquo; line). It&rsquo;s also possible to use Lua to implement music; doing so will in fact give you more options: you can control when to start the music (<em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em> contains some examples of this), or change the music midlevel based on game events (<a href="https://simplici7y.com/items/eternal-x"><em>Eternal X</em> <span class="decimal">1.3</span></a> contains some examples of this). A full explanation of Lua music is beyond the current scope of this guide &ndash; the music API&rsquo;s functionality is currently being expanded, so such a guide would become outdated almost immediately.</li>
+	<li>OpenGL replacement graphics are a special case. They don&rsquo;t affect the game world, but they also shouldn&rsquo;t be merged in with the map. It&rsquo;s ideal to make these into a plugin so that players can choose whether to use them or not &ndash; some players may dislike the extra loading time or prefer chunky 128&times;128 pixel&sup2; textures. (While replacement textures could theoretically be included in a map for another scenario, that would be quite odd &ndash; if you&rsquo;re to the point that you have replacement textures for your map, I&rsquo;d advise making that into a standalone scenario.)</li>
+	<li>The <code>&lt;marathon_levels&gt;</code> code excerpt above also shows how to merge in music (i.e., the &lsquo;music file&rsquo; line). It&rsquo;s also possible to use Lua to implement music; doing so will in fact give you more options: you can control when to start the music (<em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em> contains some examples of this), or change the music midlevel based on game events (<a href="https://simplici7y.com/items/eternal-x"><em>Eternal X</em> 1.3</a> contains some examples of this). A full explanation of Lua music is beyond the current scope of this guide &ndash; the music API&rsquo;s functionality is currently being expanded, so such a guide would become outdated almost immediately.</li>
 </ul>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
@@ -283,8 +284,8 @@ window.onload = function () {makeAllSortable();};
 			<li>Light switches (they can be reactivated unless they&rsquo;re <strong>Destructible</strong> or <strong>Light Dependent</strong>).</li>
 		</ul>
 	</li>
-	<li>Chip slots are a &lsquo;maybe&rsquo; on the <strong>Repair</strong> count. Unless set to the &lsquo;dummy&rsquo; tag <span class="decimal">0</span>, a chip slot&rsquo;s tag must control something, or it&rsquo;ll consume chips without activating (which also renders levels unbeatable).
-		<blockquote><em><strong>Note:</strong> Aleph One <span class="decimal">1.7</span>, which was released on <span class="decimal">2023-11-25</span>, fixes the &lsquo;chip eating&rsquo; bug. However, as of this writing, it&rsquo;s hardly safe to assume all players have upgraded their Aleph One applications yet. It&rsquo;s possible to use Lua to print a warning to players using old versions of Aleph One; I&rsquo;d recommend this if you&rsquo;re comfortable using Lua. (Lua is beyond the current scope of this guide, but maybe someday I&rsquo;ll write a section on it or, better yet, a guide. [This guide desperately needs to be split into separate pages to begin with.])</em></blockquote>
+	<li>Chip slots are a &lsquo;maybe&rsquo; on the <strong>Repair</strong> count. Unless set to the &lsquo;dummy&rsquo; tag 0, a chip slot&rsquo;s tag must control something, or it&rsquo;ll consume chips without activating (which also renders levels unbeatable).
+		<blockquote><em><strong>Note:</strong> Aleph One 1.7</span>, which was released on 2023-11-25</span>, fixes the &lsquo;chip eating&rsquo; bug. However, as of this writing, it&rsquo;s hardly safe to assume all players have upgraded their Aleph One applications yet. It&rsquo;s possible to use Lua to print a warning to players using old versions of Aleph One; I&rsquo;d recommend this if you&rsquo;re comfortable using Lua. (Lua is beyond the current scope of this guide, but maybe someday I&rsquo;ll write a section on it or, better yet, a guide. [This guide desperately needs to be split into separate pages to begin with.])</em></blockquote>
 	</li>
 	<li>These bugs can interact, as well. If a chip controls a tag that can&rsquo;t activate, it can&rsquo;t toggle the <strong>Repair</strong> mission flag (rendering the level incompletable) and will eat any chips a hapless player tries to insert (possibly rendering future levels incompletable as well, in case a player is meant to have them on said levels).</li>
 	<li>Avoid having multiple (chip slots/wires/tag switches) control the same tag.</li>
@@ -308,22 +309,22 @@ window.onload = function () {makeAllSortable();};
 			<ul>
 				<li>Make them extend &lsquo;<strong>From Floor</strong>&rsquo; to reduce the odds of motion glitches, though you may still experience these occasionally (make sure to test the surrounding areas for them).</li>
 				<li>These platform networks look ugly in Weland, but players won&rsquo;t see them. If you don&rsquo;t want to see them in the visual mode map either, you can even give them landscape textures. (However, avoid doing that on walls that players should be able to see the other side of, or those walls will disappear from the automap.)</li>
-				<li>&lsquo;The Midpoint of Somewhere&rsquo; (from <em><a href="https://eternal.bungie.org/" target="_blank">Eternal</a></em> versions <span class="decimal">1.3</span> preview <span class="decimal">4</span> and later) contains several examples of this. I admittedly went overboard with it, partly to keep players from undoing their progression midlevel (it&rsquo;s already a convoluted enough level), partly out of sheer stubbornness, and partly to prove that I didn&rsquo;t need tags (but I repeat myself).</li>
+				<li>&lsquo;The Midpoint of Somewhere&rsquo; (from <em><a href="https://eternal.bungie.org/" target="_blank">Eternal</a></em> versions 1.3 preview 4 and later) contains several examples of this. I admittedly went overboard with it, partly to keep players from undoing their progression midlevel (it&rsquo;s already a convoluted enough level), partly out of sheer stubbornness, and partly to prove that I didn&rsquo;t need tags (but I repeat myself).</li>
 			</ul>
 		</li>
-		<li>So, maybe you have a tag switch that you want to use to control your mission state, but you&rsquo;re &ndash; justifiably, given the absolutely cursed mess detailed above &ndash; afraid to actually mark it as &lsquo;<strong>Repair</strong>&rsquo;. What&rsquo;s a mapmaker to do? The most reliable case is probably to have the tag switch control an otherwise inaccessible platform (for the sake of our example, we&rsquo;ll call it Platform <span class="decimal">42</span>) that starts out inactive (ideally, just completely inaccessible from the rest of the map), and set one of the walls of Platform <span class="decimal">42</span> as a platform switch that&rsquo;s marked as &lsquo;<strong>Repair</strong>&rsquo;. Then set the tag switch to activate Platform <span class="decimal">42</span>. This also means that once you activate the tag switch, the game remembers that the platform switch was activated even if either the platform switch or the tag switch gets deactivated &ndash; thus working around another potential issue with using tag switches as &lsquo;<strong>Repair</strong>&rsquo;. I&rsquo;ve shown example settings for Platform <span class="decimal">42</span> below.
+		<li>So, maybe you have a tag switch that you want to use to control your mission state, but you&rsquo;re &ndash; justifiably, given the absolutely cursed mess detailed above &ndash; afraid to actually mark it as &lsquo;<strong>Repair</strong>&rsquo;. What&rsquo;s a mapmaker to do? The most reliable case is probably to have the tag switch control an otherwise inaccessible platform (for the sake of our example, we&rsquo;ll call it Platform 42) that starts out inactive (ideally, just completely inaccessible from the rest of the map), and set one of the walls of Platform 42 as a platform switch that&rsquo;s marked as &lsquo;<strong>Repair</strong>&rsquo;. Then set the tag switch to activate Platform 42</span>. This also means that once you activate the tag switch, the game remembers that the platform switch was activated even if either the platform switch or the tag switch gets deactivated &ndash; thus working around another potential issue with using tag switches as &lsquo;<strong>Repair</strong>&rsquo;. I&rsquo;ve shown example settings for Platform 42</span> below.
 
 			<div class="image"><img src="platform42.png" width="637" height="472" alt="Settings for Platform 42, tag initially inactive" title="Settings for Platform 42, tag initially inactive" /></div>
 				
 			<ul>
-				<li>The tag switch in the above example must start out as &lsquo;<strong>Inactive</strong>&rsquo;. If you need your tag switch to start out as &lsquo;<strong>Active</strong>&rsquo;, connect another platform &ndash; we&rsquo;ll just call it Platform <span class="decimal">43</span> &ndash; to Platform <span class="decimal">42</span> (note that it <em>must</em> share at least one side, and it <em>must not</em> be the side that had the platform switch on it). Start Platform <span class="decimal">43</span> as active, set it to &lsquo;<strong>Deactivates: Never</strong>&rsquo;, make sure &lsquo;<strong>Can&rsquo;t Deactivate Externally</strong>&rsquo; is <em><strong>unchecked</strong></em>, and make sure &lsquo;<strong>Deactivates: Activates Adjacent Platform</strong>&rsquo; is <em><strong>checked</strong></em>. In this example, you&rsquo;ll also want to remove the tag from Platform <span class="decimal">42</span>. Here are our settings for Platform <span class="decimal">43</span>.
+				<li>The tag switch in the above example must start out as &lsquo;<strong>Inactive</strong>&rsquo;. If you need your tag switch to start out as &lsquo;<strong>Active</strong>&rsquo;, connect another platform &ndash; we&rsquo;ll just call it Platform 43</span> &ndash; to Platform 42</span> (note that it <em>must</em> share at least one side, and it <em>must not</em> be the side that had the platform switch on it). Start Platform 43 as active, set it to &lsquo;<strong>Deactivates: Never</strong>&rsquo;, make sure &lsquo;<strong>Can&rsquo;t Deactivate Externally</strong>&rsquo; is <em><strong>unchecked</strong></em>, and make sure &lsquo;<strong>Deactivates: Activates Adjacent Platform</strong>&rsquo; is <em><strong>checked</strong></em>. In this example, you&rsquo;ll also want to remove the tag from Platform 42. Here are our settings for Platform 43.
 				<div class="image"><img src="platform43.png" width="637" height="472" alt="Settings for Platform 43, tag initially active" title="Settings for Platform 43, tag initially active" /></div>
 
-				<div style="margin-top: 12px;">And here are our revised settings for Platform <span class="decimal">42</span>.</div>
+				<div style="margin-top: 12px;">And here are our revised settings for Platform 42.</div>
 
 				<div class="image"><img src="platform42a.png" width="637" height="472" alt="Settings for Platform 42, tag initially active" title="Settings for Platform 42, tag initially active" /></div>
 
-				<div style="margin-top: 12px;"><strong>Warning:</strong> I can&rsquo;t promise that either of these solutions are foolproof. If something messes with either platform&rsquo;s activation, it can still break the mission. And there are probably other potential ways to break them as well. I&rsquo;ve used wires, chip insertion switches, and tag switches as repair switches in some of my levels, but I&rsquo;ve also been doing this for some <span class="decimal">26</span> years, and in <span class="decimal">2023</span>, I&rsquo;m still learning new things that can break tags. They&rsquo;re even more cursed than platforms, which is saying <em>a lot</em>.</div>
+				<div style="margin-top: 12px;"><strong>Warning:</strong> I can&rsquo;t promise that either of these solutions are foolproof. If something messes with either platform&rsquo;s activation, it can still break the mission. And there are probably other potential ways to break them as well. I&rsquo;ve used wires, chip insertion switches, and tag switches as repair switches in some of my levels, but I&rsquo;ve also been doing this for some 26 years, and in 2023, I&rsquo;m still learning new things that can break tags. They&rsquo;re even more cursed than platforms, which is saying <em>a lot</em>.</div>
 
 				<div style="margin-top: 8px;">More importantly, given how convoluted all of the above is, I can almost guarantee you&rsquo;ll eventually misremember part of it and more than likely run afoul of one of the many things that can mess up tags. Bearing that in mind, isn&rsquo;t it safer to just avoid using them for repair missions at all? Of course it is.</div>
 				</li>
@@ -341,13 +342,13 @@ window.onload = function () {makeAllSortable();};
 	<li>Platforms or doors with associated ambient sounds should have sound objects marked <strong>&lsquo;Is On Platform&rsquo;</strong> so that their &lsquo;moving&rsquo; sounds don&rsquo;t suddenly cut off when players walk off the platform, which sounds unnatural. This doesn&rsquo;t apply to platforms without ambient sounds (i.e., S&rsquo;pht Door, S&rsquo;pht Platform Silent).</li>
 	<li>Liquids should have the correct associated sound objects near their edges. Failure to include these causes sudden cutoffs when players move from polygons with liquids to polygons without them (or vice versa). These should be marked <strong>&lsquo;Floats&rsquo;</strong> so they align to their liquids&rsquo; heights; if they fall below the liquids, they&rsquo;ll become almost inaudible, which defeats the purpose of placing them.</li>
 	<li>If you place ambient sounds on polygons, boundaries between different ambient sounds (or between ambient sounds and silence) should have sound objects to avoid sudden cutoffs when players move between &lsquo;sound boundaries&rsquo;. This also results in directional sound, which enhances immersion.</li>
-	<li>At the same time, avoid overusing sound objects, which eat up map indices worst of all factors that use them: one per polygon within a <span class="decimal">10</span>-world unit X/Y radius (Z is irrelevant). If this all sounds like a delicate juggling act, it is! No one said making maps for an ancient engine was <em>easy</em>. I recommend avoiding complicated &lsquo;sound boundaries&rsquo; or too many discrete polygon sounds per level.</li>
+	<li>At the same time, avoid overusing sound objects, which eat up map indices worst of all factors that use them: one per polygon within a 10-world unit X/Y radius (Z is irrelevant). If this all sounds like a delicate juggling act, it is! No one said making maps for an ancient engine was <em>easy</em>. I recommend avoiding complicated &lsquo;sound boundaries&rsquo; or too many discrete polygon sounds per level.</li>
 </ul>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
-<h2 id="m1legacy"><em>Marathon <span class="decimal">1</span></em> Legacy Compatibility</h2>
-<h3 id="m1polygons">Those Weird <em>Marathon <span class="decimal">1</span></em> Polygon Types</h3>
+<h2 id="m1legacy"><em>Marathon 1</em> Legacy Compatibility</h2>
+<h3 id="m1polygons">Those Weird <em>Marathon 1</em> Polygon Types</h3>
 <ul>
 	<li><strong>Minor Ouch</strong> behaves like <em>M1</em> lava: it only damages monsters and players that are touching the ground.</li>
 	<li><strong>Major Ouch</strong> behaves like <em>M1</em> Pfhor goo: it damages monsters and players even if they&rsquo;re airborne.</li>
@@ -356,7 +357,7 @@ window.onload = function () {makeAllSortable();};
 		<ul>
 			<li>Monsters on <strong>Glue</strong> act deaf (but not blind) until players walk onto their polygons (or they&rsquo;re activated by other means). Sounds don&rsquo;t enter Glue polygons but can leave them.</li>
 			<li>A <strong>Glue Trigger</strong> activates all monsters that aren&rsquo;t on or beyond Superglue or Zone Borders.</li>
-			<li><strong>Superglue</strong> is <em>M<span class="decimal">1</span></em>&rsquo;s zone border equivalent; it stops Glue Trigger monster activation (as do Zone Borders).</li>
+			<li><strong>Superglue</strong> is <em>M1</em>&rsquo;s zone border equivalent; it stops Glue Trigger monster activation (as do Zone Borders).</li>
 		</ul>
 	</li>
 	<li>Otherwise, these three related polygon types behave like <strong>Normal</strong> polygons.</li>
@@ -364,64 +365,64 @@ window.onload = function () {makeAllSortable();};
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
-<h3 id="m1missions"><em>Marathon <span class="decimal">1</span></em> Mission Types</h3>
+<h3 id="m1missions"><em>Marathon 1</em> Mission Types</h3>
 
 <ul>
-	<li><strong>Exploration (M<span class="decimal">1</span>)</strong>: Like regular <strong>Exploration</strong>, except that rather than requiring players to walk on all <strong>Must Be Explored</strong> polygons (as in <em>M<span class="decimal">2</span></em>/<em>Infinity</em>-style <strong>Exploration</strong> missions), it merely requires players to look at them.
+	<li><strong>Exploration (M1)</strong>: Like regular <strong>Exploration</strong>, except that rather than requiring players to walk on all <strong>Must Be Explored</strong> polygons (as in <em>M2</em>/<em>Infinity</em>-style <strong>Exploration</strong> missions), it merely requires players to look at them.
 		<ul>
-			<li>As mentioned above, looking at these in <strong>Visual Mode.lua</strong> or <strong>Vasara <span class="decimal">1</span>.<span class="decimal">0</span>.<span class="decimal">3</span></strong> resets them to <strong>&lsquo;Normal&rsquo;</strong>, so be careful. (<strong>Vasara AF</strong> overrides this behavior at the cost of making it impossible to complete <strong>Exploration</strong> missions while <strong>Vasara AF</strong> is active, but that&rsquo;s not what it&rsquo;s for, anyway; if all you want is to play the game without monsters, just use <a href="https://simplici7y.com/items/nature-s-peace/" target="_blank">Nature&rsquo;s Peace</a> instead.)</li>
-			<li>If recollection serves, <em>Marathon <span class="decimal">1</span></em>&rsquo;s vanilla 64&deg; field of view (how did anyone cope?) is used to decide what players should be able to see. I&rsquo;ll eventually perform a deep dive of the code to confirm this.</li>
+			<li>As mentioned above, looking at these in <strong>Visual Mode.lua</strong> or <strong>Vasara 1.0.3</strong> resets them to <strong>&lsquo;Normal&rsquo;</strong>, so be careful. (<strong>VAF</strong> overrides this behavior at the cost of making it impossible to complete <strong>Exploration</strong> missions while <strong>VAF</strong> is active, but that&rsquo;s not what it&rsquo;s for, anyway; if all you want is to play the game without monsters, just use <a href="https://simplici7y.com/items/nature-s-peace/" target="_blank">Nature&rsquo;s Peace</a> instead.)</li>
+			<li>If recollection serves, <em>Marathon 1</em>&rsquo;s vanilla 64&deg; field of view (how did anyone cope?) is used to decide what players should be able to see. I&rsquo;ll eventually perform a deep dive of the code to confirm this.</li>
 			<li>If both this and <strong>Exploration</strong> are set, I suspect this may take precedence. I&rsquo;ll confirm whether this is the case later, as well.</li>
 		</ul>
 	</li>
-	<li><strong>Rescue (M<span class="decimal">1</span>):</strong> Does what the Forge manual <a href="mapmaking101.html#forgeerrata">erroneously claims</a> the <strong>Rescue</strong> mission flag does. Remember to set at least one other mission type if you want this to have any significant impact on gameplay.</li>
-	<li><strong>Repair (M<span class="decimal">1</span>):</strong> Like <strong>Repair</strong> except that the player must only activate one repair switch to successfully complete the mission. This raises the obvious question, &lsquo;Why would anyone program this into their game?&rsquo; The answer is that they probably wouldn&rsquo;t do it on purpose &ndash; unless they were maintaining legacy compatibility with a rather buggy 1994 game by a relatively inexperienced Macintosh developer.</li>
+	<li><strong>Rescue (M1):</strong> Does what the Forge manual <a href="mapmaking101.html#forgeerrata">erroneously claims</a> the <strong>Rescue</strong> mission flag does. Remember to set at least one other mission type if you want this to have any significant impact on gameplay.</li>
+	<li><strong>Repair (M1):</strong> Like <strong>Repair</strong> except that the player must only activate one repair switch to successfully complete the mission. This raises the obvious question, &lsquo;Why would anyone program this into their game?&rsquo; The answer is that they probably wouldn&rsquo;t do it on purpose &ndash; unless they were maintaining legacy compatibility with a rather buggy 1994 game by a relatively inexperienced Macintosh developer.</li>
 </ul>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
-<h3 id="m1compatibility"><em>Marathon <span class="decimal">1</span></em> Compatibility Flags</h3>
+<h3 id="m1compatibility"><em>Marathon 1</em> Compatibility Flags</h3>
 
-All of these are found under <strong>Special</strong> &rightarrow; <strong>Level Parameters</strong> &rightarrow; <strong>M<span class="decimal">1</span> Compatibility</strong>.
+All of these are found under <strong>Special</strong> &rightarrow; <strong>Level Parameters</strong> &rightarrow; <strong>M1 Compatibility</strong>.
 
 <ul>
 	<li><strong>Glue:</strong> <strong>Superglue</strong>, <strong>Glue Trigger</strong>, and <strong>Glue</strong> (see <a href="#m1polygons">above</a>) only function if this is selected.</li>
 	<li><strong>Ouch Is Lava:</strong> Prevents monsters from leaving corpses on <strong>Minor Ouch</strong> or <strong>Major Ouch</strong> polygons if it&rsquo;s checked. (Those polygons will still damage players and monsters even if it isn&rsquo;t.)</li>
 	<li><strong>Use Song Index:</strong> Overrides the landscape collection selector with a number used to select a song index. I believe that, e.g., music index 0 <strong>must</strong> be stored at a path like <strong>Music/00.mp3</strong>, <strong>Music/00.ogg</strong>, <strong>Music/00.wav</strong>, or <strong>Music/00.aif</strong>, and to my knowledge, these are the only four audio formats that will work with this method of playing music. I strongly recommend using any other method instead.</li>
-	<li><strong>Terminals Stop Time:</strong> In the single-player game, game time will stop whenever the player is reading a terminal: oxygen won&rsquo;t deplete, monsters won&rsquo;t attack or move, the player won&rsquo;t even fall. In multiplayer games, this has no effect (because cooperative games literally do not exist in vanilla <em>Marathon <span class="decimal">1</span></em>, the game mode has no legacy compatibility requirements).</li>
+	<li><strong>Terminals Stop Time:</strong> In the single-player game, game time will stop whenever the player is reading a terminal: oxygen won&rsquo;t deplete, monsters won&rsquo;t attack or move, the player won&rsquo;t even fall. In multiplayer games, this has no effect (because cooperative games literally do not exist in vanilla <em>Marathon 1</em>, the game mode has no legacy compatibility requirements).</li>
 	<li><strong>Activation Range:</strong> Something to do with switch or monster activation, maybe? I can&rsquo;t find the reference for it right now. Watch this space.</li>
-	<li><strong>Weapon Behavior:</strong> On Total Carnage, walking over a weapon that the player already has will cause the player to undergo <em>M<span class="decimal">1</span></em>&rsquo;s fun equivalent of &lsquo;picking up&rsquo; the weapon. In reality, this actually overwrites the player&rsquo;s shot counter for that weapon with however many shots the new weapon would have had (which may or may not actually be greater than the player&rsquo;s current shot count, thanks to the alien weapon having random shot counts). The player will not actually be able to use any of this backlog of weapons.
+	<li><strong>Weapon Behavior:</strong> On Total Carnage, walking over a weapon that the player already has will cause the player to undergo <em>M1</em>&rsquo;s fun equivalent of &lsquo;picking up&rsquo; the weapon. In reality, this actually overwrites the player&rsquo;s shot counter for that weapon with however many shots the new weapon would have had (which may or may not actually be greater than the player&rsquo;s current shot count, thanks to the alien weapon having random shot counts). The player will not actually be able to use any of this backlog of weapons.
 		
-		<p>If this sounds extremely unfun (and against the purpose of a first-person <em>shooter</em>), you&rsquo;re right! It&rsquo;s a vanilla <em>Marathon <span class="decimal">1</span></em> bug. Please don&rsquo;t use this flag for anything that isn&rsquo;t a painstakingly accurate <em>Marathon <span class="decimal">1</span></em> remake (we&rsquo;re talking a &lsquo;didn&rsquo;t even touch the &ldquo;Colony Ship&rdquo; puzzle&rsquo; level of accuracy).</p></li>
+		<p>If this sounds extremely unfun (and against the purpose of a first-person <em>shooter</em>), you&rsquo;re right! It&rsquo;s a vanilla <em>Marathon 1</em> bug. Please don&rsquo;t use this flag for anything that isn&rsquo;t a painstakingly accurate <em>Marathon 1</em> remake (we&rsquo;re talking a &lsquo;didn&rsquo;t even touch the &ldquo;Colony Ship&rdquo; puzzle&rsquo; level of accuracy).</p></li>
 </ul>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
-<h2 id="8bitsoftware"><span class="decimal">8</span>-bit Software Mode</h1>
+<h2 id="8bitsoftware">8-bit Software Mode</h1>
 
-<p>Aleph One <span class="decimal">1.4</span> restored <span class="decimal">8</span>-bit software mode after it had been unavailable for over a decade. This causes potential havoc in territory related to both ShapeFusion (shapes sequences) and Atque (images files, map resources). I address the latter immediately below; see the ShapeFusion section further below for the former.</p>
+<p>Aleph One 1.4 restored 8-bit software mode after it had been unavailable for over a decade. This causes potential havoc in territory related to both ShapeFusion (shapes sequences) and Atque (images files, map resources). I address the latter immediately below; see the ShapeFusion section further below for the former.</p>
 	
 <h3 id="chapterscreens">Chapter Screens &amp; Sounds</h3>
 
-<p>Aleph One won&rsquo;t display a chapter screen in <span class="decimal">8</span>-bit software mode unless it has an associated CLUT resource sharing the chapter screen&rsquo;s resource ID. Make sure to include these if you care about <span class="decimal">8</span>-bit software mode at all. Chapter screens go from <span class="decimal">1500</span> (for level <span class="decimal">0</span>) to <span class="decimal">1599</span> (for the end screen or, God help us all, level <span class="decimal">99</span>). Add <span class="decimal">10,000</span> for &lsquo;<span class="decimal">24</span>-bit&rsquo; versions and (I found this one out the hard way &ndash; by noticing it after a scenario release) <span class="decimal">20,000</span> for &lsquo;<span class="decimal">32</span>-bit&rsquo; versions. (This effectively makes <span class="decimal">115</span>xx and <span class="decimal">215</span>xx unusable if you have a level xx &ndash; but I&rsquo;m not sure if Aleph One will ever display the <span class="decimal">115</span>xx picture when the <span class="decimal">215</span>xx exists, so if you use <span class="decimal">215</span>xx for the chapter screen, you might be able to get away with using <span class="decimal">115</span>xx for a terminal picture.)</p>
+<p>Aleph One won&rsquo;t display a chapter screen in 8-bit software mode unless it has an associated CLUT resource sharing the chapter screen&rsquo;s resource ID. Make sure to include these if you care about 8-bit software mode at all. Chapter screens go from 1500 (for level 0) to 1599 (for the end screen or, God help us all, level 99). Add 10,000 for &lsquo;24-bit&rsquo; versions and (I found this one out the hard way &ndash; by noticing it after a scenario release) 20,000 for &lsquo;32-bit&rsquo; versions. (This effectively makes 115xx and 215xx unusable if you have a level xx &ndash; but I&rsquo;m not sure if Aleph One will ever display the 115xx picture when the 215xx exists, so if you use 215xx for the chapter screen, you might be able to get away with using 115xx for a terminal picture.)</p>
 	
-<p>Also, if there&rsquo;s an associated sound sharing the <span class="decimal">15</span>xx ID, Aleph One will play it. This includes ending screens (though Aleph One also plays the music file, so it&rsquo;s probably not worth including a sound <span class="decimal">1599</span> unless you plan for your scenario not to have opening music).</p>
+<p>Also, if there&rsquo;s an associated sound sharing the 15xx ID, Aleph One will play it. This includes ending screens (though Aleph One also plays the music file, so it&rsquo;s probably not worth including a sound 1599 unless you plan for your scenario not to have opening music).</p>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h3 id="8bitsoftwareimages">The Images File</h3>
 
-<p>The Images file should have at least images <span class="decimal">1100</span> and <span class="decimal">1101</span> (&lsquo;enabled&rsquo; and &lsquo;disabled&rsquo; versions of the main menu) and <span class="decimal">1700</span> (the vanilla HUD). It also needs CLUT resources with the same IDs. If it lacks images <span class="decimal">1100</span> and <span class="decimal">1101</span> (and their accompanying CLUTs), the menu will show up black if a player selects <span class="decimal">8</span>-bit software, and if they then quit the game, they&rsquo;ll either need to delete their scenario preferences or manually edit them to fix the graphics settings (on the very slim chance they even know how to do this) &ndash; which will effectively render the scenario unplayable for many players.</p>
+<p>The Images file should have at least images 1100 and 1101 (&lsquo;enabled&rsquo; and &lsquo;disabled&rsquo; versions of the main menu) and 1700 (the vanilla HUD). It also needs CLUT resources with the same IDs. If it lacks images 1100 and 1101 (and their accompanying CLUTs), the menu will show up black if a player selects 8-bit software, and if they then quit the game, they&rsquo;ll either need to delete their scenario preferences or manually edit them to fix the graphics settings (on the very slim chance they even know how to do this) &ndash; which will effectively render the scenario unplayable for many players.</p>
 
 <p>For full reference, the resources in Images correspond to the following:</p>
 
-<ul><li><strong><span class="decimal">1000</span>:</strong> Opening splash screen. If <span class="decimal">1001</span>, <span class="decimal">1002</span>, <span class="decimal">1003</span>, etc., are defined, the game subsequently displays each before loading the main menu. (Please don&rsquo;t overdo this.)</li>
-<li><strong><span class="decimal">1100</span>:</strong> &lsquo;Disabled&rsquo; main menu.</li>
-<li><strong><span class="decimal">1101</span>:</strong> &lsquo;Enabled&rsquo; main menu.</li>
-<li><strong><span class="decimal">1400</span>, <span class="decimal">1401</span>, <span class="decimal">1402</span>, etc.:</strong> Credits pages. The game loads as many consecutive resources as are defined.</li>
-<li><strong><span class="decimal">1700</span>:</strong> Default HUD.</li></ul>
+<ul><li><strong>1000:</strong> Opening splash screen. If 1001, 1002, 1003, etc., are defined, the game subsequently displays each before loading the main menu. (Please don&rsquo;t overdo this.)</li>
+<li><strong>1100:</strong> &lsquo;Disabled&rsquo; main menu.</li>
+<li><strong>1101:</strong> &lsquo;Enabled&rsquo; main menu.</li>
+<li><strong>1400, 1401, 1402, etc.:</strong> Credits pages. The game loads as many consecutive resources as are defined.</li>
+<li><strong>1700:</strong> Default HUD.</li></ul>
 
-<p>Add <span class="decimal">1,000</span> to each of these numbers for the &lsquo;<span class="decimal">24</span>-bit&rsquo; versions. It&rsquo;s ideal to have separate <span class="decimal">8</span>-bit and <span class="decimal">24</span>-bit versions, as IIRC, Photoshop and GIMP dither images much better than Aleph One does.</p>
+<p>Add 1,000 to each of these numbers for the &lsquo;24-bit&rsquo; versions. It&rsquo;s ideal to have separate 8-bit and 24-bit versions, as IIRC, Photoshop and GIMP dither images much better than Aleph One does.</p>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
@@ -438,28 +439,28 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 	</thead>
 	<tbody>
 		<tr>
-			<td class="integer"><strong>0&deg;</strong></td>
+			<td class="right"><strong>0&deg;</strong></td>
 			<td>East to west</td>
 			<td>Faces east</td>
 			<td>West to east</td>
 			<td>From west</td>
 		</tr>
 		<tr>
-			<td class="integer"><strong>90&deg;</strong></td>
+			<td class="right"><strong>90&deg;</strong></td>
 			<td>South to north</td>
 			<td>Faces south</td>
 			<td>South to north</td>
 			<td>From north</td>
 		</tr>
 		<tr>
-			<td class="integer"><strong>180&deg;</strong></td>
+			<td class="right"><strong>180&deg;</strong></td>
 			<td>West to east</td>
 			<td>Faces west</td>
 			<td>East to west</td>
 			<td>From east</td>
 		</tr>
 		<tr>
-			<td class="integer"><strong>270&deg;</strong></td>
+			<td class="right"><strong>270&deg;</strong></td>
 			<td>North to south</td>
 			<td>Faces north</td>
 			<td>North to south</td>
@@ -479,9 +480,9 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 	<li>ShapeFusion has most of <strong>Anvil</strong>&rsquo;s functionality, plus some functionality Anvil lacks (e.g. the ability to add new sound slots or alter the frames in a sequence). However, it lacks two major features:</li>
 		<ul>
 			<li>Anvil&rsquo;s help balloons. I have <a href="anvilhelp.html">compiled these with asides</a> that correct inaccuracies and provide updates where ShapeFusion differs from Anvil.</li>
-			<li>It can&rsquo;t create new physics models. The physics model that ships with <em>Infinity</em> is a <em>Marathon <span class="decimal">2</span></em> physics model and thus lacks SMG and VacBob slots, but <a href="https://simplici7y.com/items/default-infinity-physics-model-2" target="_blank">Simplici<span class="decimal">7</span>y</a> has a complete <em>Infinity</em> physics model.</li>
+			<li>It can&rsquo;t create new physics models. The physics model that ships with <em>Infinity</em> is a <em>Marathon 2</em> physics model and thus lacks SMG and VacBob slots, but <a href="https://simplici7y.com/items/default-infinity-physics-model-2" target="_blank">Simplici7</span>y</a> has a complete <em>Infinity</em> physics model.</li>
 		</ul>
-	<li>An annoying bug displays the <strong>Scale Factors</strong> of new frames as being above <span class="decimal">0</span>, but actually sets them to <span class="decimal">0</span>. The game doesn&rsquo;t display frames with <span class="decimal">0</span> scale factors (well, technically it still does, but because it&rsquo;s multiplying their sizes by <span class="decimal">0</span>, you won&rsquo;t ever see them). Be sure to fix this.</li>
+	<li>An annoying bug displays the <strong>Scale Factors</strong> of new frames as being above 0, but actually sets them to 0. The game doesn&rsquo;t display frames with 0 scale factors (well, technically it still does, but because it&rsquo;s multiplying their sizes by 0, you won&rsquo;t ever see them). Be sure to fix this.</li>
 	<li>A probably related bug results in fields not updating correctly when they lose focus in the frame editor. I recommend always tabbing out of any field you&rsquo;ve changed before switching to another frame &ndash; this will prevent the values you&rsquo;ve entered from being written to the wrong frame.</li>
 	<li>Yet another bug: If you overwrite a bitmap with another bitmap of a different size or proportion, you&rsquo;ll need to edit the <strong>Origin X</strong>, <strong>Origin Y</strong>, and <strong>Scale Factor</strong> of any frame that points to this bitmap. You can set them to a different value and then set them back to whatever they were, but you <em>will</em> need to edit them in some fashion for the frames that use bitmap to display with the correct proportion.</li>
 	<li>The copy command works with a monster definition on Windows if you have <em>the monster name</em> selected; you can then paste it if you have another monster name selected. This can be used to copy a monster definition to another slot or to copy a monster to another physics file. (The same principle applies for other parts of the physics file; e.g., to copy a weapon definition, select the weapon.) Alas, this doesn&rsquo;t currently appear to work on Mac. I have no idea if it works on Linux &ndash; try it!</li>
@@ -496,19 +497,19 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 <p>Palettes (also called <strong>CLUTs</strong>, short for <strong>Color Look-Up Tables</strong>, the name for these resources in MacOS&rsquo; resource fork in the classic OS) can pose particular problems. One particular issue occurs with non-standard CLUTs.</p>
 
 <ol>
-	<li>We&rsquo;re restricted to <span class="decimal">256</span> colors not just <em>within one palette</em> but <em>across all eight palettes within a collection</em>. If there are more than <span class="decimal">256</span>, then once it runs out, Aleph One will simply use the closest color it encounters among the first <span class="decimal">256</span>.</li>
-	<li>Aleph One counts colors that are imperceptibly different as separate colors. For instance, it regards #<span class="decimal">0100</span>FF (red <span class="decimal">1</span>, green <span class="decimal">0</span>, blue <span class="decimal">255</span>) as different from #0200FF (red <span class="decimal">2</span>, green <span class="decimal">0</span>, blue <span class="decimal">255</span>).</li>
+	<li>We&rsquo;re restricted to 256</span> colors not just <em>within one palette</em> but <em>across all eight palettes within a collection</em>. If there are more than 256</span>, then once it runs out, Aleph One will simply use the closest color it encounters among the first 256</span>.</li>
+	<li>Aleph One counts colors that are imperceptibly different as separate colors. For instance, it regards #0100</span>FF (red 1, green 0, blue 255</span>) as different from #0200FF (red 2, green 0, blue 255</span>).</li>
 	<li>Unlike Anvil (which tried to restrict itself to vanilla-safe colors unless you specifically enabled a setting to override this), ShapeFusion isn&rsquo;t guaranteed to use the same colors each time it creates a color ramp unless each ramp starts and ends with the same color and contains the same number of colors.</li>
 </ol>
 
-<p>It&rsquo;s a mess. Two ways to ensure you&rsquo;re getting the <span class="decimal">256</span> colors you want:</p>
+<p>It&rsquo;s a mess. Two ways to ensure you&rsquo;re getting the 256</span> colors you want:</p>
 
 <ol>
-	<li>Export all color tables in a collection to GIMP format (.gpl) and go through them with a fine-toothed comb. GIMP palettes are human-readable and can be edited in any text editor; each color is simply listed in RGB format, with values ranging from <span class="decimal">0</span> to <span class="decimal">255</span> for all three colors. After weeding out the unwanted near-identical colors across palettes, save and reimport.</li>
-	<li>Simply use all <span class="decimal">256</span> colors you want in CLUT <span class="decimal">0</span> and rearrange them as desired in the others if needed. Be warned, however, that ShapeFusion currently has no option to reduce the number of colors per CLUT, should you decide you want fewer. You&rsquo;d currently need to open the shapes file in Anvil or Hakvil (using an emulator or a classic Mac) and adjust the palettes there.</li>
+	<li>Export all color tables in a collection to GIMP format (.gpl) and go through them with a fine-toothed comb. GIMP palettes are human-readable and can be edited in any text editor; each color is simply listed in RGB format, with values ranging from 0 to 255</span> for all three colors. After weeding out the unwanted near-identical colors across palettes, save and reimport.</li>
+	<li>Simply use all 256</span> colors you want in CLUT 0 and rearrange them as desired in the others if needed. Be warned, however, that ShapeFusion currently has no option to reduce the number of colors per CLUT, should you decide you want fewer. You&rsquo;d currently need to open the shapes file in Anvil or Hakvil (using an emulator or a classic Mac) and adjust the palettes there.</li>
 </ol>
 
-<p>Note that using non-vanilla palettes causes <span class="decimal">8</span>-bit software mode to look very, very stupid, in case anyone even cares about that in a scenario created in <span class="decimal">2023</span>. I don&rsquo;t actually know how it selects the colors for that.</p>
+<p>Note that using non-vanilla palettes causes 8-bit software mode to look very, very stupid, in case anyone even cares about that in a scenario created in 2023</span>. I don&rsquo;t actually know how it selects the colors for that.</p>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
@@ -516,36 +517,38 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 
 <p><em>Marathon</em> counts the first three colors of each CLUT as transparent, whether you want it to or not. Why does it need three? Why not just one? In all likelihood, only Jason Jones might be able to answer this question, assuming he even remembers the answer. This poses problems with custom landscape CLUTs. Why do landscapes even have transparency? Another question Jason Jones probably doesn&rsquo;t recall the answer to. The first three colors in a landscape CLUT are still considered transparent, and in OpenGL mode, <em>Marathon</em> changes anything it regards as transparent to show up as white.</p>
 
-<p>As a result, for all practical purposes, landscape CLUTs are restricted to <span class="decimal">253</span> colors, so when generating landscape CLUTs, you must account for transparency and fill the CLUT&rsquo;s first three colors with garbage that won&rsquo;t show up in the landscape. Alternately (in Photoshop), you can:</p>
+<p>As a result, for all practical purposes, landscape CLUTs are restricted to 253</span> colors, so when generating landscape CLUTs, you must account for transparency and fill the CLUT&rsquo;s first three colors with garbage that won&rsquo;t show up in the landscape. Alternately (in Photoshop), you can:</p>
 
 <ol>
-<li>Convert to <span class="decimal">253</span>-color indexed color.</li>
-<li>Convert back to RGB.</li>
-<li>Using <strong>Forced &gt; Custom</strong> with #<span class="decimal">0000</span>FF, #FF<span class="decimal">00</span>FF, and #<span class="decimal">00</span>FFFF, convert to <span class="decimal">256</span>-color indexed color.</li>
-<li>Export the new CLUT.</li>
+	<li>Convert to 253</span>-color indexed color.</li>
+	<li>Convert back to RGB.</li>
+	<li>Using <strong>Forced &gt; Custom</strong> with #0000</span>FF, #FF00</span>FF, and #00</span>FFFF, convert to 256</span>-color indexed color.</li>
+	<li>Export the new CLUT.</li>
 </ol>
 
-<p>Either way. (I don&rsquo;t use GIMP, but I&rsquo;m guessing you can do something similar by making a <span class="decimal">253</span>-color bitmap, exporting the CLUT, and editing it in a text editor.)</p>
+<p>Either way. (I don&rsquo;t use GIMP, but I&rsquo;m guessing you can do something similar by making a 253</span>-color bitmap, exporting the CLUT, and editing it in a text editor.)</p>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="sequencetiming">Sequence Timing &amp; Film Compatibility</h2>
 
-<ul><li>Ideally, &lsquo;Transfer mode period&rsquo; should equal &lsquo;Frames per view&rsquo; times &lsquo;Number of frames&rsquo;.</li>
-
-<li>Changing a sequence&rsquo;s timing, loop frame, or key frame can desync films. (Probably obvious.)</li>
-
-<li>Another surprising factor affecting film sync: &lsquo;Display a random frame&rsquo; (even if only one frame is defined) is different from &lsquo;Animation with <span class="decimal">1</span> view&rsquo; (or any other number). Altering this alters the PRNG when the game loads maps, since it runs the PRNG for each sequence that uses &lsquo;Display a random frame&rsquo;, even if it only has one frame. Thus, changing a sequence from or to &lsquo;Display a random frame&rsquo; desyncs old films made with the same shapes. (I haven&rsquo;t tested whether this also desyncs network games.)</li></ul>
+<ul>
+	<li>Ideally, &lsquo;Transfer mode period&rsquo; should equal &lsquo;Frames per view&rsquo; times &lsquo;Number of frames&rsquo;.</li>
+	<li>Probably obvious: Changing a sequence&rsquo;s timing, loop frame, or key frame can and almost certainly will desync films and network games.</li>
+	<li>Probably <em>not</em> obvious: Changing either the number of frames or the duration thereof is also likely to desync films and network games, <em><strong>even if the &lsquo;transfer mode period&rsquo; remains unchanged!</strong></em> There are several off-by-one errors in this game&rsquo;s source code, and it&rsquo;d require a deep dive into the game source code to describe all the arcane rules one would have to obey to avoid causing issues.</li>
+	<li>Also not obvious: Sequences with more than fifteen frames tend to have all sorts of errors, and I strongly recommend against using them. Weirdly, texture animations specified with MML are an exception here; they can have as many frames as you want.</li>
+	<li>Another surprising factor affecting film sync: &lsquo;Display a random frame&rsquo; (even if only one frame is defined) is different from &lsquo;Animation with 1 view&rsquo; (or any other number). Altering this alters the PRNG when the game loads maps, since it runs the PRNG for each sequence that uses &lsquo;Display a random frame&rsquo;, even if it only has one frame. Thus, changing a sequence from or to &lsquo;Display a random frame&rsquo; desyncs old films made with the same shapes. (I haven&rsquo;t tested whether this also desyncs network games.)</li>
+</ul>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="weaponsinhand">&lsquo;Weapons in Hand&rsquo; Sequences</h2>
 
-<p>For years, Aleph One didn&rsquo;t have <span class="decimal">8</span>-bit software mode, so &lsquo;<span class="decimal">8</span>-bit color&rsquo; and &lsquo;true color&rsquo; sequences being out of alignment wasn&rsquo;t a problem. Aleph One 1.4 restored it, so it&rsquo;s worth taking note if a sequence is present in one and not the other. A physics model calling said sequence in 8-bit software mode will crash Aleph One (or cause an assertion failure; I forget which, but either way, it closes the game). Plus, if a sequence has a different timing between the two versions of a collection, it&rsquo;ll desync films and may desync network games if one player uses <span class="decimal">8</span>-bit software mode and the other doesn&rsquo;t.</p>
+<p>For years, Aleph One didn&rsquo;t have 8-bit software mode, so &lsquo;8-bit color&rsquo; and &lsquo;true color&rsquo; sequences being out of alignment wasn&rsquo;t a problem. Aleph One 1.4 restored it, so it&rsquo;s worth taking note if a sequence is present in one and not the other. A physics model calling said sequence in 8-bit software mode will crash Aleph One (or cause an assertion failure; I forget which, but either way, it closes the game). Plus, if a sequence has a different timing between the two versions of a collection, it&rsquo;ll desync films and may desync network games if one player uses 8-bit software mode and the other doesn&rsquo;t.</p>
 
-<p>As tempting as it is to tell players not to use <span class="decimal">8</span>-bit software mode, some will inevitably disregard it out of ignorance, and others out of pure spite (insert out-of-context &lsquo;Killing in the Name&rsquo; quote here). The best solution is to make sure each sequence in both versions has the same sequence type, frames per view, ticks per frame, loop frame, key frame, transfer mode period, and frame sound, then update one anytime you update the other.</p>
+<p>As tempting as it is to tell players not to use 8-bit software mode, some will inevitably disregard it out of ignorance, and others out of pure spite (insert out-of-context &lsquo;Killing in the Name&rsquo; quote here). The best solution is to make sure each sequence in both versions has the same sequence type, frames per view, ticks per frame, loop frame, key frame, transfer mode period, and frame sound, then update one anytime you update the other.</p>
 
-<p>By default, the only other collections with &lsquo;true color&rsquo; versions are the landscape palettes, and it&rsquo;s very rare (though not unthinkable) for something to call one of the sequences in these (assuming any are even defined). I think a classic Mac utility could create &lsquo;true color&rsquo; versions of other collections (all <span class="decimal">32</span> collections can have them; it&rsquo;s just that, by default, only the Weapons in Hand and Landscapes did), and if a shapes file had these, their sequences should align between &lsquo;<span class="decimal">8</span>-bit&rsquo; and &lsquo;true color&rsquo; wherever they&rsquo;re defined.</p>
+<p>By default, the only other collections with &lsquo;true color&rsquo; versions are the landscape palettes, and it&rsquo;s very rare (though not unthinkable) for something to call one of the sequences in these (assuming any are even defined). I think a classic Mac utility could create &lsquo;true color&rsquo; versions of other collections (all 32</span> collections can have them; it&rsquo;s just that, by default, only the Weapons in Hand and Landscapes did), and if a shapes file had these, their sequences should align between &lsquo;8-bit&rsquo; and &lsquo;true color&rsquo; wherever they&rsquo;re defined.</p>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
@@ -554,36 +557,36 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 <p>I&rsquo;ve split several sections off onto their own pages. Please update your links accordingly:</p>
 
 <ul>
-	<li>I&rsquo;ve moved <strong id="circles">Circles and the Custom Grid</strong> and its subsection <strong id="radii">Radii and Rotations for <span class="decimal">1</span> WU-long Sides with Regular Polygons</strong> to <a href="marathoncircles.html" class="url">aaronfreed.github.io/marathoncircles.html</a>.</li>
-	<li><strong id="mapcomplexity">Map Complexity: A Case Study</strong> has moved to <a href="mapcomplexity.html" class="url">aaronfreed.github.io/mapcomplexity.html</a>.
+	<li><a href="marathoncircles.html" id="circles">Circles and the Custom Grid</a>, including its subsection <strong id="radii">Radii and Rotations for 1 WU-long Sides with Regular Polygons</strong>.</li>
+	<li><a href="mapcomplexity.html" id="mapcomplexity">Map Complexity: A Case Study</a>
 		<ul>
-			<li>I wrote a follow-up, <strong>Reducing Map Index Use</strong> (<a href="mapindexreduction.html" class="url">aaronfreed.github.io/mapindexreduction.html</a>), partway through splitting up this page.</li>
+			<li>I wrote a follow-up, <a href="mapindexreduction.html">Reducing Map Index Use</a>, partway through splitting up this page.</li>
 		</ul>
 	</li>
-	<li>The <strong id="sounds"><span id="sounds-general"></span><span id="soundids"></span><span id="soundsources"></span>Sounds</strong> section has moved to <a href="marathonsounds.html" class="url">aaronfreed.github.io/marathonsounds.html</a>.</li>
-	<li><strong id="anvilhelp">The Annotated Anvil Help Balloons</strong> has moved to <a href="anvilhelp.html" class="url">aaronfreed.github.io/anvilhelp.html</a>. The following corollaries were very likely inevitable:
+	<li>The <a href="marathonsounds.html" id="sounds"><span id="sounds-general"></span><span id="soundids"></span><span id="soundsources"></span>Sounds</a> section, including <strong>Vanilla <em>Infinity</em> Sound ID List</strong> and <strong>Sound Sources</strong>.</li>
+	<li><a href="anvilhelp.html" id="anvilhelp">The Annotated Anvil Help Balloons</a>. The following corollaries were very likely inevitable:
 		<ul>
 			<li><strong id="forgemanual">The Annotated Forge Manual</strong>, which remains a work in progress, currently consists of:
 				<ul>
-					<li><a href="forgemanualcontents.html" class="url">aaronfreed.github.io/forgemanualcontents.html</a> &ndash; Detailed Table of Contents</li>
-					<li><a href="forgemanual.html" class="url">aaronfreed.github.io/forgemanual.html</a> &ndash; Intro, Key Definitions, Menus, Tools, Map Parameters</li>
-					<li><a href="forgetutorial1.html" class="url">aaronfreed.github.io/forgetutorial1.html</a> &ndash; Tutorial One: A Simple Two-Polygon Room</li>
+					<li><a href="forgemanualcontents.html" class="url">Detailed Table of Contents</a></li>
+					<li><a href="forgemanual.html" class="url">Intro, Key Definitions, Menus, Tools, Map Parameters</a></li>
+					<li><a href="forgetutorial1.html" class="url">Tutorial One: A Simple Two-Polygon Room</a></li>
 				</ul>
 			<li><strong>The Annotated Anvil Manual</strong> will, naturally, follow that.</li>
 			<li>I&rsquo;d like to remake the Forge tutorial videos for Weland. I don&rsquo;t know when I&rsquo;ll find time, but I&rsquo;d like to.</li>
 		</ul>
 	</li>
-	<li><strong id="defaultnames">Example DefaultNames.txt</strong> (see <a href="#ShapeFusion">reference</a> above) has moved to <a href="defaultnames.html" class="url">aaronfreed.github.io/defaultnames.html</a>.</p>
-	<li><strong id="looper">Looping Music</strong> has moved to <a href="marathonlooper.html" class="url">aaronfreed.github.io/marathonlooper.html</a> (Aleph One 1.7 renders it mostly superfluous).</li>
-	<li>Another new appendix, <strong>Where Are Monsters in Marathon&hellip;Maps</strong>, examines what monsters appear in what <em>Marathon</em> trilogy levels to demonstrate an important game design paradox: sometimes decreasing variety <em>within</em> a small span of a game can <em>increase</em> variety <em>across</em> a much larger span of it (or all of it). It is found at <a href="marathonmonsters.html">aaronfreed.github.io/marathonmonsters.html</a>.</a></li>
+	<li><a href="defaultnames.html" id="defaultnames">Example DefaultNames.txt</a> (see <a href="#ShapeFusion">reference</a> above).</p>
+	<li><a href="marathonlooper.html" id="looper">Looping Music</a> (Aleph One 1.7 renders this mostly superfluous).</li>
+	<li>Another new appendix, <a href="marathonmonsters.html">Where Are Monsters in Marathon&hellip;Maps</a>, examines what monsters appear in what <em>Marathon</em> trilogy levels to demonstrate an important game design paradox: sometimes decreasing variety <em>within</em> a small span of a game can <em>increase</em> variety <em>across</em> a much larger span of it (or all of it).</a></li>
 </ul>
 
 <p>Additionally, to avoid duplicating content, I&rsquo;ve moved several sections to the <a href="mapmaking101.html">beginners&rsquo; mapmaking page</a>. Here are direct links to the relevant sections:</p>
 	<ul>
 		<li>I&rsquo;ve primarily split <strong id="resources">Resources</strong> across <a href="mapmaking101.html#editors" id="editors">Aleph One Content Editors</a> and <a href="mapmaking101.html#furtherreading">Further Reading</a>, with a small bit going into the <a href="mapmaking101.html#basics">Mapmaking Basics</a> section.
 			<ul>
-				<li><a href="mapmaking101.html#editorsm2i" id="resourcesa1">Aleph One Content Editing (<em>Marathon <span class="decimal">2</span></em>/<em>Infinity</em> Format)</a></li>
-				<li><a href="mapmaking101.html#editorsm1" id="resourcesm1"><em>Marathon <span class="decimal">1</span></em> Content Editing for Aleph One</a></li>
+				<li><a href="mapmaking101.html#editorsm2i" id="resourcesa1">Aleph One Content Editing (<em>Marathon 2</em>/<em>Infinity</em> Format)</a></li>
+				<li><a href="mapmaking101.html#editorsm1" id="resourcesm1"><em>Marathon 1</em> Content Editing for Aleph One</a></li>
 				<li>I&rsquo;ve also split <strong id="tutorialsother">Other Tutorials &amp; Resources</strong>:
 					<ul>
 						<li><a href="mapmaking101.html#startertutorials">Tutorials &amp; Resources for Beginning Mapmakers</a></li>
@@ -596,15 +599,15 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 		<li><a href="mapmaking101.html#welandsetup" id="welandsetup">Weland Setup</a>
 			<ul>
 				<li><a href="mapmaking101.html#welandpreferences" id="welandpreferences">Configuring Weland&rsquo;s Preferences</a></li>
-				<li><a href="mapmaking101.html#visualmodemac" id="visualmodemac">Installing Visual Mode &amp; Vasara (MacOS)</a></li>
-				<li><a href="mapmaking101.html#visualmodewin" id="visualmodewinlin">Installing Visual Mode &amp; Vasara (Windows)</a></li>
+				<li><a href="mapmaking101.html#visualmodemac" id="visualmodemac">Installing Visual Mode, Vasara, &amp; VAF (MacOS)</a></li>
+				<li><a href="mapmaking101.html#visualmodewin" id="visualmodewinlin">Installing Visual Mode, Vasara, &amp; VAF (Windows)</a></li>
 				<li><a href="mapmaking101.html#visualmodepreferences" id="visualmodepreferences">Configuring Weland!Aleph One</a></li>
 			</ul>
 		</li>
 		<li><a href="mapmaking101.html#forgeerrata" id="forgeerrata">Forge Manual Errata &amp; Omissions</a></li>
-		<li><a href="mapmaking101.html#texturingissues" id="texturingissues">Texturing Issues in Visual Mode.lua and Vasara</a>
+		<li><a href="mapmaking101.html#texturingissues" id="texturingissues">Texturing Issues in Visual Mode.lua, Vasara, &amp; VAF</a>
 			<ul>
-				<li><a href="mapmaking101.html#vasaratexturing" id="vasaratexturing">Further Texturing Issues in Vasara</a></li>
+				<li><a href="mapmaking101.html#vasaratexturing" id="vasaratexturing">Further Texturing Issues in Vasara &amp; VAF</a></li>
 			</ul>
 		</li>
 	</ul>
@@ -630,13 +633,13 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 	
 <!--<h1 id="bio">Who are you and what qualifies you to write this?</h1>
 
-	<p>I&rsquo;m Aaron; I&rsquo;m likely best-known in the community for co-directing <em><a href="http://eternal.bungie.org/development" target="_blank">Eternal</a></em>, though I&rsquo;ve also worked in some capacity (not always mapping-related) on current and forthcoming mods like <em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em>, <em><a href="https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors" target="_blank">Hellpak</a></em>, <em>Tempus Irae Redux</em>, <em>Where Monsters Are in Dreams</em>, <em>Marathon Chronicles</em>&hellip;basically, I&rsquo;ve been busy mapping for this engine off and on since about <span class="decimal">1997</span>, during which I&rsquo;ve acquired all kinds of stupid arcane knowledge about it. Have you ever heard of ambient light delta? Neither had Aleph One&rsquo;s developers until I pointed it out. I&rsquo;m not saying that because I think it&rsquo;s worth being proud of having acquired so much useless and pointless knowledge, but what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me&hellip; oh, sorry, that&rsquo;s <em>Taken</em>. Anyway, I feel Aleph One content creation should have a lower barrier to entry, so here&rsquo;s an attempt to create a reference for solutions to some of its frustrating problems.</p>
+	<p>I&rsquo;m Aaron; I&rsquo;m likely best-known in the community for co-directing <em><a href="http://eternal.bungie.org/development" target="_blank">Eternal</a></em>, though I&rsquo;ve also worked in some capacity (not always mapping-related) on current and forthcoming mods like <em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em>, <em><a href="https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors" target="_blank">Hellpak</a></em>, <em>Tempus Irae Redux</em>, <em>Where Monsters Are in Dreams</em>, <em>Marathon Chronicles</em>&hellip;basically, I&rsquo;ve been busy mapping for this engine off and on since about 1997</span>, during which I&rsquo;ve acquired all kinds of stupid arcane knowledge about it. Have you ever heard of ambient light delta? Neither had Aleph One&rsquo;s developers until I pointed it out. I&rsquo;m not saying that because I think it&rsquo;s worth being proud of having acquired so much useless and pointless knowledge, but what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me&hellip; oh, sorry, that&rsquo;s <em>Taken</em>. Anyway, I feel Aleph One content creation should have a lower barrier to entry, so here&rsquo;s an attempt to create a reference for solutions to some of its frustrating problems.</p>
 
 	<p>You may also be interested in my <a href="soundtracks.html"><em>Marathon</em> soundtracks page</a>, which contains some technical information about remastering music and sounds that may be helpful to those working on sounds or music. A lot of my own creative work, much of which is <em>Marathon</em>-related, may be found on my <a href="discography.html">discography</a> and <a href="portfolio.html">portfolio</a> pages.</p>
 
 <h1 id="contact">Contact Info</h1>
 
-	<p>The fastest way to contact me is Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@aaron6608</strong> (or <strong>@Aaron#<span class="decimal">6608</span></strong>), though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I recommend this only if you notice errors/omissions in this document (or have suggestions for additions; if you remind me, I can credit you for any of the above). If you need help, I recommend asking in <strong>#classic-marathon</strong>, <span id="ftnt_ref02" class="dotted" title="Which, despite carrying the name of a program hardly anyone has actively used for fifteen years, is meant for all map, physics, shapes, and sound creation for the Marathon trilogy."></span><strong>#forge</strong><a href="#ftnt02">&#8317;&sup2;&#8318;</a></span>, or <strong>#tech-support</strong>. (<strong>#development</strong> is intended only for engine and editor development, so unless you&rsquo;re specifically discussing Vasara AF, you should probably ping me in one of the other three channels.)</p>
+	<p>The fastest way to contact me is Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@aaron6608</strong> (or <strong>@Aaron#6608</span></strong>), though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I recommend this only if you notice errors/omissions in this document (or have suggestions for additions; if you remind me, I can credit you for any of the above). If you need help, I recommend asking in <strong>#classic-marathon</strong>, <span id="ftnt_ref02" class="dotted" title="Which, despite carrying the name of a program hardly anyone has actively used for fifteen years, is meant for all map, physics, shapes, and sound creation for the Marathon trilogy."></span><strong>#forge</strong><a href="#ftnt02">&#8317;&sup2;&#8318;</a></span>, or <strong>#tech-support</strong>. (<strong>#development</strong> is intended only for engine and editor development, so unless you&rsquo;re specifically discussing Vasara AF, you should probably ping me in one of the other three channels.)</p>
 	
 	<p>I&rsquo;m also on GitHub as <a href="https://github.com/aaronfreed" target="_blank">aaronfreed</a>, naturally. You can <a href="https://github.com/aaronfreed/aaronfreed.github.io/issues/" target="_blank">create an issue</a>, <a href="https://github.com/aaronfreed/aaronfreed.github.io/pulls" target="_blank">submit a pull request</a>, or <a href="https://github.com/aaronfreed/aaronfreed.github.io/discussions" target="_blank">start a discussion</a>. I do ask that users be respectful (both of me and of others) and note that I maintain this page on my own time, for free, while also juggling multiple active development projects that I&rsquo;m also working on, also for free. The <a href="https://github.com/aaronfreed/aaronfreed.github.io/discussions/1" target="_blank">rules I outline for my discussion section</a> apply equally well to issues and pull requests.</p>
 
@@ -661,7 +664,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 	<tbody>
 		<tr>
 			<td class="integer"><a href="#ftnt_ref01" id="ftnt01" class="noprintlink"><strong>1</strong></a></td>
-			<td>What, you don&rsquo;t have a third hand? Then you must not be Zaphod Beeblebrox.</td>
+			<td>What, you don&rsquo;t have a third hand? I guess your name isn&rsquo;t &ldquo;Zaphod Beeblebrox&rdquo;.</td>
 		</tr>
 <!--		<tr>
 			<td class="integer"><a href="#ftnt_ref02" id="ftnt02"><strong>2</strong></a></td>

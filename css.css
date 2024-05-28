@@ -12,10 +12,13 @@
 	--portfolio-heading: #2f5496;
 	--toc-counter: #004c80;
 	--main: #000;
-	--lightest: 100;
-	--medium: 300;
-	--bold: 500;
-	--boldest: 700;
+	--lightest: 200;
+	--lighter: 300;
+	--light: 400;
+	--medium: 500;
+	--bold: 600;
+	--bolder: 700;
+	--boldest: 800;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -154,7 +157,7 @@
 	local(Avenir),
 	local('Calibri Light');
 	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
-	font-weight: var(--lightest);
+	font-weight: var(--lighter);
 }
 @font-face {
 	font-family: 'Numberwang';
@@ -184,23 +187,24 @@
 /* start main entry */
 body {
 	width: 800px;
-	font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "Fira Sans", "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 	text-align: justify;
 	margin: auto;
-	font-weight: var(--lightest);
+	font-weight: var(--lighter);
 	font-stretch: 100%;
 	background-color: var(--background);
 	color: var(--main);
 }
 .normal, button {
-	font-family: "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "Fira Sans", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-weight: var(--lighter)
 }
 .soundtracks strong,
 .soundtracks a:link,
 .soundtracks a:visited,
 .soundtracks :where(h1, h2, h3, h4) {
 	font-weight: var(--bold);
-	font-family: "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "Fira Sans", "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 }
 
 /* link stuff */
@@ -222,6 +226,16 @@ a:active {
 }
 
 /* define font weights */
+.light {
+	font-weight: var(--lightest);
+}
+.light :where(strong, .bold, a:link, a:visited) {
+	font-weight: var(--light);
+}
+.light :where(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) {
+	font-weight: var(--bolder);
+}
+
 strong,
 a:link,
 a:visited,
@@ -230,35 +244,27 @@ a:visited,
 .light :where(strong, .bold, a:link, a:visited) :where(.integer, .decimal, .number, .date),
 :where(.bold, strong, a:link, a:visited) :where(.integer, .decimal, .number, .date),
 :where(.integer, .decimal, .number, .date) :where(.bold, strong, a:link, a:visited) {
-	font-weight: var(--bold);
-}
-.light :where(strong, .bold, a:link, a:visited) {
-	font-weight: var(--medium);
+	font-weight: var(--light);
 }
 
-.bold strong,
-.strong a:link,
-.strong a:visited,
-a:link strong,
-a:visited .strong,
 :is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited),
 :is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) :where(.integer, .decimal, .number, .date),
 ol.toc > :where(a:link, a:visited) :where(.integer, .decimal)
 {
-	font-weight: var(--boldest);
-}
-ol.toc > li > ol > li > ol :where(.integer, .decimal) {
-	font-family: "Corbel", "Avenir", "Calibri", monospace;
 	font-weight: var(--medium);
 }
-.light {
-	font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-	font-weight: var(--lightest);
+
+:is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited)
+{
+	font-weight: var(--bold);
+}
+
+ol.toc > li > ol > li > ol :where(.integer, .decimal) {
+	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", monospace;
 }
 .light .integer:not(a:link, a:visited, a:hover, a:active),
 .light .decimal:not(a:link, a:visited, a:hover, a:active) {
-	font-family: "Corbel", "Avenir", "Calibri", monospace;
-	font-weight: var(--lightest);
+	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", monospace;
 }
 
 .italic {
@@ -273,7 +279,7 @@ h4,
 h5
 {
 	margin: 12px 0px;
-	font-weight: var(--boldest);
+	font-weight: var(--bolder);
 	color: var(--heading-color);
 }
 .music h1 {
@@ -335,9 +341,9 @@ h5
 	color: var(--portfolio-heading);
 	margin: 0px 0px 8px;
 }
-.portfolio h5.light {font-weight: var(--lightest);}
-.portfolio h5.light strong {font-weight: var(--bold);}
-.portfolio h5.light strong strong {font-weight: var(--boldest);}
+.portfolio h5.light {font-weight: var(--lighter);}
+.portfolio h5.light strong {font-weight: var(--light);}
+.portfolio h5.light strong strong {font-weight: var(--medium);}
 
 /* paragraph, div, and list stuff */
 div,
@@ -377,9 +383,6 @@ ul,
 ol {
 	margin: 4px 0px 4px 30px;
 	padding: 0px;
-}
-ol li::marker {
-	font-family: "Corbel", "Avenir", "Calibri", monospace;
 }
 
 .music li,
@@ -422,22 +425,29 @@ ol li::marker {
 }
 
 /* table of contents. this one is a doozy */
-ol.toc, .toc ol {
+ol.toc,
+.toc ol,
+ol.toclite,
+.toclite ol {
 	counter-reset: item;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-.toc li {
+.toc li,
+.toclite li {
 	display: block;
 	margin-top: 4px;
 	margin-bottom: 4px;
-	font-weight: var(--lightest);
+	font-weight: var(--lighter);
+	line-height: 125%;
 }
 .toc a:link,
-.toc a:visited {
-	font-weight: var(--lightest);
+.toc a:visited,
+.toclite a:link,
+.toclite a:visited {
+	font-weight: var(--lighter);
 }
-.toc li:before {
+:is(.toc, .toclite) li:before {
 	content: "{" counters(item, ".")"} ";
 	counter-increment: item;
 	color: var(--toc-counter);
@@ -445,44 +455,66 @@ ol.toc, .toc ol {
 ol.toc :is(li, li a:link, li a:visited) {
 	font-weight: var(--boldest);
 }
-ol.toc li:before {
+ol.toclite :is(li, li a:link, li a:visited) {
+	font-weight: var(--medium);
+}
+:is(ol.toc, ol.toclite) li:before {
 	content: "(" counters(item, ".")") ";
 	counter-increment: item;
 	color: var(--toc-counter);
-	font-weight: var(--boldest);
-	font-family: "Corbel", "Avenir", "Calibri";
+	font-family: "Fira Sans", "Corbel", "Avenir", "Calibri";
+}
+ol.toc li:before {
+	font-weight: var(--bolder);
+}
+ol.toclite li:before {
+	font-weight: var(--medium);
 }
 ol.toc ol :is(li, li a:link, li a:visited) {
 	font-weight: var(--bold);
 }
-ol.toc ol li:before {
+ol.toclite ol :is(li, li a:link, li a:visited) {
+	font-weight: var(--light);
+}
+:is(ol.toc, ol.toclite) ol li:before {
 	content: "[" counters(item, ".")"] ";
 	counter-increment: item;
 	color: var(--toc-counter);
+	font-family: "Fira Sans", "Corbel", "Avenir", "Calibri";
+}
+ol.toc ol li:before {
 	font-weight: var(--bold);
-	font-family: "Corbel", "Avenir", "Calibri";
+}
+ol.toclite ol li:before {
+	font-weight: var(--light);
 }
 ol.toc ol ol :is(li, li a:link, li a:visited) {
-	font-weight: var(--medium);
+	font-weight: var(--light);
+}
+ol.toclite ol ol :is(li, li a:link, li a:visited) {
+	font-weight: var(--lightest);
 }
 ol.toc ol ol li:before {
 	content: "{" counters(item, ".")"} ";
 	counter-increment: item;
 	color: var(--toc-counter);
-	font-weight: var(--medium);
-	font-family: "Corbel", "Avenir", "Calibri";
+	font-family: "Fira Sans", "Corbel", "Avenir", "Calibri";
+}
+ol.toc ol ol li:before {
+	font-weight: var(--light);
+}
+ol.toclite ol ol li:before {
+	font-weight: var(--lightest);
 }
 ol.toc ol ol ol :is(li, li a:link, li a:visited) {
-	font-weight: var(--lightest);
-	font-style: italic;
+	font-weight: var(--lighter);
 }
 ol.toc ol ol ol li:before {
 	content: "⟨" counters(item, ".")"⟩ ";
 	counter-increment: item;
 	color: var(--toc-counter);
-	font-weight: var(--lightest);
-	font-family: "Corbel", "Avenir", "Calibri";
-	font-style: normal;
+	font-weight: var(--lighter);
+	font-family: "Fira Sans", "Corbel", "Avenir", "Calibri";
 }
 ol li.light:before, ol ol li.light:before, ol ol ol li.light:before {
 	font-weight: var(--lightest);
@@ -494,6 +526,7 @@ ol li.light:before, ol ol li.light:before, ol ol ol li.light:before {
 }
 .forgecontents ol.toc li {
 	font-size: 20px;
+	line-height: 125%;
 }
 .forgecontents ol.toc li:before {
 	counter-increment: i1;
@@ -511,6 +544,7 @@ ol li.light:before, ol ol li.light:before, ol ol ol li.light:before {
 .forgecontents ol.toc ol :is(li, li a:link, li a:visited) {
 	font-weight: var(--boldest);
 	font-size: 18px;
+	line-height: 125%;
 }
 .forgecontents ol.toc ol li:before {
 	font-weight: var(--boldest);
@@ -520,6 +554,7 @@ ol li.light:before, ol ol li.light:before, ol ol ol li.light:before {
 .forgecontents ol.toc ol ol {
 	counter-reset: i3;
 	font-weight: var(--boldest);
+	line-height: 125%;
 }
 .forgecontents ol.toc ol ol :is(li a:link, li a:visited, li)
 {
@@ -578,17 +613,17 @@ ol.nestednumbering {
 ol.nestednumbering > li > h1:before {
 	content: "" counters(item, ".")" \00B7  ";
 	counter-increment: item;
-	font-family: "Corbel", "Avenir", "Calibri";
+	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri";
 }
 ol.nestednumbering > li > ol > li > h2:before {
 	content: "" counters(item, ".")" \00B7  ";
 	counter-increment: item;
-	font-family: "Corbel", "Avenir", "Calibri";
+	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri";
 }
 ol.nestednumbering > li > ol > li > ol > li > h3:before {
 	content: "" counters(item, ".")" \00B7  ";
 	counter-increment: item;
-	font-family: "Corbel", "Avenir", "Calibri";
+	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri";
 }
 ol.loweralpha {
 	list-style-type: lower-alpha;
@@ -642,7 +677,7 @@ th {
 }
 .music :where(td, th) {
 	vertical-align: top;
-	font-weight: lighter;
+	font-weight: var(--lighter);
 	text-align: justify;
 }
 .discography :where(td, th) {
@@ -670,7 +705,7 @@ thead {
 .endnotes :where(td, th) {
 	padding: 4px;
 	vertical-align: top;
-	font-weight: var(--lightest);
+	font-weight: var(--lighter);
 }
 
 textarea, button {
@@ -749,8 +784,8 @@ textarea {
 }
 .istoria :is(td, th) {
 	padding: 4px 12px;
-	font-family: "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-	font-weight: var(--lightest);
+	font-family: "Fira Sans", "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-weight: var(--lighter);
 	border: 1px solid var(--offset-level-4);
 }
 .istoria thead tr:nth-child(even) {
@@ -764,15 +799,15 @@ textarea {
 }
 .istoria thead tr:last-child {
 	background-color: var(--offset-level-2);
-	font-weight: var(--boldest);
+	font-weight: var(--bolder);
 }
 .istoria tfoot {
 	background-color: var(--offset-level-3);
 	font-size: 13px;
 }
 .istoria :where(td, th).topic {
-	font-family: "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-	font-weight: var(--bold);
+	font-family: "Fira Sans", "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-weight: var(--light);
 	text-align: right;}
 .istoria :where(td, th).location {
 	background-color: var(--offset-level-1);
@@ -790,7 +825,7 @@ textarea {
 	color: var(--offset-level-1);
 }
 .istoria .name {
-	font-weight: var(--bold);
+	font-weight: var(--medium);
 }
 
 /* it was a graveyard smash */
@@ -812,19 +847,18 @@ textarea {
 	border-left: 1px solid var(--offset-level-3);
 }
 .monstermash tr td:nth-child(1) {
-	font-family: "Corbel", "Avenir", "Calibri", monospace;
-	font-weight: 500;
+	font-weight: var(--light);
 	text-align: right;
 }
 .monstermash tr td:nth-child(2) {
-	font-weight: 500;
+	font-weight: var(--bold);
 }
 .monstermash table.endnotes td:nth-child(1) {
-	font-weight: 500;
+	font-weight: var(--light);
 	text-align: right;
 }
 .monstermash table.endnotes td:nth-child(2) {
-	font-weight: 100;
+	font-weight: var(--lighter);
 	text-align: justify;
 }
 /* i have no idea why this works this way but it does. css is a black art */
@@ -850,19 +884,23 @@ textarea {
 }
 .forgemanual blockquote {margin: 4px 30px;}
 
+
 .integer,
 .decimal,
 .number {
-	font-family: "Corbel", "Avenir", "Calibri", monospace;
+	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", monospace;
+}
+.discography .number, .discography .dr, .discography .date, .discography .accent {
+	font-family: inherit; font-weight: inherit;
 }
 .date, :where(td, th).date {
-	font-family: "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 	text-align: right;
 	white-space: nowrap;
 	font-weight: var(--bold);
 }
 .dr {
-	font-family: "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 	text-align: center;
 }
 
@@ -885,7 +923,7 @@ textarea {
 pre,
 code {
 	font-weight: var(--lightest);
-	font-size: 112.5%;
+	font-family: "Fira Mono", "Courier New", "Courier", monospace;
 }
 .defaultnames pre {
 	margin: 0px;

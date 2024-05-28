@@ -2,6 +2,7 @@
 <html lang="en-us">
 <head>
 	<title>The Annotated Anvil Help Balloons (with amendments, addenda, and asides for ShapeFusion)</title>
+	<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<script>
 function sortTable(table, col, reverse) {
@@ -50,7 +51,7 @@ window.onload = function () {makeAllSortable();};
 <p>The Anvil help balloons, collectively, make up one of three major Anvil features I&rsquo;m aware of that ShapeFusion does not currently replicate. The other two are:</p>
 
 <ol start="2">
-	<li>The ability to create a new <em>Marathon Infinity</em> physics model &ndash; the &ldquo;<em>Marathon Infinity</em>&rdquo; physics model included with <em>Marathon Infinity</em> is actually a <em>Marathon 2</em> physics model. The <em>actual</em> physics for <em>Marathon Infinity</em> are available <a href="https://simplici7y.com/items/default-infinity-physics-model-2/" target="_blank">on Simplici<span class="decimal">7</span>y</a>.</li>
+	<li>The ability to create a new <em>Marathon Infinity</em> physics model &ndash; the &ldquo;<em>Marathon Infinity</em>&rdquo; physics model included with <em>Marathon Infinity</em> is actually a <em>Marathon 2</em> physics model. The <em>actual</em> physics for <em>Marathon Infinity</em> are available <a href="https://simplici7y.com/items/default-infinity-physics-model-2/" target="_blank">on Simplici7y</a>.</li>
 	<li>&ldquo;Clone into Collection&rdquo; for Shapes files. See the relevant section at the end of this very document for ways to approximate this. (Advance warning: They both require a fair bit of tech savvy. Sorry.)</li>
 </ol>
 
@@ -59,7 +60,7 @@ window.onload = function () {makeAllSortable();};
 <p>My <a href="mapmaking101.html">beginners&rsquo; mapmaking page</a> and <a href="mapmaking.html">advanced mapmaking page</a> may provide more context for much of this.</p>
 
 <h1 id="contents">Table of Contents</h1>
-<ol class="toc">
+<ol class="toclite">
 	<li><a href="#physicsmodels">Physics Models</a>
 		<ol>
 			<li><a href="#anvilaliens">Aliens</a>
@@ -110,17 +111,17 @@ window.onload = function () {makeAllSortable();};
 						<ul>
 							<li><strong>Appearance:</strong> The appearance of a character is determined by a graphic collection index, a color table index, and a list of sequence IDs. Select each edit field for more information.
 								<ul>
-									<li><strong>Graphic Collection:</strong> The Graphic Collection must be a number between <span class="decimal">0</span> and <span class="decimal">31</span>. It indicates which collection of graphics in the Shapes file will be used to draw this character. To preview the graphics collections, open a Shapes file.</li>
-									<li><strong>Color Table:</strong> The Color Table must be a number between <span class="decimal">0</span> and the number of tables defined for this collection. It indicates which collection of colors will be used to draw this character. To preview the color tables and graphics, open a Shapes file.</li>
+									<li><strong>Graphic Collection:</strong> The Graphic Collection must be a number between 0 and 31. It indicates which collection of graphics in the Shapes file will be used to draw this character. To preview the graphics collections, open a Shapes file.</li>
+									<li><strong>Color Table:</strong> The Color Table must be a number between 0 and the number of tables defined for this collection. It indicates which collection of colors will be used to draw this character. To preview the color tables and graphics, open a Shapes file.</li>
 									<li><strong>Sequence IDs:</strong> Each type of character behavior may have a unique Sequence ID to describe the animation that Marathon should play during the character's action. To preview Sequences, open a Shapes file.
 										<ul>
-											<li><strong>Hit:</strong> This animation sequence will be played whenever the character takes damage from a projectile. To not display any animation when the character is hit, enter -<span class="decimal">1</span>.</li>
-											<li><strong>Hard Dying:</strong> This animation sequence will be played whenever the character's vitality falls below <span class="decimal">0</span> due to massive, or explosive, damage. When it completes, the character will become "Dead." To not display a Dying animation, enter -<span class="decimal">1</span>.</li>
-											<li><strong>Soft Dying:</strong> This animation sequence will be played whenever the character's vitality falls below <span class="decimal">0</span> due to non-explosive damage. When it completes, the character will become "Dead." To not display a Dying animation, enter -<span class="decimal">1</span>.</li>
-											<li><strong>Hard Dead:</strong> This animation sequence (which typically has only one frame) will be displayed at the location where the character dies (due to massive, or explosive, damage) until the level is cleared. If the character disappears when it dies, enter -<span class="decimal">1</span>.</li>
-											<li><strong>Soft Dead:</strong> This animation sequence (which typically has only one frame) will be displayed at the location where the character dies (due to non-explosive damage) until the level is cleared. If the character disappears when it dies, enter -<span class="decimal">1</span>.</li>
-											<li><strong>Stationary:</strong> This sequence will be played whenever the character remains stationary. You may not enter a -<span class="decimal">1</span> here.</li>
-											<li><strong>Moving:</strong> This sequence will be played whenever the character moves. You may not enter a -<span class="decimal">1</span> here.</li>
+											<li><strong>Hit:</strong> This animation sequence will be played whenever the character takes damage from a projectile. To not display any animation when the character is hit, enter &minus;1.</li>
+											<li><strong>Hard Dying:</strong> This animation sequence will be played whenever the character's vitality falls below 0 due to massive, or explosive, damage. When it completes, the character will become "Dead." To not display a Dying animation, enter &minus;1.</li>
+											<li><strong>Soft Dying:</strong> This animation sequence will be played whenever the character's vitality falls below 0 due to non-explosive damage. When it completes, the character will become "Dead." To not display a Dying animation, enter &minus;1.</li>
+											<li><strong>Hard Dead:</strong> This animation sequence (which typically has only one frame) will be displayed at the location where the character dies (due to massive, or explosive, damage) until the level is cleared. If the character disappears when it dies, enter &minus;1.</li>
+											<li><strong>Soft Dead:</strong> This animation sequence (which typically has only one frame) will be displayed at the location where the character dies (due to non-explosive damage) until the level is cleared. If the character disappears when it dies, enter &minus;1.</li>
+											<li><strong>Stationary:</strong> This sequence will be played whenever the character remains stationary. You may not enter a &minus;1 here.</li>
+											<li><strong>Moving:</strong> This sequence will be played whenever the character moves. You may not enter a &minus;1 here.</li>
 											<li><strong>Teleport In:</strong> This sequence will be played during the teleport-in action of the character. Marathon will add a teleport-in visual effect to the sequence.</li>
 											<li><strong>Teleport Out:</strong> This sequence will be played during the teleport-out action of the character. Marathon will add a teleport-out visual effect to the sequence.</li>
 										</ul>
@@ -137,21 +138,21 @@ window.onload = function () {makeAllSortable();};
 									<li><strong>Friendly Fire:</strong> This sound is played when one of the player's projectiles <em>[hits -Ed.]</em> the character.</li>
 									<li><strong>Flaming:</strong> This sound is played when the character dies from damage of type "Flame."</li>
 									<li><strong>Random:</strong> This sound will be played at random times depending on the random sound mask, below.</li>
-									<li><strong>Random Sound Mask:</strong> This value determines how often the character will play its random sound. It is a value between <span class="decimal">0</span> and <span class="decimal">31</span> where each unique power of <span class="decimal">2</span> increases the chance of playing the sound (so linearly increasing probabilities are <span class="decimal">1</span>,<span class="decimal">3</span>,<span class="decimal">7</span>,<span class="decimal">15</span>,<span class="decimal">31</span>)</li>
-									<li><strong>Sound Pitch:</strong> This value will pitch every sound played by the character. Enter <span class="decimal">1</span>.<span class="decimal">0</span> for normal playback, higher values for higher pitches, and lower values (greater than <span class="decimal">0</span>.<span class="decimal">0</span>) for lower pitches.</li>
+									<li><strong>Random Sound Mask:</strong> This value determines how often the character will play its random sound. It is a value between 0 and 31 where each unique power of 2 increases the chance of playing the sound (so linearly increasing probabilities are 1,3,7,15,31)</li>
+									<li><strong>Sound Pitch:</strong> This value will pitch every sound played by the character. Enter 1.0 for normal playback, higher values for higher pitches, and lower values (greater than 0.0) for lower pitches.</li>
 								</ul>
 							</li>
 						</ul>
 					<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
 					<li><h3 id="aliencombat">Combat Settings</h3>
 						<ul>
-							<li><strong>Attack Frequency:</strong> The attack frequency indicates how often the character will launch an attack (but not how many projectiles will be fired during that attack). The value measures the number of ticks between attacks (where <span class="decimal">1</span> tick = <span class="decimal">1</span>/<span class="decimal">30</span>th of a second).</li>
+							<li><strong>Attack Frequency:</strong> The attack frequency indicates how often the character will launch an attack (but not how many projectiles will be fired during that attack). The value measures the number of ticks between attacks (where 1 tick = 1/30th of a second).</li>
 							<li><strong>Melee Attack:</strong> The character will use its melee attack if it is within the melee attack range of the character and a melee attack exists (note that if the Chooses Weapon Randomly flag is checked the character will choose an attack at random).</li>
 							<li><strong>Ranged Attack:</strong> The character will use its ranged attack if it is not within the melee attack range of the character and a ranged attack exists (note that if the Chooses Weapon Randomly flag is checked the character will choose an attack at random).
 								<ul>
 									<li><strong>Type:</strong> The attack type corresponds to a projectile type (see the Shots section of the model) which will be created when the character attacks.</li>
 									<li><strong>Repetitions:</strong> When the attack is launched, the character will create a number of projectiles equal to the attack repetitions value. <em>[This varies depending on difficulty setting, as <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/Changes-Based-on-Difficulty">the Aleph One GitHub wiki</a> explains; the number of repetitions is halved on Kindergarten and Easy and reduced by one on Normal. Characters' alignment and the "Alien" setting appear to have no effect on this behavior. -Ed.]</em></li>
-									<li><strong>Error:</strong> The attack error will be added randomly in plus or minus degrees (out of <span class="decimal">512</span>) to each attack launched by the character.</li>
+									<li><strong>Error:</strong> The attack error will be added randomly in plus or minus degrees (out of 512) to each attack launched by the character.</li>
 									<li><strong>Range:</strong> The attack range is the maximum range at which the character will launch the attack, not the maximum range that the projectile may travel (the projectile's maximum range is determined by the projectile record; see the Shots section).</li>
 									<li><strong>Sequence ID:</strong> This sequence will be played during the character's attack; note that this sequence is also where the sound played during the attack is referenced. To review sequences, open a Shapes file.</li>
 									<li><strong>dx:</strong> The dx value will be added to the character's current position in the x-direction (left-to-right) to find the starting location of the attack projectile. <em>[As far as I can ascertain, this is incorrect, and the descriptions and labels for "dx" and "dy" should be swapped. -Ed.]</em></li>
@@ -164,9 +165,9 @@ window.onload = function () {makeAllSortable();};
 									<li><strong>Shrapnel Radius:</strong> The shrapnel radius acts like the area of effect of a projectile. Every character within the radius of the character when it dies will suffer the damage described below.</li>
 									<li><strong>Damage Type:</strong> The damage type must be specified so that immunities and weaknesses can be applied to whatever the shrapnel hits. To change immunities and weaknesses, edit the Monsters section of the model.</li>
 									<li><strong>Alien Damage:</strong> If the shrapnel damage is inflicted by the aliens, Marathon needs to know so that it can make the Kindergarten and Easy levels easier, and the Major Damage and Total Carnage levels harder. <em>[The latter part of this is incorrect &ndash; Alien damage does not increase above Normal. -Ed.]</em></li>
-									<li><strong>Base Damage:</strong> The damage base is the minimum amount of damage that will be applied to the target. A random amount between <span class="decimal">0</span> and the damage random (below) will also be applied.</li>
-									<li><strong>Random Damage:</strong> The damage base (above) is the minimum amount of damage that will be applied to the target. A random amount between <span class="decimal">0</span> and the damage random will also be applied. <em>[As far as I can tell, the game actually adds a random number from <span class="decimal">0</span> to (damage random - <span class="decimal">1</span>), inclusive, to the base damage; if damage random is 0, then it just ignores the field. -Ed.]</em></li>
-									<li><strong>Scale:</strong> The shrapnel damage scale should always be <span class="decimal">1</span>.<span class="decimal">0000</span>, if shrapnel is desired.</li>
+									<li><strong>Base Damage:</strong> The damage base is the minimum amount of damage that will be applied to the target. A random amount between 0 and the damage random (below) will also be applied.</li>
+									<li><strong>Random Damage:</strong> The damage base (above) is the minimum amount of damage that will be applied to the target. A random amount between 0 and the damage random will also be applied. <em>[As far as I can tell, the game actually adds a random number from 0 to (damage random - 1), inclusive, to the base damage; if damage random is 0, then it just ignores the field. -Ed.]</em></li>
+									<li><strong>Scale:</strong> The shrapnel damage scale should always be 1.0000, if shrapnel is desired.</li>
 								</ul>
 							</li>
 							<li><strong>Impact Effects:</strong> Impact effects are played when the character suffers damage from a projectile. The melee impact effect is used only for projectiles that have the 'melee' flag set.
@@ -184,21 +185,21 @@ window.onload = function () {makeAllSortable();};
 							<li><strong>Height:</strong> The height of the character measures how short a window in the map it can pass through and need not match the height of the graphic used to draw.</li>
 							<li><strong>Movement:</strong> The constants in this section determine how the character moves around the map.
 								<ul>
-									<li><strong>Speed:</strong> Characters always move at the same speed <em>[on the same difficulty setting if their "Alien" flag is set; on any difficulty setting if it isn't -Ed.]</em>. Note that to translate a player speed (as in a Physics record) to a character speed, multiply by <span class="decimal">512</span>.</li>
+									<li><strong>Speed:</strong> Characters always move at the same speed <em>[on the same difficulty setting if their "Alien" flag is set; on any difficulty setting if it isn't -Ed.]</em>. Note that to translate a player speed (as in a Physics record) to a character speed, multiply by 512.</li>
 									<li><strong>Terminal Velocity:</strong> The terminal velocity measures the maximum rate at which the character can move through space, as when falling.</li>
 									<li><strong>Gravity:</strong> The gravity field measures how quickly the character will fall when it is no longer suspended by its own motion.</li>
 									<li><strong>Min. Ledge Jump:</strong> The minimum ledge jump measures the largest downwards jump that the character will take willingly.</li>
 									<li><strong>Max. Ledge Jump:</strong> The maximum ledge jump measures the large upwards jump that the character can make.</li>
-									<li><strong>External Velocity Scale:</strong> The external velocity scale acts like inertial mass to determine how objects behave near explosions. <span class="decimal">0</span>.<span class="decimal">0</span> will cause objects to remain at rest after explosions, while <span class="decimal">1</span>.<span class="decimal">0</span> will make them act like fighters.</li>
+									<li><strong>External Velocity Scale:</strong> The external velocity scale acts like inertial mass to determine how objects behave near explosions. 0.0 will cause objects to remain at rest after explosions, while 1.0 will make them act like fighters.</li>
 									<li><strong>Hover Height:</strong> If the "Hovers" flag is set (see Behavior Constants), the character will hover at this height when moving.</li>
-									<li><strong>Door Retry Mask:</strong> This field determines how often the character will attempt to open doors. It is a value between <span class="decimal">0</span> and <span class="decimal">31</span> where each unique power of <span class="decimal">2</span> increases the chance of playing the sound (so linearly increasing probabilities are <span class="decimal">1</span>,<span class="decimal">3</span>,<span class="decimal">7</span>,<span class="decimal">15</span>,<span class="decimal">31</span>)</li>
+									<li><strong>Door Retry Mask:</strong> This field determines how often the character will attempt to open doors. It is a value between 0 and 31 where each unique power of 2 increases the chance of playing the sound (so linearly increasing probabilities are 1,3,7,15,31)</li>
 								</ul>
 							</li>
 							<li><strong>Perception:</strong> The constants in this section determine how well the character can detect and track other characters on the map.
 								<ul>
 									<li><strong>Visual Range:</strong> The visual range is maximum range at which the character can become aware of another character's presence on the map, assuming that the intervening polygons are lit. <em>[As far as I can tell, this is incorrect: its dependent clause should be struck and replaced with "if the character is not invisible." -Ed.]</em></li>
 									<li><strong>Dark Visual Range:</strong> The dark visual range is maximum range at which the character can become aware of another characters presence on the map, if the intervening polygons are not lit. <em>[As far as I can tell, this is also incorrect: its dependent clause should be struck and replaced with "if the character is invisible", just in case that wasn't already obvious from my previous note. -Ed.]</em></li>
-									<li><strong>Intelligence:</strong> Intelligence measures the maximum number of polygons through which the character "keep a lock" on an enemy character and continue to follow and attack it. <em>[Setting this above <span class="decimal">8</span> seems to cause some serious issues. Don't do it. -Ed.]</em></li>
+									<li><strong>Intelligence:</strong> Intelligence measures the maximum number of polygons through which the character "keep a lock" on an enemy character and continue to follow and attack it. <em>[Setting this above 8 seems to cause some serious issues. Don't do it. -Ed.]</em></li>
 								</ul>
 							</li>
 
@@ -220,21 +221,21 @@ window.onload = function () {makeAllSortable();};
 									<li><strong>Minor:</strong> Each monster may have a Major and a Minor variant, which Marathon will choose between in order to make a level harder or easier. If this flag is set, the monster is a Minor variant.</li>
 									<li><strong>Cannot Skip:</strong> To make a level easier, Marathon will sometimes "skip" a character (remove it from the level). If the character should never be skipped (i.e. necessary civilians), check this.</li>
 									<li><strong>Floats:</strong> If this flag is set, the character will float at its "hover height" (see Physical Constants) above the floor.</li>
-									<li><strong>Cannot Attack:</strong> If this flag is set, the character cannot launch any attacks. <em>[This is incorrect: they can attack, but only sporadically and haphazardly. The &ldquo;disabled juggernauts&rdquo; found in <em ><a href="https://eternal.bungie.org/" target="_blank">Eternal</a></em>&rsquo;s &ldquo;Second to Last of the Mohicans&rdquo; (starting in <span class="decimal">1</span>.<span class="decimal">2</span>) and &ldquo;Killing the Giants as They Sleep&rdquo; (starting in <span class="decimal">1</span>.<span class="decimal">3</span> preview <span class="decimal">5</span>) provide examples of this. -Ed.]</em></li>
+									<li><strong>Cannot Attack:</strong> If this flag is set, the character cannot launch any attacks. <em>[This is incorrect: they can attack, but only sporadically and haphazardly. The &ldquo;disabled juggernauts&rdquo; found in <em ><a href="https://eternal.bungie.org/" target="_blank">Eternal</a></em>&rsquo;s &ldquo;Second to Last of the Mohicans&rdquo; (starting in 1.2) and &ldquo;Killing the Giants as They Sleep&rdquo; (starting in 1.3 preview 5) provide examples of this. -Ed.]</em></li>
 									<li><strong>Uses Sniper Ledges:</strong> If this flag is set, the character will stay on a ledge that provides a good vantage point instead of charging into combat with an enemy.</li>
 									<li><strong>Chooses Weapon Randomly:</strong> If this flag is set, the character will choose between its melee and ranged attack randomly instead of consulting the range to the target.</li>
 									<li><strong>Invisible:</strong> If this flag is set, the character will be drawn in a darker shade of its background, making it much harder to see. The amount of invisibility will be equivalent to a Marine with one Invisibility powerup.</li>
-									<li><strong>Subtly Invisible:</strong> If this flag is set, the character will be drawn in almost exactly the same color as its background. The amount of invisibility will be equivalent to a Marine with <span class="decimal">2</span> Invisibility powerups.</li>
+									<li><strong>Subtly Invisible:</strong> If this flag is set, the character will be drawn in almost exactly the same color as its background. The amount of invisibility will be equivalent to a Marine with 2 Invisibility powerups.</li>
 									<li><strong>Kamikaze:</strong> If this flag is set, the character will always attempt to move closer to an enemy and will explode (inflict shrapnel damage) when it reaches one.</li>
 									<li><strong>Berserker:</strong> If this flag is set, the character will move and attack with greater speed and ferocity when it is nearly dead. <em>[It will also attack anything around it, regardless of whether it would ordinarily consider said monsters allies or not. -Ed.]</em></li>
-									<li><strong>Enlarged:</strong> If this flag is set, the character will be drawn at <span class="decimal">125</span>% of its normal size.</li>
+									<li><strong>Enlarged:</strong> If this flag is set, the character will be drawn at 125% of its normal size.</li>
 									<li><strong>Delayed Hard Death:</strong> If this flag is set, the character will not play its hard death sequence until it reaches the ground. <em>[This means that it will play the Soft Dying sequence until it reaches the ground, then the Hard Dying sequence when it hits the ground. Its corpse will use the Hard Dead sequence. -Ed.]</em></li>
 									<li><strong>Fires Symmetrically:</strong> If this flag is set, the character will create two projectiles for each attack, symmetrically oriented on either side of its body.</li>
 									<li><strong>Nuclear Hard Death:</strong> If this flag is set, the character will create a special "nuclear explosion" effect when it hits the ground.</li>
-									<li><strong>Can't Fire Backwards:</strong> If this flag is set, the character cannot spin <span class="decimal">180</span> degrees, fire, and then turn back again (it looks bad for big enemies).</li>
+									<li><strong>Can't Fire Backwards:</strong> If this flag is set, the character cannot spin 180 degrees, fire, and then turn back again (it looks bad for big enemies).</li>
 									<li><strong>Die in Flames:</strong> If this flag is set, the character will use the special "dying in flames" sequence indicated in the Appearance section if it dies due to Flame damage.</li>
 									<li><strong>Stay with Clear Shot:</strong> If this flag is set, the character will remain stationary and continue firing instead of moving closer to a target when it has a clear shot.</li>
-									<li><strong>Tiny:</strong> If this flag is set, the character will be drawn at <span class="decimal">25</span>% of its normal size.</li>
+									<li><strong>Tiny:</strong> If this flag is set, the character will be drawn at 25% of its normal size.</li>
 									<li><strong>Attacks Immediately:</strong> If this flag is set, the character will attack as soon as it teleports into the level rather than waiting for its normal attack delay.</li>
 									<li><strong>Not Afraid of Water:</strong> If this flag is set, the character will enter water polygons as though they were clear.</li>
 									<li><strong>Not Afraid of Sewage:</strong> If this flag is set, the character will enter sewage polygons as though they were clear.</li>
@@ -269,29 +270,29 @@ window.onload = function () {makeAllSortable();};
 							<li><strong>Lava:</strong> Lava damage is specified by the Damage Type field of a projectile or shrapnel effect, or by a Lava map polygon <em>[or by a Minor Ouch polygon -Ed.]</em>.</li>
 							<li><strong>Suffocation:</strong> Suffocation damage is specified by the Damage Type field of a projectile or shrapnel effect, or whenever the player runs out of oxygen.</li>
 							<li><strong>Goo:</strong> Goo explosion damage is specified by the Damage Type field of a projectile or shrapnel effect, or by a Goo map polygon <em>[or by a Major Ouch polygon -Ed.]</em>.</li>
-							<li><strong>Energy Drain:</strong> Energy Drain damage is specified by the Damage Type field of a projectile or shrapnel effect. <em>[Damage of this type can strip a player's shields to <span class="decimal">0</span>, but it cannot actually kill them. -Ed.]</em></li>
-							<li><strong>Oxygen Drain:</strong> Oxygen Drain damage is specified by the Damage Type field of a projectile or shrapnel effect. <em>[Damage of this type can strip a player's oxygen to <span class="decimal">0</span>, but it cannot actually kill them. If you need to kill a player once their oxygen would fall below <span class="decimal">0</span>, make sure to include Lua code along these lines:
+							<li><strong>Energy Drain:</strong> Energy Drain damage is specified by the Damage Type field of a projectile or shrapnel effect. <em>[Damage of this type can strip a player's shields to 0, but it cannot actually kill them. -Ed.]</em></li>
+							<li><strong>Oxygen Drain:</strong> Oxygen Drain damage is specified by the Damage Type field of a projectile or shrapnel effect. <em>[Damage of this type can strip a player's oxygen to 0, but it cannot actually kill them. If you need to kill a player once their oxygen would fall below 0, make sure to include Lua code along these lines:
 
 <pre>function Triggers.player_damaged(p, aggressor_player, aggressor_monster,
 damage_type, damage_amount, projectile)
-	-- must manually kill player if oxygen drain should reduce oxygen below 0
-	if damage_type == "oxygen drain" then
-		if p._previous_oxygen ~= nil
-		and p._previous_oxygen - damage_amount < 0 then
-		-- remove invincibility (i.e., immunity to suffocation)
-		p.invincibility_duration = 0 
-		p:damage(p.life + 1, "suffocation")
-		end
-		p._previous_oxygen = p.oxygen -- track player oxygen
-	end
+    -- manually kill player if oxygen drain should reduce oxygen below 0
+    if damage_type == "oxygen drain" then
+        if p._previous_oxygen ~= nil
+        and p._previous_oxygen - damage_amount &lt; 0 then
+        -- remove invincibility (i.e., immunity to suffocation)
+        p.invincibility_duration = 0 
+        p:damage(p.life + 1, "suffocation")
+        end
+        p._previous_oxygen = p.oxygen -- track player oxygen
+    end
 end
 
 function Triggers.postidle()
-	for p in Players() do
-		-- track oxygen for Triggers.player_damaged - otherwise, can't
-		-- know what their oxygen levels were before oxygen drain damage
-		p._previous_oxygen = p.oxygen
-	end
+    for p in Players() do
+        -- track oxygen for Triggers.player_damaged - otherwise, can't
+        -- know what their oxygen levels were before oxygen drain damage
+        p._previous_oxygen = p.oxygen
+    end
 end</pre>
 If you already have <code>Triggers.player_damaged</code> or <code>Triggers.postidle</code> functions, make sure to rename variables as needed and integrate the above code into said functions. Additionally, if you do direct Oxygen Drain damage to players in any of your Lua scripts, you'll need to implement similar code for those as well. -Ed.]</em></li>
 							<li><strong>Drone Bolt:</strong> Drone Bolt damage is specified by the Damage Type field of a projectile or shrapnel effect.</li>
@@ -303,10 +304,10 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 			<li><h2 id="anvileffects">Effects</h2>
 			The "Effects" section of the physics model stores information about small animated effects, such as explosions and splashes.
 				<ul>
-					<li><strong>Graphic Collection:</strong> The Graphic Collection must be a number between <span class="decimal">0</span> and <span class="decimal">31</span>. It indicates which collection of graphics in the Shapes file will be used to draw this effect. To preview the graphics collections, open a Shapes file.</li>
-					<li><strong>Color Table:</strong> The Color Table must be a number between <span class="decimal">0</span> and the number of tables defined for this collection. It indicates which collection of colors will be used to draw this effect. To preview the color tables and graphics, open a Shapes file.</li>
+					<li><strong>Graphic Collection:</strong> The Graphic Collection must be a number between 0 and 31. It indicates which collection of graphics in the Shapes file will be used to draw this effect. To preview the graphics collections, open a Shapes file.</li>
+					<li><strong>Color Table:</strong> The Color Table must be a number between 0 and the number of tables defined for this collection. It indicates which collection of colors will be used to draw this effect. To preview the color tables and graphics, open a Shapes file.</li>
 					<li><strong>Sequence:</strong> The sequence specified here will be played from the specified graphic collection using the specified color table.</li>
-					<li><strong>Sound Pitch:</strong> The sounds referenced by the effect's graphic sequence can be scaled up or down by adjusting the sound pitch, here. Choose values greater than <span class="decimal">1</span>.<span class="decimal">0</span> for high-pitched sounds, or less than <span class="decimal">1</span>.<span class="decimal">0</span> (but greater than <span class="decimal">0</span>.<span class="decimal">0</span>) for low-pitched sounds.</li>
+					<li><strong>Sound Pitch:</strong> The sounds referenced by the effect's graphic sequence can be scaled up or down by adjusting the sound pitch, here. Choose values greater than 1.0 for high-pitched sounds, or less than 1.0 (but greater than 0.0) for low-pitched sounds.</li>
 					<li><strong>Delay:</strong> The delay field is used internally by Marathon. You cannot change its value.</li>
 					<li><strong>Delay Sound:</strong> If a delay is specified, you may also specify a delay sound which will be played during the delay.</li>
 					<li><strong>End when animation loops:</strong> This box should nearly always be checked. If it is, when the effect's sequence reaches its loop frame, the effect will end. If this box is not checked the sequence will loop indefinitely.</li>
@@ -319,27 +320,27 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 			<li><h2 id="anvilshots">Shots</h2>
 			The "Shots" section of the physics model stores information about objects that are fired by weapons or monsters and that travel until they hit a target.
 				<ul>
-					<li><strong>Graphic Collection:</strong> The Graphic Collection must be a number between <span class="decimal">0</span> and <span class="decimal">31</span>. It indicates which collection of graphics in the Shapes file will be used to draw this projectile. Note that <span class="decimal">31</span> is used as a special value for "no graphics".</li>
-					<li><strong>Color Table:</strong> The Color Table must be a number between <span class="decimal">0</span> and the number of tables defined for this collection. It indicates which collection of colors will be used to draw this projectile. Note that if no graphic is to appear you should enter the value <span class="decimal">7</span>.</li>
+					<li><strong>Graphic Collection:</strong> The Graphic Collection must be a number between 0 and 31. It indicates which collection of graphics in the Shapes file will be used to draw this projectile. Note that 31 is used as a special value for "no graphics".</li>
+					<li><strong>Color Table:</strong> The Color Table must be a number between 0 and the number of tables defined for this collection. It indicates which collection of colors will be used to draw this projectile. Note that if no graphic is to appear you should enter the value 7.</li>
 					<li><strong>Sequence ID:</strong> The Sequence ID must be the number of a sequence in the graphic collection specified above. It determines which sequence will be used to draw the projectile. To preview sequences, open a Shapes file.</li>
 					<li><strong>Damage:</strong> The damage specified here will be applied to whatever target the projectile hits.</li>
 					<li><strong>Damage Type:</strong> The damage type must be specified so that immunities and weaknesses can be applied to whatever the projectile hits. The damage type is also used to determine the "screen flash" effect when a player is hit.</li>
-					<li><strong>Damage Base:</strong> The damage base is the minimum amount of damage that will be applied to the target. A random amount between <span class="decimal">0</span> and the damage random (below) will also be applied.</li>
-					<li><strong>Damage Random:</strong> The damage base (above) is the minimum amount of damage that will be applied to the target. A random amount between <span class="decimal">0</span> and the damage random will also be applied. <em>[As far as I can tell, the game actually adds a random number from <span class="decimal">0</span> to (damage random - <span class="decimal">1</span>), inclusive, to the base damage; if damage random is <span class="decimal">0</span>, then it just ignores the field. -Ed.]</em></li>
-					<li><strong>Damage Scale:</strong> The damage scale is nearly always <span class="decimal">1</span>.<span class="decimal">0</span>; Marathon changes the fist damage scale internally when the player is running.</li>
+					<li><strong>Damage Base:</strong> The damage base is the minimum amount of damage that will be applied to the target. A random amount between 0 and the damage random (below) will also be applied.</li>
+					<li><strong>Damage Random:</strong> The damage base (above) is the minimum amount of damage that will be applied to the target. A random amount between 0 and the damage random will also be applied. <em>[As far as I can tell, the game actually adds a random number from 0 to (damage random - 1), inclusive, to the base damage; if damage random is 0, then it just ignores the field. -Ed.]</em></li>
+					<li><strong>Damage Scale:</strong> The damage scale is nearly always 1.0; Marathon changes the fist damage scale internally when the player is running.</li>
 					<li><strong>Alien Damage:</strong> If the projectile is fired by an alien, check this box so Marathon can make the aliens easier on Kindergarten and Easy and harder on Major Damage and Total Carnage. <em>[The latter part of this is incorrect - Alien damage does not increase above Normal. -Ed.]</em></li>
 					<li><strong>Flyby Sound:</strong> If a flyby sound is specified, the projectile will play it to any player that the projectile passes close to without hitting.</li>
 					<li><strong>Rebound Sound:</strong> If a rebound sound is specified and the "rebounds from floor" box is checked, the rebound sound will be played whenever the projectile bounces off the floor.</li>
-					<li><strong>Sound Pitch:</strong> To pitch the sound higher, enter a value greater than <span class="decimal">1</span>.<span class="decimal">0</span>. To pitch the sound lower, enter a value less than <span class="decimal">1</span>.<span class="decimal">0</span> but greater than <span class="decimal">0</span>.<span class="decimal">0</span>.</li>
+					<li><strong>Sound Pitch:</strong> To pitch the sound higher, enter a value greater than 1.0. To pitch the sound lower, enter a value less than 1.0 but greater than 0.0.</li>
 					<li><strong>Radius:</strong> The radius of the projectile need not be the same as its graphic. A smaller radius will allow the weapon to pass through a smaller opening in the map.</li>
 					<li><strong>Area of Effect:</strong> The damage specified above will be applied to every character within the area of effect of the weapon when it detonates.</li>
-					<li><strong>Speed:</strong> The speed field determines how quickly the projectile travels across the map. <em>[The speed is in internal units per game tick. Divide by <span class="decimal">1</span>,<span class="decimal">024</span> to get world units per game tick; multiply the result by <span class="decimal">30</span> to get world units per second. -Ed.]</em></li>
-					<li><strong>Maximum Range:</strong> If the projectile reaches its maximum range without impacting a target, it will disappear. If a maximum range of -<span class="decimal">1</span> is specified, the projectile will always travel until it hits a target.</li>
+					<li><strong>Speed:</strong> The speed field determines how quickly the projectile travels across the map. <em>[The speed is in internal units per game tick. Divide by 1,024 to get world units per game tick; multiply the result by 30 to get world units per second. -Ed.]</em></li>
+					<li><strong>Maximum Range:</strong> If the projectile reaches its maximum range without impacting a target, it will disappear. If a maximum range of &minus;1 is specified, the projectile will always travel until it hits a target.</li>
 					<li><strong>Detonation Effect:</strong> If a detonation effect is specified, the requested effect will be played at the detonation point when the projectile hits a target. To preview effects, open the Effects section of the model.</li>
 					<li><strong>Media Detonation Effect:</strong> The media detonation effect is played when the projectile hits some type of media (e.g. water).</li>
 					<li><strong>Contrail:</strong> If ticks between contrails (below) is positive, the contrail effect will be created at the specified interval until the maximum number of controls is created.</li>
-					<li><strong>Ticks between contrails:</strong> The contrail effect will be created at the interval specified by this field (where <span class="decimal">1</span> tick = <span class="decimal">1</span>/<span class="decimal">30</span>th of a second).</li>
-					<li><strong>Maximum contrails:</strong> If this field is not -<span class="decimal">1</span>, it will be used as the maximum number of contrails created by the projectile.</li>
+					<li><strong>Ticks between contrails:</strong> The contrail effect will be created at the interval specified by this field (where 1 tick = 1/30th of a second).</li>
+					<li><strong>Maximum contrails:</strong> If this field is not &minus;1, it will be used as the maximum number of contrails created by the projectile.</li>
 					<li><strong>Media impact:</strong> This field may specify a type of projectile that will immediately hit the player if the specified projectile is used under media (i.e. when a fusion gun is fired under water).</li>
 					<li><strong>Flags:</strong> The flags are used to activate a range of useful and interesting behaviors on each projectile. Some of them require additional numeric fields to be set.
 						<ul>
@@ -387,12 +388,12 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 					<li><strong>Maximum angular velocity:</strong> The maximum angular velocity is the maximum speed at which the player may turn.</li>
 					<li><strong>Angular recentering velocity:</strong> The angular recentering velocity determines how quickly the player stops turning.</li>
 					<li><strong>Head angular velocity:</strong> The head angular velocity field determines how quickly a look-left or look-right can be made.</li>
-					<li><strong>Head angular maximum:</strong> The head angular maximum field is the maximum number of degrees (out of <span class="decimal">512</span>) that the player's head may be turned to the left or right.</li>
-					<li><strong>Maximum elevation:</strong> The maximum elevation should always be <span class="decimal">42</span>.<span class="decimal">6666</span>.</li>
+					<li><strong>Head angular maximum:</strong> The head angular maximum field is the maximum number of degrees (out of 512) that the player's head may be turned to the left or right.</li>
+					<li><strong>Maximum elevation:</strong> The maximum elevation should always be 42.6666.</li>
 					<li><strong>External angular deceleration:</strong> The external angular deceleration determines how quickly the player's turning will come to a stop if an external force prevents it.</li>
 					<li><strong>Step delta:</strong> The step delta determines the distance that the player must travel for a complete viewpoint "bounce" to occur.</li>
 					<li><strong>Step amplitude:</strong> The step amplitude determines how much the viewpoint "bounces" during steps.</li>
-					<li><strong>Radius:</strong> The radius of the player need not be the same size as the player's graphic. A smaller radius will allow the player to fit through smaller openings in the map. <em>[No it won't. This is dependent upon polygon exclusion zones, which are hard-coded at <span class="decimal">512</span> internal units in diameter. -Ed.]</em></li>
+					<li><strong>Radius:</strong> The radius of the player need not be the same size as the player's graphic. A smaller radius will allow the player to fit through smaller openings in the map. <em>[No it won't. This is dependent upon polygon exclusion zones, which are hard-coded at 512 internal units in diameter. -Ed.]</em></li>
 					<li><strong>Height:</strong> The height of the player need not be the same size as the player's graphic. A smaller height will allow the player to fit through smaller windows in the map. <em>[This is correct, however. -Ed.]</em></li>
 					<li><strong>Dead height:</strong> The dead height field determines the height of the camera when the player is dead and lying on the ground.</li>
 					<li><strong>Camera height:</strong> The camera height determines the normal elevation of the viewpoint that is drawn to the screen.</li>
@@ -409,14 +410,14 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 							<li><strong>Weapon Class:</strong> Melee weapons always use the melee impact effect. Single function weapons fire the main trigger on both keys. Dual function weapons can "charge" to perform their secondary trigger. Two-fisted weapons can be used two at once. Multipurpose weapons have two separate ammo types.
 							<li><strong>Appearance:</strong> The constants here determine how the weapon will be drawn when the player is holding it.
 								<ul>
-									<li><strong>Graphic Collection:</strong> The Graphic Collection must be a number between <span class="decimal">0</span> and <span class="decimal">31</span>. It indicates which collection of graphics in the Shapes file will be used to draw this weapon. To preview the graphics collections, open a Shapes file.</li>
-									<li><strong>Color Table:</strong> The Color Table must be a number between <span class="decimal">0</span> and the number of tables defined for this collection. It indicates which collection of colors will be used to draw this weapon. To preview the color tables and graphics, open a Shapes file.</li>
+									<li><strong>Graphic Collection:</strong> The Graphic Collection must be a number between 0 and 31. It indicates which collection of graphics in the Shapes file will be used to draw this weapon. To preview the graphics collections, open a Shapes file.</li>
+									<li><strong>Color Table:</strong> The Color Table must be a number between 0 and the number of tables defined for this collection. It indicates which collection of colors will be used to draw this weapon. To preview the color tables and graphics, open a Shapes file.</li>
 									<li><strong>Idle:</strong> The idle sequence ID will be used to draw the weapon whenever it is not firing, reloading, or charging. <em>[Note that idle sequences using more than one frame are bugged, and I do not recommend using them. -Ed.]</em></li>
 									<li><strong>Firing:</strong> The firing sequence ID will be used to draw the weapon while it is firing. Note that the length of the firing sequence determines how quickly the weapon can fire.</li>
 									<li><strong>Reloading:</strong> The reloading sequence ID will be played whenever the weapon reloads its primary trigger. A multipurpose weapon reloading its secondary trigger may not have a custom graphic sequence.</li>
-									<li><strong>Charging:</strong> The charging sequence ID will be played while the weapon is charging. If the charging sequence ID is -<span class="decimal">1</span>, the normal idle sequence will be used.</li>
+									<li><strong>Charging:</strong> The charging sequence ID will be played while the weapon is charging. If the charging sequence ID is &minus;1, the normal idle sequence will be used.</li>
 									<li><strong>Charged:</strong> The charged sequence ID will be played while the weapon is charged. Note that the "charged weapon sound" from the secondary trigger will also be played whenever the weapon is charged.</li>
-									<li><strong>Flash Intensity:</strong> The muzzle flash intensity of the weapon is set by this field. Note that the flash will not appear unless the flash decay time (below) is larger than <span class="decimal">0</span>.</li>
+									<li><strong>Flash Intensity:</strong> The muzzle flash intensity of the weapon is set by this field. Note that the flash will not appear unless the flash decay time (below) is larger than 0.</li>
 								</ul>
 							</li>
 							<li><strong>Height and Idle</strong>
@@ -425,11 +426,11 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 									<li><strong>Bob Amplitude:</strong> The degree of vertical "bob," or movement with the player's steps, that the weapon exhibits, is set here.</li>
 									<li><strong>Kick Height:</strong> The kick height is added to the idle height of the weapon to find the starting position for the "firing" sequence.</li>
 									<li><strong>Reload Height:</strong> The reload height is used to draw the "reloading" sequence. It should not be changed unless you are also changing the reload graphic.</li>
-									<li><strong>Idle Width:</strong> The idle width should nearly always be <span class="decimal">0</span>.<span class="decimal">5</span>; it only requires different values for weapons that are not drawn in the bottom-center of the field.</li>
-									<li><strong>Horizontal Amplitude:</strong> The horizontal amplitude field should always be <span class="decimal">0</span>.<span class="decimal">0</span>.</li>
+									<li><strong>Idle Width:</strong> The idle width should nearly always be 0.5; it only requires different values for weapons that are not drawn in the bottom-center of the field.</li>
+									<li><strong>Horizontal Amplitude:</strong> The horizontal amplitude field should always be 0.0.</li>
 								</ul>
 							</li>
-							<li><strong>Timing:</strong> All of the times given here are measured in ticks (<span class="decimal">1</span>/<span class="decimal">30</span>ths of a second).
+							<li><strong>Timing:</strong> All of the times given here are measured in ticks (1/30ths of a second).
 								<ul>
 									<li><strong>Ready time:</strong> The "ready time" is the number of ticks required to bring the weapon from un-ready to ready-to-fire status.</li>
 									<li><strong>Await reload:</strong> The "await reload" time is the number of ticks required after the last shot from a clip is fired before the "reloading" sequence is begun. Once the "reloading" sequence has begun the player cannot change weapons.</li>
@@ -452,7 +453,7 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 									<li><strong>Fires out of phase:</strong> If this flag is set, the weapon can fire two-handed without waiting for the other hand's animation to complete.</li>
 									<li><strong>Fires under liquids:</strong> If this flag is set, the weapon can produce its projectile under any media type (e.g. water). Note that the projectile must have the "penetrates media" flag set in order to do anything.</li>
 									<li><strong>Triggers share ammo:</strong> If this flag is set, the primary and secondary triggers use the same ammunition value.</li>
-									<li><strong>Angular flapping on <span class="decimal">2</span>nd trigger:</strong> If this flag is set, the secondary trigger will introduce an automatic x-axis error to the left or right of the player's target point.</li>
+									<li><strong>Angular flapping on 2nd trigger:</strong> If this flag is set, the secondary trigger will introduce an automatic x-axis error to the left or right of the player's target point.</li>
 								</ul>
 							</li>
 						</ul>
@@ -474,10 +475,10 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 									<li><strong>Charged:</strong> This sound will be played periodically when a dual-purpose weapon is charged. It will be played with increasing frequency and pitch as the charge time increases, until the weapon overloads and explodes <em>[if it is set to do so -Ed.]</em>.</li>
 								</ul>
 							</li>
-							<li><strong>Ticks/round:</strong> If a value other than -<span class="decimal">1</span> is entered here, it will be used as the delay between shots when the weapon fires (in ticks of <span class="decimal">1</span>/<span class="decimal">30</span>th of a second). Note that the minimum time for a weapon to fire is always the time for the weapons firing sequence.</li>
+							<li><strong>Ticks/round:</strong> If a value other than &minus;1 is entered here, it will be used as the delay between shots when the weapon fires (in ticks of 1/30th of a second). Note that the minimum time for a weapon to fire is always the time for the weapons firing sequence.</li>
 							<li><strong>Recovery Ticks:</strong> The recovery time measures the required number of ticks required after a firing animation completes before the weapon can be fired again.</li>
-							<li><strong>Charging Ticks:</strong> If a value other than <span class="decimal">0</span> is entered here, it will be used as the required time to charge the trigger before it can be fired. Note that this should ONLY have a value other than <span class="decimal">0</span> if the weapon is a dual-purpose weapon.</li>
-							<li><strong>Recoil Magnitude:</strong> If a value other than <span class="decimal">0</span> is entered here, the player will be pushed backwards with a force proportional to the number entered here when the weapon fires (note that a negative value will pull the character forwards).</li>
+							<li><strong>Charging Ticks:</strong> If a value other than 0 is entered here, it will be used as the required time to charge the trigger before it can be fired. Note that this should ONLY have a value other than 0 if the weapon is a dual-purpose weapon.</li>
+							<li><strong>Recoil Magnitude:</strong> If a value other than 0 is entered here, the player will be pushed backwards with a force proportional to the number entered here when the weapon fires (note that a negative value will pull the character forwards).</li>
 							<li><strong>Theta Error:</strong> The firing, or "theta" error, is the maximum error applied to the weapon's aim when it is fired. A higher error will result in a spray of inaccurate fire.</li>
 							<li><strong>dx:</strong> The value entered here will be added to the player's location in the x-axis (left to right) when the weapon fires to find the starting location for the projectile.</li>
 							<li><strong>dz:</strong> The value entered here will be added to the player's location in the z-axis (front to back) when the weapon fires to find the starting location for the projectile.</li>
@@ -492,10 +493,10 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 	<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p></li>	
 	
 	<li><h1 id="anvilsounds">Sounds</h1>
-	Each Sound may contain up to <span class="decimal">5</span> permutations. You may select the Sound to edit from this menu and then select a permutation from the list box, below.
+	Each Sound may contain up to 5 permutations. You may select the Sound to edit from this menu and then select a permutation from the list box, below.
 	<ul>
-		<li><strong><span class="decimal">8</span>-Bit:</strong> Check this button to listen to and edit the <span class="decimal">8</span>-bit (lower-quality, smaller) sounds. <em>[Note that &ldquo;8-bit&rdquo; and &ldquo;16-bit&rdquo; slots are </em>just names<em>. It&rsquo;s entirely possible to put 16-bit sounds into both, or 8-bit sounds into both, or a 16-bit sample in the 8-bit slot and an 8-bit sample in the 16-bit slot (why would you do this? Please don&rsquo;t do this). If a sound is present in only the &ldquo;8-bit&rdquo; slot and the player has 16-bit sound sources selected, Aleph One plays the sound in the &ldquo;8-bit&rdquo; slot. If both are present, it plays the sound in the &ldquo;16-bit&rdquo; slot. If a sound is only present in the &ldquo;16-bit&rdquo; slot and the player has 8-bit sound sources selected, the game won&rsquo;t play a sound. Thus, I </em>strongly recommend always<em> including sounds in the &ldquo;8-bit&rdquo; slot. -Ed.]</em></li>
-		<li><strong><span class="decimal">16</span>-Bit:</strong> Check this button to listen to and edit the <span class="decimal">16</span>-bit (high-quality, larger) sounds. <em>[Again, these are </em>just names<em>; see my note directly above for more. -Ed.]</em></li>
+		<li><strong>8-Bit:</strong> Check this button to listen to and edit the 8-bit (lower-quality, smaller) sounds. <em>[Note that &ldquo;8-bit&rdquo; and &ldquo;16-bit&rdquo; slots are </em>just names<em>. It&rsquo;s entirely possible to put 16-bit sounds into both, or 8-bit sounds into both, or a 16-bit sample in the 8-bit slot and an 8-bit sample in the 16-bit slot (why would you do this? Please don&rsquo;t do this). If a sound is present in only the &ldquo;8-bit&rdquo; slot and the player has 16-bit sound sources selected, Aleph One plays the sound in the &ldquo;8-bit&rdquo; slot. If both are present, it plays the sound in the &ldquo;16-bit&rdquo; slot. If a sound is only present in the &ldquo;16-bit&rdquo; slot and the player has 8-bit sound sources selected, the game won&rsquo;t play a sound. Thus, I </em>strongly recommend always<em> including sounds in the &ldquo;8-bit&rdquo; slot. -Ed.]</em></li>
+		<li><strong>16-Bit:</strong> Check this button to listen to and edit the 16-bit (high-quality, larger) sounds. <em>[Again, these are </em>just names<em>; see my note directly above for more. -Ed.]</em></li>
 		<li><strong>List Box:</strong> This list box displays a list of the permutations assigned to the current sound, above. You may change or insert new sounds by choosing "Insert Permutation" from the Sounds menu.</li>
 		<li><strong>Sounds:</strong> This displays the number of permutations stored in the current sound. You may insert new sounds by selecting "Insert Permutation" from the Sounds menu.
 		<!--The Sound Code doesn't seem to do anything.-->
@@ -529,16 +530,16 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 						Frames and Views are organized into Sequences, which is a single action taken by a Marathon character, weapon, or effect. You may edit the sequences here.
 						<ul>
 							<li><strong>Collection:</strong> Select a graphic collection to edit from this menu. Note that not all of the fields visible in the Sequences editor will apply to all collections (especially walls and landscapes).</li>
-							<li><strong>Scale Factor:</strong> If a given sequence does not specify a scale factor, the scale factor given here will be used to scale up the graphics for that collection. <em>[In ShapeFusion, the scale factor must be specified, or it will default to <span class="decimal">0</span> and not display the graphic. Moreover, due to a bug, it sometimes shows you the default scale factor for a new frame for which it hasn't inserted said scale factor. You should always specify this manually when inserting a new frame. -Ed.]</em></li>
+							<li><strong>Scale Factor:</strong> If a given sequence does not specify a scale factor, the scale factor given here will be used to scale up the graphics for that collection. <em>[In ShapeFusion, the scale factor must be specified, or it will default to 0 and not display the graphic. Moreover, due to a bug, it sometimes shows you the default scale factor for a new frame for which it hasn't inserted said scale factor. You should always specify this manually when inserting a new frame. -Ed.]</em></li>
 							<li><strong>Sequence:</strong> Select a sequence from the list box to edit it.</li>
-							<li><strong>Ticks per frame:</strong> Each frame in the sequence will be displayed for one or more ticks (<span class="decimal">30</span>ths of a second). You may change the number of ticks here.</li>
-							<li><strong>Scale factor (this shape):</strong> If this sequence should have a different scale factor from that of the entire collection, enter it here. <em>[In ShapeFusion, as noted above, this should be done manually for every frame, due to a bug that causes it to regard the scale factor of each frame as <span class="decimal">0</span> unless it has been manually specified. (It will display the default scale factor of this collection, but it won&rsquo;t save the frame that way.) -Ed.]</em></li>
+							<li><strong>Ticks per frame:</strong> Each frame in the sequence will be displayed for one or more ticks (30ths of a second). You may change the number of ticks here.</li>
+							<li><strong>Scale factor (this shape):</strong> If this sequence should have a different scale factor from that of the entire collection, enter it here. <em>[In ShapeFusion, as noted above, this should be done manually for every frame, due to a bug that causes it to regard the scale factor of each frame as 0 unless it has been manually specified. (It will display the default scale factor of this collection, but it won&rsquo;t save the frame that way.) -Ed.]</em></li>
 							<li><strong>Transfer Mode:</strong> The Transfer Mode determines how the shape will be drawn to the screen. You may mark a shape as transparent here, for example. Note that to make a monster transparent you should change the transparent flag in the physics model, not the shape mode.</li>
 							<li><strong>Transfer mode period:</strong> If the transfer mode requires timing, enter the period (in ticks) for the mode here.</li>
 							<li><strong>First frame sound:</strong> If a sound is specified here, it will be played on the first frame of the sequence.</li>
 							<li><strong>Key frame sound:</strong> If a sound is specified here, it will be played on a special "key" frame of the sequence. You may set the key frame below.</li>
 							<li><strong>Last frame sound:</strong> If a sound is specified here, it will be played on the last frame of the sequence.</li>
-							<li><strong># of views:</strong> You may specify <span class="decimal">1</span>, <span class="decimal">4</span>, <span class="decimal">5</span>, or <span class="decimal">8</span> frames for the sequence, depending on whether it should change at <span class="decimal">90</span>&deg; (<span class="decimal">4</span>), <span class="decimal">72</span>&deg; (<span class="decimal">5</span>), or <span class="decimal">45</span>&deg; (<span class="decimal">8</span>) increments, or not at all (<span class="decimal">1</span>).</li>
+							<li><strong># of views:</strong> You may specify 1, 4, 5, or 8 frames for the sequence, depending on whether it should change at 90&deg; (4), 72&deg; (5), or 45&deg; (8) increments, or not at all (1).</li>
 							<li><strong>Views in Sequence:</strong> Select a view in the sequence here.</li>
 							<li><strong>Frames in View: </strong>Select a frame in the sequence here. Frames will automatically be assigned in consecutive order. <em>[This is not true of ShapeFusion, wherein you can and in fact must assign frames in whatever order you choose. This allows you to reuse one frame as many times as you like, but also requires you to create new frames yourself when you need them. -Ed.]</em></li>
 							<li><strong>Frames/view:</strong> Enter the number of frames per view of the sequence here.</li>
@@ -576,13 +577,13 @@ If you already have <code>Triggers.player_damaged</code> or <code>Triggers.posti
 		<table class="light endnotes">
 			<thead>
 				<tr>
-					<th class="integer"><strong>#</strong></th>
+					<th class="right"><strong>#</strong></th>
 					<th><strong>Note</strong></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td class="integer"><a href="#ftnt_ref01" id="ftnt01" class="noprintlink"><strong>1</strong></a></td>
+					<td class="right"><a href="#ftnt_ref01" id="ftnt01" class="noprintlink"><strong>1</strong></a></td>
 					<td>Well, almost. I&rsquo;ve omitted what appear to be &lsquo;dummy balloons&rsquo; referring to features that weren&rsquo;t implemented in Anvil and don&rsquo;t appear in ShapeFusion either. They may have been documentation for features included in development releases of Anvil that Bungie thought better of including in the finished product; not having been a Bungie employee circa 1996, I couldn&rsquo;t say for sure.</td>
 				</tr>
 			</tbody>

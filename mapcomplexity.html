@@ -2,6 +2,7 @@
 <html lang="en-us">
 <head>
 	<title>Marathon Map Complexity: A Case Study</title>
+	<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<script>
 function sortTable(table, col, reverse) {
@@ -56,9 +57,9 @@ window.onload = function () {makeAllSortable();};
 			<li><a href="#contents">Table of Contents</a> (you&rsquo;re looking at it)</li>
 			<li><a href="#whfg">Three Iterations of &lsquo;Where Giants Have Fallen&rsquo;</a>
 				<ol>
-					<li><a href="#wghf-mv">Iteration <span class="decimal">1</span>: <em>Eternal</em> Mark V</a></li>
-					<li><a href="#wghf-10">Iteration <span class="decimal">2</span>: <em>Eternal X</em> <span class="decimal">1</span>.<span class="decimal">0</span></a></li>
-					<li><a href="#wghf-13">Iteration <span class="decimal">3</span>: <em>Eternal X</em> <span class="decimal">1</span>.<span class="decimal">3</span></a>
+					<li><a href="#wghf-mv">Iteration 1: <em>Eternal</em> Mark V</a></li>
+					<li><a href="#wghf-10">Iteration 2: <em>Eternal X</em> 1.0</a></li>
+					<li><a href="#wghf-13">Iteration 3: <em>Eternal X</em> 1.3</a>
 						<ol>
 							<li><a href="crossbeams">Crossbeams: A Closer Look</a></li>
 							<li><a href="#escapewillmakemegod">Escape Will Make Me God</a></li>
@@ -90,24 +91,24 @@ window.onload = function () {makeAllSortable();};
 
 		<p>(I&rsquo;ve hidden all objects besides players and sounds in all these screenshots; they&rsquo;re the only important objects for our purposes. I&rsquo;ve also removed extraneous lines and map writing from some later screenshots; the map writing wouldn&rsquo;t be legible at this resolution anyway. Also, click this or any subsequent image on this page to enlarge it.)</p>
 
-		<p>And here are some Vasara screenshots, with a few major caveats. First, I took these screenshots with <span class="decimal">1</span>.<span class="decimal">3</span> shapes because I wanted consistency between them. Second, the map had basically no shading to speak of, so I ran Auto Shade on it to make it easier to parse. Third, I rarely use hi-res textures when texturing, due partly to loading times, but mostly to memory usage: the game must load all textures into memory when it loads Vasara or Visual Mode.lua. That adds up fast. That said, the <em>Mark V</em> version looks like this:</p>
+		<p>And here are some Vasara screenshots, with a few major caveats. First, I took these screenshots with 1.3 shapes because I wanted consistency between them. Second, the map had basically no shading to speak of, so I ran Auto Shade on it to make it easier to parse. Third, I rarely use hi-res textures when texturing, due partly to loading times, but mostly to memory usage: the game must load all textures into memory when it loads VAF, Vasara, or Visual Mode.lua. That adds up fast. That said, the <em>Mark V</em> version looks like this:</p>
 
 		<div class="image"><a href="wghf-mv-1.png" target="_blank" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1" src="wghf-mv-1.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1"></a></div>
 
 		<div class="image"><a href="wghf-mv-2.png" target="_blank" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2" src="wghf-mv-2.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2"></a></div>
 
-		<p>Beyond the obvious issues of the terrible shading and the sea of gray, this version, despite featuring only <span class="decimal">509</span> polygons, is relatively slow for several reasons I&rsquo;ll discuss at length soon.</p>
+		<p>Beyond the obvious issues of the terrible shading and the sea of gray, this version, despite featuring only 509 polygons, is relatively slow for several reasons I&rsquo;ll discuss at length soon.</p>
 
 		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 		<h2 id="wghf-10">Iteration 2 (<em>Eternal X</em> 1.0)</h2>
 		<h5>Designer: Adam Ashwell</h5>
 
-		<p><em>Eternal X</em> <span class="decimal">1</span>.<span class="decimal">0</span> overhauled the level, but the new version was even slower. It looked like this in Weland:</p>
+		<p><em>Eternal X</em> 1.0 overhauled the level, but the new version was even slower. It looked like this in Weland:</p>
 
 		<div class="image"><a href="wghf-10-0.png" target="_blank" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode" src="wghf-10-0.png" width="512" height="512" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode"></a></div>
 
-		<p>Despite only featuring <span class="decimal">836</span> polygons, this one chugs even worse. Both of these maps have a major problem: they have essentially no negative space. To oversimplify slightly, Aleph One is effectively a <a href="https://en.wikipedia.org/wiki/Portal_rendering" target="_blank">portal engine</a>. Portal engines have several strengths, but rendering large, complex outdoor spaces is not one of them. As a result, whenever players approach the edges of one of these maps and look inward, the performance plummets, even on modern boxes. With frame interpolation being an established Aleph One feature, it&rsquo;s simply unacceptable for maps to get fewer than <span class="decimal">60</span> fps on modern boxes, at least in areas of the map players are meant to access. Here are a few screenshots of <span id="ftnt_ref02" class="dotted" title="1.0.3 differs from 1.0 only in featuring a few minor bug fixes. Since there was all of one week between 1.0&rsquo;s release on 2008-02-23 and 1.0.3&rsquo;s release on 2008-03-01, I have to imagine that comparatively few people played versions 1.0 through 1.0.2.">&ldquo;Where Giants Have Fallen&rdquo; in <em>Eternal X</em> <span class="decimal">1</span>.<span class="decimal">0</span>.<span class="decimal">3</span><a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span> (again with <span class="decimal">1</span>.<span class="decimal">3</span> textures):</p>
+		<p>Despite only featuring 836 polygons, this one chugs even worse. Both of these maps have a major problem: they have essentially no negative space. To oversimplify slightly, Aleph One is effectively a <a href="https://en.wikipedia.org/wiki/Portal_rendering" target="_blank">portal engine</a>. Portal engines have several strengths, but rendering large, complex outdoor spaces is not one of them. As a result, whenever players approach the edges of one of these maps and look inward, the performance plummets, even on modern boxes. With frame interpolation being an established Aleph One feature, it&rsquo;s simply unacceptable for maps to get fewer than 60 fps on modern boxes, at least in areas of the map players are meant to access. Here are a few screenshots of <span id="ftnt_ref02" class="dotted" title="1.0.3 differs from 1.0 only in featuring a few minor bug fixes. Since there was all of one week between 1.0&rsquo;s release on 2008-02-23 and 1.0.3&rsquo;s release on 2008-03-01, I have to imagine that comparatively few people played versions 1.0 through 1.0.2.">&ldquo;Where Giants Have Fallen&rdquo; in <em>Eternal X</em> 1.0.3<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span> (again with 1.3 textures):</p>
 
 		<div class="image"><a href="wghf-10-1.png" target="_blank" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1" src="wghf-10-1.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1"></a></div>
 
@@ -130,13 +131,13 @@ window.onload = function () {makeAllSortable();};
 
 		<div class="image"><a href="wghf-13-2.png" target="_blank" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #2" src="wghf-13-2.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #2"></a></div>
 
-		<p>Again, we notice a few things immediately. First, this area still <em>looks</em> wide-open, even though it constricts the view to a much smaller area; second, despite having a snow script (which can be a drag on performance), the map gets a much better frame rate. And here&rsquo;s where I&rsquo;ll note its polygon count: <span class="decimal">2</span>,<span class="decimal">028</span>. That&rsquo;s <em>not</em> a typo.</p>
+		<p>Again, we notice a few things immediately. First, this area still <em>looks</em> wide-open, even though it constricts the view to a much smaller area; second, despite having a snow script (which can be a drag on performance), the map gets a much better frame rate. And here&rsquo;s where I&rsquo;ll note its polygon count: 2,028. That&rsquo;s <em>not</em> a typo.</p>
 
 		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 		<h3 id="crossbeams">Crossbeams: A Closer Look</h3>
 
-		<p>But doesn&rsquo;t it look like you can see over the crossbeams? Yes. This <del>trick</del> <em>illusion</em> employs &lsquo;<span class="decimal">5</span>D space&rsquo;, the engine&rsquo;s ability to overlap spaces in X/Y/Z coordinates. It can do this because it uses <em>four</em> dimensions to render spaces: <strong>X</strong>, <strong>Y</strong>, <strong>Z</strong>, and <strong>polygon</strong>. This is related to it being a portal engine: it determines what to render based on how lines connect polygons. I feel a bit like a magician revealing how to perform <del>a trick</del> <em>an illusion</em> here, but&hellip; if you could get to the area of the crossbeam with the blue pillars, you&rsquo;d see this:</p>
+		<p>But doesn&rsquo;t it look like you can see over the crossbeams? Yes. This <del>trick</del> <em>illusion</em> employs &lsquo;5D space&rsquo;, the engine&rsquo;s ability to overlap spaces in X/Y/Z coordinates. It can do this because it uses <em>four</em> dimensions to render spaces: <strong>X</strong>, <strong>Y</strong>, <strong>Z</strong>, and <strong>polygon</strong>. This is related to it being a portal engine: it determines what to render based on how lines connect polygons. I feel a bit like a magician revealing how to perform <del>a trick</del> <em>an illusion</em> here, but&hellip; if you could get to the area of the crossbeam with the blue pillars, you&rsquo;d see this:</p>
 
 		<div class="image"><a href="wghf-13-3.png" target="_blank" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #1" src="wghf-13-3.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #1"></a></div>
 
@@ -144,7 +145,7 @@ window.onload = function () {makeAllSortable();};
 
 		<div class="image"><a href="wghf-13-4.png" target="_blank" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #2" src="wghf-13-4.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #2"></a></div>
 
-		<p>The only thing to the left of the last screenshot, and to the right of the one prior, is a landscape-textured wall. (These regions are, of course, inaccessible to players.) As long as we constrict players&rsquo; view to a reasonable segment of the level, the frame rate rarely dips below <span class="decimal">120</span> fps and almost never below <span class="decimal">60</span> (on my eight-year-old Windows box, no less).</p>
+		<p>The only thing to the left of the last screenshot, and to the right of the one prior, is a landscape-textured wall. (These regions are, of course, inaccessible to players.) As long as we constrict players&rsquo; view to a reasonable segment of the level, the frame rate rarely dips below 120 fps and almost never below 60 (on my eight-year-old Windows box, no less).</p>
 
 		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
@@ -219,9 +220,9 @@ window.onload = function () {makeAllSortable();};
 
         <div class="image"><a href="igs-0.png" target="_blank" class="noprintlink"><img alt="&lsquo;Il grande silenzio&rsquo; Draw Mode" src="igs-0.png" width="512" height="512" title="&lsquo;Il grande silenzio&rsquo; 1.3 Draw Mode"></a></div>
 
-		<p>My first pastiche of &lsquo;Stone Temple Pilates&rsquo;, seen above in its current state (<span class="decimal">1</span>,<span class="decimal">751</span> polygons), went a lot differently. It&rsquo;s called &lsquo;Il grande silenzio&rsquo; (after a brilliant Corbucci spaghetti western with an equally brilliant Morricone soundtrack); it&rsquo;s from a project that, as of this revision (2023-03-31), still hasn&rsquo;t been released: <em>Tempus Irae Redux</em> (hopefully, we&rsquo;ll have it out in April 2024). There are obvious stylistic differences, starting with the mathematical regularity of &lsquo;Where Giants Have Fallen&rsquo;; we can also see how much more densely the sound, points, and polygons are clustered in many areas of &lsquo;Il grande silenzio&rsquo; (and, as a direct consequence, how much less densely they&rsquo;re clustered in others).</p>
+		<p>My first pastiche of &lsquo;Stone Temple Pilates&rsquo;, seen above in its current state (1,751 polygons), went a lot differently. It&rsquo;s called &lsquo;Il grande silenzio&rsquo; (after a brilliant Corbucci spaghetti western with an equally brilliant Morricone soundtrack); it&rsquo;s from a project that, as of this revision (2023-03-31), still hasn&rsquo;t been released: <em>Tempus Irae Redux</em> (hopefully, we&rsquo;ll have it out in April 2024). There are obvious stylistic differences, starting with the mathematical regularity of &lsquo;Where Giants Have Fallen&rsquo;; we can also see how much more densely the sound, points, and polygons are clustered in many areas of &lsquo;Il grande silenzio&rsquo; (and, as a direct consequence, how much less densely they&rsquo;re clustered in others).</p>
 
-		<p>In fact, I first ran out of map indices at around <span class="decimal">1</span>,<span class="decimal">500</span> polygons and had to prune dozens of sound objects. This is partly because I set almost all my doors to Heavy S&rsquo;pht Doors (well, Heavy Italian Doors, as we might call them in <em>Tempus Irae Redux</em>), which each require sound objects to keep their ambient sounds from cutting off; and partly because I was pastiching two brilliant mapmakers: <strong>RyokoTK</strong> and my co-conspirator <strong>James Hastings-Trew</strong>, who both tend to employ a lot of greeble. Ryoko noted on Discord that I &lsquo;underestimated just how damn wasteful&rsquo; his polygon use is, but funnily enough, I deliberately set out to <em>exceed</em> the amount of greeble they use, reasoning, &lsquo;Modern computers can handle it.&rsquo; (This was my first mistake; it was before Aleph One had frame interpolation.) But thanks to the snow script and the comparative lack of negative space, the map chugs in a few places:</p>
+		<p>In fact, I first ran out of map indices at around 1,500 polygons and had to prune dozens of sound objects. This is partly because I set almost all my doors to Heavy S&rsquo;pht Doors (well, Heavy Italian Doors, as we might call them in <em>Tempus Irae Redux</em>), which each require sound objects to keep their ambient sounds from cutting off; and partly because I was pastiching two brilliant mapmakers: <strong>RyokoTK</strong> and my co-conspirator <strong>James Hastings-Trew</strong>, who both tend to employ a lot of greeble. Ryoko noted on Discord that I &lsquo;underestimated just how damn wasteful&rsquo; his polygon use is, but funnily enough, I deliberately set out to <em>exceed</em> the amount of greeble they use, reasoning, &lsquo;Modern computers can handle it.&rsquo; (This was my first mistake; it was before Aleph One had frame interpolation.) But thanks to the snow script and the comparative lack of negative space, the map chugs in a few places:</p>
 
 		<div class="image"><a href="igs-1.png" target="_blank" class="noprintlink"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #1" src="igs-1.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #1"></a></div>
 
@@ -243,7 +244,7 @@ window.onload = function () {makeAllSortable();};
 		<h4>Collection: <em>Starlight</em></h4>
 		<h4>Designer: RyokoTK</h4>
 
-		<p>That said, I&rsquo;m showing these screenshots not to show off the maps, but to illustrate how overusing greeble causes problems, and to provide a better yardstick for <em>what &lsquo;overusing greeble&rsquo; even means</em>. Greeble looks cool, but you have to know how much is too much. There&rsquo;s probably no way to truly learn this except through trial and error, but examining mapmakers&rsquo; styles more closely than I did can help. Ryoko doesn&rsquo;t use as much greeble as I thought he did when I made &lsquo;Il grande silenzio&rsquo;. I believe &lsquo;Monument to All Your Sins&rsquo; from <em>Starlight</em> still has the highest polygon count of any map he&rsquo;s released (<span class="decimal">1</span>,<span class="decimal">843</span>):</p>
+		<p>That said, I&rsquo;m showing these screenshots not to show off the maps, but to illustrate how overusing greeble causes problems, and to provide a better yardstick for <em>what &lsquo;overusing greeble&rsquo; even means</em>. Greeble looks cool, but you have to know how much is too much. There&rsquo;s probably no way to truly learn this except through trial and error, but examining mapmakers&rsquo; styles more closely than I did can help. Ryoko doesn&rsquo;t use as much greeble as I thought he did when I made &lsquo;Il grande silenzio&rsquo;. I believe &lsquo;Monument to All Your Sins&rsquo; from <em>Starlight</em> still has the highest polygon count of any map he&rsquo;s released (1,843):</p>
 
 		<div class="image"><a href="monument-0.png" target="_blank" class="noprintlink"><img alt="&lsquo;Monument to All Your Sins&rsquo; Draw Mode" src="monument-0.png" width="512" height="512" title="&lsquo;Monument to All Your Sins&rsquo; Draw Mode"></a></div>
 
@@ -261,7 +262,7 @@ window.onload = function () {makeAllSortable();};
 		<h4>Collection: <em>Marathon Phoenix</em></h4>
 		<h4>Designer: RyokoTK</h4>
 
-		<p>While I&rsquo;m at it, here&rsquo;s &lsquo;Stone Temple Pilates&rsquo;, which has <span class="decimal">1</span>,<span class="decimal">771</span> polygons. The Weland view looks like this:</p>
+		<p>While I&rsquo;m at it, here&rsquo;s &lsquo;Stone Temple Pilates&rsquo;, which has 1,771 polygons. The Weland view looks like this:</p>
 
 		<div class="image"><a href="stp-0.png" target="_blank" class="noprintlink"><img alt="&lsquo;Stone Temple Pilates&rsquo; Draw Mode" src="stp-0.png" width="512" height="512" title="&lsquo;Stone Temple Pilates&rsquo; Draw Mode"></a></div>
 
@@ -296,24 +297,24 @@ window.onload = function () {makeAllSortable();};
 
 		<h1 id="endnotes">Endnotes</h1>
 
-		<table class="light endnotes">
+		<table class="endnotes">
 			<thead>
 				<tr>
-					<th class="integer"><strong>#</strong></th>
+					<th class="right"><strong>#</strong></th>
 					<th><strong>Note</strong></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td class="integer"><a href="#ftnt_ref01" id="ftnt01" class="noprintlink"><strong>1</strong></a></td>
+					<td class="right"><a href="#ftnt_ref01" id="ftnt01" class="noprintlink"><strong>1</strong></a></td>
 					<td>I highly advise just <a href="mapmaking.html#generalmapmaking">following the link</a> for an explanation, but in brief, you&rsquo;re limited to 65,536 map indices. That sounds like a lot, but each vertex, each line, each polygon, each line shorter than 0.5 World Units, each platform, and each polygon within a 10 World Unit X/Y radius of each sound object uses a map index, and that&rsquo;s just off the top of my head &ndash; you run out of them quickly. (This is a slight oversimplification &ndash; lines and vertices that aren&rsquo;t attached to polygons don&rsquo;t actually count.) In practice, you generally start to run out of them at somewhere between 1,500 and 2,000 polygons. The largest polygon count I&rsquo;ve seen in a playable map layout is 2,466.</td>
 				</tr>
 				<tr>
-					<td class="integer"><a href="#ftnt_ref02" id="ftnt02" class="noprintlink"><strong>2</strong></a></td>
+					<td class="right"><a href="#ftnt_ref02" id="ftnt02" class="noprintlink"><strong>2</strong></a></td>
 					<td>1.0.3 differs from 1.0 only in featuring a few minor bug fixes. Since there was all of one week between 1.0&rsquo;s release on 2008-02-23 and 1.0.3&rsquo;s release on 2008-03-01, I have to imagine that comparatively few people played versions 1.0 through 1.0.2.</td>
 				</tr>
 				<tr>
-					<td class="integer"><a href="#ftnt_ref03" id="ftnt03" class="noprintlink"><strong>3</strong></a></td>
+					<td class="right"><a href="#ftnt_ref03" id="ftnt03" class="noprintlink"><strong>3</strong></a></td>
 					<td>One of the crossbeams has <a href="https://youtu.be/D5Df191WJ3o" target="_blank">gone out of skew on the treadle</a>.</td>
 				</tr>
 			</tbody>

@@ -2,6 +2,7 @@
 <html lang="en-us">
 	<head>
 		<title>Remastering Music &amp; Sounds</title>
+		<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
 		<link rel="stylesheet" type="text/css" href="css.css">
 	</head>
 	<body>
@@ -15,7 +16,7 @@
                 <p>Please <a href="aboutme.html">contact me</a> if you have any questions.</p>
 
 			<h1 id="contents">Table of Contents</h1>
-				<ol class="toc">
+				<ol class="toclite">
 					<li><a href="#top">Intro</a></li>
 					<li><a href="#contents">Table of Contents</a> (you&rsquo;re looking at it)</li>
 					<li><a href="#remasterinfo">Aaron&rsquo;s Remastering Process</a>
@@ -32,14 +33,14 @@
 		</header>
 
 			<h1 id="remasterinfo" style="margin-bottom: 0px;">Aaron&rsquo;s Remastering Process</h2>
-			<h4 style="font-size: 16px; margin-top: 0px;">Adapted from <em>Eternal X</em> <span class="number">1</span>.<span class="number">2</span>&rsquo;s OST liner notes, with edits for clarity,<br />
+			<h4 style="font-size: 16px; margin-top: 0px;">Adapted from <em>Eternal X</em> 1.2&rsquo;s OST liner notes, with edits for clarity,<br />
 			brevity, &amp; insights from five subsequent years of working with sound</h4>
 
 			<h2 name="declipping">Step One: Declipping</h2>
 
-				<p>My first step for around <span class="number">75</span>% of [the <em>Eternal X</em> 1.2 OST] was declipping. Many people seem to pay little attention to the levels when mixing and/or mastering songs; as a result, the peaks and troughs of waveforms get clipped off (it&rsquo;s essentially the result of a variable overflow), creating a form of distortion informally referred to as &lsquo;black noise&rsquo;. It results in a muffled sound and can cause listener fatigue. (If you want to find yourself annoyed at <span class="number">90</span>% of modern music, look up the loudness war.)</p>
+				<p>My first step for around 75% of [the <em>Eternal X</em> 1.2 OST] was declipping. Many people seem to pay little attention to the levels when mixing and/or mastering songs; as a result, the peaks and troughs of waveforms get clipped off (it&rsquo;s essentially the result of a variable overflow), creating a form of distortion informally referred to as &lsquo;black noise&rsquo;. It results in a muffled sound and can cause listener fatigue. (If you want to find yourself annoyed at 90% of modern music, look up the loudness war.)</p>
 
-				<p>Thus, I employed iZotope&rsquo;s declipper for any song that clipped. I must emphasize that the declipper <em>cannot</em> perfectly reconstruct the data lost from clipping, but it usually comes up with reasonable approximations that will suffice for most people&rsquo;s listening. The declipper scans the waveform and tells you where it clips. You can usually set the filter to start at <span class="number">0</span>.<span class="number">25</span> or <span class="number">0</span>.<span class="number">5</span> dB below that and get good results.</p>
+				<p>Thus, I employed iZotope&rsquo;s declipper for any song that clipped. I must emphasize that the declipper <em>cannot</em> perfectly reconstruct the data lost from clipping, but it usually comes up with reasonable approximations that will suffice for most people&rsquo;s listening. The declipper scans the waveform and tells you where it clips. You can usually set the filter to start at 0.25 or 0.5 dB below that and get good results.</p>
 
 				<p>(I&rsquo;d usually recommend running this process on an entire album at once to avoid messing up gapless transitions and preserve its songs&rsquo; relative volumes, which can have artistic reasoning behind them. However, here, I could reasonably infer that they didn&rsquo;t, so I did this process song-by-song. Additionally, on some albums, some songs may clip at different levels; for that matter, different segments of individual songs may also clip at different levels. <em>Listen</em>, and use your best judgement.)</p>
 
@@ -49,19 +50,19 @@
 
 			<h2 name="phaserotation">Step Two: Phase Rotation</h2>
 
-				<p>Next, I ran most songs <span class="number">90</span>&deg; through a phase rotation filter; this mostly affects subsonic (&leq;<span class="number">20</span> Hz) frequencies, but also usually increases dynamic range. I have no hypothesis for why this reduces listener fatigue; it shouldn&rsquo;t be perceptibly different at all. However, this is the only palatable way I&rsquo;ve found to listen to various albums that are too distorted to salvage with declipping (i.e., <span class="dotted" id="ftnt_ref01" title="I wouldn&rsquo;t even think to mess with Merzbow&rsquo;s work when listening to it on speakers, but this is the only way I know of to listen to those albums on headphones without risking deafness. They are, to my knowledge, the two loudest albums ever pressed to CD.">Merzbow&rsquo;s <em>Venereology</em> and <em>Pulse Demon</em><a href="#ftnt01" class="normal">&#8317;<span class="number">&sup1;</span>&#8318;</a></span>; the Psychic Paramount&rsquo;s <em>Gamelan into the Mink Supernatural</em>). Since it performed wonders for those recordings, it&rsquo;s now a standard part of my remastering process.</p>
+				<p>Next, I ran most songs 90&deg; through a phase rotation filter; this mostly affects subsonic (&leq;20 Hz) frequencies, but also usually increases dynamic range. I have no hypothesis for why this reduces listener fatigue; it shouldn&rsquo;t be perceptibly different at all. However, this is the only palatable way I&rsquo;ve found to listen to various albums that are too distorted to salvage with declipping (i.e., <span class="dotted" id="ftnt_ref01" title="I wouldn&rsquo;t even think to mess with Merzbow&rsquo;s work when listening to it on speakers, but this is the only way I know of to listen to those albums on headphones without risking deafness. They are, to my knowledge, the two loudest albums ever pressed to CD.">Merzbow&rsquo;s <em>Venereology</em> and <em>Pulse Demon</em><a href="#ftnt01" class="normal">&#8317;&sup1;&#8318;</a></span>; the Psychic Paramount&rsquo;s <em>Gamelan into the Mink Supernatural</em>). Since it performed wonders for those recordings, it&rsquo;s now a standard part of my remastering process.</p>
 
-				<blockquote><em>[<strong>Warning:</strong> You should generally only use phase rotation on a finished mix, unless there are phase issues with a recording you&rsquo;re mixing; phase rotation can be destructive. In the most extreme case, phase rotating a recording by <span class="number">180</span>&deg; and mix pasting it with its original produces silence!]</em></blockquote>
+				<blockquote><em>[<strong>Warning:</strong> You should generally only use phase rotation on a finished mix, unless there are phase issues with a recording you&rsquo;re mixing; phase rotation can be destructive. In the most extreme case, phase rotating a recording by 180&deg; and mix pasting it with its original produces silence!]</em></blockquote>
 
                 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="/">Website index</a></p>
 
 			<h2 name="upmastering">Step Three: Upmastering</h2>
 
-				<p>The above two steps, along with normalising to -<span class="number">0</span>.<span class="number">1</span> dB, should suffice for any recording for which you have a lossless source. Unfortunately, this was the case for none of the <em>Eternal</em> tracks; they were all MP<span class="number">3</span>s. Craig Hardgrove and Nicholas Singer didn&rsquo;t have higher-quality versions of their recordings; Dr Hardgrove said he might someday be able to make lossless versions, but it didn&rsquo;t sound like it&rsquo;d be <span class="dotted" id="ftnt_ref02" title="As it happened, it took more than five years. Craig released the GarageBand source tracks on 2024-01-15, which included lossless mixes of eleven tracks from Eternal 1.2&rsquo;s OST and higher-quality lossy mixes of six more. I released remasters of these, with the six lossy tracks newly upmastered, on 2024-01-23; see Marathon: Somewhere in the Heavens on my Marathon soundtracks page.">anytime soon.<a href="#ftnt02">&#8317;<span class="number">&sup2;</span>&#8318;</a></span> Thus, I approximated the missing upper frequencies as well, using a process we might call &ldquo;upmastering&rdquo;. (I was unable to contact Thomas Livingston or Eike Steffen at all.)</p>
+				<p>The above two steps, along with normalising to &minus;0.1 dB, should suffice for any recording for which you have a lossless source. Unfortunately, this was the case for none of the <em>Eternal</em> tracks; they were all MP3s. Craig Hardgrove and Nicholas Singer didn&rsquo;t have higher-quality versions of their recordings; Dr Hardgrove said he might someday be able to make lossless versions, but it didn&rsquo;t sound like it&rsquo;d be <span class="dotted" id="ftnt_ref02" title="As it happened, it took more than five years. Craig released the GarageBand source tracks on 2024-01-15, which included lossless mixes of eleven tracks from Eternal 1.2&rsquo;s OST and higher-quality lossy mixes of six more. I released remasters of these, with the six lossy tracks newly upmastered, on 2024-01-23; see Marathon: Somewhere in the Heavens on my Marathon soundtracks page.">anytime soon.<a href="#ftnt02">&#8317;&sup2;&#8318;</a></span> Thus, I approximated the missing upper frequencies as well, using a process we might call &ldquo;upmastering&rdquo;. (I was unable to contact Thomas Livingston or Eike Steffen at all.)</p>
 
-				<p>In each case, I copied my results to a new file. Then I ran the &lsquo;pitch &amp; time&rsquo; filter to raise the pitch by <span class="number">12</span> half-steps, or an octave, using the highest possible quality algorithm, Radius. This is a time-consuming, processor-intensive task that may take several times a song or album&rsquo;s running time on many machines. Feel free to step away to get a drink or something while it runs.</p>
+				<p>In each case, I copied my results to a new file. Then I ran the &lsquo;pitch &amp; time&rsquo; filter to raise the pitch by 12 half-steps, or an octave, using the highest possible quality algorithm, Radius. This is a time-consuming, processor-intensive task that may take several times a song or album&rsquo;s running time on many machines. Feel free to step away to get a drink or something while it runs.</p>
 
-				<p>Once it finishes, roll off the lower frequencies of your pitch-raised copy with the Corrective EQ filter. You&rsquo;ll want to discard everything below about <span class="number">14</span> kHz, depending upon the quality of MP<span class="number">3</span> compression. I used the analogue filter &lsquo;low shelf&rsquo; for most of the bands, but the exact slope and gain I used depended on the track. Lastly, mix paste the results with your original track. You may have to experiment with several different EQ settings to find the best-sounding version; unfortunately, there&rsquo;s no one-size-fits-all solution here, and simply eyeballing the results won&rsquo;t suffice. Use your best judgement. Once you&rsquo;re satisfied, normalise to -0.1 dB, export as FLAC, and you&rsquo;re done.</p>
+				<p>Once it finishes, roll off the lower frequencies of your pitch-raised copy with the Corrective EQ filter. You&rsquo;ll want to discard everything below about 14 kHz, depending upon the quality of MP3 compression. I used the analogue filter &lsquo;low shelf&rsquo; for most of the bands, but the exact slope and gain I used depended on the track. Lastly, mix paste the results with your original track. You may have to experiment with several different EQ settings to find the best-sounding version; unfortunately, there&rsquo;s no one-size-fits-all solution here, and simply eyeballing the results won&rsquo;t suffice. Use your best judgement. Once you&rsquo;re satisfied, normalise to -0.1 dB, export as FLAC, and you&rsquo;re done.</p>
 
 				<blockquote><em>[<strong>Note:</strong> Modern versions of iZotope call this filter simply &lsquo;EQ&rsquo;, and rather than using the low shelf, you can just use a high pass filter with it. I&rsquo;ve also taken to adding a much subtler low pass filter as well.]</em></blockquote>
 
@@ -103,7 +104,7 @@
 
 			<h1 id="footnotes">Footnotes</h1>
 			
-			<table class="light endnotes">
+			<table class="endnotes">
 				<thead>
 					<tr>
 						<th class="integer"><strong>#</strong></th>
@@ -112,12 +113,12 @@
 				</thead>
 				<tbody class="justify">
 					<tr id="ftnt01">
-						<td class="integer"><a href="#ftnt_ref01"><strong>1</strong>.</a></td>
+						<td class="right"><a href="#ftnt_ref01"><strong>1</strong>.</a></td>
 						<td>I wouldn&rsquo;t even think to mess with Merzbow&rsquo;s work when listening to it on speakers, but this is the only way I know of to listen to those albums on headphones without risking deafness. They are, to my knowledge, the two loudest albums ever pressed to CD.</td>
 					</tr>
 					<tr id="ftnt02">
-						<td class="integer"><a href="#ftnt_ref02"><strong>2</strong>.</a></td>
-						<td>As it happened, it took more than five years. Craig released the GarageBand source tracks on <span class="number">2024-01-15</span>, which included lossless mixes of eleven tracks from <em>Eternal</em> <span class="number">1.2</span>&rsquo;s OST and higher-quality lossy mixes of six more. I released remasters of these, with the six lossy tracks newly upmastered, on <span class="number">2024-01-23</span>; see <em><a href="soundtracks.html#somewhereintheheavens">Marathon: Somewhere in the Heavens</a></em> on my <a href="soundtracks.html"><em>Marathon</em> soundtracks page</a>.</td>
+						<td class="right"><a href="#ftnt_ref02"><strong>2</strong>.</a></td>
+						<td>As it happened, it took more than five years. Craig released the GarageBand source tracks on 2024-01-15, which included lossless mixes of eleven tracks from <em>Eternal</em> 1.2&rsquo;s OST and higher-quality lossy mixes of six more. I released remasters of these, with the six lossy tracks newly upmastered, on 2024-01-23; see <em><a href="soundtracks.html#somewhereintheheavens">Marathon: Somewhere in the Heavens</a></em> on my <a href="soundtracks.html"><em>Marathon</em> soundtracks page</a>.</td>
 					</tr>
 				</tbody>
 			</table>

@@ -2,6 +2,7 @@
 <html lang="en-us">
 <head>
 	<title>Marathon Mapmaking: Circles and Weland&rsquo;s Custom Grid</title>
+	<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<script>
 function sortTable(table, col, reverse) {
@@ -47,11 +48,11 @@ window.onload = function () {makeAllSortable();};
 
 	<h1 id="toc">Contents</h1>
 
-		<ol class="toc">
+		<ol class="toclite">
 			<li><a href="#top">Intro</a></li>
 			<li><a href="#toc">Table of Contents</a> (you&rsquo;re looking at it)</li>
 			<li><a href="#circles">Circles and Weland&rsquo;s Custom Grid</a></li>
-			<li><a href="#radii">Radii and Rotations for <span class="decimal">1</span> WU Sides</a></li>
+			<li><a href="#radii">Radii and Rotations for 1 WU Sides</a></li>
 			<li><a href="thanks">Acknowledgements</a></li>
 		</ol>
 
@@ -59,7 +60,7 @@ window.onload = function () {makeAllSortable();};
 
 		<p>For the purposes of this tutorial, we&rsquo;ll take the term &lsquo;circle&rsquo; to mean &lsquo;regular polygon with sufficiently many sides to look circular&rsquo;. Aleph One is not actually capable of curves.</p>
 
-		<p>There are a few ways to construct circles in Weland. The simplest is probably to use shift+alt and draw points of equal length out from a central area. This will give you a regular <span class="decimal">16</span>-sided polygon, and for many cases, this is all you&rsquo;ll need. However, in many cases, you may want more points. There are a few options here. There&rsquo;s a <a href="https://simplici7y.com/items/circle-plugin-for-weland" target="_blank">circle plugin</a>, which is fine if you&rsquo;re OK doing a bit of math. (To get this to load on Windows, you may need to go to &lsquo;Properties&rsquo; and select &lsquo;Unblock&rsquo; next to &lsquo;Security&rsquo;. Obviously, don&rsquo;t make a habit of doing this with just <em>any</em> software downloaded from the Internet unless you trust the authors.) Another option that doesn&rsquo;t require a plugin (but still requires a bit of math) is the custom grid, this little icon you may not have bothered to try out before:</p>
+		<p>There are a few ways to construct circles in Weland. The simplest is probably to use shift+alt and draw points of equal length out from a central area. This will give you a regular 16-sided polygon, and for many cases, this is all you&rsquo;ll need. However, in many cases, you may want more points. There are a few options here. There&rsquo;s a <a href="https://simplici7y.com/items/circle-plugin-for-weland" target="_blank">circle plugin</a>, which is fine if you&rsquo;re OK doing a bit of math. (To get this to load on Windows, you may need to go to &lsquo;Properties&rsquo; and select &lsquo;Unblock&rsquo; next to &lsquo;Security&rsquo;. Obviously, don&rsquo;t make a habit of doing this with just <em>any</em> software downloaded from the Internet unless you trust the authors.) Another option that doesn&rsquo;t require a plugin (but still requires a bit of math) is the custom grid, this little icon you may not have bothered to try out before:</p>
 
 		<div class="image"><img src="gridicon.png" width="647" height="73" alt="Custom Grid Icon" title="Custom Grid Icon"/></div>
 
@@ -69,10 +70,10 @@ window.onload = function () {makeAllSortable();};
 
 		<ul>
 			<li><strong>Reset:</strong> Restores the default grid settings.</li>
-			<li><strong>Rotation:</strong> How much to rotate the grid, from <span class="decimal">0&deg;</span> to <span class="decimal">90&deg;</span>. (<span class="decimal">90&deg;</span> isn&rsquo;t quite accurate; I recommend using <span class="decimal">0&deg;</span> instead.)</li>
-			<li><strong>Scale:</strong> The amount by which to multiply the size of the standard grid, from <span class="decimal">0</span>.<span class="decimal">125</span> (one-eighth) to <span class="decimal">8</span>.</li>
-			<li><strong>Origin:</strong> The point around which to center the grid&rsquo;s rotation and scale. This is input using internal units (<span class="decimal">1</span>,<span class="decimal">024</span> IU = <span class="decimal">1</span> WU), so -<span class="decimal">32</span>,<span class="decimal">768</span> (-<span class="decimal">32</span> WU) to <span class="decimal">32</span>,<span class="decimal">767</span> (&asymp;<span class="decimal">31</span>.<span class="decimal">999</span> WU).</li>
-			<li><strong><span class="decimal">1</span>, <span class="decimal">2</span>, <span class="decimal">3</span>, <span class="decimal">4</span>, <span class="decimal">5</span>, <span class="decimal">6</span>:</strong> Grid presets. <strong class="decimal">2</strong> through <strong class="decimal">6</strong> persist after you quit Weland, apart from the origin point (use them for the grids you use most often); <strong class="decimal">1</strong> resets when you exit.</li>
+			<li><strong>Rotation:</strong> How much to rotate the grid, from 0&deg; to 90&deg;. (90&deg; isn&rsquo;t quite accurate; I recommend using 0&deg; instead.)</li>
+			<li><strong>Scale:</strong> The amount by which to multiply the size of the standard grid, from 0.125 (one-eighth) to 8.</li>
+			<li><strong>Origin:</strong> The point around which to center the grid&rsquo;s rotation and scale. This is input using internal units (1,024 IU = 1 WU), so &minus;32,768 (&minus;32 WU) to 32,767 (&asymp;31.999 WU).</li>
+			<li><strong>1, 2, 3, 4, 5, 6:</strong> Grid presets. <strong>2</strong> through <strong>6</strong> persist after you quit Weland, apart from the origin point (use them for the grids you use most often); <strong>1</strong> resets when you exit.</li>
 			<li>If you select a line, <strong>&lsquo;Reset&rsquo;</strong> becomes <strong>&lsquo;Set All&rsquo;</strong>, which sets the <strong>Rotation</strong>, <strong>Scale</strong>, and <strong>Origin</strong> to match, respectively, the line&rsquo;s angle, its length (give or take an internal unit), and its origin point (i.e., the first point drawn); likewise,
 				<ul>
 					<li>Clicking <strong>&lsquo;Set&rsquo;</strong> for <strong>&lsquo;Rotation&rsquo;</strong> matches the line&rsquo;s angle.</li>
@@ -82,13 +83,13 @@ window.onload = function () {makeAllSortable();};
 			<li>Similarly, clicking <strong>&lsquo;Set&rsquo;</strong> with a point selected sets the point as the origin.</li>
 			<li>Therefore, if you need to set a custom <strong>Origin</strong>, make sure you have neither a line nor a point selected; if you need to set a custom <strong>Rotation</strong> or <strong>Scale</strong>, make sure you don&rsquo;t have a line selected.</ul>
 
-		<p>For our &lsquo;circle&rsquo;, <strong>Origin</strong> will match its center and <strong>Scale</strong> will match its radius (at its vertices, anyhow). <strong>Rotation</strong> will vary, as we&rsquo;ll see. I&rsquo;ll demonstrate how to draw a <span class="decimal">24</span>-sided circle. We&rsquo;ll leave Origin as <span class="decimal">0</span>, <span class="decimal">0</span>. We&rsquo;ll start <strong>Rotation</strong> from <span class="decimal">0&deg;</span>. For <strong>Scale</strong>, we&rsquo;ll use the seemingly random number <span class="decimal">3</span>.<span class="decimal">831</span>. Press <span class="decimal">4</span> on the keyboard to get the grid to show at <span class="decimal">1</span>x size, then draw points out from (<span class="decimal">0</span>, <span class="decimal">0</span>) in all four cardinal directions. We should have something like:</p>
+		<p>For our &lsquo;circle&rsquo;, <strong>Origin</strong> will match its center and <strong>Scale</strong> will match its radius (at its vertices, anyhow). <strong>Rotation</strong> will vary, as we&rsquo;ll see. I&rsquo;ll demonstrate how to draw a 24-sided circle. We&rsquo;ll leave Origin as 0, 0. We&rsquo;ll start <strong>Rotation</strong> from 0&deg;. For <strong>Scale</strong>, we&rsquo;ll use the seemingly random number 3.831. Press 4 on the keyboard to get the grid to show at 1x size, then draw points out from (0, 0) in all four cardinal directions. We should have something like:</p>
 
 		<div class="image"><img src="circle0.png" width="550" height="546" alt="0&deg; Circle Vertices" title="0&deg; Circle Vertices"/></div>
 
-		<blockquote><strong>Protip:</strong> If you&rsquo;re having trouble finding (<span class="decimal">0</span>, <span class="decimal">0</span>), you can rotate the grid forward and backward (it always rotates around the center point); or edit one point by double-clicking it; or start from <span class="decimal">15&deg;</span> and work back around to <span class="decimal">0&deg;</span>. (Again, I don&rsquo;t recommend using a <strong>Rotation</strong> of <span class="decimal">90&deg;</span>; it&rsquo;s not quite accurate.)</blockquote>
+		<blockquote><strong>Protip:</strong> If you&rsquo;re having trouble finding (0, 0), you can rotate the grid forward and backward (it always rotates around the center point); or edit one point by double-clicking it; or start from 15&deg; and work back around to 0&deg;. (Again, I don&rsquo;t recommend using a <strong>Rotation</strong> of 90&deg;; it&rsquo;s not quite accurate.)</blockquote>
 
-		<p>From here, we must rotate the grid by regular increments (this might be the trickiest part). <span class="decimal">360&deg;</span> (the span of a circle) divided by <span class="decimal">24</span> points (the number of vertices we&rsquo;re using) gives us <span class="decimal">15&deg;</span> increments, so our next angle is <span class="decimal">15&deg;</span>. Set <strong>Rotation</strong> to <span class="decimal">15&deg;</span> and draw lines out from the center. Rotating by another <span class="decimal">15&deg;</span> gives us <span class="decimal">30&deg;</span>, then <span class="decimal">45&deg;</span>, then <span class="decimal">60&deg;</span>, then <span class="decimal">75&deg;</span>. (We could do this with fewer rotations, but we&rsquo;ll save that for later.) All these steps are shown below.</p>
+		<p>From here, we must rotate the grid by regular increments (this might be the trickiest part). 360&deg; (the span of a circle) divided by 24 points (the number of vertices we&rsquo;re using) gives us 15&deg; increments, so our next angle is 15&deg;. Set <strong>Rotation</strong> to 15&deg; and draw lines out from the center. Rotating by another 15&deg; gives us 30&deg;, then 45&deg;, then 60&deg;, then 75&deg;. (We could do this with fewer rotations, but we&rsquo;ll save that for later.) All these steps are shown below.</p>
 
 		<div class="image"><img src="circle1.png" width="124" height="124" alt="15&deg; Circle Vertices" title="15&deg; Circle Vertices"/>
 		<img src="circle2.png" width="124" height="124" alt="30&deg; Circle Vertices" title="30&deg; Circle Vertices"/>
@@ -100,28 +101,28 @@ window.onload = function () {makeAllSortable();};
 
 		<div class="image"><img src="circle6.png" width="248" height="248" alt="Drawing the Lines of Our &lsquo;Circle&rsquo;"/></div>
 
-		<p>The next task is to fill the circle (assuming we wish to do that). It&rsquo;s an inefficient allocation of map indices to fill all <span class="decimal">24</span> triangles when we can use more sides per polygon; here, we can divide our circle into quadrants to get eight sides per polygon, which is perfect.</p>
+		<p>The next task is to fill the circle (assuming we wish to do that). It&rsquo;s an inefficient allocation of map indices to fill all 24 triangles when we can use more sides per polygon; here, we can divide our circle into quadrants to get eight sides per polygon, which is perfect.</p>
 
 		<div class="image"><img src="circle7.png" width="248" height="248" alt="Filling Our &lsquo;Circle&rsquo;"/></div>
 
 		<p>Now, some notes:</p>
 
 		<ol>
-			<li>If we select one of our circle&rsquo;s outer lines, we&rsquo;ll see why <span class="decimal">3</span>.<span class="decimal">831</span> was our <strong>Scale</strong>: they&rsquo;re all <span class="decimal">1</span> or <span class="decimal">0</span>.<span class="decimal">999</span> WU long. A long list of radii and rotations that produce <span class="decimal">1</span> WU-long sides can be found below.</li>
+			<li>If we select one of our circle&rsquo;s outer lines, we&rsquo;ll see why 3.831 was our <strong>Scale</strong>: they&rsquo;re all 1 or 0.999 WU long. A long list of radii and rotations that produce 1 WU-long sides can be found below.</li>
 			<li>Not using the center as one of our vertices could, in some cases, allow us to fill our circle with fewer polygons; however, it could also result in acute angles, which often cause bouncy walls. In this specific case, four polygons is the fewest we could get away with.</li>
-			<li>I mentioned Shift+Alt constraint as a way to create <span class="decimal">16</span>-sided polygons. You can combine this with grid rotation if the number of sides is a multiple of <span class="decimal">8</span> (divides evenly into <span class="decimal">45&deg;</span>, i.e., use <span class="decimal">8</span> of the <span class="decimal">16</span> Shift+Alt angles) or <span class="decimal">16</span> (divides evenly into <span class="decimal">22</span>.<span class="decimal">5&deg;</span>; i.e., use all <span class="decimal">16</span> Shift+Alt angles). As the math might confuse people at first, I avoided showing this above, but it can save time once you&rsquo;re comfortable with this method.</li>
-			<li>Points may be off by an internal unit (&asymp;<span class="decimal">.001</span> WU) or two. Adjust them manually if this bothers you. Drawing our lines from the center with Shift+Alt constraint makes this slightly less likely.</li>
-			<li>Since we started at <span class="decimal">0&deg;</span>, we don&rsquo;t have any horizontal or vertical lines in our circle. To get them, we&rsquo;d divide our grid rotation of <span class="decimal">15&deg;</span> by <span class="decimal">2</span> for a starting angle of <span class="decimal">7</span>.<span class="decimal">5&deg;</span>, then increase that by <span class="decimal">15</span> (i.e., <span class="decimal">22</span>.<span class="decimal">5&deg;</span>, <span class="decimal">37</span>.<span class="decimal">5&deg;</span>, <span class="decimal">52</span>.<span class="decimal">5&deg;</span>, <span class="decimal">67</span>.<span class="decimal">5&deg;</span>, <span class="decimal">82</span>.<span class="decimal">5&deg;</span>). The result is below. Note that getting both horizontal and vertical lines requires a number of sides divisible by <span class="decimal">4</span>. If it&rsquo;s divisible by <span class="decimal">2</span>, we&rsquo;ll get one but not the other. If it&rsquo;s an odd number, we&rsquo;ll get only a single horizontal or vertical side.
+			<li>I mentioned Shift+Alt constraint as a way to create 16-sided polygons. You can combine this with grid rotation if the number of sides is a multiple of 8 (divides evenly into 45&deg;, i.e., use 8 of the 16 Shift+Alt angles) or 16 (divides evenly into 22.5&deg;; i.e., use all 16 Shift+Alt angles). As the math might confuse people at first, I avoided showing this above, but it can save time once you&rsquo;re comfortable with this method.</li>
+			<li>Points may be off by an internal unit (&asymp;.001 WU) or two. Adjust them manually if this bothers you. Drawing our lines from the center with Shift+Alt constraint makes this slightly less likely.</li>
+			<li>Since we started at 0&deg;, we don&rsquo;t have any horizontal or vertical lines in our circle. To get them, we&rsquo;d divide our grid rotation of 15&deg; by 2 for a starting angle of 7.5&deg;, then increase that by 15 (i.e., 22.5&deg;, 37.5&deg;, 52.5&deg;, 67.5&deg;, 82.5&deg;). The result is below. Note that getting both horizontal and vertical lines requires a number of sides divisible by 4. If it&rsquo;s divisible by 2, we&rsquo;ll get one but not the other. If it&rsquo;s an odd number, we&rsquo;ll get only a single horizontal or vertical side.
 				<p class="centred"><img src="circle8.png" width="247" height="246" alt="&lsquo;Circle&rsquo; with Vertical Lines"/></p>
 			</li>
-			<li>If our number of vertices is not a multiple of <span class="decimal">4</span>, we&rsquo;ll still start at <span class="decimal">0&deg;</span> as usual, keep adding our angle increment until we exceed <span class="decimal">90&deg;</span>, subtract <span class="decimal">90&deg;</span> from our <strong>Rotation</strong>, and then continue as before. We also won&rsquo;t draw lines in all four directions &ndash; we&rsquo;ll either draw them in two directions (if our number of vertices is a multiple of <span class="decimal">2</span>) or one (if it isn&rsquo;t).</li>
+			<li>If our number of vertices is not a multiple of 4, we&rsquo;ll still start at 0&deg; as usual, keep adding our angle increment until we exceed 90&deg;, subtract 90&deg; from our <strong>Rotation</strong>, and then continue as before. We also won&rsquo;t draw lines in all four directions &ndash; we&rsquo;ll either draw them in two directions (if our number of vertices is a multiple of 2) or one (if it isn&rsquo;t).</li>
 		</ol>
 
 		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
-	<h1 id="radii">Radii and Rotations to Create <span class="decimal">1</span> WU</h1>
+	<h1 id="radii">Radii and Rotations to Create 1 WU</h1>
 
-		<p>These radii and rotations will create regular polygons with sides of <span class="decimal">1</span> WU in length. (As pointless as including a triangle may seem, this is a fast way to get an equilateral triangle centered around a desired point.) <em>Italic numbers</em> are divisible by <span class="decimal">8</span> (i.e, you can use Shift+Alt with <span class="decimal">45&deg;</span> angles); <strong>bold numbers</strong>, by <span class="decimal">16</span> (<span class="decimal">22</span>.<span class="decimal">5&deg;</span> angles). <span class="decimal">1</span> WU = <span class="decimal">1</span>,<span class="decimal">024</span> Internal Units; these are included for the circle plugin. It produces slightly different results, so they differ slightly.</p>
+		<p>These radii and rotations will create regular polygons with sides of 1 WU in length. (As pointless as including a triangle may seem, this is a fast way to get an equilateral triangle centered around a desired point.) <em>Italic numbers</em> are divisible by 8 (i.e, you can use Shift+Alt with 45&deg; angles); <strong>bold numbers</strong>, by 16 (22.5&deg; angles). 1 WU = 1,024 Internal Units; these are included for the circle plugin. It produces slightly different results, so they differ slightly.</p>
 
 		<p class="light" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
 
@@ -136,148 +137,148 @@ window.onload = function () {makeAllSortable();};
 			</thead>
 			<tbody>
 				<tr>
-					<td class="integer">3</td>
-					<td class="integer">0.578</td>
-					<td class="integer">591.3</td>
-					<td class="decimal">120.0&deg;</td>
+					<td class="right">3</td>
+					<td class="right">0.578</td>
+					<td class="right">591.3</td>
+					<td>120.0&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">5</td>
-					<td class="integer">0.852</td>
-					<td class="integer">871</td>
-					<td class="decimal"><span class="hidden">0</span>72.0&deg;</td>
+					<td class="right">5</td>
+					<td class="right">0.852</td>
+					<td class="right">871</td>
+					<td><span class="hidden">0</span>72.0&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">6</td>
-					<td class="integer">1.000</td>
-					<td class="integer">1024</td>
-					<td class="decimal"><span class="hidden">0</span>60.0&deg;</td>
+					<td class="right">6</td>
+					<td class="right">1.000</td>
+					<td class="right">1024</td>
+					<td><span class="hidden">0</span>60.0&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">7</td>
-					<td class="integer">1.153</td>
-					<td class="integer">1180</td>
-					<td class="decimal"><span class="hidden">0</span>51.42857142&hellip;&deg;</td>
+					<td class="right">7</td>
+					<td class="right">1.153</td>
+					<td class="right">1180</td>
+					<td><span class="hidden">0</span>51.42857142&hellip;&deg;</td>
 				</tr>
 				<tr style="font-style: italic;">
-					<td class="integer">8</td>
-					<td class="integer">1.306</td>
-					<td class="integer">1338</td>
-					<td class="decimal"><span class="hidden">0</span>45.0&deg;</td>
+					<td class="right">8</td>
+					<td class="right">1.306</td>
+					<td class="right">1338</td>
+					<td><span class="hidden">0</span>45.0&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">10</td>
-					<td class="integer">1.618</td>
-					<td class="integer">1657</td>
-					<td class="decimal"><span class="hidden">0</span>36.0&deg;</td>
+					<td class="right">10</td>
+					<td class="right">1.618</td>
+					<td class="right">1657</td>
+					<td><span class="hidden">0</span>36.0&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">12</td>
-					<td class="integer">1.934</td>
-					<td class="integer">1978</td>
-					<td class="decimal"><span class="hidden">0</span>30.0&deg;</td>
+					<td class="right">12</td>
+					<td class="right">1.934</td>
+					<td class="right">1978</td>
+					<td><span class="hidden">0</span>30.0&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">14</td>
-					<td class="integer">2.247</td>
-					<td class="integer">2301</td>
-					<td class="decimal"><span class="hidden">0</span>25.71428571&hellip;&deg;</td>
+					<td class="right">14</td>
+					<td class="right">2.247</td>
+					<td class="right">2301</td>
+					<td><span class="hidden">0</span>25.71428571&hellip;&deg;</td>
 				</tr>
 				<tr class="bold">
-					<td class="integer">16</td>
-					<td class="integer">2.563</td>
-					<td class="integer">2624</td>
-					<td class="decimal"><span class="hidden">0</span>22.5&deg;</td>
+					<td class="right">16</td>
+					<td class="right">2.563</td>
+					<td class="right">2624</td>
+					<td><span class="hidden">0</span>22.5&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">18</td>
-					<td class="integer">2.880</td>
-					<td class="integer">2948</td>
-					<td class="decimal"><span class="hidden">0</span>20.0&deg;</td>
+					<td class="right">18</td>
+					<td class="right">2.880</td>
+					<td class="right">2948</td>
+					<td><span class="hidden">0</span>20.0&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">20</td>
-					<td class="integer">3.197</td>
-					<td class="integer">3272</td>
-					<td class="decimal"><span class="hidden">0</span>18.0&deg;</td>
+					<td class="right">20</td>
+					<td class="right">3.197</td>
+					<td class="right">3272</td>
+					<td><span class="hidden">0</span>18.0&deg;</td>
 				</tr>
 				<tr style="font-style: italic;">
-					<td class="integer">24</td>
-					<td class="integer">3.831</td>
-					<td class="integer">3922</td>
-					<td class="decimal"><span class="hidden">0</span>15.0&deg;</td>
+					<td class="right">24</td>
+					<td class="right">3.831</td>
+					<td class="right">3922</td>
+					<td><span class="hidden">0</span>15.0&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">28</td>
-					<td class="integer">4.467</td>
-					<td class="integer">4574</td>
-					<td class="decimal"><span class="hidden">0</span>12.85714285&hellip;&deg;</td>
+					<td class="right">28</td>
+					<td class="right">4.467</td>
+					<td class="right">4574</td>
+					<td><span class="hidden">0</span>12.85714285&hellip;&deg;</td>
 				</tr>
 				<tr class="bold">
-					<td class="integer">32</td>
-					<td class="integer">5.102</td>
-					<td class="integer">5224</td>
-					<td class="decimal"><span class="hidden">0</span>11.25&deg;</td>
+					<td class="right">32</td>
+					<td class="right">5.102</td>
+					<td class="right">5224</td>
+					<td><span class="hidden">0</span>11.25&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">36</td>
-					<td class="integer">5.735</td>
-					<td class="integer">5873</td>
-					<td class="decimal"><span class="hidden">0</span>10.0&deg;</td>
+					<td class="right">36</td>
+					<td class="right">5.735</td>
+					<td class="right">5873</td>
+					<td><span class="hidden">0</span>10.0&deg;</td>
 				</tr>
 				<tr style="font-style: italic;">
-					<td class="integer">40</td>
-					<td class="integer">6.372</td>
-					<td class="integer">6525</td>
-					<td class="decimal"><span class="hidden">00</span>9.0&deg;</td>
+					<td class="right">40</td>
+					<td class="right">6.372</td>
+					<td class="right">6525</td>
+					<td><span class="hidden">00</span>9.0&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">42</td>
-					<td class="integer">6.690</td>
-					<td class="integer">6851</td>
-					<td class="decimal"><span class="hidden">00</span>8.57142857&hellip;&deg;</td>
+					<td class="right">42</td>
+					<td class="right">6.690</td>
+					<td class="right">6851</td>
+					<td><span class="hidden">00</span>8.57142857&hellip;&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">44</td>
-					<td class="integer">7.008</td>
-					<td class="integer">7176</td>
-					<td class="decimal"><span class="hidden">00</span>8.1818&hellip;&deg;</td>
+					<td class="right">44</td>
+					<td class="right">7.008</td>
+					<td class="right">7176</td>
+					<td><span class="hidden">00</span>8.1818&hellip;&deg;</td>
 				</tr>
 				<tr class="bold">
-					<td class="integer">48</td>
-					<td class="integer">7.647</td>
-					<td class="integer">7830</td>
-					<td class="decimal"><span class="hidden">00</span>7.5&deg;</td>
+					<td class="right">48</td>
+					<td class="right">7.647</td>
+					<td class="right">7830</td>
+					<td><span class="hidden">00</span>7.5&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">52</td>
-					<td class="integer">8.283 (use 4.142)</td>
-					<td class="integer">8482</td>
-					<td class="decimal"><span class="hidden">00</span>6.92307692&hellip;&deg;</td>
+					<td class="right">52</td>
+					<td class="right">8.283 (use 4.142)</td>
+					<td class="right">8482</td>
+					<td><span class="hidden">00</span>6.92307692&hellip;&deg;</td>
 				</tr>
 				<tr style="font-style: italic;">
-					<td class="integer">56</td>
-					<td class="integer">8.918 (use 4.459)</td>
-					<td class="integer">9130</td>
-					<td class="decimal"><span class="hidden">00</span>6.42857142&hellip;&deg;</td>
+					<td class="right">56</td>
+					<td class="right">8.918 (use 4.459)</td>
+					<td class="right">9130</td>
+					<td><span class="hidden">00</span>6.42857142&hellip;&deg;</td>
 				</tr>
 				<tr>
-					<td class="integer">60</td>
-					<td class="integer">9.558 (use 4.779)</td>
-					<td class="integer">9780</td>
-					<td class="decimal"><span class="hidden">00</span>6.0&deg;</td>
+					<td class="right">60</td>
+					<td class="right">9.558 (use 4.779)</td>
+					<td class="right">9780</td>
+					<td><span class="hidden">00</span>6.0&deg;</td>
 				</tr>
 				<tr class="bold">
-					<td class="integer">64</td>
-					<td class="integer">10.190 (use 5.095)</td>
-					<td class="integer">10435</td>
-					<td class="decimal"><span class="hidden">00</span>5.625&deg;</td>
+					<td class="right">64</td>
+					<td class="right">10.190 (use 5.095)</td>
+					<td class="right">10435</td>
+					<td><span class="hidden">00</span>5.625&deg;</td>
 				</tr>
 				<tr style="font-style: italic;">
-					<td class="integer">72</td>
-					<td class="integer">11.468 (use 5.734)</td>
-					<td class="integer">11740</td>
-					<td class="decimal"><span class="hidden">00</span>5.0&deg;</td>
+					<td class="right">72</td>
+					<td class="right">11.468 (use 5.734)</td>
+					<td class="right">11740</td>
+					<td><span class="hidden">00</span>5.0&deg;</td>
 				</tr>
 			</tbody>
 		</table>

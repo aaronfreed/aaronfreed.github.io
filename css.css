@@ -890,10 +890,10 @@ textarea {
 .number {
 	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", monospace;
 }
-.discography .number, .discography .dr, .discography .date, .discography .accent, .music .date {
+.discography .number, .discography .dr, .discography .date, .discography .accent {
 	font-family: inherit; font-weight: inherit;
 }
-.date, :where(td, th).date {
+ .date:is:not(.music), :where(td, th).date {
 	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 	text-align: right;
 	white-space: nowrap;

@@ -421,15 +421,13 @@ ol {
 }
 
 /* table of contents. this one is a doozy */
-ol.toc,
-.toc ol,
-ol.toclite,
-.toclite ol {
+:is(ol.toc, ol.toclite, ol.tocliter),
+:is(.toc, .toclite, .tocliter) ol {
 	counter-reset: item;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-:is(.toc, .toclite) li {
+:is(.toc, .toclite, .tocliter) li {
 	display: block;
 	margin-top: 4px;
 	margin-bottom: 4px;
@@ -444,43 +442,40 @@ ol.toc :is(li, li a:link, li a:visited),
 ol.toc li:before {
 	font-weight: var(--boldest);
 }
-ol.toc ol :is(lli, li a:link, li a:visited),
-ol.toc ol li:before {
+:is(ol.toc ol, ol.toclite) :is(li, li a:link, li a:visited),
+:is(ol.toc ol, ol.toclite) li:before {
 	font-weight: var(--bold);
 }
-ol.toclite :is(li, li a:link, li a:visited),
-ol.toclite li:before {
-	font-weight: var(--medium);
-}
-:is(ol.toclite ol, ol.toc ol ol) :is(li, li a:link, li a:visited),
-:is(ol.toclite ol, ol.toc ol ol) li:before {
+:is(ol.toclite ol, ol.toc ol ol, ol.tocliter) :is(li, li a:link, li a:visited),
+:is(ol.toclite ol, ol.toc ol ol, ol.tocliter) li:before {
 	font-weight: var(--light);
 }
 /*:is(ol.toc, ol.toclite) :is(li:before, a:link, a:visited, li),
 ol.toc ol ol ol li:before {
 	font-weight: var(--lighter);
 }*/
-:is(ol.toc ol ol ol, ol.toclite ol ol) :is(li, li a:link, li a:visited),
-:is(ol.toc ol ol ol, ol.toclite ol ol) li:before, 
-:is(ol, ol ol, ol ol ol) li.light:before {
+:is(ol.toc ol ol ol, ol.toclite ol ol, ol.tocliter ol) :is(li, li a:link, li a:visited),
+:is(ol.toc ol ol ol, ol.toclite ol ol, ol.tocliter ol) li:before, 
+:is(ol, ol ol, ol ol ol) li.light:before,
+:is(ol, ol ol, ol ol ol) :is(li.light, li.light a:link, li.light a:visited) {
 	font-weight: var(--lightest);
 }
-:is(ol.toc, ol.toclite) li:before {
+:is(ol.toc, ol.toclite, ol.tocliter) li:before {
 	content: "(" counters(item, ".")") ";
 	counter-increment: item;
 	color: var(--toc-counter);
 }
-:is(ol.toc, ol.toclite) ol li:before {
+:is(ol.toc, ol.toclite, ol.tocliter) ol li:before {
 	content: "[" counters(item, ".")"] ";
 	counter-increment: item;
 	color: var(--toc-counter);
 }
-:is(ol.toc, ol.toclite) ol ol li:before {
+:is(ol.toc, ol.toclite, ol.tocliter) ol ol li:before {
 	content: "{" counters(item, ".")"} ";
 	counter-increment: item;
 	color: var(--toc-counter);
 }
-:is(ol.toc, ol.toclite) ol ol ol li:before {
+:is(ol.toc, ol.toclite, ol.tocliter) ol ol ol li:before {
 	content: "\27E8" counters(item, ".")"\27E9\0020";
 	counter-increment: item;
 	color: var(--toc-counter);
@@ -861,9 +856,11 @@ textarea {
 }
  .date:is:not(.music), :where(td, th).date {
 	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-weight: var(--bold);
+}
+.date {
 	text-align: right;
 	white-space: nowrap;
-	font-weight: var(--bold);
 }
 .dr {
 	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;

@@ -385,15 +385,11 @@ ol {
 	padding: 0px;
 }
 
-.music li,
-.soundtracks li {
+:is(.music, .soundtracks) li {
 	margin-top: 6px;
 	margin-bottom: 6px;
 }
-.music ul,
-.music ol,
-.soundtracks ul,
-.soundtracks ol {
+:is(.music, .soundtracks) :is(ul, ol) {
 	margin: 12px 0px 6px 30px;
 }
 
@@ -433,91 +429,61 @@ ol.toclite,
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-.toc li,
-.toclite li {
+:is(.toc, .toclite) li {
 	display: block;
 	margin-top: 4px;
 	margin-bottom: 4px;
-	font-weight: var(--lighter);
 	line-height: 125%;
 }
-.toc a:link,
-.toc a:visited,
-.toclite a:link,
-.toclite a:visited {
-	font-weight: var(--lighter);
-}
-:is(.toc, .toclite) li:before {
+/*:is(.toc, .toclite) li:before {
 	content: "{" counters(item, ".")"} ";
 	counter-increment: item;
 	color: var(--toc-counter);
-}
-ol.toc :is(li, li a:link, li a:visited) {
+}*/
+ol.toc :is(li, li a:link, li a:visited),
+ol.toc li:before {
 	font-weight: var(--boldest);
 }
-ol.toclite :is(li, li a:link, li a:visited) {
+ol.toc ol :is(lli, li a:link, li a:visited),
+ol.toc ol li:before {
+	font-weight: var(--bold);
+}
+ol.toclite :is(li, li a:link, li a:visited),
+ol.toclite li:before {
 	font-weight: var(--medium);
+}
+:is(ol.toclite ol, ol.toc ol ol) :is(li, li a:link, li a:visited),
+:is(ol.toclite ol, ol.toc ol ol) li:before {
+	font-weight: var(--light);
+}
+/*:is(ol.toc, ol.toclite) :is(li:before, a:link, a:visited, li),
+ol.toc ol ol ol li:before {
+	font-weight: var(--lighter);
+}*/
+:is(ol.toc ol ol ol, ol.toclite ol ol) :is(li, li a:link, li a:visited),
+:is(ol.toc ol ol ol, ol.toclite ol ol) li:before, 
+:is(ol, ol ol, ol ol ol) li.light:before {
+	font-weight: var(--lightest);
 }
 :is(ol.toc, ol.toclite) li:before {
 	content: "(" counters(item, ".")") ";
 	counter-increment: item;
 	color: var(--toc-counter);
-	font-family: "Fira Sans", "Corbel", "Avenir", "Calibri";
-}
-ol.toc li:before {
-	font-weight: var(--bolder);
-}
-ol.toclite li:before {
-	font-weight: var(--medium);
-}
-ol.toc ol :is(li, li a:link, li a:visited) {
-	font-weight: var(--bold);
-}
-ol.toclite ol :is(li, li a:link, li a:visited) {
-	font-weight: var(--light);
 }
 :is(ol.toc, ol.toclite) ol li:before {
 	content: "[" counters(item, ".")"] ";
 	counter-increment: item;
 	color: var(--toc-counter);
-	font-family: "Fira Sans", "Corbel", "Avenir", "Calibri";
 }
-ol.toc ol li:before {
-	font-weight: var(--bold);
-}
-ol.toclite ol li:before {
-	font-weight: var(--light);
-}
-ol.toc ol ol :is(li, li a:link, li a:visited) {
-	font-weight: var(--light);
-}
-ol.toclite ol ol :is(li, li a:link, li a:visited) {
-	font-weight: var(--lightest);
-}
-ol.toc ol ol li:before {
+:is(ol.toc, ol.toclite) ol ol li:before {
 	content: "{" counters(item, ".")"} ";
 	counter-increment: item;
 	color: var(--toc-counter);
-	font-family: "Fira Sans", "Corbel", "Avenir", "Calibri";
 }
-ol.toc ol ol li:before {
-	font-weight: var(--light);
-}
-ol.toclite ol ol li:before {
-	font-weight: var(--lightest);
-}
-ol.toc ol ol ol :is(li, li a:link, li a:visited) {
-	font-weight: var(--lighter);
-}
-ol.toc ol ol ol li:before {
-	content: "⟨" counters(item, ".")"⟩ ";
+:is(ol.toc, ol.toclite) ol ol ol li:before {
+	content: "\27E8" counters(item, ".")"\27E9\0020";
 	counter-increment: item;
 	color: var(--toc-counter);
-	font-weight: var(--lighter);
-	font-family: "Fira Sans", "Corbel", "Avenir", "Calibri";
-}
-ol li.light:before, ol ol li.light:before, ol ol ol li.light:before {
-	font-weight: var(--lightest);
 }
 
 /* a bunch of weird stuff for the Forge manual table of contents */

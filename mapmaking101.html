@@ -162,7 +162,7 @@ window.onload = function () {makeAllSortable();};
 		<li><strong>Visual Mode.lua</strong>
 			<ul>
 				<li><strong>Pros:</strong> It is extremely powerful and fast once you&rsquo;ve learned its interface, lacks several of Vasara 1.0.3&rsquo;s bugs, and has several features that aren&rsquo;t present in Vasara 1.0.3 (but are present in VAF).</li>
-				<li><strong>Cons:</strong> It will probably intimidate new mapmakers due to its bare-bones interface; it is missing several features of VAF (and may never have them).</li>
+				<li><strong>Cons:</strong> It will probably intimidate new mapmakers due to its bare-bones interface; it is missing several features of VAF (and will probably never have them).</li>
 			</ul>
 		</li>
 		<li><strong>Forge+</strong>
@@ -177,7 +177,7 @@ window.onload = function () {makeAllSortable();};
 
 <h2 id="editorsm1"><em>Marathon 1</em> Format</h2>
 
-	<p>Unfortunately, <em>Marathon 1</em> content editing is barely supported on modern OSes, with a few exceptions, the most noteworthy being a physics converter by <strong>@magical_beetle_40501</strong> on Discord that I&rsquo;m hosting here myself.</p>
+	<p>Unfortunately, <em>Marathon 1</em> content editing is barely supported on modern OSes, with a few exceptions, the most noteworthy being two different physics converters: one by <strong>@magical_beetle_40501</strong> on Discord that I&rsquo;m hosting here myself, and the other being <strong>Solra Bizna</strong>&rsquo;s <strong>Physics Eater</strong> (which is missing names but is otherwise more comprehensive. I intend to make a set of names at some point but have not had time yet).</p>
 	
 	<p>A partial exception: You can extract <em>M1</em> sound files&rsquo; contents by splitting them with Atque, but it won&rsquo;t re-merge them into a format Aleph One reads as <em>M1</em> sounds.</p>
 	
@@ -194,6 +194,7 @@ window.onload = function () {makeAllSortable();};
 		<li><strong>Physics:</strong> 
 			<ul>
 				<li><strong>Web-based <a href="m1-phys-to-json.html">M1 .phys to JSON</a> and <a href="json-to-m1-phys.html">JSON to M1 .phys</a> converters</strong> by <strong>@magical_beetle_40501</strong></li>
+				<li><strong><a href="https://github.com/SolraBizna/physics-eater" target="_blank">Physics Eater</a></strong> by <strong>Solra Bizna</strong></li>
 				<li><a href="http://archives2.bungie.org/m1.tools/MaraModelEdit1.1.sit.hqx" target="_blank"><strong>Marathon Physics Model Editor</strong></a> (classic OS)</li>
 			</ul>
 		</li>
@@ -471,10 +472,15 @@ window.onload = function () {makeAllSortable();};
 				<li><a href="https://htmlpreview.github.io/?https://github.com/Aleph-One-Marathon/alephone/blob/master/docs/Lua_HUD.html" target="_blank">Lua (Heads-Up Display scripting)<br /></a></li>
 			</ul>
 		</li>
-		<li><strong><a href="https://gist.github.com/marrub--/98af41f36e15a277088b220a6a9f4244" target="_blank">File format info</a></strong> <em>(note: parts of this now appear to be outdated, but parts may still be helpful)</em></li>
-		<li><strong><a href="https://simplici7y.com/items/marathon-2-texture-replacements-for-marathon-infinity/" target="_blank"><em>M2</em>-flavored <em>Infinity</em> shapes</a></strong>
+		<li><a href="https://gist.github.com/marrub--/98af41f36e15a277088b220a6a9f4244" target="_blank">File format info</a> <em>(note: parts of this now appear to be outdated, but parts may still be helpful)</em></li>
+		<li><a href="https://simplici7y.com/items/marathon-2-texture-replacements-for-marathon-infinity/" target="_blank"><em>M2</em>-flavored <em>Infinity</em> shapes</a>
 			<ul>
 				<li>If you want to make <em>Marathon 2</em> maps, I recommend configuring Weland to use <em>Marathon Infinity</em> as the scenario and this as the shapes. <strong>Vasara</strong>, <strong>VAF</strong>, and <strong>Visual Mode.lua</strong> look for the Jjaro collection by default, and weird things happen if they don&rsquo;t find it. (You can edit them to prevent this, but this prevents the need for that, or for changing Weland&rsquo;s scenario from <em>Marathon Infinity</em> to <em>Marathon 2</em> and back.)</li>
+			</li>
+			</ul>
+		<li><a href="https://simplici7y.com/items/m1-shapes-in-m2-format/" target="_blank">M2-formatted M1 shapes</a>
+			<ul>
+				<li>Note that this won&rsquo;t actually run with <em>Marathon 1</em>. It&rsquo;s useful if you want to use <em>M1</em>&rsquo;s shapes as a base for editing, but you&rsquo;ll have to convert it back to <em>M1</em> format afterward if you want to use it with <em>M1</em>.</li>
 			</ul>
 		</li>
 	</ul>

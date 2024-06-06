@@ -216,6 +216,14 @@ window.onload = function () {makeAllSortable();};
 	<li>Hold down Ctrl (&#8984; on Mac) and use the = and - keys to zoom the map in and out without selecting the zoom tool.</li>
 	<li>If the primary and secondary active or primary and secondary inactive periods of any light add up to 0, Aleph One freezes without explanation &ndash; the cause is an infinite loop with no escape hatch. (This is a bug; the game should instead print out an assertion failure and quit so that mapmakers have some idea what they did wrong, and hopefully it will in a future release.)</li>
 	<li>Trying to create a new scenery object using Lua leads to a similar freeze if the scenery object&rsquo;s sequence is set to &ldquo;Display a random frame&rdquo; with no defined frames (this is the equivalent of division by zero). This is probably also true for effects, ephemera, items, and monsters, and it may be true if the scenery object is created normally as well. (Again, this is a bug; the game should print an assertion failure explaining the problem, and hopefully it will in a future release.)</li>
+	<li>On MacOS and Linux, Weland ignores its own folder&rsquo;s &ldquo;Plugins&rdquo; subdirectory; instead, its plugins must go in:
+		<pre>/Users/username/.config/Weland/Plugins/</pre>
+	Replace <code>username</code> with your actual username, of course. By way of example, my plugins must go in:
+		<pre>/Users/aaronfreed/.config/Weland/Plugins/</pre>
+	</li>
+	<li>If Weland plugins don&rsquo;t load on Windows, you may need to unblock them by checking the box shown below:
+		<div class="image"><img src="windows-unblock.png" /></div>
+	<strong><em>Don&rsquo;t make a habit of doing this with unknown software</em></strong> &ndash; only do it if you have reason to believe the source is trustworthy. I can&rsquo;t stress this strongly enough.</li>
 </ul>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>

@@ -85,6 +85,7 @@ window.onload = function () {makeAllSortable();};
 			<ol>
 				<!--<li><a href="#forgeerrata">Forge Manual Errata &amp; Omissions</a></li>-->
 				<li><a href="#generalmapmaking">General Notes</a></li>
+				<li><a href="#alephoneerrata">Aleph One Documentation Errata</a></li>
 				<li><a href="#scripts">Scripts, Monster Limits, &amp; Music</a>
 					<!--<ol>
 						<li><a href="#looper">Looping Music</a></li>
@@ -227,6 +228,37 @@ window.onload = function () {makeAllSortable();};
 </ul>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+
+<h2 id="alephoneerrata">Aleph One Documentation Errata</h2>
+
+<p>Aleph One&rsquo;s documentation is largely accurate, but it does have a few errors. In the Lua documentation:</p>
+
+<ul>
+	<li>
+		<strong><strong>Platform</strong></strong>
+		<ul>
+			<li><code><strong>.cannot_be_externally_deactivated</strong></code>
+					<blockquote class="light"><em>when active, can only be deactivated by itself</em></blockquote>
+				<p>This should read:</p>
+					<blockquote class="light"><em>when active, can only be deactivated either by itself, or by an adjacent platform deactivating it</em></blockquote>
+			</li>
+			<li><code><strong>.type</strong></code>
+					<blockquote class="light"><em>the only thing the engine uses type for is the platform&rsquo;s sound</em></blockquote>
+				<p>This is incorrect; platform type also affects whether players can activate a switch or another door behind a non-player-controllable door of that type (it blocks activation if and only if it has an &ldquo;uncontrollable&rdquo; sound), and it how damage it deals when it crushes players or monsters. The latter error is particularly strange since the MML documentation details how to customize the damage a particular platform type deals.</p>
+			</li>
+		</ul>
+	</li>
+	<li><strong><strong>Polygon</strong></strong>
+		<ul>
+			<li><code><strong>.adjacent_polygons[n]</strong></code>
+					<blockquote class="light"><em>returns adjacent polygon n (across from line n), if one exists, or nil</em></blockquote>
+				<p>Self-evidently, <code>n</code> cannot be both a polygon and a line! This should read:</p>
+					<blockquote class="light"><em>returns adjacent polygon across from polygon&rsquo;s line n, if one exists; otherwise, returns nil</em></blockquote>
+				<p>Note that <code>n</code> does not correspond either to the line itself (i.e., <code>.adjacent_polygons[Lines[42]]</code> will not work) or to the line index (i.e., <code>.adjacent_polygons[42]</code> also will not work); it appears to be an internally selected value from 0 to <code>l&minus;1</code>, where <code>l</code> is the number of lines the polygon contains.</p></li>
+			</li>
+		</ul>
+	</li>
+</ul>
 
 <h2 id="scripts">Scripts, Monster Limits, &amp; Music</h2>
 <ul>

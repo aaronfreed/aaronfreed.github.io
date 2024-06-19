@@ -389,8 +389,8 @@ ol {
 	margin-top: 6px;
 	margin-bottom: 6px;
 }
-:is(.music, .soundtracks) :is(ul, ol) {
-	margin: 12px 0px 6px 30px;
+:is(.music, .soundtracks) .midpara :is(ul, ol) {
+	margin-top: 6px;
 }
 
 .discography ol {
@@ -659,6 +659,12 @@ tbody:nth-child(even) tr:nth-child(even) .hidden {
 tbody:nth-child(even) tr:nth-child(odd) .hidden {
 	color: var(--background);
 }
+tbody tr.freshprince:nth-child(even) {
+	background-color: var(--background);
+}
+tbody tr.freshprince:nth-child(odd) {
+	background-color: var(--offset-level-1);
+}
 thead {
 	font-weight: var(--bold);
 	background-color: var(--offset-level-1);
@@ -738,6 +744,11 @@ textarea {
 	font-weight: var(--bold);
 	font-size: 13px;
 }
+
+.discography tr.singleline {
+	border-bottom: 1px solid var(--offset-level-2);
+}
+
 
 /* the istoria body messages also have some pretty complicated stuff */
 .istoria table {
@@ -845,7 +856,6 @@ textarea {
 }
 .forgemanual blockquote {margin: 4px 30px;}
 
-
 .integer,
 .decimal,
 .number {
@@ -871,6 +881,9 @@ textarea {
 :where(td, th):where(.centred, .dr),
 .istoria .footer {
 	text-align: center;
+}
+.middle {
+	vertical-align: middle;
 }
 .right,
 .date,

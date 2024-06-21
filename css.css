@@ -882,6 +882,13 @@ textarea {
 .istoria .footer {
 	text-align: center;
 }
+.centre-justify {
+	text-align: justify;
+	text-align-last: center;
+}
+.nowrap {
+	white-space: nowrap;
+}
 .middle {
 	vertical-align: middle;
 }
@@ -895,6 +902,9 @@ textarea {
 }
 .justify {
 	text-align: justify;
+}
+.balanced-wrap {
+	text-wrap: balance;
 }
 pre,
 code {

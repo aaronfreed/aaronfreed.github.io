@@ -249,7 +249,8 @@ a:visited,
 
 :is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited),
 :is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) :where(.integer, .decimal, .number, .date),
-ol.toc > :where(a:link, a:visited) :where(.integer, .decimal)
+ol.toc > :where(a:link, a:visited) :where(.integer, .decimal),
+strong.bold
 {
 	font-weight: var(--medium);
 }
@@ -363,6 +364,9 @@ li {
 .discography p.upperpara {
 	margin: 0px 0px 6px;
 }
+.discography p.midpara {
+	margin: 12px 0px;
+}
 .discography p.lowerpara {
 	margin: 12px 0px 0px;
 }
@@ -400,6 +404,10 @@ ol {
 .discography ol > li > ol {
 	list-style-type: lower-alpha;
 	margin-top: 0px;
+}
+.discography li.midpara {
+	margin-top: 12px;
+	margin-bottom: 12px;
 }
 .soundtracks li {
 	margin: 6px 0px;
@@ -659,6 +667,7 @@ tbody:nth-child(even) tr:nth-child(even) .hidden {
 tbody:nth-child(even) tr:nth-child(odd) .hidden {
 	color: var(--background);
 }
+/* now this is a story all about how / my life got flipped, turned upside-down */
 tbody tr.freshprince:nth-child(even) {
 	background-color: var(--background);
 }

@@ -21,20 +21,22 @@
 	--boldest: 800;
 }
 @media (prefers-color-scheme: dark) {
-	:root {
-		--background: #000;
-		--offset-level-1: #1c1e36;
-		--offset-level-2: #383c6c;
-		--offset-level-3: #545aa2;
-		--offset-level-4: #7078d8;
-		--link: #73e8ff;
-		--link-visited: #ff93ff;
-		--link-active: #adffad;
-		--link-hover: #ffb57b;
-		--heading-color: #74d4ff;
-		--portfolio-heading: #b8f0ff;
-		--toc-counter: #a8f0ff;
-		--main: #fff;
+	@media screen {
+		:root {
+			--background: #000;
+			--offset-level-1: #1c1e36;
+			--offset-level-2: #383c6c;
+			--offset-level-3: #545aa2;
+			--offset-level-4: #7078d8;
+			--link: #73e8ff;
+			--link-visited: #ff93ff;
+			--link-active: #adffad;
+			--link-hover: #ffb57b;
+			--heading-color: #74d4ff;
+			--portfolio-heading: #b8f0ff;
+			--toc-counter: #a8f0ff;
+			--main: #fff;
+		}
 	}
 }
 @media print {
@@ -722,7 +724,8 @@ textarea {
 .solo > tfoot,
 .compilation > thead,
 .master > tfoot,
-.unofficial > tfoot {
+.unofficial > tfoot,
+.discography .endnotes > tfoot {
 	background-color: var(--offset-level-1);
 	print-color-adjust: economy;
 }
@@ -732,7 +735,6 @@ textarea {
 .multi > thead,
 .multi > tfoot,
 .unofficial > thead,
-.discography .endnotes > tfoot,
 .discography .endnotes > thead
 {
 	background-color: var(--background);

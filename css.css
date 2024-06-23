@@ -44,17 +44,21 @@
 	{
 		display: none !important;
 	}
-	.discography tbody > tr:nth-child(6n+1),
-	.discography tbody > tr:nth-child(6n+4) {
+	.discography :not(:is(.unofficial-master, .endnotes)) tbody > :is(tr:nth-child(6n+1), tr:nth-child(6n+4)) {
 		break-inside: avoid-page;
 		break-before: auto;
 	}
-	.discography tbody > tr:nth-child(6n),
-	.discography tbody > tr:nth-child(6n+2),
-	.discography tbody > tr:nth-child(6n+3),
-	.discography tbody > tr:nth-child(6n+5) {
+	.discography :not(:is(.unofficial-master, .endnotes)) tbody > :is(tr:nth-child(6n), tr:nth-child(6n+2), tr:nth-child(6n+3), tr:nth-child(6n+5)) {
 		break-before: avoid-page;
 		break-inside: avoid-page;
+	}
+	.unofficial-master tbody > :is(tr:nth-child(4n+1), tr:nth-child(4n+3)) {
+		break-inside: avoid-page;
+		break-before: auto;
+	}
+	.unofficial-master tbody > :is(tr:nth-child(4n+2), tr:nth-child(4n+4)) {
+		break-inside: avoid-page;
+		break-before: avoid-page;
 	}
 	h1,
 	h2,
@@ -84,6 +88,9 @@
 		content: " (" attr(href) ") ";
 		color: var(--link-hover) !important;
 		font-size: 81.25%;
+	}
+	thead th {
+		font-weight: normal !important;
 	}
 }
 @media screen {
@@ -718,24 +725,27 @@ textarea {
 }
 
 /* the discography page has complicated table border stuff */
-.multi tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
-:is(.solo, .compilation, .master) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
+:is(.multi, .master) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
+:is(.solo, .compilation) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
+.unofficial-master tbody > tr:is(:nth-child(4n+3), :nth-child(4n+4)),
 .solo > thead, 
 .solo > tfoot,
 .compilation > thead,
-.master > tfoot,
-.unofficial > tfoot,
-.discography .endnotes > tfoot {
+.compilation > tfoot,
+.unofficial > thead,
+.discography .endnotes > thead {
 	background-color: var(--offset-level-1);
 	print-color-adjust: economy;
 }
-.multi tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
-:is(.solo, .compilation, .master) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
-.compilation > tfoot,
+:is(.multi, .master) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
+:is(.solo, .compilation) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
+.unofficial-master tbody > tr:is(:nth-child(4n+1), :nth-child(4n+2)),
+.master > thead,
+.master > tfoot,
 .multi > thead,
 .multi > tfoot,
-.unofficial > thead,
-.discography .endnotes > thead
+.unofficial > tfoot,
+.discography .endnotes > tfoot
 {
 	background-color: var(--background);
 }
@@ -1007,4 +1017,7 @@ table.noborder {
 }
 .nobottompad {
 	padding-bottom: 0px;
+}
+.hide {
+	display: none;
 }

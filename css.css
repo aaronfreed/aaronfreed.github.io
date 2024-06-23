@@ -721,7 +721,8 @@ textarea {
 .solo > thead, 
 .solo > tfoot,
 .compilation > thead,
-.master > tfoot {
+.master > tfoot,
+.unofficial > tfoot {
 	background-color: var(--offset-level-1);
 	print-color-adjust: economy;
 }
@@ -729,7 +730,10 @@ textarea {
 :is(.solo, .compilation, .master) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
 .compilation > tfoot,
 .multi > thead,
-.multi > tfoot
+.multi > tfoot,
+.unofficial > thead,
+.discography .endnotes > tfoot,
+.discography .endnotes > thead
 {
 	background-color: var(--background);
 }
@@ -915,6 +919,9 @@ textarea {
 .balanced-wrap {
 	text-wrap: balance;
 }
+.pretty-wrap {
+	text-wrap: pretty;
+}
 pre,
 code {
 	font-weight: var(--lightest);
@@ -977,9 +984,25 @@ spoiler:active::before {
 
 hr {
 	border-block: 1px dashed var(--heading-color);
-	border-left: none;
-	border-right: none;
-	border-bottom: none;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
 	list-style-position: inside;
 	margin: 16px 0px;
+}
+
+table.noborder {
+	border-width: 0px !important;
+}
+.noborder tr, .noborder td, .noborder th {
+	border-width: 0px !important;
+}
+.noborder :is(thead, tbody, tr, th, td) {
+	background: none !important;
+}
+.notoppad {
+	padding-top: 0px;
+}
+.nobottompad {
+	padding-bottom: 0px;
 }

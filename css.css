@@ -402,7 +402,7 @@ ol {
 	margin-top: 6px;
 	margin-bottom: 6px;
 }
-:is(.music, .soundtracks) .midpara :is(ul, ol) {
+:is(.music, .soundtracks) :is(.midpara ul, .midpara ol, ul.midpara, ol.midpara) {
 	margin-top: 6px;
 }
 
@@ -422,19 +422,19 @@ ol {
 	margin: 6px 0px;
 }
 
-.portfolio ul {
+.portfolio :is(ul, ol) {
 	margin: 16px 0px 4px 30px;
 }
 .portfolio ul > li > ul {
 	margin-top: 8px;
 	margin-bottom: 8px;
 }
-.portfolio ol {
-	margin: 16px 0px 4px 30px;
-}
 .portfolio li {
 	margin-top: 8px;
 	margin-bottom: 8px;
+}
+.portfolio :is(ol.midpara, ul.midpara) {
+	margin: 8px 0px 8px 30px;
 }
 
 /* table of contents. this one is a doozy */

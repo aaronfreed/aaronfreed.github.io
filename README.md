@@ -51,10 +51,10 @@ I&rsquo;ve contributed in varying degrees to the following (mostly) playable gam
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6mOBZaoKUAOqDsfuv-RIneq)
    * [Featured in *PC Gamer*!](https://pcgamer.com/marathon-mod-apotheosis-x)
    * Further updates of *Apotheosis X* have not been ruled out but are not currently under active development.
-* ***[Dungeons Presents Hellpak Vol. 1: Not Recommended by Doctors](https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors)*** (2020-2023): maps, scripting, soundtrack mastering, writing, graphics, documentation, bug fix releases
+* ***[Dungeons Presents Hellpak Vol. 1: Not Recommended by Doctors](https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors)*** (2020-2024): maps, scripting, soundtrack mastering, writing, graphics, documentation, bug fix releases
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kcfNGN3zh0BcsyaLRFkB0k)
    * [Discord server](https://discord.gg/DTMvjFqtTA)
-   * This is an iteration of creator tbcr&rsquo;s long-running *Dungeons* show, hence its full title. One further (hopefully final) bug fix update for this scenario is still forthcoming.
+   * This is an iteration of creator tbcr&rsquo;s long-running *Dungeons* show, hence its full title. We released the (hopefully) final bug fix update for this scenario on 2024-06-24.
 * ***Trojan*** (2020-2021): sound remastering, soundtrack remastering
    * There are multiple versions of this game for Aleph One:
       * [The first](https://simplici7y.com/items/marathon-trojan/) is a direct conversion of the original game files to Aleph One format by Shappie, with which treellama and I assisted. I did not directly create any content involved with this release.

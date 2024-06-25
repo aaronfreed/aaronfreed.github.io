@@ -92,6 +92,20 @@
 	thead th {
 		font-weight: normal !important;
 	}
+
+	.trigtables td {
+		font-size: 14px;
+	}
+	.trigtables tr:nth-child(15n+1) td,
+	.trigtables .fifteen {
+		color: var(--heading-color);
+		font-weight: bold;
+	}
+	.trigtables :is(tr:nth-child(15n+6), tr:nth-child(15n+11)) td,
+	.trigtables .five {
+		color: var(--toc-counter);
+		font-style: italic;
+	}
 }
 @media screen {
 	.noscreen {
@@ -155,6 +169,52 @@
 		inset-block-start: 0;
 	}
 	.istoria .body thead th {border-top: 1px solid var(--offset-level-4);}
+
+	.trigtables td, .trigtables th {
+		border-left: 1px solid var(--offset-level-4);
+	}
+	.trigtables th {
+		border-top: 4px ridge var(--offset-level-4);
+		border-bottom: 4px ridge var(--offset-level-4);
+	}
+	.trigtables td {
+		border-bottom: 1px solid var(--offset-level-4);
+	}
+	.trigtables :is(td, th):first-child {
+		border-left: 4px ridge var(--offset-level-4);
+		border-right: 2px groove var(--offset-level-4);
+	}
+	.trigtables :is(td:nth-child(2), th:nth-child(2)) {
+		border-left: none;
+	}
+	.trigtables :is(td, th):last-child {
+		border-right: 4px ridge var(--offset-level-4);
+	}
+	.trigtables tr:last-child td {
+		border-bottom: 4px ridge var(--offset-level-4);
+	}
+	.trigtables .fifteen,
+	.trigtables .fifteen td {
+		color: var(--heading-color);
+		font-weight: bold;
+		background-color: var(--offset-level-3);
+	}
+	.trigtables table {
+		border-collapse: separate;
+		border-spacing: 0;
+		margin: 24px auto 36px;
+	}
+	.trigtables thead {
+		position: sticky;
+		inset-block-start: 0;
+		border-spacing: 0;
+	}
+	.trigtables .five,
+	.trigtables .five td {
+		color: var(--toc-counter);
+		font-style: italic;
+		background-color: var(--offset-level-2);
+	}
 }
 /* reminder to self about CSS variables:
    two entries (ah! ah! ah!): vertical, horizontal
@@ -195,7 +255,6 @@
 
 /* start main entry */
 body {
-	width: 800px;
 	font-family: "Fira Sans", "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 	text-align: justify;
 	margin: auto;
@@ -203,6 +262,9 @@ body {
 	font-stretch: 100%;
 	background-color: var(--background);
 	color: var(--main);
+}
+body:not(.trigtables) {
+	width: 800px;
 }
 .normal, button {
 	font-family: "Fira Sans", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
@@ -955,6 +1017,27 @@ code {
 
 .soundtracks hr {
 	margin: 24px 0px;
+}
+
+.trigtables :is(td.angle, th.angle, td.sine, td.cosine, td.tangent) {
+	text-align: right;
+}
+.trigtables :is(td.angle, th.sine, th.cosine, th.tangent, th.angle) {
+	font-weight: bold;
+}
+.trigtables :is(th.sine, th.cosine, th.tangent) {
+	text-align: center;
+}
+.trigtables th {
+	font-weight: var(--boldest);
+	color: var(--heading-color);
+}
+.trigtables :is(td, th) {
+	padding: 5px 10px;
+	font-family: "Fira Code", "Monaco", "PP Supply Mono", "Lucida Console", "Courier", "Courier New", monospace;
+}
+.trigtables .accent td {
+	color: var(--heading-color);
 }
 
 spoiler {

@@ -1,0 +1,2226 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
+		<link rel="stylesheet" type="text/css" href="css.css">
+		<script>
+function sortTable(table, col, reverse) {
+	var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+		tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+		i;
+	reverse = -((+reverse) || -1);
+	tr = tr.sort(function (a, b) { // sort rows
+		return reverse // `-1 *` if want opposite order
+			* (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+				.localeCompare(b.cells[col].textContent.trim(), undefined, {numeric: true})
+			);
+	});
+	for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+	var th = table.tHead, i;
+	th && (th = th.rows[0]) && (th = th.cells);
+	if (th) i = th.length;
+	else return; // if no `<thead>` then do nothing
+	while (--i >= 0) (function (i) {
+		var dir = 1;
+		th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+	}(i));
+}
+
+function makeAllSortable(parent) {
+	parent = parent || document.body;
+	var t = parent.getElementsByTagName('table'), i = t.length;
+	while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+		</script>		
+		<title>Sines, Cosines, and Tangents from 0&deg; to 359&deg;</title>
+	</head>
+	<body class="trigtables">
+		<div style="width: 800px; margin: 0px auto 16px;">
+			<h1>What?</h1>
+			<p>Partly sortable <strong>sine</strong>, <strong>cosine</strong>, and <strong>tangent</strong> values to 32 digits of precision for every integer from 0&deg; to 359&deg;. The sorting only sort of works right now; it doesn&rsquo;t understand signs (as opposed to sines, though those too). I may fix this someday as an exercise in learning more about JavaScript, but I make no promises.</p>
+
+			<p>Multiples of 15&deg; are <span class="fifteen">bolded, highlighted, and printed in a different font color</span>, while multiples of 5&deg; are <span class="five">italicized, highlighted slightly less, and printed in a slightly less different font color</span>.</p>
+
+			<h1>Why?</h1>
+			<p>I got sick of looking them up and wanted them all in one easily accessible place. I have no idea if anyone else will use it, but I created it so that I could just refer to this URL whenever I needed it, so here it is.</p>
+
+		</div>
+
+		<table>
+			<thead>
+				<tr>
+		 			<th class="angle">Angle</th>
+					<th class="sine">Sine</th>
+					<th class="cosine">Cosine</th>
+					<th class="tangent">Tangent</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="fifteen">
+					<td class="angle">0&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.00000000000000000000000000000000</td>
+					<td class="cosine">&nbsp;&nbsp;1.0000000000000000000000000000000&nbsp;</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.00000000000000000000000000000000</td>
+				</tr>
+				<tr>
+					<td class="angle">1&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.01745240643728351281941897851631</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99984769515639123915701155881391</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.01745506492821758576512889521973</td>
+				</tr>
+				<tr>
+					<td class="angle">2&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.03489949670250097164599518162533</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99939082701909573000624344004393</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.03492076949174773050040262577373</td>
+				</tr>
+				<tr>
+					<td class="angle">3&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.05233595624294383272211862960908</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99862953475457387378449205843944</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.05240777928304120403880582447398</td>
+				</tr>
+				<tr>
+					<td class="angle">4&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.06975647374412530077595883519414</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99756405025982424761316268064426</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.06992681194351041366692106032318</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">5&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.08715574274765817355806427083747</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99619469809174553229501040247389</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.08748866352592400522201866943496</td>
+				</tr>
+				<tr>
+					<td class="angle">6&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.10452846326765347139983415480250</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99452189536827333692269194498057</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.10510423526567646251150238013988</td>
+				</tr>
+				<tr>
+					<td class="angle">7&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.12186934340514748111289391923153</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99254615164132203498006158933058</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.12278456090290459113423113605286</td>
+				</tr>
+				<tr>
+					<td class="angle">8&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.13917310096006544411249666330111</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99026806874157031508377486734485</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.14054083470239144683811769343281</td>
+				</tr>
+				<tr>
+					<td class="angle">9&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.15643446504023086901010531946717</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.98768834059513772619004024769344</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.15838444032453629383888309269437</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">10&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.17364817766693034885171662676931</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.98480775301220805936674302458952</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.17632698070846497347109038686862</td>
+				</tr>
+				<tr>
+					<td class="angle">11&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.19080899537654481240514048795839</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.98162718344766395349650489981814</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.19438030913771848424319422497682</td>
+				</tr>
+				<tr>
+					<td class="angle">12&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.20791169081775933710174228440513</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.97814760073380563792856674786960</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.21255656167002212525959166057008</td>
+				</tr>
+				<tr>
+					<td class="angle">13&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.22495105434386499805110720834280</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.97437006478523522853969448008827</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.23086819112556311174814561347445</td>
+				</tr>
+				<tr>
+					<td class="angle">14&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.24192189559966772256044237410035</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.97029572627599647230637787403399</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.24932800284318069162403993780486</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">15&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.25881904510252076234889883762405</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.96592582628906828674974319972890</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.26794919243112270647255365849413</td>
+				</tr>
+				<tr>
+					<td class="angle">16&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.27563735581699918564997157461130</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.96126169593831886191649704855706</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.28674538575880794004275806273267</td>
+				</tr>
+				<tr>
+					<td class="angle">17&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.29237170472273672809746869537714</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.95630475596303548133865081661842</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.30573068145866035573454195899655</td>
+				</tr>
+				<tr>
+					<td class="angle">18&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.30901699437494742410229341718282</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.95105651629515357211643933337938</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.32491969623290632615587141221513</td>
+				</tr>
+				<tr>
+					<td class="angle">19&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.32556815445715666871400893579472</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.94551857559931681034812470751940</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.34432761328966524195726583938311</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">20&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.34202014332566873304409961468226</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.93969262078590838405410927732473</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.36397023426620236135104788277683</td>
+				</tr>
+				<tr>
+					<td class="angle">21&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.35836794954530027348413778941347</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.93358042649720174899004306313957</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.38386403503541579597144840810327</td>
+				</tr>
+				<tr>
+					<td class="angle">22&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.37460659341591203541496377450120</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.92718385456678740080647445113696</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.40402622583515681132234814357991</td>
+				</tr>
+				<tr>
+					<td class="angle">23&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.39073112848927375506208458888909</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.92050485345244032739689472330046</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.42447481620960474202353206294252</td>
+				</tr>
+				<tr>
+					<td class="angle">24&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.40673664307580020775398599034150</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.91354545764260089550212757198532</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.44522868530853616392236703064567</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">25&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.42261826174069943618697848964773</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.90630778703664996324255265675432</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.46630765815499859283000619479956</td>
+				</tr>
+				<tr>
+					<td class="angle">26&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.43837114678907741745273454065827</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.89879404629916699278229567669579</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.48773258856586142277311112661696</td>
+				</tr>
+				<tr>
+					<td class="angle">27&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.45399049973954679156040836635787</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.89100652418836786235970957141363</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.50952544949442881051370691125066</td>
+				</tr>
+				<tr>
+					<td class="angle">28&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.46947156278589077595946228822784</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.88294759285892694203217136031572</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.53170943166147874807591587184006</td>
+				</tr>
+				<tr>
+					<td class="angle">29&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.48480962024633702907537962241578</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.87461970713939580028463695866108</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.55430905145276891782076309233813</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">30&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.50000000000000000000000000000000</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.86602540378443864676372317075294</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.57735026918962576450914878050196</td>
+				</tr>
+				<tr>
+					<td class="angle">31&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.51503807491005421008163193639814</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.85716730070211228746521798014476</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.60086061902756041487866442635466</td>
+				</tr>
+				<tr>
+					<td class="angle">32&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.52991926423320495404678115181609</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.84804809615642597038617617869039</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.62486935190932750978051082794944</td>
+				</tr>
+				<tr>
+					<td class="angle">33&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.54463903501502708222408369208157</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.83867056794542402963759094180455</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.64940759319751057698206291131145</td>
+				</tr>
+				<tr>
+					<td class="angle">34&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.55919290347074683016042813998599</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.82903757255504169200633684150164</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.67450851684242663214246086199461</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">35&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.57357643635104609610803191282616</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.81915204428899178968448838591684</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.70020753820970977945852271944483</td>
+				</tr>
+				<tr>
+					<td class="angle">36&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.58778525229247312916870595463907</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.80901699437494742410229341718282</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.72654252800536088589546675748062</td>
+				</tr>
+				<tr>
+					<td class="angle">37&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.60181502315204827991797700044149</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.79863551004729284628400080406894</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.75355405010279415707395644862159</td>
+				</tr>
+				<tr>
+					<td class="angle">38&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.61566147532565827966881109284366</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.78801075360672195669397778783585</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.78128562650671739706294997196227</td>
+				</tr>
+				<tr>
+					<td class="angle">39&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.62932039104983745270590245827997</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.77714596145697087997993774367240</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.80978403319500714803699137423577</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">40&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.64278760968653932632264340990726</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.76604444311897803520239265055542</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.83909963117728001176312729812318</td>
+				</tr>
+				<tr>
+					<td class="angle">41&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.65605902899050728478249596402342</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.75470958022277199794298421956102</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.86928673781622666220009563870394</td>
+				</tr>
+				<tr>
+					<td class="angle">42&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.66913060635885821382627333068678</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.74314482547739423501469704897426</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.90040404429783994512047720388537</td>
+				</tr>
+				<tr>
+					<td class="angle">43&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.68199836006249850044222578471113</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.73135370161917048328754360827562</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.93251508613766170561218562742619</td>
+				</tr>
+				<tr>
+					<td class="angle">44&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.69465837045899728665640629942269</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.71933980033865113935605467445671</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.96568877480707404595802729970068</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">45&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.70710678118654752440084436210485</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.70710678118654752440084436210485</td>
+					<td class="tangent">&nbsp;&nbsp;1.0000000000000000000000000000000&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">46&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.71933980033865113935605467445671</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.69465837045899728665640629942269</td>
+					<td class="tangent">&nbsp;&nbsp;1.0355303137905695069588325512481&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">47&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.73135370161917048328754360827562</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.68199836006249850044222578471113</td>
+					<td class="tangent">&nbsp;&nbsp;1.0723687100246825329460277480726&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">48&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.74314482547739423501469704897426</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.66913060635885821382627333068678</td>
+					<td class="tangent">&nbsp;&nbsp;1.1106125148291928701434819641651&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">49&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.75470958022277199794298421956102</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.65605902899050728478249596402342</td>
+					<td class="tangent">&nbsp;&nbsp;1.1503684072210095558763310255696&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">50&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.76604444311897803520239265055542</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.64278760968653932632264340990726</td>
+					<td class="tangent">&nbsp;&nbsp;1.1917535925942099587053080718604&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">51&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.77714596145697087997993774367240</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.62932039104983745270590245827997</td>
+					<td class="tangent">&nbsp;&nbsp;1.2348971565350513985561746953759&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">52&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.78801075360672195669397778783585</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.61566147532565827966881109284366</td>
+					<td class="tangent">&nbsp;&nbsp;1.2799416321930787803110298475720&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">53&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.79863551004729284628400080406894</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.60181502315204827991797700044149</td>
+					<td class="tangent">&nbsp;&nbsp;1.3270448216204100371594725740869&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">54&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.80901699437494742410229341718282</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.58778525229247312916870595463907</td>
+					<td class="tangent">&nbsp;&nbsp;1.3763819204711735382072095819109&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">55&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.81915204428899178968448838591684</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.57357643635104609610803191282616</td>
+					<td class="tangent">&nbsp;&nbsp;1.4281480067421145021606184849985&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">56&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.82903757255504169200633684150164</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.55919290347074683016042813998599</td>
+					<td class="tangent">&nbsp;&nbsp;1.4825609685127402547871571491544&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">57&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.83867056794542402963759094180455</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.54463903501502708222408369208157</td>
+					<td class="tangent">&nbsp;&nbsp;1.5398649638145829048267969726028&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">58&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.84804809615642597038617617869039</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.52991926423320495404678115181609</td>
+					<td class="tangent">&nbsp;&nbsp;1.6003345290410503553267330811834&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">59&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.85716730070211228746521798014476</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.51503807491005421008163193639814</td>
+					<td class="tangent">&nbsp;&nbsp;1.6642794823505179110304961700348&nbsp;</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">60&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.86602540378443864676372317075294</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.50000000000000000000000000000000</td>
+					<td class="tangent">&nbsp;&nbsp;1.7320508075688772935274463415059&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">61&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.87461970713939580028463695866108</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.48480962024633702907537962241578</td>
+					<td class="tangent">&nbsp;&nbsp;1.8040477552714239373817847482370&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">62&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.88294759285892694203217136031572</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.46947156278589077595946228822784</td>
+					<td class="tangent">&nbsp;&nbsp;1.8807264653463320123608375958293&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">63&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.89100652418836786235970957141363</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.45399049973954679156040836635787</td>
+					<td class="tangent">&nbsp;&nbsp;1.9626105055051505823046404262119&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">64&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.89879404629916699278229567669579</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.43837114678907741745273454065827</td>
+					<td class="tangent">&nbsp;&nbsp;2.0503038415792962168990110705415&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">65&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.90630778703664996324255265675432</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.42261826174069943618697848964773</td>
+					<td class="tangent">&nbsp;&nbsp;2.1445069205095586163562607910459&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">66&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.91354545764260089550212757198532</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.40673664307580020775398599034150</td>
+					<td class="tangent">&nbsp;&nbsp;2.2460367739042160541633214384164&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">67&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.92050485345244032739689472330046</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.39073112848927375506208458888909</td>
+					<td class="tangent">&nbsp;&nbsp;2.3558523658237528339395866623439&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">68&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.92718385456678740080647445113696</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.37460659341591203541496377450120</td>
+					<td class="tangent">&nbsp;&nbsp;2.4750868534162958252400132460762&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">69&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.93358042649720174899004306313957</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.35836794954530027348413778941347</td>
+					<td class="tangent">&nbsp;&nbsp;2.6050890646938015362584123364335&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">70&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.93969262078590838405410927732473</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.34202014332566873304409961468226</td>
+					<td class="tangent">&nbsp;&nbsp;2.7474774194546222787616640264977&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">71&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.94551857559931681034812470751940</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.32556815445715666871400893579472</td>
+					<td class="tangent">&nbsp;&nbsp;2.9042108776758228025793255345271&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">72&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.95105651629515357211643933337938</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.30901699437494742410229341718282</td>
+					<td class="tangent">&nbsp;&nbsp;3.0776835371752534025702905760369&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">73&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.95630475596303548133865081661842</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.29237170472273672809746869537714</td>
+					<td class="tangent">&nbsp;&nbsp;3.2708526184841408653088562573054&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">74&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.96126169593831886191649704855706</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.27563735581699918564997157461130</td>
+					<td class="tangent">&nbsp;&nbsp;3.4874144438409086506962242250994&nbsp;</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">75&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.96592582628906828674974319972890</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.25881904510252076234889883762405</td>
+					<td class="tangent">&nbsp;&nbsp;3.7320508075688772935274463415059&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">76&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.97029572627599647230637787403399</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.24192189559966772256044237410035</td>
+					<td class="tangent">&nbsp;&nbsp;4.0107809335358447163457151294634&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">77&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.97437006478523522853969448008827</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.22495105434386499805110720834280</td>
+					<td class="tangent">&nbsp;&nbsp;4.3314758742841555455461677545574&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">78&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.97814760073380563792856674786960</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.20791169081775933710174228440513</td>
+					<td class="tangent">&nbsp;&nbsp;4.7046301094784542335862345374029&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">79&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.98162718344766395349650489981814</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.19080899537654481240514048795839</td>
+					<td class="tangent">&nbsp;&nbsp;5.1445540159703101347232207171292&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">80&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.98480775301220805936674302458952</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.17364817766693034885171662676931</td>
+					<td class="tangent">&nbsp;&nbsp;5.6712818196177095309944184398640&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">81&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.98768834059513772619004024769344</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.15643446504023086901010531946717</td>
+					<td class="tangent">&nbsp;&nbsp;6.3137515146750430989794642447682&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">82&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99026806874157031508377486734485</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.13917310096006544411249666330111</td>
+					<td class="tangent">&nbsp;&nbsp;7.1153697223842087482305661436316&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">83&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99254615164132203498006158933058</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.12186934340514748111289391923153</td>
+					<td class="tangent">&nbsp;&nbsp;8.1443464279745940238256613949797&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">84&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99452189536827333692269194498057</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.10452846326765347139983415480250</td>
+					<td class="tangent">&nbsp;&nbsp;9.5143644542225849296839714549457&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">85&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99619469809174553229501040247389</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.08715574274765817355806427083747</td>
+					<td class="tangent">&nbsp;11.430052302761343067210855549163&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">86&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99756405025982424761316268064426</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.06975647374412530077595883519414</td>
+					<td class="tangent">&nbsp;14.300666256711927910128053347586&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">87&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99862953475457387378449205843944</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.05233595624294383272211862960908</td>
+					<td class="tangent">&nbsp;19.081136687728211063406748734365&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">88&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99939082701909573000624344004393</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.03489949670250097164599518162533</td>
+					<td class="tangent">&nbsp;28.636253282915603550756509320946&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">89&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99984769515639123915701155881391</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.01745240643728351281941897851631</td>
+					<td class="tangent">&nbsp;57.289961630759424687278147537113&nbsp;&nbsp;</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">90&deg;</td>
+					<td class="sine">&nbsp;&nbsp;1.0000000000000000000000000000000&nbsp;</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.00000000000000000000000000000000</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Error:&nbsp;Zero&nbsp;Divisor]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">91&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99984769515639123915701155881391</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.01745240643728351281941897851631</td>
+					<td class="tangent">&minus;57.289961630759424687278147537113&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">92&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99939082701909573000624344004393</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.03489949670250097164599518162533</td>
+					<td class="tangent">&minus;28.636253282915603550756509320946&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">93&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99862953475457387378449205843944</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.05233595624294383272211862960908</td>
+					<td class="tangent">&minus;19.081136687728211063406748734365&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">94&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99756405025982424761316268064426</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.06975647374412530077595883519414</td>
+					<td class="tangent">&minus;14.300666256711927910128053347586&nbsp;&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">95&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99619469809174553229501040247389</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.08715574274765817355806427083747</td>
+					<td class="tangent">&minus;11.430052302761343067210855549163&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">96&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99452189536827333692269194498057</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.10452846326765347139983415480250</td>
+					<td class="tangent">&nbsp;&minus;9.5143644542225849296839714549457&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">97&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99254615164132203498006158933058</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.12186934340514748111289391923153</td>
+					<td class="tangent">&nbsp;&minus;8.1443464279745940238256613949797&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">98&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.99026806874157031508377486734485</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.13917310096006544411249666330111</td>
+					<td class="tangent">&nbsp;&minus;7.1153697223842087482305661436316&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">99&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.98768834059513772619004024769344</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.15643446504023086901010531946717</td>
+					<td class="tangent">&nbsp;&minus;6.3137515146750430989794642447682&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">100&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.98480775301220805936674302458952</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.17364817766693034885171662676931</td>
+					<td class="tangent">&nbsp;&minus;5.6712818196177095309944184398640&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">101&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.98162718344766395349650489981814</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.19080899537654481240514048795839</td>
+					<td class="tangent">&nbsp;&minus;5.1445540159703101347232207171292&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">102&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.97814760073380563792856674786960</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.20791169081775933710174228440513</td>
+					<td class="tangent">&nbsp;&minus;4.7046301094784542335862345374029&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">103&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.97437006478523522853969448008827</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.22495105434386499805110720834280</td>
+					<td class="tangent">&nbsp;&minus;4.3314758742841555455461677545574&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">104&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.97029572627599647230637787403399</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.24192189559966772256044237410035</td>
+					<td class="tangent">&nbsp;&minus;4.0107809335358447163457151294634&nbsp;</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">105&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.96592582628906828674974319972890</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.25881904510252076234889883762405</td>
+					<td class="tangent">&nbsp;&minus;3.7320508075688772935274463415059&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">106&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.96126169593831886191649704855706</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.27563735581699918564997157461130</td>
+					<td class="tangent">&nbsp;&minus;3.4874144438409086506962242250994&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">107&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.95630475596303548133865081661842</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.29237170472273672809746869537714</td>
+					<td class="tangent">&nbsp;&minus;3.2708526184841408653088562573054&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">108&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.95105651629515357211643933337938</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.30901699437494742410229341718282</td>
+					<td class="tangent">&nbsp;&minus;3.0776835371752534025702905760369&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">109&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.94551857559931681034812470751940</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.32556815445715666871400893579472</td>
+					<td class="tangent">&nbsp;&minus;2.9042108776758228025793255345271&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">110&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.93969262078590838405410927732473</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.34202014332566873304409961468226</td>
+					<td class="tangent">&nbsp;&minus;2.7474774194546222787616640264977&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">111&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.93358042649720174899004306313957</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.35836794954530027348413778941347</td>
+					<td class="tangent">&nbsp;&minus;2.6050890646938015362584123364335&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">112&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.92718385456678740080647445113696</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.37460659341591203541496377450120</td>
+					<td class="tangent">&nbsp;&minus;2.4750868534162958252400132460762&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">113&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.92050485345244032739689472330046</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.39073112848927375506208458888909</td>
+					<td class="tangent">&nbsp;&minus;2.3558523658237528339395866623439&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">114&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.91354545764260089550212757198532</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.40673664307580020775398599034150</td>
+					<td class="tangent">&nbsp;&minus;2.2460367739042160541633214384164&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">115&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.90630778703664996324255265675432</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.42261826174069943618697848964773</td>
+					<td class="tangent">&nbsp;&minus;2.1445069205095586163562607910459&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">116&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.89879404629916699278229567669579</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.43837114678907741745273454065827</td>
+					<td class="tangent">&nbsp;&minus;2.0503038415792962168990110705415&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">117&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.89100652418836786235970957141363</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.45399049973954679156040836635787</td>
+					<td class="tangent">&nbsp;&minus;1.9626105055051505823046404262119&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">118&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.88294759285892694203217136031572</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.46947156278589077595946228822784</td>
+					<td class="tangent">&nbsp;&minus;1.8807264653463320123608375958293&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">119&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.87461970713939580028463695866108</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.48480962024633702907537962241578</td>
+					<td class="tangent">&nbsp;&minus;1.8040477552714239373817847482370&nbsp;</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">120&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.86602540378443864676372317075294</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.50000000000000000000000000000000</td>
+					<td class="tangent">&nbsp;&minus;1.7320508075688772935274463415059&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">121&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.85716730070211228746521798014476</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.51503807491005421008163193639814</td>
+					<td class="tangent">&nbsp;&minus;1.6642794823505179110304961700348&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">122&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.84804809615642597038617617869039</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.52991926423320495404678115181609</td>
+					<td class="tangent">&nbsp;&minus;1.6003345290410503553267330811834&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">123&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.83867056794542402963759094180455</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.54463903501502708222408369208157</td>
+					<td class="tangent">&nbsp;&minus;1.5398649638145829048267969726028&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">124&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.82903757255504169200633684150164</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.55919290347074683016042813998599</td>
+					<td class="tangent">&nbsp;&minus;1.4825609685127402547871571491544&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">125&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.81915204428899178968448838591684</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.57357643635104609610803191282616</td>
+					<td class="tangent">&nbsp;&minus;1.4281480067421145021606184849985&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">126&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.80901699437494742410229341718282</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.58778525229247312916870595463907</td>
+					<td class="tangent">&nbsp;&minus;1.3763819204711735382072095819109&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">127&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.79863551004729284628400080406894</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.60181502315204827991797700044149</td>
+					<td class="tangent">&nbsp;&minus;1.3270448216204100371594725740869&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">128&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.78801075360672195669397778783585</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.61566147532565827966881109284366</td>
+					<td class="tangent">&nbsp;&minus;1.2799416321930787803110298475720&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">129&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.77714596145697087997993774367240</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.62932039104983745270590245827997</td>
+					<td class="tangent">&nbsp;&minus;1.2348971565350513985561746953759&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">130&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.76604444311897803520239265055542</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.64278760968653932632264340990726</td>
+					<td class="tangent">&nbsp;&minus;1.1917535925942099587053080718604&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">131&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.75470958022277199794298421956102</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.65605902899050728478249596402342</td>
+					<td class="tangent">&nbsp;&minus;1.1503684072210095558763310255696&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">132&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.74314482547739423501469704897426</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.66913060635885821382627333068678</td>
+					<td class="tangent">&nbsp;&minus;1.1106125148291928701434819641651&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">133&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.73135370161917048328754360827562</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.68199836006249850044222578471113</td>
+					<td class="tangent">&nbsp;&minus;1.0723687100246825329460277480726&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">134&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.71933980033865113935605467445671</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.69465837045899728665640629942269</td>
+					<td class="tangent">&nbsp;&minus;1.0355303137905695069588325512481&nbsp;</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">135&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.70710678118654752440084436210485</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.70710678118654752440084436210485</td>
+					<td class="tangent">&nbsp;&minus;1.0000000000000000000000000000000&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">136&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.69465837045899728665640629942269</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.71933980033865113935605467445671</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.96568877480707404595802729970068</td>
+				</tr>
+				<tr>
+					<td class="angle">137&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.68199836006249850044222578471113</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.73135370161917048328754360827562</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.93251508613766170561218562742619</td>
+				</tr>
+				<tr>
+					<td class="angle">138&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.66913060635885821382627333068678</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.74314482547739423501469704897426</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.90040404429783994512047720388537</td>
+				</tr>
+				<tr>
+					<td class="angle">139&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.65605902899050728478249596402342</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.75470958022277199794298421956102</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.86928673781622666220009563870394</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">140&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.64278760968653932632264340990726</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.76604444311897803520239265055542</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.83909963117728001176312729812318</td>
+				</tr>
+				<tr>
+					<td class="angle">141&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.62932039104983745270590245827997</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.77714596145697087997993774367240</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.80978403319500714803699137423577</td>
+				</tr>
+				<tr>
+					<td class="angle">142&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.61566147532565827966881109284366</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.78801075360672195669397778783585</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.78128562650671739706294997196227</td>
+				</tr>
+				<tr>
+					<td class="angle">143&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.60181502315204827991797700044149</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.79863551004729284628400080406894</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.75355405010279415707395644862159</td>
+				</tr>
+				<tr>
+					<td class="angle">144&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.58778525229247312916870595463907</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.80901699437494742410229341718282</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.72654252800536088589546675748062</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">145&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.57357643635104609610803191282616</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.81915204428899178968448838591684</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.70020753820970977945852271944483</td>
+				</tr>
+				<tr>
+					<td class="angle">146&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.55919290347074683016042813998599</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.82903757255504169200633684150164</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.67450851684242663214246086199461</td>
+				</tr>
+				<tr>
+					<td class="angle">147&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.54463903501502708222408369208157</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.83867056794542402963759094180455</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.64940759319751057698206291131145</td>
+				</tr>
+				<tr>
+					<td class="angle">148&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.52991926423320495404678115181609</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.84804809615642597038617617869039</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.62486935190932750978051082794944</td>
+				</tr>
+				<tr>
+					<td class="angle">149&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.51503807491005421008163193639814</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.85716730070211228746521798014476</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.60086061902756041487866442635466</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">150&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.50000000000000000000000000000000</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.86602540378443864676372317075294</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.57735026918962576450914878050196</td>
+				</tr>
+				<tr>
+					<td class="angle">151&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.48480962024633702907537962241578</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.87461970713939580028463695866108</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.55430905145276891782076309233813</td>
+				</tr>
+				<tr>
+					<td class="angle">152&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.46947156278589077595946228822784</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.88294759285892694203217136031572</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.53170943166147874807591587184006</td>
+				</tr>
+				<tr>
+					<td class="angle">153&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.45399049973954679156040836635787</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.89100652418836786235970957141363</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.50952544949442881051370691125066</td>
+				</tr>
+				<tr>
+					<td class="angle">154&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.43837114678907741745273454065827</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.89879404629916699278229567669579</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.48773258856586142277311112661696</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">155&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.42261826174069943618697848964773</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.90630778703664996324255265675432</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.46630765815499859283000619479956</td>
+				</tr>
+				<tr>
+					<td class="angle">156&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.40673664307580020775398599034150</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.91354545764260089550212757198532</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.44522868530853616392236703064567</td>
+				</tr>
+				<tr>
+					<td class="angle">157&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.39073112848927375506208458888909</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.92050485345244032739689472330046</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.42447481620960474202353206294252</td>
+				</tr>
+				<tr>
+					<td class="angle">158&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.37460659341591203541496377450120</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.92718385456678740080647445113696</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.40402622583515681132234814357991</td>
+				</tr>
+				<tr>
+					<td class="angle">159&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.35836794954530027348413778941347</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.93358042649720174899004306313957</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.38386403503541579597144840810327</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">160&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.34202014332566873304409961468226</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.93969262078590838405410927732473</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.36397023426620236135104788277683</td>
+				</tr>
+				<tr>
+					<td class="angle">161&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.32556815445715666871400893579472</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.94551857559931681034812470751940</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.34432761328966524195726583938311</td>
+				</tr>
+				<tr>
+					<td class="angle">162&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.30901699437494742410229341718282</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.95105651629515357211643933337938</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.32491969623290632615587141221513</td>
+				</tr>
+				<tr>
+					<td class="angle">163&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.29237170472273672809746869537714</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.95630475596303548133865081661842</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.30573068145866035573454195899655</td>
+				</tr>
+				<tr>
+					<td class="angle">164&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.27563735581699918564997157461130</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.96126169593831886191649704855706</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.28674538575880794004275806273267</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">165&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.25881904510252076234889883762405</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.96592582628906828674974319972890</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.26794919243112270647255365849413</td>
+				</tr>
+				<tr>
+					<td class="angle">166&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.24192189559966772256044237410035</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.97029572627599647230637787403399</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.24932800284318069162403993780486</td>
+				</tr>
+				<tr>
+					<td class="angle">167&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.22495105434386499805110720834280</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.97437006478523522853969448008827</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.23086819112556311174814561347445</td>
+				</tr>
+				<tr>
+					<td class="angle">168&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.20791169081775933710174228440513</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.97814760073380563792856674786960</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.21255656167002212525959166057008</td>
+				</tr>
+				<tr>
+					<td class="angle">169&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.19080899537654481240514048795839</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.98162718344766395349650489981814</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.19438030913771848424319422497682</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">170&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.17364817766693034885171662676931</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.98480775301220805936674302458952</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.17632698070846497347109038686862</td>
+				</tr>
+				<tr>
+					<td class="angle">171&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.15643446504023086901010531946717</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.98768834059513772619004024769344</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.15838444032453629383888309269437</td>
+				</tr>
+				<tr>
+					<td class="angle">172&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.13917310096006544411249666330111</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99026806874157031508377486734485</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.14054083470239144683811769343281</td>
+				</tr>
+				<tr>
+					<td class="angle">173&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.12186934340514748111289391923153</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99254615164132203498006158933058</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.12278456090290459113423113605286</td>
+				</tr>
+				<tr>
+					<td class="angle">174&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.10452846326765347139983415480250</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99452189536827333692269194498057</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.10510423526567646251150238013988</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">175&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.08715574274765817355806427083747</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99619469809174553229501040247389</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.08748866352592400522201866943496</td>
+				</tr>
+				<tr>
+					<td class="angle">176&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.06975647374412530077595883519414</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99756405025982424761316268064426</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.06992681194351041366692106032318</td>
+				</tr>
+				<tr>
+					<td class="angle">177&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.05233595624294383272211862960908</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99862953475457387378449205843944</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.05240777928304120403880582447398</td>
+				</tr>
+				<tr>
+					<td class="angle">178&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.03489949670250097164599518162533</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99939082701909573000624344004393</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.03492076949174773050040262577373</td>
+				</tr>
+				<tr>
+					<td class="angle">179&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.01745240643728351281941897851631</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99984769515639123915701155881391</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.01745506492821758576512889521973</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">180&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&nbsp;.00000000000000000000000000000000</td>
+					<td class="cosine">&nbsp;&minus;1.0000000000000000000000000000000&nbsp;</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.00000000000000000000000000000000</td>
+				</tr>
+				<tr>
+					<td class="angle">181&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.01745240643728351281941897851631</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99984769515639123915701155881391</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.01745506492821758576512889521973</td>
+				</tr>
+				<tr>
+					<td class="angle">182&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.03489949670250097164599518162533</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99939082701909573000624344004393</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.03492076949174773050040262577373</td>
+				</tr>
+				<tr>
+					<td class="angle">183&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.05233595624294383272211862960908</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99862953475457387378449205843944</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.05240777928304120403880582447398</td>
+				</tr>
+				<tr>
+					<td class="angle">184&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.06975647374412530077595883519414</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99756405025982424761316268064426</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.06992681194351041366692106032318</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">185&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.08715574274765817355806427083747</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99619469809174553229501040247389</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.08748866352592400522201866943496</td>
+				</tr>
+				<tr>
+					<td class="angle">186&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.10452846326765347139983415480250</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99452189536827333692269194498057</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.10510423526567646251150238013988</td>
+				</tr>
+				<tr>
+					<td class="angle">187&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.12186934340514748111289391923153</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99254615164132203498006158933058</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.12278456090290459113423113605286</td>
+				</tr>
+				<tr>
+					<td class="angle">188&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.13917310096006544411249666330111</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.99026806874157031508377486734485</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.14054083470239144683811769343281</td>
+				</tr>
+				<tr>
+					<td class="angle">189&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.15643446504023086901010531946717</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.98768834059513772619004024769344</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.15838444032453629383888309269437</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">190&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.17364817766693034885171662676931</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.98480775301220805936674302458952</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.17632698070846497347109038686862</td>
+				</tr>
+				<tr>
+					<td class="angle">191&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.19080899537654481240514048795839</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.98162718344766395349650489981814</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.19438030913771848424319422497682</td>
+				</tr>
+				<tr>
+					<td class="angle">192&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.20791169081775933710174228440513</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.97814760073380563792856674786960</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.21255656167002212525959166057008</td>
+				</tr>
+				<tr>
+					<td class="angle">193&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.22495105434386499805110720834280</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.97437006478523522853969448008827</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.23086819112556311174814561347445</td>
+				</tr>
+				<tr>
+					<td class="angle">194&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.24192189559966772256044237410035</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.97029572627599647230637787403399</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.24932800284318069162403993780486</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">195&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.25881904510252076234889883762405</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.96592582628906828674974319972890</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.26794919243112270647255365849413</td>
+				</tr>
+				<tr>
+					<td class="angle">196&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.27563735581699918564997157461130</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.96126169593831886191649704855706</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.28674538575880794004275806273267</td>
+				</tr>
+				<tr>
+					<td class="angle">197&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.29237170472273672809746869537714</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.95630475596303548133865081661842</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.30573068145866035573454195899655</td>
+				</tr>
+				<tr>
+					<td class="angle">198&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.30901699437494742410229341718282</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.95105651629515357211643933337938</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.32491969623290632615587141221513</td>
+				</tr>
+				<tr>
+					<td class="angle">199&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.32556815445715666871400893579472</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.94551857559931681034812470751940</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.34432761328966524195726583938311</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">200&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.34202014332566873304409961468226</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.93969262078590838405410927732473</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.36397023426620236135104788277683</td>
+				</tr>
+				<tr>
+					<td class="angle">201&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.35836794954530027348413778941347</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.93358042649720174899004306313957</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.38386403503541579597144840810327</td>
+				</tr>
+				<tr>
+					<td class="angle">202&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.37460659341591203541496377450120</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.92718385456678740080647445113696</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.40402622583515681132234814357991</td>
+				</tr>
+				<tr>
+					<td class="angle">203&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.39073112848927375506208458888909</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.92050485345244032739689472330046</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.42447481620960474202353206294252</td>
+				</tr>
+				<tr>
+					<td class="angle">204&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.40673664307580020775398599034150</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.91354545764260089550212757198532</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.44522868530853616392236703064567</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">205&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.42261826174069943618697848964773</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.90630778703664996324255265675432</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.46630765815499859283000619479956</td>
+				</tr>
+				<tr>
+					<td class="angle">206&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.43837114678907741745273454065827</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.89879404629916699278229567669579</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.48773258856586142277311112661696</td>
+				</tr>
+				<tr>
+					<td class="angle">207&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.45399049973954679156040836635787</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.89100652418836786235970957141363</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.50952544949442881051370691125066</td>
+				</tr>
+				<tr>
+					<td class="angle">208&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.46947156278589077595946228822784</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.88294759285892694203217136031572</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.53170943166147874807591587184006</td>
+				</tr>
+				<tr>
+					<td class="angle">209&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.48480962024633702907537962241578</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.87461970713939580028463695866108</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.55430905145276891782076309233813</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">210&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.50000000000000000000000000000000</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.86602540378443864676372317075294</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.57735026918962576450914878050196</td>
+				</tr>
+				<tr>
+					<td class="angle">211&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.51503807491005421008163193639814</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.85716730070211228746521798014476</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.60086061902756041487866442635466</td>
+				</tr>
+				<tr>
+					<td class="angle">212&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.52991926423320495404678115181609</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.84804809615642597038617617869039</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.62486935190932750978051082794944</td>
+				</tr>
+				<tr>
+					<td class="angle">213&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.54463903501502708222408369208157</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.83867056794542402963759094180455</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.64940759319751057698206291131145</td>
+				</tr>
+				<tr>
+					<td class="angle">214&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.55919290347074683016042813998599</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.82903757255504169200633684150164</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.67450851684242663214246086199461</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">215&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.57357643635104609610803191282616</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.81915204428899178968448838591684</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.70020753820970977945852271944483</td>
+				</tr>
+				<tr>
+					<td class="angle">216&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.58778525229247312916870595463907</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.80901699437494742410229341718282</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.72654252800536088589546675748062</td>
+				</tr>
+				<tr>
+					<td class="angle">217&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.60181502315204827991797700044149</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.79863551004729284628400080406894</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.75355405010279415707395644862159</td>
+				</tr>
+				<tr>
+					<td class="angle">218&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.61566147532565827966881109284366</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.78801075360672195669397778783585</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.78128562650671739706294997196227</td>
+				</tr>
+				<tr>
+					<td class="angle">219&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.62932039104983745270590245827997</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.77714596145697087997993774367240</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.80978403319500714803699137423577</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">220&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.64278760968653932632264340990726</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.76604444311897803520239265055542</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.83909963117728001176312729812318</td>
+				</tr>
+				<tr>
+					<td class="angle">221&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.65605902899050728478249596402342</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.75470958022277199794298421956102</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.86928673781622666220009563870394</td>
+				</tr>
+				<tr>
+					<td class="angle">222&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.66913060635885821382627333068678</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.74314482547739423501469704897426</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.90040404429783994512047720388537</td>
+				</tr>
+				<tr>
+					<td class="angle">223&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.68199836006249850044222578471113</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.73135370161917048328754360827562</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.93251508613766170561218562742619</td>
+				</tr>
+				<tr>
+					<td class="angle">224&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.69465837045899728665640629942269</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.71933980033865113935605467445671</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;.96568877480707404595802729970068</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">225&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.70710678118654752440084436210485</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.70710678118654752440084436210485</td>
+					<td class="tangent">&nbsp;&nbsp;1.0000000000000000000000000000000&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">226&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.71933980033865113935605467445671</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.69465837045899728665640629942269</td>
+					<td class="tangent">&nbsp;&nbsp;1.0355303137905695069588325512481&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">227&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.73135370161917048328754360827562</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.68199836006249850044222578471113</td>
+					<td class="tangent">&nbsp;&nbsp;1.0723687100246825329460277480726&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">228&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.74314482547739423501469704897426</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.66913060635885821382627333068678</td>
+					<td class="tangent">&nbsp;&nbsp;1.1106125148291928701434819641651&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">229&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.75470958022277199794298421956102</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.65605902899050728478249596402342</td>
+					<td class="tangent">&nbsp;&nbsp;1.1503684072210095558763310255696&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">230&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.76604444311897803520239265055542</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.64278760968653932632264340990726</td>
+					<td class="tangent">&nbsp;&nbsp;1.1917535925942099587053080718604&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">231&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.77714596145697087997993774367240</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.62932039104983745270590245827997</td>
+					<td class="tangent">&nbsp;&nbsp;1.2348971565350513985561746953759&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">232&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.78801075360672195669397778783585</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.61566147532565827966881109284366</td>
+					<td class="tangent">&nbsp;&nbsp;1.2799416321930787803110298475720&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">233&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.79863551004729284628400080406894</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.60181502315204827991797700044149</td>
+					<td class="tangent">&nbsp;&nbsp;1.3270448216204100371594725740869&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">234&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.80901699437494742410229341718282</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.58778525229247312916870595463907</td>
+					<td class="tangent">&nbsp;&nbsp;1.3763819204711735382072095819109&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">235&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.81915204428899178968448838591684</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.57357643635104609610803191282616</td>
+					<td class="tangent">&nbsp;&nbsp;1.4281480067421145021606184849985&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">236&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.82903757255504169200633684150164</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.55919290347074683016042813998599</td>
+					<td class="tangent">&nbsp;&nbsp;1.4825609685127402547871571491544&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">237&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.83867056794542402963759094180455</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.54463903501502708222408369208157</td>
+					<td class="tangent">&nbsp;&nbsp;1.5398649638145829048267969726028&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">238&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.84804809615642597038617617869039</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.52991926423320495404678115181609</td>
+					<td class="tangent">&nbsp;&nbsp;1.6003345290410503553267330811834&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">239&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.85716730070211228746521798014476</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.51503807491005421008163193639814</td>
+					<td class="tangent">&nbsp;&nbsp;1.6642794823505179110304961700348&nbsp;</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">240&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.86602540378443864676372317075294</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.50000000000000000000000000000000</td>
+					<td class="tangent">&nbsp;&nbsp;1.7320508075688772935274463415059&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">241&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.87461970713939580028463695866108</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.48480962024633702907537962241578</td>
+					<td class="tangent">&nbsp;&nbsp;1.8040477552714239373817847482370&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">242&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.88294759285892694203217136031572</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.46947156278589077595946228822784</td>
+					<td class="tangent">&nbsp;&nbsp;1.8807264653463320123608375958293&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">243&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.89100652418836786235970957141363</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.45399049973954679156040836635787</td>
+					<td class="tangent">&nbsp;&nbsp;1.9626105055051505823046404262119&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">244&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.89879404629916699278229567669579</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.43837114678907741745273454065827</td>
+					<td class="tangent">&nbsp;&nbsp;2.0503038415792962168990110705415&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">245&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.90630778703664996324255265675432</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.42261826174069943618697848964773</td>
+					<td class="tangent">&nbsp;&nbsp;2.1445069205095586163562607910459&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">246&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.91354545764260089550212757198532</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.40673664307580020775398599034150</td>
+					<td class="tangent">&nbsp;&nbsp;2.2460367739042160541633214384164&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">247&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.92050485345244032739689472330046</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.39073112848927375506208458888909</td>
+					<td class="tangent">&nbsp;&nbsp;2.3558523658237528339395866623439&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">248&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.92718385456678740080647445113696</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.37460659341591203541496377450120</td>
+					<td class="tangent">&nbsp;&nbsp;2.4750868534162958252400132460762&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">249&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.93358042649720174899004306313957</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.35836794954530027348413778941347</td>
+					<td class="tangent">&nbsp;&nbsp;2.6050890646938015362584123364335&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">250&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.93969262078590838405410927732473</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.34202014332566873304409961468226</td>
+					<td class="tangent">&nbsp;&nbsp;2.7474774194546222787616640264977&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">251&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.94551857559931681034812470751940</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.32556815445715666871400893579472</td>
+					<td class="tangent">&nbsp;&nbsp;2.9042108776758228025793255345271&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">252&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.95105651629515357211643933337938</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.30901699437494742410229341718282</td>
+					<td class="tangent">&nbsp;&nbsp;3.0776835371752534025702905760369&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">253&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.95630475596303548133865081661842</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.29237170472273672809746869537714</td>
+					<td class="tangent">&nbsp;&nbsp;3.2708526184841408653088562573054&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">254&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.96126169593831886191649704855706</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.27563735581699918564997157461130</td>
+					<td class="tangent">&nbsp;&nbsp;3.4874144438409086506962242250994&nbsp;</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">255&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.96592582628906828674974319972890</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.25881904510252076234889883762405</td>
+					<td class="tangent">&nbsp;&nbsp;3.7320508075688772935274463415059&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">256&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.97029572627599647230637787403399</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.24192189559966772256044237410035</td>
+					<td class="tangent">&nbsp;&nbsp;4.0107809335358447163457151294634&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">257&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.97437006478523522853969448008827</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.22495105434386499805110720834280</td>
+					<td class="tangent">&nbsp;&nbsp;4.3314758742841555455461677545574&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">258&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.97814760073380563792856674786960</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.20791169081775933710174228440513</td>
+					<td class="tangent">&nbsp;&nbsp;4.7046301094784542335862345374029&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">259&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.98162718344766395349650489981814</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.19080899537654481240514048795839</td>
+					<td class="tangent">&nbsp;&nbsp;5.1445540159703101347232207171292&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">260&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.98480775301220805936674302458952</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.17364817766693034885171662676931</td>
+					<td class="tangent">&nbsp;&nbsp;5.6712818196177095309944184398640&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">261&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.98768834059513772619004024769344</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.15643446504023086901010531946717</td>
+					<td class="tangent">&nbsp;&nbsp;6.3137515146750430989794642447682&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">262&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99026806874157031508377486734485</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.13917310096006544411249666330111</td>
+					<td class="tangent">&nbsp;&nbsp;7.1153697223842087482305661436316&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">263&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99254615164132203498006158933058</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.12186934340514748111289391923153</td>
+					<td class="tangent">&nbsp;&nbsp;8.1443464279745940238256613949797&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">264&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99452189536827333692269194498057</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.10452846326765347139983415480250</td>
+					<td class="tangent">&nbsp;&nbsp;9.5143644542225849296839714549457&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">265&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99619469809174553229501040247389</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.08715574274765817355806427083747</td>
+					<td class="tangent">&nbsp;11.430052302761343067210855549163&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">266&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99756405025982424761316268064426</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.06975647374412530077595883519414</td>
+					<td class="tangent">&nbsp;14.300666256711927910128053347586&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">267&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99862953475457387378449205843944</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.05233595624294383272211862960908</td>
+					<td class="tangent">&nbsp;19.081136687728211063406748734365&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">268&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99939082701909573000624344004393</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.03489949670250097164599518162533</td>
+					<td class="tangent">&nbsp;28.636253282915603550756509320946&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">269&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99984769515639123915701155881391</td>
+					<td class="cosine">&nbsp;&nbsp;&minus;.01745240643728351281941897851631</td>
+					<td class="tangent">&nbsp;57.289961630759424687278147537113&nbsp;&nbsp;</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">270&deg;</td>
+					<td class="sine">&nbsp;&minus;1.0000000000000000000000000000000&nbsp;</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.00000000000000000000000000000000</td>
+					<td class="tangent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Error:&nbsp;Zero&nbsp;Divisor]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">271&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99984769515639123915701155881391</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.01745240643728351281941897851631</td>
+					<td class="tangent">&minus;57.289961630759424687278147537113&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">272&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99939082701909573000624344004393</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.03489949670250097164599518162533</td>
+					<td class="tangent">&minus;28.636253282915603550756509320946&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">273&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99862953475457387378449205843944</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.05233595624294383272211862960908</td>
+					<td class="tangent">&minus;19.081136687728211063406748734365&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">274&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99756405025982424761316268064426</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.06975647374412530077595883519414</td>
+					<td class="tangent">&minus;14.300666256711927910128053347586&nbsp;&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">275&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99619469809174553229501040247389</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.08715574274765817355806427083747</td>
+					<td class="tangent">&minus;11.430052302761343067210855549163&nbsp;&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">276&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99452189536827333692269194498057</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.10452846326765347139983415480250</td>
+					<td class="tangent">&nbsp;&minus;9.5143644542225849296839714549457&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">277&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99254615164132203498006158933058</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.12186934340514748111289391923153</td>
+					<td class="tangent">&nbsp;&minus;8.1443464279745940238256613949797&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">278&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.99026806874157031508377486734485</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.13917310096006544411249666330111</td>
+					<td class="tangent">&nbsp;&minus;7.1153697223842087482305661436316&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">279&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.98768834059513772619004024769344</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.15643446504023086901010531946717</td>
+					<td class="tangent">&nbsp;&minus;6.3137515146750430989794642447682&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">280&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.98480775301220805936674302458952</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.17364817766693034885171662676931</td>
+					<td class="tangent">&nbsp;&minus;5.6712818196177095309944184398640&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">281&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.98162718344766395349650489981814</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.19080899537654481240514048795839</td>
+					<td class="tangent">&nbsp;&minus;5.1445540159703101347232207171292&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">282&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.97814760073380563792856674786960</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.20791169081775933710174228440513</td>
+					<td class="tangent">&nbsp;&minus;4.7046301094784542335862345374029&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">283&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.97437006478523522853969448008827</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.22495105434386499805110720834280</td>
+					<td class="tangent">&nbsp;&minus;4.3314758742841555455461677545574&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">284&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.97029572627599647230637787403399</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.24192189559966772256044237410035</td>
+					<td class="tangent">&nbsp;&minus;4.0107809335358447163457151294634&nbsp;</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">285&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.96592582628906828674974319972890</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.25881904510252076234889883762405</td>
+					<td class="tangent">&nbsp;&minus;3.7320508075688772935274463415059&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">286&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.96126169593831886191649704855706</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.27563735581699918564997157461130</td>
+					<td class="tangent">&nbsp;&minus;3.4874144438409086506962242250994&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">287&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.95630475596303548133865081661842</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.29237170472273672809746869537714</td>
+					<td class="tangent">&nbsp;&minus;3.2708526184841408653088562573054&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">288&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.95105651629515357211643933337938</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.30901699437494742410229341718282</td>
+					<td class="tangent">&nbsp;&minus;3.0776835371752534025702905760369&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">289&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.94551857559931681034812470751940</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.32556815445715666871400893579472</td>
+					<td class="tangent">&nbsp;&minus;2.9042108776758228025793255345271&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">290&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.93969262078590838405410927732473</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.34202014332566873304409961468226</td>
+					<td class="tangent">&nbsp;&minus;2.7474774194546222787616640264977&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">291&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.93358042649720174899004306313957</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.35836794954530027348413778941347</td>
+					<td class="tangent">&nbsp;&minus;2.6050890646938015362584123364335&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">292&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.92718385456678740080647445113696</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.37460659341591203541496377450120</td>
+					<td class="tangent">&nbsp;&minus;2.4750868534162958252400132460762&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">293&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.92050485345244032739689472330046</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.39073112848927375506208458888909</td>
+					<td class="tangent">&nbsp;&minus;2.3558523658237528339395866623439&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">294&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.91354545764260089550212757198532</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.40673664307580020775398599034150</td>
+					<td class="tangent">&nbsp;&minus;2.2460367739042160541633214384164&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">295&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.90630778703664996324255265675432</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.42261826174069943618697848964773</td>
+					<td class="tangent">&nbsp;&minus;2.1445069205095586163562607910459&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">296&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.89879404629916699278229567669579</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.43837114678907741745273454065827</td>
+					<td class="tangent">&nbsp;&minus;2.0503038415792962168990110705415&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">297&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.89100652418836786235970957141363</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.45399049973954679156040836635787</td>
+					<td class="tangent">&nbsp;&minus;1.9626105055051505823046404262119&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">298&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.88294759285892694203217136031572</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.46947156278589077595946228822784</td>
+					<td class="tangent">&nbsp;&minus;1.8807264653463320123608375958293&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">299&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.87461970713939580028463695866108</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.48480962024633702907537962241578</td>
+					<td class="tangent">&nbsp;&minus;1.8040477552714239373817847482370&nbsp;</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">300&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.86602540378443864676372317075294</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.50000000000000000000000000000000</td>
+					<td class="tangent">&nbsp;&minus;1.7320508075688772935274463415059&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">301&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.85716730070211228746521798014476</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.51503807491005421008163193639814</td>
+					<td class="tangent">&nbsp;&minus;1.6642794823505179110304961700348&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">302&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.84804809615642597038617617869039</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.52991926423320495404678115181609</td>
+					<td class="tangent">&nbsp;&minus;1.6003345290410503553267330811834&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">303&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.83867056794542402963759094180455</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.54463903501502708222408369208157</td>
+					<td class="tangent">&nbsp;&minus;1.5398649638145829048267969726028&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">304&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.82903757255504169200633684150164</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.55919290347074683016042813998599</td>
+					<td class="tangent">&nbsp;&minus;1.4825609685127402547871571491544&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">305&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.81915204428899178968448838591684</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.57357643635104609610803191282616</td>
+					<td class="tangent">&nbsp;&minus;1.4281480067421145021606184849985&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">306&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.80901699437494742410229341718282</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.58778525229247312916870595463907</td>
+					<td class="tangent">&nbsp;&minus;1.3763819204711735382072095819109&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">307&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.79863551004729284628400080406894</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.60181502315204827991797700044149</td>
+					<td class="tangent">&nbsp;&minus;1.3270448216204100371594725740869&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">308&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.78801075360672195669397778783585</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.61566147532565827966881109284366</td>
+					<td class="tangent">&nbsp;&minus;1.2799416321930787803110298475720&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">309&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.77714596145697087997993774367240</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.62932039104983745270590245827997</td>
+					<td class="tangent">&nbsp;&minus;1.2348971565350513985561746953759&nbsp;</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">310&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.76604444311897803520239265055542</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.64278760968653932632264340990726</td>
+					<td class="tangent">&nbsp;&minus;1.1917535925942099587053080718604&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">311&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.75470958022277199794298421956102</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.65605902899050728478249596402342</td>
+					<td class="tangent">&nbsp;&minus;1.1503684072210095558763310255696&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">312&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.74314482547739423501469704897426</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.66913060635885821382627333068678</td>
+					<td class="tangent">&nbsp;&minus;1.1106125148291928701434819641651&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">313&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.73135370161917048328754360827562</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.68199836006249850044222578471113</td>
+					<td class="tangent">&nbsp;&minus;1.0723687100246825329460277480726&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">314&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.71933980033865113935605467445671</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.69465837045899728665640629942269</td>
+					<td class="tangent">&nbsp;&minus;1.0355303137905695069588325512481&nbsp;</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">315&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.70710678118654752440084436210485</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.70710678118654752440084436210485</td>
+					<td class="tangent">&nbsp;&minus;1.0000000000000000000000000000000&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="angle">316&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.69465837045899728665640629942269</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.71933980033865113935605467445671</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.96568877480707404595802729970068</td>
+				</tr>
+				<tr>
+					<td class="angle">317&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.68199836006249850044222578471113</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.73135370161917048328754360827562</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.93251508613766170561218562742619</td>
+				</tr>
+				<tr>
+					<td class="angle">318&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.66913060635885821382627333068678</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.74314482547739423501469704897426</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.90040404429783994512047720388537</td>
+				</tr>
+				<tr>
+					<td class="angle">319&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.65605902899050728478249596402342</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.75470958022277199794298421956102</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.86928673781622666220009563870394</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">320&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.64278760968653932632264340990726</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.76604444311897803520239265055542</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.83909963117728001176312729812318</td>
+				</tr>
+				<tr>
+					<td class="angle">321&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.62932039104983745270590245827997</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.77714596145697087997993774367240</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.80978403319500714803699137423577</td>
+				</tr>
+				<tr>
+					<td class="angle">322&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.61566147532565827966881109284366</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.78801075360672195669397778783585</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.78128562650671739706294997196227</td>
+				</tr>
+				<tr>
+					<td class="angle">323&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.60181502315204827991797700044149</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.79863551004729284628400080406894</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.75355405010279415707395644862159</td>
+				</tr>
+				<tr>
+					<td class="angle">324&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.58778525229247312916870595463907</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.80901699437494742410229341718282</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.72654252800536088589546675748062</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">325&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.57357643635104609610803191282616</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.81915204428899178968448838591684</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.70020753820970977945852271944483</td>
+				</tr>
+				<tr>
+					<td class="angle">326&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.55919290347074683016042813998599</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.82903757255504169200633684150164</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.67450851684242663214246086199461</td>
+				</tr>
+				<tr>
+					<td class="angle">327&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.54463903501502708222408369208157</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.83867056794542402963759094180455</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.64940759319751057698206291131145</td>
+				</tr>
+				<tr>
+					<td class="angle">328&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.52991926423320495404678115181609</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.84804809615642597038617617869039</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.62486935190932750978051082794944</td>
+				</tr>
+				<tr>
+					<td class="angle">329&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.51503807491005421008163193639814</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.85716730070211228746521798014476</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.60086061902756041487866442635466</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">330&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.50000000000000000000000000000000</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.86602540378443864676372317075294</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.57735026918962576450914878050196</td>
+				</tr>
+				<tr>
+					<td class="angle">331&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.48480962024633702907537962241578</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.87461970713939580028463695866108</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.55430905145276891782076309233813</td>
+				</tr>
+				<tr>
+					<td class="angle">332&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.46947156278589077595946228822784</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.88294759285892694203217136031572</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.53170943166147874807591587184006</td>
+				</tr>
+				<tr>
+					<td class="angle">333&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.45399049973954679156040836635787</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.89100652418836786235970957141363</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.50952544949442881051370691125066</td>
+				</tr>
+				<tr>
+					<td class="angle">334&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.43837114678907741745273454065827</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.89879404629916699278229567669579</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.48773258856586142277311112661696</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">335&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.42261826174069943618697848964773</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.90630778703664996324255265675432</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.46630765815499859283000619479956</td>
+				</tr>
+				<tr>
+					<td class="angle">336&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.40673664307580020775398599034150</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.91354545764260089550212757198532</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.44522868530853616392236703064567</td>
+				</tr>
+				<tr>
+					<td class="angle">337&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.39073112848927375506208458888909</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.92050485345244032739689472330046</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.42447481620960474202353206294252</td>
+				</tr>
+				<tr>
+					<td class="angle">338&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.37460659341591203541496377450120</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.92718385456678740080647445113696</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.40402622583515681132234814357991</td>
+				</tr>
+				<tr>
+					<td class="angle">339&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.35836794954530027348413778941347</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.93358042649720174899004306313957</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.38386403503541579597144840810327</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">340&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.34202014332566873304409961468226</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.93969262078590838405410927732473</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.36397023426620236135104788277683</td>
+				</tr>
+				<tr>
+					<td class="angle">341&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.32556815445715666871400893579472</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.94551857559931681034812470751940</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.34432761328966524195726583938311</td>
+				</tr>
+				<tr>
+					<td class="angle">342&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.30901699437494742410229341718282</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.95105651629515357211643933337938</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.32491969623290632615587141221513</td>
+				</tr>
+				<tr>
+					<td class="angle">343&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.29237170472273672809746869537714</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.95630475596303548133865081661842</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.30573068145866035573454195899655</td>
+				</tr>
+				<tr>
+					<td class="angle">344&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.27563735581699918564997157461130</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.96126169593831886191649704855706</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.28674538575880794004275806273267</td>
+				</tr>
+				<tr class="fifteen">
+					<td class="angle">345&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.25881904510252076234889883762405</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.96592582628906828674974319972890</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.26794919243112270647255365849413</td>
+				</tr>
+				<tr>
+					<td class="angle">346&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.24192189559966772256044237410035</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.97029572627599647230637787403399</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.24932800284318069162403993780486</td>
+				</tr>
+				<tr>
+					<td class="angle">347&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.22495105434386499805110720834280</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.97437006478523522853969448008827</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.23086819112556311174814561347445</td>
+				</tr>
+				<tr>
+					<td class="angle">348&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.20791169081775933710174228440513</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.97814760073380563792856674786960</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.21255656167002212525959166057008</td>
+				</tr>
+				<tr>
+					<td class="angle">349&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.19080899537654481240514048795839</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.98162718344766395349650489981814</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.19438030913771848424319422497682</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">350&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.17364817766693034885171662676931</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.98480775301220805936674302458952</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.17632698070846497347109038686862</td>
+				</tr>
+				<tr>
+					<td class="angle">351&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.15643446504023086901010531946717</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.98768834059513772619004024769344</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.15838444032453629383888309269437</td>
+				</tr>
+				<tr>
+					<td class="angle">352&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.13917310096006544411249666330111</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99026806874157031508377486734485</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.14054083470239144683811769343281</td>
+				</tr>
+				<tr>
+					<td class="angle">353&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.12186934340514748111289391923153</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99254615164132203498006158933058</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.12278456090290459113423113605286</td>
+				</tr>
+				<tr>
+					<td class="angle">354&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.10452846326765347139983415480250</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99452189536827333692269194498057</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.10510423526567646251150238013988</td>
+				</tr>
+				<tr class="five">
+					<td class="angle">355&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.08715574274765817355806427083747</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99619469809174553229501040247389</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.08748866352592400522201866943496</td>
+				</tr>
+				<tr>
+					<td class="angle">356&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.06975647374412530077595883519414</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99756405025982424761316268064426</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.06992681194351041366692106032318</td>
+				</tr>
+				<tr>
+					<td class="angle">357&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.05233595624294383272211862960908</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99862953475457387378449205843944</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.05240777928304120403880582447398</td>
+				</tr>
+				<tr>
+					<td class="angle">358&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.03489949670250097164599518162533</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99939082701909573000624344004393</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.03492076949174773050040262577373</td>
+				</tr>
+				<tr>
+					<td class="angle">359&deg;</td>
+					<td class="sine">&nbsp;&nbsp;&minus;.01745240643728351281941897851631</td>
+					<td class="cosine">&nbsp;&nbsp;&nbsp;.99984769515639123915701155881391</td>
+					<td class="tangent">&nbsp;&nbsp;&minus;.01745506492821758576512889521973</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

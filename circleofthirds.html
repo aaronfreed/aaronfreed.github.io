@@ -76,9 +76,9 @@ window.onload = function () {makeAllSortable();};*/
 			</ol>
 
 		<h1 class="centred">Introduction</h1>
-		<p>This is an analysis of the seven modes of the traditional major scale (whole step, whole step, half step, whole step, whole step, whole step, half step) and how they relate to each other &ndash; in brief, by raising a specific pattern of notes in each scale, it is possible to cycle not merely through all twelve notes in the chromatic scale, but all eighty-four possible sets of base notes and modes.</p>
+		<p>This is an analysis of the seven modes of the traditional major scale (<strong class="bold">whole step</strong>, <strong class="bold">whole step</strong>, <em>half step</em>, <strong class="bold">whole step</strong>, <strong class="bold">whole step</strong>, <strong class="bold">whole step</strong>, <em>half step</em>) and how they relate to each other. In brief, raising a specific pattern of notes in each scale results in cycling not merely through all twelve notes in the chromatic scale, but through all eighty-four possible sets of base notes and modes.</p>
 
-		<p>A brief explanation is perhaps in order: The seven modes I&rsquo;m analyzing are different ways of arranging the notes in the major scale, traditionally numbered by what note of the major scale they start with. Here are the C major scale&rsquo;s modes. <span class="accent">Lowercase, blue letters</span> represent minor or diminished intervals lowered from their root keys&rsquo; major scales; the <strong class="accent orange">bold, orange letter</strong> is an augmented interval raised from its root key&rsquo;s major scale.
+		<p>A brief (lol, lmao) explanation is perhaps in order: The seven modes I&rsquo;m analyzing are arrangements of the notes of the major scale, traditionally numbered by which of the major scale&rsquo;s notes they use as their root key, or start. Here are the C major scale&rsquo;s modes. <span class="accent">Lowercase, blue letters</span> represent minor or diminished intervals that have been lowered a half-step from their root keys&rsquo; major scales; the <strong class="accent orange">bold, orange letter</strong> is an augmented interval that has been raised a half-step from its root key&rsquo;s major scale. Note that an augmented fourth and a diminished fifth are both tritones; they just use different notations.
 			<table id="cmajormodes">
 				<thead>
 					<tr><th colspan="12" class="centred accent">The Seven Modes of the C Major Scale</th></tr>
@@ -99,10 +99,10 @@ window.onload = function () {makeAllSortable();};*/
 		<ul>
 			<li>A&#9839; and B&#9837; represent the same pitch. Likewise B and C&#9837;, C&#9839; and D&#9837;, and so on. However, in terms of <em>music theory</em>, A&#9839; and B&#9837; can be semantically quite different in some contexts &ndash; be careful.</li>
 			<li>Key signatures with seven sharps or seven flats exist, but I&rsquo;ve omitted them. (There are even monstrosities with double-sharps [&#119082;] and double-flats [&#119083;] &hellip; and that&rsquo;s all the attention I&rsquo;ll be giving them.) I feel it was pretty extravagant just to include six-flat and six-sharp key signatures alongside each other.</li>
-			<li>If we start from Lydian mode, lowering pitches one at a time by a half-step each gives us:
+			<li id="modesfromlydian">If we start from Lydian mode, lowering pitches one at a time by a half-step each gives us:
 				<table>
 					<thead>
-						<tr><th colspan="3" class="centred accent"><strong><strong><strong>Modes Descending from Lydian</strong></strong></strong></th></tr>
+						<tr><th colspan="3" class="centred accent"><strong><strong><strong><span title="I tried really, really hard to come up with a &lsquo;Lydian Descending a Scale&rsquo; joke here, but ultimately it felt too unhelpful.">Modes Descending from Lydian</span></strong></strong></strong></th></tr>
 						<tr><th>#</th><th>Mode</th>       <th>Pitch Lowered</th></tr>
 					</thead>
 					<tbody>
@@ -116,9 +116,10 @@ window.onload = function () {makeAllSortable();};*/
 					</tbody>
 				</table>
 				<ul>
+					<li>In other words, by lowering the B in F Lydian to B&#9837;, we wind up with F Ionian (i.e., F major). Lowering the E in F major to E&#9837; gives us F Mixolydian. And so on.</li>
 					<li>Lowering the root from Locrian gives us Lydian mode for the key below it on the chromatic scale &ndash; i.e., lowering the B in B Locrian to B&#9837; gives us B&#9837; Lydian.</li>
-					<li>The mode number and the pitch we lower to get it are exact mirrors of each other. This is not coincidental &ndash; it&rsquo;s the direct result of a mathematical pattern.</li>
-					<li>The modes are also always either three below or four above their predecessors. (In this context, these are equivalent: stepping 3 down from 1 gives us 7, 6, 5.) This is why I titled this page after the circle of thirds &ndash; it&rsquo;s more obscure than the circle of fifths, but arguably just as important, or at least almost so.</li>
+					<li>In the table above, the mode number and the pitch we lower to get it are exact mirrors of each other. This is not coincidental &ndash; it&rsquo;s the direct result of a mathematical pattern.</li>
+					<li>The modes are also always either three steps on the scale below their predecessors, or four steps above. (In this context, these are equivalent: stepping 3 down from 1 gives us 7, 6, 5.) This is why I titled this page after the circle of thirds &ndash; it&rsquo;s more obscure than the circle of fifths, but arguably just as important, or at least almost so.</li>
 				</ul>
 			</li>
 			<!--<li>Meanwhile, if we start from Locrian mode, raising the following pitches by a half-step results in the following mode:

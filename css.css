@@ -994,6 +994,10 @@ textarea {
 .justify {
 	text-align: justify;
 }
+.force-justify {
+	text-align: justify;
+	text-align-last: justify;
+}
 .balanced-wrap {
 	text-wrap: balance;
 }
@@ -1050,6 +1054,12 @@ code {
 	border: 2px solid var(--offset-level-3);
 	border-radius: 12px;
 	border-collapse: inherit !important;
+}
+.circleofthirds .number {
+	font-family: "Fira Code", monospace;
+}
+.circleofthirds li {
+	line-height: 125%;
 }
 .circleofthirds thead tr:first-child {
 	background-color: var(--background);
@@ -1142,4 +1152,17 @@ table.noborder {
 }
 .hide {
 	display: none;
+}
+
+.orange {
+	color: var(--link-hover)
+}
+.green {
+	color: var(--link-active)
+}
+.azure {
+	color: var(--link)
+}
+.magenta {
+	color: var(--link-visited)
 }

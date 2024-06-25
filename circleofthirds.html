@@ -1,0 +1,1473 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
+		<link rel="stylesheet" type="text/css" href="css.css">
+		<!-- <script>
+/*function sortTable(table, col, reverse) {
+	var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+		tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+		i;
+	reverse = -((+reverse) || -1);
+	tr = tr.sort(function (a, b) { // sort rows
+		return reverse // `-1 *` if want opposite order
+			* (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+				.localeCompare(b.cells[col].textContent.trim(), undefined, {numeric: true})
+			);
+	});
+	for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+	var th = table.tHead, i;
+	th && (th = th.rows[0]) && (th = th.cells);
+	if (th) i = th.length;
+	else return; // if no `<thead>` then do nothing
+	while (--i >= 0) (function (i) {
+		var dir = 1;
+		th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+	}(i));
+}
+
+function makeAllSortable(parent) {
+	parent = parent || document.body;
+	var t = parent.getElementsByTagName('table'), i = t.length;
+	while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};*/
+		</script>-->
+		<style>
+		</style>
+		<title>Modes and the Circle of Thirds</title>
+	</head>
+	<body class="circleofthirds">
+		<h1>What is this?</h1>
+		<p>It&rsquo;s an analysis of the seven modes of the traditional major scale (whole step, whole step, half step, whole step, whole step, whole step, half step) and how they relate to each other &ndash; in brief, by raising a specific pattern of notes in each scale, it is possible to cycle not merely through all twelve notes in the chromatic scale, but all eighty-four possible sets of base notes and modes.</p>
+
+		<p>A brief explanation is perhaps in order:. The seven modes analyzed here are different ways of arranging the notes in the major scale, and are numbered by which note of the major scale they start with.
+			<ol>
+				<li><strong>Ionian:</strong> C-D-E-F-G-A-B. This is the traditional major scale.</li>
+				<li><strong>Dorian:</strong> D-E-F-G-A-B-C.</li>
+				<li><strong>Phrygian:</strong> E-F-G-A-B-C-D.</li>
+				<li><strong>Lydian:</strong> F-G-A-B-C-D-E.</li>
+				<li><strong>Mixolydian:</strong> G-A-B-C-D-E-F.</li>
+				<li><strong>Aeolian:</strong> A-B-C-D-E-F-G. This is the natural minor scale.</li>
+				<li><strong>Locrian:</strong> B-C-D-E-F-G-A. An unusual mode because its root chord is diminished. As a result, very few pieces are written in Locrian, and those that are tend to modulate out of it at least some of the time.</li>
+			</ol>
+		<p>So why are these not listed in order below? Because this is an analysis of how, by raising a regular pattern of notes by a half-step each, we can walk through every mode starting on every key, provided that we remember a few things:</p>
+
+		<ul>
+			<li>A&#9839; and B&#9837; represent the same pitch. Likewise C&#9839; and B, B&#9837; and C, and so on. However, in terms of <em>music theory</em>, A&#9839; and B&#9837; can be semantically quite different in some contexts &ndash; be careful.</li>
+			<li>Key signatures with seven sharps or seven flats do exist, but I&rsquo;ve omitted them. (There are even monstrosities with double-sharps [&#119082;] and double-flats [&#119083;] &hellip; and that&rsquo;s all the attention I&rsquo;ll be giving them.) I feel it was pretty extravagant just to include six-flat and six-sharp key signatures alongside each other.</li>
+		</ul>
+
+		(Further information and explanation TK)
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan="12" class="centred accent"><strong><strong><strong>C</strong></strong></strong></th>
+				</tr>
+				<tr><th>#</th><th>Root</th><th>Scale</th><th>Accidentals</th><th class="left">1</th><th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th><th class="left">1</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="number right">&nbsp;0</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>4 &ndash; Lydian</td>
+					<td>&#9839; &times; 1</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr class="bold accent">
+					<td class="number right">&nbsp;1</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>1 &ndash; Ionian</td>
+					<td> &#9838;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">&nbsp;2</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>5 &ndash; Mixolydian</td>
+					<td>&#9837; &times; 1</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">&nbsp;3</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>2 &ndash; Dorian</td>
+					<td>&#9837; &times; 2</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">&nbsp;4</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>6 &ndash; Aeolian</td>
+					<td>&#9837; &times; 3</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">&nbsp;5</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>3 &ndash; Phrygian</td>
+					<td>&#9837; &times; 4</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">&nbsp;6</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>7 &ndash; Locrian</td>
+					<td>&#9837; &times; 5</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan="12" class="centred accent"><strong><strong><strong>B / C&#9837;</strong></strong></strong></th>
+				</tr>
+				<tr><th>#</th><th>Root</th><th>Scale</th><th>Accidentals</th><th class="left">1</th><th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th><th class="left">1</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="number right">&nbsp;7</td>
+					<td>C&#9837;</td>
+					<td>4 &ndash; Lydian</td>
+					<td>&#9837; &times; 6</td>
+					<td>C&#9837;</td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">&nbsp;7</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>4 &ndash; Lydian</td>
+					<td>&#9839; &times; 6</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E&#9839;</td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right"> 8</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>1 &ndash; Ionian</td>
+					<td>&#9839; &times; 5</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right"> 9</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>5 &ndash; Mixolydian</td>
+					<td>&#9839; &times; 4</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">10</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>2 &ndash; Dorian</td>
+					<td>&#9839; &times; 3</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">11</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>6 &ndash; Aeolian</td>
+					<td>&#9839; &times; 2</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">12</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>3 &ndash; Phrygian</td>
+					<td>&#9839; &times; 1</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr class="bold accent">
+					<td class="number right">13</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>7 &ndash; Locrian</td>
+					<td> &#9838;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+				</tr>
+			</tbody>
+		</table>
+			
+		<table>
+			<thead>
+				<tr>
+					<th colspan="12" class="centred accent"><strong><strong><strong>A&#9839; / B&#9837;</strong></strong></strong></th>
+				</tr>
+				<tr><th>#</th><th>Root</th><th>Scale</th><th>Accidentals</th><th class="left">1</th><th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th><th class="left">1</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="number right">14</td>
+					<td>B&#9837;</td>
+					<td>4 &ndash; Lydian</td>
+					<td>&#9837; &times; 1</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">15</td>
+					<td>B&#9837;</td>
+					<td>1 &ndash; Ionian</td>
+					<td>&#9837; &times; 2</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">16</td>
+					<td>B&#9837;</td>
+					<td>5 &ndash; Mixolydian</td>
+					<td>&#9837; &times; 3</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">17</td>
+					<td>B&#9837;</td>
+					<td>2 &ndash; Dorian</td>
+					<td>&#9837; &times; 4</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">18</td>
+					<td>B&#9837;</td>
+					<td>6 &ndash; Aeolian</td>
+					<td>&#9837; &times; 5</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">19</td>
+					<td>B&#9837;</td>
+					<td>3 &ndash; Phrygian</td>
+					<td>&#9837; &times; 6</td>
+					<td>B&#9837;</td>
+					<td>C&#9837;</td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">19</td>
+					<td>A&#9839;</td>
+					<td>3 &ndash; Phrygian</td>
+					<td>&#9839; &times; 6</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E&#9839;</td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">20</td>
+					<td>A&#9839;</td>
+					<td>7 &ndash; Locrian</td>
+					<td>&#9839; &times; 5</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan="12" class="centred accent"><strong><strong><strong>A</strong></strong></strong></th>
+				</tr>
+				<tr><th>#</th><th>Root</th><th>Scale</th><th>Accidentals</th><th class="left">1</th><th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th><th class="left">1</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="number right">21</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>4 &ndash; Lydian</td>
+					<td>&#9839; &times; 4</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">22</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>1 &ndash; Ionian</td>
+					<td>&#9839; &times; 3</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">23</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>5 &ndash; Mixolydian</td>
+					<td>&#9839; &times; 2</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">24</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>2 &ndash; Dorian</td>
+					<td>&#9839; &times; 1</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr class="bold accent">
+					<td class="number right">25</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>6 &ndash; Aeolian</td>
+					<td> &#9838;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">26</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>3 &ndash; Phrygian</td>
+					<td>&#9837; &times; 1</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">27</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>7 &ndash; Locrian</td>
+					<td>&#9837; &times; 2</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan="12" class="centred accent"><strong><strong><strong>G&#9839; / A&#9837;</strong></strong></strong></th>
+				</tr>
+				<tr><th>#</th><th>Root</th><th>Scale</th><th>Accidentals</th><th class="left">1</th><th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th><th class="left">1</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="number right">28</td>
+					<td>A&#9837;</td>
+					<td>4 &ndash; Lydian</td>
+					<td>&#9837; &times; 3</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">29</td>
+					<td>A&#9837;</td>
+					<td>1 &ndash; Ionian</td>
+					<td>&#9837; &times; 4</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">30</td>
+					<td>A&#9837;</td>
+					<td>5 &ndash; Mixolydian</td>
+					<td>&#9837; &times; 5</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">31</td>
+					<td>A&#9837;</td>
+					<td>2 &ndash; Dorian</td>
+					<td>&#9837; &times; 6</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C&#9837;</td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">31</td>
+					<td>G&#9839;</td>
+					<td>2 &ndash; Dorian</td>
+					<td>&#9839; &times; 6</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E&#9839;</td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+				</tr> 
+				<tr>
+					<td class="number right">32</td>
+					<td>G&#9839;</td>
+					<td>6 &ndash; Aeolian</td>
+					<td>&#9839; &times; 5</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">33</td>
+					<td>G&#9839;</td>
+					<td>3 &ndash; Phrygian</td>
+					<td>&#9839; &times; 4</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">34</td>
+					<td>G&#9839;</td>
+					<td>7 &ndash; Locrian</td>
+					<td>&#9839; &times; 3</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan="12" class="centred accent"><strong><strong><strong>G</strong></strong></strong></th>
+				</tr>
+				<tr><th>#</th><th>Root</th><th>Scale</th><th>Accidentals</th><th class="left">1</th><th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th><th class="left">1</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+				<tr>
+					<td class="number right">35</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>4 &ndash; Lydian</td>
+					<td>&#9839; &times; 2</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">36</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>1 &ndash; Ionian</td>
+					<td>&#9839; &times; 1</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr class="bold accent">
+					<td class="number right">37</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>5 &ndash; Mixolydian</td>
+					<td> &#9838;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">38</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>2 &ndash; Dorian</td>
+					<td>&#9837; &times; 1</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">39</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>6 &ndash; Aeolian</td>
+					<td>&#9837; &times; 2</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">40</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>3 &ndash; Phrygian</td>
+					<td>&#9837; &times; 3</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">41</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>7 &ndash; Locrian</td>
+					<td>&#9837; &times; 4</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan="12" class="centred accent"><strong><strong><strong>F&#9839; / G&#9837;</strong></strong></strong></th>
+				</tr>
+				<tr><th>#</th><th>Root</th><th>Scale</th><th>Accidentals</th><th class="left">1</th><th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th><th class="left">1</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="number right">42</td>
+					<td>G&#9837;</td>
+					<td>4 &ndash; Lydian</td>
+					<td>&#9837; &times; 5</td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">43</td>
+					<td>G&#9837;</td>
+					<td>1 &ndash; Ionian</td>
+					<td>&#9837; &times; 6</td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C&#9837;</td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">43</td>
+					<td>F&#9839;</td>
+					<td>1 &ndash; Ionian</td>
+					<td>&#9839; &times; 6</td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E&#9839;</td>
+					<td>F&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">44</td>
+					<td>F&#9839;</td>
+					<td>5 &ndash; Mixolydian</td>
+					<td>&#9839; &times; 5</td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">45</td>
+					<td>F&#9839;</td>
+					<td>2 &ndash; Dorian</td>
+					<td>&#9839; &times; 4</td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">46</td>
+					<td>F&#9839;</td>
+					<td>6 &ndash; Aeolian</td>
+					<td>&#9839; &times; 3</td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">47</td>
+					<td>F&#9839;</td>
+					<td>3 &ndash; Phrygian</td>
+					<td>&#9839; &times; 2</td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">48</td>
+					<td>F&#9839;</td>
+					<td>7 &ndash; Locrian</td>
+					<td>&#9839; &times; 1</td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan="12" class="centred accent"><strong><strong><strong>E&#9839; / F</strong></strong></strong></th>
+				</tr>
+				<tr><th>#</th><th>Root</th><th>Scale</th><th>Accidentals</th><th class="left">1</th><th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th><th class="left">1</th></tr>
+			</thead>
+			<tbody>
+				<tr class="bold accent">
+					<td class="number right">49</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>4 &ndash; Lydian</td>
+					<td> &#9838;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">50</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>1 &ndash; Ionian</td>
+					<td>&#9837; &times; 1</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">51</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>5 &ndash; Mixolydian</td>
+					<td>&#9837; &times; 2</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">52</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>2 &ndash; Dorian</td>
+					<td>&#9837; &times; 3</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">53</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>6 &ndash; Aeolian</td>
+					<td>&#9837; &times; 4</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">54</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>3 &ndash; Phrygian</td>
+					<td>&#9837; &times; 5</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">55</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>7 &ndash; Locrian</td>
+					<td>&#9837; &times; 6</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C&#9837;</td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">55</td>
+					<td>E&#9839;</td>
+					<td>7 &ndash; Locrian</td>
+					<td>&#9839; &times; 6</td>
+					<td>E&#9839;</td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E&#9839;</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan="12" class="centred accent"><strong><strong><strong>E</strong></strong></strong></th>
+				</tr>
+				<tr><th>#</th><th>Root</th><th>Scale</th><th>Accidentals</th><th class="left">1</th><th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th><th class="left">1</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="number right">56</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>4 &ndash; Lydian</td>
+					<td>&#9839; &times; 5</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">57</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>1 &ndash; Ionian</td>
+					<td>&#9839; &times; 4</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">58</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>5 &ndash; Mixolydian</td>
+					<td>&#9839; &times; 3</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">59</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>2 &ndash; Dorian</td>
+					<td>&#9839; &times; 2</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">60</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>6 &ndash; Aeolian</td>
+					<td>&#9839; &times; 1</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr class="bold accent">
+					<td class="number right">61</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>3 &ndash; Phrygian</td>
+					<td> &#9838;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">62</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>7 &ndash; Locrian</td>
+					<td>&#9837; &times; 1</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan="12" class="centred accent"><strong><strong><strong>D&#9839; / E&#9837;</strong></strong></strong></th>
+				</tr>
+				<tr><th>#</th><th>Root</th><th>Scale</th><th>Accidentals</th><th class="left">1</th><th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th><th class="left">1</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="number right">63</td>
+					<td>E&#9837;</td>
+					<td>4 &ndash; Lydian</td>
+					<td>&#9837; &times; 2</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">64</td>
+					<td>E&#9837;</td>
+					<td>1 &ndash; Ionian</td>
+					<td>&#9837; &times; 3</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">65</td>
+					<td>E&#9837;</td>
+					<td>5 &ndash; Mixolydian</td>
+					<td>&#9837; &times; 4</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">66</td>
+					<td>E&#9837;</td>
+					<td>2 &ndash; Dorian</td>
+					<td>&#9837; &times; 5</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">67</td>
+					<td>E&#9837;</td>
+					<td>6 &ndash; Aeolian</td>
+					<td>&#9837; &times; 6</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C&#9837;</td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">67</td>
+					<td>D&#9839;</td>
+					<td>6 &ndash; Aeolian</td>
+					<td>&#9839; &times; 6</td>
+					<td>D&#9839;</td>
+					<td>E&#9839;</td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">68</td>
+					<td>D&#9839;</td>
+					<td>3 &ndash; Phrygian</td>
+					<td>&#9839; &times; 5</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">69</td>
+					<td>D&#9839;</td>
+					<td>7 &ndash; Locrian</td>
+					<td>&#9839; &times; 4</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan="12" class="centred accent"><strong><strong><strong>D</strong></strong></strong></th>
+				</tr>
+				<tr><th>#</th><th>Root</th><th>Scale</th><th>Accidentals</th><th class="left">1</th><th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th><th class="left">1</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="number right">70</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>4 &ndash; Lydian</td>
+					<td>&#9839; &times; 3</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">71</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>1 &ndash; Ionian</td>
+					<td>&#9839; &times; 2</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">72</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>5 &ndash; Mixolydian</td>
+					<td>&#9839; &times; 1</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr class="bold accent">
+					<td class="number right">73</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>2 &ndash; Dorian</td>
+					<td> &#9838;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">74</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>6 &ndash; Aeolian</td>
+					<td>&#9837; &times; 1</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">75</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>3 &ndash; Phrygian</td>
+					<td>&#9837; &times; 2</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+				</tr>
+				<tr>
+					<td class="number right">76</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>7 &ndash; Locrian</td>
+					<td>&#9837; &times; 3</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D<span class="hidden">&#9838;</span></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan="12" class="centred accent"><strong><strong><strong>C&#9839; / D&#9837;</strong></strong></strong></th>
+				</tr>
+				<tr><th>#</th><th>Root</th><th>Scale</th><th>Accidentals</th><th class="left">1</th><th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th><th class="left">1</th></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="number right">77</td>
+					<td>D&#9837;</td>
+					<td>4 &ndash; Lydian</td>
+					<td>&#9837; &times; 4</td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">78</td>
+					<td>D&#9837;</td>
+					<td>1 &ndash; Ionian</td>
+					<td>&#9837; &times; 5</td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C<span class="hidden">&#9838;</span></td>
+					<td>D&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">79</td>
+					<td>D&#9837;</td>
+					<td>5 &ndash; Mixolydian</td>
+					<td>&#9837; &times; 6</td>
+					<td>D&#9837;</td>
+					<td>E&#9837;</td>
+					<td>F<span class="hidden">&#9838;</span></td>
+					<td>G&#9837;</td>
+					<td>A&#9837;</td>
+					<td>B&#9837;</td>
+					<td>C&#9837;</td>
+					<td>D&#9837;</td>
+				</tr>
+				<tr>
+					<td class="number right">79</td>
+					<td>C&#9839;</td>
+					<td>5 &ndash; Mixolydian</td>
+					<td>&#9839; &times; 6</td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E&#9839;</td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">80</td>
+					<td>C&#9839;</td>
+					<td>2 &ndash; Dorian</td>
+					<td>&#9839; &times; 5</td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A&#9839;</td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">81</td>
+					<td>C&#9839;</td>
+					<td>6 &ndash; Aeolian</td>
+					<td>&#9839; &times; 4</td>
+					<td>C&#9839;</td>
+					<td>D&#9839;</td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">82</td>
+					<td>C&#9839;</td>
+					<td>3 &ndash; Phrygian</td>
+					<td>&#9839; &times; 3</td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G&#9839;</td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+				</tr>
+				<tr>
+					<td class="number right">83</td>
+					<td>C&#9839;</td>
+					<td>7 &ndash; Locrian</td>
+					<td>&#9839; &times; 2</td>
+					<td>C&#9839;</td>
+					<td>D<span class="hidden">&#9838;</span></td>
+					<td>E<span class="hidden">&#9838;</span></td>
+					<td>F&#9839;</td>
+					<td>G<span class="hidden">&#9838;</span></td>
+					<td>A<span class="hidden">&#9838;</span></td>
+					<td>B<span class="hidden">&#9838;</span></td>
+					<td>C&#9839;</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

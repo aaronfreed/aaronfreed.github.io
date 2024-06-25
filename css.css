@@ -326,7 +326,8 @@ strong.bold
 	font-weight: var(--medium);
 }
 
-:is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited)
+:is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited),
+tr.bold > td
 {
 	font-weight: var(--bold);
 }
@@ -369,7 +370,7 @@ h5
 .music :where( h1, h2, h3, h4) {
 	margin: 16px 0px 8px;
 }
-.accent {
+.accent, .accent td, .accent th {
 	color: var(--heading-color);
 }
 .discography :where(h1, h2, h3, h4)
@@ -979,6 +980,9 @@ textarea {
 .middle {
 	vertical-align: middle;
 }
+.left {
+	text-align: left;
+}
 .right,
 .date,
 :where(td, th):where(.right, .date),
@@ -1038,6 +1042,41 @@ code {
 }
 .trigtables .accent td {
 	color: var(--heading-color);
+}
+
+.circleofthirds table {
+	margin: 12px auto;
+	border-spacing: 0px;
+	border: 2px solid var(--offset-level-3);
+	border-radius: 12px;
+	border-collapse: inherit !important;
+}
+.circleofthirds thead tr:first-child {
+	background-color: var(--background);
+}
+.circleofthirds :is(td, th) {
+	border-bottom: 1px solid var(--offset-level-2);
+}
+.circleofthirds tr:last-child > td {
+	border-bottom: none;
+}
+.circleofthirds tr:first-child th:first-child {
+	border-top-left-radius: 10px;
+} 
+.circleofthirds tr:first-child th:last-child {
+	border-top-right-radius: 10px;
+}
+.circleofthirds tr:last-child td:first-child {
+	border-bottom-left-radius: 10px;
+}
+.circleofthirds tr:last-child td:last-child {
+	border-bottom-right-radius: 10px;
+}
+.circleofthirds thead tr:first-child th:not(:first-child, :last-child) {
+	border-top: 2px solid var(--offset-level-3);
+}
+.circleofthirds tr {
+	border: 1px solid var(--offset-level-2);
 }
 
 spoiler {

@@ -35,7 +35,7 @@ Pages currently hosted here:
    * **[My discography](https://aaronfreed.github.io/discography.html)**
       * Including <em>Marathon</em> content, covers, and original material alike.
    * **[Musical Modes and the Circle of Fifths](https://aaronfreed.github.io/musicalmodes.html)**
-      * A lengthy and technical technical examination of how the seven modes of the major scale (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, and Locrian) relate to each other and to the circle of fifths (a musical concept inextricably linked with chords and keys). Contains a large number of tables illustrating the principle.
+      * A lengthy and highly technical examination of how the seven modes of the major scale (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, and Locrian) relate to each other and to the circle of fifths (a musical concept inextricably linked with chords and keys). Contains a large number of tables illustrating the principle.
 * **Gaming**
    * **[My portfolio](https://aaronfreed.github.io/portfolio.html)**
       * An overview of my creative output from the past several years, with a heavy focus on <em>Marathon</em> content I&rsquo;ve worked on.

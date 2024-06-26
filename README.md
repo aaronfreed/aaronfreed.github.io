@@ -8,23 +8,28 @@ Pages currently hosted here:
 
 * ***Marathon* / Aleph One Content Creation Guides:**
    * **[Beginners’ guide](https://aaronfreed.github.io/mapmaking101.html)**
-      * What editors to use, how to set them up, what guides to follow to get started making content, what those guides get wrong or leave out, and what to do once you&rsquo;ve mastered the basics.
+      * What editors to use, how to set them up, what guides to follow to get started making levels, what those guides get wrong or omit, and what to do after mastering the basics.
+   * **The Annotated Forge Manual** (WIP):
+      * **[Detailed Table of Contents](https://aaronfreed.github.io/forgemanualcontents.html)**
+      * **[Introduction](https://aaronfreed.github.io/forgemanual.html)**
+      * **[Tutorial 1](https://aaronfreed.github.io/forgetutorial1.html)** (WIP)
+         * Contains numerous annotations correcting errata and filling in the gaps to apply to the modern map editor Weland. I&rsquo;ve only annotated around 25% of it, and the annotations will need substantial amounts of editing before I consider it finished. But it&rsquo;s a start.
    * **[Advanced guide](https://aaronfreed.github.io/mapmaking.html)**
-      * In the process of being split up. A guide to some intractable problems that weren&rsquo;t documented anywhere else and ways to fix them.
+      * A guide to several intractable problems that weren&rsquo;t documented elsewhere and ways to fix them.
+   * **[The Annotated Anvil Help Balloons](https://aaronfreed.github.io/anvilhelp.html)** (updated to work as a ShapeFusion reference)
+      * Based on the help strings for Anvil, Bungie&rsquo;s official physics, shapes, and sound file editor; with corrections and amendments for its modern replacement ShapeFusion.
    * **[Circles and *Marathon* Mapmaking](marathoncircles.html)**
       * Aleph One can&rsquo;t *exactly* use circles, but it can create rough approximations. I&rsquo;m kind of (in)famous for using them in my maps. I address a few ways to create them and provide some tips for using them effectively, including a table to produce regular polygons with several common side counts and side lengths of 1 World Units.
    * **[Map Complexity: A Case Study](mapcomplexity.html)**
-      * A lengthy examination of *Eternal*&rsquo;s &ldquo;Where Giants Have Fallen&rdquo;, *Tempus Irae Redux*&rsquo;s &ldquo;Il grande silenzio&rdquo;, *Phoenix*&rsquo;s &ldquo;Stone Temple Pilates&rdquo;, and *Starlight*&rsquo;s &ldquo;Monument to All Your Sins&rdquo; that attempts to demonstrate how much map detail is too much and how much is just enough.
+      * Wherein I examine *Eternal*&rsquo;s &ldquo;Where Giants Have Fallen&rdquo;, *Tempus Irae Redux*&rsquo;s &ldquo;Il grande silenzio&rdquo;, *Phoenix*&rsquo;s &ldquo;Stone Temple Pilates&rdquo;, and *Starlight*&rsquo;s &ldquo;Monument to All Your Sins&rdquo; as a demonstration of how much map detail is too much and how much is just enough.
    * **[Reducing Map Index Use](mapindexreduction.html)**
       * What to do if you&rsquo;ve made a map so complex it won&rsquo;t load.
    * **[*Marathon Infinity* Sounds & Sources](marathonsounds.html)**
       * Invaluable information for anyone working with <em>Marathon Infinity</em>&rsquo;s sound file &ndash; or anyone curious where many of its sounds came from.
-   * **[The Annotated Anvil Help Balloons](https://aaronfreed.github.io/anvilhelp.html)** (updated to work as a ShapeFusion reference)
-      * Based on the help strings for Anvil, Bungie&rsquo;s official physics, shapes, and sound file editor; with corrections and amendments for its modern replacement ShapeFusion.
    * **[Example DefaultNames.txt for ShapeFusion](https://aaronfreed.github.io/defaultnames.html)**
       * Customize almost every ShapeFusion string to match your own scenario&rsquo;s data.
    * **[Where Are Monsters in Marathon...Maps](https://aaronfreed.github.io/marathonmonsters.html)**
-      * A case study of monster placement in the *Marathon* trilogy as a microcosm of how restricting variety within individual levels can, counterintuitively, lead to more variety across an entire game.
+      * A case study of the *Marathon* trilogy&rsquo;s monster placement as a microcosm of how restricting variety within individual levels can, counterintuitively, increase variety across an entire game.
    * **[Marathon: Looper](https://aaronfreed.github.io/marathonlooper.html)**
       * How to loop songs in Aleph One prior to 1.7. Split off to its own page because the process it describes is no longer necessary with releases targeting only Aleph One 1.7 or later.
 * **Music & Audio**

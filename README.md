@@ -29,13 +29,13 @@ Pages currently hosted here:
       * How to loop songs in Aleph One prior to 1.7. Split off to its own page because the process it describes is no longer necessary with releases targeting only Aleph One 1.7 or later.
 * **Music & Audio**
    * **[My notes on remastering audio](https://aaronfreed.github.io/remastering.html)**
-      * An in-depth description of my cleanup process for music and sounds with poor mastering, lossy compression artifacts, or low sample rates, including an explanation of. Written for <a href="https://www.izotope.com/en/products/rx.html" target="_blank">iZotope RX</a>, but its principles are usable in any sufficiently powerful audio cleanup software.
+      * An in-depth description of my cleanup process for music and sounds with poor mastering, lossy compression artifacts, or low sample rates, including an explanation of upmastering, a process I typically use in cases where <a href="https://en.wikipedia.org/wiki/Generation_loss" target="_blank">generation loss</a> is a possible concern. (It&rsquo;s impossible to restore data stripped out by digital clipping, lossy compression, or low sample rates; it&rsquo;s only possible to create approximations of what might have been there.) Written for <a href="https://www.izotope.com/en/products/rx.html" target="_blank">iZotope RX</a>, but its principles are usable in any sufficiently powerful audio cleanup software.
    * **[*Marathon* soundtracks](https://aaronfreed.github.io/soundtracks.html)**
       * Remixes and arrangements of Alexander Seropian&rsquo;s soundtrack for <em>Marathon</em> (1994), plus soundtracks for several major <em>Marathon</em> scenarios. I have personally remastered many of these.
    * **[My discography](https://aaronfreed.github.io/discography.html)**
       * Including <em>Marathon</em> content, covers, and original material alike.
    * **[Musical Modes and the Circle of Fifths](https://aaronfreed.github.io/musicalmodes.html)**
-      * A lengthy and highly technical examination of how the seven modes of the major scale (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, and Locrian) relate to each other and to the circle of fifths (a musical concept inextricably linked with chords and keys). Contains a large number of tables illustrating the principle.
+      * A lengthy and highly technical examination of how the seven modes of the major scale (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, and Locrian) relate to each other and to the circle of fifths (a musical concept inextricably linked with chords and key signatures). Contains a large number of tables illustrating the principle.
 * **Gaming**
    * **[My portfolio](https://aaronfreed.github.io/portfolio.html)**
       * An overview of my creative output from the past several years, with a heavy focus on <em>Marathon</em> content I&rsquo;ve worked on.

@@ -1063,9 +1063,14 @@ code {
 }
 .circleofthirds thead tr:first-child {
 	background-color: var(--background);
+	border-bottom: 0px;
 }
-.circleofthirds :is(td, th) {
+.circleofthirds td {
 	border-bottom: 1px solid var(--offset-level-2);
+}
+.circleofthirds tr:last-child > th {
+	border-top: 2px solid var(--offset-level-3);
+	border-bottom: 2px solid var(--offset-level-3);
 }
 .circleofthirds tr:last-child > td {
 	border-bottom: none;
@@ -1088,8 +1093,11 @@ code {
 .circleofthirds tr {
 	border: 1px solid var(--offset-level-2);
 }
-.circleofthirds .keysig {
-	border-right: 2px solid var(--offset-level-2);
+.circleofthirds .leftborder {
+	border-left: 2px solid var(--offset-level-3);
+}
+.circleofthirds .rightborder {
+	border-right: 2px solid var(--offset-level-3);
 }
 
 spoiler {

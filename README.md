@@ -34,6 +34,8 @@ Pages currently hosted here:
       * Remixes and arrangements of Alexander Seropian&rsquo;s soundtrack for <em>Marathon</em> (1994), plus soundtracks for several major <em>Marathon</em> scenarios. I have personally remastered many of these.
    * **[My discography](https://aaronfreed.github.io/discography.html)**
       * Including <em>Marathon</em> content, covers, and original material alike.
+   * **[Musical Modes and the Circle of Fifths](https://aaronfreed.github.io/musicalmodes.html)**
+      * A lengthy and technical technical examination of how the seven modes of the major scale (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, and Locrian) relate to each other and to the circle of fifths (a musical concept inextricably linked with chords and keys). Contains a large number of tables illustrating the principle.
 * **Gaming**
    * **[My portfolio](https://aaronfreed.github.io/portfolio.html)**
       * An overview of my creative output from the past several years, with a heavy focus on <em>Marathon</em> content I&rsquo;ve worked on.
@@ -41,6 +43,9 @@ Pages currently hosted here:
       * Please don&rsquo;t read this unless you&rsquo;ve completed a recent build of *Eternal X* 1.3: it spoils several of the game&rsquo;s major plot twists, and you&rsquo;ll lack the context to grasp their emotional significance.
    * **[*Marathon Istoria*: Conversations with the Dead (major spoilers)](https://aaronfreed.github.io/istoria_body_messages.html)**
       * A catalog of all Yellow Crystal messages in the Aleph One scenario *Istoria*, the keywords used to display them, and the locations of all 28 bodies in the scenario. (Again, please don&rsquo;t read this until you&rsquo;ve finished *Istoria* at least once.)
+* **Miscellaneous**
+   * **[Trigonometry Tables (Sine, Cosine, and Tangent)](https://aaronfreed.github.io/trigtables.html)**
+      Why? I got sick of throwing them into a calculator app or Google – this way I&rsquo;ll have a URL for them that I&rsquo;ll easily remember.
 
 I&rsquo;ve contributed in varying degrees to the following (mostly) playable game mods. (Dates refer to my involvement with each project rather than its entire development cycle, though in a few cases these are identical.) See the *Marathon* soundtracks page above for links to soundtracks.
 

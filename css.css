@@ -1048,55 +1048,55 @@ code {
 	color: var(--heading-color);
 }
 
-.circleofthirds table {
+.musicalmodes table {
 	margin: 12px auto;
 	border-spacing: 0px;
 	border: 2px solid var(--offset-level-3);
 	border-radius: 12px;
 	border-collapse: inherit !important;
 }
-.circleofthirds .number {
+.musicalmodes .number {
 	font-family: "Fira Code", monospace;
 }
-.circleofthirds li {
+.musicalmodes li {
 	line-height: 125%;
 }
-.circleofthirds thead tr:first-child {
+.musicalmodes thead tr:first-child {
 	background-color: var(--background);
 	border-bottom: 0px;
 }
-.circleofthirds td {
+.musicalmodes td {
 	border-bottom: 1px solid var(--offset-level-2);
 }
-.circleofthirds tr:last-child > th {
+.musicalmodes tr:last-child > th {
 	border-top: 2px solid var(--offset-level-3);
 	border-bottom: 2px solid var(--offset-level-3);
 }
-.circleofthirds tr:last-child > td {
+.musicalmodes tr:last-child > td {
 	border-bottom: none;
 }
-.circleofthirds tr:first-child th:first-child {
+.musicalmodes tr:first-child th:first-child {
 	border-top-left-radius: 10px;
 } 
-.circleofthirds tr:first-child th:last-child {
+.musicalmodes tr:first-child th:last-child {
 	border-top-right-radius: 10px;
 }
-.circleofthirds tr:last-child td:first-child {
+.musicalmodes tr:last-child td:first-child {
 	border-bottom-left-radius: 10px;
 }
-.circleofthirds tr:last-child td:last-child {
+.musicalmodes tr:last-child td:last-child {
 	border-bottom-right-radius: 10px;
 }
-.circleofthirds thead tr:first-child th:not(:first-child, :last-child) {
+.musicalmodes thead tr:first-child th:not(:first-child, :last-child) {
 	border-top: 2px solid var(--offset-level-3);
 }
-.circleofthirds tr {
+.musicalmodes tr {
 	border: 1px solid var(--offset-level-2);
 }
-.circleofthirds .leftborder {
+.musicalmodes .leftborder {
 	border-left: 2px solid var(--offset-level-3);
 }
-.circleofthirds .rightborder {
+.musicalmodes .rightborder {
 	border-right: 2px solid var(--offset-level-3);
 }
 

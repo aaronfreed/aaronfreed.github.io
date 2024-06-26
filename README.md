@@ -45,7 +45,7 @@ Pages currently hosted here:
       * A catalog of all Yellow Crystal messages in the Aleph One scenario *Istoria*, the keywords used to display them, and the locations of all 28 bodies in the scenario. (Again, please don&rsquo;t read this until you&rsquo;ve finished *Istoria* at least once.)
 * **Miscellaneous**
    * **[Trigonometry Tables (Sine, Cosine, and Tangent)](https://aaronfreed.github.io/trigtables.html)**
-      Why? I got sick of throwing them into a calculator app or Google – this way I&rsquo;ll have a URL for them that I&rsquo;ll easily remember.
+      * Why? I got sick of throwing them into a calculator app or Google – this way I&rsquo;ll have a URL for them that I&rsquo;ll easily remember.
 
 I&rsquo;ve contributed in varying degrees to the following (mostly) playable game mods. (Dates refer to my involvement with each project rather than its entire development cycle, though in a few cases these are identical.) See the *Marathon* soundtracks page above for links to soundtracks.
 

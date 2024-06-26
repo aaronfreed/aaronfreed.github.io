@@ -1088,6 +1088,9 @@ code {
 .circleofthirds tr {
 	border: 1px solid var(--offset-level-2);
 }
+.circleofthirds .keysig {
+	border-right: 2px solid var(--offset-level-2);
+}
 
 spoiler {
 	color: transparent;

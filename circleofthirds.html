@@ -178,6 +178,7 @@ window.onload = function () {makeAllSortable();};*/
 			<li>Halfway between C major&rsquo;s modes, I always print a mode twice, in <span class="orange">orange</span>. These nodes could be notated either with six sharps in their key signatures or with six flats. I don&rsquo;t really care for either option (E&#9839; is F&#9838;! C&#9837; is B&#9838;!), but they&rsquo;re necessary to prevent the repetition of a letter in a scale, and thus a rash of accidentals in the notation for any piece that uses them. These options are also always separated by multiples of twelve, for the same reason: in this progression, modes of the same scale are always separated from each other by multiples of twelve.</li>
 			<li>I&rsquo;ve also made a cheat sheet for what modes use what key signatures; see the bottom of this page for that.</li>
 			<li>I&rsquo;ve listed these in descending order of pitch because that way, higher pitches are, well, higher on the list. However, since we read from top to bottom, this may be confusing. I may eventually write a JavaScript add-on to reverse the order, but I&rsquo;d have to learn JavaScript first, so no promises.</li>
+			<li>&ldquo;RM&rdquo; is an initialism for &ldquo;Relative Major&rdquo;, and &ldquo;KS&rdquo; is one for &ldquo;Key Signature&rdquo;. Further information about key signatures can be found in the section immediately following this one.</li>
 		</ul>
 
 		<table id="c">
@@ -186,8 +187,9 @@ window.onload = function () {makeAllSortable();};*/
 				<tr>
 					<th class="centred">#</th>
 					<th>Root</th>
-					<th>Scale</th>
-					<th>Accidentals</th>
+					<th>Mode</th>
+					<th><span class="dotted" title="Relative Major">RM</span></th>
+					<th style="border-right: 2px solid var(--offset-level-2);"><span class="dotted" title="Key Signature">KS</span></th>
 					<th class="left">1</th>
 					<th class="left">2</th>
 					<th class="left">3</th>
@@ -203,7 +205,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">&nbsp;0</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>4 &ndash; Lydian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 1</span></td>
+					<td class="centred">G</span></td>
+					<td class="centred keysig">1&#9839;</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E<span class="hidden">&#9838;</span></td>
@@ -217,7 +220,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">&nbsp;1</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>1 &ndash; Ionian</td>
-					<td class="centred">&#9838;</td>
+					<td class="centred">C</span></td>
+					<td class="centred keysig">&#9838;</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E<span class="hidden">&#9838;</span></td>
@@ -231,7 +235,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">&nbsp;2</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>5 &ndash; Mixolydian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 1</span></td>
+					<td class="centred">F</span></td>
+					<td class="centred keysig">1&#9837;</span></td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E<span class="hidden">&#9838;</span></td>
@@ -245,7 +250,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">&nbsp;3</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>2 &ndash; Dorian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 2</span></td>
+					<td class="centred">B&#9837;</span></td>
+					<td class="centred keysig">2&#9837;</span></td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E&#9837;</td>
@@ -259,7 +265,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">&nbsp;4</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>6 &ndash; Aeolian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 3</span></td>
+					<td class="centred">E&#9837;</span></td>
+					<td class="centred keysig">3&#9837;</span></td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E&#9837;</td>
@@ -273,7 +280,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">&nbsp;5</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>3 &ndash; Phrygian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 4</span></td>
+					<td class="centred">A&#9837;</span></td>
+					<td class="centred keysig">4&#9837;</span></td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D&#9837;</td>
 					<td>E&#9837;</td>
@@ -287,7 +295,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">&nbsp;6</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>7 &ndash; Locrian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 5</span></td>
+					<td class="centred">D&#9837;</span></td>
+					<td class="centred keysig">5&#9837;</span></td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D&#9837;</td>
 					<td>E&#9837;</td>
@@ -310,8 +319,9 @@ window.onload = function () {makeAllSortable();};*/
 				<tr>
 					<th class="centred">#</th>
 					<th>Root</th>
-					<th>Scale</th>
-					<th>Accidentals</th>
+					<th>Mode</th>
+					<th><span class="dotted" title="Relative Major">RM</span></th>
+					<th style="border-right: 2px solid var(--offset-level-2);"><span class="dotted" title="Key Signature">KS</span></th>
 					<th class="left">1</th>
 					<th class="left">2</th>
 					<th class="left">3</th>
@@ -327,7 +337,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">&nbsp;7</td>
 					<td>C&#9837;</td>
 					<td>4 &ndash; Lydian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 6</span></td>
+					<td class="centred">G&#9837;</span></td>
+					<td class="centred keysig">6&#9837;</span></td>
 					<td>C&#9837;</td>
 					<td>D&#9837;</td>
 					<td>E&#9837;</td>
@@ -341,7 +352,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">&nbsp;7</td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>4 &ndash; Lydian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 6</span></td>
+					<td class="centred">F&#9839;</span></td>
+					<td class="centred keysig">6&#9839;</td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C&#9839;</td>
 					<td>D&#9839;</td>
@@ -355,7 +367,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right"> 8</td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>1 &ndash; Ionian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 5</span></td>
+					<td class="centred">B</td>
+					<td class="centred keysig">5&#9839;<!--B--></td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C&#9839;</td>
 					<td>D&#9839;</td>
@@ -369,7 +382,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right"> 9</td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>5 &ndash; Mixolydian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 4</span></td>
+					<td class="centred">E</span></td>
+					<td class="centred keysig">4&#9839;<!--E--></td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C&#9839;</td>
 					<td>D&#9839;</td>
@@ -383,7 +397,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">10</td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>2 &ndash; Dorian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 3</span></td>
+					<td class="centred">A</span></td>
+					<td class="centred keysig">3&#9839;<!--A--></td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C&#9839;</td>
 					<td>D<span class="hidden">&#9838;</span></td>
@@ -397,7 +412,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">11</td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>6 &ndash; Aeolian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 2</span></td>
+					<td class="centred">D</span></td>
+					<td class="centred keysig">2&#9839;<!--D--></td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C&#9839;</td>
 					<td>D<span class="hidden">&#9838;</span></td>
@@ -411,7 +427,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">12</td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>3 &ndash; Phrygian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 1</span></td>
+					<td class="centred">G</span></td>
+					<td class="centred keysig">1&#9839;<!--G--></td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D<span class="hidden">&#9838;</span></td>
@@ -425,7 +442,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">13</td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>7 &ndash; Locrian</td>
-					<td class="centred">&#9838;</td>
+					<td class="centred">C</span></td>
+					<td class="centred keysig">&#9838;</td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D<span class="hidden">&#9838;</span></td>
@@ -448,8 +466,9 @@ window.onload = function () {makeAllSortable();};*/
 				<tr>
 					<th class="centred">#</th>
 					<th>Root</th>
-					<th>Scale</th>
-					<th>Accidentals</th>
+					<th>Mode</th>
+					<th><span class="dotted" title="Relative Major">RM</span></th>
+					<th style="border-right: 2px solid var(--offset-level-2);"><span class="dotted" title="Key Signature">KS</span></th>
 					<th class="left">1</th>
 					<th class="left">2</th>
 					<th class="left">3</th>
@@ -465,7 +484,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">14</td>
 					<td>B&#9837;</td>
 					<td>4 &ndash; Lydian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 1</span></td>
+					<td class="centred">F</td>
+					<td class="centred keysig">1&#9837;</span></td>
 					<td>B&#9837;</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D<span class="hidden">&#9838;</span></td>
@@ -479,7 +499,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">15</td>
 					<td>B&#9837;</td>
 					<td>1 &ndash; Ionian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 2</span></td>
+					<td class="centred">B&#9837;</td>
+					<td class="centred keysig">2&#9837;</span></td>
 					<td>B&#9837;</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D<span class="hidden">&#9838;</span></td>
@@ -493,7 +514,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">16</td>
 					<td>B&#9837;</td>
 					<td>5 &ndash; Mixolydian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 3</span></td>
+					<td class="centred">E&#9837;</td>
+					<td class="centred keysig">3&#9837;</span></td>
 					<td>B&#9837;</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D<span class="hidden">&#9838;</span></td>
@@ -507,7 +529,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">17</td>
 					<td>B&#9837;</td>
 					<td>2 &ndash; Dorian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 4</span></td>
+					<td class="centred">A&#9837;</td>
+					<td class="centred keysig">4&#9837;</span></td>
 					<td>B&#9837;</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D&#9837;</td>
@@ -521,7 +544,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">18</td>
 					<td>B&#9837;</td>
 					<td>6 &ndash; Aeolian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 5</span></td>
+					<td class="centred">E&#9837;</td>
+					<td class="centred keysig">5&#9837;</span></td>
 					<td>B&#9837;</td>
 					<td>C<span class="hidden">&#9838;</span></td>
 					<td>D&#9837;</td>
@@ -535,7 +559,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">19</td>
 					<td>B&#9837;</td>
 					<td>3 &ndash; Phrygian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 6</span></td>
+					<td class="centred">G&#9837;</td>
+					<td class="centred keysig">6&#9837;</span></td>
 					<td>B&#9837;</td>
 					<td>C&#9837;</td>
 					<td>D&#9837;</td>
@@ -549,7 +574,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">19</td>
 					<td>A&#9839;</td>
 					<td>3 &ndash; Phrygian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 6</span></td>
+					<td class="centred">F&#9839;</td>
+					<td class="centred keysig">6&#9839;<!--F sharp--></td>
 					<td>A&#9839;</td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C&#9839;</td>
@@ -563,7 +589,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">20</td>
 					<td>A&#9839;</td>
 					<td>7 &ndash; Locrian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 5</span></td>
+					<td class="centred">B</td>
+					<td class="centred keysig">5&#9839;<!--B--></td>
 					<td>A&#9839;</td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C&#9839;</td>
@@ -586,8 +613,9 @@ window.onload = function () {makeAllSortable();};*/
 				<tr>
 					<th class="centred">#</th>
 					<th>Root</th>
-					<th>Scale</th>
-					<th>Accidentals</th>
+					<th>Mode</th>
+					<th><span class="dotted" title="Relative Major">RM</span></th>
+					<th style="border-right: 2px solid var(--offset-level-2);"><span class="dotted" title="Key Signature">KS</span></th>
 					<th class="left">1</th>
 					<th class="left">2</th>
 					<th class="left">3</th>
@@ -603,7 +631,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">21</td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>4 &ndash; Lydian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 4</span></td>
+					<td class="centred">E</td>
+					<td class="centred keysig">4&#9839;<!--E--></td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C&#9839;</td>
@@ -617,7 +646,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">22</td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>1 &ndash; Ionian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 3</span></td>
+					<td class="centred">A</td>
+					<td class="centred keysig">3&#9839;<!--A--></td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C&#9839;</td>
@@ -631,7 +661,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">23</td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>5 &ndash; Mixolydian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 2</span></td>
+					<td class="centred">D</td>
+					<td class="centred keysig">2&#9839;<!--D--></td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C&#9839;</td>
@@ -645,7 +676,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">24</td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>2 &ndash; Dorian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 1</span></td>
+					<td class="centred">G</td>
+					<td class="centred keysig">1&#9839;<!--G--></td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C<span class="hidden">&#9838;</span></td>
@@ -659,7 +691,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">25</td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>6 &ndash; Aeolian</td>
-					<td class="centred">&#9838;</td>
+					<td class="centred">C</td>
+					<td class="centred keysig">&#9838;</td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B<span class="hidden">&#9838;</span></td>
 					<td>C<span class="hidden">&#9838;</span></td>
@@ -673,7 +706,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">26</td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>3 &ndash; Phrygian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 1</span></td>
+					<td class="centred">F</td>
+					<td class="centred keysig">1&#9837;<!--F--></td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B&#9837;</td>
 					<td>C<span class="hidden">&#9838;</span></td>
@@ -687,7 +721,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">27</td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>7 &ndash; Locrian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 2</span></td>
+					<td class="centred">B&#9837;</td>
+					<td class="centred keysig">2&#9837;<!--B flat--></td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B&#9837;</td>
 					<td>C<span class="hidden">&#9838;</span></td>
@@ -710,8 +745,9 @@ window.onload = function () {makeAllSortable();};*/
 				<tr>
 					<th class="centred">#</th>
 					<th>Root</th>
-					<th>Scale</th>
-					<th>Accidentals</th>
+					<th>Mode</th>
+					<th><span class="dotted" title="Relative Major">RM</span></th>
+					<th style="border-right: 2px solid var(--offset-level-2);"><span class="dotted" title="Key Signature">KS</span></th>
 					<th class="left">1</th>
 					<th class="left">2</th>
 					<th class="left">3</th>
@@ -727,7 +763,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">28</td>
 					<td>A&#9837;</td>
 					<td>4 &ndash; Lydian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 3</span></td>
+					<td class="centred">E&#9837;</td>
+					<td class="centred keysig">3&#9837;<!--E flat--></td>
 					<td>A&#9837;</td>
 					<td>B&#9837;</td>
 					<td>C<span class="hidden">&#9838;</span></td>
@@ -741,7 +778,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">29</td>
 					<td>A&#9837;</td>
 					<td>1 &ndash; Ionian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 4</span></td>
+					<td class="centred">A&#9837;</td>
+					<td class="centred keysig">4&#9837;<!--A flat--></td>
 					<td>A&#9837;</td>
 					<td>B&#9837;</td>
 					<td>C<span class="hidden">&#9838;</span></td>
@@ -755,7 +793,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">30</td>
 					<td>A&#9837;</td>
 					<td>5 &ndash; Mixolydian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 5</span></td>
+					<td class="centred">D&#9837;</td>
+					<td class="centred keysig">5&#9837;<!--D flat--></td>
 					<td>A&#9837;</td>
 					<td>B&#9837;</td>
 					<td>C<span class="hidden">&#9838;</span></td>
@@ -769,7 +808,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">31</td>
 					<td>A&#9837;</td>
 					<td>2 &ndash; Dorian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 6</span></td>
+					<td class="centred">G&#9837;</td>
+					<td class="centred keysig">6&#9837;<!--G flat--></td>
 					<td>A&#9837;</td>
 					<td>B&#9837;</td>
 					<td>C&#9837;</td>
@@ -783,7 +823,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">31</td>
 					<td>G&#9839;</td>
 					<td>2 &ndash; Dorian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 6</span></td>
+					<td class="centred">F&#9839;</td>
+					<td class="centred keysig">6&#9839;<!--F sharp--></td>
 					<td>G&#9839;</td>
 					<td>A&#9839;</td>
 					<td>B<span class="hidden">&#9838;</span></td>
@@ -797,7 +838,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">32</td>
 					<td>G&#9839;</td>
 					<td>6 &ndash; Aeolian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 5</span></td>
+					<td class="centred">B</td>
+					<td class="centred keysig">5&#9839;<!--B--></td>
 					<td>G&#9839;</td>
 					<td>A&#9839;</td>
 					<td>B<span class="hidden">&#9838;</span></td>
@@ -811,7 +853,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">33</td>
 					<td>G&#9839;</td>
 					<td>3 &ndash; Phrygian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 4</span></td>
+					<td class="centred">E</td>
+					<td class="centred keysig">4&#9839;<!--E--></td>
 					<td>G&#9839;</td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B<span class="hidden">&#9838;</span></td>
@@ -825,7 +868,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">34</td>
 					<td>G&#9839;</td>
 					<td>7 &ndash; Locrian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 3</span></td>
+					<td class="centred">A</td>
+					<td class="centred keysig">3&#9839;<!--A--></td>
 					<td>G&#9839;</td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B<span class="hidden">&#9838;</span></td>
@@ -848,8 +892,9 @@ window.onload = function () {makeAllSortable();};*/
 				<tr>
 					<th class="centred">#</th>
 					<th>Root</th>
-					<th>Scale</th>
-					<th>Accidentals</th>
+					<th>Mode</th>
+					<th><span class="dotted" title="Relative Major">RM</span></th>
+					<th style="border-right: 2px solid var(--offset-level-2);"><span class="dotted" title="Key Signature">KS</span></th>
 					<th class="left">1</th>
 					<th class="left">2</th>
 					<th class="left">3</th>
@@ -866,7 +911,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">35</td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>4 &ndash; Lydian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 2</span></td>
+					<td class="centred">D</td>
+					<td class="centred keysig">2&#9839;<!--D--></td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B<span class="hidden">&#9838;</span></td>
@@ -880,7 +926,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">36</td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>1 &ndash; Ionian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 1</span></td>
+					<td class="centred">G</td>
+					<td class="centred keysig">1&#9839;<!--G--></td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B<span class="hidden">&#9838;</span></td>
@@ -894,7 +941,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">37</td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>5 &ndash; Mixolydian</td>
-					<td class="centred">&#9838;</td>
+					<td class="centred">C</td>
+					<td class="centred keysig">&#9838;</td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B<span class="hidden">&#9838;</span></td>
@@ -908,7 +956,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">38</td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>2 &ndash; Dorian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 1</span></td>
+					<td class="centred">F</td>
+					<td class="centred keysig">1&#9837;<!--F--></td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B&#9837;</td>
@@ -922,7 +971,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">39</td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>6 &ndash; Aeolian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 2</span></td>
+					<td class="centred">B&#9837;</td>
+					<td class="centred keysig">2&#9837;<!--B flat--></td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A<span class="hidden">&#9838;</span></td>
 					<td>B&#9837;</td>
@@ -936,7 +986,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">40</td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>3 &ndash; Phrygian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 3</span></td>
+					<td class="centred">E&#9837;</td>
+					<td class="centred keysig">3&#9837;<!--E flat--></td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A&#9837;</td>
 					<td>B&#9837;</td>
@@ -950,7 +1001,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">41</td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>7 &ndash; Locrian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 4</span></td>
+					<td class="centred">A&#9837;</td>
+					<td class="centred keysig">4&#9837;<!--A flat--></td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A&#9837;</td>
 					<td>B&#9837;</td>
@@ -973,8 +1025,9 @@ window.onload = function () {makeAllSortable();};*/
 				<tr>
 					<th class="centred">#</th>
 					<th>Root</th>
-					<th>Scale</th>
-					<th>Accidentals</th>
+					<th>Mode</th>
+					<th><span class="dotted" title="Relative Major">RM</span></th>
+					<th style="border-right: 2px solid var(--offset-level-2);"><span class="dotted" title="Key Signature">KS</span></th>
 					<th class="left">1</th>
 					<th class="left">2</th>
 					<th class="left">3</th>
@@ -990,7 +1043,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">42</td>
 					<td>G&#9837;</td>
 					<td>4 &ndash; Lydian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 5</span></td>
+					<td class="centred">D&#9837;</td>
+					<td class="centred keysig">5&#9837;<!--D flat--></td>
 					<td>G&#9837;</td>
 					<td>A&#9837;</td>
 					<td>B&#9837;</td>
@@ -1004,7 +1058,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">43</td>
 					<td>G&#9837;</td>
 					<td>1 &ndash; Ionian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 6</span></td>
+					<td class="centred">G&#9837;</td>
+					<td class="centred keysig">6&#9837;<!--G flat--></td>
 					<td>G&#9837;</td>
 					<td>A&#9837;</td>
 					<td>B&#9837;</td>
@@ -1018,7 +1073,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">43</td>
 					<td>F&#9839;</td>
 					<td>1 &ndash; Ionian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 6</span></td>
+					<td class="centred">F&#9839;</td>
+					<td class="centred keysig">6&#9839;<!--F sharp--></td>
 					<td>F&#9839;</td>
 					<td>G&#9839;</td>
 					<td>A&#9839;</td>
@@ -1032,7 +1088,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">44</td>
 					<td>F&#9839;</td>
 					<td>5 &ndash; Mixolydian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 5</span></td>
+					<td class="centred">B</td>
+					<td class="centred keysig">5&#9839;<!--B--></td>
 					<td>F&#9839;</td>
 					<td>G&#9839;</td>
 					<td>A&#9839;</td>
@@ -1046,7 +1103,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">45</td>
 					<td>F&#9839;</td>
 					<td>2 &ndash; Dorian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 4</span></td>
+					<td class="centred">E</td>
+					<td class="centred keysig">4&#9839;<!--E--></td>
 					<td>F&#9839;</td>
 					<td>G&#9839;</td>
 					<td>A<span class="hidden">&#9838;</span></td>
@@ -1060,7 +1118,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">46</td>
 					<td>F&#9839;</td>
 					<td>6 &ndash; Aeolian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 3</span></td>
+					<td class="centred">A</td>
+					<td class="centred keysig">3&#9839;<!--A--></td>
 					<td>F&#9839;</td>
 					<td>G&#9839;</td>
 					<td>A<span class="hidden">&#9838;</span></td>
@@ -1074,7 +1133,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">47</td>
 					<td>F&#9839;</td>
 					<td>3 &ndash; Phrygian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 2</span></td>
+					<td class="centred">D</td>
+					<td class="centred keysig">2&#9839;<!--D--></td>
 					<td>F&#9839;</td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A<span class="hidden">&#9838;</span></td>
@@ -1088,7 +1148,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">48</td>
 					<td>F&#9839;</td>
 					<td>7 &ndash; Locrian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 1</span></td>
+					<td class="centred">G</td>
+					<td class="centred keysig">1&#9839;<!--G--></td>
 					<td>F&#9839;</td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A<span class="hidden">&#9838;</span></td>
@@ -1111,8 +1172,9 @@ window.onload = function () {makeAllSortable();};*/
 				<tr>
 					<th class="centred">#</th>
 					<th>Root</th>
-					<th>Scale</th>
-					<th>Accidentals</th>
+					<th>Mode</th>
+					<th><span class="dotted" title="Relative Major">RM</span></th>
+					<th style="border-right: 2px solid var(--offset-level-2);"><span class="dotted" title="Key Signature">KS</span></th>
 					<th class="left">1</th>
 					<th class="left">2</th>
 					<th class="left">3</th>
@@ -1128,7 +1190,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">49</td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>4 &ndash; Lydian</td>
-					<td class="centred">&#9838;</td>
+					<td class="centred">C</td>
+					<td class="centred keysig">&#9838;</td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A<span class="hidden">&#9838;</span></td>
@@ -1142,7 +1205,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">50</td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>1 &ndash; Ionian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 1</span></td>
+					<td class="centred">F</td>
+					<td class="centred keysig">1&#9837;<!--F--></td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A<span class="hidden">&#9838;</span></td>
@@ -1156,7 +1220,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">51</td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>5 &ndash; Mixolydian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 2</span></td>
+					<td class="centred">B&#9837;</td>
+					<td class="centred keysig">2&#9837;<!--B flat--></td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A<span class="hidden">&#9838;</span></td>
@@ -1170,7 +1235,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">52</td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>2 &ndash; Dorian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 3</span></td>
+					<td class="centred">E&#9837;</td>
+					<td class="centred keysig">3&#9837;<!--E flat--></td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A&#9837;</td>
@@ -1184,7 +1250,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">53</td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>6 &ndash; Aeolian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 4</span></td>
+					<td class="centred">A&#9837;</td>
+					<td class="centred keysig">4&#9837;<!--A flat--></td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G<span class="hidden">&#9838;</span></td>
 					<td>A&#9837;</td>
@@ -1198,7 +1265,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">54</td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>3 &ndash; Phrygian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 5</span></td>
+					<td class="centred">D&#9837;</td>
+					<td class="centred keysig">5&#9837;<!--D flat--></td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G&#9837;</td>
 					<td>A&#9837;</td>
@@ -1212,7 +1280,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">55</td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>7 &ndash; Locrian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 6</span></td>
+					<td class="centred">G&#9837;</td>
+					<td class="centred keysig">6&#9837;<!--G flat--></td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G&#9837;</td>
 					<td>A&#9837;</td>
@@ -1226,7 +1295,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">55</td>
 					<td>E&#9839;</td>
 					<td>7 &ndash; Locrian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 6</span></td>
+					<td class="centred">F&#9839;</td>
+					<td class="centred keysig">6&#9839;<!--F sharp--></td>
 					<td>E&#9839;</td>
 					<td>F&#9839;</td>
 					<td>G&#9839;</td>
@@ -1249,8 +1319,9 @@ window.onload = function () {makeAllSortable();};*/
 				<tr>
 					<th class="centred">#</th>
 					<th>Root</th>
-					<th>Scale</th>
-					<th>Accidentals</th>
+					<th>Mode</th>
+					<th><span class="dotted" title="Relative Major">RM</span></th>
+					<th style="border-right: 2px solid var(--offset-level-2);"><span class="dotted" title="Key Signature">KS</span></th>
 					<th class="left">1</th>
 					<th class="left">2</th>
 					<th class="left">3</th>
@@ -1266,7 +1337,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">56</td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>4 &ndash; Lydian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 5</span></td>
+					<td class="centred">B</td>
+					<td class="centred keysig">5&#9839;<!--B--></td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F&#9839;</td>
 					<td>G&#9839;</td>
@@ -1280,7 +1352,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">57</td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>1 &ndash; Ionian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 4</span></td>
+					<td class="centred">E</td>
+					<td class="centred keysig">4&#9839;<!--E--></td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F&#9839;</td>
 					<td>G&#9839;</td>
@@ -1294,7 +1367,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">58</td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>5 &ndash; Mixolydian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 3</span></td>
+					<td class="centred">A</td>
+					<td class="centred keysig">3&#9839;<!--A--></td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F&#9839;</td>
 					<td>G&#9839;</td>
@@ -1308,7 +1382,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">59</td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>2 &ndash; Dorian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 2</span></td>
+					<td class="centred">D</td>
+					<td class="centred keysig">2&#9839;<!--D--></td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F&#9839;</td>
 					<td>G<span class="hidden">&#9838;</span></td>
@@ -1322,7 +1397,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">60</td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>6 &ndash; Aeolian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 1</span></td>
+					<td class="centred">G</td>
+					<td class="centred keysig">1&#9839;<!--G--></td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F&#9839;</td>
 					<td>G<span class="hidden">&#9838;</span></td>
@@ -1336,7 +1412,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">61</td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>3 &ndash; Phrygian</td>
-					<td class="centred">&#9838;</td>
+					<td class="centred">C</td>
+					<td class="centred keysig">&#9838;</td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G<span class="hidden">&#9838;</span></td>
@@ -1350,7 +1427,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">62</td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>7 &ndash; Locrian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 1</span></td>
+					<td class="centred">F</td>
+					<td class="centred keysig">1&#9837;<!--F--></td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G<span class="hidden">&#9838;</span></td>
@@ -1373,8 +1451,9 @@ window.onload = function () {makeAllSortable();};*/
 				<tr>
 					<th class="centred">#</th>
 					<th>Root</th>
-					<th>Scale</th>
-					<th>Accidentals</th>
+					<th>Mode</th>
+					<th><span class="dotted" title="Relative Major">RM</span></th>
+					<th style="border-right: 2px solid var(--offset-level-2);"><span class="dotted" title="Key Signature">KS</span></th>
 					<th class="left">1</th>
 					<th class="left">2</th>
 					<th class="left">3</th>
@@ -1390,7 +1469,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">63</td>
 					<td>E&#9837;</td>
 					<td>4 &ndash; Lydian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 2</span></td>
+					<td class="centred">B&#9837;</td>
+					<td class="centred keysig">2&#9837;<!--B flat--></td>
 					<td>E&#9837;</td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G<span class="hidden">&#9838;</span></td>
@@ -1404,7 +1484,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">64</td>
 					<td>E&#9837;</td>
 					<td>1 &ndash; Ionian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 3</span></td>
+					<td class="centred">E&#9837;</td>
+					<td class="centred keysig">3&#9837;<!--E flat--></td>
 					<td>E&#9837;</td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G<span class="hidden">&#9838;</span></td>
@@ -1418,7 +1499,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">65</td>
 					<td>E&#9837;</td>
 					<td>5 &ndash; Mixolydian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 4</span></td>
+					<td class="centred">A&#9837;</td>
+					<td class="centred keysig">4&#9837;<!--A flat--></td>
 					<td>E&#9837;</td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G<span class="hidden">&#9838;</span></td>
@@ -1432,7 +1514,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">66</td>
 					<td>E&#9837;</td>
 					<td>2 &ndash; Dorian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 5</span></td>
+					<td class="centred">D&#9837;</td>
+					<td class="centred keysig">5&#9837;<!--D flat--></td>
 					<td>E&#9837;</td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G&#9837;</td>
@@ -1446,7 +1529,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">67</td>
 					<td>E&#9837;</td>
 					<td>6 &ndash; Aeolian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 6</span></td>
+					<td class="centred">G&#9837;</td>
+					<td class="centred keysig">6&#9837;<!--G flat--></td>
 					<td>E&#9837;</td>
 					<td>F<span class="hidden">&#9838;</span></td>
 					<td>G&#9837;</td>
@@ -1460,7 +1544,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">67</td>
 					<td>D&#9839;</td>
 					<td>6 &ndash; Aeolian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 6</span></td>
+					<td class="centred">F&#9839;</td>
+					<td class="centred keysig">6&#9839;<!--F sharp--></td>
 					<td>D&#9839;</td>
 					<td>E&#9839;</td>
 					<td>F&#9839;</td>
@@ -1474,7 +1559,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">68</td>
 					<td>D&#9839;</td>
 					<td>3 &ndash; Phrygian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 5</span></td>
+					<td class="centred">B</td>
+					<td class="centred keysig">5&#9839;<!--B--></td>
 					<td>D&#9839;</td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F&#9839;</td>
@@ -1488,7 +1574,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">69</td>
 					<td>D&#9839;</td>
 					<td>7 &ndash; Locrian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 4</span></td>
+					<td class="centred">E</td>
+					<td class="centred keysig">4&#9839;<!--E--></td>
 					<td>D&#9839;</td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F&#9839;</td>
@@ -1511,8 +1598,9 @@ window.onload = function () {makeAllSortable();};*/
 				<tr>
 					<th class="centred">#</th>
 					<th>Root</th>
-					<th>Scale</th>
-					<th>Accidentals</th>
+					<th>Mode</th>
+					<th><span class="dotted" title="Relative Major">RM</span></th>
+					<th style="border-right: 2px solid var(--offset-level-2);"><span class="dotted" title="Key Signature">KS</span></th>
 					<th class="left">1</th>
 					<th class="left">2</th>
 					<th class="left">3</th>
@@ -1528,7 +1616,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">70</td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>4 &ndash; Lydian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 3</span></td>
+					<td class="centred">A</td>
+					<td class="centred keysig">3&#9839;<!--A--></td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F&#9839;</td>
@@ -1542,7 +1631,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">71</td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>1 &ndash; Ionian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 2</span></td>
+					<td class="centred">D</td>
+					<td class="centred keysig">2&#9839;<!--D--></td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F&#9839;</td>
@@ -1556,7 +1646,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">72</td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>5 &ndash; Mixolydian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 1</span></td>
+					<td class="centred">G</td>
+					<td class="centred keysig">1&#9839;<!--G--></td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F&#9839;</td>
@@ -1570,7 +1661,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">73</td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>2 &ndash; Dorian</td>
-					<td class="centred">&#9838;</td>
+					<td class="centred">C</td>
+					<td class="centred keysig">&#9838;</td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F<span class="hidden">&#9838;</span></td>
@@ -1584,7 +1676,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">74</td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>6 &ndash; Aeolian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 1</span></td>
+					<td class="centred">F</td>
+					<td class="centred keysig">1&#9837;<!--F--></td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E<span class="hidden">&#9838;</span></td>
 					<td>F<span class="hidden">&#9838;</span></td>
@@ -1598,7 +1691,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">75</td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>3 &ndash; Phrygian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 2</span></td>
+					<td class="centred">B&#9837;</td>
+					<td class="centred keysig">2&#9837;<!--B flat--></td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E&#9837;</td>
 					<td>F<span class="hidden">&#9838;</span></td>
@@ -1612,7 +1706,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">76</td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>7 &ndash; Locrian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 3</span></td>
+					<td class="centred">E&#9837;</td>
+					<td class="centred keysig">3&#9837;<!--E flat--></td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E&#9837;</td>
 					<td>F<span class="hidden">&#9838;</span></td>
@@ -1635,8 +1730,9 @@ window.onload = function () {makeAllSortable();};*/
 				<tr>
 					<th class="centred">#</th>
 					<th>Root</th>
-					<th>Scale</th>
-					<th>Accidentals</th>
+					<th>Mode</th>
+					<th><span class="dotted" title="Relative Major">RM</span></th>
+					<th style="border-right: 2px solid var(--offset-level-2);"><span class="dotted" title="Key Signature">KS</span></th>
 					<th class="left">1</th>
 					<th class="left">2</th>
 					<th class="left">3</th>
@@ -1652,7 +1748,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">77</td>
 					<td>D&#9837;</td>
 					<td>4 &ndash; Lydian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 4</span></td>
+					<td class="centred">A&#9837;</td>
+					<td class="centred keysig">4&#9837;<!--A flat--></td>
 					<td>D&#9837;</td>
 					<td>E&#9837;</td>
 					<td>F<span class="hidden">&#9838;</span></td>
@@ -1666,7 +1763,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">78</td>
 					<td>D&#9837;</td>
 					<td>1 &ndash; Ionian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 5</span></td>
+					<td class="centred">D&#9837;</td>
+					<td class="centred keysig">5&#9837;<!--D flat--></td>
 					<td>D&#9837;</td>
 					<td>E&#9837;</td>
 					<td>F<span class="hidden">&#9838;</span></td>
@@ -1680,7 +1778,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">79</td>
 					<td>D&#9837;</td>
 					<td>5 &ndash; Mixolydian</td>
-					<td class="centred">&#9837;<span class="number"> &times; 6</span></td>
+					<td class="centred">G&#9837;</td>
+					<td class="centred keysig">6&#9837;<!--G flat--></td>
 					<td>D&#9837;</td>
 					<td>E&#9837;</td>
 					<td>F<span class="hidden">&#9838;</span></td>
@@ -1694,7 +1793,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">79</td>
 					<td>C&#9839;</td>
 					<td>5 &ndash; Mixolydian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 6</span></td>
+					<td class="centred">F&#9839;</td>
+					<td class="centred keysig">6&#9839;<!--F sharp--></td>
 					<td>C&#9839;</td>
 					<td>D&#9839;</td>
 					<td>E&#9839;</td>
@@ -1708,7 +1808,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">80</td>
 					<td>C&#9839;</td>
 					<td>2 &ndash; Dorian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 5</span></td>
+					<td class="centred">B</td>
+					<td class="centred keysig">5&#9839;<!--B--></td>
 					<td>C&#9839;</td>
 					<td>D&#9839;</td>
 					<td>E<span class="hidden">&#9838;</span></td>
@@ -1722,7 +1823,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">81</td>
 					<td>C&#9839;</td>
 					<td>6 &ndash; Aeolian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 4</span></td>
+					<td class="centred">E</td>
+					<td class="centred keysig">4&#9839;<!--E--></td>
 					<td>C&#9839;</td>
 					<td>D&#9839;</td>
 					<td>E<span class="hidden">&#9838;</span></td>
@@ -1736,7 +1838,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">82</td>
 					<td>C&#9839;</td>
 					<td>3 &ndash; Phrygian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 3</span></td>
+					<td class="centred">A</td>
+					<td class="centred keysig">3&#9839;<!--A--></td>
 					<td>C&#9839;</td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E<span class="hidden">&#9838;</span></td>
@@ -1750,7 +1853,8 @@ window.onload = function () {makeAllSortable();};*/
 					<td class="number right">83</td>
 					<td>C&#9839;</td>
 					<td>7 &ndash; Locrian</td>
-					<td class="centred">&#9839;<span class="number"> &times; 2</span></td>
+					<td class="centred">D</td>
+					<td class="centred keysig">2&#9839;<!--D--></td>
 					<td>C&#9839;</td>
 					<td>D<span class="hidden">&#9838;</span></td>
 					<td>E<span class="hidden">&#9838;</span></td>
@@ -1772,24 +1876,24 @@ window.onload = function () {makeAllSortable();};*/
 		<table id="keysignaturetable">
 			<thead>
 				<tr><th colspan="15" class="centred accent">Key Signatures of the Seven Modes for the Twelve-Note Chromatic Scale</th></tr>
-				<tr><th class="centred">Lyd</th><th class="centred">Maj</th><th class="centred">Mix</th><th class="centred" style="color: grey;">Dor</th><th class="centred">Min</th>  <th class="centred">Phr</th><th class="centred">Loc</th>                  <th>Accidentals</th>                                          <th>A</th>      <th>B</th>      <th>C</th>      <th>D</th>      <th>E</th>      <th>F</th>      <th>G</th>      </tr>
+				<tr><th class="centred">Lyd</th><th class="centred">Maj</th><th class="centred">Mix</th><th class="centred" style="color: grey;">Dor</th><th class="centred">Min</th>  <th class="centred">Phr</th><th class="centred keysig">Loc</th>                  <th class="keysig"><span class="dotted accent" title="Key Signature">KS</span></th>                                          <th>A</th>      <th>B</th>      <th>C</th>      <th>D</th>      <th>E</th>      <th>F</th>      <th>G</th>      </tr>
 			</thead>
 			<tbody>
-				<tr><td class="centred">F&#9839;</td><td class="centred">C&#9839;</td><td class="centred">D&#9839;</td><td class="centred">D&#9839;</td><td class="centred">A&#9839;</td><td class="centred">E&#9839;</td><td class="centred">B&#9839;</td><td class="centred">&#9839;<span class="number"> &times; 7</span></td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td></tr>
-				<tr><td class="centred">B       </td><td class="centred">F&#9839;</td><td class="centred">C&#9839;</td><td class="centred">G&#9839;</td><td class="centred">D&#9839;</td><td class="centred">A&#9839;</td><td class="centred">E&#9839;</td><td class="centred">&#9839;<span class="number"> &times; 6</span></td><td>&#9839;</td><td>       </td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td></tr>
-				<tr><td class="centred">E       </td><td class="centred">B       </td><td class="centred">F&#9839;</td><td class="centred">C&#9839;</td><td class="centred">G&#9839;</td><td class="centred">D&#9839;</td><td class="centred">A&#9839;</td><td class="centred">&#9839;<span class="number"> &times; 5</span></td><td>&#9839;</td><td>       </td><td>&#9839;</td><td>&#9839;</td><td>       </td><td>&#9839;</td><td>&#9839;</td></tr>
-				<tr><td class="centred">A       </td><td class="centred">E       </td><td class="centred">B       </td><td class="centred">F&#9839;</td><td class="centred">C&#9839;</td><td class="centred">G&#9839;</td><td class="centred">D&#9839;</td><td class="centred">&#9839;<span class="number"> &times; 4</span></td><td>       </td><td>       </td><td>&#9839;</td><td>&#9839;</td><td>       </td><td>&#9839;</td><td>&#9839;</td></tr>
-				<tr><td class="centred">D       </td><td class="centred">A       </td><td class="centred">E       </td><td class="centred">B       </td><td class="centred">F&#9839;</td><td class="centred">C&#9839;</td><td class="centred">G&#9839;</td><td class="centred">&#9839;<span class="number"> &times; 3</span></td><td>       </td><td>       </td><td>&#9839;</td><td>       </td><td>       </td><td>&#9839;</td><td>&#9839;</td></tr>
-				<tr><td class="centred">G       </td><td class="centred">D       </td><td class="centred">A       </td><td class="centred">E       </td><td class="centred">B       </td><td class="centred">F&#9839;</td><td class="centred">C&#9839;</td><td class="centred">&#9839;<span class="number"> &times; 2</span></td><td>       </td><td>       </td><td>&#9839;</td><td>       </td><td>       </td><td>&#9839;</td><td>       </td></tr>
-				<tr><td class="centred">C       </td><td class="centred">G       </td><td class="centred">D       </td><td class="centred">A       </td><td class="centred">E       </td><td class="centred">B       </td><td class="centred">F&#9839;</td><td class="centred">&#9839;<span class="number"> &times; 1</span></td><td>       </td><td>       </td><td>       </td><td>       </td><td>       </td><td>&#9839;</td><td>       </td></tr>
-				<tr><td class="centred">F       </td><td class="centred">C       </td><td class="centred">G       </td><td class="centred">D       </td><td class="centred">A       </td><td class="centred">E       </td><td class="centred">B       </td><td class="centred">&#9838;                                              </td><td>       </td><td>       </td><td>       </td><td>       </td><td>       </td><td>       </td><td>       </td></tr>
-				<tr><td class="centred">B&#9837;</td><td class="centred">F       </td><td class="centred">C       </td><td class="centred">G       </td><td class="centred">D       </td><td class="centred">A       </td><td class="centred">E       </td><td class="centred">&#9837;<span class="number"> &times; 1</span></td><td>       </td><td>&#9837;</td><td>       </td><td>       </td><td>       </td><td>       </td><td>       </td></tr>
-				<tr><td class="centred">E&#9837;</td><td class="centred">B&#9837;</td><td class="centred">F       </td><td class="centred">C       </td><td class="centred">G       </td><td class="centred">D       </td><td class="centred">A       </td><td class="centred">&#9837;<span class="number"> &times; 2</span></td><td>       </td><td>&#9837;</td><td>       </td><td>       </td><td>&#9837;</td><td>       </td><td>       </td></tr>
-				<tr><td class="centred">A&#9837;</td><td class="centred">E&#9837;</td><td class="centred">B&#9837;</td><td class="centred">F       </td><td class="centred">C       </td><td class="centred">G       </td><td class="centred">D       </td><td class="centred">&#9837;<span class="number"> &times; 3</span></td><td>&#9837;</td><td>&#9837;</td><td>       </td><td>       </td><td>&#9837;</td><td>       </td><td>       </td></tr>
-				<tr><td class="centred">D&#9837;</td><td class="centred">A&#9837;</td><td class="centred">E&#9837;</td><td class="centred">B&#9837;</td><td class="centred">F       </td><td class="centred">C       </td><td class="centred">G       </td><td class="centred">&#9837;<span class="number"> &times; 4</span></td><td>&#9837;</td><td>&#9837;</td><td>       </td><td>&#9837;</td><td>&#9837;</td><td>       </td><td>       </td></tr>
-				<tr><td class="centred">G&#9837;</td><td class="centred">D&#9837;</td><td class="centred">A&#9837;</td><td class="centred">E&#9837;</td><td class="centred">B&#9837;</td><td class="centred">F       </td><td class="centred">C       </td><td class="centred">&#9837;<span class="number"> &times; 5</span></td><td>&#9837;</td><td>&#9837;</td><td>       </td><td>&#9837;</td><td>&#9837;</td><td>       </td><td>&#9837;</td></tr>
-				<tr><td class="centred">C&#9837;</td><td class="centred">G&#9837;</td><td class="centred">D&#9837;</td><td class="centred">A&#9837;</td><td class="centred">E&#9837;</td><td class="centred">B&#9837;</td><td class="centred">F       </td><td class="centred">&#9837;<span class="number"> &times; 6</span></td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>       </td><td>&#9837;</td></tr>
-				<tr><td class="centred">F&#9837;</td><td class="centred">C&#9837;</td><td class="centred">G&#9837;</td><td class="centred">D&#9837;</td><td class="centred">A&#9837;</td><td class="centred">E&#9837;</td><td class="centred">B&#9837;</td><td class="centred">&#9837;<span class="number"> &times; 7</span></td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td></tr>
+				<tr><td class="centred">F&#9839;</td><td class="centred">C&#9839;</td><td class="centred">D&#9839;</td><td class="centred">D&#9839;</td><td class="centred">A&#9839;</td><td class="centred">E&#9839;</td><td class="centred keysig">B&#9839;</td><td class="centred keysig accent">7&#9839;</td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td></tr>
+				<tr><td class="centred">B       </td><td class="centred">F&#9839;</td><td class="centred">C&#9839;</td><td class="centred">G&#9839;</td><td class="centred">D&#9839;</td><td class="centred">A&#9839;</td><td class="centred keysig">E&#9839;</td><td class="centred keysig accent">6&#9839;</td><td>&#9839;</td><td>       </td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td><td>&#9839;</td></tr>
+				<tr><td class="centred">E       </td><td class="centred">B       </td><td class="centred">F&#9839;</td><td class="centred">C&#9839;</td><td class="centred">G&#9839;</td><td class="centred">D&#9839;</td><td class="centred keysig">A&#9839;</td><td class="centred keysig accent">5&#9839;</td><td>&#9839;</td><td>       </td><td>&#9839;</td><td>&#9839;</td><td>       </td><td>&#9839;</td><td>&#9839;</td></tr>
+				<tr><td class="centred">A       </td><td class="centred">E       </td><td class="centred">B       </td><td class="centred">F&#9839;</td><td class="centred">C&#9839;</td><td class="centred">G&#9839;</td><td class="centred keysig">D&#9839;</td><td class="centred keysig accent">4&#9839;</td><td>       </td><td>       </td><td>&#9839;</td><td>&#9839;</td><td>       </td><td>&#9839;</td><td>&#9839;</td></tr>
+				<tr><td class="centred">D       </td><td class="centred">A       </td><td class="centred">E       </td><td class="centred">B       </td><td class="centred">F&#9839;</td><td class="centred">C&#9839;</td><td class="centred keysig">G&#9839;</td><td class="centred keysig accent">3&#9839;</td><td>       </td><td>       </td><td>&#9839;</td><td>       </td><td>       </td><td>&#9839;</td><td>&#9839;</td></tr>
+				<tr><td class="centred">G       </td><td class="centred">D       </td><td class="centred">A       </td><td class="centred">E       </td><td class="centred">B       </td><td class="centred">F&#9839;</td><td class="centred keysig">C&#9839;</td><td class="centred keysig accent">2&#9839;</td><td>       </td><td>       </td><td>&#9839;</td><td>       </td><td>       </td><td>&#9839;</td><td>       </td></tr>
+				<tr><td class="centred">C       </td><td class="centred">G       </td><td class="centred">D       </td><td class="centred">A       </td><td class="centred">E       </td><td class="centred">B       </td><td class="centred keysig">F&#9839;</td><td class="centred keysig accent">1&#9839;</td><td>       </td><td>       </td><td>       </td><td>       </td><td>       </td><td>&#9839;</td><td>       </td></tr>
+				<tr><td class="centred">F       </td><td class="centred">C       </td><td class="centred">G       </td><td class="centred">D       </td><td class="centred">A       </td><td class="centred">E       </td><td class="centred keysig">B       </td><td class="centred keysig accent"> &#9838;</td><td>       </td><td>       </td><td>       </td><td>       </td><td>       </td><td>       </td><td>       </td></tr>
+				<tr><td class="centred">B&#9837;</td><td class="centred">F       </td><td class="centred">C       </td><td class="centred">G       </td><td class="centred">D       </td><td class="centred">A       </td><td class="centred keysig">E       </td><td class="centred keysig accent">1&#9837;</td><td>       </td><td>&#9837;</td><td>       </td><td>       </td><td>       </td><td>       </td><td>       </td></tr>
+				<tr><td class="centred">E&#9837;</td><td class="centred">B&#9837;</td><td class="centred">F       </td><td class="centred">C       </td><td class="centred">G       </td><td class="centred">D       </td><td class="centred keysig">A       </td><td class="centred keysig accent">2&#9837;</td><td>       </td><td>&#9837;</td><td>       </td><td>       </td><td>&#9837;</td><td>       </td><td>       </td></tr>
+				<tr><td class="centred">A&#9837;</td><td class="centred">E&#9837;</td><td class="centred">B&#9837;</td><td class="centred">F       </td><td class="centred">C       </td><td class="centred">G       </td><td class="centred keysig">D       </td><td class="centred keysig accent">3&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>       </td><td>       </td><td>&#9837;</td><td>       </td><td>       </td></tr>
+				<tr><td class="centred">D&#9837;</td><td class="centred">A&#9837;</td><td class="centred">E&#9837;</td><td class="centred">B&#9837;</td><td class="centred">F       </td><td class="centred">C       </td><td class="centred keysig">G       </td><td class="centred keysig accent">4&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>       </td><td>&#9837;</td><td>&#9837;</td><td>       </td><td>       </td></tr>
+				<tr><td class="centred">G&#9837;</td><td class="centred">D&#9837;</td><td class="centred">A&#9837;</td><td class="centred">E&#9837;</td><td class="centred">B&#9837;</td><td class="centred">F       </td><td class="centred keysig">C       </td><td class="centred keysig accent">5&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>       </td><td>&#9837;</td><td>&#9837;</td><td>       </td><td>&#9837;</td></tr>
+				<tr><td class="centred">C&#9837;</td><td class="centred">G&#9837;</td><td class="centred">D&#9837;</td><td class="centred">A&#9837;</td><td class="centred">E&#9837;</td><td class="centred">B&#9837;</td><td class="centred keysig">F       </td><td class="centred keysig accent">6&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>       </td><td>&#9837;</td></tr>
+				<tr><td class="centred">F&#9837;</td><td class="centred">C&#9837;</td><td class="centred">G&#9837;</td><td class="centred">D&#9837;</td><td class="centred">A&#9837;</td><td class="centred">E&#9837;</td><td class="centred keysig">B&#9837;</td><td class="centred keysig accent">7&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td></tr>
 			</tbody>	
 		</table>
 		<ul>

@@ -8,6 +8,18 @@
 	--link-visited: #c0c;
 	--link-active: #090;
 	--link-hover: #c60;
+	--hue0: #f00;
+	--hue30: #ff8000;
+	--hue60: #ff0;
+	--hue90: #80ff00;
+	--hue120: #0f0;
+	--hue150: #00f080;
+	--hue180: #0ff;
+	--hue210: #0080ff;
+	--hue240: #00f;
+	--hue270: #8000ff;
+	--hue300: #f0f;
+	--hue330: #ff0080;
 	--heading-color: #2F5496;
 	--portfolio-heading: #2f5496;
 	--toc-counter: #004c80;
@@ -1098,6 +1110,43 @@ code {
 }
 .musicalmodes .rightborder {
 	border-right: 2px solid var(--offset-level-3);
+}
+
+.hue0, .hue0 td, .hue0 th {
+	color: var(--hue0);
+}
+.hue30, .hue30 td, .hue30 th {
+	color: var(--hue30);
+}
+.hue60, .hue60 td, .hue60 th {
+	color: var(--hue60);
+}
+.hue90, .hue90 td, .hue90 th {
+	color: var(--hue90);
+}
+.hue120, .hue120 td, .hue120 th {
+	color: var(--hue120);
+}
+.hue150, .hue150 td, .hue150 th {
+	color: var(--hue150);
+}
+.hue180, .hue180 td, .hue180 th {
+	color: var(--hue180);
+}
+.hue210, .hue210 td, .hue210 th {
+	color: var(--hue210);
+}
+.hue240, .hue240 td, .hue240 th {
+	color: var(--hue240);
+}
+.hue270, .hue270 td, .hue270 th {
+	color: var(--hue270);
+}
+.hue300, .hue300 td, .hue300 th {
+	color: var(--hue300);
+}
+.hue330, .hue330 td, .hue330 th {
+	color: var(--hue330);
 }
 
 spoiler {

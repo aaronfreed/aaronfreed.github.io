@@ -9,13 +9,13 @@ Pages currently hosted here:
 * ***Marathon* / Aleph One Content Creation Guides:**
    * **[Beginners’ guide](https://aaronfreed.github.io/mapmaking101.html)**
       * What editors to use, how to set them up, what guides to follow to get started making levels, what those guides get wrong or omit, and what to do after mastering the basics.
+   * **[Advanced guide](https://aaronfreed.github.io/mapmaking.html)**
+      * A guide to several intractable problems that weren&rsquo;t documented elsewhere and how to fix them.
    * **The Annotated Forge Manual** (WIP):
       * **[Detailed Table of Contents](https://aaronfreed.github.io/forgemanualcontents.html)**
       * **[Introduction](https://aaronfreed.github.io/forgemanual.html)**
       * **[Tutorial 1](https://aaronfreed.github.io/forgetutorial1.html)** (WIP)
          * Contains numerous annotations correcting errata and filling in the gaps to apply to the modern map editor Weland. I&rsquo;ve only annotated around 25% of it, and the annotations will need substantial amounts of editing before I consider it finished. But it&rsquo;s a start.
-   * **[Advanced guide](https://aaronfreed.github.io/mapmaking.html)**
-      * A guide to several intractable problems that weren&rsquo;t documented elsewhere and ways to fix them.
    * **[The Annotated Anvil Help Balloons](https://aaronfreed.github.io/anvilhelp.html)** (updated to work as a ShapeFusion reference)
       * Based on the help strings for Anvil, Bungie&rsquo;s official physics, shapes, and sound file editor; with corrections and amendments for its modern replacement ShapeFusion.
    * **[Circles and *Marathon* Mapmaking](marathoncircles.html)**

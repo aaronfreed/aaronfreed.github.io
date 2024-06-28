@@ -326,7 +326,8 @@ a:visited,
 .light :where(.integer, .decimal, .number, .date) :where(strong, .bold, a:link, a:visited),
 .light :where(strong, .bold, a:link, a:visited) :where(.integer, .decimal, .number, .date),
 :where(.bold, strong, a:link, a:visited) :where(.integer, .decimal, .number, .date),
-:where(.integer, .decimal, .number, .date) :where(.bold, strong, a:link, a:visited) {
+:where(.integer, .decimal, .number, .date) :where(.bold, strong, a:link, a:visited),
+.bold .normal :is(a:link, a:visited) {
 	font-weight: var(--light);
 }
 
@@ -580,10 +581,12 @@ ol.toc ol ol ol li:before {
 .forgecontents ol.toc li {
 	font-size: 20px;
 	line-height: 125%;
+	font-weight: var(--bolder);
 }
 .forgecontents ol.toc li:before {
 	counter-increment: i1;
 	content: counter(i1, upper-roman) ". ";
+	font-weight: var(--bolder);
 }
 .forgecontents ol.toc ol,
 .forgecontents ol.toc ol li,
@@ -595,58 +598,61 @@ ol.toc ol ol ol li:before {
 	counter-reset: i2;
 }
 .forgecontents ol.toc ol :is(li, li a:link, li a:visited) {
-	font-weight: var(--boldest);
+	font-weight: var(--bold);
 	font-size: 18px;
 	line-height: 125%;
 }
 .forgecontents ol.toc ol li:before {
-	font-weight: var(--boldest);
+	font-weight: var(--bold);
 	counter-increment: i2;
 	content: "(" counter(i1, upper-roman) "." counter(i2, decimal) ") "
 }
 .forgecontents ol.toc ol ol {
 	counter-reset: i3;
-	font-weight: var(--boldest);
+	font-weight: var(--medium);
 	line-height: 125%;
 }
 .forgecontents ol.toc ol ol :is(li a:link, li a:visited, li)
 {
-	font-weight: var(--boldest);
+	font-weight: var(--medium);
 	font-size: 16px;
 }
 .forgecontents ol.toc ol ol li:before {
-	font-weight: var(--boldest);
+	font-weight: var(--medium);
 	counter-increment: i3;
 	content: "[" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "] "
 }
 .forgecontents ol.toc ol ol ol {
 	counter-reset: i4;
-	font-weight: var(--bold);
+	font-weight: var(--light);
 }
 .forgecontents ol.toc ol ol ol :is(li, li a:link, li a:visited) {
 	font-size: 16px;
-	font-weight: var(--bold);
+	font-weight: var(--light);
 	font-style: inherit;
 }
 .forgecontents ol.toc ol ol ol li:before {
-	font-weight: var(--bold);
+	font-weight: var(--light);
 	counter-increment: i4;
 	font-style: inherit;
 	content: "{" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "." counter(i4, decimal) "} "
 }
 .forgecontents ol.toc ol ol ol ol {
 	counter-reset: i5;
-	font-weight: var(--medium);
+	font-weight: var(--lighter);
 }
 .forgecontents ol.toc ol ol ol ol :is(li, a:link, a:visited) {
-	font-weight: var(--medium);
+	font-weight: var(--lighter);
 	font-size: 16px;
 }
 .forgecontents ol.toc ol ol ol ol li:before {
-	font-weight: var(--medium);
+	font-weight: var(--lighter);
 	counter-increment: i5;
 	content: "\0027E8" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "." counter(i4, decimal) "." counter(i4, decimal) "\0027E9\000020";
 	font-style: inherit;
+}
+.forgemanual ol.toclite li.light :is(a:link, a:visited) {
+	font-weight: var(--lighter);
 }
 
 /* counters for body of list. also a doozy */

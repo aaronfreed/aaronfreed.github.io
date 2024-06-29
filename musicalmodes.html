@@ -74,12 +74,22 @@ window.onload = function () {makeAllSortable();};*/
 					</ol>
 				</li>
 				<li><a href="#chordanalysis">Chord Analysis by Mode</a></li>
+				<li><a href="#otherscales">Other Scales &amp; Tonalities</a>
+					<ol>
+						<li><a href="sevennotescales">Other Seven-Note Scales</a></li>
+					</ol>
+				</li>
+				<li><a href="#etymology">Etymology</a>
+					<ol>
+						<li><a href="#etymologytable">Ἡ ἐτῠμολογῐ́ᾱ τῶν ἤχων</a></li>
+					</ol>
+				</li>
 				<li><a href="#hewhofightsmonsters">Yes, but, why?</a></li>
 				<li><a href="#endnotes">Endnotes</a></li>
 			</ol>
 
 		<h1 class="centred">Introduction</h1>
-		<p>This is an analysis of the seven modes of the traditional major scale (<strong class="bold">whole step</strong>, <strong class="bold">whole step</strong>, <em>half step</em>, <strong class="bold">whole step</strong>, <strong class="bold">whole step</strong>, <strong class="bold">whole step</strong>, <em>half step</em>) and how they relate to each other. In brief, raising a specific pattern of notes in each scale results in cycling not merely through all twelve notes in the chromatic scale, but through all eighty-four possible sets of base notes and modes.</p>
+		<p>This is an analysis of the seven modes of the traditional major scale (<strong class="bold">whole step</strong>, <strong class="bold">whole step</strong>, <em>half step</em>, <strong class="bold">whole step</strong>, <strong class="bold">whole step</strong>, <strong class="bold">whole step</strong>, <em>half step</em>) and how they relate to each other. In brief, raising a specific pattern of notes in each scale results in cycling not merely through all twelve notes in the chromatic scale, but through all eighty-four possible sets of base notes and modes, in a manner inextricably linked with the circle of fifths.</p>
 
 		<p>A brief (lol, lmao) explanation is perhaps in order: The seven modes I&rsquo;m analyzing are arrangements of the notes of the major scale, traditionally numbered by which of the major scale&rsquo;s notes they use as their root key, or start. Here are the C major scale&rsquo;s modes. <span class="accent">Lowercase, blue letters</span> represent minor or diminished intervals that have been lowered a half-step from their root keys&rsquo; major scales; the <strong class="accent orange">bold, orange letter</strong> is an augmented interval that has been raised a half-step from its root key&rsquo;s major scale. Note that an augmented fourth and a diminished fifth are both tritones; they just use different notations.
 			<table id="cmajormodes">
@@ -101,7 +111,7 @@ window.onload = function () {makeAllSortable();};*/
 
 		<ul>
 			<li>A&#9839; and B&#9837; represent the same pitch. Likewise B and C&#9837;, C&#9839; and D&#9837;, and so on. However, in terms of <em>music theory</em>, A&#9839; and B&#9837; can be semantically quite different in some contexts &ndash; be careful.</li>
-			<li>Key signatures with seven sharps or seven flats exist, but I&rsquo;ve omitted them. (There are even monstrosities with double-sharps [&#119082;] and double-flats [&#119083;] &hellip; and that&rsquo;s all the attention I&rsquo;ll be giving them.) I feel it was pretty extravagant just to include six-flat and six-sharp key signatures alongside each other.</li>
+			<li>Key signatures with seven sharps or seven flats exist, but I&rsquo;ve omitted them. (There are even monstrosities with double-sharps [&#119082;] and double-flats [&#119083;] &hellip; which I&rsquo;ll mostly be ignoring.) I feel it was pretty extravagant just to include six-flat and six-sharp key signatures alongside each other.</li>
 			<li id="modesfromlydian">If we start from Lydian mode, lowering pitches one at a time by a half-step each gives us:
 				<table>
 					<thead>
@@ -119,18 +129,18 @@ window.onload = function () {makeAllSortable();};*/
 					</tbody>
 				</table>
 				<ul>
-					<li>In other words, by lowering the B in F Lydian to B&#9837;, we wind up with F Ionian (i.e., F major). Lowering the E in F major to E&#9837; gives us F Mixolydian. And so on.</li>
-					<li>Lowering the root from Locrian gives us Lydian mode for the key below it on the chromatic scale &ndash; i.e., lowering the B in B Locrian to B&#9837; gives us B&#9837; Lydian.</li>
+					<li>In other words, by lowering the F&#9837; in C Lydian to C, we wind up with C Ionian (i.e., C major). Lowering the B in C major to B&#9837; gives us C Mixolydian. And so on.</li>
+					<li>Lowering the root from Locrian gives us Lydian mode for the key below it on the chromatic scale &ndash; i.e., lowering the C in C Locrian to C&#9837;/B gives us C&#9837;/B Lydian.</li>
 					<li>This table won&rsquo;t mean much to readers in isolation, so I put together a <a href="c_lydian_to_b_lydian.flac" target="_blank">crude demonstration of the above principle</a> in Logic Pro. In order, you will hear the scale, followed by arpeggiated and block versions of the root (I) chord, the subdominant (IV) chord, the dominant (V) chord, and the root (chord) for C Lydian, C Ionian, C Mixolydian, C Dorian, C Aeolian, C Phrygian, C Locrian, and B Lydian. (I could make a version going down the entire chromatic scale, but the entire thing would take thirteen and a half minutes to play through. Even I think that&rsquo;s overkill, and I submit <em>this exact page</em> as exhibit A for what my definition of &ldquo;overkill&rdquo; must entail.)</li>
-					<li>It might help solidify your conception of this principle to understand that while we&rsquo;re lowering (or raising) a pitch on our scale, we&rsquo;re also, in a sense, <em>jumping down (or up) a fifth</em>. C Lydian is in the same key signature as G Ionian, not C Ionian. This is why so many of these patterns mirror the circle of fifths.</li>
+					<li>It might help solidify your conception of this principle to understand that while we&rsquo;re lowering (or raising) a pitch on our scale, we&rsquo;re also, in a sense, <em>jumping down (or up) a fifth</em>. F Lydian is in the same key signature as C Ionian, not F Ionian. This is why so many of these patterns mirror the circle of fifths.</li>
 					<li>In the table above, the mode number and the pitch we lower to get it are exact mirrors of each other. This is not coincidental &ndash; it&rsquo;s the direct result of a mathematical pattern.</li>
 					<li>The modes are also always either three steps on the scale below their predecessors (usually, but not always, a perfect fourth), or four steps above (usually, but not always, a perfect fifth). In this context, they&rsquo;re equivalent, since the scale repeats every octave.
 						<ul>
 							<li id="tritones">Although this is only somewhat relevant here, one pair of intervals always constitutes an exception to the &ldquo;perfect fourths&rdquo; and &ldquo;perfect fifths&rdquo; rules: one fourth is always augmented, and one fifth is always diminished. These are actually the same interval, a tritone. The following steps on each scale are tritones in either direction:
 								<table>
 									<thead>
-										<tr class="centred accent"><th colspan="4">Diabolus in M&umacr;sic&amacr;</th></tr>
-										<tr><th>#</th><th>Mode</th><th colspan="2" class="leftborder">Tritone</th></tr>
+										<tr class="centred accent"><th colspan="4">Diabolus in m&umacr;sic&amacr;</th></tr>
+										<tr><th>#</th><th>Mode</th>      <th colspan="2" class="leftborder">Tritone</th>                </tr>
 									</thead>
 									<tbody>
 										<tr><td>4</td><td>Lydian    </td><td class="centred leftborder">4</td><td class="centred">1</td></tr>
@@ -148,30 +158,13 @@ window.onload = function () {makeAllSortable();};*/
 					</li>
 				</ul>
 			</li>
-			<li>Although this page focuses on modes of the major scale, there are numerous possible scales (and modes thereof) that don&rsquo;t fit its pattern, such as:
-				<ul>
-					<li>The twelve-note chromatic scale (though works that use the entire twelve-note scale are quite rare and mostly considered avant-garde).</li>
-					<li>Other seven-note scales include:
-						<ul>
-							<li>Phrygian dominant: 1, 2&#9837;, 3, 4, 5, 6&#9837;, 7&#9837;</li>
-							<li>Ukrainian Dorian: 1, 2, 3&#9837;, 4&#9839;, 5, 6, 7&#9837;</li>
-							<li>Hungarian minor: 1, 2, 3&#9837;, 4&#9839;, 5, 6&#9837;, 7</li>
-							<li>Too many blues/jazz scales to list</li>
-							<li>And many others &ndash; this is not an exhaustive list</li>
-						</ul>
-						However, traditional key signature notation is strictly based on major scales and the circle of fifths: using a key signature with three flats that weren&rsquo;t B&#9837;, E&#9837;, and A&#9837; would risk confusing people.</li>
-					<li>Of course, there are also scales that use fewer than seven notes; pentatonic scales (which only use five notes) are quite common in rock and blues music, though they are much older than that and exist in many cultures.</li>
-					<li>And, of course, while nearly all Western music for the last five centuries is entirely or largely based on subsets of <a href="https://en.wikipedia.org/wiki/12_equal_temperament" target="_blank">twelve-tone equal temperament</a> (or close variants thereof), this is far from universal across all cultures throughout history; for instance, a <a href="https://en.wikipedia.org/wiki/Quarter tone" target="_blank">twenty-four-note scale</a> is common in Arabic and Turkic music, while Indian <a href="https://en.wikipedia.org/wiki/Raga" target="_blank">ragas</a> commonly use seven notes picked from twenty-two <a href="https://en.wikipedia.org/wiki/Shruti_(music)" target="_blank">shrutis</a> (Sanskrit: श्रुति).</li>
-					</li>
-				</ul> 
-			</li>
 		</ul>
 		
 		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 		<h1 id="modes" class="centred">The Eighty-Four Modes of Major Scales</h1>
 		<ul>
-			<li>Modes of the C major scale are <strong class="accent"><strong>bolded and printed in blue</strong></strong> to make them stand out. These are the only scales played using only the white keys of the piano (this is also why music notation can express these specific keys without the need for accidentals). The differences between their numbers are always multiples of twelve; this is also not a coincidence.</li>
+			<li>I&rsquo;ve printed the C major scale&rsquo;s modes in <strong class="accent"><strong>bold, blue type</strong></strong> to make them stand out. These are the only scales played using only the white keys of the piano (this is also why music notation can express these specific keys without the need for accidentals). The differences between their numbers are always multiples of twelve; this is also not a coincidence.</li>
 			<li>Halfway between C major&rsquo;s modes, I always print a mode twice, in <span class="orange">orange</span>. These nodes could be notated either with six sharps in their key signatures or with six flats. I don&rsquo;t really care for either option (E&#9839; is F&#9838;! C&#9837; is B&#9838;!), but they&rsquo;re necessary to prevent the repetition of a letter in a scale, and thus a rash of accidentals in the notation for any piece that uses them. These options are also always separated by multiples of twelve, for the same reason: in this progression, modes of the same scale are always separated from each other by multiples of twelve.</li>
 			<li>I&rsquo;ve listed these in descending order of pitch because that way, higher pitches are, well, higher on the list. However, since we read from top to bottom, this may be confusing. I may eventually write a JavaScript add-on to reverse the order, but I&rsquo;d have to learn JavaScript first, so no promises.</li>
 			<li>&ldquo;RM&rdquo; is an initialism for &ldquo;Relative Major&rdquo;, and &ldquo;KS&rdquo; is one for &ldquo;Key Signature&rdquo;. A cheat sheet for what modes use what key signatures can be found in the section immediately following this one.</li>
@@ -179,7 +172,7 @@ window.onload = function () {makeAllSortable();};*/
 
 		<table id="c">
 			<thead>
-				<tr><th colspan="12" class="centred accent"><strong><strong><strong>C</strong></strong></strong></th></tr>
+				<tr><th colspan="13" class="centred accent"><strong><strong><strong>C</strong></strong></strong></th></tr>
 				<tr>                    <th class="centred">#</th>           <th>Root</th>                                <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th>                      <th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th>                      </tr>
 			</thead>
 			<tbody>
@@ -197,7 +190,7 @@ window.onload = function () {makeAllSortable();};*/
 
 		<table id="b">
 			<thead>
-				<tr><th colspan="12" class="centred accent"><strong><strong><strong>B / C&#9837;</strong></strong></strong></th></tr>
+				<tr><th colspan="13" class="centred accent"><strong><strong><strong>B / C&#9837;</strong></strong></strong></th></tr>
 				<tr>                    <th class="centred">#</th>           <th>Root</th>                                <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th>                      <th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th>                      </tr>
 			</thead>
 			<tbody>
@@ -216,7 +209,7 @@ window.onload = function () {makeAllSortable();};*/
 
 		<table id="bflat">
 			<thead>
-				<tr><th colspan="12" class="centred accent"><strong><strong><strong>A&#9839; / B&#9837;</strong></strong></strong></th></tr>
+				<tr><th colspan="13" class="centred accent"><strong><strong><strong>A&#9839; / B&#9837;</strong></strong></strong></th></tr>
 				<tr>               <th class="centred">#</th>      <th>Root</th>    <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th><th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th></tr>
 			</thead>
 			<tbody>
@@ -235,7 +228,7 @@ window.onload = function () {makeAllSortable();};*/
 
 		<table id="a">
 			<thead>
-				<tr><th colspan="12" class="centred accent"><strong><strong><strong>A</strong></strong></strong></th></tr>
+				<tr><th colspan="13" class="centred accent"><strong><strong><strong>A</strong></strong></strong></th></tr>
 				<tr>                    <th class="centred">#</th>      <th>Root</th>                                <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th>                      <th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th>                      </tr>
 			</thead>
 			<tbody>
@@ -253,7 +246,7 @@ window.onload = function () {makeAllSortable();};*/
 
 		<table id="aflat">
 			<thead>
-				<tr><th colspan="12" class="centred accent"><strong><strong><strong>G&#9839; / A&#9837;</strong></strong></strong></th></tr>
+				<tr><th colspan="13" class="centred accent"><strong><strong><strong>G&#9839; / A&#9837;</strong></strong></strong></th></tr>
 				<tr>               <th class="centred">#</th>      <th>Root</th>    <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th><th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th></tr>
 			</thead>
 			<tbody>
@@ -273,7 +266,7 @@ window.onload = function () {makeAllSortable();};*/
 		<table id="g">
 			<thead>
 				<tr>
-					<th colspan="12" class="centred accent"><strong><strong><strong>G</strong></strong></strong></th>
+					<th colspan="13" class="centred accent"><strong><strong><strong>G</strong></strong></strong></th>
 				</tr>
 				<tr>                    <th class="centred">#</th>      <th>Root</th>                                <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th>                      <th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th>                      </tr>
 			</thead>
@@ -293,7 +286,7 @@ window.onload = function () {makeAllSortable();};*/
 
 		<table id="fsharp">
 			<thead>
-				<tr><th colspan="12" class="centred accent"><strong><strong><strong>F&#9839; / G&#9837;</strong></strong></strong></th></tr>
+				<tr><th colspan="13" class="centred accent"><strong><strong><strong>F&#9839; / G&#9837;</strong></strong></strong></th></tr>
 				<tr>               <th class="centred">#</th>      <th>Root</th>    <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th><th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th></tr>
 			</thead>
 			<tbody>
@@ -312,7 +305,7 @@ window.onload = function () {makeAllSortable();};*/
 
 		<table id="f">
 			<thead>
-				<tr><th colspan="12" class="centred accent"><strong><strong><strong>E&#9839; / F</strong></strong></strong></th></tr>
+				<tr><th colspan="13" class="centred accent"><strong><strong><strong>E&#9839; / F</strong></strong></strong></th></tr>
 				<tr>                    <th class="centred">#</th>      <th>Root</th>                                <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th>                       <th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th>                      </tr>
 			</thead>
 			<tbody>
@@ -331,7 +324,7 @@ window.onload = function () {makeAllSortable();};*/
 
 		<table id="e">
 			<thead>
-				<tr><th colspan="12" class="centred accent"><strong><strong><strong>E</strong></strong></strong></th></tr>
+				<tr><th colspan="13" class="centred accent"><strong><strong><strong>E</strong></strong></strong></th></tr>
 				<tr>                    <th class="centred">#</th>      <th>Root</th>                                <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th>                      <th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th>                      </tr>
 			</thead>
 			<tbody>
@@ -349,7 +342,7 @@ window.onload = function () {makeAllSortable();};*/
 
 		<table id="eflat">
 			<thead>
-				<tr><th colspan="12" class="centred accent"><strong><strong><strong>D&#9839; / E&#9837;</strong></strong></strong></th></tr>
+				<tr><th colspan="13" class="centred accent"><strong><strong><strong>D&#9839; / E&#9837;</strong></strong></strong></th></tr>
 				<tr>               <th class="centred">#</th>      <th>Root</th>    <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th><th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th></tr>
 			</thead>
 			<tbody>
@@ -368,7 +361,7 @@ window.onload = function () {makeAllSortable();};*/
 
 		<table id="d">
 			<thead>
-				<tr><th colspan="12" class="centred accent"><strong><strong><strong>D</strong></strong></strong></th></tr>
+				<tr><th colspan="13" class="centred accent"><strong><strong><strong>D</strong></strong></strong></th></tr>
 				<tr>                    <th class="centred">#</th>      <th>Root</th>                                <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th>                      <th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th></tr>
 			</thead>
 			<tbody>
@@ -386,7 +379,7 @@ window.onload = function () {makeAllSortable();};*/
 
 		<table id="csharp">
 			<thead>
-				<tr><th colspan="12" class="centred accent"><strong><strong><strong>C&#9839; / D&#9837;</strong></strong></strong></th></tr>
+				<tr><th colspan="13" class="centred accent"><strong><strong><strong>C&#9839; / D&#9837;</strong></strong></strong></th></tr>
 				<tr>               <th class="centred">#</th>      <th>Root</th>    <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th><th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th></tr>
 			</thead>
 			<tbody>
@@ -455,6 +448,46 @@ window.onload = function () {makeAllSortable();};*/
 
 		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
+		<h1 id="circleoffifths" class="centred">Why is this happening?</h1>
+
+		<p>The simple answer is that, whether or not we&rsquo;ve realized it, we were traversing the circle of fifths the entire time. I mentioned near the top of this page that traveling from C Lydian to C Ionian was, in a sense, traveling from G major to C major. Here&rsquo;s the C table again. Notice how the &ldquo;relative major&rdquo; column traverses the circle of fifths downward:</p>
+
+		<table id="c2">
+			<thead>
+				<tr><th colspan="13" class="centred accent"><strong><strong><strong>C</strong></strong></strong></th></tr>
+				<tr>                    <th class="centred">#</th>           <th>Root</th>                                <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th>                      <th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th>                      </tr>
+			</thead>
+			<tbody>
+				<tr>                    <td class="number right">&nbsp;0</td><td>C<span class="hidden">&#9838;</span></td><td>4 &ndash; Lydian</td>    <td class="centred">G</td>                                    <td class="centred rightborder">1&#9839;<!--G--></td>                            <td>C<span class="hidden">&#9838;</span></td><td>D<span class="hidden">&#9838;</span></td><td>E<span class="hidden">&#9838;</span></td><td>F&#9839;</td>                            <td>G<span class="hidden">&#9838;</span></td><td>A<span class="hidden">&#9838;</span></td><td>B<span class="hidden">&#9838;</span></td><td>C<span class="hidden">&#9838;</span></td></tr>
+				<tr class="bold accent"><td class="number right">&nbsp;1</td><td>C<span class="hidden">&#9838;</span></td><td>1 &ndash; Ionian</td>    <td class="centred">C</td>                                    <td class="centred rightborder">&#9838;</td>                                     <td>C<span class="hidden">&#9838;</span></td><td>D<span class="hidden">&#9838;</span></td><td>E<span class="hidden">&#9838;</span></td><td>F<span class="hidden">&#9838;</span></td><td>G<span class="hidden">&#9838;</span></td><td>A<span class="hidden">&#9838;</span></td><td>B<span class="hidden">&#9838;</span></td><td>C<span class="hidden">&#9838;</span></td></tr>
+				<tr>                    <td class="number right">&nbsp;2</td><td>C<span class="hidden">&#9838;</span></td><td>5 &ndash; Mixolydian</td><td class="centred">F</td>                                    <td class="centred rightborder">1&#9837;<!--F--></td>                            <td>C<span class="hidden">&#9838;</span></td><td>D<span class="hidden">&#9838;</span></td><td>E<span class="hidden">&#9838;</span></td><td>F<span class="hidden">&#9838;</span></td><td>G<span class="hidden">&#9838;</span></td><td>A<span class="hidden">&#9838;</span></td><td>B&#9837;</td>                            <td>C<span class="hidden">&#9838;</span></td></tr>
+				<tr>                    <td class="number right">&nbsp;3</td><td>C<span class="hidden">&#9838;</span></td><td>2 &ndash; Dorian</td>    <td class="centred">B&#9837;</td>                             <td class="centred rightborder">2&#9837;<!--B flat--></td>                       <td>C<span class="hidden">&#9838;</span></td><td>D<span class="hidden">&#9838;</span></td><td>E&#9837;</td>                            <td>F<span class="hidden">&#9838;</span></td><td>G<span class="hidden">&#9838;</span></td><td>A<span class="hidden">&#9838;</span></td><td>B&#9837;</td>                            <td>C<span class="hidden">&#9838;</span></td></tr>
+				<tr>                    <td class="number right">&nbsp;4</td><td>C<span class="hidden">&#9838;</span></td><td>6 &ndash; Aeolian</td>   <td class="centred">E&#9837;</td>                             <td class="centred rightborder">3&#9837;<!--E flat--></td>                       <td>C<span class="hidden">&#9838;</span></td><td>D<span class="hidden">&#9838;</span></td><td>E&#9837;</td>                            <td>F<span class="hidden">&#9838;</span></td><td>G<span class="hidden">&#9838;</span></td><td>A&#9837;</td>                            <td>B&#9837;</td>                            <td>C<span class="hidden">&#9838;</span></td></tr>
+				<tr>                    <td class="number right">&nbsp;5</td><td>C<span class="hidden">&#9838;</span></td><td>3 &ndash; Phrygian</td>  <td class="centred">A&#9837;</td>                             <td class="centred rightborder">4&#9837;<!--A flat--></td>                       <td>C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>                            <td>E&#9837;</td>                            <td>F<span class="hidden">&#9838;</span></td><td>G<span class="hidden">&#9838;</span></td><td>A&#9837;</td>                            <td>B&#9837;</td>                            <td>C<span class="hidden">&#9838;</span></td></tr>
+				<tr>                    <td class="number right">&nbsp;6</td><td>C<span class="hidden">&#9838;</span></td><td>7 &ndash; Locrian</td>   <td class="centred">D&#9837;</td>                             <td class="centred rightborder">5&#9837;<!--D flat--></td>                       <td>C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>                            <td>E&#9837;</td>                            <td>F<span class="hidden">&#9838;</span></td><td>G&#9837;</td>                            <td>A&#9837;</td>                            <td>B&#9837;</td>                            <td>C<span class="hidden">&#9838;</span></td></tr>
+			</tbody>
+		</table>
+
+		<p>The key is that each of these modes, apart from C Ionian, has been rearranging a different major scale. If we reshuffle each mode back into its Ionian form:</p>
+
+		<table id="c3">
+			<thead>
+				<tr><th colspan="12" class="centred accent">You expected modes, but it was me, the circle of fifths</th></tr>
+				<tr>                    <th class="centred">#</th>           <th>Original Mode</th>       <th>Root</th>                    <th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th>                      <th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th>                      </tr>
+			</thead>
+			<tbody>
+				<tr>                    <td class="number right">&nbsp;0</td><td>4 &ndash; Lydian</td>    <td class="centred">G</td>       <td class="centred rightborder">1&#9839;<!--G--></td>                            <td>G<span class="hidden">&#9838;</span></td><td>A<span class="hidden">&#9838;</span></td><td>B<span class="hidden">&#9838;</span></td><td>C<span class="hidden">&#9838;</span></td><td>D<span class="hidden">&#9838;</span></td><td>E<span class="hidden">&#9838;</span></td><td>F&#9839;</td>                            <td>G<span class="hidden">&#9838;</span></td></tr>
+				<tr class="bold accent"><td class="number right">&nbsp;1</td><td>1 &ndash; Ionian</td>    <td class="centred">C</td>       <td class="centred rightborder">&#9838;</td>                                     <td>C<span class="hidden">&#9838;</span></td><td>D<span class="hidden">&#9838;</span></td><td>E<span class="hidden">&#9838;</span></td><td>F<span class="hidden">&#9838;</span></td><td>G<span class="hidden">&#9838;</span></td><td>A<span class="hidden">&#9838;</span></td><td>B<span class="hidden">&#9838;</span></td><td>C<span class="hidden">&#9838;</span></td></tr>
+				<tr>                    <td class="number right">&nbsp;2</td><td>5 &ndash; Mixolydian</td><td class="centred">F</td>       <td class="centred rightborder">1&#9837;<!--F--></td>                            <td>F<span class="hidden">&#9838;</span></td><td>G<span class="hidden">&#9838;</span></td><td>A<span class="hidden">&#9838;</span></td><td>B&#9837;</td>                            <td>C<span class="hidden">&#9838;</span></td><td>D<span class="hidden">&#9838;</span></td><td>E<span class="hidden">&#9838;</span></td><td>F<span class="hidden">&#9838;</span></td></tr>
+				<tr>                    <td class="number right">&nbsp;3</td><td>2 &ndash; Dorian</td>    <td class="centred">B&#9837;</td><td class="centred rightborder">2&#9837;<!--B flat--></td>                       <td>B&#9837;</td>                            <td>C<span class="hidden">&#9838;</span></td><td>D<span class="hidden">&#9838;</span></td><td>E&#9837;</td>                            <td>F<span class="hidden">&#9838;</span></td><td>G<span class="hidden">&#9838;</span></td><td>A<span class="hidden">&#9838;</span></td><td>B&#9837;</td>                            </tr>
+				<tr>                    <td class="number right">&nbsp;4</td><td>6 &ndash; Aeolian</td>   <td class="centred">E&#9837;</td><td class="centred rightborder">3&#9837;<!--E flat--></td>                       <td>E&#9837;</td>                            <td>F<span class="hidden">&#9838;</span></td><td>G<span class="hidden">&#9838;</span></td><td>A&#9837;</td>                            <td>B&#9837;</td>                            <td>C<span class="hidden">&#9838;</span></td><td>D<span class="hidden">&#9838;</span></td><td>E&#9837;</td>                            </tr>
+				<tr>                    <td class="number right">&nbsp;5</td><td>3 &ndash; Phrygian</td>  <td class="centred">A&#9837;</td><td class="centred rightborder">4&#9837;<!--A flat--></td>                       <td>A&#9837;</td>                            <td>B&#9837;</td>                            <td>C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>                            <td>E&#9837;</td>                            <td>F<span class="hidden">&#9838;</span></td><td>G<span class="hidden">&#9838;</span></td><td>A&#9837;</td>                            </tr>
+				<tr>                    <td class="number right">&nbsp;6</td><td>7 &ndash; Locrian</td>   <td class="centred">D&#9837;</td><td class="centred rightborder">5&#9837;<!--D flat--></td>                       <td>D&#9837;</td>                            <td>E&#9837;</td>                            <td>F<span class="hidden">&#9838;</span></td><td>G&#9837;</td>                            <td>A&#9837;</td>                            <td>B&#9837;</td>                            <td>C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>                            </tr>
+			</tbody>
+		</table>
+
+		<p>And perhaps here this makes it clearer what&rsquo;s been going on this whole time: <em>every</em> note of <em>every</em> scale in this table is, in fact, a perfect fifth below its predecessor.</p>
+
 		<h1 id="chordanalysis" class="centred">Chord Analysis by Mode</h1> 
 
 		<table>
@@ -483,6 +516,84 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
+			<h1 class="centred" id="otherscales">Other Scales &amp; Tonalities</h1>
+
+			Although this page focuses on modes of the major scale, numerous possible scales (and modes thereof) don&rsquo;t fit its pattern, such as:
+			<ul>
+				<li>The twelve-note chromatic scale (though works that use the entire twelve-note scale are quite rare and mostly considered avant-garde).</li>
+				<li>Numerous seven-note scales that <em>aren&rsquo;t</em> modes of the major scale. I&rsquo;ve rooted the following examples (many of which are common in jazz) in C:
+					<table id="sevennotescales">
+						<thead>
+							<tr class="centred accent"><th colspan="9">Other Seven-Note Scales</th></tr>
+							<tr><th colspan="2">Scale</th>                                                                        <th class="leftborder left">1</th>                              <th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th></tr>
+						</thead>
+						<tbody>
+							<tr><td class="weight4 centred" colspan="2">Ascending melodic minor</td>                              <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F</td>             <td>G</td>             <td>A</td>             <td>B</td>             </tr>
+							<tr><td class="weight4 right">Dorian &#9837;2</td>   <td class="weight4">Phrygian &#9839;6</td>       <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E&#9837;</td>      <td>F</td>             <td>G</td>             <td>A</td>             <td>B&#9837;</td>      </tr>
+							<tr><td class="weight4 centred" colspan="2">Lydian augmented</td>                                     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E</td>             <td>F&#9839;</td>      <td>G&#9839;</td>      <td>A</td>             <td>B</td>             </tr>
+							<tr><td class="weight4 right">Lydian dominant</td>   <td class="weight4">Mixolydian &#9839;4</td>     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E</td>             <td>F&#9839;</td>      <td>G</td>             <td>A</td>             <td>B&#9837;</td>      </tr>
+							<tr><td class="weight4 right">Aeolian dominant</td>  <td class="weight4">Mixolydian &#9837;6</td>     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E</td>             <td>F</td>             <td>G</td>             <td>A&#9837;</td>      <td>B&#9837;</td>      </tr>
+							<tr><td class="weight4 right">Aeolian &#9837;5</td>  <td class="weight4">Locrian &#9839;2</td>        <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F</td>             <td>G&#9837;</td>      <td>A&#9837;</td>      <td>B&#9837;</td>      </tr>
+							<tr><td class="weight4 right">Super-Locrian</td>     <td class="weight4">Altered dominant</td>        <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E&#9837;</td>      <td>F&#9837;</td>      <td>G&#9837;</td>      <td>A&#9837;</td>      <td>B&#9837;</td>      </tr>
+							<tr><td class="weight4 right">Harmonic minor</td>    <td class="weight4">Aeolian &#9839;7</td>        <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F</td>             <td>G</td>             <td>A&#9837;</td>      <td>B</td>             </tr>
+							<tr><td class="weight4 centred" colspan="2">Locrian &#9838;6</td>                                     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E&#9837;</td>      <td>F</td>             <td>G&#9837;</td>      <td>A</td>             <td>B&#9837;</td>      </tr>
+							<tr><td class="weight4 right">Augmented major</td>   <td class="weight4">Ionian &#9839;5</td>         <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E</td>             <td>F</td>             <td>G&#9839;</td>      <td>A</td>             <td>B</td>             </tr>
+							<tr><td class="weight4 centred" colspan="2">Hungarian minor</td>                                      <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F&#9839;</td>      <td>G</td>             <td>A&#9837;</td>      <td>B</td>             </tr>
+							<tr><td class="weight4 centred" colspan="2">Ukrainian Dorian</td>                                     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F&#9839;</td>      <td>G</td>             <td>A</td>             <td>B&#9837;</td>      </tr>
+							<tr><td class="weight4 centred" colspan="2">Phrygian dominant</td>                                    <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E</td>             <td>F</td>             <td>G</td>             <td>A&#9837;</td>      <td>B&#9837;</td>      </tr>
+							<tr><td class="weight4 centred" colspan="2">Lydian &#9839;2</td>                                      <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9839;</td>      <td>E</td>             <td>F&#9839;</td>      <td>G</td>             <td>A</td>             <td>B</td>             </tr>
+							<tr><td class="weight4 right">Altered diminished</td><td class="weight4">Super-Locrian &#119083;2</td><td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E&#9837;</td>      <td>F&#9839;</td>      <td>G&#9839;</td>      <td>A&#9837;</td>      <td>B&#119083;</td>    </tr>
+						</tbody>
+					</table>
+					<div>This list is far from exhaustive and doesn&rsquo;t even delve into scales with different ascents and descents. (I also didn&rsquo;t list every name of some scales on this list; some have at least four.)</div>
+					However, one thing distinguishes these scales from the modes of the major scale: it&rsquo;s possible to print every mode of every major scale with no accidentals outside the key signature, but every single scale in the above table would require accidentals for at least some of its notes. Traditional key signature notation is strictly based on major scales and the circle of fifths; using a key signature with three flats that weren&rsquo;t B&#9837;, E&#9837;, and A&#9837; would just confuse readers.</li>
+				<li>There are also, naturally, scales that use fewer than seven notes; pentatonic (five-note) scales are quite common in rock, blues, and jazz music, though they&rsquo;re much older than that and exist in many cultures. Six-note scales are also fairly common (including whole-tone scales).</li>
+				<li>Scales may also have more than seven notes; eight- and nine-note scales are common in blues and jazz.</li>
+				<li>And of course, all of the above is based on the <a href="https://en.wikipedia.org/wiki/12_equal_temperament" target="_blank">twelve-tone equal temperament</a> used in the vast majority of Western music from the last five centuries. Plenty of other tunings have been and still are used, though; there&rsquo;s nothing even restricting the number of notes per octave to twelve. For instance:
+					<ul>
+						<li>A <a href="https://en.wikipedia.org/wiki/Quarter tone" target="_blank">twenty-four-note scale</a> is common in Arabic and Turkic music.</li>
+						<li>Indian <a href="https://en.wikipedia.org/wiki/Raga" target="_blank">r&amacr;gas</a> <span class="light">(Sanskrit: राग)</span> typically use anywhere from four to seven <em>svaras</em> <span class="light">(Sanskrit: स्वर; roughly comparable to the notes of a Western diatonic scale)</span> selected from the <a href="https://en.wikipedia.org/wiki/Shruti_(music)" target="_blank">twenty-two <em>&sacute;r&uacute;tis</em></a> <span class="light">(Sanskrit: श्रुति; roughly comparable to the Western twelve-note chromatic scale, except with ten more notes)</span>.</li>
+						<li>Experimental Western musicians also occasionally use alternate temperaments. Here are a few recent rock and metal examples, in increasing order of heaviness:
+							<ul>
+								<li><a href="https://kinggizzard.bandcamp.com/album/flying-microtonal-banana"><em>Flying Microtonal Banana</em></a> by King Gizzard & the Lizard Wizard (24-tone scale)</li>
+								<li><a href="https://votsband.bandcamp.com/album/nowherer" target="_blank"><em>Nowherer</em></a> by Victory over the Sun (17-tone scale)</li>
+								<li>any metal album by <a href="https://jutegyte.bandcamp.com/music" target="_blank">Jute Gyte</a> since <em>Discontinuities</em> (also 24-tone scale)</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul> 
+
+			<h1 class="centred" id="etymology">Etymology</h1>
+
+			<p>All seven of these modes trace their etymologies to ancient Greek regions, tribes, or both:</p>
+
+			<table id="etymologytable">
+				<thead>
+					<tr class="centred accent">
+						<th colspan="5">
+							Ἡ ἐτῠμολογῐ́ᾱ τῶν ἤχων<br />
+							<span class="italic weight3">(H&emacr; etumolog&iacute;&amacr; t&ocirc;n &#7703;kh&omacr;n)<br /></span>
+							<span class="light">[Etymology of Musical Modes]</span>
+						</th>
+					</tr>
+					<tr><th>#</th><th>Mode</th>      <th>Greek</th>                             <th>Romanized</th>                                                    <th class="leftborder">Reference</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>1</td><td>Ionian</td>    <td class="weight2">Ἰωνία</td>             <td class="italic weight2">I&omacr;n&iacute;a</td>                    <td class="leftborder weight1">region on the western coast of Anatolia (modern Turkey)</td></tr>
+					<tr><td>2</td><td>Dorian</td>    <td class="weight2">Δωρῐεύς</td>           <td class="italic weight2">D&omacr;rie&uacute;s</td>                  <td class="leftborder weight1">one of the four major Hellenic tribes</td></tr>
+					<tr><td>3</td><td>Phrygian</td>  <td class="weight2">Φρῠγῐ́ᾱ</td>            <td class="italic weight2">Phrug&iacute;&amacr;</td>                  <td class="leftborder weight1">kingdom in west-central Anatolia</td></tr>
+					<tr><td>4</td><td>Lydian</td>    <td class="weight2">Λῡδῐ́ᾱ</td>             <td class="italic weight2">L&umacr;d&iacute;&amacr;</td>              <td class="leftborder weight1">Anatolian kingdom most famously ruled by Croesus</td></tr>
+					<tr><td>5</td><td>Mixolydian</td><td class="weight2 nowrap">μιξο-Λῡ́δῐος</td><td class="italic weight2" class="nowrap">mixo-L&umacr;&#769;dios</td><td class="leftborder weight1">literally &ldquo;mixed Lydian&rdquo;</td></tr>
+					<tr><td>6</td><td>Aeolian</td>   <td class="weight2">Αἰολῐ́ᾱ</td>            <td class="italic weight2">Aiol&iacute;&amacr;</td>                   <td class="leftborder weight1">region of northwestern Anatolia</td></tr>
+					<tr><td>7</td><td>Locrian</td>   <td class="weight2">Λοκρῐ́ς</td>            <td class="italic weight2">Lokr&iacute;s</td>                         <td class="leftborder weight1"><a href="https://en.wikipedia.org/wiki/Locris" target="_blank"><span class="weight2">Three separate regions</span></a> of ancient Greece</td></tr>
+				</tbody>
+			</table>
+			
+			<p>However, they really don&rsquo;t have anything to do with the regions or tribes they were named after, or even the ancient Greek modes that shared their names; it was more a case of &ldquo;medieval Europeans thought it&rdquo;d be cool to name their modes after seven modes that were known to exist in Ancient Greece.&rdquo;</p>
+
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+
 			<h1 class="centred" id="hewhofightsmonsters">Yes, but, why?</h1>
 		<p>I gazed into an eldritch dimension by writing a <span class="dotted" id="ftnt_ref02" title="I&rsquo;ve tentatively titled it &ldquo;Ὁ θρῆνος τῆς Λοκρῐ́δος&rdquo; [romanized: O thrínos tís Lokrĭdos], Ancient Greek for &ldquo;The Lament of Locris&rdquo;, but this may change. It&rsquo;s still unfinished, but I&rsquo;ve added it to Compositions 2023-2024, my collection of recent original compositions. In addition to Locrian mode, it also uses a different time signature every measure, from 1/8 in the first measure to 21/8 in the twenty-first, before the pattern repeats, which also makes it incredibly disorienting. Naturally, this is entirely intentional.">piece in Locrian mode<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span>. This was the result. I should&rsquo;ve listened to <span class="dotted" id="ftnt_ref03" title="&ldquo;He who fights monsters should see to it that he himself does not become a monster; and if you gaze for long into an abyss, the abyss gazes also into you.&rdquo; &ndash;Beyond Good and Evil, Aphorism 146">Nietzsche&rsquo;s warning about abysses.<a href="#ftnt02" class="noprintlink">&#8317;&sup3;&#8318;</a></p>
 
@@ -495,8 +606,8 @@ window.onload = function () {makeAllSortable();};*/
 			<thead>
 				<tr><th colspan="2" class="centred accent"><strong class="bold"><strong>Endnotes</strong></strong></th></tr>
 				<tr>
-					<th class="integer"><strong>#</strong></th>
-					<th><strong>Note</strong></th>
+					<th class="integer middle"><strong>#</strong></th>
+					<th class="middle"><strong>Note</strong></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -514,5 +625,7 @@ window.onload = function () {makeAllSortable();};*/
 				</tr>
 			</tbody>
 		</table>
+
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 	</body>
 </html>

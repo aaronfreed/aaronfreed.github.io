@@ -1220,6 +1220,10 @@ table.noborder {
 	display: none;
 }
 
+.aboutme :is(ol, ul) {
+	padding-left: 15px; line-height: 125%;
+}
+
 .orange {
 	color: var(--link-hover)
 }
@@ -1231,4 +1235,26 @@ table.noborder {
 }
 .magenta {
 	color: var(--link-visited)
+}
+
+.weight1 {
+	font-weight: var(--lightest);
+}
+.weight2 {
+	font-weight: var(--lighter);
+}
+.weight3 {
+	font-weight: var(--light);
+}
+.weight4 {
+	font-weight: var(--medium);
+}
+.weight5 {
+	font-weight: var(--bold);
+}
+.weight6 {
+	font-weight: var(--bolder);
+}
+.weight7 {
+	font-weight: var(--boldest);
 }

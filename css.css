@@ -1289,3 +1289,6 @@ table.noborder {
 .weight7, .weight7 :is(td, th, li), .weight6 :is(a:link, a:visited, strong), .weight5 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited), .weight4 strong strong strong, .weight3 strong strong strong strong, .weight2 strong strong strong strong strong, .weight1 strong strong strong strong strong strong {
 	font-weight: var(--boldest);
 }
+.fixheight {
+	line-height: 125%;
+}

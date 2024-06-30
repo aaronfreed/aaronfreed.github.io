@@ -1087,7 +1087,7 @@ code {
 	line-height: 125%;
 }
 .musicalmodes thead tr:first-child {
-	background-color: var(--background);
+	background-color: var(--offset-level-2);
 	border-bottom: 0px;
 }
 .musicalmodes td {
@@ -1130,7 +1130,8 @@ code {
 .musicalmodes .mediumrightborder {
 	border-right: 1px solid var(--offset-level-3);
 }
-.musicalmodes tr.mediumbottomborder :is(td, th) {
+.musicalmodes tr.mediumbottomborder :is(td, th),
+.musicalmodes :is(td.mediumbottomborder, tr.mediumbottomborder) {
 	border-bottom: 1px solid var(--offset-level-3);
 }
 .musicalmodes .leftborder {
@@ -1146,7 +1147,9 @@ code {
 	text-decoration-color: var(--heading-color-translucent);
 	text-decoration-thickness: 3px;
 }
-td.highlight
+.musicalmodes th.highlight {
+	background-color: var(--offset-level-2);
+}
 /* no .topborder because there's already a bottom border for the previous column, and "border-collapse: inherit" means it'll be displayed separately */
 
 .hue0, .hue0 td, .hue0 th {
@@ -1256,16 +1259,16 @@ table.noborder {
 }
 
 .orange {
-	color: var(--link-hover)
+	color: var(--link-hover);
 }
 .green {
-	color: var(--link-active)
+	color: var(--link-active);
 }
 .azure {
-	color: var(--link)
+	color: var(--link);
 }
 .magenta {
-	color: var(--link-visited)
+	color: var(--link-visited);
 }
 
 .weight1, .weight1 :is(td, th, li) {
@@ -1291,4 +1294,7 @@ table.noborder {
 }
 .fixheight {
 	line-height: 125%;
+}
+.toc-counter {
+	color: var(--toc-counter)
 }

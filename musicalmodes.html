@@ -68,12 +68,22 @@ window.onload = function () {makeAllSortable();};*/
 						<li><a href="#csharp">C&#9839; / D&#9837;</a></li>
 					</ol>
 				</li>
-				<li><a href="#rightbordernatures">Key Signature Cheat Sheet</a>
+				<li><a href="#keysignatures">Key Signature Cheat Sheet</a>
 					<ol>
-						<li><a href="#rightbordernaturetable">Key Signatures of the Seven Modes for the Twelve-Note Chromatic Scale</a></li>
+						<li><a href="#keysignaturetable">Key Signatures of the Seven Modes for the Twelve-Note Chromatic Scale</a></li>
 					</ol>
 				</li>
-				<li><a href="#chordanalysis">Chord Analysis by Mode</a></li>
+				<li><a href="#circleoffifths">Why is this happening?</a>
+					<ol>
+						<li><a href="#c2">C++</a></li>
+						<li><a href="#itwasmedio">You were expecting modes, but it was me, <del>Dio</del> the circle of fifths!</a></li>
+					</ol>
+				</li>
+				<li><a href="#chordanalysis">Chord Analysis by Mode</a>
+					<ol>
+						<li><a href="#chordtonalities">Chord Tonalities by Scale Position and Mode</a></li>
+					</ol>
+				</li>
 				<li><a href="#otherscales">Other Scales &amp; Tonalities</a>
 					<ol>
 						<li><a href="sevennotescales">Other Seven-Note Scales</a></li>
@@ -82,6 +92,13 @@ window.onload = function () {makeAllSortable();};*/
 				<li><a href="#etymology">Etymology</a>
 					<ol>
 						<li><a href="#etymologytable">Ἡ ἐτῠμολογῐ́ᾱ τῶν ἤχων</a></li>
+					</ol>
+				</li>
+				<li><a href="#tonoi">Ancient Greek <em>Tonoi</em> &amp; Modern Modes</a>
+					<ol></ol>
+						<li><a href="#intervalgenera">Interval Genera: A Feed from Cloud Mountain</a></li>
+						<li><a href="#intervalkey">Interval Key</a></li>
+						<li><a href="#tonoiintervals">Intervals of Ancient Greek <em>Tonoi</em> &amp; Modern Diatonic Modes</a></li>
 					</ol>
 				</li>
 				<li><a href="#hewhofightsmonsters">Yes, but, why?</a></li>
@@ -396,11 +413,13 @@ window.onload = function () {makeAllSortable();};*/
 
 		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
-		<h1 id="rightbordernatures" class="centred">Key Signature Cheat Sheet</h1>
+		<h1 id="keysignatures" class="centred">Key Signature Cheat Sheet</h1>
+
 		<ul>
 			<li>The twelve-note chromatic scale has fifteen key signatures (&#119082; and &#119083; monstrosities notwithstanding):</li>
 		</ul>
-		<table id="rightbordernaturetable">
+
+		<table id="keysignaturetable">
 			<thead>
 				<tr><th colspan="15" class="centred accent">Key Signatures of the Seven Modes for the Twelve-Note Chromatic Scale</th></tr>
 				<tr><th class="centred"><span class="dotted" title="Lydian">Lyd</span></th><th class="centred"><span class="dotted" title="Major (Ionian)">Maj</span></th><th class="centred"><span class="dotted" title="Mixolydian">Mix</span></th><th class="centred" style="color: grey;"><span class="dotted" title="Dorian">Dor</span></th><th class="centred"><span class="dotted" title="Minor (Aeolian)">Min</span></th>  <th class="centred"><span class="dotted" title="Phrygian">Phr</span></th><th class="centred"><span class="dotted" title="Locrian">Loc</span></th>                  <th class="leftborder rightborder"><span class="dotted accent" title="Key Signature">KS</span></th>                                          <th>A</th>      <th>B</th>      <th>C</th>      <th>D</th>      <th>E</th>      <th>F</th>      <th>G</th>      </tr>
@@ -423,6 +442,7 @@ window.onload = function () {makeAllSortable();};*/
 				<tr>               <td class="centred">F&#9837;</td><td class="centred">C&#9837;</td><td class="centred">G&#9837;</td><td class="centred">D&#9837;</td><td class="centred">A&#9837;</td><td class="centred">E&#9837;</td><td class="centred">B&#9837;</td><td class="centred leftborder rightborder accent">7&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td><td>&#9837;</td></tr>
 			</tbody>	
 		</table>
+
 		<ul>
 			<li>Notes on the above:
 				<ul>
@@ -450,11 +470,11 @@ window.onload = function () {makeAllSortable();};*/
 
 		<h1 id="circleoffifths" class="centred">Why is this happening?</h1>
 
-		<p>The simple answer is that, whether or not we&rsquo;ve realized it, we were traversing the circle of fifths the entire time. I mentioned near the top of this page that traveling from C Lydian to C Ionian was, in a sense, traveling from G major to C major. Here&rsquo;s the C table again. Notice how the &ldquo;relative major&rdquo; column traverses the circle of fifths downward:</p>
+		<p>The simple answer is that, whether or not we&rsquo;ve realized it, we were traversing the circle of fifths the entire time. I mentioned near the top of this page that traveling from C Lydian to C Ionian was, in a sense, traveling from G major to C major. Here&rsquo;s the C table again. Note how &ldquo;relative major&rdquo; traverses the circle of fifths downward:</p>
 
 		<table id="c2">
 			<thead>
-				<tr><th colspan="13" class="centred accent"><strong><strong><strong>C</strong></strong></strong></th></tr>
+				<tr><th colspan="13" class="centred accent"><strong><strong><strong>C++</strong></strong></strong></th></tr>
 				<tr>                    <th class="centred">#</th>           <th>Root</th>                                <th>Mode</th>                <th><span class="dotted" title="Relative Major">RM</span></th><th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th>                      <th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th>                      </tr>
 			</thead>
 			<tbody>
@@ -468,11 +488,11 @@ window.onload = function () {makeAllSortable();};*/
 			</tbody>
 		</table>
 
-		<p>The key is that each of these modes, apart from C Ionian, has been rearranging a different major scale. If we reshuffle each mode back into its Ionian form:</p>
+		<p>The explanation is that each of these modes, apart from C Ionian, has been rearranging a different major scale. By reshuffling each mode back into its Ionian form:</p>
 
-		<table id="c3">
+		<table id="itwasmedio">
 			<thead>
-				<tr><th colspan="12" class="centred accent">You expected modes, but it was me, the circle of fifths</th></tr>
+				<tr><th colspan="12" class="centred accent">You were expecting modes, but it was me, <del class="thick">Dio</del> the circle of fifths!</th></tr>
 				<tr>                    <th class="centred">#</th>           <th>Original Mode</th>       <th>Root</th>                    <th class="rightborder"><span class="dotted" title="Key Signature">KS</span></th><th class="left">1</th>                      <th class="left">2</th>                      <th class="left">3</th>                      <th class="left">4</th>                      <th class="left">5</th>                      <th class="left">6</th>                      <th class="left">7</th>                      <th class="left">1</th>                      </tr>
 			</thead>
 			<tbody>
@@ -486,13 +506,13 @@ window.onload = function () {makeAllSortable();};*/
 			</tbody>
 		</table>
 
-		<p>And perhaps here this makes it clearer what&rsquo;s been going on this whole time: <em>every</em> note of <em>every</em> scale in this table is, in fact, a perfect fifth below its predecessor.</p>
+		<p>We may get a clearer sense of what&rsquo;s been going on this whole time: <em>every</em> note of <em>every</em> scale in this table is, in fact, a perfect fifth below its predecessor. Almost every other pattern we can observe that follows the circle of fifths in some fashion is a direct consequence of this.</p>
 
 		<h1 id="chordanalysis" class="centred">Chord Analysis by Mode</h1> 
 
-		<table>
+		<table id="chordtonalities">
 			<thead>
-				<tr><th colspan="9" class="centred accent">Chord Tonalities by Scale Position and Mode</th></tr>
+				<tr><th colspan="9" class="centred accent">Chord Tonalities by Scale Position &amp; Mode</th></tr>
 				<tr><th class="rightborder" colspan="2">Mode</th><th>I</th><th>II</th><th>III</th><th>IV</th><th>V</th><th>VI</th><th>VII</th></tr>
 			</thead>
 			<tbody>
@@ -506,96 +526,208 @@ window.onload = function () {makeAllSortable();};*/
 			</tbody>
 		</table>
 
+		<ul>
+			<li>I&rsquo;ve printed the root (I), dominant (V), and subdominant (IV) chords of each mode in <strong><strong class="bold">bold</strong></strong> &ndash; they are especially important to the mode&rsquo;s tonality.</li>
+			<li>I&rsquo;ve printed the seventh chord in <span class="light">lighter text</span> because it&rsquo;s diminished in the major scale.</li>
+			<li>Minor chords are <span class="accent">blue</span>; diminished chords are <span class="orange">orange</span>.</li>
+			<li>Printing the chords this way makes it clearer why Ionian became the standard major key and Aeolian became the natural minor key: the root, dominant, and subdominant are all major in Ionian mode and all minor in Aeolian mode. This makes them feel, respectively, <em>especially</em> major and <em>especially</em> minor.</li>
+			<li>Since their root chords are major, Lydian and Mixolydian still sound more &ldquo;major&rdquo; than the other modes (except Ionian), and Dorian and Phrygian still sound more &ldquo;minor&rdquo; than the others (except Aeolian). Locrian, as mentioned, is the oddball because it&rsquo;s the only mode of the scale whose root chord is diminished.</li>
+		</ul>
+
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+
+		<h1 class="centred" id="otherscales">Other Scales &amp; Tonalities</h1>
+
+		Although this page focuses on modes of the major scale, numerous possible scales (and modes thereof) don&rsquo;t fit its pattern, such as:
+		<ul>
+			<li>The twelve-note chromatic scale (though works that use the entire twelve-note scale are quite rare and mostly considered avant-garde).</li>
+			<li>Numerous seven-note scales that <em>aren&rsquo;t</em> modes of the major scale. I&rsquo;ve rooted the following examples (many of which are common in jazz) in C:
+				<table id="sevennotescales">
+					<thead>
+						<tr class="centred accent"><th colspan="9">Other Seven-Note Scales</th></tr>
+						<tr><th colspan="2">Scale</th>                                                                        <th class="leftborder left">1</th>                              <th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th></tr>
+					</thead>
+					<tbody>
+						<tr><td class="weight4 centred" colspan="2">Ascending melodic minor</td>                              <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F</td>             <td>G</td>             <td>A</td>             <td>B</td>             </tr>
+						<tr><td class="weight4 right">Dorian &#9837;2</td>   <td class="weight4">Phrygian &#9839;6</td>       <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E&#9837;</td>      <td>F</td>             <td>G</td>             <td>A</td>             <td>B&#9837;</td>      </tr>
+						<tr><td class="weight4 centred" colspan="2">Lydian augmented</td>                                     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E</td>             <td>F&#9839;</td>      <td>G&#9839;</td>      <td>A</td>             <td>B</td>             </tr>
+						<tr><td class="weight4 right">Lydian dominant</td>   <td class="weight4">Mixolydian &#9839;4</td>     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E</td>             <td>F&#9839;</td>      <td>G</td>             <td>A</td>             <td>B&#9837;</td>      </tr>
+						<tr><td class="weight4 right">Aeolian dominant</td>  <td class="weight4">Mixolydian &#9837;6</td>     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E</td>             <td>F</td>             <td>G</td>             <td>A&#9837;</td>      <td>B&#9837;</td>      </tr>
+						<tr><td class="weight4 right">Aeolian &#9837;5</td>  <td class="weight4">Locrian &#9839;2</td>        <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F</td>             <td>G&#9837;</td>      <td>A&#9837;</td>      <td>B&#9837;</td>      </tr>
+						<tr><td class="weight4 right">Super-Locrian</td>     <td class="weight4">Altered dominant</td>        <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E&#9837;</td>      <td>F&#9837;</td>      <td>G&#9837;</td>      <td>A&#9837;</td>      <td>B&#9837;</td>      </tr>
+						<tr><td class="weight4 right">Harmonic minor</td>    <td class="weight4">Aeolian &#9839;7</td>        <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F</td>             <td>G</td>             <td>A&#9837;</td>      <td>B</td>             </tr>
+						<tr><td class="weight4 centred" colspan="2">Locrian &#9838;6</td>                                     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E&#9837;</td>      <td>F</td>             <td>G&#9837;</td>      <td>A</td>             <td>B&#9837;</td>      </tr>
+						<tr><td class="weight4 right">Augmented major</td>   <td class="weight4">Ionian &#9839;5</td>         <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E</td>             <td>F</td>             <td>G&#9839;</td>      <td>A</td>             <td>B</td>             </tr>
+						<tr><td class="weight4 centred" colspan="2">Hungarian minor</td>                                      <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F&#9839;</td>      <td>G</td>             <td>A&#9837;</td>      <td>B</td>             </tr>
+						<tr><td class="weight4 centred" colspan="2">Ukrainian Dorian</td>                                     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F&#9839;</td>      <td>G</td>             <td>A</td>             <td>B&#9837;</td>      </tr>
+						<tr><td class="weight4 centred" colspan="2">Phrygian dominant</td>                                    <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E</td>             <td>F</td>             <td>G</td>             <td>A&#9837;</td>      <td>B&#9837;</td>      </tr>
+						<tr><td class="weight4 centred" colspan="2">Lydian &#9839;2</td>                                      <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9839;</td>      <td>E</td>             <td>F&#9839;</td>      <td>G</td>             <td>A</td>             <td>B</td>             </tr>
+						<tr><td class="weight4 right">Altered diminished</td><td class="weight4">Super-Locrian &#119083;2</td><td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E&#9837;</td>      <td>F&#9839;</td>      <td>G&#9839;</td>      <td>A&#9837;</td>      <td>B&#119083;</td>    </tr>
+					</tbody>
+				</table>
+				<div>This list is far from exhaustive and doesn&rsquo;t even delve into scales with different ascents and descents. (I also didn&rsquo;t list every name of some scales on this list; some have at least four.)</div>
+				However, one thing distinguishes these scales from the modes of the major scale: it&rsquo;s possible to print every mode of every major scale with no accidentals outside the key signature, but every single scale in the above table would require accidentals for at least some of its notes. Traditional key signature notation is strictly based on major scales and the circle of fifths; using a key signature with three flats that weren&rsquo;t B&#9837;, E&#9837;, and A&#9837; would just confuse readers.</li>
+			<li>There are also, naturally, scales that use fewer than seven notes; pentatonic (five-note) scales are quite common in rock, blues, and jazz music, though they&rsquo;re much older than that and exist in many cultures. Six-note scales are also fairly common (including whole-tone scales).</li>
+			<li>Scales may also have more than seven notes; eight- and nine-note scales are common in blues and jazz.</li>
+			<li>And of course, all of the above is based on the <a href="https://en.wikipedia.org/wiki/12_equal_temperament" target="_blank">twelve-tone equal temperament</a> used in the vast majority of Western music from the last five centuries. Plenty of other tunings have been and still are used, though; there&rsquo;s nothing even restricting the number of notes per octave to twelve. For instance:
+				<ul>
+					<li>A <a href="https://en.wikipedia.org/wiki/Quarter tone" target="_blank">twenty-four-note scale</a> is common in Arabic and Turkic music.</li>
+					<li>Indian <a href="https://en.wikipedia.org/wiki/Raga" target="_blank">r&amacr;gas</a> <span class="light">(Sanskrit: राग)</span> typically use anywhere from four to seven <em>svaras</em> <span class="light">(Sanskrit: स्वर; roughly comparable to the notes of a Western diatonic scale)</span> selected from the <a href="https://en.wikipedia.org/wiki/Shruti_(music)" target="_blank">twenty-two <em>&sacute;r&uacute;tis</em></a> <span class="light">(Sanskrit: श्रुति; roughly comparable to the Western twelve-note chromatic scale, except with ten more notes)</span>.</li>
+					<li>Experimental Western musicians also occasionally use alternate temperaments. Here are a few recent rock and metal examples, in increasing order of heaviness:
+						<ul>
+							<li><a href="https://kinggizzard.bandcamp.com/album/flying-microtonal-banana"><em>Flying Microtonal Banana</em></a> by King Gizzard & the Lizard Wizard (24-tone scale)</li>
+							<li><a href="https://votsband.bandcamp.com/album/nowherer" target="_blank"><em>Nowherer</em></a> by Victory over the Sun (17-tone scale)</li>
+							<li>any metal album by <a href="https://jutegyte.bandcamp.com/music" target="_blank">Jute Gyte</a> since <em>Discontinuities</em> (also 24-tone scale)</li>
+						</ul>
+					</li>
+					<li>Ancient Greek scales, as we shall see in the next section, also used microtonality in some cases.</li>
+				</ul>
+			</li>
+		</ul> 
+
+		<h1 class="centred" id="etymology">Etymology</h1>
+
+		<p>All seven of these modes trace their etymologies to ancient Greek regions, tribes, or both:</p>
+
+		<table id="etymologytable">
+			<thead>
+				<tr class="centred accent">
+					<th colspan="5">
+						Ἡ ἐτῠμολογῐ́ᾱ τῶν ἤχων<br />
+						<span class="italic weight3">(H&emacr; etumolog&iacute;&amacr; t&ocirc;n &#7703;kh&omacr;n)<br /></span>
+						<span class="light">[Etymology of Musical Modes]</span>
+					</th>
+				</tr>
+				<tr><th>#</th><th>Mode</th>      <th>Greek</th>                             <th>Romanized</th>                                                    <th class="leftborder">Reference</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>1</td><td>Ionian</td>    <td class="weight2">Ἰωνία</td>             <td class="italic weight2">I&omacr;n&iacute;a</td>                    <td class="leftborder weight1">region on the western coast of Anatolia (modern Turkey)</td></tr>
+				<tr><td>2</td><td>Dorian</td>    <td class="weight2">Δωρῐεύς</td>           <td class="italic weight2">D&omacr;rie&uacute;s</td>                  <td class="leftborder weight1">one of the four major Hellenic tribes</td></tr>
+				<tr><td>3</td><td>Phrygian</td>  <td class="weight2">Φρῠγῐ́ᾱ</td>            <td class="italic weight2">Phrug&iacute;&amacr;</td>                  <td class="leftborder weight1">kingdom in west-central Anatolia</td></tr>
+				<tr><td>4</td><td>Lydian</td>    <td class="weight2">Λῡδῐ́ᾱ</td>             <td class="italic weight2">L&umacr;d&iacute;&amacr;</td>              <td class="leftborder weight1">Anatolian kingdom most famously ruled by Croesus</td></tr>
+				<tr><td>5</td><td>Mixolydian</td><td class="weight2 nowrap">μιξο-Λῡ́δῐος</td><td class="italic weight2" class="nowrap">mixo-L&umacr;&#769;dios</td><td class="leftborder weight1">literally &ldquo;mixed Lydian&rdquo;</td></tr>
+				<tr><td>6</td><td>Aeolian</td>   <td class="weight2">Αἰολῐ́ᾱ</td>            <td class="italic weight2">Aiol&iacute;&amacr;</td>                   <td class="leftborder weight1">region of northwestern Anatolia</td></tr>
+				<tr><td>7</td><td>Locrian</td>   <td class="weight2">Λοκρῐ́ς</td>            <td class="italic weight2">Lokr&iacute;s</td>                         <td class="leftborder weight1"><a href="https://en.wikipedia.org/wiki/Locris" target="_blank"><span class="weight2">Three separate regions</span></a> of ancient Greece</td></tr>
+			</tbody>
+		</table>
+		
+		<p>However, they really don&rsquo;t have anything to do with the regions or tribes they were named after, or even the ancient Greek <em>tonoi</em> (singular: <em>tonos</em>) that in many cases shared their names; it was more a case of &ldquo;medieval Europeans thought it&rsquo;d be cool to name their modes after aspects of Ancient Greece.&rdquo;</p>
+
+		<p>(<em>Tonos</em> comes from the ancient Greek <em>ὁ τόνος</em>, <em>ho t&oacute;nos</em>, meaning cord, chord, note, tone, or tension; its dual nominative form was <em>τὼ τόνω</em>, <em>tṑ t&oacute;n&omacr;</em>, and its plural nominative form was <em>οἱ τόνοι</em>, <em>hoi t&oacute;noi</em>.)</p>
+
+				
+
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+
+		<h1 class="centred" id="tonoi">Ancient Greek <em>Tonoi</em> &amp; Modern Modes</h1>
+
+		<p>The following is by necessity an oversimplification, since the ancient Greeks didn&rsquo;t possess <em>one</em> music theory; Archytas (Ἀρχύτας), Aristoxenus (Ἀριστόξενος ὁ Ταραντῖνος, <em>Arist&oacute;xenos ho Tarant&iacute;nos</em>), Ptolemy (Πτολεμαῖος, <em>Ptolemaios</em>), and others had quite different conceptions. <a href="https://en.wikipedia.org/wiki/Musical_system_of_ancient_Greece" target="_blank">Wikipedia</a> has <a href="https://en.wikipedia.org/wiki/Octave_species" target="_blank">much, much more</a> on the subject; the <a href="https://en.xen.wiki/w/24edo_scales" target="_blank">Xenharmonic wiki</a> and <a href="https://web.archive.org/web/20120308164408/www.midicode.com/tunings/greek.shtml" target="_blank">Midicode</a> have also been useful resources.</p>
+
+		<p>I&rsquo;ll be using numbers to represent the intervals of ancient Greek harmony as follows:</p>
+
+		<table id="intervalkey">
+			<thead>
+				<tr><th class="centred accent" colspan="3">Interval Key</th></tr>
+				<tr><th class="rightborder">#</th>                    <th>Interval</th>                        <th>Tone</th>                           </tr>
+			</thead>
+			<tbody>
+				<tr><td class="number rightborder">&nbsp;&frac14;</td><td class="weight2">Downminor second</td><td class="weight2">Quarter-tone</td>   </tr>
+				<tr><td class="number rightborder">&nbsp;&frac12;</td><td class="weight2">Minor second</td>    <td class="weight2">Semitone</td>       </tr>
+				<tr><td class="number rightborder">1&nbsp;</td>       <td class="weight2">Major second</td>    <td class="weight2">Whole tone</td>     </tr>
+				<tr><td class="number rightborder">1&frac12;</td>     <td class="weight2">Minor third          <td class="weight2">Three semitones</td></td>
+				<tr><td class="number rightborder">2&nbsp;</td>       <td class="weight2">Major third          <td class="weight2">Two whole tones</td></tr>
+			</tbody>
+		</table>
+
+
+		<p>This is by necessity an oversimplification as well, not least since the intervals differed somewhat depending on who was defining them, but it&rsquo;s close enough for introductory purposes. (&ldquo;Downminor second&rdquo; refers to the smallest interval in 24-tone equal temperament, which adds another 12 notes halfway between the existing notes of modern 12-tone equal temperament.)</p>
+
+		<p>The same ancient Greek <em>tonos</em> could actually use any of three genera (singular: genus). Each <em>tonos</em> contained two tetrachords (sets of four notes) whose spacing differed depending on the genus, with a major second completing the octave (though in some cases, it occurred between the tetrachords, and in others, it occurred either before or after them; additionally, several <em>tonoi</em> split one tetrachord). All three genera used one interval once per tetrachord and another interval twice, in the following order:</p>
+
+		<table id="intervalgenera">
+			<thead>
+				<tr><th class="centred accent" colspan="4">Interval Genera: A Feed from Cloud Mountain</th></tr>
+				<tr><th class="rightborder">Genus</th>             <th>First interval</th>                  <th>Second interval</th>                <th>Third interval</th></tr>
+			</thead>
+			<tbody>
+				<tr><td class="weight4 rightborder">Enharmonic</td><td class="weight2">Downminor second</td><td class="weight2">Downminor second</td><td class="weight2">Major third</td> </tr>
+				<tr><td class="weight4 rightborder">Chromatic</td> <td class="weight2">Minor second</td>    <td class="weight2">Minor second</td>    <td class="weight2">Minor third</td> </tr>
+				<tr><td class="weight4 rightborder">Diatonic</td>  <td class="weight2">Minor second</td>    <td class="weight2">Major second</td>    <td class="weight2">Major second</td></tr>
+			</tbody>
+		</table>
+
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+
+		<p>Each <em>tonos</em> contained two tetrachords, with a major second to complete the octave. A few notes:
 			<ul>
-				<li>I&rsquo;ve printed the root (I), dominant (V), and subdominant (IV) chords of each mode in <strong><strong class="bold">bold</strong></strong> &ndash; they are especially important to the mode&rsquo;s tonality.</li>
-				<li>I&rsquo;ve printed the seventh chord in <span class="light">lighter text</span> because it&rsquo;s diminished in the major scale.</li>
-				<li>Minor chords are <span class="accent">blue</span>; diminished chords are <span class="orange">orange</span>.</li>
-				<li>Printing the chords this way makes it clearer why Ionian became the standard major key and Aeolian became the natural minor key: the root, dominant, and subdominant are all major chords in Ionian mode and are are all minor chords in Aeolian mode. This makes them feel, respectively, <em>especially</em> major and <em>especially</em> minor.</li>
-				<li>Because their root chords are major, Lydian and Mixolydian still sound more &ldquo;major&rdquo; than the other modes (that aren&rsquo;t Ionian), and Dorian and Phrygian still sound more &ldquo;minor&rdquo;. Locrian, as mentioned, is the oddball because it&rsquo;s the only mode of the scale that uses a diminished chord as its root.</li>
+				<li>In Greek harmony, scales were played in descending order; I&rsquo;ve rearranged the notes into ascending order to keep them consistent with the scales on the rest of this page.</li>
+				<li>I&rsquo;ve printed intervals rather than notes because the notation for microtones is extremely confusing if you&rsquo;re not already familiar with it. Hopefully, the intervals are slightly easier to understand.</li>
+				<li>I&rsquo;ve placed borders between the tetrachords (again, four <em>tonoi</em> split one of their tetrachords) and around the extra whole step (whose background I&rsquo;ve also highlighted).</li>
+				<li>I&rsquo;ve printed the modern modes with <span class="accent">blue text</span> and brighter borders, with a thicker border below since the next <em>tonos</em> will not be related.</li>
+				<li>I&rsquo;ve printed the <em>tonoi</em> in the order Greek harmony assigned them: Mixolydian (modern Locrian&rsquo;s equivalent) first, Hypodorian (modern Aeolian&rsquo;s equivalent) last.</li>
+				<li>Our Dorian, Phrygian, Lydian, and Mixolydian modes don&rsquo;t match up with the similarly named diatonic <em>tonoi</em> due to medieval Europeans&rsquo; poor understanding of ancient Greek.</li>
 			</ul>
+			Here are all three genera of all seven <em>tonoi</em>, followed by the diatonic genus&rsquo; modern equivalent:
+		
+		<table id="tonoiintervals">
+			<thead>
+				<tr><th colspan="10" class="centred accent">Intervals of Ancient Greek <em>Tonoi</em> &amp; Modern Diatonic Modes</th></tr>
+				<tr>
+					<th>Mode</th><th class="rightborder">Genus</th><th class="number">1</th><th class="number">2</th><th class="number">3</th><th class="number">4</th><th class="number">5</th><th class="number">6</th><th class="number">7</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>                            <td class="weight4 right">Mixolydian</td>  <td class="weight2 rightborder">Enharmonic</td>  <td class="number">&nbsp;&frac14;</td>   <td class="number">&nbsp;&frac14;</td>                    <td class="number">2&nbsp;</td>                           <td class="number mediumleftborder">&nbsp;&frac14;</td>   <td class="number">&nbsp;&frac14;</td>                    <td class="number">2&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td></tr>
+				<tr>                            <td class="weight4 right">Mixolydian</td>  <td class="weight2 rightborder">Chromatic</td>   <td class="number">&nbsp;&frac12;</td>   <td class="number">&nbsp;&frac12;</td>                    <td class="number">1&frac12;</td>                         <td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">&nbsp;&frac12;</td>                    <td class="number">1&frac12;</td>                         <td class="number mediumleftborder highlight">1&nbsp;</td></tr>
+				<tr class="mediumbottomborder"> <td class="weight4 right">Mixolydian</td>  <td class="weight2 rightborder">Diatonic</td>    <td class="number">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1</td>                                 <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td></tr>
+				<tr class="accent bottomborder"><td class="weight4 right">Locrian</td>     <td class="weight2 rightborder">Modern</td>      <td class="number">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1</td>                                 <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td></tr>
+				<tr>                            <td class="weight4 right">Lydian</td>      <td class="weight2 rightborder">Enharmonic</td>  <td class="number">&nbsp;&frac14;</td>   <td class="number">2&nbsp;</td>                           <td class="number mediumleftborder">&nbsp;&frac14;</td>   <td class="number">&nbsp;&frac14;</td>                    <td class="number">2&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac14;</td>   </tr>
+				<tr>                            <td class="weight4 right">Lydian</td>      <td class="weight2 rightborder">Chromatic</td>   <td class="number">&nbsp;&frac12;</td>   <td class="number">1&frac12;</td>                         <td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&frac12;</td>                         <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   </tr>
+				<tr class="mediumbottomborder"> <td class="weight4 right">Lydian</td>      <td class="weight2 rightborder">Diatonic</td>    <td class="number">1&nbsp;</td>          <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   </tr>
+				<tr class="accent bottomborder"><td class="weight4 right">Ionian</td>      <td class="weight2 rightborder">Modern</td>      <td class="number">1&nbsp;</td>          <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   </tr>
+				<tr>                            <td class="weight4 right">Phrygian</td>    <td class="weight2 rightborder">Enharmonic</td>  <td class="number">2&nbsp;</td>          <td class="number mediumleftborder">&nbsp;&frac14;</td>   <td class="number">&nbsp;&frac14;</td>                    <td class="number">2&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac14;</td>   <td class="number">&nbsp;&frac14;</td>                    </tr>
+				<tr>                            <td class="weight4 right">Phrygian</td>    <td class="weight2 rightborder">Chromatic</td>   <td class="number">1&frac12;</td>        <td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">&nbsp;&frac12;</td>                    <td class="number">1&frac12;</td>                         <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">&nbsp;&frac12;</td>                    </tr>
+				<tr class="mediumbottomborder"> <td class="weight4 right">Phrygian</td>    <td class="weight2 rightborder">Diatonic</td>    <td class="number">1&nbsp;</td>          <td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           </tr>
+				<tr class="accent bottomborder"><td class="weight4 right">Dorian</td>      <td class="weight2 rightborder">Modern</td>      <td class="number">1&nbsp;</td>          <td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           </tr>
+				<tr>                            <td class="weight4 right">Dorian</td>      <td class="weight2 rightborder">Enharmonic</td>  <td class="number">&nbsp;&frac14;</td>   <td class="number">&nbsp;&frac14;</td>                    <td class="number">2&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac14;</td>   <td class="number">&nbsp;&frac14;</td>                    <td class="number">2&nbsp;</td>                           </tr>
+				<tr>                            <td class="weight4 right">Dorian</td>      <td class="weight2 rightborder">Chromatic</td>   <td class="number">&nbsp;&frac12;</td>   <td class="number">&nbsp;&frac12;</td>                    <td class="number">1&frac12;</td>                         <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">&nbsp;&frac12;</td>                    <td class="number">1&frac12;</td>                         </tr>
+				<tr class="mediumbottomborder"> <td class="weight4 right">Dorian</td>      <td class="weight2 rightborder">Diatonic</td>    <td class="number">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           </tr>
+				<tr class="accent bottomborder"><td class="weight4 right">Phrygian</td>    <td class="weight2 rightborder">Modern</td>      <td class="number">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           </tr>
+				<tr>                            <td class="weight4 right">Hypolydian</td>  <td class="weight2 rightborder">Enharmonic</td>  <td class="number">&frac14;&nbsp;</td>   <td class="number">2&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac14;</td>   <td class="number">&nbsp;&frac14;</td>                    <td class="number">2&nbsp;</td>                           <td class="number mediumleftborder">&nbsp;&frac14;</td>   </tr>
+				<tr>                            <td class="weight4 right">Hypolydian</td>  <td class="weight2 rightborder">Chromatic</td>   <td class="number">&frac12;&nbsp;</td>   <td class="number">1&frac12;</td>                         <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">&nbsp;&frac12;</td>                    <td class="number">1&frac12;</td>                         <td class="number mediumleftborder">&nbsp;&frac12;</td>   </tr>
+				<tr class="mediumbottomborder"> <td class="weight4 right">Hypolydian</td>  <td class="weight2 rightborder">Diatonic</td>    <td class="number">1&nbsp;</td>          <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder">&nbsp;&frac12;</td>   </tr>
+				<tr class="accent bottomborder"><td class="weight4 right">Lydian</td>      <td class="weight2 rightborder">Modern</td>      <td class="number">1&nbsp;</td>          <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder">&nbsp;&frac12;</td>   </tr>
+				<tr>                            <td class="weight4 right">Hypophrygian</td><td class="weight2 rightborder">Enharmonic</td>  <td class="number">2&nbsp;</td>          <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac14;</td>                    <td class="number">&nbsp;&frac14;</td>                    <td class="number">2&nbsp;</td>                           <td class="number mediumleftborder">&frac14;&nbsp;</td>   <td class="number">&nbsp;&frac14;</td>                    </tr>
+				<tr>                            <td class="weight4 right">Hypophrygian</td><td class="weight2 rightborder">Chromatic</td>   <td class="number">1&frac12;</td>        <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>                    <td class="number">&nbsp;&frac14;</td>                    <td class="number">1&frac12;</td>                         <td class="number mediumleftborder">&frac12;&nbsp;</td>   <td class="number">&nbsp;&frac12;</td>                    </tr>
+				<tr class="mediumbottomborder"> <td class="weight4 right">Hypophrygian</td><td class="weight2 rightborder">Diatonic</td>    <td class="number">1&nbsp;</td>          <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>                    <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder">&frac12;&nbsp;</td>   <td class="number">1&nbsp;</td>                           </tr>
+				<tr class="accent bottomborder"><td class="weight4 right">Mixolydian</td>  <td class="weight2 rightborder">Modern</td>      <td class="number">1&nbsp;</td>          <td class="number mediumleftborder highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>                    <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder">&frac12;&nbsp;</td>   <td class="number">1&nbsp;</td>                           </tr>
+				<tr>                            <td class="weight4 right">Hypodorian</td>  <td class="weight2 rightborder">Enharmonic</td>  <td class="number highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac14;</td>   <td class="number">&nbsp;&frac14;</td>                    <td class="number">2&nbsp;</td>                           <td class="number mediumleftborder">&nbsp;&frac14;</td>   <td class="number">&frac14;&nbsp;</td>                    <td class="number">2&nbsp;</td>                           </tr>
+				<tr>                            <td class="weight4 right">Hypodorian</td>  <td class="weight2 rightborder">Chromatic</td>   <td class="number highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">&nbsp;&frac12;</td>                    <td class="number">1&frac12;</td>                         <td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">&frac12;&nbsp;</td>                    <td class="number">1&frac12;</td>                         </tr>
+				<tr class="mediumbottomborder"> <td class="weight4 right">Hypodorian</td>  <td class="weight2 rightborder">Diatonic</td>    <td class="number highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           </tr>
+				<tr class="accent bottomborder"><td class="weight4 right">Aeolian</td>     <td class="weight2 rightborder">Modern</td>      <td class="number highlight">1&nbsp;</td><td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           <td class="number mediumleftborder">&nbsp;&frac12;</td>   <td class="number">1&nbsp;</td>                           <td class="number">1&nbsp;</td>                           </tr>
+			</tr>
+			</tbody>
+		</table>
 
-			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+		<!--<table>
+			<thead>
+				<tr><th colspan="10">Ancient Dorian, Modern Phrygian (Notes)</th></tr>
+				<tr>
+					<th>Mode</th><th class="rightborder">Genus</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><td class="weight4 right">Dorian</td><td class="weight2 rightborder">Enharmonic</td>  <td>E</td><td>F&#119091;</td><td>G&#119083;</td>       <td>A</td><td>B</td><td>C&#119091;</td><td>D&#119083;</td>       <td>E</td></tr>
+				<tr><td class="weight4 right">Dorian</td><td class="weight2 rightborder">Chromatic</td>   <td>E</td><td>F</td>         <td>G&#9837;</td>         <td>A</td><td>B</td><td>C</td>         <td>D&#9837;</td>         <td>E</td></tr>
+				<tr><td class="weight4 right">Dorian</td><td class="weight2 rightborder">Diatonic</td>    <td>E</td><td>F</td>         <td>G</td>                <td>A</td><td>B</td><td>C</td>         <td>D</td>                <td>E</td></tr>
+				<tr><td class="weight4 right">Phrygian</td><td class="weight2 rightborder">Enharmonic</td><td>D</td><td>E&#119082;</td><td>F&#9839;&#119090;</td><td>G</td><td>A</td><td>B&#119082;</td><td>C&#9839;&#119090;</td><td>D</td></tr>
+			</tbody>
+		</table>-->
 
-			<h1 class="centred" id="otherscales">Other Scales &amp; Tonalities</h1>
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
-			Although this page focuses on modes of the major scale, numerous possible scales (and modes thereof) don&rsquo;t fit its pattern, such as:
-			<ul>
-				<li>The twelve-note chromatic scale (though works that use the entire twelve-note scale are quite rare and mostly considered avant-garde).</li>
-				<li>Numerous seven-note scales that <em>aren&rsquo;t</em> modes of the major scale. I&rsquo;ve rooted the following examples (many of which are common in jazz) in C:
-					<table id="sevennotescales">
-						<thead>
-							<tr class="centred accent"><th colspan="9">Other Seven-Note Scales</th></tr>
-							<tr><th colspan="2">Scale</th>                                                                        <th class="leftborder left">1</th>                              <th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left">7</th></tr>
-						</thead>
-						<tbody>
-							<tr><td class="weight4 centred" colspan="2">Ascending melodic minor</td>                              <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F</td>             <td>G</td>             <td>A</td>             <td>B</td>             </tr>
-							<tr><td class="weight4 right">Dorian &#9837;2</td>   <td class="weight4">Phrygian &#9839;6</td>       <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E&#9837;</td>      <td>F</td>             <td>G</td>             <td>A</td>             <td>B&#9837;</td>      </tr>
-							<tr><td class="weight4 centred" colspan="2">Lydian augmented</td>                                     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E</td>             <td>F&#9839;</td>      <td>G&#9839;</td>      <td>A</td>             <td>B</td>             </tr>
-							<tr><td class="weight4 right">Lydian dominant</td>   <td class="weight4">Mixolydian &#9839;4</td>     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E</td>             <td>F&#9839;</td>      <td>G</td>             <td>A</td>             <td>B&#9837;</td>      </tr>
-							<tr><td class="weight4 right">Aeolian dominant</td>  <td class="weight4">Mixolydian &#9837;6</td>     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E</td>             <td>F</td>             <td>G</td>             <td>A&#9837;</td>      <td>B&#9837;</td>      </tr>
-							<tr><td class="weight4 right">Aeolian &#9837;5</td>  <td class="weight4">Locrian &#9839;2</td>        <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F</td>             <td>G&#9837;</td>      <td>A&#9837;</td>      <td>B&#9837;</td>      </tr>
-							<tr><td class="weight4 right">Super-Locrian</td>     <td class="weight4">Altered dominant</td>        <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E&#9837;</td>      <td>F&#9837;</td>      <td>G&#9837;</td>      <td>A&#9837;</td>      <td>B&#9837;</td>      </tr>
-							<tr><td class="weight4 right">Harmonic minor</td>    <td class="weight4">Aeolian &#9839;7</td>        <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F</td>             <td>G</td>             <td>A&#9837;</td>      <td>B</td>             </tr>
-							<tr><td class="weight4 centred" colspan="2">Locrian &#9838;6</td>                                     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E&#9837;</td>      <td>F</td>             <td>G&#9837;</td>      <td>A</td>             <td>B&#9837;</td>      </tr>
-							<tr><td class="weight4 right">Augmented major</td>   <td class="weight4">Ionian &#9839;5</td>         <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E</td>             <td>F</td>             <td>G&#9839;</td>      <td>A</td>             <td>B</td>             </tr>
-							<tr><td class="weight4 centred" colspan="2">Hungarian minor</td>                                      <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F&#9839;</td>      <td>G</td>             <td>A&#9837;</td>      <td>B</td>             </tr>
-							<tr><td class="weight4 centred" colspan="2">Ukrainian Dorian</td>                                     <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D</td>             <td>E&#9837;</td>      <td>F&#9839;</td>      <td>G</td>             <td>A</td>             <td>B&#9837;</td>      </tr>
-							<tr><td class="weight4 centred" colspan="2">Phrygian dominant</td>                                    <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E</td>             <td>F</td>             <td>G</td>             <td>A&#9837;</td>      <td>B&#9837;</td>      </tr>
-							<tr><td class="weight4 centred" colspan="2">Lydian &#9839;2</td>                                      <td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9839;</td>      <td>E</td>             <td>F&#9839;</td>      <td>G</td>             <td>A</td>             <td>B</td>             </tr>
-							<tr><td class="weight4 right">Altered diminished</td><td class="weight4">Super-Locrian &#119083;2</td><td class="leftborder">C<span class="hidden">&#9838;</span></td><td>D&#9837;</td>      <td>E&#9837;</td>      <td>F&#9839;</td>      <td>G&#9839;</td>      <td>A&#9837;</td>      <td>B&#119083;</td>    </tr>
-						</tbody>
-					</table>
-					<div>This list is far from exhaustive and doesn&rsquo;t even delve into scales with different ascents and descents. (I also didn&rsquo;t list every name of some scales on this list; some have at least four.)</div>
-					However, one thing distinguishes these scales from the modes of the major scale: it&rsquo;s possible to print every mode of every major scale with no accidentals outside the key signature, but every single scale in the above table would require accidentals for at least some of its notes. Traditional key signature notation is strictly based on major scales and the circle of fifths; using a key signature with three flats that weren&rsquo;t B&#9837;, E&#9837;, and A&#9837; would just confuse readers.</li>
-				<li>There are also, naturally, scales that use fewer than seven notes; pentatonic (five-note) scales are quite common in rock, blues, and jazz music, though they&rsquo;re much older than that and exist in many cultures. Six-note scales are also fairly common (including whole-tone scales).</li>
-				<li>Scales may also have more than seven notes; eight- and nine-note scales are common in blues and jazz.</li>
-				<li>And of course, all of the above is based on the <a href="https://en.wikipedia.org/wiki/12_equal_temperament" target="_blank">twelve-tone equal temperament</a> used in the vast majority of Western music from the last five centuries. Plenty of other tunings have been and still are used, though; there&rsquo;s nothing even restricting the number of notes per octave to twelve. For instance:
-					<ul>
-						<li>A <a href="https://en.wikipedia.org/wiki/Quarter tone" target="_blank">twenty-four-note scale</a> is common in Arabic and Turkic music.</li>
-						<li>Indian <a href="https://en.wikipedia.org/wiki/Raga" target="_blank">r&amacr;gas</a> <span class="light">(Sanskrit: राग)</span> typically use anywhere from four to seven <em>svaras</em> <span class="light">(Sanskrit: स्वर; roughly comparable to the notes of a Western diatonic scale)</span> selected from the <a href="https://en.wikipedia.org/wiki/Shruti_(music)" target="_blank">twenty-two <em>&sacute;r&uacute;tis</em></a> <span class="light">(Sanskrit: श्रुति; roughly comparable to the Western twelve-note chromatic scale, except with ten more notes)</span>.</li>
-						<li>Experimental Western musicians also occasionally use alternate temperaments. Here are a few recent rock and metal examples, in increasing order of heaviness:
-							<ul>
-								<li><a href="https://kinggizzard.bandcamp.com/album/flying-microtonal-banana"><em>Flying Microtonal Banana</em></a> by King Gizzard & the Lizard Wizard (24-tone scale)</li>
-								<li><a href="https://votsband.bandcamp.com/album/nowherer" target="_blank"><em>Nowherer</em></a> by Victory over the Sun (17-tone scale)</li>
-								<li>any metal album by <a href="https://jutegyte.bandcamp.com/music" target="_blank">Jute Gyte</a> since <em>Discontinuities</em> (also 24-tone scale)</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-			</ul> 
-
-			<h1 class="centred" id="etymology">Etymology</h1>
-
-			<p>All seven of these modes trace their etymologies to ancient Greek regions, tribes, or both:</p>
-
-			<table id="etymologytable">
-				<thead>
-					<tr class="centred accent">
-						<th colspan="5">
-							Ἡ ἐτῠμολογῐ́ᾱ τῶν ἤχων<br />
-							<span class="italic weight3">(H&emacr; etumolog&iacute;&amacr; t&ocirc;n &#7703;kh&omacr;n)<br /></span>
-							<span class="light">[Etymology of Musical Modes]</span>
-						</th>
-					</tr>
-					<tr><th>#</th><th>Mode</th>      <th>Greek</th>                             <th>Romanized</th>                                                    <th class="leftborder">Reference</th></tr>
-				</thead>
-				<tbody>
-					<tr><td>1</td><td>Ionian</td>    <td class="weight2">Ἰωνία</td>             <td class="italic weight2">I&omacr;n&iacute;a</td>                    <td class="leftborder weight1">region on the western coast of Anatolia (modern Turkey)</td></tr>
-					<tr><td>2</td><td>Dorian</td>    <td class="weight2">Δωρῐεύς</td>           <td class="italic weight2">D&omacr;rie&uacute;s</td>                  <td class="leftborder weight1">one of the four major Hellenic tribes</td></tr>
-					<tr><td>3</td><td>Phrygian</td>  <td class="weight2">Φρῠγῐ́ᾱ</td>            <td class="italic weight2">Phrug&iacute;&amacr;</td>                  <td class="leftborder weight1">kingdom in west-central Anatolia</td></tr>
-					<tr><td>4</td><td>Lydian</td>    <td class="weight2">Λῡδῐ́ᾱ</td>             <td class="italic weight2">L&umacr;d&iacute;&amacr;</td>              <td class="leftborder weight1">Anatolian kingdom most famously ruled by Croesus</td></tr>
-					<tr><td>5</td><td>Mixolydian</td><td class="weight2 nowrap">μιξο-Λῡ́δῐος</td><td class="italic weight2" class="nowrap">mixo-L&umacr;&#769;dios</td><td class="leftborder weight1">literally &ldquo;mixed Lydian&rdquo;</td></tr>
-					<tr><td>6</td><td>Aeolian</td>   <td class="weight2">Αἰολῐ́ᾱ</td>            <td class="italic weight2">Aiol&iacute;&amacr;</td>                   <td class="leftborder weight1">region of northwestern Anatolia</td></tr>
-					<tr><td>7</td><td>Locrian</td>   <td class="weight2">Λοκρῐ́ς</td>            <td class="italic weight2">Lokr&iacute;s</td>                         <td class="leftborder weight1"><a href="https://en.wikipedia.org/wiki/Locris" target="_blank"><span class="weight2">Three separate regions</span></a> of ancient Greece</td></tr>
-				</tbody>
-			</table>
-			
-			<p>However, they really don&rsquo;t have anything to do with the regions or tribes they were named after, or even the ancient Greek modes that shared their names; it was more a case of &ldquo;medieval Europeans thought it&rdquo;d be cool to name their modes after seven modes that were known to exist in Ancient Greece.&rdquo;</p>
-
-			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
-
-			<h1 class="centred" id="hewhofightsmonsters">Yes, but, why?</h1>
-		<p>I gazed into an eldritch dimension by writing a <span class="dotted" id="ftnt_ref02" title="I&rsquo;ve tentatively titled it &ldquo;Ὁ θρῆνος τῆς Λοκρῐ́δος&rdquo; [romanized: O thrínos tís Lokrĭdos], Ancient Greek for &ldquo;The Lament of Locris&rdquo;, but this may change. It&rsquo;s still unfinished, but I&rsquo;ve added it to Compositions 2023-2024, my collection of recent original compositions. In addition to Locrian mode, it also uses a different time signature every measure, from 1/8 in the first measure to 21/8 in the twenty-first, before the pattern repeats, which also makes it incredibly disorienting. Naturally, this is entirely intentional.">piece in Locrian mode<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span>. This was the result. I should&rsquo;ve listened to <span class="dotted" id="ftnt_ref03" title="&ldquo;He who fights monsters should see to it that he himself does not become a monster; and if you gaze for long into an abyss, the abyss gazes also into you.&rdquo; &ndash;Beyond Good and Evil, Aphorism 146">Nietzsche&rsquo;s warning about abysses.<a href="#ftnt02" class="noprintlink">&#8317;&sup3;&#8318;</a></p>
+		<h1 class="centred" id="hewhofightsmonsters">Yes, but, why?</h1>
+		<p>I gazed into an eldritch dimension by writing a <span class="dotted" id="ftnt_ref03" title="I&rsquo;ve tentatively titled it &ldquo;Ὁ θρῆνος τῆς Λοκρῐ́δος&rdquo; [romanized: O thrínos tís Lokrĭdos], Ancient Greek for &ldquo;The Lament of Locris&rdquo; (less literally, &ldquo;Locrian Lament&rdquo;), but this may change. It&rsquo;s still unfinished, but I&rsquo;ve added it to Compositions 2023-2024, my collection of recent original compositions. In addition to Locrian mode, it also uses a different time signature every measure, from 1/8 in the first measure to 21/8 in the twenty-first, before the pattern repeats, which also makes it incredibly disorienting. Naturally, this is entirely intentional.">piece in Locrian mode<a href="#ftnt03" class="noprintlink">&#8317;&sup3;&#8318;</a></span>. This was the result. I should&rsquo;ve heeded <span class="dotted" id="ftnt_ref04" title="&ldquo;He who fights monsters should see to it that he himself does not become a monster; and if you gaze for long into an abyss, the abyss gazes also into you.&rdquo; &ndash;Beyond Good and Evil, Aphorism 146">Nietzsche&rsquo;s warning about abysses.<a href="#ftnt04" class="noprintlink">&#8317;&#8308;&#8318;</a></p>
 
 		<p>(More seriously, my use of Locrian mode occasioned a discussion of what musical modes are, which in turn resulted in additional music theory discussion that sent me down a rabbit hole of mathematical patterns. This is probably the HTML equivalent of the bulletin board with string connecting pieces of a conspiracy, except that the conspiracy is ultimately just that music and mathematics are low-key the same thing. If you don&rsquo;t believe me, spend enough time studying calculus to understand <a href="https://en.wikipedia.org/wiki/Euler%27s_identity" target="_blank">Euler&rsquo;s identity</a> and you&rsquo;ll see the music in math.)</p>
 		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
@@ -610,17 +742,21 @@ window.onload = function () {makeAllSortable();};*/
 					<th class="middle"><strong>Note</strong></th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody class="weight1">
 				<tr>
 					<td class="integer"><a href="#ftnt_ref01" id="ftnt01" class="noprintlink"><strong>1</strong></a></td>
-					<td class="justify">I spent an unreasonable amount of time trying to formulate a pun on Marcel Duchamp&rsquo;s classic Modernist painting <em>Nude Descending a Staircase</em>, something along the lines of &lsquo;Lydian Descending a Scale&rsquo;, but every phrasing I formulated ultimately felt too awkward, shoehorned, and/or unhelpful&hellip; so I just created this not-at-all awkward, shoehorned, or unhelpful endnote instead.</td>
+					<td class="justify">I spent an unreasonable amount of time trying to formulate a pun on <strong>Marcel Duchamp</strong>&rsquo;s classic Modernist painting <em><strong>Nude Descending a Staircase</strong></em>, something along the lines of &lsquo;Lydian Descending a Scale&rsquo;, but every phrasing I formulated ultimately felt too awkward, shoehorned, and/or unhelpful&hellip; so I just created this not-at-all awkward, shoehorned, or unhelpful endnote instead.</td>
 				</tr>
 				<tr>
 					<td class="integer"><a href="#ftnt_ref02" id="ftnt02" class="noprintlink"><strong>2</strong></a></td>
-					<td class="justify" style="line-height: 125%;">I&rsquo;ve tentatively titled it &ldquo;Ὁ θρῆνος τῆς Λοκρῐ́δος&rdquo; [romanized: <em>O thrínos tís Lokrĭdos</em>], Ancient Greek for &ldquo;The Lament of Locris&rdquo;, but this may change. It&rsquo;s still unfinished, but I&rsquo;ve added it to <em><a href="music/compositions2023-2024.html">Compositions 2023-2024</a></em>, my collection of recent original compositions. In addition to Locrian mode, it also uses a different time signature every measure, from 1/8 in the first measure to 21/8 in the twenty-first, before the pattern repeats, which also makes it incredibly disorienting. Naturally, this is <em>entirely</em> intentional.</td>
+					<td class="justify">This means that if you&rsquo;ve ever misspelled <em>chord</em> as <em>cord</em> or <em>vice versa</em>, you weren&rsquo;t <em>entirely</em> wrong, especially since <em>chord</em> and <em>cord</em> both come from the ancient Greek <em>ἡ χορδή</em> (<em>h&emacr; khordḗ</em>). We can blame the French for the fact that the two senses are romanized differently, since they changed the Latin <em>chorda</em> to <em>corde</em>, and then it was changed back to <em>chord</em> for the musical sense.</td>
 				</tr>
 				<tr>
 					<td class="integer"><a href="#ftnt_ref03" id="ftnt03" class="noprintlink"><strong>3</strong></a></td>
+					<td class="justify" style="line-height: 125%;">I&rsquo;ve tentatively titled it <strong>&ldquo;Ὁ θρῆνος τῆς Λοκρῐ́δος&rdquo;</strong> [romanized: <em>O thrínos tís Lokrĭdos</em>], Ancient Greek for &ldquo;The Lament of Locris&rdquo; (less literally, &ldquo;Locrian Lament&rdquo;), but this may change. It&rsquo;s still unfinished, but I&rsquo;ve added it to <em><a href="music/compositions2023-2024.html">Compositions 2023-2024</a></em>, my collection of recent original compositions. In addition to Locrian mode, it also uses a different time signature every measure, from 1/8 in the first measure to 21/8 in the twenty-first, before the pattern repeats, which also makes it incredibly disorienting. Naturally, this is <em>entirely</em> intentional.</td>
+				</tr>
+				<tr>
+					<td class="integer"><a href="#ftnt_ref04" id="ftnt04" class="noprintlink"><strong>4</strong></a></td>
 					<td class="justify">&ldquo;He who fights monsters should see to it that he himself does not become a monster; and if you gaze for long into an abyss, the abyss gazes also into you.&rdquo; &ndash;<em>Beyond Good and Evil</em>, Aphorism 146</td>
 				</tr>
 			</tbody>

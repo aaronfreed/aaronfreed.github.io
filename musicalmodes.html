@@ -143,24 +143,25 @@ window.onload = function () {makeAllSortable();};*/
 		<ul>
 			<li>A&#9839; and B&#9837; represent the same pitch. Likewise B and C&#9837;, C&#9839; and D&#9837;, and so on. However, in terms of <em>music theory</em>, A&#9839; and B&#9837; can be semantically quite different in some contexts &ndash; be careful.</li>
 			<li>Key signatures with seven sharps or seven flats exist, but I&rsquo;ve omitted them. (There are even monstrosities with double-sharps [&#119082;] and double-flats [&#119083;] &hellip; which I&rsquo;ll mostly be ignoring.) I feel it was pretty extravagant just to include six-flat and six-sharp key signatures alongside each other.</li>
-			<li id="modesfromlydian">If we start from Lydian mode, lowering pitches one at a time by a half-step each gives us:
+			<li id="modesfromlydian">If we start from Lydian mode, lowering the correct pitches one at a time by a half-step each gives us the next mode in the cycle. I&rsquo;ll use C Lydian as an example to demonstrate the principle:
 				<table>
 					<thead>
-						<tr><th colspan="3" class="centred accent"><strong><strong><strong><span class="dotted" id="ftnt_ref01" title="I spent an unreasonable amount of time trying to formulate a pun on Marcel Duchamp&rsquo;s classic Modernist painting &lsquo;Nude Descending a Staircase&rsquo;, something along the lines of &lsquo;Lydian Descending a Scale&rsquo;, but every phrasing I formulated ultimately felt too awkward, shoehorned, and/or unhelpful&hellip; so I just created this not-at-all awkward, shoehorned, or unhelpful endnote instead.">Modes Descending from Lydian<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span></strong></strong></strong></th></tr>
-						<tr><th>#</th><th>Mode</th>       <th class="leftborder">Pitch Lowered</th></tr>
+						<tr><th colspan="12" class="centred accent"><strong><strong><strong><span class="dotted" id="ftnt_ref01" title="I spent an unreasonable amount of time trying to formulate a pun on Marcel Duchamp&rsquo;s classic Modernist painting &lsquo;Nude Descending a Staircase&rsquo;, something along the lines of &lsquo;Lydian Descending a Scale&rsquo;, but every phrasing I formulated ultimately felt too awkward, shoehorned, and/or unhelpful&hellip; so I just created this not-at-all awkward, shoehorned, or unhelpful endnote instead.">Modes Descending from Lydian<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span></strong></strong></strong></th></tr>
+						<tr><th>#</th><th colspan="2" class="centred">Root &amp; Mode</th>       <th class="leftborder">Pitch Lowered</th><th class="leftborder">1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>1</th></tr>
 					</thead>
 					<tbody>
-						<tr><td class="centred number">1</td><td class="centred">Ionian</td>    <td class="centred numbered leftborder">4</td></tr>
-						<tr><td class="centred number">5</td><td class="centred">Mixolydian</td><td class="centred numbered leftborder">7</td></tr>
-						<tr><td class="centred number">2</td><td class="centred">Dorian</td>    <td class="centred numbered leftborder">3</td></tr>
-						<tr><td class="centred number">6</td><td class="centred">Aeolian</td>   <td class="centred numbered leftborder">6</td></tr>
-						<tr><td class="centred number">3</td><td class="centred">Phrygian</td>  <td class="centred numbered leftborder">2</td></tr>
-						<tr><td class="centred number">7</td><td class="centred">Locrian</td>   <td class="centred numbered leftborder">5</td></tr>
-						<tr><td class="centred number">4</td><td class="centred">Lydian</td>    <td class="centred numbered leftborder">1</td></tr>
+						<tr class="bottomborder"><td class="centred number">4</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Lydian</td>    <td class="centred numbered leftborder">&ndash;</td><td class="leftborder">C</td><td>D</td><td>E</td><td>F&#9839;</td><td>G</td><td>A</td><td>B</td><td>C</td></tr>
+						<tr><td class="centred number">1</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Ionian</td>    <td class="centred numbered leftborder">4</td><td class="leftborder">C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>A</td><td>B</td><td>C</td></tr>
+						<tr><td class="centred number">5</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Mixolydian</td><td class="centred numbered leftborder">7</td><td class="leftborder">C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>A</td><td>B&#9837;</td><td>C</td></tr>
+						<tr><td class="centred number">2</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Dorian</td>    <td class="centred numbered leftborder">3</td><td class="leftborder">C</td><td>D</td><td>E&#9837;</td><td>F</td><td>G</td><td>A</td><td>B&#9837;</td><td>C</td></tr>
+						<tr><td class="centred number">6</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Aeolian</td>   <td class="centred numbered leftborder">6</td><td class="leftborder">C</td><td>D</td><td>E&#9837;</td><td>F</td><td>G</td><td>A&#9837;</td><td>B&#9837;</td><td>C</td></tr>
+						<tr><td class="centred number">3</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Phrygian</td>  <td class="centred numbered leftborder">2</td><td class="leftborder">C</td><td>D&#9837;</td><td>E&#9837;</td><td>F</td><td>G</td><td>A&#9837;</td><td>B&#9837;</td><td>C</td></tr>
+						<tr><td class="centred number">7</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Locrian</td>   <td class="centred numbered leftborder">5</td><td class="leftborder">C</td><td>D&#9837;</td><td>E&#9837;</td><td>F</td><td>G&#9837;</td><td>A&#9837;</td><td>B&#9837;</td><td>C</td></tr>
+						<tr><td class="centred number">4</td><td style="padding-right: 0px;">C&#9837;</td><td class="centred" style="padding-left: 0px;">Lydian</td>    <td class="centred numbered leftborder">1</td><td class="leftborder">C&#9837;</td><td>D&#9837;</td><td>E&#9837;</td><td>F</td><td>G&#9837;</td><td>A&#9837;</td><td>B&#9837;</td><td>C&#9837;</td></tr>
 					</tbody>
 				</table>
 				<ul>
-					<li>In other words, by lowering the F&#9837; in C Lydian to C, we wind up with C Ionian (i.e., C major). Lowering the B in C major to B&#9837; gives us C Mixolydian. And so on.</li>
+					<li>In other words, by lowering the F&#9839; in C Lydian to F, we wind up with C Ionian (i.e., C major). Lowering the B in C Ionian to B&#9837; gives us C Mixolydian. And so on.</li>
 					<li>Lowering the root from Locrian gives us Lydian mode for the key below it on the chromatic scale &ndash; i.e., lowering the C in C Locrian to C&#9837;/B gives us C&#9837;/B Lydian.</li>
 					<li>This table won&rsquo;t mean much to readers in isolation, so I put together a <a href="c_lydian_to_b_lydian.flac" target="_blank">crude demonstration of the above principle</a> in Logic Pro. For the following modes, in order:
 						<ol style="padding-left: 15px;">

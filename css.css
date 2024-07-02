@@ -96,7 +96,7 @@
 	.istoria thead tr:last-child th {
 		display: table-header-group;
 	}
-	a:not(.noprintlink):after {
+	a:after:not(.noprintlink) :not(.toc, .toclite, .tocliter) {
 		font-weight: lighter !important;
 		content: " (" attr(href) ") ";
 		color: var(--link-hover) !important;
@@ -1313,6 +1313,34 @@ table.noborder {
 /* a very stupid way of doing this, but it works? */
 .radical-number {
 	text-decoration: underline;
-	text-underline-offset: -13.4px;
+	text-underline-offset: -13.375px;
 	text-decoration-thickness: 0.75px;
+}
+.weight1 .radical-number {
+	text-underline-offset: -13.125px;
+	text-decoration-thickness: 0.5px;
+}
+.weight2 .radical-number {
+	text-underline-offset: -13.25px;
+	text-decoration-thickness: 0.25px;
+}
+.weight3 .radical-number {
+	text-underline-offset: -13.75px;
+	text-decoration-thickness: 1.375px;
+}
+.weight4 .radical-number {
+	text-underline-offset: -14px;
+	text-decoration-thickness: 1.75px;
+}
+.weight5 .radical-number {
+	text-underline-offset: -14px;
+	text-decoration-thickness: 2px;
+}
+.weight6 .radical-number {
+	text-underline-offset: -14.125px;
+	text-decoration-thickness: 2.125px;
+}
+.weight7 .radical-number {
+	text-underline-offset: -14.375px;
+	text-decoration-thickness: 2.75px;
 }

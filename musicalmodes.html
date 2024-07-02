@@ -49,6 +49,9 @@ window.onload = function () {makeAllSortable();};*/
 				<ol>
 					<li><a href="#cmajormodes">The Seven Modes of the C Major Scale</a></li>
 					<li><a href="#modesfromlydian">Modes Descending from Lydian</a></li>
+					<li><a href="#inverseoperations">The Principles of Inverse Operations</a></li>
+					<li><a href="#audio">An Audio Demonstration</a></li>
+					<li><a href="#furthernotes">Further Notes</a></li>
 					<li><a href="#tritones">Diabolus in m&umacr;sic&amacr;</a></li>
 				</ol>
 			</li>
@@ -97,8 +100,9 @@ window.onload = function () {makeAllSortable();};*/
 			<li><a href="#tonoi">Ancient Greek <em>Tonoi</em> &amp; Modern Modes</a>
 				<ol>
 					<li><a href="#intervalkey">Interval Key</a></li>
+					<li><a href="#diatonictetrachord">Interval Ratios of a Diatonic Tetrachord</a></li>
 					<li><a href="#intervalgenera">Interval Genera: A Feed from Cloud Mountain</a></li>
-					<li><a href="#tonoiintervals">Intervals of Ancient Greek <em>Tonoi</em> &amp; Modern Diatonic Modes</a></li>
+					<li><a href="#tonoiintervals">Approximate Intervals of Ancient Greek <em>Tonoi</em> &amp; Modern Diatonic Modes</a></li>
 				</ol>
 			</li>
 			<li><a href="#hewhofightsmonsters">Yes, but, why?</a></li>
@@ -134,78 +138,138 @@ window.onload = function () {makeAllSortable();};*/
 				<tr><td class="nowrap">4 &ndash; Lydian</td>    <td class="leftborder">F</td><td>                      G</td><td>                      A</td><td><strong class="orange bold">B</strong></td><td>                      C</td><td>                      D</td><td>                      E</td><td class="light leftborder justify">The only mode that <em>raises</em> a note above Ionian. </td></tr>
 				<tr><td class="nowrap">5 &ndash; Mixolydian</td><td class="leftborder">G</td><td>                      A</td><td>                      B</td><td>                            C</td>         <td>                      D</td><td>                      E</td><td class="azure weight2">f</td><td class="light leftborder justify"></td></tr>
 				<tr><td class="nowrap">6 &ndash; Aeolian</td>   <td class="leftborder">A</td><td>                      B</td><td class="azure weight2">c</td><td>                            D</td>         <td>                      E</td><td class="azure weight2">f</td><td class="azure weight2">g</td><td class="light leftborder justify">The natural minor scale.</td></tr>
-				<tr><td class="nowrap">7 &ndash; Locrian</td>   <td class="leftborder">B</td><td class="azure weight2">c</td><td class="azure weight2">d</td><td>                            E</td>         <td class="azure weight2">f</td><td class="azure weight2">g</td><td class="azure weight2">a</td><td class="light leftborder justify">Its diminished root tonality can be unsettling, so it&rsquo;s rare, and most pieces that use it eventually modulate out of it, creating a sense that we never truly arrive &lsquo;home&rsquo;.</td></tr>
+				<tr><td class="nowrap">7 &ndash; Locrian</td>   <td class="leftborder">B</td><td class="azure weight2">c</td><td class="azure weight2">d</td><td>                            E</td>         <td class="azure weight2">f</td><td class="azure weight2">g</td><td class="azure weight2">a</td><td class="light leftborder justify">Rarely used due to its unsettling diminished root chord; most pieces that use it modulate out of it at times, creating a sense that we never truly arrive &lsquo;home&rsquo;.</td></tr>
 			</tbody>
 		</table>
 
 		<p>However, we won&rsquo;t be using the usual order, since we&rsquo;ll be analyzing how lowering a regular pattern of notes by a half-step each will enable us to walk through every mode on every key. A few notes (pun intended):</p>
 
 		<ul>
-			<li>A&#9839; and B&#9837; represent the same pitch. Likewise B and C&#9837;, C&#9839; and D&#9837;, and so on. However, in terms of <em>music theory</em>, A&#9839; and B&#9837; can be semantically quite different in some contexts &ndash; be careful.</li>
+			<li><strong class="accent">A&#9839;</strong> and <strong class="accent">B&#9837;</strong> represent the same pitch. Likewise <strong class="accent">B</strong> and <strong class="accent">C&#9837;</strong>, <strong class="accent">C&#9839;</strong> and <strong class="accent">D&#9837;</strong>, and so on. However, in terms of <em>music theory</em>, <strong class="accent">A&#9839;</strong> and <strong class="accent">B&#9837;</strong> can be semantically quite different in some contexts &ndash; be careful.</li>
 			<li>Key signatures with seven sharps or seven flats exist, but I&rsquo;ve omitted them. (There are even monstrosities with double-sharps [&#119082;] and double-flats [&#119083;] &hellip; which I&rsquo;ll mostly be ignoring.) I feel it was pretty extravagant just to include six-flat and six-sharp key signatures alongside each other.</li>
-			<li id="modesfromlydian">If we start from Lydian mode, lowering the correct pitches one at a time by a half-step each gives us the next mode in the cycle. I&rsquo;ll use C Lydian as an example to demonstrate the principle:
-				<table>
-					<thead>
-						<tr><th colspan="12" class="centred accent"><strong><strong><strong><span class="dotted" id="ftnt_ref01" title="I spent an unreasonable amount of time trying to formulate a pun on Marcel Duchamp&rsquo;s classic Modernist painting &lsquo;Nude Descending a Staircase&rsquo;, something along the lines of &lsquo;Lydian Descending a Scale&rsquo;, but every phrasing I formulated ultimately felt too awkward, shoehorned, and/or unhelpful&hellip; so I just created this not-at-all awkward, shoehorned, or unhelpful endnote instead.">Modes Descending from Lydian<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span></strong></strong></strong></th></tr>
-						<tr><th>#</th><th colspan="2" class="centred">Root &amp; Mode</th>       <th class="leftborder">Pitch Lowered</th><th class="leftborder">1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>1</th></tr>
-					</thead>
-					<tbody>
-						<tr class="bottomborder"><td class="centred number">4</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Lydian</td>    <td class="centred numbered leftborder">&ndash;</td><td class="leftborder">C</td><td>D</td><td>E</td><td>F&#9839;</td><td>G</td><td>A</td><td>B</td><td>C</td></tr>
-						<tr><td class="centred number">1</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Ionian</td>    <td class="centred numbered leftborder">4</td><td class="leftborder">C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>A</td><td>B</td><td>C</td></tr>
-						<tr><td class="centred number">5</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Mixolydian</td><td class="centred numbered leftborder">7</td><td class="leftborder">C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>A</td><td>B&#9837;</td><td>C</td></tr>
-						<tr><td class="centred number">2</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Dorian</td>    <td class="centred numbered leftborder">3</td><td class="leftborder">C</td><td>D</td><td>E&#9837;</td><td>F</td><td>G</td><td>A</td><td>B&#9837;</td><td>C</td></tr>
-						<tr><td class="centred number">6</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Aeolian</td>   <td class="centred numbered leftborder">6</td><td class="leftborder">C</td><td>D</td><td>E&#9837;</td><td>F</td><td>G</td><td>A&#9837;</td><td>B&#9837;</td><td>C</td></tr>
-						<tr><td class="centred number">3</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Phrygian</td>  <td class="centred numbered leftborder">2</td><td class="leftborder">C</td><td>D&#9837;</td><td>E&#9837;</td><td>F</td><td>G</td><td>A&#9837;</td><td>B&#9837;</td><td>C</td></tr>
-						<tr><td class="centred number">7</td><td style="padding-right: 0px;">C</td><td class="centred" style="padding-left: 0px;">Locrian</td>   <td class="centred numbered leftborder">5</td><td class="leftborder">C</td><td>D&#9837;</td><td>E&#9837;</td><td>F</td><td>G&#9837;</td><td>A&#9837;</td><td>B&#9837;</td><td>C</td></tr>
-						<tr><td class="centred number">4</td><td style="padding-right: 0px;">C&#9837;</td><td class="centred" style="padding-left: 0px;">Lydian</td>    <td class="centred numbered leftborder">1</td><td class="leftborder">C&#9837;</td><td>D&#9837;</td><td>E&#9837;</td><td>F</td><td>G&#9837;</td><td>A&#9837;</td><td>B&#9837;</td><td>C&#9837;</td></tr>
-					</tbody>
-				</table>
+			<li id="modesfromlydian">If we start from <strong class="accent">Lydian mode</strong>, lowering the correct pitches one at a time by a half-step each gives us the next mode in the cycle. I&rsquo;ll use <strong class="accent">C Lydian</strong> as an example to demonstrate the principle:</li>
+		</ul>
+
+		<table>
+			<thead>
+				<tr><th colspan="12" class="centred accent"><strong><strong><strong><span class="dotted" id="ftnt_ref01" title="I spent an unreasonable amount of time trying to formulate a pun on Marcel Duchamp&rsquo;s classic Modernist painting &lsquo;Nude Descending a Staircase&rsquo;, something along the lines of &lsquo;Lydian Descending a Scale&rsquo;, but every phrasing I formulated ultimately felt too awkward, shoehorned, and/or unhelpful&hellip; so I just created this not-at-all awkward, shoehorned, or unhelpful endnote instead.">Modes Descending from Lydian<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span></strong></strong></strong></th></tr>
+				<tr>                     <th>#</th>                       <th colspan="2" class="centred">Root &amp; mode</th>                                                       <th class="leftborder">Lowered pitch</th>           <th class="leftborder">1</th>       <th>2</th>       <th>3</th>       <th>4</th>       <th>5</th>       <th>6</th>       <th>7</th>       <th>1</th>       </tr>
+			</thead>
+			<tbody>
+				<tr class="bottomborder"><td class="centred number">4</td><td style="padding-right: 0px;">C</td>       <td class="centred" style="padding-left: 0px;">Lydian</td>    <td class="centred numbered leftborder">&ndash;</td><td class="leftborder">C</td>       <td>D</td>       <td>E</td>       <td>F&#9839;</td><td>G</td>       <td>A</td>       <td>B</td>       <td>C</td>       </tr>
+				<tr>                     <td class="centred number">1</td><td style="padding-right: 0px;">C</td>       <td class="centred" style="padding-left: 0px;">Ionian</td>    <td class="centred numbered leftborder">4</td>      <td class="leftborder">C</td>       <td>D</td>       <td>E</td>       <td>F</td>       <td>G</td>       <td>A</td>       <td>B</td>       <td>C</td>       </tr>
+				<tr>                     <td class="centred number">5</td><td style="padding-right: 0px;">C</td>       <td class="centred" style="padding-left: 0px;">Mixolydian</td><td class="centred numbered leftborder">7</td>      <td class="leftborder">C</td>       <td>D</td>       <td>E</td>       <td>F</td>       <td>G</td>       <td>A</td>       <td>B&#9837;</td><td>C</td>       </tr>
+				<tr>                     <td class="centred number">2</td><td style="padding-right: 0px;">C</td>       <td class="centred" style="padding-left: 0px;">Dorian</td>    <td class="centred numbered leftborder">3</td>      <td class="leftborder">C</td>       <td>D</td>       <td>E&#9837;</td><td>F</td>       <td>G</td>       <td>A</td>       <td>B&#9837;</td><td>C</td>       </tr>
+				<tr>                     <td class="centred number">6</td><td style="padding-right: 0px;">C</td>       <td class="centred" style="padding-left: 0px;">Aeolian</td>   <td class="centred numbered leftborder">6</td>      <td class="leftborder">C</td>       <td>D</td>       <td>E&#9837;</td><td>F</td>       <td>G</td>       <td>A&#9837;</td><td>B&#9837;</td><td>C</td>       </tr>
+				<tr>                     <td class="centred number">3</td><td style="padding-right: 0px;">C</td>       <td class="centred" style="padding-left: 0px;">Phrygian</td>  <td class="centred numbered leftborder">2</td>      <td class="leftborder">C</td>       <td>D&#9837;</td><td>E&#9837;</td><td>F</td>       <td>G</td>       <td>A&#9837;</td><td>B&#9837;</td><td>C</td>       </tr>
+				<tr>                     <td class="centred number">7</td><td style="padding-right: 0px;">C</td>       <td class="centred" style="padding-left: 0px;">Locrian</td>   <td class="centred numbered leftborder">5</td>      <td class="leftborder">C</td>       <td>D&#9837;</td><td>E&#9837;</td><td>F</td>       <td>G&#9837;</td><td>A&#9837;</td><td>B&#9837;</td><td>C</td>       </tr>
+				<tr>                     <td class="centred number">4</td><td style="padding-right: 0px;">C&#9837;</td><td class="centred" style="padding-left: 0px;">Lydian</td>    <td class="centred numbered leftborder">1</td>      <td class="leftborder">C&#9837;</td><td>D&#9837;</td><td>E&#9837;</td><td>F</td>       <td>G&#9837;</td><td>A&#9837;</td><td>B&#9837;</td><td>C&#9837;</td></tr>
+			</tbody>
+		</table>
+		<ul>
+			<li>In other words:
 				<ul>
-					<li>In other words, by lowering the F&#9839; in C Lydian to F, we wind up with C Ionian (i.e., C major). Lowering the B in C Ionian to B&#9837; gives us C Mixolydian. And so on.</li>
-					<li>Lowering the root from Locrian gives us Lydian mode for the key below it on the chromatic scale &ndash; i.e., lowering the C in C Locrian to C&#9837;/B gives us C&#9837;/B Lydian.</li>
-					<li>This table won&rsquo;t mean much to readers in isolation, so I put together a <a href="c_lydian_to_b_lydian.flac" target="_blank">crude demonstration of the above principle</a> in Logic Pro. For the following modes, in order:
-						<ol style="padding-left: 15px;">
-							<li>C Lydian</li>
-							<li>C Ionian</li>
-							<li>C Mixolydian</li>
-							<li>C Dorian</li>
-							<li>C Aeolian</li>
-							<li>C Phrygian</li>
-							<li>C Locrian</li>
-							<li>B Lydian</li>
+					<li>Lowering <strong class="accent">C Lydian</strong>&rsquo;s <strong class="toc-counter">F&#9839;</strong> to <strong class="toc-counter">F</strong> gives us <strong class="accent">C Ionian</strong> (i.e., C major).</li>
+					<li>Lowering <strong class="accent">C Ionian</strong>&rsquo;s <strong class="toc-counter">B</strong> to <strong class="toc-counter">B&#9837;</strong> gives us <strong class="accent">C Mixolydian</strong>.</li>
+					<li>And so on, until we reach <strong class="accent">C Locrian</strong> &ndash; whence the pattern repeats for <strong class="toc-counter">C&#9837;</strong>/<strong class="toc-counter">B</strong>, the key below C on the chromatic scale.</li>
+				</ul>
+			</li>
+			<li>Lowering <strong class="accent">Locrian</strong>&rsquo;s root gives us <strong class="accent">Lydian mode</strong> in the key below it on the chromatic scale.
+				<ul>
+					<li>In other words, lowering <strong class="accent">C Locrian</strong>&rsquo;s <strong class="toc-counter">C</strong> to <strong class="toc-counter">C&#9837;</strong>/<strong class="toc-counter">B</strong> gives us <strong class="accent">C&#9837;</strong>/<strong class="accent">B Lydian</strong>.</li>
+				</ul>
+			</li>
+			<li>The sequence repeats from there:
+				<ul>
+					<li>Lowering <strong class="accent">B Lydian</strong>&rsquo;s <strong class="toc-counter">E&#9839;</strong> gives us <strong class="accent">B Ionian</strong>.</li>
+					<li>Lowering <strong class="accent">B Ionian</strong>&rsquo;s <strong class="toc-counter">A&#9839;</strong> gives us <strong class="accent">B Mixolydian</strong>.</li>
+				</ul>
+			</li>
+			<li>This sequence will repeat for every note on the chromatic scale: <span style="white-space: pre-wrap;"> <strong class="toc-counter">C</strong>,  <strong class="toc-counter">C&#9837;</strong>/<strong class="toc-counter">B</strong>,  <strong class="toc-counter">B&#9837;</strong>/<strong class="toc-counter">A&#9839;</strong>,  <strong class="toc-counter">A</strong>,  <strong class="toc-counter">A&#9837;</strong>/<strong class="toc-counter">G&#9839;</strong>,  <strong class="toc-counter">G</strong>,  <strong class="toc-counter">G&#9837;</strong>/<strong class="toc-counter">F&#9839;</strong>,  <strong class="toc-counter">F,  <strong class="toc-counter">F&#9837;</strong>/<strong class="toc-counter">E</strong>,  <strong class="toc-counter">E&#9837;</strong>/<strong class="toc-counter">D&#9839;</strong>,  <strong class="toc-counter">D</strong>,  D&#9837;</strong>/<strong class="toc-counter">C&#9839;</strong>,  </span>and back to <strong class="toc-counter">C</strong>.</li>
+		</ul>
+
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+
+		<h2 class="centred" id="inverseoperations">The Principles of Inverse Operations</h2>
+
+		<ul>
+			<li>Now, note that we&rsquo;ve effectively been subtracting 1 from a regular pattern of values in a sequence:
+				<ul>
+					<li>4, 7, 3, 6, 2, 5, 1, 4, 7, 3, 6, 2, 5, 1&hellip;</li>
+				</ul>
+			</li>
+			<li>As a result, if we consult the mathematical properties of inverse operations, we can infer that converse of everything we&rsquo;ve just done will apply if we add 1 to the same notes in the reverse order:
+				<ul>
+					<li>1, 5, 2, 6, 3, 7, 4, 1, 5, 2, 6, 3, 7, 4&hellip;</li>
+				</ul>
+			</li>
+			<li>In other words:
+				<ul>
+					<li>Raising <strong class="accent">C&#9837; Lydian</strong>&rsquo;s <strong class="toc-counter">C&#9837;</strong> gives us <strong class="accent">C Locrian</strong>.</li>
+					<li>Raising <strong class="accent">C Locrian</strong>&rsquo;s <strong class="toc-counter">G&#9837;</strong> gives us <strong class="accent">C Phrygian</strong>.</li>
+					<li>Raising <strong class="accent">C Phrygian</strong>&rsquo;s <strong class="toc-counter">D&#9837;</strong> gives us <strong class="accent">C Aeolian</strong>.
+					<li>And so on.</li>
+				</ul>
+			</li>
+		</ul>
+
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+
+		<h2 class="centred" id="audio">An Audio Demonstration</h2>
+
+		<ul>
+			<li>None of this will mean much to readers in isolation, so I put together a <a href="c_lydian_to_b_lydian.flac" target="_blank">crude demonstration of the above principle</a> in Logic Pro. For the following modes, in order:
+				<ol style="padding-left: 15px;">
+					<li>C Lydian</li>
+					<li>C Ionian</li>
+					<li>C Mixolydian</li>
+					<li>C Dorian</li>
+					<li>C Aeolian</li>
+					<li>C Phrygian</li>
+					<li>C Locrian</li>
+					<li>C&#9837;/B Lydian</li>
+				</ol>
+				you&rsquo;ll hear the following, in order:
+				<ol style="list-style-type: lower-alpha; padding-left: 15px;">
+					<li>the scale in ascending order</li>
+					<li>arpeggiated and block versions of:
+						<ol style="list-style-type: lower-latin;">
+							<li>the root (I) chord</li>
+							<li>the subdominant (IV) chord</li>
+							<li>the dominant (V) chord</li>
+							<li>the root (I) chord</li>
 						</ol>
-						you&rsquo;ll hear the following, in order:
-						<ol style="list-style-type: lower-alpha; padding-left: 15px;">
-							<li>the scale</li>
-							<li>arpeggiated and block versions of the root (I) chord</li>
-							<li>arpeggiated and block versions of the subdominant (IV) chord</li>
-							<li>arpeggiated and block versions of the dominant (V) chord</li>
-							<li>arpeggiated and block versions of the root (I) chord</li>
-						</ol>
-						(I could make a version going down the entire chromatic scale, but the entire thing would take thirteen and a half minutes to play through. Even I think that&rsquo;s overkill, and I submit <em>this exact page</em> as exhibit A for what my definition of &ldquo;overkill&rdquo; must entail.)</li>
-					<li>It might help solidify your conception of this principle to understand that while we&rsquo;re lowering (or raising) a pitch on our scale, we&rsquo;re also, in a sense, <em>jumping down (or up) a fifth</em>. F Lydian is in the same key signature as C Ionian, not F Ionian. This is why so many of these patterns mirror the circle of fifths.</li>
-					<li>In the table above, the mode number and the pitch we lower to get it are exact mirrors of each other. This is not coincidental &ndash; it&rsquo;s the direct result of a mathematical pattern.</li>
-					<li>The modes are also always either three steps on the scale below their predecessors (usually, but not always, a perfect fourth), or four steps above (usually, but not always, a perfect fifth). In this context, they&rsquo;re equivalent, since the scale repeats every octave.
-						<ul>
-							<li id="tritones">Although this is only somewhat relevant here, one pair of intervals always constitutes an exception to the &ldquo;perfect fourths&rdquo; and &ldquo;perfect fifths&rdquo; rules: one fourth is always augmented, and one fifth is always diminished. These are actually the same interval, a tritone. The following steps on each scale are tritones in either direction:
-								<table>
-									<thead>
-										<tr class="centred accent"><th colspan="4">Diabolus in m&umacr;sic&amacr;</th></tr>
-										<tr><th>#</th><th>Mode</th>      <th colspan="2" class="leftborder">Tritone</th>                </tr>
-									</thead>
-									<tbody>
-										<tr><td>4</td><td>Lydian    </td><td class="centred leftborder">4</td><td class="centred">1</td></tr>
-										<tr><td>1</td><td>Ionian    </td><td class="centred leftborder">7</td><td class="centred">4</td></tr>
-										<tr><td>5</td><td>Mixolydian</td><td class="centred leftborder">3</td><td class="centred">7</td></tr>
-										<tr><td>2</td><td>Dorian    </td><td class="centred leftborder">6</td><td class="centred">3</td></tr>
-										<tr><td>6</td><td>Aeolian   </td><td class="centred leftborder">2</td><td class="centred">6</td></tr>
-										<tr><td>3</td><td>Phrygian  </td><td class="centred leftborder">5</td><td class="centred">2</td></tr>
-										<tr><td>7</td><td>Locrian   </td><td class="centred leftborder">1</td><td class="centred">5</td></tr>
-									</tbody>
-								</table>
-								Note that the third columns of &ldquo;Diabolus in m&umacr;sic&amacr;&rdquo; and of &ldquo;Modes Descending from Lydian&rdquo; are identical. This is <em>also</em> not coincidental.
-							</li>
-						</ul>
+					</li>
+				</ol>
+				(I could make a version going down the entire chromatic scale, but the entire thing would take thirteen and a half minutes to play through. Even I think that&rsquo;s overkill, and I submit <em>this exact page</em> as exhibit A for what my definition of &ldquo;overkill&rdquo; must entail.)
+			</li>
+		</ul>
+
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
+
+		<h2 id="furthernotes" class="centred">Further Notes</h2>
+		<ul>
+			<li>It might help solidify your conception of this principle to understand that while we&rsquo;re lowering (or raising) a pitch on our scale, we&rsquo;re also, in a sense, <em>jumping down (or up) a fifth</em>. F Lydian is in the same key signature as C Ionian, not F Ionian. This is why so many of these patterns mirror the circle of fifths.</li>
+			<li>In &ldquo;Modes Descending from Lydian&rdquo; above, the mode number and the pitch we lower to get it are exact mirrors of each other. This is not coincidental &ndash; it&rsquo;s the direct result of a mathematical pattern.</li>
+			<li>The modes are also always either three steps on the scale below their predecessors (usually, but not always, a perfect fourth), or four steps above (usually, but not always, a perfect fifth). In this context, they&rsquo;re equivalent, since the scale repeats every octave.
+				<ul>
+					<li id="tritones">Although this is only somewhat relevant here, one pair of intervals always constitutes an exception to the &ldquo;perfect fourths&rdquo; and &ldquo;perfect fifths&rdquo; rules: one fourth is always augmented, and one fifth is always diminished. These are actually the same interval, a tritone. The following steps on each scale are tritones in either direction:
+						<table>
+							<thead>
+								<tr class="centred accent"><th colspan="4">Diabolus in m&umacr;sic&amacr;</th></tr>
+								<tr><th>#</th><th>Mode</th>      <th colspan="2" class="leftborder">Tritone</th>                </tr>
+							</thead>
+							<tbody>
+								<tr><td>4</td><td>Lydian    </td><td class="centred leftborder">4</td><td class="centred">1</td></tr>
+								<tr><td>1</td><td>Ionian    </td><td class="centred leftborder">7</td><td class="centred">4</td></tr>
+								<tr><td>5</td><td>Mixolydian</td><td class="centred leftborder">3</td><td class="centred">7</td></tr>
+								<tr><td>2</td><td>Dorian    </td><td class="centred leftborder">6</td><td class="centred">3</td></tr>
+								<tr><td>6</td><td>Aeolian   </td><td class="centred leftborder">2</td><td class="centred">6</td></tr>
+								<tr><td>3</td><td>Phrygian  </td><td class="centred leftborder">5</td><td class="centred">2</td></tr>
+								<tr><td>7</td><td>Locrian   </td><td class="centred leftborder">1</td><td class="centred">5</td></tr>
+							</tbody>
+						</table>
+						Note that the third columns of &ldquo;Diabolus in m&umacr;sic&amacr;&rdquo; and of &ldquo;Modes Descending from Lydian&rdquo; are identical. This is <em>also</em> not coincidental.
 					</li>
 				</ul>
 			</li>
@@ -215,10 +279,11 @@ window.onload = function () {makeAllSortable();};*/
 
 		<h1 id="modes" class="centred">Twelve Major Scales &times; Seven Modes = Eighty-Four</h1>
 		<ul>
-			<li>I&rsquo;ve printed the C major scale&rsquo;s modes in <strong class="accent"><strong>bold, blue type</strong></strong> to make them stand out. These are the only scales played using only the white keys of the piano (this is also why music notation can express these specific keys without accidentals, either in the key signature or after it). The differences between their numbers are always multiples of twelve; this is also not a coincidence.</li>
-			<li>Halfway between C major&rsquo;s modes, I always print a mode twice, in <span class="orange">orange</span>, with its key signature first using six flats (G&#9837; major), then six sharps (F&#9839; major). I don&rsquo;t really <em>like</em> either option (E&#9839; is F&#9838;! C&#9837; is B&#9838;!), but both avoid a repeated letter in a scale, and thus a rash of accidentals in the notation of any piece that uses them. G&#9837;/F&#9839; major&rsquo;s modes are also always separated by multiples of twelve, for the same reason: this progression separates all seven modes of each scale from each other by multiples of twelve.</li>
+			<li>I&rsquo;ve printed the <strong class="accent">C major</strong> scale&rsquo;s modes in <strong class="accent"><strong>bold, blue type</strong></strong> to make them stand out. These are the only scales played using only the white keys of the piano (this is also why music notation can express these specific keys without accidentals, either in the key signature or after it). The differences between their numbers are always multiples of twelve; this is also not a coincidence.</li>
+			<li>Halfway between <strong class="accent">C major</strong>&rsquo;s modes, I always print a mode twice, in <span class="orange">orange</span>, with its key signature first using six flats (<strong class="orange">G&#9837; major</strong>), then six sharps (<strong class="orange">F&#9839; major</strong>). I don&rsquo;t really <em>like</em> either option (<strong class="toc-counter">E&#9839;</strong> is <strong class="toc-counter">F&#9838;</strong>! <strong class="toc-counter">C&#9837;</strong> is <strong class="toc-counter">B&#9838;</strong>!), but both avoid a repeated letter in a scale, and thus a rash of accidentals in the notation of any piece that uses them. <strong class="orange">G&#9837;</strong>/<strong class="orange">F&#9839; major</strong>&rsquo;s modes are also always separated by multiples of twelve, for the same reason: this progression separates all seven modes of each scale from each other by multiples of twelve.</li>
 			<li>I&rsquo;ve listed these in descending order of pitch so that higher pitches are, well, higher on the list. However, since we read from top to bottom and are accustomed to thinking of harmony as progressing in ascending order, this may be confusing. I may eventually write a JavaScript add-on to reverse the order, but I&rsquo;d have to learn JavaScript first, so no promises.</li>
-			<li>&ldquo;RM&rdquo; is an initialism for &ldquo;Relative Major&rdquo;, and &ldquo;KS&rdquo; is one for &ldquo;Key Signature&rdquo;. A cheat sheet for what modes use what key signatures can be found in the section immediately following this one.</li>
+			<li>&ldquo;RM&rdquo; is an initialism for &ldquo;Relative Major&rdquo;, and &ldquo;KS&rdquo; is for &ldquo;Key Signature&rdquo;. A cheat sheet for what modes use what key signatures can be found in the section immediately following this one.</li>
+			<li>I&rsquo;ve used zero-based indexing for these tables, so they&rsquo;re indexed from zero to eighty-three. This is partly because I prefer zero-based indexing, but to be honest, it was mostly to give <strong class="accent">C Ionian</strong> an index of one.</li>
 		</ul>
 
 		<table id="c">
@@ -660,28 +725,43 @@ window.onload = function () {makeAllSortable();};*/
 
 		<h1 class="centred" id="tonoi">Ancient Greek <em>Tonoi</em> &amp; Modern Modes</h1>
 
-		<p>The following is by necessity an oversimplification, since the ancient Greeks didn&rsquo;t possess <em>one</em> music theory; Archytas (Ἀρχύτας), Aristoxenus (Ἀριστόξενος ὁ Ταραντῖνος, <em>Arist&oacute;xenos ho Tarant&iacute;nos</em>), Ptolemy (Πτολεμαῖος, <em>Ptolemaios</em>), and others had quite different conceptions. <a href="https://en.wikipedia.org/wiki/Musical_system_of_ancient_Greece" target="_blank">Wikipedia</a> has <a href="https://en.wikipedia.org/wiki/Octave_species" target="_blank">much, much more</a> on the subject; the <a href="https://en.xen.wiki/w/24edo_scales" target="_blank">Xenharmonic wiki</a> and <a href="https://web.archive.org/web/20120308164408/www.midicode.com/tunings/greek.shtml" target="_blank">Midicode</a> have also been useful resources.</p>
+		<p>The following is necessarily oversimplified, as ancient Greek music theory wasn&rsquo;t unified; <a href="https://en.wikipedia.org/wiki/Philolaus" target="_blank">Philolaus</a> (Φιλόλαος, <em>Philólaos</em>), <a href="https://en.wikipedia.org/wiki/Archytas" target="_blank">Archytas</a> (Ἀρχύτας), <a href="https://en.wikipedia.org/wiki/Aristoxenus" target="_blank">Aristoxenus</a> (Ἀριστόξενος ὁ Ταραντῖνος, <em>Arist&oacute;xenos ho Tarant&iacute;nos</em>), <a href="https://en.wikipedia.org/wiki/Ptolemy" target="_blank">Ptolemy</a> (Πτολεμαῖος, <em>Ptolemaios</em>), and others had quite different conceptions of it. <a href="https://en.wikipedia.org/wiki/Musical_system_of_ancient_Greece" target="_blank">Wikipedia</a> has <a href="https://en.wikipedia.org/wiki/Octave_species" target="_blank">much, much more</a> on the subject; the <a href="https://en.xen.wiki/w/24edo_scales" target="_blank">Xenharmonic wiki</a>, <a href="https://web.archive.org/web/20120308164408/www.midicode.com/tunings/greek.shtml" target="_blank">Midicode</a>, and <a href="https://feelyoursound.com/scale-chords/" target="_blank">Feel Your Sound</a> have also been helpful. I consulted several other resources researching this section, but most were too technical to be of interest to non-specialists.</p>
 
-		<p>I&rsquo;ll be using numbers to represent the intervals of ancient Greek harmony as follows:</p>
+		<p>I&rsquo;ll be using numbers to represent the intervals of ancient Greek harmony within <a href="https://en.wikipedia.org/wiki/Quarter_tone" target="_blank">24-tone equal temperament</a> (24-TET), which adds an additional 12 notes exactly halfway between each note of the familiar 12-note chromatic scale. In 24-TET, an exact ratio of &sup2;&#8308;&radic;<span class="radical-number">2</span>:1 determines the spacing of the smallest interval (known as a <strong class="toc-counter">quarter-tone</strong>, <strong class="toc-counter">downminor second</strong>, <strong class="toc-counter">infra second</strong>, or <strong class="toc-counter">wide unison</strong>), thus:</p>
 
 		<table id="intervalkey">
 			<thead>
-				<tr><th class="centred accent" colspan="3">Interval Key</th></tr>
-				<tr><th class="rightborder">#</th>                    <th>Interval</th>                        <th>Tone</th>                           </tr>
+				<tr><th class="centred accent" colspan="9">Interval Key</th></tr>
+				<tr><th class="rightborder">#</th>                    <th>Interval</th>                        <th>Tone</th>                           <th class="rightpad2" colspan="3">Exact</th>                                                                    <th class="leftpad2 rightpad2"></th>               <th class="leftpad2">Approximate</th></tr>
 			</thead>
 			<tbody>
-				<tr><td class="number rightborder">&nbsp;&frac14;</td><td class="weight2">Downminor second</td><td class="weight2">Quarter-tone</td>   </tr>
-				<tr><td class="number rightborder">&nbsp;&frac12;</td><td class="weight2">Minor second</td>    <td class="weight2">Semitone</td>       </tr>
-				<tr><td class="number rightborder">1&nbsp;</td>       <td class="weight2">Major second</td>    <td class="weight2">Whole tone</td>     </tr>
-				<tr><td class="number rightborder">1&frac12;</td>     <td class="weight2">Minor third          <td class="weight2">Three semitones</td></td>
-				<tr><td class="number rightborder">2&nbsp;</td>       <td class="weight2">Major third          <td class="weight2">Two whole tones</td></tr>
+				<tr><td class="number rightborder">&nbsp;&frac14;</td><td class="weight2">Downminor second</td><td class="weight2">Quarter-tone</td>   <td class="weight2 right norightpad">&sup2;&#8308;&radic;<span class="radical-number">2</span></td><td class="noleftpad norightpad weight2">:</td><td class="noleftpad weight2 rightpad2">1</td><td class="weight2 leftpad2 rightpad2">&asymp;</td><td class="weight2 leftpad2">1.02930223664</td></tr>
+				<tr><td class="number rightborder">&nbsp;&frac12;</td><td class="weight2">Minor second</td>    <td class="weight2">Semitone</td>       <td class="weight2 right norightpad">&sup1;&sup2;&radic;<span class="radical-number">2</span></td> <td class="noleftpad norightpad weight2">:</td><td class="noleftpad weight2 rightpad2">1</td><td class="weight2 leftpad2 rightpad2">&asymp;</td><td class="weight2 leftpad2">1.05946309436</td></tr>
+				<tr><td class="number rightborder">1&nbsp;</td>       <td class="weight2">Major second</td>    <td class="weight2">Whole tone</td>     <td class="weight2 right norightpad">&#8310;&radic;<span class="radical-number">2</span></td>      <td class="noleftpad norightpad weight2">:</td><td class="noleftpad weight2 rightpad2">1</td><td class="weight2 leftpad2 rightpad2">&asymp;</td><td class="weight2 leftpad2">1.12246204831</td></tr>
+				<tr><td class="number rightborder">1&frac12;</td>     <td class="weight2">Minor third</td>     <td class="weight2">Three semitones</td><td class="weight2 right norightpad">&#8308;&radic;<span class="radical-number">2</span></td>      <td class="noleftpad norightpad weight2">:</td><td class="noleftpad weight2 rightpad2">1</td><td class="weight2 leftpad2 rightpad2">&asymp;</td><td class="weight2 leftpad2">1.18920711500</td></tr>
+				<tr><td class="number rightborder">2&nbsp;</td>       <td class="weight2">Major third</td>     <td class="weight2">Two whole tones</td><td class="weight2 right norightpad">&sup3;&radic;<span class="radical-number">2</span></td>       <td class="noleftpad norightpad weight2">:</td><td class="noleftpad weight2 rightpad2">1</td><td class="weight2 leftpad2 rightpad2">&asymp;</td><td class="weight2 leftpad2">1.25992104989</td></tr>
 			</tbody>
 		</table>
 
+		<p>24-TET is by necessity an oversimplification as well, not least since different authors defined the same interval differently. For instance, here are how Philolaus, Archytas, and 24-TET would define the intervals within a diatonic tetrachord. (A tetrachord is a major element of Greek harmony consisting of four notes.)</p>
+		
+		<table id="diatonictetrachord">
+			<thead>
+				<tr><th class="centred accent" colspan="16">Interval Ratios of a Diatonic Tetrachord</th></tr>
+				<tr>
+					<th>Source</th>   <th class="leftborder" colspan="5">First Interval</th>     <th colspan="5" class="mediumleftborder">Second Interval</th>             <th colspan="5" class="mediumleftborder">Third Interval</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><td class="centred">Philolaus</td><td class="leftborder weight2 right norightpad">9</td>                                                  <td class="noleftpad weight2 norightpad">:</td><td class="noleftpad weight2 rightpad2">8</td><td class="weight2 leftpad2 rightpad2" style="width: 7px;">=</td>      <td class="weight2 leftpad2">1.125</td>        <td class="weight2 mediumleftborder right rightpad2">9</td>                                                  <td class="noleftpad weight2 norightpad">:</td><td class="noleftpad weight2 rightpad2">8</td><td class="weight2 leftpad2 rightpad2">=</td>      <td class="weight2 leftpad2">1.125</td>                 <td class="weight2 right mediumleftborder rightpad2">256</td>                                                     <td class="noleftpad weight2 norightpad">:</td><td class="noleftpad weight2 rightpad2">243</td><td class="weight2 leftpad2 rightpad2">&asymp;</td><td class="weight2 leftpad2">1.05349794239</td></tr>
+				<tr><td class="centred">Archytas</td> <td class="leftborder weight2 right norightpad">9</td>                                                  <td class="noleftpad weight2 norightpad">:</td><td class="noleftpad weight2 rightpad2">8</td><td class="weight2 leftpad2 rightpad2" style="width: 7px;">=</td>      <td class="weight2 leftpad2">1.125</td>        <td class="weight2 mediumleftborder right rightpad2">8</td>                                                  <td class="noleftpad weight2 norightpad">:</td><td class="noleftpad weight2 rightpad2">7</td><td class="weight2 leftpad2 rightpad2">=</td>      <td class="weight2 leftpad2">1.142857142857&hellip;</td><td class="weight2 right mediumleftborder rightpad2">28</td>                                                      <td class="noleftpad weight2 norightpad">:</td><td class="noleftpad weight2 rightpad2">27</td> <td class="weight2 leftpad2 rightpad2">=</td>      <td class="weight2 leftpad2">1.037037037&hellip;</td></tr>
+				<tr><td class="centred">24-TET</td>   <td class="leftborder weight2 right norightpad">&#8310;&radic;<span class="radical-number">2</span></td><td class="noleftpad weight2 norightpad">:</td><td class="noleftpad weight2 rightpad2">1</td><td class="weight2 leftpad2 rightpad2" style="width: 7px;">&asymp;</td><td class="weight2 leftpad2">1.12246204831</td><td class="weight2 mediumleftborder right rightpad2">&#8310;&radic;<span class="radical-number">2</span></td><td class="noleftpad weight2 norightpad">:</td><td class="noleftpad weight2 rightpad2">1</td><td class="weight2 leftpad2 rightpad2">&asymp;</td><td class="weight2 leftpad2">1.12246204831</td>         <td class="weight2 right mediumleftborder rightpad2">&sup1;&sup2;&radic;<span class="radical-number">2</span></td><td class="noleftpad weight2 norightpad">:</td><td class="noleftpad weight2 rightpad2">1</td>  <td class="weight2 leftpad2 rightpad2">&asymp;</td><td class="weight2 leftpad2">1.05946309436</td></tr>
+			</tbody>
+		</table>
 
-		<p>This is by necessity an oversimplification as well, not least since the intervals differed somewhat depending on who was defining them, but it&rsquo;s close enough for introductory purposes. (&ldquo;Downminor second&rdquo; refers to the smallest interval in 24-tone equal temperament, which adds another 12 notes halfway between the existing notes of modern 12-tone equal temperament.)</p>
+		<p>Thus, representing ancient Greek harmony using 24-TET is a substantial oversimplification, but I think it&rsquo;s close enough for an introduction. As one further example, both Philolaus and Archytas define the ratio of a diatonic tetrachord&rsquo;s first and fourth notes as 4:3 (1.33333&hellip;), for which we&rsquo;d use a perfect fourth (&asymp;1.33483985417) in 24-TET. I doubt most people&rsquo;s hearing is trained enough to tell the difference.</p>
 
-		<p>The same ancient Greek <em>tonos</em> could actually use any of three genera (singular: genus). Each <em>tonos</em> contained two tetrachords (sets of four notes) whose spacing differed depending on the genus, with a major second completing the octave (though in some cases, it occurred between the tetrachords, and in others, it occurred either before or after them; additionally, several <em>tonoi</em> split one tetrachord). All three genera used one interval once per tetrachord and another interval twice, in the following order:</p>
+		<p>The same ancient Greek <em>tonos</em> could actually use any of three genera (singular: genus). Each <em>tonos</em> contained two tetrachords, or sets of four notes, whose spacing differed depending on the genus; a major second would complete the octave (though in some <em>tonoi</em>, it occurred between the tetrachords, and in Hypodorian and Mixolydian, it occurred respectively before and after them; additionally, several <em>tonoi</em> split one tetrachord). All three genera used one interval once per tetrachord and another interval twice, in the following order:</p>
 
 		<table id="intervalgenera">
 			<thead>
@@ -710,7 +790,7 @@ window.onload = function () {makeAllSortable();};*/
 		
 		<table id="tonoiintervals">
 			<thead>
-				<tr><th colspan="10" class="centred accent">Intervals of Ancient Greek <em>Tonoi</em> &amp; Modern Diatonic Modes</th></tr>
+				<tr><th colspan="10" class="centred accent">Approximate Intervals of Ancient Greek <em>Tonoi</em> &amp; Modern Diatonic Modes</th></tr>
 				<tr>                            <th><em>Tonos</em></th>                    <th class="rightborder">Genus</th>               <th class="number">1&ndash;2</th>                <th class="number">2&ndash;3</th>                                 <th class="number">3&ndash;4</th>                                 <th class="number">4&ndash;5</th>                                 <th class="number">5&ndash;6</th>                                 <th class="number">6&ndash;7</th>                                 <th class="number">7&ndash;8</th>                                 </tr>
 			</thead>
 			<tbody>
@@ -745,6 +825,8 @@ window.onload = function () {makeAllSortable();};*/
 			</tr>
 			</tbody>
 		</table>
+
+		(Acknowledgements to Marty O&rsquo;Donnell &ndash; yes, <em>that</em> Marty O&rsquo;Donnell &ndash; for pointing out that it wasn&rsquo;t sufficiently clear what parts of this section I was oversimplifying; his feedback resulted in a much clearer explanation.)
 
 		<!--<table>
 			<thead>

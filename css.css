@@ -1143,6 +1143,7 @@ code {
 .musicalmodes tr.bottomborder:not(:last-child) td {
 	border-bottom: 2px solid var(--offset-level-3);
 }
+/* no .topborder because there's already a bottom border for the previous column, and "border-collapse: inherit" means it'll be displayed separately */
 .musicalmodes .accent del.thick {
 	text-decoration-color: var(--heading-color-translucent);
 	text-decoration-thickness: 3px;
@@ -1150,7 +1151,18 @@ code {
 .musicalmodes th.highlight {
 	background-color: var(--offset-level-2);
 }
-/* no .topborder because there's already a bottom border for the previous column, and "border-collapse: inherit" means it'll be displayed separately */
+.musicalmodes td.rightpad2, th.rightpad2 {
+	padding-right: 2px;
+}
+.musicalmodes td.leftpad2, th.leftpad2 {
+	padding-left: 2px;
+}
+.musicalmodes td.norightpad, th.norightpad {
+	padding-right: 0px;
+}
+.musicalmodes td.noleftpad, th.noleftpad {
+	padding-left: 0px;
+}
 
 .hue0, .hue0 td, .hue0 th {
 	color: var(--hue0);
@@ -1297,4 +1309,10 @@ table.noborder {
 }
 .toc-counter {
 	color: var(--toc-counter)
+}
+/* a very stupid way of doing this, but it works? */
+.radical-number {
+	text-decoration: underline;
+	text-underline-offset: -13.4px;
+	text-decoration-thickness: 0.75px;
 }

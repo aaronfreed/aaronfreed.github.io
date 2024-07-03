@@ -126,6 +126,19 @@
 	.hidden {
 		visibility: hidden !important;
 	}
+
+	spoiler.chronicles::before {
+		content: "(Chronicles spoiler:";
+	}
+	spoiler.rubicon::before {
+		content: "(Rubicon spoiler:";
+	}
+	spoiler::after {
+		content: ")"
+	}
+	spoiler {
+		color: var(--heading-color);
+	}
 }
 @media screen {
 	.noscreen {
@@ -234,6 +247,35 @@
 		color: var(--toc-counter);
 		font-style: italic;
 		background-color: var(--offset-level-2);
+	}
+
+	spoiler {
+		color: transparent;
+	}
+	spoiler:hover,
+	spoiler:focus {
+		color: inherit;
+	}
+	spoiler.chronicles::before {
+		content: "Chronicles spoiler, hover/select to view:";
+	}
+	spoiler.rubicon::before {
+		content: "Rubicon spoiler, hover/select to view:";
+	}
+	spoiler:before {
+		color: var(--link);
+		font-weight: var(--bold);
+		font-style: italic;
+		cursor: pointer;
+	}
+	spoiler:hover::before,
+	spoiler:focus::before {
+		color: var(--link-hover);
+		text-decoration: underline;
+	}
+	spoiler:active::before {
+		color: var(--link-active);
+		text-decoration: underline;
 	}
 }
 /* reminder to self about CSS variables:
@@ -475,6 +517,9 @@ blockquote.wide {
 }
 .portfolio blockquote {
 	margin: 12px 30px 6px;
+}
+.hathortimeline blockquote {
+	color: var(--toc-counter);
 }
 
 ul,
@@ -771,10 +816,10 @@ tbody:nth-child(even) tr:nth-child(odd) .highlight {
 	background-color: var(--offset-level-1);
 }
 tbody:nth-child(even) tr:nth-child(even) .hidden {
-	color: var(--offset-level-1);
+	/*color: var(--offset-level-1);*/ visibility: hidden !important;
 }
 tbody:nth-child(even) tr:nth-child(odd) .hidden {
-	color: var(--background);
+	/*color: var(--background);*/ visibility: hidden !important;
 }
 /* now this is a story all about how / my life got flipped, turned upside-down */
 tbody tr.freshprince:nth-child(even) {
@@ -916,10 +961,10 @@ textarea {
 	background-color: var(--offset-level-1);
 }
 .istoria tbody:nth-child(even) tr:nth-child(even) .hidden {
-	color: var(--background);
+	/*color: var(--background);*/ visibility: hidden !important;
 }
 .istoria tbody:nth-child(even) tr:nth-child(odd) .hidden {
-	color: var(--offset-level-1);
+	/*color: var(--offset-level-1);*/ visibility: hidden !important;
 }
 .istoria .name {
 	font-weight: var(--medium);
@@ -1213,41 +1258,12 @@ code {
 	color: var(--hue330);
 }
 
-spoiler {
-	color: transparent;
-}
-spoiler:hover,
-spoiler:focus {
-	color: inherit;
-}
-spoiler.chronicles::before {
-	content: "Chronicles spoiler, hover/select to view:";
-}
-spoiler.rubicon::before {
-	content: "Rubicon spoiler, hover/select to view:";
-}
-spoiler:before {
-	color: var(--link);
-	font-weight: var(--bold);
-	font-style: italic;
-	cursor: pointer;
-}
-spoiler:hover::before,
-spoiler:focus::before {
-	color: var(--link-hover);
-	text-decoration: underline;
-}
-spoiler:active::before {
-	color: var(--link-active);
-	text-decoration: underline;
-}
-
 .speaker {
 	margin-top: 6px;
 	margin-left: 16px;
 	font-size: 15px;
 	font-style: italic;
-	color: var(--heading-color);
+	color: var(--heading-color) !important;
 }
 
 hr {

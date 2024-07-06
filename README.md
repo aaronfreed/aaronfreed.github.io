@@ -1,4 +1,4 @@
-I&rsquo;m a political science and cybersecurity major from Sarasota, FL. Amateur game development, music creation and (re)mastering, and writing consume much of my spare time.
+<span class="hyphens: auto;" lang="en-us">I&rsquo;m a political science and cybersecurity major from Sarasota, FL. Amateur game development, music creation and (re)mastering, and writing consume much of my spare time.
 
 I’m currently heavily involved in developing the following code projects:
 
@@ -133,4 +133,4 @@ I&rsquo;m also a member of **[last.fm](http://last.fm/user/Cassandra-Leo)**, **[
 
 Also, in case the insane amount of detail here didn’t make it obvious, I&rsquo;m neurodivergent.
 
-More to come when I feel like updating this further.
+More to come when I feel like updating this further.</span>

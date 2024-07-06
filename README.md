@@ -1,6 +1,6 @@
 I&rsquo;m a political science and cybersecurity major from Sarasota, FL. Amateur game development, music creation and (re)mastering, and writing consume much of my spare time.
 
-I’m currently heavily involved in developing the following code project:
+I’m currently heavily involved in developing the following code projects:
 
 * **[VAF](https://github.com/aaronfreed/vasara/)**: A Lua texturing utility for **[*Marathon* Aleph One](https://alephone.lhowon.org/)**. Based on Vasara by **[@Hopper262](https://github.com/Hopper262)** and **Ares Ex Machina**, which in turn is based on **[Visual Mode.lua](https://github.com/treellama/visualmode)** by **[@jonirons](https://github.com/jonirons)** and **[@treellama](https://github.com/treellama)** (Visual Mode.lua is effectively the command line to Vasara&rsquo;s GUI). At the time I began this project, neither plugin had been substantially updated since 2016, so I took it upon myself (with a bit of assistance from **[@SolraBizna](https://github.com/SolraBizna)** and **[@murbruksprodukt](https://github.com/murbruksprodukt)**) to update Vasara to implement new Aleph One features, fix longstanding bugs, and add new features to make texturing easier. This remains a work in progress; when I&rsquo;m satisfied with the results, I may backport some of these changes to Visual Mode.lua. This will only function with Aleph One 1.7 or later, and it is best used with **[Weland](https://github.com/treellama/weland/releases)** (see the readme for an abbreviated setup guide, or my content creation guide directly below for a detailed one).
 
@@ -30,6 +30,8 @@ Pages currently hosted here:
       * Customize almost every ShapeFusion string to match your own scenario&rsquo;s data.
    * **[Where Are Monsters in Marathon...Maps](https://aaronfreed.github.io/marathonmonsters.html)**
       * A case study of the *Marathon* trilogy&rsquo;s monster placement as a microcosm of how restricting variety within individual levels can, counterintuitively, increase variety across an entire game.
+   * **[The *Marathon 2* Palette](https://aaronfreed.github.io/marathon2palette.html)**
+      * Colors used in vanilla *Marathon 2* and *Marathon Infinity*&rsquo;s 256-color graphics. Forthcoming: the same, but for *Marathon 1*.
    * **[Marathon: Looper](https://aaronfreed.github.io/marathonlooper.html)**
       * How to loop songs in Aleph One prior to 1.7. Split off to its own page because the process it describes is no longer necessary with releases targeting only Aleph One 1.7 or later.
 * **Music & Audio**
@@ -40,7 +42,7 @@ Pages currently hosted here:
    * **[My discography](https://aaronfreed.github.io/discography.html)**
       * Including <em>Marathon</em> content, covers, and original material alike.
    * **[Musical Modes and the Circle of Fifths](https://aaronfreed.github.io/musicalmodes.html)**
-      * A lengthy and highly technical examination of how the seven modes of the major scale (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, and Locrian) relate to each other and to the circle of fifths (a musical concept inextricably linked with chords and key signatures). Contains a large number of tables illustrating the principle.
+      * A lengthy and highly technical examination of how the seven modes of the major scale (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, and Locrian) relate to each other and to the circle of fifths (a musical concept inextricably linked with chords and key signatures). Contains a large number of tables illustrating the principle. Also goes into great detail about the ancient Greek scales that gave several of our modes their names (spoiler alert: the ancient &ldquo;Mixolydian&rdquo;, &ldquo;Phrygian&rdquo;, &ldquo;Dorian&rdquo;, and &ldquo;Lydian&rdquo; scales are not the ones bearing those names today).
 * **Gaming**
    * **[My portfolio](https://aaronfreed.github.io/portfolio.html)**
       * An overview of my creative output from the past several years, with a heavy focus on <em>Marathon</em> content I&rsquo;ve worked on.
@@ -83,7 +85,7 @@ I&rsquo;m also working on several forthcoming mods:
 * ***Tempus Irae Redux*** (2020-present, forthcoming): maps, music, sound, scripting, writing, soundtrack mastering
    * [Get the original *Tempus Irae* here](http://nardo.bungie.org/alephone.php)
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6nVJdLAfq0ZxS6WRv0bC3Fe)
-   * I didn&rsquo;t contribute to the original *Tempus Irae* but have been involved in *Redux*&rsquo;s development since it started in roughly May 2020. *Redux* isn&rsquo;t a straight remaster but more of a modern update; since it significantly changes several levels, players may find it interesting to play both. It also isn&rsquo;t planned to supersede the original *Tempus Irae*; the latter&rsquo;s original Aleph One release will continue to be available on Nardo&rsquo;s website after we release *Redux*. We entered a limited beta test in October 2023 and presently aim to release the game in April or May 2024.
+   * I didn&rsquo;t contribute to the original *Tempus Irae* but have been involved in *Redux*&rsquo;s development since it started in roughly May 2020. *Redux* isn&rsquo;t a straight remaster but more of a modern update; since it significantly changes several levels, players may find it interesting to play both. It also isn&rsquo;t planned to supersede the original *Tempus Irae*; the latter&rsquo;s original Aleph One release will continue to be available on Nardo&rsquo;s website after we release *Redux*. We entered a limited beta test in October 2023 and presently aim to release the game in mid-2024 (it might be out by now if I hadn&rsquo;t had a sudden bout of madness and decided to compose several original songs for it).
 * ***Where Monsters Are in Dreams*** (2019-present, forthcoming): maps, music, sound, scripting, soundtrack mastering, writing, graphics, codirector *(alongside **CryoS** and **hypersleep**)*
    * [Website](http://bighouse.bungie.org/wmaid/)
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kB_7qLbTdgia1hiNOoYmEz)
@@ -98,7 +100,7 @@ I&rsquo;m also working on several forthcoming mods:
    * *Chronicles* is planned to be a sort of grand finale to a loose arc between the fan games *Rubicon*, *Eternal X*, *Phoenix*, *Where Monsters Are in Dreams* (listed in original release order rather than in-universe chronological order). It is planned to resolve Hathor&rsquo;s story, to address some ramifications of *Rubicon*&rsquo;s story, and to resolve the ramifications of the conflict revealed towards the end of *Eternal*.
      However, despite its having technically been in development for nearly two-thirds of my life, it&rsquo;s probably less than half complete. I plan for its second half to be fairly atypical for *Marathon* gameplay, with perhaps dozens of interconnected levels featuring nonlinear objectives and items that enable players to progress in several different ways; they&rsquo;ll be able to obtain these in nearly any order, meaning its objectives will have several possible solutions. None of this is implemented yet, though, and *Chronicles* is currently on the backburner at least until *Tempus Irae Redux* is complete.
 
-In case that wasn&rsquo;t enough, I also run a **[YouTube channel](https://youtube.com/@MarathonVidmaster)**.
+In case that wasn&rsquo;t enough, I also run a **[YouTube channel](https://youtube.com/@MarathonVidmaster)** and host a **[repository of Marathon film files](https://github.com/aaronfreed/marathonfilms)**.
 
 All of the above game mods use the **[Aleph One engine](https://alephone.lhowon.org/download.html)**. You may also wish to familiarize yourself with the **[*Marathon* trilogy](https://alephone.lhowon.org/scenarios.html)**; in particular, *Hellpak* runs under *Marathon Infinity*.
 

@@ -1,6 +1,6 @@
 I&rsquo;m a political science and cybersecurity major from Sarasota, FL. Amateur game development, music creation and (re)mastering, and writing consume much of my spare time.
 
-I’m currently heavily involved in developing the following code projects:</span>
+I’m currently heavily involved in developing the following code projects:
 
 * **[VAF](https://github.com/aaronfreed/vasara/)**: A Lua texturing utility for **[*Marathon* Aleph One](https://alephone.lhowon.org/)**. Based on Vasara by **[@Hopper262](https://github.com/Hopper262)** and **Ares Ex Machina**, which in turn is based on **[Visual Mode.lua](https://github.com/treellama/visualmode)** by **[@jonirons](https://github.com/jonirons)** and **[@treellama](https://github.com/treellama)** (Visual Mode.lua is effectively the command line to Vasara&rsquo;s GUI). At the time I began this project, neither plugin had been substantially updated since 2016, so I took it upon myself (with a bit of assistance from **[@SolraBizna](https://github.com/SolraBizna)** and **[@murbruksprodukt](https://github.com/murbruksprodukt)**) to update Vasara to implement new Aleph One features, fix longstanding bugs, and add new features to make texturing easier. This remains a work in progress; when I&rsquo;m satisfied with the results, I may backport some of these changes to Visual Mode.lua. This will only function with Aleph One 1.7 or later, and it is best used with **[Weland](https://github.com/treellama/weland/releases)** (see the readme for an abbreviated setup guide, or my content creation guide directly below for a detailed one).
 
@@ -75,7 +75,7 @@ I&rsquo;ve contributed in varying degrees to the following (mostly) playable gam
    * [Creator RyokoTK&rsquo;s gameplay and commentary](https://www.youtube.com/playlist?list=PL-_EnUuI9PUoIncYlqgWainfOUoZAXhCY)
    * [Additional gameplay by me and others](https://www.youtube.com/playlist?list=PLoysJW6pXQ6k2XxgTocOm9kxC-y6jXAZI)
 
-I&rsquo;m also working on several forthcoming mods:</span>
+I&rsquo;m also working on several forthcoming mods:
 
 * ***Dungeons Presents Hellpak Vol. 2: An Exercise in Questionable Taste*** (2023-present, forthcoming): maps, scripting, music, soundtrack mastering, writing<
    * [Discord server](https://discord.gg/DTMvjFqtTA)
@@ -85,11 +85,11 @@ I&rsquo;m also working on several forthcoming mods:</span>
 * ***Tempus Irae Redux*** (2020-present, forthcoming): maps, music, sound, scripting, writing, soundtrack mastering<
    * [Get the original *Tempus Irae* here](http://nardo.bungie.org/alephone.php)
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6nVJdLAfq0ZxS6WRv0bC3Fe)
-   * <span class="hyphens: auto;" lang="en-us">I didn&rsquo;t contribute to the original *Tempus Irae* but have been involved in *Redux*&rsquo;s development since it started in roughly May 2020. *Redux* isn&rsquo;t a straight remaster but more of a modern update; since it significantly changes several levels, players may find it interesting to play both. It also isn&rsquo;t planned to supersede the original *Tempus Irae*; the latter&rsquo;s original Aleph One release will continue to be available on Nardo&rsquo;s website after we release *Redux*. We entered a limited beta test in October 2023 and presently aim to release the game in mid-2024 (it might be out by now if I hadn&rsquo;t had a sudden bout of madness and decided to compose several original songs for it).</span>
-* <span class="hyphens: auto;" lang="en-us">***Where Monsters Are in Dreams*** (2019-present, forthcoming): maps, music, sound, scripting, soundtrack mastering, writing, graphics, codirector *(alongside **CryoS** and **hypersleep**)*</span>
+   * I didn&rsquo;t contribute to the original *Tempus Irae* but have been involved in *Redux*&rsquo;s development since it started in roughly May 2020. *Redux* isn&rsquo;t a straight remaster but more of a modern update; since it significantly changes several levels, players may find it interesting to play both. It also isn&rsquo;t planned to supersede the original *Tempus Irae*; the latter&rsquo;s original Aleph One release will continue to be available on Nardo&rsquo;s website after we release *Redux*. We entered a limited beta test in October 2023 and presently aim to release the game in mid-2024 (it might be out by now if I hadn&rsquo;t had a sudden bout of madness and decided to compose several original songs for it).
+* ***Where Monsters Are in Dreams*** (2019-present, forthcoming): maps, music, sound, scripting, soundtrack mastering, writing, graphics, codirector *(alongside **CryoS** and **hypersleep**)*
    * [Website](http://bighouse.bungie.org/wmaid/)
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kB_7qLbTdgia1hiNOoYmEz)
-   * <span class="hyphens: auto;" lang="en-us">A perpetually in-development scenario (I believe its development stretches back at least as far as 2001). Hypersleep and CryoS are two of the main forces behind *Apotheosis X*; the three of us have recently recommitted to finally finishing this monster (pun intended) and have a detailed, step-by-step roadmap to do so. We&rsquo;re hoping for a late 2024/early 2025 release, but we&rsquo;ve overshot so many estimates that it&rsquo;s become a running gag, so take that with not just a grain or even a boulder of salt but in fact an entire salt mine.</span>
+   * A perpetually in-development scenario (I believe its development stretches back at least as far as 2001). Hypersleep and CryoS are two of the main forces behind *Apotheosis X*; the three of us have recently recommitted to finally finishing this monster (pun intended) and have a detailed, step-by-step roadmap to do so. We&rsquo;re hoping for a late 2024/early 2025 release, but we&rsquo;ve overshot so many estimates that it&rsquo;s become a running gag, so take that with not just a grain or even a boulder of salt but in fact an entire salt mine.
 * ***Return to Marathon* Chapter 2** (2023-present, forthcoming): maps, music, sound, scripting, graphics
    * [*Return to Marathon* website](http://bighouse.bungie.org/rtm/)
    * [*Return to Marathon* Chapter 1](https://citadel.lhowon.org/scenarios/return-to-marathon/)

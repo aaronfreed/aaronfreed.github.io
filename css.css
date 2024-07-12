@@ -1235,6 +1235,26 @@ textarea {
 }
 
 /* the discography page has complicated table border stuff */
+.discography table {
+	margin: 12px auto;
+	border-spacing: 0px;
+	border: 1px solid var(--offset-level-2);
+	border-start-start-radius: 12px;
+	border-start-end-radius: 12px;
+	border-end-start-radius: 12px;
+	border-end-end-radius: 12px;
+	border-collapse: inherit !important;
+}
+.discography :is(.multi, .master) tbody > tr:is(:nth-child(3n+1), :nth-child(3n+2)) > td,
+.discography :is(.solo, .compilation) tbody > tr:is(:nth-child(3n+1), :nth-child(3n+2)) > td {
+	border-bottom: none;
+}
+.discography :is(.multi, .master) tbody > tr:nth-child(3n) > td,
+.discography :is(.solo, .compilation) tbody > tr:nth-child(3n) > td,
+.discography thead tr:last-child th {
+	border-bottom: 1px solid var(--offset-level-2);
+}
+
 :is(.multi, .master) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
 :is(.solo, .compilation) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
 .unofficial-master tbody > tr:is(:nth-child(4n+3), :nth-child(4n+4)),
@@ -1247,6 +1267,12 @@ textarea {
 	background-color: var(--offset-level-1);
 	print-color-adjust: economy;
 }
+:is(.multi, .master) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2)),
+:is(.solo, .compilation) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5))
+{
+	border-color: var(--offset-level-1);
+}
+
 :is(.multi, .master) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
 :is(.solo, .compilation) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
 .unofficial-master tbody > tr:is(:nth-child(4n+1), :nth-child(4n+2)),
@@ -1259,31 +1285,33 @@ textarea {
 {
 	background-color: var(--background);
 }
-.discography :is(td, th):nth-child(1) {
-	border-left: 1px solid var(--offset-level-2);
-}
-.discography :is(td, th):nth-last-child(1) {
-	border-right: 1px solid var(--offset-level-2);
-}
-.discography :is(thead, tfoot, tbody) > tr:nth-child(1) {
-	border-top: 1px solid var(--offset-level-2);
-}
-.discography :is(thead, tfoot) > tr:nth-last-child(1),
-.discography tbody > tr:nth-child(3n) {
-	border-bottom: 1px solid var(--offset-level-2);
+.discography :is(thead, tfoot, tbody) > tr:first-child(1),
+.discography tbody > tr:nth-child(3n+1) {
+	border-top: 1px solid var(--offset-level-2) !important;
 }
 .discography thead th {
 	font-weight: var(--boldest);
+}
+.discography thead th:first-child {
+	border-top-left-radius: 11px;
+}
+.discography thead th:last-child {
+	border-top-right-radius: 11px;
+}
+.discography tfoot th:first-child {
+	border-bottom-left-radius: 11px;
+}
+.discography tfoot th:last-child {
+	border-bottom-right-radius: 11px;
 }
 .discography tfoot th {
 	font-weight: var(--bold);
 	font-size: 13px;
 }
 
-.discography tr.singleline {
+.discography tr.singleline td {
 	border-bottom: 1px solid var(--offset-level-2);
 }
-
 
 /* the istoria body messages also have some pretty complicated stuff */
 .istoria table {

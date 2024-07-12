@@ -30,8 +30,10 @@ Pages currently hosted here:
       * Customize almost every ShapeFusion string to match your own scenario&rsquo;s data.
    * **[Where Are Monsters in Marathon...Maps](https://aaronfreed.github.io/marathonmonsters.html)**
       * A case study of the *Marathon* trilogy&rsquo;s monster placement as a microcosm of how restricting variety within individual levels can, counterintuitively, increase variety across an entire game.
+   * **[The *Marathon 1* Palette](https://aaronfreed.github.io/marathon1palette.html)**
+      * Colors used in vanilla *Marathon 1*&rsquo;s 256-color graphics.
    * **[The *Marathon 2* Palette](https://aaronfreed.github.io/marathon2palette.html)**
-      * Colors used in vanilla *Marathon 2* and *Marathon Infinity*&rsquo;s 256-color graphics. Forthcoming: the same, but for *Marathon 1*.
+      * Colors used in vanilla *Marathon 2* and *Marathon Infinity*&rsquo;s 256-color graphics.
    * **[Marathon: Looper](https://aaronfreed.github.io/marathonlooper.html)**
       * How to loop songs in Aleph One prior to 1.7. Split off to its own page because the process it describes isn&rsquo;t necessary with releases targeting only Aleph One 1.7 or later.
 * **Music & Audio**

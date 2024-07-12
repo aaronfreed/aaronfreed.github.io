@@ -1446,10 +1446,10 @@ textarea {
 	text-align-last: justify;
 }
 .balanced-wrap {
-	text-wrap: balance;
+	white-space: balance;
 }
 .pretty-wrap {
-	text-wrap: pretty;
+	white-space: pretty;
 }
 pre,
 code {

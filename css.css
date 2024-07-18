@@ -725,7 +725,8 @@ a:active {
 }
 
 /* define font weights */
-.light {
+.light,
+.light :is(p, td, th, blockquote) {
 	font-weight: var(--lightest);
 }
 .light :where(strong, .bold, a:link, a:visited) {
@@ -854,22 +855,27 @@ li {
 	margin: 8px 0px;
 }
 .upperpara {
-	margin: 0px 0px 8px;
+	margin-top: 0px;
+	margin-bottom: 8px;
 }
 .lowerpara {
-	margin: 8px 0px 0px;
+	margin-top: 8px;
+	margin-bottom: 0px;
 }
 :where(.discography, .soundtracks, .portfolio) p {
 	margin: 12px 0px 6px;
 }
 .discography p.upperpara {
-	margin: 0px 0px 6px;
+	margin-top: 0px;
+	margin-bottom: 6px;
 }
 .discography p.midpara {
-	margin: 12px 0px;
+	margin-top: 12px;
+	margin-bottom: 12px;
 }
 .discography p.lowerpara {
-	margin: 12px 0px 0px;
+	margin-top: 12px;
+	margin-bottom: 0px;
 }
 .soundtracks div {
 	margin: 4px 0px;
@@ -1441,18 +1447,20 @@ textarea {
 }
 
 .centred,
+tr.centred > :is(td, th),
 :where(td, th):where(.centred, .dr),
 .istoria .footer {
 	text-align: center;
 }
-.centre-justify {
+.centre-justify,
+tr.centre-justify > :is(td, th) {
 	text-align: justify;
 	text-align-last: center;
 }
 .nowrap {
 	white-space: nowrap;
 }
-.middle {
+.middle, .middle td, .middle th {
 	vertical-align: middle;
 }
 .left {
@@ -1466,17 +1474,21 @@ textarea {
 .integer {
 	text-align: right;
 }
-.justify {
+.justify,
+tr.justify :is(td, th) {
 	text-align: justify;
 }
-.force-justify {
+.force-justify,
+tr.force-justify :is(td, th) {
 	text-align: justify;
 	text-align-last: justify;
 }
-.balanced-wrap {
+.balanced-wrap,
+.balanced-wrap :is(td, th, li) {
 	white-space: balance;
 }
-.pretty-wrap {
+.pretty-wrap,
+.pretty-wrap :is(td, th, li) {
 	white-space: pretty;
 }
 pre,
@@ -1677,10 +1689,12 @@ table.noborder {
 .noborder :is(thead, tbody, tr, th, td) {
 	background: none !important;
 }
-.notoppad {
+.notoppad,
+.notoppad :is(td, th) {
 	padding-top: 0px;
 }
-.nobottompad {
+.nobottompad,
+.nobottompad :is(td, th) {
 	padding-bottom: 0px;
 }
 .hide {
@@ -1704,50 +1718,67 @@ table.noborder {
 	color: var(--link-visited);
 }
 
-.weight1, .weight1 :is(td, th, li) {
+.weight1,
+.weight1 :is(td, th, li) {
 	font-weight: var(--lightest);
 }
-.weight2, .weight2 :is(td, th, li), td.weight2, th.weight2, li.weight2, .weight1 :is(a:link, a:visited, strong) {
+.weight2,
+.weight2 :is(td, th, li),
+:is(td, th, li).weight2,
+.weight1 :is(a:link, a:visited, strong) {
 	font-weight: var(--lighter);
 }
-.weight3, .weight3 :is(td, th, li), .weight2 :is(a:link, a:visited, strong), .weight1 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited) {
+.weight3,
+.weight3 :is(td, th, li),
+:is(td, th, li).weight3,
+.weight2 :is(a:link, a:visited, strong),
+.weight1 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited) {
 	font-weight: var(--light);
 }
-.weight4, .weight4 :is(td, th, li), .weight3 :is(a:link, a:visited, strong), .weight2 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited), .weight1 strong strong strong {
+.weight4,
+.weight4 :is(td, th, li),
+:is(td, th, li).weight4,
+.weight3 :is(a:link, a:visited, strong),
+.weight2 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited),
+.weight1 strong strong strong {
 	font-weight: var(--medium);
 }
-.weight5, .weight5 :is(td, th, li), .weight4 :is(a:link, a:visited, strong), .weight3 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited), .weight2 strong strong strong, .weight1 strong strong strong strong {
+.weight5,
+.weight5 :is(td, th, li),
+:is(td, th, li).weight5,
+.weight4 :is(a:link, a:visited, strong),
+.weight3 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited),
+.weight2 strong strong strong,
+.weight1 strong strong strong strong {
 	font-weight: var(--bold);
 }
-.weight6, .weight6 :is(td, th, li), .weight5 :is(a:link, a:visited, strong), .weight4 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited), .weight3 strong strong strong, .weight2 strong strong strong strong, .weight1 strong strong strong strong strong {
+.weight6,
+.weight6 :is(td, th, li),
+:is(td, th, li).weight6,
+.weight5 :is(a:link, a:visited, strong),
+.weight4 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited),
+.weight3 strong strong strong,
+.weight2 strong strong strong strong,
+.weight1 strong strong strong strong strong {
 	font-weight: var(--bolder);
 }
-.weight7, .weight7 :is(td, th, li), .weight6 :is(a:link, a:visited, strong), .weight5 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited), .weight4 strong strong strong, .weight3 strong strong strong strong, .weight2 strong strong strong strong strong, .weight1 strong strong strong strong strong strong {
-	font-weight: var(--boldest);
-}
-:is(td, th, li).weight1 {
-	font-weight: var(--lightest);
-}
-:is(td, th, li).weight2 {
-	font-weight: var(--lighter);
-}
-:is(td, th, li).weight3 {
-	font-weight: var(--light);
-}
-:is(td, th, li).weight4 {
-	font-weight: var(--medium);
-}
-:is(td, th, li).weight5 {
-	font-weight: var(--bold);
-}
-:is(td, th, li).weight6 {
-	font-weight: var(--bolder);
-}
-:is(td, th, li).weight7 {
+.weight7,
+.weight7 :is(td, th, li),
+:is(td, th, li).weight7,
+.weight6 :is(a:link, a:visited, strong),
+.weight5 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited),
+.weight4 strong strong strong,
+.weight3 strong strong strong strong,
+.weight2 strong strong strong strong strong,
+.weight1 strong strong strong strong strong strong {
 	font-weight: var(--boldest);
 }
 .fixheight {
 	line-height: 125%;
+}
+.discography .fixheight,
+.discography .fixheight :is(td, th) {
+	line-height: 21px;
 }
 .toc-counter {
 	color: var(--toc-counter);

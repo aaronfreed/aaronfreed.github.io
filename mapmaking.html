@@ -474,11 +474,11 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h2 id="directionality">Directionality</h2>
-<p>Angles in Weland can vary in two, not three, but <em>four</em> different ways. Its representations of objects&rsquo; angles corresponds to <div style="margin-top: 8px;"><span id="ftnt_ref02" class="dotted" title="The game actually represents the player&rsquo;s yaw internally as a 9-bit value, ranging from 0 to 511; an increase of 1 in its internal representation corresponds to an increase of 0.703125&deg;, i.e., 360/512. If you press F10, it shows the angle as a value ranging from &ndash;179.296875&deg; to 180&deg;, but this is because it subtracts 360&deg; from angles greater than 180&deg; &ndash; printing the value in the Lua console returns values from 0&deg; to 359.296875&deg;.">the game&rsquo;s representation of the player&rsquo;s yaw (non-vertical angle)<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span>.</p>
+<p style="margin-bottom: 16px;">Angles in Weland can vary in two, not three, but <em>four</em> different ways. Its representations of objects&rsquo; angles corresponds to <span id="ftnt_ref02" class="dotted" title="The game actually represents the player&rsquo;s yaw internally as a 9-bit value, ranging from 0 to 511; an increase of 1 in its internal representation corresponds to an increase of 0.703125&deg;, i.e., 360/512. If you press F10, it shows the angle as a value ranging from &ndash;179.296875&deg; to 180&deg;, but this is because it subtracts 360&deg; from angles greater than 180&deg; &ndash; printing the value in the Lua console returns values from 0&deg; to 359.296875&deg;.">the game&rsquo;s representation of the player&rsquo;s yaw (non-vertical angle)<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span>.</p>
 
 <table>
 	<thead>
-		<tr>
+		<tr class="accent">
 			<td class="right">Angle</td>
 			<td>Yaw</td>
 			<td>Objects</td>
@@ -563,9 +563,7 @@ All of these are found under <strong>Special</strong> &rightarrow; <strong>Level
 	<li>Simply use all 256</span> colors you want in CLUT 0 and rearrange them as desired in the others if needed. Be warned, however, that ShapeFusion currently has no option to reduce the number of colors per CLUT, should you decide you want fewer. You&rsquo;d currently need to open the shapes file in Anvil or Hakvil (using an emulator or a classic Mac) and adjust the palettes there.</li>
 </ol>
 
-<p>Note that using non-vanilla palettes causes 8-bit software mode to look very, very stupid, in case anyone even cares about that in a scenario created in 2023</span>. I don&rsquo;t actually know how it selects the colors for that.</p>
-
-<p>I&rsquo;ve indexed <a href="marathon2palette.html"><em>Marathon 2</em> and <em>Infinity</em>&rsquo;s 8-bit palettes</a> here based on their shapes files&rsquo; contents, and likewise <a href="marathon1palette.html"><em>Marathon 1</em>&rsquo;s</a>.</p>
+<p class="fixheight">Note that using non-vanilla palettes causes 8-bit software mode to look very, very stupid, in case anyone even cares about that in a scenario created in 2024. I don&rsquo;t actually know how 8-bit software mode selects colors, but I&rsquo;ve compiled <a href="marathon1palette.html"><em>Marathon 1</em>&rsquo;s</a> and <a href="marathon2palette.html"><em>Marathon 2</em>/<em>Infinity</em>&rsquo;s</a> palettes to facilitate adherence to vanilla palettes.</p>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 

@@ -3,7 +3,7 @@ I&rsquo;m a political science and cybersecurity major from Sarasota, FL. Amateur
 I’m currently heavily involved in developing the following code projects:
 
 * **[VAF](https://github.com/aaronfreed/vasara/)**: A Lua texturing utility for **[*Marathon* Aleph One](https://alephone.lhowon.org/)**. Based on Vasara by **[@Hopper262](https://github.com/Hopper262)** and **Ares Ex Machina**, which in turn is based on **[Visual Mode.lua](https://github.com/treellama/visualmode)** by **[@jonirons](https://github.com/jonirons)** and **[@treellama](https://github.com/treellama)** (Visual Mode.lua is effectively the command line to Vasara&rsquo;s GUI). At the time I began this project, neither plugin had been substantially updated since 2016, so I took it upon myself (with a bit of assistance from **[@SolraBizna](https://github.com/SolraBizna)** and **[@murbruksprodukt](https://github.com/murbruksprodukt)**) to update Vasara to implement new Aleph One features, fix longstanding bugs, and add new features to make texturing easier. This remains a work in progress; when I&rsquo;m satisfied with the results, I may backport some of these changes to Visual Mode.lua. This will only function with Aleph One 1.7 or later, and it is best used with **[Weland](https://github.com/treellama/weland/releases)** (see the readme for an abbreviated setup guide, or my content creation guide directly below for a detailed one).
-* **[Aleph Bet]**: Fork of Aleph One with added features. Currently in the very early stages, but with very ambitious plans for the future.
+* **[Aleph Bet](https://github.com/Aleph-Bet-Marathon/alephbet/)**: Fork of Aleph One with added features. Currently in the very early stages, but with very ambitious, detailed plans for the future.
 
 Pages currently hosted here:
 
@@ -39,7 +39,7 @@ Pages currently hosted here:
       * How to loop songs in Aleph One prior to 1.7. Split off to its own page because the process it describes isn&rsquo;t necessary with releases targeting only Aleph One 1.7 or later.
 * **Music & Audio**
    * **[My notes on remastering audio](https://aaronfreed.github.io/remastering.html)**
-      * An in-depth description of my cleanup process for music and sounds with poor mastering, lossy compression artifacts, or low sample rates, including an explanation of upmastering, a process I typically use in cases where <a href="https://en.wikipedia.org/wiki/Generation_loss" target="_blank">generation loss</a> is a possible concern. (It&rsquo;s impossible to restore data stripped out by digital clipping, lossy compression, or low sample rates; it&rsquo;s only possible to create approximations of what might have been there.) Written for <a href="https://www.izotope.com/en/products/rx.html" target="_blank">iZotope RX</a>, but its principles are usable in any sufficiently powerful audio cleanup software.
+         * An in-depth description of my cleanup process for music and sounds with poor mastering, lossy compression artifacts, or low sample rates, including an explanation of upmastering, a process I typically use in cases where <a href="https://en.wikipedia.org/wiki/Generation_loss" target="_blank">generation loss</a> is a possible concern. (It&rsquo;s impossible to restore data stripped out by digital clipping, lossy compression, or low sample rates; it&rsquo;s only possible to create approximations of what might have been there.) Written for <a href="https://www.izotope.com/en/products/rx.html" target="_blank">iZotope RX</a>, but its principles are usable in any sufficiently powerful audio cleanup software.
    * **[*Marathon* soundtracks](https://aaronfreed.github.io/soundtracks.html)**
       * Remixes and arrangements of Alexander Seropian&rsquo;s soundtrack for <em>Marathon</em> (1994), plus soundtracks for several major <em>Marathon</em> scenarios, many of which I&rsquo;ve personally remastered.
    * **[My discography](https://aaronfreed.github.io/discography.html)**
@@ -74,7 +74,7 @@ I&rsquo;ve contributed in varying degrees to the following (mostly) playable gam
    * There are multiple versions of this game for Aleph One:
       * [The first](https://simplici7y.com/items/marathon-trojan/) is a direct conversion of the original game files to Aleph One format by Shappie, with which treellama and I assisted. I did not directly create any content involved with this release.
       * [The second](https://hhas01.itch.io/trojan-se) is a more complicated conversion of the original game files by original creator Hamish Sanderson with some added extras, including my remastered music and sounds. This, unfortunately, does not run on current versions of Aleph One, but you can probably use the remastered music and sounds with Shappie&rsquo;s conversion above.
-* ***[Marathon Phoenix](https://simplici7y.com/items/marathon-phoenix-2/)*** (2020, tangentially): soundtrack remastering<
+* ***[Marathon Phoenix](https://simplici7y.com/items/marathon-phoenix-2/)*** (2020, tangentially): soundtrack remastering
    * [Creator RyokoTK&rsquo;s gameplay and commentary](https://www.youtube.com/playlist?list=PL-_EnUuI9PUoIncYlqgWainfOUoZAXhCY)
    * [Additional gameplay by me and others](https://www.youtube.com/playlist?list=PLoysJW6pXQ6k2XxgTocOm9kxC-y6jXAZI)
 

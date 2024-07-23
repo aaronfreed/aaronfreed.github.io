@@ -116,7 +116,7 @@
 	.trigtables tr:nth-child(15n+1) td,
 	.trigtables .fifteen {
 		color: var(--heading-color);
-		font-weight: bold;
+		font-weight: var(--bold);
 	}
 	.trigtables :is(tr:nth-child(15n+6), tr:nth-child(15n+11)) td,
 	.trigtables .five {
@@ -229,7 +229,7 @@
 	.trigtables .fifteen,
 	.trigtables .fifteen td {
 		color: var(--heading-color);
-		font-weight: bold;
+		font-weight: var(--bold);
 		background-color: var(--offset-level-3);
 	}
 	.trigtables table {
@@ -1518,7 +1518,7 @@ code {
 	text-align: right;
 }
 .trigtables :is(td.angle, th.sine, th.cosine, th.tangent, th.angle) {
-	font-weight: bold;
+	font-weight: var(--bold);
 }
 .trigtables :is(th.sine, th.cosine, th.tangent) {
 	text-align: center;

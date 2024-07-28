@@ -3,7 +3,13 @@ I&rsquo;m a political science and cybersecurity major from Sarasota, FL. Amateur
 I’m currently heavily involved in developing the following code projects:
 
 * **[VAF](https://github.com/aaronfreed/vasara/)**: A Lua texturing utility for **[*Marathon* Aleph One](https://alephone.lhowon.org/)**. Based on Vasara by **[@Hopper262](https://github.com/Hopper262)** and **Ares Ex Machina**, which in turn is based on **[Visual Mode.lua](https://github.com/treellama/visualmode)** by **[@jonirons](https://github.com/jonirons)** and **[@treellama](https://github.com/treellama)** (Visual Mode.lua is effectively the command line to Vasara&rsquo;s GUI). At the time I began this project, neither plugin had been substantially updated since 2016, so I took it upon myself (with a bit of assistance from **[@SolraBizna](https://github.com/SolraBizna)** and **[@murbruksprodukt](https://github.com/murbruksprodukt)**) to update Vasara to implement new Aleph One features, fix longstanding bugs, and add new features to make texturing easier. This remains a work in progress; when I&rsquo;m satisfied with the results, I may backport some of these changes to Visual Mode.lua. This will only function with Aleph One 1.7 or later, and it is best used with **[Weland](https://github.com/treellama/weland/releases)** (see the readme for an abbreviated setup guide, or my content creation guide directly below for a detailed one).
-* **[Aleph Bet](https://github.com/Aleph-Bet-Marathon/alephbet/)**: Fork of Aleph One with added features. Currently in the very early stages, but with very ambitious, detailed plans for the future.
+* **[Aleph Bet](https://github.com/Aleph-Bet-Marathon/alephbet/)**: Fork of Aleph One with added features. Currently in the very early stages, but with very ambitious, detailed plans for the future. Several other people have done a massive amount of work on this already, especially **[@SolraBizna](https://github.com/SolraBizna)** and **[@Prism019](https://github.com/Prism019)**.
+   * Our initial 0.9 release is all but certain to include:
+      * a [unified build system](https://mesonbuild.com/) across Windows, Linux, and MacOS (this is probably about 70-80% implemented)
+      * Solra and Nemo&rsquo;s Second Music System (which is already completely coded and just needs to be implemented)
+   * Additional goals, if we can complete them within a reasonable timeframe, are:
+      * yeet ffmpeg to an external binary, enabling more flexible encoding settings and hardware-accelerated encoding
+      * add a way to edit controls in-game, without quitting to the menu
 
 Pages currently hosted here:
 
@@ -17,6 +23,7 @@ Pages currently hosted here:
       * **[Introduction](https://aaronfreed.github.io/forgemanual.html)**
       * **[Tutorial 1](https://aaronfreed.github.io/forgetutorial1.html)** (WIP)
          * Contains numerous annotations correcting errata and filling in the gaps to apply to the modern map editor Weland. I&rsquo;ve only annotated around 25% of it, and the annotations will need substantial amounts of editing before I consider it finished. But it&rsquo;s a start.
+            * Currently on hold &ndash; this approach struck me as increasingly less practical the further I got into it. I now plan to rewrite the Forge manual as a Weland manual when time permits.
    * **[The Annotated Anvil Help Balloons](https://aaronfreed.github.io/anvilhelp.html)** (updated to work as a ShapeFusion reference)
       * Based on the help strings for Anvil, Bungie&rsquo;s official physics, shapes, and sound file editor; with corrections and amendments for its modern replacement ShapeFusion.
    * **[Circles and *Marathon* Mapmaking](marathoncircles.html)**

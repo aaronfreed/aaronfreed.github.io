@@ -1115,11 +1115,17 @@ ol.loweralpha {
 ol.lowerlatin {
 	list-style-type: lower-latin;
 }
+ol.lowerroman {
+	list-style-type: lower-roman;
+}
 ol.upperalpha {
 	list-style-type: upper-alpha;
 }
 ol.upperlatin {
 	list-style-type: upper-latin;
+}
+ol.upperroman {
+	list-style-type: upper-roman;
 }
 
 /* right-align Istoria's TOC numbers */

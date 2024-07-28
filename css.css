@@ -1619,16 +1619,16 @@ code {
 .musicalmodes th.highlight {
 	background-color: var(--offset-level-2);
 }
-.musicalmodes td.rightpad2, th.rightpad2 {
+td.rightpad2, th.rightpad2 {
 	padding-right: 2px;
 }
-.musicalmodes td.leftpad2, th.leftpad2 {
+td.leftpad2, th.leftpad2 {
 	padding-left: 2px;
 }
-.musicalmodes td.norightpad, th.norightpad {
+td.norightpad, th.norightpad {
 	padding-right: 0px;
 }
-.musicalmodes td.noleftpad, th.noleftpad {
+td.noleftpad, th.noleftpad {
 	padding-left: 0px;
 }
 

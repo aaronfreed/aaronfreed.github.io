@@ -1619,16 +1619,33 @@ code {
 .musicalmodes th.highlight {
 	background-color: var(--offset-level-2);
 }
-td.rightpad2, th.rightpad2 {
-	padding-right: 2px;
-}
-td.leftpad2, th.leftpad2 {
-	padding-left: 2px;
-}
-td.norightpad, th.norightpad {
+
+td.nosidepad,
+th.nosidepad,
+.nosidepad :is(td, th) {
+	padding-left: 0px; 
 	padding-right: 0px;
 }
-td.noleftpad, th.noleftpad {
+td.sidepad2,
+th.sidepad2,
+.sidepad2 :is(td, th) {
+	padding-left: 2px; 
+	padding-right: 2px;
+}
+td.rightpad2,
+th.rightpad2 {
+	padding-right: 2px;
+}
+td.leftpad2,
+th.leftpad2 {
+	padding-left: 2px;
+}
+td.norightpad,
+th.norightpad {
+	padding-right: 0px;
+}
+td.noleftpad,
+th.noleftpad {
 	padding-left: 0px;
 }
 

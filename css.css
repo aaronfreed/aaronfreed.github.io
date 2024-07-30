@@ -100,11 +100,15 @@
 	.istoria thead tr:last-child th {
 		display: table-header-group;
 	}
-	a:not(.noprintlink):after {
+	a:not(.noprintlink)::after {
 		font-weight: var(--lighter) !important;
 		content: " (" attr(href) ") ";
 		color: var(--link-hover) !important;
 		font-size: 81.25%;
+	}
+	a.underline:link::after,
+	a.underline:visited::after {
+		text-decoration: none !important;
 	}
 	thead th {
 		font-weight: normal !important;
@@ -642,6 +646,16 @@
 	.bg-000E0F {background: #000E0F !important; color: #FFF !important;} /*m1*/
 	.bg-0000FF {background: #0000FF !important; color: #FFF !important;} /*m1&2*/
 	.bg-000000 {background: #000000 !important; color: #FFF !important;} /*m1&2*/
+
+	.underline,
+	a.underline:link,
+	a.underline:visited {
+		text-decoration: underline;
+	}
+
+	.dotted {
+		text-decoration-thickness: 0.25px;
+	}
 }
 /* reminder to self about CSS variables:
    two entries (ah! ah! ah!): vertical, horizontal
@@ -1873,11 +1887,6 @@ a.weight7:visited,
 .weight7 .radical-number {
 	text-underline-offset: -14.375px;
 	text-decoration-thickness: 2.75px;
-}
-.underline,
-a.underline:link,
-a.underline:visited {
-	text-decoration: underline;
 }
 
 .compositions2023-2024 ol ol {

@@ -774,6 +774,10 @@ ol.toc > li > ol > li > ol :where(.integer, .decimal) {
 	font-style: italic;
 }
 
+.initialsize {
+	font-size: initial;
+}
+
 /* headers and accents */
 h1,
 h2,
@@ -1632,6 +1636,14 @@ th.sidepad2,
 	padding-left: 2px; 
 	padding-right: 2px;
 }
+td.sidepad4,
+th.sidepad4,
+.sidepad4 :is(td, th) {
+	padding-left: 4px; 
+	padding-right: 4px;
+}
+td:first-child.sidepad2 {padding-left: 0px;}
+td:last-child.sidepad2 {padding-right: 0px;}
 td.rightpad2,
 th.rightpad2 {
 	padding-right: 2px;
@@ -1713,12 +1725,20 @@ table.noborder {
 	background: none !important;
 }
 .notoppad,
-.notoppad :is(td, th) {
+.notoppad :is(li, td, th) {
 	padding-top: 0px;
 }
 .nobottompad,
-.nobottompad :is(td, th) {
+.nobottompad :is(li, td, th) {
 	padding-bottom: 0px;
+}
+.notopmargin,
+.notopmargin :is(li, td, th) {
+	margin-top: 0px;
+}
+.nobottommargin,
+.nobottommargin :is(li, td, th) {
+	margin-bottom: 0px;
 }
 .hide {
 	display: none;
@@ -1742,16 +1762,22 @@ table.noborder {
 }
 
 .weight1,
+a.weight1:link,
+a.weight1:visited,
 .weight1 :is(td, th, li) {
 	font-weight: var(--lightest);
 }
 .weight2,
+a.weight2:link,
+a.weight2:visited,
 .weight2 :is(td, th, li),
 :is(td, th, li).weight2,
 .weight1 :is(a:link, a:visited, strong) {
 	font-weight: var(--lighter);
 }
 .weight3,
+a.weight3:link,
+a.weight3:visited,
 .weight3 :is(td, th, li),
 :is(td, th, li).weight3,
 .weight2 :is(a:link, a:visited, strong),
@@ -1759,6 +1785,8 @@ table.noborder {
 	font-weight: var(--light);
 }
 .weight4,
+a.weight4:link,
+a.weight4:visited,
 .weight4 :is(td, th, li),
 :is(td, th, li).weight4,
 .weight3 :is(a:link, a:visited, strong),
@@ -1767,6 +1795,8 @@ table.noborder {
 	font-weight: var(--medium);
 }
 .weight5,
+a.weight5:link,
+a.weight5:visited,
 .weight5 :is(td, th, li),
 :is(td, th, li).weight5,
 .weight4 :is(a:link, a:visited, strong),
@@ -1776,6 +1806,8 @@ table.noborder {
 	font-weight: var(--bold);
 }
 .weight6,
+a.weight6:link,
+a.weight6:visited,
 .weight6 :is(td, th, li),
 :is(td, th, li).weight6,
 .weight5 :is(a:link, a:visited, strong),
@@ -1786,6 +1818,8 @@ table.noborder {
 	font-weight: var(--bolder);
 }
 .weight7,
+a.weight7:link,
+a.weight7:visited,
 .weight7 :is(td, th, li),
 :is(td, th, li).weight7,
 .weight6 :is(a:link, a:visited, strong),
@@ -1839,4 +1873,60 @@ table.noborder {
 .weight7 .radical-number {
 	text-underline-offset: -14.375px;
 	text-decoration-thickness: 2.75px;
+}
+.underline,
+a.underline:link,
+a.underline:visited {
+	text-decoration: underline;
+}
+
+.compositions2023-2024 ol ol {
+	list-style-type: lower-roman;
+}
+.compositions2023-2024 :is(ol.contents, ol.tracklist, ol.interpolations) ::marker {color: var(--heading-color);
+}
+.compositions2023-2024 :is(ol.contents ol, ol.tracklist ol, blockquote ol) ::marker {
+	color: var(--toc-counter);
+}
+.compositions2023-2024 ol.contents p,
+.compositions2023-2024 ol.contents blockquote {
+	font-size: initial;
+}
+.compositions2023-2024 ol.contents p.sectionbreak {
+	font-size: 13px;
+}
+.compositions2023-2024 ol.contents p.sectionbreak :is(a:link, a:visited) {
+	font-weight: var(--light);
+}
+.compositions2023-2024 ol.contents li {
+	margin-top: 16px;
+}
+.compositions2023-2024 ol.contents ol.normal {
+	list-style-type: decimal;
+	color: var(--main);
+	font-size: initial;
+}
+.compositions2023-2024 ol.contents ol.normal ::marker {
+	color: var(--main);
+}
+.compositions2023-2024 :is(ol.normal, ol.shortmargin) li {
+	margin-top: 8px;
+}
+.compositions2023-2024 ol.interpolations ol li:before {
+	color: var(--toc-counter);
+} 
+.compositions2023-2024 li.accentbefore:before {
+	color: var(--heading-color);
+}
+.compositions2023-2024 blockquote {
+	margin-top: 8px; 
+	margin-bottom: 8px;
+}
+.compositions2023-2024 a.weight3:link,
+.compositions2023-2024 a.weight3:visited {
+	font-weight: var(--light) !important;
+}
+.compositions2023-2024 a.weight4:link,
+.compositions2023-2024 a.weight4:visited {
+	font-weight: var(--medium) !important;
 }

@@ -143,6 +143,9 @@
 	spoiler {
 		color: var(--heading-color);
 	}
+	.compositions2023-2024 .dotted {
+		text-decoration: none;
+	}
 }
 @media screen {
 	.noscreen {
@@ -653,8 +656,8 @@
 		text-decoration: underline;
 	}
 
-	.dotted {
-		text-decoration-thickness: 0.25px;
+	.compositions2023-2024 .dotted {
+		border-bottom: 1px dotted;
 	}
 }
 /* reminder to self about CSS variables:
@@ -1530,7 +1533,7 @@ code {
 .defaultnames pre:last-of-type {
 	padding: 0px 0px 8px;
 }
-.dotted {
+:is:not(.compositions2023-2024) .dotted {
 	border-bottom: 1px dotted;
 }
 
@@ -1892,14 +1895,15 @@ a.weight7:visited,
 .compositions2023-2024 ol ol {
 	list-style-type: lower-roman;
 }
-.compositions2023-2024 :is(ol.contents, ol.tracklist, ol.interpolations) ::marker {color: var(--heading-color);
+.compositions2023-2024 :is(ol.contents, ol.tracklist, ol.interpolations) ::marker {
+	color: var(--heading-color);
 }
 .compositions2023-2024 :is(ol.contents ol, ol.tracklist ol, blockquote ol) ::marker {
 	color: var(--toc-counter);
 }
 .compositions2023-2024 ol.contents p,
 .compositions2023-2024 ol.contents blockquote {
-	font-size: initial;
+	font-size: initial !important;
 }
 .compositions2023-2024 ol.contents p.sectionbreak {
 	font-size: 13px;

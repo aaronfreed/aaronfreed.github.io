@@ -1176,6 +1176,7 @@ ol.upperroman {
 	font-size: 13px;
 	text-align: center;
 }
+.compositions2023-2024 
 
 /* tables */
 table {
@@ -1901,8 +1902,8 @@ a.weight7:visited,
 .compositions2023-2024 :is(ol.contents ol, ol.tracklist ol, blockquote ol) ::marker {
 	color: var(--toc-counter);
 }
-.compositions2023-2024 ol.contents p,
-.compositions2023-2024 ol.contents blockquote {
+.compositions2023-2024 ol.contents p:not(.sectionbreak),
+.compositions2023-2024 ol.contents blockquote:not(.sectionbreak) {
 	font-size: initial !important;
 }
 .compositions2023-2024 ol.contents p.sectionbreak {

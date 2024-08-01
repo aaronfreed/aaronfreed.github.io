@@ -146,6 +146,12 @@
 	.compositions2023-2024 .dotted {
 		text-decoration: none;
 	}
+	.compositions2023-2024 .print25toleft {
+		margin-left: -25px;
+	}
+	.compositions2023-2024 .print60toleft {
+		margin-left: -60px;
+	}
 }
 @media screen {
 	.noscreen {
@@ -1943,4 +1949,7 @@ a.weight7:visited,
 .compositions2023-2024 a.weight4:link,
 .compositions2023-2024 a.weight4:visited {
 	font-weight: var(--medium) !important;
+}
+.compositions2023-2024 :is(.fixheight, p.fixheight, li.fixheight, td.fixheight) {
+	line-height: 21px !important;
 }

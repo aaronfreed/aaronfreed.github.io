@@ -145,7 +145,7 @@
 		color: var(--heading-color);
 	}
 	.compositions2023-2024 .dotted {
-		text-decoration: none;
+		text-decoration: none !important;
 	}
 	.compositions2023-2024 .print25toleft {
 		margin-left: -25px;

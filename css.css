@@ -21,6 +21,7 @@
 	--hue300: #f0f;
 	--hue330: #ff0080;
 	--heading-color: #2f5496;
+	--heading-color-translucent: rgba(47, 84, 150, 0.7777777);
 	--portfolio-heading: #2f5496;
 	--toc-counter: #004c80;
 	--main: #000;

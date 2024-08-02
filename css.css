@@ -21,7 +21,7 @@
 	--hue300: #f0f;
 	--hue330: #ff0080;
 	--heading-color: #2f5496;
-	--heading-color-translucent: rgba(47, 84, 150, 0.7777777);
+	--heading-color-translucent: rgba(47, 84, 150, 0.5);
 	--portfolio-heading: #2f5496;
 	--toc-counter: #004c80;
 	--main: #000;
@@ -1541,7 +1541,7 @@ code {
 .defaultnames pre:last-of-type {
 	padding: 0px 0px 8px;
 }
-:is:not(.compositions2023-2024) .dotted {
+:not(.compositions2023-2024) .dotted {
 	border-bottom: 1px dotted;
 }
 

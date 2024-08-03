@@ -146,6 +146,7 @@
 						<li><a href="#mapmaking">Aleph One Mapmaking Guide</a></li>
 						<li><a href="#soundtracks"><em>Marathon</em> Remixes &amp; Fan Soundtracks</a></li>
 						<li><a href="#remasteredsounds">Remastered <em>Pathways into Darkness</em> & <em>Marathon</em> Trilogy Sounds</a></li>
+						<li><a href="#alephbet">Aleph Bet</a></li>
 					</ol>
 				</li>
 			</ol>
@@ -699,11 +700,11 @@
 			<li><strong>Solra Bizna</strong>, <strong>Nemo</strong>, <strong>Prism019</strong>, &amp; I have done the bulk of the work on this, with occasional help from others</li>
 			<li>Still in early development stages; plans for initial 0.9 release include:
 				<ul>
-					<li><strong>A simplified build system based on Meson</strong>, which will unify the build process across all major operating systems and architectures (already largely done &ndash; <strong>Solra</strong> and <strong>Prism</strong> handled the bulk of this)</li>
-					<li><strong>In-game editing of some settings</strong> &ndash; preventing the tedium of having to switch between the preferences &amp; the game until the mouse settings are <em>exactly</em> right
+					<li><strong>A simplified build system based on Meson</strong>, both unifying and speeding up the build process across all major operating systems and architectures (already largely done &ndash; <strong>Solra</strong> and <strong>Prism</strong> handled the bulk of this)</li>
+					<li><strong>In-game editing of some settings</strong>, preventing the tedium of having to switch between the preferences &amp; the game until the mouse settings are <em>exactly</em> right
 						<ul>
 							<li>Ideally, this will ultimately also include sound &amp; possibly certain graphics settings</li>
-							<li>Certain settings (e.g., environment settings) will never be editable in-game &ndash; what would switching the map even look like?</li>
+							<li>Certain settings (e.g., environment settings) will never be editable in-game &ndash; what would switching map files mid-game even look like?</li>
 						</ul>
 					</li>
 					<li>Yeet film exports into an <strong>external ffmpeg binary</strong>, vastly reducing the amount of time needed to build the app &amp; allowing for hardware acceleration of encoding, YUV444 output, &amp; more</li>
@@ -712,11 +713,11 @@
 			</li>
 			<li>We also have a detailed roadmap for the addition of numerous other features, including but not limited to:
 				<ul>
-					<li><strong>Hierarchical/unified preferences</strong> &ndash; preventing the need to customize input settings for every scenario the player plays</li>
-					<li><strong>Scenario-specific preferences</strong> &ndash; preventing the need for scenarios to use cumbersome in-game menus for optional features (e.g., &ldquo;auto-save at level transition&rdquo;, &ldquo;show secrets collected&rdquo;) that players must customize every time they start a new game</li>
+					<li><strong>Hierarchical/unified preferences</strong>, saving players the need to customize input settings for every scenario the player plays</li>
+					<li><strong>Scenario-specific preferences</strong>, saving scenarios the need to use cumbersome in-game menus for optional features (e.g., &ldquo;auto-save at level transition&rdquo;, &ldquo;show secrets collected&rdquo;), and saving players the need to customize them every time they start a new game</li>
 					<li>Ability to <strong>run multiple solo Lua scripts or netscripts at once</strong></li>
-					<li><strong>Non-number-based indexing</strong> &ndash; allowing, e.g., multiple shapes patches to affect the same collection</li>
-					<li><strong>Arbitrary texture scaling</strong> &amp; (for floors and ceilings only) <strong>rotation</strong></li>
+					<li><strong>Non-number-based indexing</strong>, allowing, e.g., multiple shapes patches to affect the same collection</li>
+					<li><strong>Arbitrary texture scaling &amp; rotation</strong> (note: arbitrary rotation will only be possible for floors and ceilings, although flipping walls or rotating them by multiples of 90&deg; may be possible)</li>
 					<li>Support for <strong>Lua versions other than 5.2</strong></li>
 					<li><strong>Rotation of stereo sound samples</strong> to match their in-world positions</li>
 					<li>Support for <strong>Unicode</strong> &amp; <strong>modern localization</strong></li>

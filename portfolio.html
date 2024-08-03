@@ -700,7 +700,13 @@
 			<li><strong>Solra Bizna</strong>, <strong>Nemo</strong>, <strong>Prism019</strong>, &amp; I have done the bulk of the work on this, with occasional help from others</li>
 			<li>Still in early development stages; plans for initial 0.9 release include:
 				<ul>
-					<li><strong>A simplified build system based on Meson</strong>, both unifying &amp; speeding up the build process across all major operating systems &amp; architectures (already largely done &ndash; <strong>Solra</strong> &amp; <strong>Prism</strong> handled the bulk of this)</li>
+					<li><strong>A simplified build system based on Meson</strong>, with benefits including:
+						<ul>
+							<li>unifying the build process across Linux, MacOS, & Windows</li>
+							<li>removing untold amounts of clutter (good ridance, Boost) &amp; vastly speeding up the build process</li>
+							<li>making error checking in applications such as Visual Studio Code work correctly (or at all, for that matter)</li>
+						</ul>
+					This is already largely done; <strong>Prism</strong> &amp; <strong>Solra</strong> handled most of it</li>
 					<li><strong>In-game editing of some settings</strong>, saving players the tedium of switching between the preferences &amp; the game to get the mouse settings <em>exactly</em> right
 						<ul>
 							<li>Ideally, this will ultimately also include sound &amp; possibly certain graphics settings</li>

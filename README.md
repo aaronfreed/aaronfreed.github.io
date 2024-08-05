@@ -51,7 +51,7 @@ Pages currently hosted here:
       * Remixes and arrangements of Alexander Seropian&rsquo;s soundtrack for <em>Marathon</em> (1994), plus soundtracks for several major <em>Marathon</em> scenarios, many of which I&rsquo;ve personally remastered.
    * **[My discography](https://aaronfreed.github.io/discography.html)**
       * Including <em>Marathon</em> content, covers, and original material alike.
-   * **[*Compositions 2023-2024* liner notes]**
+   * **[*Compositions 2023-2024* liner notes](https://aaronfreed.github.io/compositions2023-2024notes.html)**
       * Detailed commentary on songs I&rsquo;ve written since 2023 (plus credits for brief interpolations and a list of software used). Remains a work in progress (as do several of the compositions themselves).
    * **[Musical Modes and the Circle of Fifths](https://aaronfreed.github.io/musicalmodes.html)**
       * A lengthy and highly technical examination of how the seven modes of the major scale (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, and Locrian) relate to each other and to the circle of fifths (a musical concept inextricably linked with chords and key signatures). Contains a large number of tables illustrating the principle. Also goes into great detail about the ancient Greek scales that gave several of our modes their names (spoiler alert: the ancient &ldquo;Mixolydian&rdquo;, &ldquo;Phrygian&rdquo;, &ldquo;Dorian&rdquo;, and &ldquo;Lydian&rdquo; scales are not the ones bearing those names today).

@@ -17,13 +17,13 @@ Pages currently hosted here:
    * **[Beginners’ guide](https://aaronfreed.github.io/mapmaking101.html)**
       * What editors to use, how to set them up, what guides to follow to get started making levels, what those guides get wrong or omit, and what to do after mastering the basics.
    * **[Advanced guide](https://aaronfreed.github.io/mapmaking.html)**
-      * A guide to several intractable problems that weren&rsquo;t documented elsewhere and how to fix them.
+      * A guide to several intractable problems that weren&rsquo;t documented elsewhere and fixes for them.
    * **The Annotated Forge Manual** (WIP):
       * **[Detailed Table of Contents](https://aaronfreed.github.io/forgemanualcontents.html)**
       * **[Introduction](https://aaronfreed.github.io/forgemanual.html)**
       * **[Tutorial 1](https://aaronfreed.github.io/forgetutorial1.html)** (WIP)
          * Contains numerous annotations correcting errata and filling in the gaps to apply to the modern map editor Weland. I&rsquo;ve only annotated around 25% of it, and the annotations will need substantial amounts of editing before I consider it finished. But it&rsquo;s a start.
-            * Currently on hold &ndash; this approach struck me as increasingly less practical the further I got into it. I now plan to rewrite the Forge manual as a Weland manual when time permits.
+            * Currently on hold; this approach felt increasingly impractical as I got further into it. I now plan to rewrite the Forge manual as a Weland manual when time permits.
    * **[The Annotated Anvil Help Balloons](https://aaronfreed.github.io/anvilhelp.html)** (updated to work as a ShapeFusion reference)
       * Based on the help strings for Anvil, Bungie&rsquo;s official physics, shapes, and sound file editor; with corrections and amendments for its modern replacement ShapeFusion.
    * **[Circles and *Marathon* Mapmaking](marathoncircles.html)**
@@ -54,12 +54,12 @@ Pages currently hosted here:
    * **[*Compositions 2023-2024* liner notes](https://aaronfreed.github.io/compositions2023-2024notes.html)**
       * Detailed commentary on songs I&rsquo;ve written since 2023 for *hellpak vol. 2* and *Tempus Irae Redux* (plus credits for brief interpolations and a list of software used). Remains a work in progress (as do several of the compositions themselves).
    * **[Musical Modes and the Circle of Fifths](https://aaronfreed.github.io/musicalmodes.html)**
-      * A lengthy and highly technical examination of how the seven modes of the major scale (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, and Locrian) relate to each other and to the circle of fifths (a musical concept inextricably linked with chords and key signatures). Contains a large number of tables illustrating the principle. Also goes into great detail about the ancient Greek scales that gave several of our modes their names (spoiler alert: the ancient &ldquo;Mixolydian&rdquo;, &ldquo;Phrygian&rdquo;, &ldquo;Dorian&rdquo;, and &ldquo;Lydian&rdquo; scales are not the ones bearing those names today).
+      * A lengthy and highly technical examination of how the major scale&rsquo;s seven modes (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, and Locrian) relate to each other and the circle of fifths (a musical concept inextricably linked to chords and key signatures). Contains dozens of tables illustrating the principle. Also goes into great detail about the ancient Greek scales that gave several of our modes their names (spoiler alert: the ancient &ldquo;Mixolydian&rdquo;, &ldquo;Phrygian&rdquo;, &ldquo;Dorian&rdquo;, and &ldquo;Lydian&rdquo; scales are not the ones bearing those names today).
 * **Gaming**
    * **[My portfolio](https://aaronfreed.github.io/portfolio.html)**
       * An overview of my creative output from the past several years, with a heavy focus on <em>Marathon</em> content I&rsquo;ve worked on.
    * **[Hathor&rsquo;s timeline in *Eternal X* 1.3 (major spoilers)](https://aaronfreed.github.io/hathortimeline.html)**
-      * Please don&rsquo;t read this unless you&rsquo;ve completed a recent build of *Eternal X* 1.3: it spoils several of the game&rsquo;s major plot twists, and you&rsquo;ll lack the context to grasp their emotional significance.
+      * Please don&rsquo;t read this unless you&rsquo;ve completed a recent build of *Eternal X* 1.3: it spoils several major plot twists, and you&rsquo;ll lack the context to grasp their emotional significance.
    * **[*Marathon Istoria*: Conversations with the Dead (major spoilers)](https://aaronfreed.github.io/istoria_body_messages.html)**
       * A catalog of all Yellow Crystal messages in the Aleph One scenario *Istoria*, the keywords used to display them, and the locations of all 28 bodies in the scenario. (Again, please don&rsquo;t read this until you&rsquo;ve finished *Istoria* at least once.)
 * **Miscellaneous**

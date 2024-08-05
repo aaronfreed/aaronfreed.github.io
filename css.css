@@ -1,55 +1,81 @@
 ﻿:root {
 	--background: #fff;
+	--background-translucent: #ffffffc6;
 	--offset-level-1: #eff0ff;
+	--offset-level-1-translucent: #eff0ffc6;
 	--offset-level-2: #e0e0ff;
+	--offset-level-2-translucent: #e0e0ffc6;
 	--offset-level-3: #d0d0ff;
+	--offset-level-3-translucent: #d0d0ffc6;
 	--offset-level-4: #a0a0ff;
-	--link: #09f;
-	--link-visited: #c0c;
-	--link-active: #090;
-	--link-hover: #c60;
-	--hue0: #f00;
-	--hue30: #ff8000;
-	--hue60: #ff0;
-	--hue90: #80ff00;
-	--hue120: #0f0;
-	--hue150: #00f080;
-	--hue180: #0ff;
-	--hue210: #0080ff;
-	--hue240: #00f;
-	--hue270: #8000ff;
-	--hue300: #f0f;
-	--hue330: #ff0080;
+	--offset-level-4-translucent: #a0a0ffc6;
+	--link: #0099ff;
+	--link-translucent: #0099ffc6;
+	--link-visited: rgb(204, 0, 204);
+	--link-visited-translucent: #cc00ccc6;
+	--link-active: rgb(0, 153, 0);
+	--link-active-translucent: #009900c6;
+	--link-hover: #cc6600;
+	--link-hover-translucent: #cc6600c6;
+	--hue0: #ff0000;
+	--hue30: #ff7f00;
+	--hue60: #ffff00;
+	--hue90: #7fff00;
+	--hue120: #00ff00;
+	--hue150: #00ff7f;
+	--hue180: #00ffff;
+	--hue210: #007fff;
+	--hue240: #0000ff;
+	--hue270: #7f00ff;
+	--hue300: #ff00ff;
+	--hue330: #ff007f;
 	--heading-color: #2f5496;
-	--heading-color-translucent: rgba(47, 84, 150, 0.5);
+	--heading-color-translucent: #2f5496c6;
 	--portfolio-heading: #2f5496;
+	--portfolio-heading-translucent: #2f5496c6;
 	--toc-counter: #004c80;
+	--toc-counter-translucent: #004c80c6;
 	--main: #000;
-	--lightest: 200;
-	--lighter: 300;
-	--light: 400;
-	--medium: 500;
-	--bold: 600;
-	--bolder: 700;
-	--boldest: 800;
+	--main-translucent: #000000c6;
+	--beyondlightest: 100;
+	--weight1: 200;
+	--weight2: 300;
+	--weight3: 400;
+	--weight4: 500;
+	--weight5: 600;
+	--weight6: 700;
+	--weight7: 800;
+	--beyondboldest: 900;
 }
 @media (prefers-color-scheme: dark) {
 	@media screen {
 		:root {
 			--background: #000;
+			--background-translucent: #000000c6;
 			--offset-level-1: #1c1e36;
+			--offset-level-1-translucent: #1c1e36c6;
 			--offset-level-2: #383c6c;
+			--offset-level-2-translucent: #383c6cc6;
 			--offset-level-3: #545aa2;
+			--offset-level-3-translucent: #545aa2c6;
 			--offset-level-4: #7078d8;
+			--offset-level-4-translucent: #7078d8c6;
 			--link: #73e8ff;
+			--link-translucent: #73e8ffc6;
 			--link-visited: #ff93ff;
+			--link-visited-translucent: #ff93ffc6;
 			--link-active: #adffad;
+			--link-active-translucent: #adffadc6;
 			--link-hover: #ffb57b;
+			--link-hover-translucent: #ffb57bc6;
 			--heading-color: #74d4ff;
-			--heading-color-translucent: rgba(116, 212, 255, 0.7777777);
+			--heading-color-translucent: #74d4ffc6;
 			--portfolio-heading: #b8f0ff;
+			--portfolio-heading-translucent: #b8f0ffc6;
 			--toc-counter: #a8f0ff;
+			--toc-counter-translucent: #a8f0ffc6;
 			--main: #fff;
+			--main-translucent: #ffffffc6;
 		}
 	}
 }
@@ -102,11 +128,15 @@
 		display: table-header-group;
 	}
 	a:not(.noprintlink)::after {
-		font-weight: var(--lighter) !important;
+		font-weight: var(--weight2) !important;
 		content: " (" attr(href) ") ";
 		color: var(--link-hover) !important;
 		font-size: 81.25%;
 	}
+	a[href^="#"]::after {
+		display: none !important;
+	} /* don't waste ink or paper displaying intra-page navigation URLs */
+	a[href^="https://www."]::after {}
 	a.underline:link::after,
 	a.underline:visited::after {
 		text-decoration: none !important;
@@ -121,7 +151,7 @@
 	.trigtables tr:nth-child(15n+1) td,
 	.trigtables .fifteen {
 		color: var(--heading-color);
-		font-weight: var(--bold);
+		font-weight: var(--weight5);
 	}
 	.trigtables :is(tr:nth-child(15n+6), tr:nth-child(15n+11)) td,
 	.trigtables .five {
@@ -243,7 +273,7 @@
 	.trigtables .fifteen,
 	.trigtables .fifteen td {
 		color: var(--heading-color);
-		font-weight: var(--bold);
+		font-weight: var(--weight5);
 		background-color: var(--offset-level-3);
 	}
 	.trigtables table {
@@ -278,7 +308,7 @@
 	}
 	spoiler:before {
 		color: var(--link);
-		font-weight: var(--bold);
+		font-weight: var(--weight5);
 		font-style: italic;
 		cursor: pointer;
 	}
@@ -667,6 +697,50 @@
 		border-bottom: 1px dotted;
 	}
 }
+
+@counter-style footnote-numbers {
+	system: fixed;
+	symbols: 
+		/*  1 -   5 */ '\207D\00B9\207E' '\207D\00B2\207E' '\207D\00B3\207E' '\207D\2074\207E' '\207D\2075\207E'
+		/*  6 -  10 */ '\207D\2076\207E' '\207D\2077\207E' '\207D\2078\207E' '\207D\2079\207E' '\207D\00B9\2070\207E'
+		/* 11 -  15 */ '\207D\00B9\00B9\207E' '\207D\00B9\00B2\207E' '\207D\00B9\00B3\207E' '\207D\00B9\2074\207E' '\207D\00B9\2075\207E'
+		/* 16 -  20 */ '\207D\00B9\2076\207E' '\207D\00B9\2077\207E' '\207D\00B9\2078\207E' '\207D\00B9\2079\207E' '\207D\00B2\2070\207E'
+		/* 21 -  25 */ '\207D\00B2\00B9\207E' '\207D\00B2\00B2\207E' '\207D\00B2\00B3\207E' '\207D\00B2\2074\207E' '\207D\00B2\2075\207E'
+		/* 26 -  30 */ '\207D\00B2\2076\207E' '\207D\00B2\2077\207E' '\207D\00B2\2078\207E' '\207D\00B2\2079\207E' '\207D\00B3\2070\207E'
+		/* 31 -  35 */ '\207D\00B3\00B9\207E' '\207D\00B3\00B2\207E' '\207D\00B3\00B3\207E' '\207D\00B3\2074\207E' '\207D\00B3\2075\207E'
+		/* 36 -  40 */ '\207D\00B3\2076\207E' '\207D\00B3\2077\207E' '\207D\00B3\2078\207E' '\207D\00B3\2079\207E' '\207D\2074\2070\207E'
+		/* 41 -  45 */ '\207D\2074\00B9\207E' '\207D\2074\00B2\207E' '\207D\2074\00B3\207E' '\207D\2074\2074\207E' '\207D\2074\2075\207E'
+		/* 46 -  50 */ '\207D\2074\2076\207E' '\207D\2074\2077\207E' '\207D\2074\2078\207E' '\207D\2074\2079\207E' '\207D\2075\2070\207E'
+		/* 51 -  55 */ '\207D\2075\00B9\207E' '\207D\2075\00B2\207E' '\207D\2075\00B3\207E' '\207D\2075\2074\207E' '\207D\2075\2075\207E'
+		/* 56 -  60 */ '\207D\2075\2076\207E' '\207D\2075\2077\207E' '\207D\2075\2078\207E' '\207D\2075\2079\207E' '\207D\2076\2070\207E'
+		/* 61 -  65 */ '\207D\2076\00B9\207E' '\207D\2076\00B2\207E' '\207D\2076\00B3\207E' '\207D\2076\2074\207E' '\207D\2076\2075\207E'
+		/* 66 -  70 */ '\207D\2076\2076\207E' '\207D\2076\2077\207E' '\207D\2076\2078\207E' '\207D\2076\2079\207E' '\207D\2077\2070\207E'
+		/* 71 -  75 */ '\207D\2077\00B9\207E' '\207D\2077\00B2\207E' '\207D\2077\00B3\207E' '\207D\2077\2074\207E' '\207D\2077\2075\207E'
+		/* 76 -  80 */ '\207D\2077\2076\207E' '\207D\2077\2077\207E' '\207D\2077\2078\207E' '\207D\2077\2079\207E' '\207D\2078\2070\207E'
+		/* 81 -  85 */ '\207D\2078\00B9\207E' '\207D\2078\00B2\207E' '\207D\2078\00B3\207E' '\207D\2078\2074\207E' '\207D\2078\2075\207E'
+		/* 86 -  90 */ '\207D\2078\2076\207E' '\207D\2078\2077\207E' '\207D\2078\2078\207E' '\207D\2078\2079\207E' '\207D\2079\2070\207E'
+		/* 91 -  95 */ '\207D\2079\00B9\207E' '\207D\2079\00B2\207E' '\207D\2079\00B3\207E' '\207D\2079\2074\207E' '\207D\2079\2075\207E'
+		/* 96 - 100 */ '\207D\2079\2076\207E' '\207D\2079\2077\207E' '\207D\2079\2078\207E' '\207D\2079\2079\207E' '\207D\00B9\2070\2070\207E'
+	;
+}
+@counter-style footnote-letters {
+	system: fixed;
+	symbols:
+		/* a b c d e */ '\207D\1D43\207E' '\207D\1D47\207E' '\207D\1D9C\207E' '\207D\1D48\207E' '\207D\1D49\207E'
+		/* f g h i j */ '\207D\1DA0\207E' '\207D\1D4D\207E' '\207D\02B0\207E' '\207D\2071\207E' '\207D\02B2\207E'
+		/* k l m n o */ '\207D\1D4F\207E' '\207D\02E1\207E' '\207D\1D50\207E' '\207D\207F\207E' '\207D\1D52\207E'
+		/* p q r s t */ '\207D\1D56\207E' '\207D\107A5\207E' '\207D\02B3\207E' '\207D\02E2\207E' '\207D\1D57\207E'
+		/* u v w x y */ '\207D\1D58\207E' '\207D\1D5B\207E' '\207D\02B7\207E' '\207D\02E3\207E' '\207D\02B8\207E' 
+		/* z A B C D */ '\207D\1DBB\207E' '\207D\1D2C\207E' '\207D\1D2E\207E' '\207D\A7F2\207E' '\207D\1D30\207E'
+		/* E F G H I */ '\207D\1D31\207E' '\207D\A7F3\207E' '\207D\1D33\207E' '\207D\1D34\207E' '\207D\1D35\207E'
+		/* J K L M N */ '\207D\1D36\207E' '\207D\1D37\207E' '\207D\1D38\207E' '\207D\1D39\207E' '\207D\1D3A\207E'
+		/* O P Q R S */ '\207D\1D3C\207E' '\207D\1D3E\207E' '\207D\A7F4\207E' '\207D\1D3F\207E' '\207D\A7F1\207E'
+		/* T U V W */ '\207D\1D40\207E' '\207D\1D41\207E' '\207D\2C7D\207E' '\207D\1D42\207E'
+		/* I'm unaware of any superscript X, Y, or Z in the Unicode standard, so I've stopped here */
+		/* (in fact, q, C, F, Q, and S don't render correctly in Fira Sans at present, either) */
+	;
+}
+
 /* reminder to self about CSS variables:
    two entries (ah! ah! ah!): vertical, horizontal
  three entries (ah! ah! ah!): top, horizontal, bottom
@@ -677,7 +751,7 @@
 	local(Avenir),
 	local('Calibri Light');
 	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
-	font-weight: var(--lighter);
+	font-weight: var(--weight2);
 }
 @font-face {
 	font-family: 'Numberwang';
@@ -685,7 +759,7 @@
 	local(Avenir),
 	local('Calibri Light');
 	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
-	font-weight: var(--medium);
+	font-weight: var(--weight4);
 }
 @font-face {
 	font-family: 'Numberwang Medium';
@@ -693,7 +767,7 @@
 	local(Avenir),
 	local('Calibri');
 	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
 }
 @font-face {
 	font-family: 'Numberwang Bold';
@@ -701,7 +775,7 @@
 	local(Avenir),
 	local('Calibri');
 	unicode-range: U+30-39, U+00B2-00B3, U+00B9, U+2070, U+2074-2079;
-	font-weight: var(--boldest);
+	font-weight: var(--weight7);
 }
 
 /* start main entry */
@@ -710,7 +784,7 @@ body {
 	text-align: justify;
 	margin: auto;
 	hyphens: auto;
-	font-weight: var(--lighter);
+	font-weight: var(--weight2);
 	font-stretch: 100%;
 	background-color: var(--background);
 	color: var(--main);
@@ -720,13 +794,13 @@ body:not(.trigtables) {
 }
 .normal, button {
 	font-family: "Fira Sans", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-	font-weight: var(--lighter)
+	font-weight: var(--weight2)
 }
 .soundtracks strong,
 .soundtracks a:link,
 .soundtracks a:visited,
 .soundtracks :where(h1, h2, h3, h4) {
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
 	font-family: "Fira Sans", "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 }
 
@@ -751,13 +825,13 @@ a:active {
 /* define font weights */
 .light,
 .light :is(p, td, th, blockquote) {
-	font-weight: var(--lightest);
+	font-weight: var(--weight1);
 }
 .light :where(strong, .bold, a:link, a:visited) {
-	font-weight: var(--light);
+	font-weight: var(--weight3);
 }
 .light :where(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) {
-	font-weight: var(--bolder);
+	font-weight: var(--weight6);
 }
 
 strong,
@@ -769,7 +843,7 @@ a:visited,
 :where(.bold, strong, a:link, a:visited) :where(.integer, .decimal, .number, .date),
 :where(.integer, .decimal, .number, .date) :where(.bold, strong, a:link, a:visited),
 .bold .normal :is(a:link, a:visited) {
-	font-weight: var(--light);
+	font-weight: var(--weight3);
 }
 
 :is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited),
@@ -777,13 +851,13 @@ a:visited,
 ol.toc > :where(a:link, a:visited) :where(.integer, .decimal),
 strong.bold
 {
-	font-weight: var(--medium);
+	font-weight: var(--weight4);
 }
 
 :is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited),
 tr.bold > td
 {
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
 }
 
 ol.toc > li > ol > li > ol :where(.integer, .decimal) {
@@ -810,7 +884,7 @@ h4,
 h5
 {
 	margin: 12px 0px;
-	font-weight: var(--bolder);
+	font-weight: var(--weight6);
 	color: var(--heading-color);
 }
 .music h1 {
@@ -868,13 +942,13 @@ h5
 	margin: 8px 0px;
 }
 .portfolio h5 {
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
 	color: var(--portfolio-heading);
 	margin: 0px 0px 8px;
 }
-.portfolio h5.light {font-weight: var(--lighter);}
-.portfolio h5.light strong {font-weight: var(--light);}
-.portfolio h5.light strong strong {font-weight: var(--medium);}
+.portfolio h5.light {font-weight: var(--weight2);}
+.portfolio h5.light strong {font-weight: var(--weight3);}
+.portfolio h5.light strong strong {font-weight: var(--weight4);}
 
 /* paragraph, div, and list stuff */
 div,
@@ -986,25 +1060,25 @@ ol {
 }*/
 ol.toc :is(li, li a:link, li a:visited),
 ol.toc li:before {
-	font-weight: var(--boldest);
+	font-weight: var(--weight7);
 }
 :is(ol.toc ol, ol.toclite) :is(li, li a:link, li a:visited),
 :is(ol.toc ol, ol.toclite) li:before {
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
 }
 :is(ol.toclite ol, ol.toc ol ol, ol.tocliter) :is(li, li a:link, li a:visited),
 :is(ol.toclite ol, ol.toc ol ol, ol.tocliter) li:before {
-	font-weight: var(--light);
+	font-weight: var(--weight3);
 }
 /*:is(ol.toc, ol.toclite) :is(li:before, a:link, a:visited, li),
 ol.toc ol ol ol li:before {
-	font-weight: var(--lighter);
+	font-weight: var(--weight2);
 }*/
 :is(ol.toc ol ol ol, ol.toclite ol ol, ol.tocliter ol) :is(li, li a:link, li a:visited),
 :is(ol.toc ol ol ol, ol.toclite ol ol, ol.tocliter ol) li:before, 
 :is(ol, ol ol, ol ol ol) li.light:before,
 :is(ol, ol ol, ol ol ol) :is(li.light, li.light a:link, li.light a:visited) {
-	font-weight: var(--lightest);
+	font-weight: var(--weight1);
 }
 :is(ol.toc, ol.toclite, ol.tocliter) li:before {
 	content: "(" counters(item, ".")") ";
@@ -1034,78 +1108,78 @@ ol.toc ol ol ol li:before {
 .forgecontents ol.toc li {
 	font-size: 20px;
 	line-height: 125%;
-	font-weight: var(--bolder);
+	font-weight: var(--weight6);
 }
 .forgecontents ol.toc li:before {
 	counter-increment: i1;
 	content: counter(i1, upper-roman) ". ";
-	font-weight: var(--bolder);
+	font-weight: var(--weight6);
 }
 .forgecontents ol.toc ol,
 .forgecontents ol.toc ol li,
 .forgecontents ol.toc ol li a:is(:link, :visited)
 {
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
 }
 .forgecontents ol.toc ol {
 	counter-reset: i2;
 }
 .forgecontents ol.toc ol :is(li, li a:link, li a:visited) {
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
 	font-size: 18px;
 	line-height: 125%;
 }
 .forgecontents ol.toc ol li:before {
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
 	counter-increment: i2;
 	content: "(" counter(i1, upper-roman) "." counter(i2, decimal) ") "
 }
 .forgecontents ol.toc ol ol {
 	counter-reset: i3;
-	font-weight: var(--medium);
+	font-weight: var(--weight4);
 	line-height: 125%;
 }
 .forgecontents ol.toc ol ol :is(li a:link, li a:visited, li)
 {
-	font-weight: var(--medium);
+	font-weight: var(--weight4);
 	font-size: 16px;
 }
 .forgecontents ol.toc ol ol li:before {
-	font-weight: var(--medium);
+	font-weight: var(--weight4);
 	counter-increment: i3;
 	content: "[" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "] "
 }
 .forgecontents ol.toc ol ol ol {
 	counter-reset: i4;
-	font-weight: var(--light);
+	font-weight: var(--weight3);
 }
 .forgecontents ol.toc ol ol ol :is(li, li a:link, li a:visited) {
 	font-size: 16px;
-	font-weight: var(--light);
+	font-weight: var(--weight3);
 	font-style: inherit;
 }
 .forgecontents ol.toc ol ol ol li:before {
-	font-weight: var(--light);
+	font-weight: var(--weight3);
 	counter-increment: i4;
 	font-style: inherit;
 	content: "{" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "." counter(i4, decimal) "} "
 }
 .forgecontents ol.toc ol ol ol ol {
 	counter-reset: i5;
-	font-weight: var(--lighter);
+	font-weight: var(--weight2);
 }
 .forgecontents ol.toc ol ol ol ol :is(li, a:link, a:visited) {
-	font-weight: var(--lighter);
+	font-weight: var(--weight2);
 	font-size: 16px;
 }
 .forgecontents ol.toc ol ol ol ol li:before {
-	font-weight: var(--lighter);
+	font-weight: var(--weight2);
 	counter-increment: i5;
 	content: "\0027E8" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "." counter(i4, decimal) "." counter(i4, decimal) "\0027E9\000020";
 	font-style: inherit;
 }
 .forgemanual ol.toclite li.light :is(a:link, a:visited) {
-	font-weight: var(--lighter);
+	font-weight: var(--weight2);
 }
 
 /* counters for body of list. also a doozy */
@@ -1156,6 +1230,13 @@ ol.upperroman {
 	list-style-type: upper-roman;
 }
 
+.smallcaps {
+	font-variant-caps: small-caps;
+}
+.petitecaps {
+	font-variant-caps: petite-caps;
+}
+
 /* right-align Istoria's TOC numbers */
 .istoria ol.toc {
 	margin-left: 0px;
@@ -1183,7 +1264,6 @@ ol.upperroman {
 	font-size: 13px;
 	text-align: center;
 }
-.compositions2023-2024 
 
 /* tables */
 table {
@@ -1200,7 +1280,7 @@ th {
 }
 .music :where(td, th) {
 	vertical-align: top;
-	font-weight: var(--lighter);
+	font-weight: var(--weight2);
 	text-align: justify;
 }
 .discography :where(td, th) {
@@ -1235,13 +1315,13 @@ tbody tr.freshprince:nth-child(odd) {
 	background-color: var(--offset-level-1);
 }
 thead {
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
 	background-color: var(--offset-level-1);
 }
 .endnotes :where(td, th) {
 	padding: 4px;
 	vertical-align: top;
-	font-weight: var(--lighter);
+	font-weight: var(--weight2);
 }
 
 textarea, button {
@@ -1331,7 +1411,7 @@ textarea {
 	border-top: 1px solid var(--offset-level-2) !important;
 }
 .discography thead th {
-	font-weight: var(--boldest);
+	font-weight: var(--weight7);
 }
 .discography thead th:first-child {
 	border-top-left-radius: 11px;
@@ -1346,7 +1426,7 @@ textarea {
 	border-bottom-right-radius: 11px;
 }
 .discography tfoot th {
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
 	font-size: 13px;
 }
 
@@ -1361,7 +1441,7 @@ textarea {
 .istoria :is(td, th) {
 	padding: 4px 12px;
 	font-family: "Fira Sans", "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-	font-weight: var(--lighter);
+	font-weight: var(--weight2);
 	border: 1px solid var(--offset-level-4);
 }
 .istoria thead tr:nth-child(even) {
@@ -1375,7 +1455,7 @@ textarea {
 }
 .istoria thead tr:last-child {
 	background-color: var(--offset-level-2);
-	font-weight: var(--bolder);
+	font-weight: var(--weight6);
 }
 .istoria tfoot {
 	background-color: var(--offset-level-3);
@@ -1383,7 +1463,7 @@ textarea {
 }
 .istoria :where(td, th).topic {
 	font-family: "Fira Sans", "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-	font-weight: var(--light);
+	font-weight: var(--weight3);
 	text-align: right;}
 .istoria :where(td, th).location {
 	background-color: var(--offset-level-1);
@@ -1401,7 +1481,7 @@ textarea {
 	/*color: var(--offset-level-1);*/ visibility: hidden !important;
 }
 .istoria .name {
-	font-weight: var(--medium);
+	font-weight: var(--weight4);
 }
 
 /* it was a graveyard smash */
@@ -1423,18 +1503,18 @@ textarea {
 	border-left: 1px solid var(--offset-level-3);
 }
 .monstermash tr td:nth-child(1) {
-	font-weight: var(--light);
+	font-weight: var(--weight3);
 	text-align: right;
 }
 .monstermash tr td:nth-child(2) {
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
 }
 .monstermash table.endnotes td:nth-child(1) {
-	font-weight: var(--light);
+	font-weight: var(--weight3);
 	text-align: right;
 }
 .monstermash table.endnotes td:nth-child(2) {
-	font-weight: var(--lighter);
+	font-weight: var(--weight2);
 	text-align: justify;
 }
 /* i have no idea why this works this way but it does. css is a black art */
@@ -1470,7 +1550,7 @@ textarea {
 }
  .date:is:not(.music), :where(td, th).date {
 	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
 }
 .date {
 	text-align: right;
@@ -1528,7 +1608,7 @@ tr.force-justify :is(td, th) {
 }
 pre,
 code {
-	font-weight: var(--lightest);
+	font-weight: var(--weight1);
 	font-family: "Fira Mono", "Courier New", "Courier", monospace;
 }
 .defaultnames pre {
@@ -1553,13 +1633,13 @@ code {
 	text-align: right;
 }
 .trigtables :is(td.angle, th.sine, th.cosine, th.tangent, th.angle) {
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
 }
 .trigtables :is(th.sine, th.cosine, th.tangent) {
 	text-align: center;
 }
 .trigtables th {
-	font-weight: var(--boldest);
+	font-weight: var(--weight7);
 	color: var(--heading-color);
 }
 .trigtables :is(td, th) {
@@ -1790,7 +1870,8 @@ table.noborder {
 a.weight1:link,
 a.weight1:visited,
 .weight1 :is(td, th, li) {
-	font-weight: var(--lightest);
+	font-weight: var(--weight1);
+	text-decoration-thickness: 0.375px;
 }
 .weight2,
 a.weight2:link,
@@ -1798,7 +1879,8 @@ a.weight2:visited,
 .weight2 :is(td, th, li),
 :is(td, th, li).weight2,
 .weight1 :is(a:link, a:visited, strong) {
-	font-weight: var(--lighter);
+	font-weight: var(--weight2);
+	text-decoration-thickness: 0.5px;
 }
 .weight3,
 a.weight3:link,
@@ -1807,7 +1889,8 @@ a.weight3:visited,
 :is(td, th, li).weight3,
 .weight2 :is(a:link, a:visited, strong),
 .weight1 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited) {
-	font-weight: var(--light);
+	font-weight: var(--weight3);
+	text-decoration-thickness: 1px;
 }
 .weight4,
 a.weight4:link,
@@ -1817,7 +1900,8 @@ a.weight4:visited,
 .weight3 :is(a:link, a:visited, strong),
 .weight2 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited),
 .weight1 strong strong strong {
-	font-weight: var(--medium);
+	font-weight: var(--weight4);
+	text-decoration-thickness: 1.5px;
 }
 .weight5,
 a.weight5:link,
@@ -1828,7 +1912,8 @@ a.weight5:visited,
 .weight3 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited),
 .weight2 strong strong strong,
 .weight1 strong strong strong strong {
-	font-weight: var(--bold);
+	font-weight: var(--weight5);
+	text-decoration-thickness: 2px;
 }
 .weight6,
 a.weight6:link,
@@ -1840,7 +1925,8 @@ a.weight6:visited,
 .weight3 strong strong strong,
 .weight2 strong strong strong strong,
 .weight1 strong strong strong strong strong {
-	font-weight: var(--bolder);
+	font-weight: var(--weight6);
+	text-decoration-thickness: 2.25px;
 }
 .weight7,
 a.weight7:link,
@@ -1853,7 +1939,8 @@ a.weight7:visited,
 .weight3 strong strong strong strong,
 .weight2 strong strong strong strong strong,
 .weight1 strong strong strong strong strong strong {
-	font-weight: var(--boldest);
+	font-weight: var(--weight7);
+	text-decoration-thickness: 2.5px;
 }
 .fixheight {
 	line-height: 125%;
@@ -1917,7 +2004,7 @@ a.weight7:visited,
 	font-size: 13px;
 }
 .compositions2023-2024 ol.contents p.sectionbreak :is(a:link, a:visited) {
-	font-weight: var(--light);
+	font-weight: var(--weight3);
 }
 .compositions2023-2024 ol.contents li {
 	margin-top: 16px;
@@ -1945,12 +2032,16 @@ a.weight7:visited,
 }
 .compositions2023-2024 a.weight3:link,
 .compositions2023-2024 a.weight3:visited {
-	font-weight: var(--light) !important;
+	font-weight: var(--weight3) !important;
 }
 .compositions2023-2024 a.weight4:link,
 .compositions2023-2024 a.weight4:visited {
-	font-weight: var(--medium) !important;
+	font-weight: var(--weight4) !important;
 }
 .compositions2023-2024 :is(.fixheight, p.fixheight, li.fixheight, td.fixheight) {
 	line-height: 21px !important;
+}
+
+.dashed-vertical-borders {
+	border: 1px 0px dashed var(--heading-color-translucent);
 }

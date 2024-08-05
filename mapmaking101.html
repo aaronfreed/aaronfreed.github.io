@@ -45,11 +45,11 @@ window.onload = function () {makeAllSortable();};
 <h1>Marathon Mapmaking: Setup, Snafus, & Solutions</h1>
 <h2>Starting Steps</h2>
 
-	<p>This is a starters&rsquo; guide to creating content for <strong><a href="https://alephone.lhowon.org/" target="_blank">Marathon Aleph One</a></strong>, an open-source engine based on <strong>Bungie</strong>&rsquo;s groundbreaking first-person shooter trilogy (1994-1996) &ndash; <em>not</em> its upcoming extraction shooter (though I&rsquo;m quite intrigued by the latter). I intend this to be a <span id="ftnt_ref01" class="dotted" title="By my standards, at least!">concise<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span> and accessible repository of information both for beginning mapmakers and for mapmakers who&rsquo;ve used Forge (Bungie&rsquo;s official <em>Marathon Infinity</em> map editor), but not its modern replacement Weland.</p>
+	<p>This is a starters&rsquo; guide to creating content for <strong><a href="https://alephone.lhowon.org/" target="_blank">Marathon Aleph One</a></strong>, an open-source engine based on <strong>Bungie</strong>&rsquo;s groundbreaking first-person shooter trilogy (1994-1996). This is meant as a <span id="ftnt_ref01" class="dotted" title="By my standards, at least!">concise<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span>, accessible repository of information both for beginning mapmakers and for mapmakers who&rsquo;ve used Forge (Bungie&rsquo;s official <em>Marathon Infinity</em> map editor), but not its modern replacement Weland.</p>
 
-	<p>Thus, I&rsquo;ve included links to modern editors for Aleph One, a guide to setting up Weland and a visual mode plugin (either Vasara, VAF, or Visual Mode.lua) in Windows and MacOS (a Linux guide may be forthcoming), links to the first resources you should read and watch once you&rsquo;ve got Weland running, Forge manual errata, descriptions of a few aspects of modern mapmaking that aren&rsquo;t covered by the Forge tutorials, and links to more advanced resources.</p>
+	<p>Thus, I&rsquo;ve included links to modern editors for Aleph One, a guide to setting up Weland and a visual mode plugin (either Vasara, VAF, or Visual Mode.lua) in Windows and MacOS, links to the first resources you should read and watch once you&rsquo;ve got Weland running, Forge manual errata, descriptions of a few aspects of modern mapmaking that aren&rsquo;t covered by the Forge tutorials, and links to more advanced resources.</p>
 
-	<p>Once you&rsquo;re familiar with the basic principles, I have a <a href="mapmaking.html">more advanced (and, admittedly, also more opinionated) guide</a> that in turn features appendices that cover specific mapmaking topics in further detail. Should you have any suggestions for improvements to this guide or notice any errors, please either <a href="aboutme.html">contact me or submit to this page&rsquo;s GitHub repository</a>. (If you&rsquo;d like to be credited, please let me know.)</p>
+	<p>Once you&rsquo;re familiar with the basic principles, I have a <a href="mapmaking.html">more advanced (and opinionated) guide</a> that in turn features appendices that cover specific mapmaking topics in further detail. Should you have any suggestions for improvements to this guide or notice any errors, please either <a href="aboutme.html">contact me or submit to this page&rsquo;s GitHub repository</a>. (If you&rsquo;d like to be credited, please let me know.)</p>
 
 	<h1 id="toc">Table of Contents</h1>
 
@@ -68,6 +68,7 @@ window.onload = function () {makeAllSortable();};
 		</li>
 		<li><a href="#welandsetup">Weland Setup</a>
 			<ol>
+				<li><a href="#welandsetupfirststeps">First Steps</a></li>
 				<li><a href="#welandpreferences">Configuring Weland&rsquo;s Preferences</a></li>
 				<li><a href="#visualmodesetup">Visual Mode Setup</a>
 					<ol>
@@ -216,11 +217,16 @@ window.onload = function () {makeAllSortable();};
 	<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h1 id="welandsetup">Weland Setup</h1>
-<h2 id="welandpreferences">Configuring Weland&rsquo;s Preferences</h2>
+<h2 id="welandsetupfirststeps">First Steps</h2>
 
+<ul>
+	<li class="fixheight">Setting up Weland can be confusing; this doesn&rsquo;t aim to be an exhaustive list of the issues you may face in doing so. I can&rsquo;t possibly hope to provide that here; you&rsquo;ll find people who can help on the <a href="https://discord.gg/c7rEVgY">Discord</a>.</li>
+	<li class="fixheight">You&rsquo;ll need either <strong>Gtk#</strong> or <strong>Mono</strong>, depending on your OS; the readme tells you which to get. (You&rsquo;ll also need <strong>.NET</strong> on Windows, but all Windows 10 and 11 computers should already have this installed, and if you&rsquo;re running an older version, you really should upgrade &ndash; running operating systems that are no longer being supported is a major security risk.) Installing the wrong one sometimes seems to make Weland not work, and they&rsquo;re on the same webpage, so users can get one thinking they&rsquo;ve gotten the other. Read carefully!</li>
+	<li class="fixheight">I should perhaps note that several Windows users have reported only being able to get Weland to run correctly by using <a href="https://treellama.org/tmp/gtk-sharp-2.12.26.msi" target="_blank">Gtk# 2.12.26</a> &ndash; a completely ancient release. No one has been able to produce a satisfactory hypothesis for why this is the case, but enough people have experienced it that it&rsquo;s ceased to look coincidental. (For the record, I didn&rsquo;t have to do this to get Weland to work on Windows; in fact, the setup process was quite painless for me.)</li>
+</ul>
+
+<h2 id="welandpreferences">Configuring Weland&rsquo;s Preferences</h2>
 	<ul>
-		<li>Setting up Weland can be confusing; this doesn&rsquo;t aim to be an exhaustive list of the issues you may face in doing so. I can&rsquo;t possibly hope to provide that here; you&rsquo;ll find people who can help on the <a href="https://discord.gg/c7rEVgY">Discord</a>.</li>
-		<li>You&rsquo;ll need either <strong>Gtk#</strong> or <strong>Mono</strong>, depending on your OS; the readme tells you which to get. (You&rsquo;ll also need <strong>.NET</strong> on Windows, but all Windows 10 and 11 computers should already have this installed, and if you&rsquo;re running an older version, you really should upgrade &ndash; running operating systems that are no longer being supported is a major security risk.) Installing the wrong one sometimes seems to make Weland not work, and they&rsquo;re on the same webpage, so users can get one thinking they&rsquo;ve gotten the other. Read carefully!</li>
 		<li>After getting Weland to start, you&rsquo;ll next want to set up visual mode to function from within Weland. Go to <strong>Edit &gt; Preferences</strong>. You&rsquo;ll want the <strong>Shapes</strong> and <strong>Visual Mode</strong> segments to resemble these settings:
 
 			<div class="image"><img src="welandprefs.png" alt="Weland preferences" title="Weland preferences" height="184" width="316" /></div>
@@ -233,26 +239,30 @@ window.onload = function () {makeAllSortable();};
 					<blockquote><code>Macintosh HD/Games/Marathon Infinity/Marathon Infinity.app</code></blockquote>
 					<blockquote><code>Macintosh HD/Games/Aleph One/Aleph One.app</code></blockquote>
 				The reason for this will become apparent below.</li>
-				<li><strong>Scenario:</strong> the folder you use within Aleph One to run the scenario you&rsquo;re editing. This is <em>usually</em> the folder with <strong>Map</strong>, <strong>Shapes</strong>, <strong>Images</strong>, and <strong>Sounds</strong>, but <em>Rubicon X</em> is an annoying exception: it uses a script to put these in a <strong>Rubicon Data</strong> subfolder. Use the containing <strong>Rubicon X</strong> folder, <em>not</em> Rubicon Data, for <em>Rubicon</em>.</li>
+				<li><strong>Scenario:</strong> the folder you use within Aleph One to run the scenario you&rsquo;re editing, which is <em>usually</em> the folder containing the <strong>Map</strong>, <strong>Shapes</strong>, <strong>Images</strong>, and <strong>Sounds</strong> files. (<em>Rubicon X</em> is an annoying exception; use the containing <strong>Rubicon X</strong> folder, <em>not</em> <strong>Rubicon Data</strong>.)</li>
 			</ul>
 		</li>
 
-		<li>Next, you&rsquo;ll need to set up an editor for visual mode. Despite the name, Weland&rsquo;s visual mode can use either <strong>Visual Mode.lua</strong>, <strong>Vasara</strong>, or <strong>VAF</strong>, but whichever one you choose must be accessible to the scenario you wish to edit. I&rsquo;m going to divide the next segment into different sections for MacOS and Windows (I&rsquo;;ll add a Linux guide eventually).</li>
 	</ul>
-
+	
 	<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
-
+	
 <h2 id="visualmodesetup">Visual Mode Setup</h2>
+
+<p>Next, you&rsquo;ll need to set up an editor for Weland&rsquo;s visual mode, which (despite its name) can use either <strong>Visual Mode.lua</strong>, <strong>Vasara</strong>, or <strong>VAF</strong>. Whichever you choose, the scenario you wish to edit must have access to it.</p>
+
+<p>I&rsquo;ve separated the following steps for MacOS and Windows, since the steps for each are vastly different. I plan to add a detailed Linux guide eventually; for now, I&rsquo;ll simply note that compiling Aleph One yourself is vastly easier than getting Weland to work with a flatpak.</p>
+
 <h3 id="visualmodemac">Installing Visual Mode.lua, Vasara, or VAF (MacOS)</h3>
 
 	<ul>
-		<li>Owing to how the Mac version of Aleph One is built, setting up Visual Mode on Macs may be confusing. Effectively, on both the Mac and Windows, there are two ways to get Aleph One versions of the <em>Marathon</em> trilogy (there are, of course, even more on Linux), but which one you get is <em>vastly</em> more consequential on MacOS:
-			<ul>
+		<li>Owing to how the Mac version of Aleph One is built, setting up Visual Mode on Macs may be confusing. Effectively, there are two ways to get Aleph One versions of the <em>Marathon</em> trilogy on MacOS:
+			<ol>
 				<li>If you download the trilogy from the <a href="https://alephone.lhowon.org/">front page of Aleph One&rsquo;s website</a>, you get &lsquo;all-in-one&rsquo; apps in which <em>all game data</em> are packaged within each game&rsquo;s application.</li>
-				<li>You can also <a href="https://alephone.lhowon.org/scenario.html">download the game data by themselves</a> and use the <a href="https://alephone.lhowon.org/download.html">general Aleph One app</a> to run them. (This is my preferred method, for reasons that should soon become apparent.)</li>
-			</ul>
+				<li>You can also <a href="https://alephone.lhowon.org/scenario.html">download the game data by themselves</a> and use the <a href="https://alephone.lhowon.org/download.html">general Aleph One app</a> to run them. (This is my recommended method.)</li>
+			</ol>
 		</li>
-		<li>On the Mac, this distinction is <em>really important</em>, as it affects where Visual Mode.lua, Vasara, and/or VAF should go:
+		<li>This difference is <em>really important</em> on Macs, as it affects where to place Visual Mode.lua, Vasara, and/or VAF:
 			<ul>
 				<li><strong>Visual Mode.lua:</strong> It&rsquo;s best to put this in the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data folder</a>. <em>Which</em> user data folder, though?
 					<ul>
@@ -262,29 +272,21 @@ window.onload = function () {makeAllSortable();};
 						<li><strong>Standalone Aleph One app:</strong>
 							<blockquote class="wide"><pre>~/Library/Application Support/AlephOne/Visual Mode.lua</pre></blockquote>
 						</li>
-						<li>Aleph One <em>only</em> makes this distinction on Macs: on Windows and Linux, it places all user data in one folder.</li>
-						<li>Note also that the <strong>Library</strong> folder is normally hidden in the Finder, so to place Visual Mode.lua in one of its subfolders, you may need to use <strong>&lsquo;Go to Folder&rsquo;</strong>. Weland should be able to see it with no problem, though.</li>
+						<li>Aleph One <em>only</em> makes this distinction on Macs, a design choice I&rsquo;m not fully on board with.</li>
+						<li>Note also that <strong>~/Library</strong> is normally hidden in the Finder, so to place Visual Mode.lua in one of its subfolders, use <strong>&lsquo;Go to Folder&rsquo;</strong>. Weland should be able to see it with no problem, though.</li>
 					</ul>
 				</li>
-				<li><strong>Vasara</strong> or <strong>VAF:</strong> There are a few options for this, which I&rsquo;ve chosen to list in descending order of how much they irk me.
-					<ul>
-						<li>Making a plugins folder in the same directory as an all-in-one app (e.g., <strong>Macintosh HD/Games/Marathon Infinity/Plugins/Vasara.zip</strong>) <em>won&rsquo;t work.</em> You&rsquo;d have to right-click or control-click the app, select &lsquo;<strong>Show Package Contents</strong>&rsquo;, <em>then</em> make a plugins folder <em>within</em> the app, e.g.:
-							<blockquote class="wide"><pre>Macintosh HD/Games/Marathon Infinity/Marathon Infinity.app/Plugins/Vasara.zip</pre></blockquote>
-							<ul>
-								<li>I <em>really</em> don&rsquo;t care for this approach. While Mac apps are typically self-contained, this approach creates major downsides for scenario developers. Not all users even manage to get this method to work, and users probably shouldn&rsquo;t be encouraged to mess with app packages when it&rsquo;s not strictly necessary; they could easily break the apps if they don&rsquo;t know what they&rsquo;re doing.</li>
-							</ul>
+				<li><strong>Vasara</strong> or <strong>VAF:</strong> You have multiple choices here.
+					<ol>
+						<li>My recommended option is to ditch the all-in-one apps, grab the <a href="https://alephone.lhowon.org/scenarios.html">scenario files</a>, and run them with the <a href="https://alephone.lhowon.org/download.html">standalone Aleph One app</a> in the scenario folder, allowing you to keep Vasara or VAF within said folder, as Yrro intended. If you&rsquo;re in the middle of playing the trilogy and don&rsquo;t want to move your files over (itself a complicated process that is beyond the current scope of this guide), you can always keep a copy of the all-in-one apps to play the games, and just use the data and the stand-alone app for Vasara or VAF.</li>
+						<li>For the all-in-one apps, use the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data</a> <strong>plugins folder</strong>. The all-in-one <em>Infinity</em> app uses:
+							<blockquote class="wide"><pre>~/Library/Application Support/Marathon Infinity/Plugins/Vasara.zip</pre></blockquote>
+							The stand-alone Aleph One app uses:
+							<blockquote class="wide"><pre>~/Library/Application Support/AlephOne/Plugins/Vasara.zip</pre></blockquote>
+							I note both locations because the Mac is the only platform that separates the trilogy&rsquo;s user data folders from Aleph One&rsquo;s (a design choice I&rsquo;m not fully on board with). Again, <strong>~/Library</strong> is also invisible by default (you must navigate to it with <strong>&lsquo;Go to Folder&rsquo;</strong>), hence my preference for option 1.</li>
 						</li>
-						<li>Another, less offensive solution for the all-in-one apps is the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data</a> <strong>plugins folder</strong>. On a Mac, the all-in-one <em>Infinity</em> app would use:
-							<blockquote class="wide"><pre>~Library/Application Support/Marathon Infinity/Plugins/Vasara.zip</pre></blockquote>
-							The stand-alone Aleph One app would use:
-							<blockquote class="wide"><pre>~Library/Application Support/AlephOne/Plugins/Vasara.zip</pre></blockquote>
-							The Mac is also the only platform that separates the trilogy&rsquo;s user data folders from Aleph One&rsquo;s (another design choice I&rsquo;m not fully on board with), hence why I&rsquo;ve noted both locations for Macs.
-							<ul>
-								<li>This method actually isn&rsquo;t perfect either, since, as stated, the Library folder isn&rsquo;t visible by default &ndash; you have to navigate to it with <strong>&lsquo;Go to Folder&rsquo;</strong>. I find this much less bothersome than asking users to mess with app packages, though.</li>
-							</ul>
-						</li>
-						<li>The third option, and perhaps the most painless in the long run, is to ditch the all-in-one apps entirely, grab the <a href="https://alephone.lhowon.org/scenarios.html">scenario data</a> by itself, and run it with the <a href="https://alephone.lhowon.org/download.html">standalone Aleph One app</a> in the scenario directory &ndash; that way, you can keep Vasara or VAF inside your scenario directory, as Yrro intended. If you&rsquo;re in the middle of playing the trilogy and don&rsquo;t want to move your files over (itself a complicated process that is beyond the current scope of this guide), you can always keep a copy of the all-in-one apps to play the games, and just use the data and the stand-alone app for Vasara or VAF.</li>
-					</ul>
+						<!-- messing with app packages isn't worth recommending even in an advanced guide, so I've deleted this section entirely -->
+					</ol>
 				</li>
 			</ul>
 		</li>
@@ -295,12 +297,12 @@ window.onload = function () {makeAllSortable();};
 <h3 id="visualmodewin">Installing Visual Mode.lua, Vasara, or VAF (Windows)</h3>
 
 	<ul>
-		<li><strong>Visual Mode.lua</strong> is a solo Lua script, which is best placed in the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data folder</a>. Thus, my Windows 10 path for it is:
+		<li class="fixheight"><strong>Visual Mode.lua</strong> is a solo Lua script, so it should go in the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data folder</a>. My Windows 10 path for it is:
 
 			<blockquote class="wide"><pre>C:/Users/Aaron/Documents/AlephOne/Visual Mode.lua</pre></blockquote>
 
-			Replace <strong>Aaron</strong> with your username to find where to place yours. (Linux and older versions of Windows will have different paths &ndash; and if you&rsquo;re running the latter, please get a new <del>computer</del> operating system: running an OS that&rsquo;s no longer being updated is a major security risk that puts all your data in jeopardy.)</li>
-		<li><strong>Vasara</strong> and <strong>VAF</strong> are plugins, so they belong in the <strong>Plugins</strong> folder (if there isn&rsquo;t one already, make one called &lsquo;<strong>Plugins</strong>&rsquo;). This can be the scenario plugins folder:
+			Replace <strong>Aaron</strong> with your username to get yours. (If you&rsquo;re running an older version of Windows, please get a new <del>computer</del> operating system: running an OS that&rsquo;s no longer being updated is a major security risk that puts all your data in jeopardy. Windows 11, meanwhile, has the same path as Windows 10.)</li>
+		<li class="fixheight"><strong>Vasara</strong> and <strong>VAF</strong> are plugins, so they belong in the <strong>Plugins</strong> folder (if there isn&rsquo;t one already, make one called &lsquo;<strong>Plugins</strong>&rsquo;). This can be the scenario plugins folder:
 
 			<blockquote class="wide"><pre>C:/Games/Marathon Infinity/Plugins/Vasara.zip</pre></blockquote>
 
@@ -308,7 +310,7 @@ window.onload = function () {makeAllSortable();};
 
 				<blockquote class="wide"><pre>C:/Users/Aaron/Documents/AlephOne/Plugins/Vasara.zip</pre></blockquote>
 
-			Which may be more convenient if, like me, you&rsquo;re perverse enough to map for five scenarios at a time, but you&rsquo;ll have to disable it outside Weland!Aleph One for any scenario for which you&rsquo;re not already using a solo Lua script.
+			This may be more convenient if, like me, you&rsquo;re perverse enough to map for five scenarios at a time, but you&rsquo;ll have to disable it outside Weland!Aleph One for all scenarios in which you aren&rsquo;t using solo Lua.
 		</li>
 	</ul>
 
@@ -316,20 +318,13 @@ window.onload = function () {makeAllSortable();};
 
 <h2 id="visualmodepreferences">Configuring Weland!Aleph One</h2>
 	<ul>
-		<li>The next steps may be slightly confusing. <em><strong>Without exiting Weland&rsquo;s preferences dialog,</strong></em> click the <strong>&lsquo;Edit Preferences&rsquo; button</strong>. This should launch Aleph One using the scenario you&rsquo;ve selected. <em><strong>This is entirely intended!</strong></em></li>
-		<li><em><strong>Within Weland!Aleph One,</strong></em> click <strong>Settings</strong>. This creates a new preferences file (separate from the standard scenario preferences) that only affects the game&rsquo;s behavior <em>when it&rsquo;s launched from Weland</em> (e.g., launching <em>Marathon Infinity</em> from Weland creates a new &lsquo;<strong>Marathon Infinity Preferences Editor</strong>&rsquo; file within your Aleph One preferences folder).
+		<li class="fixheight hyphenate">These steps may be slightly confusing. <em><strong>Within Weland&rsquo;s preferences dialog,</strong></em> click the <strong>&lsquo;Edit Preferences&rsquo;</strong> button, which will launch Aleph One using the selected scenario. <em><strong>This is entirely intended!</strong></em></li>
+		<li class="fixheight"><em><strong>Within Weland!Aleph One,</strong></em> click <strong>Settings</strong>. This creates a new &lsquo;Preferences Editor&rsquo; file that only affects the game&rsquo;s behavior <em class="weight3">when Weland lanches it</em> (e.g., launching <em>Marathon Infinity</em> from Weland creates a new &lsquo;<strong>Marathon Infinity Preferences Editor</strong>&rsquo; file within your Aleph One preferences folder).
 			<ul>
-				<li><strong>For Visual Mode.lua:</strong> Go to <strong>Environment</strong>, check <strong>&lsquo;Use Solo Script&rsquo;</strong> if it isn&rsquo;t already, then select <strong>&lsquo;Script File&rsquo;</strong> and find Visual Mode.lua in Aleph One&rsquo;s <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data folder</a> (Aleph One usually navigates from this folder by default).</li>
-				<li><strong>For Vasara</strong> or <strong>VAF</strong>: This step depends slightly on your Aleph One version:
-					<ul>
-						<li><strong>Aleph One 1.6.2 or later:</strong> Select it under <strong>Plugins</strong>; no other plugins that use solo Lua should be active, and &lsquo;<strong>Use Solo Script</strong>&rsquo; in the <strong>Environment</strong> settings should be unchecked. If Vasara doesn&rsquo;t appear, double-check that you copied it to the right location.</li>
-						<li><strong>Aleph One 1.4 to 1.6.1:</strong> The same as above, except <strong>Plugins</strong> is a button on the <strong>Environment</strong> page. Also, you should really upgrade your Aleph One version.</li>
-						<li><strong>Aleph One 1.3.1 and earlier:</strong> Please get a new <del>computer</del> Aleph One version. (No, seriously &ndash; launching Visual Mode from Weland requires at least Aleph One version 1.4.)</li>
-					</ul>
-				</li>
+				<li class="fixheight"><strong>For Visual Mode.lua:</strong> Go to <strong>Environment</strong>, make sure <strong>&lsquo;Use Solo Script&rsquo;</strong> is <em>checked</em>, then select <strong>&lsquo;Script File&rsquo;</strong> and find Visual Mode.lua in the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data folder</a> (from which Aleph One usually navigates by default).</li>
+				<li class="fixheight"><strong>For Vasara</strong> or <strong>VAF</strong>: Select it under <strong>Plugins</strong>; no other plugins that use solo Lua should be active, and &lsquo;<strong>Use Solo Script</strong>&rsquo; in <strong>Environment</strong> should be <em>unchecked</em>. If Vasara doesn&rsquo;t appear, make sure you copied it to the right location. If the top level of Settings has no <strong>Plugins</strong> button, update your Aleph One version.</li>
 			</ul>
-		<li>In either case, now select <strong>&lsquo;Accept&rsquo;</strong>, quit out of Aleph One, and select <strong>&lsquo;OK&rsquo;</strong> in the Weland dialog box. If you&rsquo;ve done everything correctly, you should now be able to launch visual mode in much the same way it launched from within Forge. If not, reread the above, try to ensure everything is set up as shown here, and if you still can&rsquo;t solve the issue, you may wish to ask for help at one of the above resources.</li>
-		<li>I should perhaps note that several Windows users have reported only being able to get Weland to run correctly by using <a href="https://treellama.org/tmp/gtk-sharp-2.12.26.msi" target="_blank">Gtk# 2.12.26</a> &ndash; a completely ancient release. No one has been able to produce a satisfactory hypothesis for why this is the case, but enough people have experienced it that it&rsquo;s ceased to look coincidental. (For the record, I didn&rsquo;t have to do this to get Weland to work on Windows; in fact, the setup process was quite painless for me.)</li>
+		<li class="fixheight">In either case, now select <strong>&lsquo;Accept&rsquo;</strong>, quit out of Aleph One, and select <strong>&lsquo;OK&rsquo;</strong> in the Weland dialog box. If you&rsquo;ve done everything correctly, you should now be able to launch visual mode in much the same way it launched from within Forge. If not, reread the above, try to ensure everything is set up as shown here, and if you still can&rsquo;t solve the issue, you may wish to ask for help at one of the above resources.</li>
 	</ul>
 
 	<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
@@ -613,20 +608,7 @@ window.onload = function () {makeAllSortable();};
 
 	<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
-<h1 id="contact">Contact Info</h1>
-
-	<p>The fastest way to contact me is Discord. You can ping me on the <a href="https://discord.gg/c7rEVgY" target="_blank">Marathon Discord server</a> at <strong>@aaron6608</strong> (or <strong>@Aaron#6608</strong>), though it&rsquo;s entirely possible others may be able to answer your questions before I see them, so I recommend this only if you notice errors/omissions in this document (or have suggestions for additions; if you remind me, I can credit you for any of the above). If you need help, I recommend asking in <strong>#classic-marathon</strong>, <span id="ftnt_ref05" class="dotted" title="Which, despite carrying the name of a program hardly anyone has actively used for fifteen years, is meant for all map, physics, shapes, and sound creation for the Marathon trilogy."></span><strong>#forge</strong><a href="#ftnt05" class="noprintlink">&#8317;&#8309;&#8318;</a></span>, or <strong>#tech-support</strong>. (<strong>#development</strong> is intended only for engine and editor development, so unless you&rsquo;re specifically discussing VAF, you should probably ping me in one of the other three channels.)</p>
-	
-	<p>I&rsquo;m also on GitHub as <a href="https://github.com/aaronfreed" target="_blank">aaronfreed</a>, naturally. You can <a href="https://github.com/aaronfreed/aaronfreed.github.io/issues/" target="_blank">create an issue</a>, <a href="https://github.com/aaronfreed/aaronfreed.github.io/pulls" target="_blank">submit a pull request</a>, or <a href="https://github.com/aaronfreed/aaronfreed.github.io/discussions" target="_blank">start a discussion</a>. I do ask that users be respectful (both of me and of others) and note that I maintain this page on my own time, for free, while also juggling multiple active development projects that I&rsquo;m also working on, also for free. The <a href="https://github.com/aaronfreed/aaronfreed.github.io/discussions/1" target="_blank">rules I outline for my discussion section</a> apply equally well to issues and pull requests.</p>
-
-	<p>I&rsquo;m also on the <a href="https://pfhorums.com" target="_blank">Pfhorums</a> (as <a href="https://pfhorums.com/memberlist.php?mode=viewprofile&u=6618" target="_blank">The Man</a>) and <a href="https://reddit.com/r/marathon/" target="_blank">Reddit</a> (as <a href="https://reddit.com/u/aaronnotarobot" target="_blank">u/aaronnotarobot</a>), but I can&rsquo;t promise to respond to messages on either quickly. Lastly, I do, of course, have an email address, but:</p>
-
-	<ol class="loweralpha">
-		<li>Email is very nearly the <em>worst</em> way to contact me.</li>
-		<li>The days when it was a good idea to post an email address on a public webpage are long over.</li>
-	</ol>
-
-<h1 id="bio">What qualifies you to write this, anyway?</h1>
+<h1 id="bio">Author Biography</h1>
 
 	<p>I&rsquo;ve been modding for this engine off and on since 1997 and have worked on a long list of projects over the years; rather than list them all here, you can just check my <a href="portfolio.html">portfolio page</a>. As mentioned, I also have a much longer <a href="mapmaking.html">mapmaking page</a> that goes into much more depth.</p>
 

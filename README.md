@@ -17,7 +17,7 @@ Pages currently hosted here:
    * **[Beginners’ guide](https://aaronfreed.github.io/mapmaking101.html)**
       * What editors to use, how to set them up, what guides to follow to get started making levels, what those guides get wrong or omit, and what to do after mastering the basics.
    * **[Advanced guide](https://aaronfreed.github.io/mapmaking.html)**
-      * Several ntractable problems that hadn&rsquo;t been documented elsewhere and ways to fix them.
+      * Several intractable problems that hadn&rsquo;t been documented elsewhere and ways to fix them.
    * **The Annotated Forge Manual** (WIP):
       * **[Detailed Table of Contents](https://aaronfreed.github.io/forgemanualcontents.html)**
       * **[Introduction](https://aaronfreed.github.io/forgemanual.html)**

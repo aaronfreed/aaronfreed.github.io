@@ -17,7 +17,7 @@ Pages currently hosted here:
    * **[Beginners’ guide](https://aaronfreed.github.io/mapmaking101.html)**
       * What editors to use, how to set them up, what guides to follow to get started making levels, what those guides get wrong or omit, and what to do after mastering the basics.
    * **[Advanced guide](https://aaronfreed.github.io/mapmaking.html)**
-      * A guide to several intractable problems that weren&rsquo;t documented elsewhere and fixes for them.
+      * Several ntractable problems that hadn&rsquo;t been documented elsewhere and ways to fix them.
    * **The Annotated Forge Manual** (WIP):
       * **[Detailed Table of Contents](https://aaronfreed.github.io/forgemanualcontents.html)**
       * **[Introduction](https://aaronfreed.github.io/forgemanual.html)**
@@ -68,20 +68,20 @@ Pages currently hosted here:
 
 I&rsquo;ve contributed in varying degrees to the following (mostly) playable game mods. (Dates refer to my involvement with each project rather than its entire development cycle, though in a few cases these are identical.) See the *Marathon* soundtracks page above for links to soundtracks.
 
-* ***[Eternal X](http://eternal.bungie.org/)*** (2018-present): maps, music, sound, writing, scripting, graphics, soundtrack (re)mastering, codirector *(alongside **pfhorrest**, for versions 1.2.1 and later)*
+* ***[Eternal X](http://eternal.bungie.org/)*** (2018&ndash;): maps, music, sound, writing, scripting, graphics, soundtrack (re)mastering, codirector *(alongside **pfhorrest**, for versions 1.2.1 and later)*
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kiy7CaniLiZSRi-5P-SKEN)
    * This scenario remains under active development; a final release of version 1.3 is still forthcoming. We&rsquo;ve released six public previews of 1.3, most recently on 2024-03-07 (with a hotfix on 2024-03-29 to fix a scripting error in the level “Babylon X”), but further revisions to writing, music, and levels are still planned.
 * ***[Apotheosis X](https://simplici7y.com/items/apotheosis-x-5)*** (2020-2023): sound, scripting, testing
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6mOBZaoKUAOqDsfuv-RIneq)
    * [Featured in *PC Gamer*!](https://pcgamer.com/marathon-mod-apotheosis-x)
    * Further updates of *Apotheosis X* have not been ruled out but are not currently under active development.
-* ***[Dungeons Presents Hellpak Vol. 1: Not Recommended by Doctors](https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors)*** (2020-2024): maps, scripting, soundtrack mastering, writing, graphics, documentation, bug fix releases
+* ***[Dungeons Presents Hellpak Vol. 1: Not Recommended by Doctors](https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors)*** (2020&ndash;2024): maps, scripting, soundtrack mastering, writing, graphics, documentation, bug fix releases
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kcfNGN3zh0BcsyaLRFkB0k)
    * [Discord server](https://discord.gg/DTMvjFqtTA)
    * This is an iteration of creator tbcr&rsquo;s long-running *Dungeons* show, hence its full title. We released the (hopefully) final bug fix update for this scenario on 2024-06-24.
-* ***Trojan*** (2020-2021): sound remastering, soundtrack remastering
+* ***Trojan*** (2020&ndash;2021): sound remastering, soundtrack remastering
    * There are multiple versions of this game for Aleph One:
-      * [The first](https://simplici7y.com/items/marathon-trojan/) is a direct conversion of the original game files to Aleph One format by Shappie, with which treellama and I assisted. I did not directly create any content involved with this release.
+      * [The first](https://simplici7y.com/items/marathon-trojan/) is a direct conversion of the original game files to Aleph One format by Shappie, assisted by treellama and me. I didn&rsquo;t directly create any content involved with this release.
       * [The second](https://hhas01.itch.io/trojan-se) is a more complicated conversion of the original game files by original creator Hamish Sanderson with some added extras, including my remastered music and sounds. This, unfortunately, does not run on current versions of Aleph One, but you can probably use the remastered music and sounds with Shappie&rsquo;s conversion above.
 * ***[Marathon Phoenix](https://simplici7y.com/items/marathon-phoenix-2/)*** (2020, tangentially): soundtrack remastering
    * [Creator RyokoTK&rsquo;s gameplay and commentary](https://www.youtube.com/playlist?list=PL-_EnUuI9PUoIncYlqgWainfOUoZAXhCY)
@@ -89,24 +89,24 @@ I&rsquo;ve contributed in varying degrees to the following (mostly) playable gam
 
 I&rsquo;m also working on several forthcoming mods:
 
-* ***Dungeons Presents Hellpak Vol. 2: An Exercise in Questionable Taste*** (2023-present, forthcoming): maps, scripting, music, soundtrack mastering, writing<
+* ***Dungeons Presents Hellpak Vol. 2: An Exercise in Questionable Taste*** (2023&ndash;, forthcoming): maps, scripting, music, soundtrack mastering, writing
    * [Discord server](https://discord.gg/DTMvjFqtTA)
    * [Preview of music and levels](https://youtu.be/lebTkbIkt5I) (the first song and the first five levels of this video are my work)
    * Map and music submissions for *Vol. 2* closed at the end of 2023; we’re hoping to release it at the end of 2024.
      * Note that we already have more than seven hours of music, which is more than enough for both *Vol. 2* and *Vol. 3*&rsquo;s soundtracks while giving us a decent head start on *Vol. 4*. You’re welcome to get a head start on mapping for *Vol. 3* now, though.
-* ***Tempus Irae Redux*** (2020-present, forthcoming): maps, music, sound, scripting, writing, soundtrack mastering<
+* ***Tempus Irae Redux*** (2020&ndash;, forthcoming): maps, music, sound, scripting, writing, soundtrack mastering
    * [Get the original *Tempus Irae* here](http://nardo.bungie.org/alephone.php)
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6nVJdLAfq0ZxS6WRv0bC3Fe)
    * I didn&rsquo;t contribute to the original *Tempus Irae* but have been involved in *Redux*&rsquo;s development since it started in roughly May 2020. *Redux* isn&rsquo;t a straight remaster but more of a modern update; since it significantly changes several levels, players may find it interesting to play both. It also isn&rsquo;t planned to supersede the original *Tempus Irae*; the latter&rsquo;s original Aleph One release will continue to be available on Nardo&rsquo;s website after we release *Redux*. We entered a limited beta test in October 2023 and presently aim to release the game in mid-2024 (it might be out by now if I hadn&rsquo;t had a sudden bout of madness and decided to compose several original songs for it).
-* ***Where Monsters Are in Dreams*** (2019-present, forthcoming): maps, music, sound, scripting, soundtrack mastering, writing, graphics, codirector *(alongside **CryoS** and **hypersleep**)*
+* ***Where Monsters Are in Dreams*** (2019&ndash;, forthcoming): maps, music, sound, scripting, soundtrack mastering, writing, graphics, codirector *(alongside **CryoS** and **hypersleep**)*
    * [Website](http://bighouse.bungie.org/wmaid/)
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kB_7qLbTdgia1hiNOoYmEz)
    * A perpetually in-development scenario (I believe its development stretches back at least as far as 2001). Hypersleep and CryoS are two of the main forces behind *Apotheosis X*; the three of us have recently recommitted to finally finishing this monster (pun intended) and have a detailed, step-by-step roadmap to do so. We&rsquo;re hoping for a late 2024/early 2025 release, but we&rsquo;ve overshot so many estimates that it&rsquo;s become a running gag, so take that with not just a grain or even a boulder of salt but in fact an entire salt mine.
-* ***Return to Marathon* Chapter 2** (2023-present, forthcoming): maps, music, sound, scripting, graphics
+* ***Return to Marathon* Chapter 2** (2023&ndash;, forthcoming): maps, music, sound, scripting, graphics
    * [*Return to Marathon* website](http://bighouse.bungie.org/rtm/)
    * [*Return to Marathon* Chapter 1](https://citadel.lhowon.org/scenarios/return-to-marathon/)
    * I didn&rsquo;t contribute to *Return to Marathon*&rsquo;s first chapter, but I&rsquo;ll be helping to polish up its maps for the release of the full game. Development resumed in August 2023.
-* ***Marathon Chronicles*** (1997-present, in progress): maps, writing, sound, music, graphics, soundtrack mastering, director
+* ***Marathon Chronicles*** (1997&ndash;, in progress): maps, writing, sound, music, graphics, soundtrack mastering, director
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6k1ExcIEZMIOWc9wfgIkYmL)
    * [Most recent public release](https://drive.google.com/open?id=1BtHg2LzQBth25hxB-AURAs8um3yyCaTE), which is now a few years old. I&rsquo;ll release a current build after we release *Tempus Irae Redux*, since *Chronicles* incorporates many of its textures; out of respect for James&rsquo; phenomenal efforts on *Tempus Irae* and *Redux*, I will not be releasing them in any form ahead of *Redux* itself.
    * *Chronicles* is planned to be a sort of grand finale to a loose arc between the fan games *Rubicon*, *Eternal X*, *Phoenix*, *Where Monsters Are in Dreams* (listed in original release order rather than in-universe chronological order). It is planned to resolve Hathor&rsquo;s story, to address some ramifications of *Rubicon*&rsquo;s story, and to resolve the ramifications of the conflict revealed towards the end of *Eternal*.

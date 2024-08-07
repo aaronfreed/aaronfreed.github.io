@@ -37,7 +37,7 @@
 	--toc-counter-translucent: #004c80c6;
 	--main: #000;
 	--main-translucent: #000000c6;
-	--beyondlightest: 100;
+	--weight0: 100;
 	--weight1: 200;
 	--weight2: 300;
 	--weight3: 400;
@@ -45,7 +45,7 @@
 	--weight5: 600;
 	--weight6: 700;
 	--weight7: 800;
-	--beyondboldest: 900;
+	--weight8: 900;
 }
 @media (prefers-color-scheme: dark) {
 	@media screen {
@@ -1899,10 +1899,18 @@ table.noborder {
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
 
+.weight0,
+a.weight0:link,
+a.weight0:visited,
+.weight0 :is(td, th, li) {
+	font-weight: var(--weight0);
+	text-decoration-thickness: 0.25px;
+}
 .weight1,
 a.weight1:link,
 a.weight1:visited,
-.weight1 :is(td, th, li) {
+.weight1 :is(td, th, li),
+.weight0 :is(a:link, a:visited, strong) {
 	font-weight: var(--weight1);
 	text-decoration-thickness: 0.375px;
 }
@@ -1911,7 +1919,8 @@ a.weight2:link,
 a.weight2:visited,
 .weight2 :is(td, th, li),
 :is(td, th, li).weight2,
-.weight1 :is(a:link, a:visited, strong) {
+.weight1 :is(a:link, a:visited, strong),
+.weight0 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited) {
 	font-weight: var(--weight2);
 	text-decoration-thickness: 0.5px;
 }
@@ -1921,7 +1930,8 @@ a.weight3:visited,
 .weight3 :is(td, th, li),
 :is(td, th, li).weight3,
 .weight2 :is(a:link, a:visited, strong),
-.weight1 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited) {
+.weight1 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited),
+.weight0 strong strong strong {
 	font-weight: var(--weight3);
 	text-decoration-thickness: 1px;
 }
@@ -1932,7 +1942,8 @@ a.weight4:visited,
 :is(td, th, li).weight4,
 .weight3 :is(a:link, a:visited, strong),
 .weight2 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited),
-.weight1 strong strong strong {
+.weight1 strong strong strong,
+.weight0 strong strong strong strong {
 	font-weight: var(--weight4);
 	text-decoration-thickness: 1.5px;
 }
@@ -1944,7 +1955,8 @@ a.weight5:visited,
 .weight4 :is(a:link, a:visited, strong),
 .weight3 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited),
 .weight2 strong strong strong,
-.weight1 strong strong strong strong {
+.weight1 strong strong strong strong,
+.weight0 strong strong strong strong strong {
 	font-weight: var(--weight5);
 	text-decoration-thickness: 2px;
 }
@@ -1957,7 +1969,8 @@ a.weight6:visited,
 .weight4 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited),
 .weight3 strong strong strong,
 .weight2 strong strong strong strong,
-.weight1 strong strong strong strong strong {
+.weight1 strong strong strong strong strong,
+.weight0 strong strong strong strong strong strong {
 	font-weight: var(--weight6);
 	text-decoration-thickness: 2.25px;
 }
@@ -1971,9 +1984,26 @@ a.weight7:visited,
 .weight4 strong strong strong,
 .weight3 strong strong strong strong,
 .weight2 strong strong strong strong strong,
-.weight1 strong strong strong strong strong strong {
+.weight1 strong strong strong strong strong strong,
+.weight0 strong strong strong strong strong strong strong {
 	font-weight: var(--weight7);
 	text-decoration-thickness: 2.5px;
+}
+.weight8,
+a.weight8:link,
+a.weight8:visited,
+.weight8 :is(td, th, li),
+:is(td, th, li).weight8,
+.weight7 :is(a:link, a:visited, strong),
+.weight6 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited),
+.weight5 strong strong strong,
+.weight4 strong strong strong strong,
+.weight3 strong strong strong strong strong,
+.weight2 strong strong strong strong strong strong,
+.weight1 strong strong strong strong strong strong strong,
+.weight0 strong strong strong strong strong strong strong strong {
+	font-weight: var(--weight8);
+	text-decoration-thickness: 2.75px;
 }
 .fixheight {
 	line-height: 125%;
@@ -1993,21 +2023,25 @@ a.weight7:visited,
 	text-underline-offset: -13.375px;
 	text-decoration-thickness: 1px;
 }
+.weight0 .radical-number {
+	text-underline-offset: -12.9px;
+	text-decoration-thickness: 0.25px;
+}
 .weight1 .radical-number {
-	text-underline-offset: -13.125px;
+	text-underline-offset: -13.1875px;
 	text-decoration-thickness: 0.5px;
 }
 .weight2 .radical-number {
-	text-underline-offset: -13.375px;
-	text-decoration-thickness: 1px;
+	text-underline-offset: -13.25px;
+	text-decoration-thickness: .75px;
 }
 .weight3 .radical-number {
-	text-underline-offset: -13.75px;
-	text-decoration-thickness: 1.375px;
+	text-underline-offset: -13.625px;
+	text-decoration-thickness: 1.25px;
 }
 .weight4 .radical-number {
-	text-underline-offset: -14px;
-	text-decoration-thickness: 1.75px;
+	text-underline-offset: -13.75px;
+	text-decoration-thickness: 1.625px;
 }
 .weight5 .radical-number {
 	text-underline-offset: -14px;
@@ -2018,6 +2052,10 @@ a.weight7:visited,
 	text-decoration-thickness: 2.125px;
 }
 .weight7 .radical-number {
+	text-underline-offset: -14.375px;
+	text-decoration-thickness: 2.75px;
+}
+.weight8 .radical-number {
 	text-underline-offset: -14.375px;
 	text-decoration-thickness: 2.75px;
 }

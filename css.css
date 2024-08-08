@@ -2129,7 +2129,8 @@ a.weight8:visited,
 }
 
 .dashed-vertical-borders {
-	border: 1px 0px dashed var(--heading-color-translucent);
+	border-top: 1px dashed var(--heading-color-translucent);
+	border-bottom: 1px dashed var(--heading-color-translucent);
 }
 .translucent-decoration {
 	text-decoration-color: var(--main-translucent);

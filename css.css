@@ -1239,22 +1239,22 @@ ol.nestednumbering > li > ol > li > ol > li > h3:before {
 	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri";
 }
 ol.loweralpha {
-	list-style-type: lower-alpha;
+	list-style-type: lower-alpha !important;
 }
 ol.lowerlatin {
-	list-style-type: lower-latin;
+	list-style-type: lower-latin !important;
 }
 ol.lowerroman {
-	list-style-type: lower-roman;
+	list-style-type: lower-roman !important;
 }
 ol.upperalpha {
-	list-style-type: upper-alpha;
+	list-style-type: upper-alpha !important;
 }
 ol.upperlatin {
-	list-style-type: upper-latin;
+	list-style-type: upper-latin !important;
 }
 ol.upperroman {
-	list-style-type: upper-roman;
+	list-style-type: upper-roman !important;
 }
 
 .smallcaps {

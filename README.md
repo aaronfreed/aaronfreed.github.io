@@ -119,6 +119,10 @@ In case that wasn&rsquo;t enough, I also run a **[YouTube channel](https://youtu
 
 All of the above game mods use the **[Aleph One engine](https://alephone.lhowon.org/download.html)**. You may also wish to familiarize yourself with the **[*Marathon* trilogy](https://alephone.lhowon.org/scenarios.html)**; in particular, *Hellpak* runs under *Marathon Infinity*.
 
+I&rsquo;ve also begun collecting long-form reviews I&rsquo;ve written of some of my favorite music. I&rsquo;d previously posted older versions of these at websites such as Rate Your Music, but I&rsquo;ve been wanting to collect all my best long-form writing in one place for a while.
+* **[Ashenspire&rsquo;s *Hostile Architecture*](reviews/hostilearchitecture.html)**
+* **[Deathspell Omega&rsquo;s collected 2004-2012 output](reviews/deathspellomega.html)**
+
 I have at least slightly more than cursory knowledge of the following languages (though in a few cases it was years or even decades ago):
 
 * English (obviously)
@@ -142,7 +146,7 @@ My knowledge of several of these languages is still only *slightly* more than cu
 
 Some foci of my original writing include how differences in communication styles and preferences shape people&rsquo;s experiences and perceptions; how our malleable memories and our imperfect awareness of our surroundings lead us to think we know and remember more than we actually do; and the dangers of power and resources becoming overly concentrated in the hands of a few.
 
-You can contact me on Discord at **@Aaron#6608** (or **@aaron6608**). We&rsquo;ll need a server in common if you don&rsquo;t want to wait for me to check my message requests; the **[*Hellpak* Discord](https://discord.gg/DTMvjFqtTA)** and **[*Marathon* Discord](https://discord.gg/NmE66Mhq2a)** are two of your best bets. You can also contact me through my **[YouTube channel](https://youtube.com/@MarathonVidmaster)**. I don&rsquo;t check email often enough for that to be a reliable form of contact.
+You can contact me on Discord at **@Aaron#6608** (or **@aaron6608**). We&rsquo;ll need a server in common if you don&rsquo;t want to wait for me to check my message requests; the **[*Hellpak* Discord](https://discord.gg/DTMvjFqtTA)** and **[*The Fourth Curtain* Discord](https://discord.gg/EME7pBpJV7)** (for Alex Seropian&rsquo;s [game history podcast](https://podfollow.com/thefourthcurtain)) are two of your best bets. You can also contact me through my **[YouTube channel](https://youtube.com/@MarathonVidmaster)**. I don&rsquo;t check email often enough for that to be a reliable form of contact.
 
 I&rsquo;m also a member of **[last.fm](http://last.fm/user/Cassandra-Leo)**, **[Rate Your Music](https://rateyourmusic.com/~Cassandra_Leo)**, and several other websites that I check even less often than I check my email; however, those interested in my musical influences may find them enlightening.
 

@@ -1930,6 +1930,19 @@ table.noborder {
 .nobottommargin :is(li, td, th) {
 	margin-bottom: 0px;
 }
+.norightmargin,
+.norightmargin :is(li, td, th) {
+	margin-right: 0px;
+}
+.noleftmargin,
+.noleftmargin :is(li, td, th) {
+	margin-left: 0px;
+}
+.noverticalmargin,
+.noverticalmargin :is(li, td, th) {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
 .hide {
 	display: none;
 }
@@ -2194,7 +2207,7 @@ a.weight8:visited,
 .translucent-decoration {
 	text-decoration-color: var(--main-translucent);
 }
-.songlink
+.songlink,
 a.songlink,
 a.songlink:link,
 a.songlink:visited,
@@ -2203,4 +2216,17 @@ a.songlink:hover
 {
 	text-decoration-thickness: 2px;
 	text-decoration-color: color-mix(in sRGB, currentcolor 77.77777%, transparent);
+	text-decoration-skip-ink: all;
+}
+.underlinelink :is(a:link, a:visited, a:hover, a:active),
+a.underlinelink,
+a.underlinelink:link,
+a.underlinelink:visited,
+a.underlinelink:active,
+a.underlinelink:hover {
+	text-decoration: underline;
+	text-decoration-color: color-mix(in sRGB, currentcolor 77.77777%, transparent);
+	text-underline-offset: 2px;
+	text-decoration-thickness: 1px;
+	text-decoration-skip-ink: all;
 }

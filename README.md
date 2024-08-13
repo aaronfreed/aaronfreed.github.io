@@ -120,8 +120,8 @@ In case that wasn&rsquo;t enough, I also run a **[YouTube channel](https://youtu
 All of the above game mods use the **[Aleph One engine](https://alephone.lhowon.org/download.html)**. You may also wish to familiarize yourself with the **[*Marathon* trilogy](https://alephone.lhowon.org/scenarios.html)**; in particular, *Hellpak* runs under *Marathon Infinity*.
 
 I&rsquo;ve also begun collecting long-form reviews I&rsquo;ve written of some of my favorite music. I&rsquo;d previously posted older versions of these at websites such as Rate Your Music, but I&rsquo;ve been wanting to collect all my best long-form writing in one place for a while.
-* **[Ashenspire&rsquo;s *Hostile Architecture*](reviews/hostilearchitecture.html)** (&asymp; 2,550 words, with an additional &asymp; 300-word intro)
-* **[Deathspell Omega&rsquo;s collected 2004-2012 output](reviews/deathspellomega.html)** (&asymp; 3,500 words, with an additional &asymp; 500-word intro and &asymp; 1,500-word appendix on the band&rsquo;s use of Latin and Greek)
+* **[Ashenspire&rsquo;s *Hostile Architecture*](reviews/hostilearchitecture.html)** (&asymp;2,550 words, with an additional &asymp;300-word intro)
+* **[Deathspell Omega&rsquo;s collected 2004-2012 output](reviews/deathspellomega.html)** (&asymp;3,500 words, with an additional &asymp;500-word intro and &asymp;1,500-word appendix on the band&rsquo;s use of Latin and Greek)
 * **[Chris Christodoulou&rsquo;s &ldquo;The Raindrop That Fell to the Sky&rdquo; (*Risk of Rain 2*, 2020)](reviews/theraindropthatfelltothesky.html)** (&asymp;1,600 words)
 
 I have at least slightly more than cursory knowledge of the following languages (though in a few cases it was years or even decades ago):

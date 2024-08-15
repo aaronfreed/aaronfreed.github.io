@@ -1286,6 +1286,9 @@ ol.lowerlatin {
 ol.lowerroman {
 	list-style-type: lower-roman !important;
 }
+ol.lowergreek {
+	list-style-type: lower-greek !important;
+}
 ol.upperalpha {
 	list-style-type: upper-alpha !important;
 }

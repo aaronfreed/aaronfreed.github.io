@@ -708,6 +708,19 @@
 		text-decoration-skip-ink: auto;
 	}
 
+	.underlinelink :is(a:link, a:visited, a:hover, a:active),
+	a.underlinelink,
+	a.underlinelink:link,
+	a.underlinelink:visited,
+	a.underlinelink:active,
+	a.underlinelink:hover {
+		text-decoration: underline;
+		text-decoration-color: color-mix(in sRGB, currentcolor 77.77777%, transparent);
+		text-underline-offset: 2px;
+		text-decoration-thickness: 1px;
+		text-decoration-skip-ink: all;
+	}
+
 	.compositions2023-2024 .dotted {
 		border-bottom: 1px dotted;
 	}
@@ -754,6 +767,17 @@
 		/* I'm unaware of any superscript X, Y, or Z in the Unicode standard, so I've stopped here */
 		/* (in fact, q, C, F, Q, and S don't render correctly in Fira Sans at present, either) */
 	;
+}
+@counter-style dso-lps {
+	system: fixed;
+	symbols: 'a-d' 'e-f' 'h' 'g' 'i-j' 'm' 'k-l' 'n';
+	suffix: '. ';
+}
+ol.dso-lps {
+	list-style: dso-lps;
+}
+.dso-lps li::marker {
+	font-variant-caps: petite-caps;
 }
 
 /* reminder to self about CSS variables:
@@ -2219,17 +2243,5 @@ a.songlink:hover
 {
 	text-decoration-thickness: 2px;
 	text-decoration-color: color-mix(in sRGB, currentcolor 77.77777%, transparent);
-	text-decoration-skip-ink: all;
-}
-.underlinelink :is(a:link, a:visited, a:hover, a:active),
-a.underlinelink,
-a.underlinelink:link,
-a.underlinelink:visited,
-a.underlinelink:active,
-a.underlinelink:hover {
-	text-decoration: underline;
-	text-decoration-color: color-mix(in sRGB, currentcolor 77.77777%, transparent);
-	text-underline-offset: 2px;
-	text-decoration-thickness: 1px;
 	text-decoration-skip-ink: all;
 }

@@ -316,7 +316,7 @@
 	spoiler.rubicon::before {
 		content: "Rubicon spoiler, hover/select to view:";
 	}
-	spoiler:before {
+	spoiler::before {
 		color: var(--link);
 		text-decoration-color: var(--link-translucent);
 		font-weight: var(--weight5);
@@ -1124,59 +1124,83 @@ ol {
 	margin-bottom: 4px;
 	line-height: 125%;
 }
-/*:is(.toc, .toclite) li:before {
+/*:is(.toc, .toclite) li::before {
 	content: "{" counters(item, ".")"} ";
 	counter-increment: item;
 	color: var(--toc-counter);
 }*/
 ol.toc :is(li, li a:link, li a:visited),
-ol.toc li:before {
+ol.toc li::before {
 	font-weight: var(--weight7);
 	text-decoration-thickness: 2.5px;
 }
 :is(ol.toc ol, ol.toclite) :is(li, li a:link, li a:visited),
-:is(ol.toc ol, ol.toclite) li:before {
+:is(ol.toc ol, ol.toclite) li::before {
 	font-weight: var(--weight5);
 	text-decoration-thickness: 2px;
 }
 :is(ol.toclite ol, ol.toc ol ol, ol.tocliter) :is(li, li a:link, li a:visited),
-:is(ol.toclite ol, ol.toc ol ol, ol.tocliter) li:before {
+:is(ol.toclite ol, ol.toc ol ol, ol.tocliter) li::before {
 	font-weight: var(--weight3);
 	text-decoration-thickness: 1.375px;
 }
-/*:is(ol.toc, ol.toclite) :is(li:before, a:link, a:visited, li),
-ol.toc ol ol ol li:before {
+/*:is(ol.toc, ol.toclite) :is(li::before, a:link, a:visited, li),
+ol.toc ol ol ol li::before {
 	font-weight: var(--weight2);
 }*/
 :is(ol.toc ol ol ol, ol.toclite ol ol, ol.tocliter ol) :is(li, li a:link, li a:visited),
-:is(ol.toc ol ol ol, ol.toclite ol ol, ol.tocliter ol) li:before, 
-:is(ol, ol ol, ol ol ol) li.light:before,
+:is(ol.toc ol ol ol, ol.toclite ol ol, ol.tocliter ol) li::before, 
+:is(ol, ol ol, ol ol ol) li.light::before,
 :is(ol, ol ol, ol ol ol) :is(li.light, li.light a:link, li.light a:visited) {
 	font-weight: var(--weight1);
 	text-decoration-thickness: 0.375px;
 }
-:is(ol.toc, ol.toclite, ol.tocliter) li:before {
+:is(ol.toc, ol.toclite, ol.tocliter) li::before {
 	content: "(" counters(item, ".")") ";
 	counter-increment: item;
 	color: var(--toc-counter);
 }
-:is(ol.toc, ol.toclite, ol.tocliter) ol li:before {
+:is(ol.toc, ol.toclite, ol.tocliter) ol li::before {
 	content: "[" counters(item, ".")"] ";
 	counter-increment: item;
 	color: var(--toc-counter);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
-:is(ol.toc, ol.toclite, ol.tocliter) ol ol li:before {
+:is(ol.toc, ol.toclite, ol.tocliter) ol ol li::before {
 	content: "{" counters(item, ".")"} ";
 	counter-increment: item;
 	color: var(--toc-counter);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
-:is(ol.toc, ol.toclite, ol.tocliter) ol ol ol li:before {
+:is(ol.toc, ol.toclite, ol.tocliter) ol ol ol li::before {
 	content: "\27E8" counters(item, ".")"\27E9\0020";
 	counter-increment: item;
 	color: var(--toc-counter);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
+}
+
+.dso ol.toc :is(li, li a:link, li a:visited, li::before),
+.dso ol.toc li::before {
+	font-weight: var(--weight4);
+	text-decoration-thickness: 1.5px;
+}
+.dso ol.toc ol :is(li, li a:link, li a:visited, li::before),
+.dso ol.toc ol li::before {
+	font-weight: var(--weight3);
+	text-decoration-thickness: 1.375px;
+}
+.dso ol.toc ol ol :is(li, li a:link, li a:visited, li::before),
+.dso ol.toc ol ol li::before {
+	font-weight: var(--weight2);
+	text-decoration-thickness: 0.5px;
+}
+.dso ol.toc ol ol ol :is(li, li a:link, li a:visited, li::before),
+.dso ol.toc ol ol ol li::before {
+	font-weight: var(--weight1);
+	text-decoration-thickness: 0.375px;
+}
+.dso :is(li::before) {
+	color: var(--accent);
 }
 
 /* a bunch of weird stuff for the Forge manual table of contents */
@@ -1189,7 +1213,7 @@ ol.toc ol ol ol li:before {
 	font-weight: var(--weight6);
 	text-decoration-thickness: 2.25px;
 }
-.forgecontents ol.toc li:before {
+.forgecontents ol.toc li::before {
 	counter-increment: i1;
 	content: counter(i1, upper-roman) ". ";
 	font-weight: var(--weight6);
@@ -1210,7 +1234,7 @@ ol.toc ol ol ol li:before {
 	font-size: 18px;
 	line-height: 125%;
 }
-.forgecontents ol.toc ol li:before {
+.forgecontents ol.toc ol li::before {
 	font-weight: var(--weight5);
 	text-decoration-thickness: 2px;
 	counter-increment: i2;
@@ -1228,7 +1252,7 @@ ol.toc ol ol ol li:before {
 	text-decoration-thickness: 1.5px;
 	font-size: 16px;
 }
-.forgecontents ol.toc ol ol li:before {
+.forgecontents ol.toc ol ol li::before {
 	font-weight: var(--weight4);
 	counter-increment: i3;
 	content: "[" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "] "
@@ -1244,7 +1268,7 @@ ol.toc ol ol ol li:before {
 	text-decoration-thickness: 1.375px;
 	font-style: inherit;
 }
-.forgecontents ol.toc ol ol ol li:before {
+.forgecontents ol.toc ol ol ol li::before {
 	font-weight: var(--weight3);
 	counter-increment: i4;
 	font-style: inherit;
@@ -1260,7 +1284,7 @@ ol.toc ol ol ol li:before {
 	text-decoration-thickness: 0.5px;
 	font-size: 16px;
 }
-.forgecontents ol.toc ol ol ol ol li:before {
+.forgecontents ol.toc ol ol ol ol li::before {
 	font-weight: var(--weight2);
 	text-decoration-thickness: 0.5px;
 	counter-increment: i5;
@@ -1286,20 +1310,20 @@ ol.nestednumbering li:not(ul > li) {
 ol.nestednumbering {
 	margin-left: 0px;
 }
-ol.nestednumbering > li > h1:before {
+ol.nestednumbering > li > h1::before {
 	content: "" counters(item, ".")" \00B7  ";
 	counter-increment: item;
-	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri";
+	font-weight: var(--weight1);
 }
-ol.nestednumbering > li > ol > li > h2:before {
+ol.nestednumbering > li > ol > li > h2::before {
 	content: "" counters(item, ".")" \00B7  ";
 	counter-increment: item;
-	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri";
+	font-weight: var(--weight1);
 }
-ol.nestednumbering > li > ol > li > ol > li > h3:before {
+ol.nestednumbering > li > ol > li > ol > li > h3::before {
 	content: "" counters(item, ".")" \00B7  ";
 	counter-increment: item;
-	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri";
+	font-weight: var(--weight1);
 }
 ol.loweralpha {
 	list-style-type: lower-alpha !important;
@@ -1337,7 +1361,7 @@ ol.upperroman {
 .istoria ol.toc {
 	margin-left: 0px;
 }
-.istoria .toc li:before {
+.istoria .toc li::before {
 	float: left;
 	text-align: right;
 	padding-right: 5px;
@@ -2201,11 +2225,11 @@ a.weight8:visited,
 .compositions2023-2024 :is(ol.normal, ol.shortmargin) li {
 	margin-top: 8px;
 }
-.compositions2023-2024 ol.interpolations ol li:before {
+.compositions2023-2024 ol.interpolations ol li::before {
 	color: var(--toc-counter);
 	text-decoration-color: var(--toc-counter-translucent);
 } 
-.compositions2023-2024 li.accentbefore:before {
+.compositions2023-2024 li.accentbefore::before {
 	color: var(--heading-color);
 	text-decoration-color: var(--heading-color-translucent);
 }

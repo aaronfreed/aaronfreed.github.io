@@ -1112,13 +1112,13 @@ ol {
 }
 
 /* table of contents. this one is a doozy */
-:is(ol.toc, ol.toclite, ol.tocliter),
-:is(.toc, .toclite, .tocliter) ol {
+:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1),
+:is(.toc, .toclite, .tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1) ol {
 	counter-reset: item;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-:is(.toc, .toclite, .tocliter) li {
+:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1) li {
 	display: block;
 	margin-top: 4px;
 	margin-bottom: 4px;
@@ -1155,28 +1155,67 @@ ol.toc ol ol ol li::before {
 	font-weight: var(--weight1);
 	text-decoration-thickness: 0.375px;
 }
-:is(ol.toc, ol.toclite, ol.tocliter) li::before {
+:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1) li::before {
 	content: "(" counters(item, ".")") ";
 	counter-increment: item;
 	color: var(--toc-counter);
 }
-:is(ol.toc, ol.toclite, ol.tocliter) ol li::before {
+:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1) ol li::before {
 	content: "[" counters(item, ".")"] ";
 	counter-increment: item;
 	color: var(--toc-counter);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
-:is(ol.toc, ol.toclite, ol.tocliter) ol ol li::before {
+:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1) ol ol li::before {
 	content: "{" counters(item, ".")"} ";
 	counter-increment: item;
 	color: var(--toc-counter);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
-:is(ol.toc, ol.toclite, ol.tocliter) ol ol ol li::before {
+:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1) ol ol ol li::before {
 	content: "\27E8" counters(item, ".")"\27E9\0020";
 	counter-increment: item;
 	color: var(--toc-counter);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
+}
+
+ol.toc7 :is(li, li a:link, li a:visited),
+ol.toc7 li::before {
+	font-weight: var(--weight7);
+	text-decoration-thickness: 2.5px;
+}
+:is(ol.toc7 ol, ol.toc6) :is(li, li a:link, li a:visited),
+:is(ol.toc7 ol, ol.toc6) li::before {
+	font-weight: var(--weight6);
+	text-decoration-thickness: 2.25px;
+}
+:is(ol.toc7 ol ol, ol.toc6 ol, ol.toc5) :is(li, li a:link, li a:visited),
+:is(ol.toc7 ol ol, ol.toc6 ol, ol.toc5) li::before {
+	font-weight: var(--weight5);
+	text-decoration-thickness: 2px;
+}
+:is(ol.toc7 ol ol ol, ol.toc6 ol ol, ol.toc5 ol, ol.toc4) :is(li, li a:link, li a:visited),
+:is(ol.toc7 ol ol ol, ol.toc6 ol ol, ol.toc5 ol, ol.toc4) li::before {
+	font-weight: var(--weight4);
+	text-decoration-thickness: 1.5px;
+}
+:is(ol.toc7 ol ol ol ol, ol.toc6 ol ol ol, ol.toc5 ol ol, ol.toc4 ol, ol.toc3) :is(li, li a:link, li a:visited),
+:is(ol.toc7 ol ol ol ol, ol.toc6 ol ol ol, ol.toc5 ol ol, ol.toc4 ol, ol.toc3) li::before {
+	font-weight: var(--weight3);
+	text-decoration-thickness: 1.375px;
+}
+:is(ol.toc7 ol ol ol ol ol, ol.toc6 ol ol ol ol, ol.toc5 ol ol ol, ol.toc4 ol ol, ol.toc3 ol, ol.toc2) :is(li, li a:link, li a:visited),
+:is(ol.toc7 ol ol ol ol ol, ol.toc6 ol ol ol ol, ol.toc5 ol ol ol, ol.toc4 ol ol, ol.toc3 ol, ol.toc2) li::before {
+	font-weight: var(--weight2);
+	text-decoration-thickness: 0.5px;
+}
+:is(ol.toc7 ol ol ol ol ol ol, ol.toc6 ol ol ol ol ol, ol.toc5 ol ol ol ol, ol.toc4 ol ol ol, ol.toc3 ol ol, ol.toc2 ol, ol.toc1) :is(li, li a:link, li a:visited),
+:is(ol.toc7 ol ol ol ol ol ol, ol.toc6 ol ol ol ol ol, ol.toc5 ol ol ol ol, ol.toc4 ol ol ol, ol.toc3 ol ol, ol.toc2 ol, ol.toc1) li::before {
+	font-weight: var(--weight1);
+	text-decoration-thickness: 0.375px;
+}
+.dso :is(li::before) {
+	color: var(--accent);
 }
 
 .dso ol.toc :is(li, li a:link, li a:visited, li::before),

@@ -2330,7 +2330,11 @@ a.songlink,
 a.songlink:link,
 a.songlink:visited,
 a.songlink:active,
-a.songlink:hover
+a.songlink:hover,
+a.songlink.weight3:link,
+a.songlink.weight3:visited,
+a.songlink.weight3:active,
+a.songlink.weight3:hover
 {
 	text-decoration-thickness: 2px;
 	text-decoration-color: color-mix(in sRGB, currentcolor 77.77777%, transparent);

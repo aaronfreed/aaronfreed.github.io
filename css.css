@@ -182,7 +182,7 @@
 		text-decoration-color: var(--heading-color-translucent);
 	}
 	.compositions2023-2024 .dotted {
-		text-decoration: none !important;
+		border-bottom: none !important;
 	}
 	.compositions2023-2024 .print25toleft {
 		margin-left: -25px;
@@ -2266,6 +2266,12 @@ li.weight8,
 .compositions2023-2024 :is(ol.contents ol, ol.tracklist ol, blockquote ol) ::marker {
 	color: var(--toc-counter);
 	text-decoration-color: var(--toc-counter-translucent);
+}
+.compositions2023-2024 ol.tracklist ol li {
+	margin-top: 4px;
+}
+.compositions2023-2024 ol.tracklist ol li:not(:last-child) {
+	margin-bottom: 4px;
 }
 .compositions2023-2024 ol.contents p:not(.sectionbreak),
 .compositions2023-2024 ol.contents blockquote:not(.sectionbreak) {

@@ -72,6 +72,7 @@ I&rsquo;ve contributed in varying degrees to the following (mostly) playable gam
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kiy7CaniLiZSRi-5P-SKEN)
    * This scenario remains under active development; a final release of version 1.3 is still forthcoming. We&rsquo;ve released six public previews of 1.3, most recently on 2024-03-07 (with a hotfix on 2024-03-29 to fix a scripting error in the level “Babylon X”), but further revisions to writing, music, and levels are still planned.
 * ***[Apotheosis X](https://simplici7y.com/items/apotheosis-x-5)*** (2020-2023): sound, scripting, testing
+   * [Steam Workshop page](https://steamcommunity.com/workshop/filedetails/?id=3310069119)
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6mOBZaoKUAOqDsfuv-RIneq)
    * [Featured in *PC Gamer*!](https://pcgamer.com/marathon-mod-apotheosis-x)
    * Further updates of *Apotheosis X* have not been ruled out but are not currently under active development.

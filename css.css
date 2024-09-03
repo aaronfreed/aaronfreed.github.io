@@ -1424,6 +1424,11 @@ ol.upperroman {
 	text-align: center;
 }
 
+/* breaking characters */
+.breaker {
+	line-break: anywhere;
+}
+
 /* tables */
 table {
 	border-collapse: collapse;

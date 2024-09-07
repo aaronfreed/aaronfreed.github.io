@@ -7,309 +7,323 @@
 		<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
 		<link rel="stylesheet" type="text/css" href="https://aaronfreed.github.io/css.css">
 	</head>
-	<body class="light"><!-- raindrops keep falling to my sky -->
-    <h1><a href="https://aaronfreed.github.io/">Aaron Freed</a></h1>
-      
+	<body class="light">
+		<h1 class="weight5 centred petitecaps"><a href="https://aaronfreed.github.io/">Aaron Freed</a></h1>
+		<p class="fixheight">I&rsquo;m a political science and cybersecurity major who recently relocated to Tallahassee, FL. Amateur game development, music creation and (re)mastering, and writing consume much of my spare time.</p>
 
-      <p>I’m a political science and cybersecurity major from Sarasota, FL. Amateur game development, music creation and (re)mastering, and writing consume much of my spare time.</p>
+		<p class="fixheight">An overall site map can be found below. If you&rsquo;re here at my site&rsquo;s top level, perhaps you&rsquo;re just curious, or perhaps you&rsquo;re looking for <a href="mapmaking101.html">my &ldquo;getting started with mapmaking&rdquo; guide</a>, or <a href="discography.html">my discography</a>, or <a href="portfolio.html">my ludography</a>.</p>
 
-<p>I’m currently heavily involved in developing the following code projects:</p>
+		<h2 class="centred" id="contents">Contents</h2>
 
-<ul>
-  <li><strong><a href="https://github.com/aaronfreed/vasara/">VAF</a></strong>: A Lua texturing utility for <strong><a href="https://alephone.lhowon.org/"><em>Marathon</em> Aleph One</a></strong>. Based on Vasara by <strong><a href="https://github.com/Hopper262">@Hopper262</a></strong> and <strong>Ares Ex Machina</strong>, which in turn is based on <strong><a href="https://github.com/treellama/visualmode">Visual Mode.lua</a></strong> by <strong><a href="https://github.com/jonirons">@jonirons</a></strong> and <strong><a href="https://github.com/treellama">@treellama</a></strong> (Visual Mode.lua is effectively the command line to Vasara’s GUI). At the time I began this project, neither plugin had been substantially updated since 2016, so I took it upon myself (with a bit of assistance from <strong><a href="https://github.com/SolraBizna">@SolraBizna</a></strong> and <strong><a href="https://github.com/murbruksprodukt">@murbruksprodukt</a></strong>) to update Vasara to implement new Aleph One features, fix longstanding bugs, and add new features to make texturing easier. This remains a work in progress; when I’m satisfied with the results, I may backport some of these changes to Visual Mode.lua. This will only function with Aleph One 1.7 or later, and it is best used with <strong><a href="https://github.com/treellama/weland/releases">Weland</a></strong> (see the readme for an abbreviated setup guide, or my content creation guide directly below for a detailed one).</li>
-  <li><strong><a href="https://github.com/Aleph-Bet-Marathon/alephbet/">Aleph Bet</a></strong>: Fork of Aleph One with added features. Currently in the very early stages, but with very ambitious, detailed plans for the future. Several other people have done a massive amount of work on this already, especially <strong><a href="https://github.com/SolraBizna">@SolraBizna</a></strong> and <strong><a href="https://github.com/Prism019">@Prism019</a></strong>.
-    <ul>
-      <li>Our initial 0.9 release is all but certain to include:
-        <ul>
-          <li>a <a href="https://mesonbuild.com/">unified build system</a> across Windows, Linux, and MacOS (this is probably about 70-80% implemented)</li>
-          <li>Solra and Nemo’s Second Music System (which is already completely coded and just needs to be implemented)</li>
-        </ul>
-      </li>
-      <li>Additional goals, if we can complete them within a reasonable timeframe, are:
-        <ul>
-          <li>yeet ffmpeg to an external binary, enabling more flexible encoding settings and hardware-accelerated encoding</li>
-          <li>add a way to edit controls in-game, without quitting to the menu</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+		<ol class="tocliter">
+			<li><a href="#code">Code Projects</a></li>
+			<li><a href="#pages">Pages Currently Hosted Here</a>
+				<ol>
+					<li><a href="#marathoncontentcreation"><em>Marathon</em> / Aleph One Content Creation Guides</a></li>
+					<li><a href="#music">Music &amp; Audio</a></li>
+					<li><a href="#gaming">Gaming</a></li>
+					<li><a href="#miscellany">Miscellany</a></li>
+				</ol>
+			</li>
+			<li><a href="#ludography">Ludography</a>
+				<ol>
+					<li><a href="#released">Publicly Available Releases</a></li>
+					<li><a href="#unreleased">Works in Progress</a></li>
+				</ol>
+			</li>
+			<li><a href="#HIBILLYMAYSHERE">But Wait, There&rsquo;s More!</a></li>
+		</ol>
+		<h2 class="centred" id="code">Code Projects</h2>
+		<div class="fixheight">
+			<p>I&rsquo;m currently heavily involved in developing the following code projects:</p>
+			<ul>
+				<li><strong><a href="https://github.com/aaronfreed/vasara/">VAF</a></strong>: A Lua texturing utility for <strong><a href="https://alephone.lhowon.org/" rel="nofollow"><em>Marathon</em> Aleph One</a></strong>. Based on Vasara by <strong><a href="https://github.com/Hopper262">@Hopper262</a></strong> and <strong>Ares Ex Machina</strong>, which in turn is based on <strong><a href="https://github.com/treellama/visualmode">Visual Mode.lua</a></strong> by <strong><a href="https://github.com/jonirons">@jonirons</a></strong> and <strong><a href="https://github.com/treellama">@treellama</a></strong> (Visual Mode.lua is effectively the command line to Vasara&rsquo;s GUI). At the time I began this project, neither plugin had been substantially updated since 2016, so I took it upon myself (with a bit of assistance from <strong><a href="https://github.com/SolraBizna">@SolraBizna</a></strong> and <strong><a href="https://github.com/murbruksprodukt">@murbruksprodukt</a></strong>) to fork Vasara to implement new Aleph One features, fix longstanding bugs, and add new features to make texturing easier. This remains a work in progress; it will only function with Aleph One 1.7 or later, and it is best used with <strong><a href="https://github.com/treellama/weland/releases">Weland</a></strong> (see the readme for an abbreviated setup guide, or my content creation guide directly below for a detailed one).</li>
+				<li><strong><a href="https://github.com/Aleph-Bet-Marathon/alephbet/">Aleph Bet</a></strong>: Fork of Aleph One with added features. Currently in the very early stages, but with very ambitious, detailed plans for the future. Several other people have done a massive amount of work on this already, especially <strong><a href="https://github.com/SolraBizna">@SolraBizna</a></strong> and <strong><a href="https://github.com/Prism019">@Prism019</a></strong>.
+					<ul>
+						<li>Our initial 0.9 release is all but certain to include:
+							<ul>
+								<li>a <a href="https://mesonbuild.com/" rel="nofollow">unified build system</a> across Windows, Linux, and MacOS (probably about 95% implemented)</li>
+								<li>Solra and Nemo&rsquo;s Second Music System (which is already completely coded and just needs to be implemented)</li>
+							</ul>
+						</li>
+						<li>Additional goals, if we can complete them within a reasonable timeframe, are:
+							<ul>
+								<li>yeet ffmpeg to an external binary, enabling more flexible encoding settings and hardware-accelerated encoding</li>
+								<li>add a way to edit controls in-game, without quitting to the menu</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<h2 class="centred" id="pages">Pages Currently Hosted Here</h2>
+		<h3 class="centred" id="marathoncontentcreation"><em>Marathon</em> / Aleph One Content Creation Guides</h3>
+		<ul class="fixheight">
+			<li><strong><a href="https://aaronfreed.github.io/mapmaking101.html" rel="nofollow">Beginners&rsquo; guide</a></strong>
+				<ul>
+					<li>What editors to use, how to set them up, what guides to follow to get started making levels, what those guides get wrong or omit, and what to do after mastering the basics.</li>
+				</ul>
+			</li>
+			<li><strong><a href="https://aaronfreed.github.io/mapmaking.html" rel="nofollow">Advanced guide</a></strong>
+				<ul>
+					<li>Several intractable problems that hadn&rsquo;t been documented elsewhere and ways to fix them.</li>
+				</ul>
+			</li>
+			<li><strong>The Annotated Forge Manual</strong> (WIP):
+				<ul>
+					<li><strong><a href="https://aaronfreed.github.io/forgemanualcontents.html" rel="nofollow">Detailed Table of Contents</a></strong></li>
+					<li><strong><a href="https://aaronfreed.github.io/forgemanual.html" rel="nofollow">Introduction</a></strong></li>
+					<li><strong><a href="https://aaronfreed.github.io/forgetutorial1.html" rel="nofollow">Tutorial 1</a></strong> (WIP)
+						<ul>
+							<li>Contains numerous annotations correcting errata and filling in the gaps to apply to the modern map editor Weland. I&rsquo;ve only annotated around 25% of it, and the annotations will need substantial amounts of editing before I consider it finished. But it&rsquo;s a start.
+								<ul>
+									<li>Currently on hold; this approach felt increasingly impractical as I got further into it. I now plan to rewrite the Forge manual as a Weland manual when time permits.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><strong><a href="https://aaronfreed.github.io/anvilhelp.html" rel="nofollow">The Annotated Anvil Help Balloons</a></strong> (updated to work as a ShapeFusion reference)
+				<ul>
+					<li>Based on the help strings for Anvil, Bungie&rsquo;s official physics, shapes, and sound file editor; with corrections and amendments for its modern replacement ShapeFusion.</li>
+				</ul>
+			</li>
+			<li><strong><a href="/aaronfreed/aaronfreed.github.io/blob/main/marathoncircles.html">Circles and <em>Marathon</em> Mapmaking</a></strong>
+				<ul>
+					<li>Aleph One can&rsquo;t <em>exactly</em> use circles, but it can create rough approximations. I&rsquo;m kind of (in)famous for using them in my maps. I address a few ways to create them and provide some tips for using them effectively, including a table to produce regular polygons with several common side counts and side lengths of 1 World Units.</li>
+				</ul>
+			</li>
+			<li><strong><a href="/aaronfreed/aaronfreed.github.io/blob/main/mapcomplexity.html">Map Complexity: A Case Study</a></strong>
+				<ul>
+					<li>Wherein I examine <em>Eternal</em>&rsquo;s &ldquo;Where Giants Have Fallen&rdquo;, <em>Tempus Irae Redux</em>&rsquo;s &ldquo;Il grande silenzio&rdquo;, <em>Phoenix</em>&rsquo;s &ldquo;Stone Temple Pilates&rdquo;, and <em>Starlight</em>&rsquo;s &ldquo;Monument to All Your Sins&rdquo; as a demonstration of how much map detail is too much and how much is just enough.</li>
+				</ul>
+			</li>
+			<li><strong><a href="/aaronfreed/aaronfreed.github.io/blob/main/mapindexreduction.html">Reducing Map Index Use</a></strong>
+				<ul>
+					<li>What to do if you&rsquo;ve made a map so complex it won&rsquo;t load.</li>
+				</ul>
+			</li>
+			<li><strong><a href="/aaronfreed/aaronfreed.github.io/blob/main/marathonsounds.html"><em>Marathon Infinity</em> Sounds &amp; Sources</a></strong>
+				<ul>
+					<li>Invaluable information for anyone working with <em>Marathon Infinity</em>&rsquo;s sound file &ndash; or anyone curious where many of its sounds came from.</li>
+				</ul>
+			</li>
+			<li><strong><a href="https://aaronfreed.github.io/defaultnames.html" rel="nofollow">Example DefaultNames.txt for ShapeFusion</a></strong>
+				<ul>
+					<li>Customize almost every ShapeFusion string to match your own scenario&rsquo;s data.</li>
+				</ul>
+			</li>
+			<li><strong><a href="https://aaronfreed.github.io/marathonmonsters.html" rel="nofollow">Where Are Monsters in Marathon...Maps</a></strong>
+				<ul>
+					<li>A case study of the <em>Marathon</em> trilogy&rsquo;s monster placement as a microcosm of how restricting variety within individual levels can, counterintuitively, increase variety across an entire game.</li>
+				</ul>
+			</li>
+			<li><strong><a href="https://aaronfreed.github.io/marathon1palette.html" rel="nofollow">The <em>Marathon 1</em> Palette</a></strong>
+				<ul>
+					<li>Colors used in vanilla <em>Marathon 1</em>&rsquo;s 256-color graphics.</li>
+				</ul>
+			</li>
+			<li><strong><a href="https://aaronfreed.github.io/marathon2palette.html" rel="nofollow">The <em>Marathon 2</em> Palette</a></strong>
+				<ul>
+					<li>Colors used in vanilla <em>Marathon 2</em> and <em>Marathon Infinity</em>&rsquo;s 256-color graphics.</li>
+				</ul>
+			</li>
+			<li><strong><a href="https://aaronfreed.github.io/marathonlooper.html" rel="nofollow">Marathon: Looper</a></strong>
+				<ul>
+					<li>How to loop songs in Aleph One prior to 1.7. Split off to its own page because the process it describes isn&rsquo;t necessary with releases targeting only Aleph One 1.7 or later.</li>
+				</ul>
+			</li>
+		</ul>
+		<h3 class="centred" id="music">Music &amp; Audio</h3>
+		<ul class="fixheight">
+			<li><strong><a href="https://aaronfreed.github.io/remastering.html" rel="nofollow">My notes on remastering audio</a></strong>
+				<ul>
+					<li>An in-depth description of my cleanup process for music and sounds with poor mastering, lossy compression artifacts, or low sample rates, including an explanation of upmastering, a process I typically use in cases where <a href="https://en.wikipedia.org/wiki/Generation_loss" rel="nofollow">generation loss</a> is a possible concern. (It&rsquo;s impossible to restore data stripped out by digital clipping, lossy compression, or low sample rates; it&rsquo;s only possible to create approximations of what might have been there.) Written for <a href="https://www.izotope.com/en/products/rx.html" rel="nofollow">iZotope RX</a>, but its principles are usable in any sufficiently powerful audio cleanup software.</li>
+				</ul>
+			</li>
+			<li><strong><a href="https://aaronfreed.github.io/soundtracks.html" rel="nofollow"><em>Marathon</em> soundtracks</a></strong>
+				<ul>
+					<li>Remixes and arrangements of Alexander Seropian&rsquo;s soundtrack for <em>Marathon</em> (1994), plus several major <em>Marathon</em> scenario soundtracks, many of which I&rsquo;ve personally remastered.</li>
+				</ul>
+			</li>
+			<li><strong><a href="https://aaronfreed.github.io/discography.html" rel="nofollow">My discography</a></strong>
+				<ul>
+					<li>Including <em>Marathon</em> content, covers, and original material alike.</li>
+				</ul>
+			</li>
+			<li><strong><a href="https://aaronfreed.github.io/compositions2023-2024notes.html" rel="nofollow"><em>Compositions 2023-2024</em> liner notes</a></strong>
+				<ul>
+					<li>Detailed commentary on songs I&rsquo;ve written since 2023 for <em>hellpak vol. 2</em> and <em>Tempus Irae Redux</em> (plus credits for brief interpolations and a list of software used). Remains a work in progress (as do several of the compositions themselves).</li>
+				</ul>
+			</li>
+			<li><strong><a href="https://aaronfreed.github.io/musicalmodes.html" rel="nofollow">Musical Modes and the Circle of Fifths</a></strong>
+				<ul>
+					<li>A lengthy and highly technical examination of how the major scale&rsquo;s seven modes (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, and Locrian) relate to each other and the circle of fifths (a musical concept inextricably linked to chords and key signatures). Contains dozens of tables illustrating the principle. Also goes into great detail about the ancient Greek scales that gave several of our modes their names (spoiler alert: the ancient &ldquo;Mixolydian&rdquo;, &ldquo;Phrygian&rdquo;, &ldquo;Dorian&rdquo;, and &ldquo;Lydian&rdquo; scales are not the ones bearing those names today).</li>
+				</ul>
+			</li>
+		</ul>
+		<h3 class="centred" id="gaming">Gaming</h3>
+		<ul class="fixheight">
+			<li><strong><a href="https://aaronfreed.github.io/portfolio.html" rel="nofollow">My portfolio</a></strong>
+				<ul>
+					<li>An overview of my creative output from the past several years, with a heavy focus on <em>Marathon</em> content I&rsquo;ve worked on.</li>
+				</ul>
+			</li>
+			<li><strong><a href="https://aaronfreed.github.io/hathortimeline.html" rel="nofollow">Hathor&rsquo;s timeline in <em>Eternal X</em> 1.3 (major spoilers)</a></strong>
+				<ul>
+					<li>Please don&rsquo;t read this unless you&rsquo;ve completed a recent build of <em>Eternal X</em> 1.3: it spoils several major plot twists, and you&rsquo;ll lack the context to grasp their emotional significance.</li>
+				</ul>
+			</li>
+			<li><strong><a href="https://aaronfreed.github.io/istoria_body_messages.html" rel="nofollow"><em>Marathon Istoria</em>: Conversations with the Dead (major spoilers)</a></strong>
+				<ul>
+					<li>A catalog of all Yellow Crystal messages in the Aleph One scenario <em>Istoria</em>, the keywords used to display them, and the locations of all 28 bodies in the scenario. (Again, please don&rsquo;t read this until you&rsquo;ve finished <em>Istoria</em> at least once.)</li>
+				</ul>
+			</li>
+		</ul>
+		<h3 class="centred" id="miscellany">Miscellany</h3>
+		<ul class="fixheight">
+			<li><strong><a href="https://aaronfreed.github.io/trigtables.html" rel="nofollow">Trigonometry Tables (Sine, Cosine, and Tangent)</a></strong>
+				<ul>
+					<li>Why? I got sick of throwing them into a calculator app or Google &ndash; this way I&rsquo;ll have a URL for them that I&rsquo;ll easily remember.</li>
+				</ul>
+			</li>
+		</ul>
 
-<p>Pages currently hosted here:</p>
+		<h2 class="centred" id="ludography">Ludography</h2>
+		<h3 class="centred" id="released">Publicly Available Releases</h3>
+		<p class="fixheight">I&rsquo;ve contributed in varying degrees to the following (mostly) playable game mods. (Dates refer to my involvement with each project rather than its entire development cycle, though in a few cases these are identical.) See the <em>Marathon</em> soundtracks page above for links to soundtracks.</p>
 
-<ul>
-  <li><strong><em>Marathon</em> / Aleph One Content Creation Guides:</strong>
-    <ul>
-      <li><strong><a href="https://aaronfreed.github.io/mapmaking101.html">Beginners’ guide</a></strong>
-        <ul>
-          <li>What editors to use, how to set them up, what guides to follow to get started making levels, what those guides get wrong or omit, and what to do after mastering the basics.</li>
-        </ul>
-      </li>
-      <li><strong><a href="https://aaronfreed.github.io/mapmaking.html">Advanced guide</a></strong>
-        <ul>
-          <li>Several intractable problems that hadn’t been documented elsewhere and ways to fix them.</li>
-        </ul>
-      </li>
-      <li><strong>The Annotated Forge Manual</strong> (WIP):
-        <ul>
-          <li><strong><a href="https://aaronfreed.github.io/forgemanualcontents.html">Detailed Table of Contents</a></strong></li>
-          <li><strong><a href="https://aaronfreed.github.io/forgemanual.html">Introduction</a></strong></li>
-          <li><strong><a href="https://aaronfreed.github.io/forgetutorial1.html">Tutorial 1</a></strong> (WIP)
-            <ul>
-              <li>Contains numerous annotations correcting errata and filling in the gaps to apply to the modern map editor Weland. I’ve only annotated around 25% of it, and the annotations will need substantial amounts of editing before I consider it finished. But it’s a start.
-                <ul>
-                  <li>Currently on hold; this approach felt increasingly impractical as I got further into it. I now plan to rewrite the Forge manual as a Weland manual when time permits.</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><strong><a href="https://aaronfreed.github.io/anvilhelp.html">The Annotated Anvil Help Balloons</a></strong> (updated to work as a ShapeFusion reference)
-        <ul>
-          <li>Based on the help strings for Anvil, Bungie’s official physics, shapes, and sound file editor; with corrections and amendments for its modern replacement ShapeFusion.</li>
-        </ul>
-      </li>
-      <li><strong><a href="/marathoncircles.html">Circles and <em>Marathon</em> Mapmaking</a></strong>
-        <ul>
-          <li>Aleph One can’t <em>exactly</em> use circles, but it can create rough approximations. I’m kind of (in)famous for using them in my maps. I address a few ways to create them and provide some tips for using them effectively, including a table to produce regular polygons with several common side counts and side lengths of 1 World Units.</li>
-        </ul>
-      </li>
-      <li><strong><a href="/mapcomplexity.html">Map Complexity: A Case Study</a></strong>
-        <ul>
-          <li>Wherein I examine <em>Eternal</em>’s “Where Giants Have Fallen”, <em>Tempus Irae Redux</em>’s “Il grande silenzio”, <em>Phoenix</em>’s “Stone Temple Pilates”, and <em>Starlight</em>’s “Monument to All Your Sins” as a demonstration of how much map detail is too much and how much is just enough.</li>
-        </ul>
-      </li>
-      <li><strong><a href="/mapindexreduction.html">Reducing Map Index Use</a></strong>
-        <ul>
-          <li>What to do if you’ve made a map so complex it won’t load.</li>
-        </ul>
-      </li>
-      <li><strong><a href="/marathonsounds.html"><em>Marathon Infinity</em> Sounds &amp; Sources</a></strong>
-        <ul>
-          <li>Invaluable information for anyone working with <em>Marathon Infinity</em>’s sound file – or anyone curious where many of its sounds came from.</li>
-        </ul>
-      </li>
-      <li><strong><a href="https://aaronfreed.github.io/defaultnames.html">Example DefaultNames.txt for ShapeFusion</a></strong>
-        <ul>
-          <li>Customize almost every ShapeFusion string to match your own scenario’s data.</li>
-        </ul>
-      </li>
-      <li><strong><a href="https://aaronfreed.github.io/marathonmonsters.html">Where Are Monsters in Marathon…Maps</a></strong>
-        <ul>
-          <li>A case study of the <em>Marathon</em> trilogy’s monster placement as a microcosm of how restricting variety within individual levels can, counterintuitively, increase variety across an entire game.</li>
-        </ul>
-      </li>
-      <li><strong><a href="https://aaronfreed.github.io/marathon1palette.html">The <em>Marathon 1</em> Palette</a></strong>
-        <ul>
-          <li>Colors used in vanilla <em>Marathon 1</em>’s 256-color graphics.</li>
-        </ul>
-      </li>
-      <li><strong><a href="https://aaronfreed.github.io/marathon2palette.html">The <em>Marathon 2</em> Palette</a></strong>
-        <ul>
-          <li>Colors used in vanilla <em>Marathon 2</em> and <em>Marathon Infinity</em>’s 256-color graphics.</li>
-        </ul>
-      </li>
-      <li><strong><a href="https://aaronfreed.github.io/marathonlooper.html">Marathon: Looper</a></strong>
-        <ul>
-          <li>How to loop songs in Aleph One prior to 1.7. Split off to its own page because the process it describes isn’t necessary with releases targeting only Aleph One 1.7 or later.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>Music &amp; Audio</strong>
-    <ul>
-      <li><strong><a href="https://aaronfreed.github.io/remastering.html">My notes on remastering audio</a></strong>
-        <ul>
-          <li>An in-depth description of my cleanup process for music and sounds with poor mastering, lossy compression artifacts, or low sample rates, including an explanation of upmastering, a process I typically use in cases where <a href="https://en.wikipedia.org/wiki/Generation_loss" target="_blank">generation loss</a> is a possible concern. (It’s impossible to restore data stripped out by digital clipping, lossy compression, or low sample rates; it’s only possible to create approximations of what might have been there.) Written for <a href="https://www.izotope.com/en/products/rx.html" target="_blank">iZotope RX</a>, but its principles are usable in any sufficiently powerful audio cleanup software.</li>
-        </ul>
-      </li>
-      <li><strong><a href="https://aaronfreed.github.io/soundtracks.html"><em>Marathon</em> soundtracks</a></strong>
-        <ul>
-          <li>Remixes and arrangements of Alexander Seropian’s soundtrack for <em>Marathon</em> (1994), plus several major <em>Marathon</em> scenario soundtracks, many of which I’ve personally remastered.</li>
-        </ul>
-      </li>
-      <li><strong><a href="https://aaronfreed.github.io/discography.html">My discography</a></strong>
-        <ul>
-          <li>Including <em>Marathon</em> content, covers, and original material alike.</li>
-        </ul>
-      </li>
-      <li><strong><a href="https://aaronfreed.github.io/compositions2023-2024notes.html"><em>Compositions 2023-2024</em> liner notes</a></strong>
-        <ul>
-          <li>Detailed commentary on songs I’ve written since 2023 for <em>hellpak vol. 2</em> and <em>Tempus Irae Redux</em> (plus credits for brief interpolations and a list of software used). Remains a work in progress (as do several of the compositions themselves).</li>
-        </ul>
-      </li>
-      <li><strong><a href="https://aaronfreed.github.io/musicalmodes.html">Musical Modes and the Circle of Fifths</a></strong>
-        <ul>
-          <li>A lengthy and highly technical examination of how the major scale’s seven modes (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, and Locrian) relate to each other and the circle of fifths (a musical concept inextricably linked to chords and key signatures). Contains dozens of tables illustrating the principle. Also goes into great detail about the ancient Greek scales that gave several of our modes their names (spoiler alert: the ancient “Mixolydian”, “Phrygian”, “Dorian”, and “Lydian” scales are not the ones bearing those names today).</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>Gaming</strong>
-    <ul>
-      <li><strong><a href="https://aaronfreed.github.io/portfolio.html">My portfolio</a></strong>
-        <ul>
-          <li>An overview of my creative output from the past several years, with a heavy focus on <em>Marathon</em> content I’ve worked on.</li>
-        </ul>
-      </li>
-      <li><strong><a href="https://aaronfreed.github.io/hathortimeline.html">Hathor’s timeline in <em>Eternal X</em> 1.3 (major spoilers)</a></strong>
-        <ul>
-          <li>Please don’t read this unless you’ve completed a recent build of <em>Eternal X</em> 1.3: it spoils several major plot twists, and you’ll lack the context to grasp their emotional significance.</li>
-        </ul>
-      </li>
-      <li><strong><a href="https://aaronfreed.github.io/istoria_body_messages.html"><em>Marathon Istoria</em>: Conversations with the Dead (major spoilers)</a></strong>
-        <ul>
-          <li>A catalog of all Yellow Crystal messages in the Aleph One scenario <em>Istoria</em>, the keywords used to display them, and the locations of all 28 bodies in the scenario. (Again, please don’t read this until you’ve finished <em>Istoria</em> at least once.)</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>Miscellaneous</strong>
-    <ul>
-      <li><strong><a href="https://aaronfreed.github.io/trigtables.html">Trigonometry Tables (Sine, Cosine, and Tangent)</a></strong>
-        <ul>
-          <li>Why? I got sick of throwing them into a calculator app or Google – this way I’ll have a URL for them that I’ll easily remember.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+		<ul class="fixheight">
+			<li><em><strong><a href="http://eternal.bungie.org/" rel="nofollow">Eternal X</a></strong></em> (2018&ndash;): maps, music, sound, writing, scripting, graphics, soundtrack (re)mastering, codirector <em>(alongside <strong>pfhorrest</strong>, for versions 1.2.1 and later)</em>
+				<ul>
+					<li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6kiy7CaniLiZSRi-5P-SKEN" rel="nofollow">YouTube playlist</a></li>
+					<li>This scenario remains under active development; a final release of version 1.3 is still forthcoming. We&rsquo;ve released six public previews of 1.3, most recently on 2024-03-07 (with a hotfix on 2024-03-29 to fix a scripting error in the level &ldquo;Babylon X&rdquo;), but further revisions to writing, music, and levels are still planned.</li>
+				</ul>
+			</li>
+			<li><em><strong><a href="https://simplici7y.com/items/apotheosis-x-5" rel="nofollow">Apotheosis X</a></strong></em> (2020-2023): sound, scripting, testing
+				<ul>
+					<li><a href="https://steamcommunity.com/workshop/filedetails/?id=3310069119" rel="nofollow">Steam Workshop page</a></li>
+					<li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6mOBZaoKUAOqDsfuv-RIneq" rel="nofollow">YouTube playlist</a></li>
+					<li><a href="https://pcgamer.com/marathon-mod-apotheosis-x" rel="nofollow">Featured in <em>PC Gamer</em>!</a></li>
+					<li>Further updates of <em>Apotheosis X</em> have not been ruled out but are not currently under active development.</li>
+				</ul>
+			</li>
+			<li><em><strong><a href="https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors" rel="nofollow">Dungeons Presents Hellpak Vol. 1: Not Recommended by Doctors</a></strong></em> (2020&ndash;2024): maps, scripting, soundtrack mastering, writing, graphics, documentation, bug fix releases
+				<ul>
+					<li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6kcfNGN3zh0BcsyaLRFkB0k" rel="nofollow">YouTube playlist</a></li>
+					<li><a href="https://discord.gg/DTMvjFqtTA" rel="nofollow">Discord server</a></li>
+					<li>This is an iteration of creator tbcr&rsquo;s long-running <em>Dungeons</em> show, hence its full title. We released the (hopefully) final bug fix update for this scenario on 2024-06-24.</li>
+				</ul>
+			</li>
+			<li><em><strong>Trojan</strong></em> (2020&ndash;2021): sound remastering, soundtrack remastering
+				<ul>
+					<li>There are multiple versions of this game for Aleph One:
+						<ul>
+							<li><a href="https://simplici7y.com/items/marathon-trojan/" rel="nofollow">The first</a> is a direct conversion of the original game files to Aleph One format by Shappie, assisted by treellama and me. I didn&rsquo;t directly create any content involved with this release.</li>
+							<li><a href="https://hhas01.itch.io/trojan-se" rel="nofollow">The second</a> is a more complicated conversion of the original game files by original creator Hamish Sanderson with some added extras, including my remastered music and sounds. This, unfortunately, does not run on current versions of Aleph One, but you can probably use the remastered music and sounds with Shappie&rsquo;s conversion above.</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><em><strong><a href="https://simplici7y.com/items/marathon-phoenix-2/" rel="nofollow">Marathon Phoenix</a></strong></em> (2020, tangentially): soundtrack remastering
+				<ul>
+					<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3311974673" rel="nofollow">Steam Workshop page</a></li>
+					<li><a href="https://www.youtube.com/playlist?list=PL-_EnUuI9PUoIncYlqgWainfOUoZAXhCY" rel="nofollow">Creator RyokoTK&rsquo;s gameplay and commentary</a></li>
+					<li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6k2XxgTocOm9kxC-y6jXAZI" rel="nofollow">Additional gameplay by me and others</a></li>
+				</ul>
+			</li>
+		</ul>
 
-<p>I’ve contributed in varying degrees to the following (mostly) playable game mods. (Dates refer to my involvement with each project rather than its entire development cycle, though in a few cases these are identical.) See the <em>Marathon</em> soundtracks page above for links to soundtracks.</p>
+		<h3 class="centred" id="unreleased">Works in Progress</h3>
+		<p class="fixheight">I&rsquo;m also working on several forthcoming mods:</p>
+		<ul class="fixheight">
+			<li><em><strong>Dungeons Presents Hellpak Vol. 2: An Exercise in Questionable Taste</strong></em> (2023&ndash;, forthcoming): maps, scripting, music, soundtrack mastering, writing
+				<ul>
+					<li><a href="https://discord.gg/DTMvjFqtTA" rel="nofollow">Discord server</a></li>
+					<li><a href="https://youtu.be/lebTkbIkt5I" rel="nofollow">Preview of music and levels</a> (the first song and the first five levels of this video are my work)</li>
+					<li>Map and music submissions for <em>Vol. 2</em> closed at the end of 2023; we hope to release it at the end of 2024.
+						<ul>
+							<li>Note that we already have more than seven hours of music, which is more than enough for both <em>Vol. 2</em> and <em>Vol. 3</em>&rsquo;s soundtracks while giving us a decent head start on <em>Vol. 4</em>. You&rsquo;re welcome to get a head start on mapping for <em>Vol. 3</em> now, though.</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><em><strong>Tempus Irae Redux</strong></em> (2020&ndash;, forthcoming): maps, music, sound, scripting, writing, soundtrack mastering
+				<ul>
+					<li><a href="http://nardo.bungie.org/alephone.php" rel="nofollow">Get the original <em>Tempus Irae</em> here</a></li>
+					<li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6nVJdLAfq0ZxS6WRv0bC3Fe" rel="nofollow">YouTube playlist</a></li>
+					<li>I didn&rsquo;t contribute to the original <em>Tempus Irae</em> but have been involved in <em>Redux</em>&rsquo;s development since it started in roughly May 2020. <em>Redux</em> isn&rsquo;t a straight remaster but more of a modern update; since it significantly changes several levels, players may find it interesting to play both. It also isn&rsquo;t planned to supersede the original <em>Tempus Irae</em>; the latter&rsquo;s original Aleph One release will continue to be available on Nardo&rsquo;s website after we release <em>Redux</em>. We entered a limited beta test in October 2023 and presently aim to release the game in late 2024 (it might be out by now if I hadn&rsquo;t had a sudden bout of madness and decided to compose two hours of original music for it).</li>
+				</ul>
+			</li>
+			<li><em><strong>Where Monsters Are in Dreams</strong></em> (2019&ndash;, forthcoming): maps, music, sound, scripting, soundtrack mastering, writing, graphics, codirector <em>(alongside <strong>CryoS</strong> and <strong>hypersleep</strong>)</em>
+				<ul>
+					<li><a href="http://bighouse.bungie.org/wmaid/" rel="nofollow">Website</a></li>
+					<li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6kB_7qLbTdgia1hiNOoYmEz" rel="nofollow">YouTube playlist</a></li>
+					<li>A perpetually in-development scenario (I believe its development stretches back at least as far as 2001). Hypersleep and CryoS are two of the main forces behind <em>Apotheosis X</em>; the three of us have recently recommitted to finally finishing this monster (pun intended) and have a detailed, step-by-step roadmap to do so. We&rsquo;re hoping for a 2025 release, but we&rsquo;ve overshot so many estimates that it&rsquo;s become a running gag, so take that with not just a grain or even a boulder of salt but in fact an entire salt mine.</li>
+				</ul>
+			</li>
+			<li><strong><em>Return to Marathon</em> Chapter 2</strong> (2023&ndash;, forthcoming): maps, music, sound, scripting, graphics
+				<ul>
+					<li><a href="http://bighouse.bungie.org/rtm/" rel="nofollow"><em>Return to Marathon</em> website</a></li>
+					<li><a href="https://citadel.lhowon.org/scenarios/return-to-marathon/" rel="nofollow"><em>Return to Marathon</em> Chapter 1</a></li>
+					<li>I didn&rsquo;t contribute to <em>Return to Marathon</em>&rsquo;s first chapter, but I&rsquo;ll be helping to polish up its maps for the release of the full game. Development resumed in August 2023.</li>
+				</ul>
+			</li>
+			<li><em><strong>Marathon Chronicles</strong></em> (1997&ndash;, in progress): maps, writing, sound, music, graphics, soundtrack mastering, director
+				<ul>
+					<li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6k1ExcIEZMIOWc9wfgIkYmL" rel="nofollow">YouTube playlist</a></li>
+					<li><a href="https://drive.google.com/open?id=1BtHg2LzQBth25hxB-AURAs8um3yyCaTE" rel="nofollow">Most recent public release</a>, which is now a few years old. I&rsquo;ll release a current build after we release <em>Tempus Irae Redux</em>, since <em>Chronicles</em> incorporates many of its textures; out of respect for James&rsquo; phenomenal efforts on <em>Tempus Irae</em> and <em>Redux</em>, I will not be releasing them in any form ahead of <em>Redux</em> itself.</li>
+					<li>
+						<p class="upperpara"><em>Chronicles</em> is planned to be a sort of grand finale to a loose arc between the fan games <em>Rubicon</em>, <em>Eternal X</em>, <em>Phoenix</em>, <em>Where Monsters Are in Dreams</em> (listed in original release order rather than in-universe chronological order). It is planned to resolve Hathor&rsquo;s story, to address some ramifications of <em>Rubicon</em>&rsquo;s story, and to resolve the ramifications of the conflict revealed towards the end of <em>Eternal</em>.</p>
+						<p class="midpara">However, despite its having technically been in development for nearly two-thirds of my life, it&rsquo;s probably less than half complete. I plan for its second half to be fairly atypical for <em>Marathon</em> gameplay, with perhaps dozens of interconnected levels featuring nonlinear objectives and items that enable players to progress in several different ways; they&rsquo;ll be able to obtain these in nearly any order, meaning its objectives will have several possible solutions.</p>
+						<p class="lowerpara">None of this is implemented yet, though, and <em>Chronicles</em> is currently on the backburner at least until <em>Tempus Irae Redux</em> is complete.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h2 class="centred" id="HIBILLYMAYSHERE">But Wait, There&rsquo;s More!</h2>
+		<div class="fixheight">
+			<p>In case that wasn&rsquo;t enough, I also run a <strong><a href="https://youtube.com/@MarathonVidmaster" rel="nofollow">YouTube channel</a></strong> and host repositories of <strong><a href="https://github.com/aaronfreed/marathonfilms"><em>Marathon</em> film files</a></strong> and <strong><a href="https://github.com/aaronfreed/marathonsounds"><em>Marathon</em> sounds</a></strong> (both the original in-game versions and my remastered/remixed versions).</p>
 
-<ul>
-  <li><strong><em><a href="http://eternal.bungie.org/">Eternal X</a></em></strong> (2018–): maps, music, sound, writing, scripting, graphics, soundtrack (re)mastering, codirector <em>(alongside <strong>pfhorrest</strong>, for versions 1.2.1 and later)</em>
-    <ul>
-      <li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6kiy7CaniLiZSRi-5P-SKEN">YouTube playlist</a></li>
-      <li>This scenario remains under active development; a final release of version 1.3 is still forthcoming. We’ve released six public previews of 1.3, most recently on 2024-03-07 (with a hotfix on 2024-03-29 to fix a scripting error in the level “Babylon X”), but further revisions to writing, music, and levels are still planned.</li>
-    </ul>
-  </li>
-  <li><strong><em><a href="https://simplici7y.com/items/apotheosis-x-5">Apotheosis X</a></em></strong> (2020-2023): sound, scripting, testing
-    <ul>
-      <li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6mOBZaoKUAOqDsfuv-RIneq">YouTube playlist</a></li>
-      <li><a href="https://pcgamer.com/marathon-mod-apotheosis-x">Featured in <em>PC Gamer</em>!</a></li>
-      <li>Further updates of <em>Apotheosis X</em> have not been ruled out but are not currently under active development.</li>
-    </ul>
-  </li>
-  <li><strong><em><a href="https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors">Dungeons Presents Hellpak Vol. 1: Not Recommended by Doctors</a></em></strong> (2020–2024): maps, scripting, soundtrack mastering, writing, graphics, documentation, bug fix releases
-    <ul>
-      <li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6kcfNGN3zh0BcsyaLRFkB0k">YouTube playlist</a></li>
-      <li><a href="https://discord.gg/DTMvjFqtTA">Discord server</a></li>
-      <li>This is an iteration of creator tbcr’s long-running <em>Dungeons</em> show, hence its full title. We released the (hopefully) final bug fix update for this scenario on 2024-06-24.</li>
-    </ul>
-  </li>
-  <li><strong><em>Trojan</em></strong> (2020–2021): sound remastering, soundtrack remastering
-    <ul>
-      <li>There are multiple versions of this game for Aleph One:
-        <ul>
-          <li><a href="https://simplici7y.com/items/marathon-trojan/">The first</a> is a direct conversion of the original game files to Aleph One format by Shappie, assisted by treellama and me. I didn’t directly create any content involved with this release.</li>
-          <li><a href="https://hhas01.itch.io/trojan-se">The second</a> is a more complicated conversion of the original game files by original creator Hamish Sanderson with some added extras, including my remastered music and sounds. This, unfortunately, does not run on current versions of Aleph One, but you can probably use the remastered music and sounds with Shappie’s conversion above.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong><em><a href="https://simplici7y.com/items/marathon-phoenix-2/">Marathon Phoenix</a></em></strong> (2020, tangentially): soundtrack remastering
-    <ul>
-      <li><a href="https://www.youtube.com/playlist?list=PL-_EnUuI9PUoIncYlqgWainfOUoZAXhCY">Creator RyokoTK’s gameplay and commentary</a></li>
-      <li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6k2XxgTocOm9kxC-y6jXAZI">Additional gameplay by me and others</a></li>
-    </ul>
-  </li>
-</ul>
+			<p>All of the above game mods use the <strong><a href="https://alephone.lhowon.org/download.html" rel="nofollow">Aleph One engine</a></strong>. You may also wish to familiarize yourself with the <strong><a href="https://alephone.lhowon.org/scenarios.html" rel="nofollow"><em>Marathon</em> trilogy</a></strong>; in particular, <em>Hellpak</em> runs under <em>Marathon Infinity</em>.</p>
 
-<p>I’m also working on several forthcoming mods:</p>
+			<p>I&rsquo;ve also begun collecting long-form reviews I&rsquo;ve written of some of my favorite music. I&rsquo;d previously posted older versions of these at websites such as Rate Your Music, but I&rsquo;ve been wanting to collect all my best long-form writing in one place for a while.</p>
+			<ul>
+				<li><strong><a href="/aaronfreed/aaronfreed.github.io/blob/main/reviews/hostilearchitecture.html">Ashenspire&rsquo;s <em>Hostile Architecture</em></a></strong> (≈2,550 words, with an additional ≈300-word intro)</li>
+				<li><strong><a href="/aaronfreed/aaronfreed.github.io/blob/main/reviews/deathspellomega.html">Deathspell Omega&rsquo;s collected 2004-2012 output</a></strong> (≈3,500 words, with an additional ≈500-word intro and ≈1,500-word appendix on the band&rsquo;s use of Latin and Greek)</li>
+				<li><strong><a href="/aaronfreed/aaronfreed.github.io/blob/main/reviews/theraindropthatfelltothesky.html">Chris Christodoulou&rsquo;s &ldquo;The Raindrop That Fell to the Sky&rdquo; (<em>Risk of Rain 2</em>, 2020)</a></strong> (≈1,600 words)</li>
+			</ul>
 
-<ul>
-  <li><strong><em>Dungeons Presents Hellpak Vol. 2: An Exercise in Questionable Taste</em></strong> (2023–, forthcoming): maps, scripting, music, soundtrack mastering, writing
-    <ul>
-      <li><a href="https://discord.gg/DTMvjFqtTA">Discord server</a></li>
-      <li><a href="https://youtu.be/lebTkbIkt5I">Preview of music and levels</a> (the first song and the first five levels of this video are my work)</li>
-      <li>Map and music submissions for <em>Vol. 2</em> closed at the end of 2023; we’re hoping to release it at the end of 2024.
-        <ul>
-          <li>Note that we already have more than seven hours of music, which is more than enough for both <em>Vol. 2</em> and <em>Vol. 3</em>’s soundtracks while giving us a decent head start on <em>Vol. 4</em>. You’re welcome to get a head start on mapping for <em>Vol. 3</em> now, though.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong><em>Tempus Irae Redux</em></strong> (2020–, forthcoming): maps, music, sound, scripting, writing, soundtrack mastering
-    <ul>
-      <li><a href="http://nardo.bungie.org/alephone.php">Get the original <em>Tempus Irae</em> here</a></li>
-      <li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6nVJdLAfq0ZxS6WRv0bC3Fe">YouTube playlist</a></li>
-      <li>I didn’t contribute to the original <em>Tempus Irae</em> but have been involved in <em>Redux</em>’s development since it started in roughly May 2020. <em>Redux</em> isn’t a straight remaster but more of a modern update; since it significantly changes several levels, players may find it interesting to play both. It also isn’t planned to supersede the original <em>Tempus Irae</em>; the latter’s original Aleph One release will continue to be available on Nardo’s website after we release <em>Redux</em>. We entered a limited beta test in October 2023 and presently aim to release the game in mid-2024 (it might be out by now if I hadn’t had a sudden bout of madness and decided to compose several original songs for it).</li>
-    </ul>
-  </li>
-  <li><strong><em>Where Monsters Are in Dreams</em></strong> (2019–, forthcoming): maps, music, sound, scripting, soundtrack mastering, writing, graphics, codirector <em>(alongside <strong>CryoS</strong> and <strong>hypersleep</strong>)</em>
-    <ul>
-      <li><a href="http://bighouse.bungie.org/wmaid/">Website</a></li>
-      <li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6kB_7qLbTdgia1hiNOoYmEz">YouTube playlist</a></li>
-      <li>A perpetually in-development scenario (I believe its development stretches back at least as far as 2001). Hypersleep and CryoS are two of the main forces behind <em>Apotheosis X</em>; the three of us have recently recommitted to finally finishing this monster (pun intended) and have a detailed, step-by-step roadmap to do so. We’re hoping for a late 2024/early 2025 release, but we’ve overshot so many estimates that it’s become a running gag, so take that with not just a grain or even a boulder of salt but in fact an entire salt mine.</li>
-    </ul>
-  </li>
-  <li><strong><em>Return to Marathon</em> Chapter 2</strong> (2023–, forthcoming): maps, music, sound, scripting, graphics
-    <ul>
-      <li><a href="http://bighouse.bungie.org/rtm/"><em>Return to Marathon</em> website</a></li>
-      <li><a href="https://citadel.lhowon.org/scenarios/return-to-marathon/"><em>Return to Marathon</em> Chapter 1</a></li>
-      <li>I didn’t contribute to <em>Return to Marathon</em>’s first chapter, but I’ll be helping to polish up its maps for the release of the full game. Development resumed in August 2023.</li>
-    </ul>
-  </li>
-  <li><strong><em>Marathon Chronicles</em></strong> (1997–, in progress): maps, writing, sound, music, graphics, soundtrack mastering, director
-    <ul>
-      <li><a href="https://www.youtube.com/playlist?list=PLoysJW6pXQ6k1ExcIEZMIOWc9wfgIkYmL">YouTube playlist</a></li>
-      <li><a href="https://drive.google.com/open?id=1BtHg2LzQBth25hxB-AURAs8um3yyCaTE">Most recent public release</a>, which is now a few years old. I’ll release a current build after we release <em>Tempus Irae Redux</em>, since <em>Chronicles</em> incorporates many of its textures; out of respect for James’ phenomenal efforts on <em>Tempus Irae</em> and <em>Redux</em>, I will not be releasing them in any form ahead of <em>Redux</em> itself.</li>
-      <li>
-        <p><em>Chronicles</em> is planned to be a sort of grand finale to a loose arc between the fan games <em>Rubicon</em>, <em>Eternal X</em>, <em>Phoenix</em>, <em>Where Monsters Are in Dreams</em> (listed in original release order rather than in-universe chronological order). It is planned to resolve Hathor’s story, to address some ramifications of <em>Rubicon</em>’s story, and to resolve the ramifications of the conflict revealed towards the end of <em>Eternal</em>.</p>
+			<p>I have at least slightly more than cursory knowledge of the following languages (though in a few cases it was years or even decades ago):</p>
+			<ul>
+				<li>English (obviously)</li>
+				<li>Spanish</li>
+				<li>Latin</li>
+				<li>German</li>
+				<li>C#</li>
+				<li>Python</li>
+				<li>HTML/CSS</li>
+				<li>Lua</li>
+				<li>Java</li>
+				<li>BASIC</li>
+				<li>Pascal</li>
+				<li>Assembly</li>
+				<li>C</li>
+				<li>C++</li>
+				<li>OpenGL</li>
+				<li>Rust</li>
+			</ul>
 
-        <p>However, despite its having technically been in development for nearly two-thirds of my life, it’s probably less than half complete. I plan for its second half to be fairly atypical for <em>Marathon</em> gameplay, with perhaps dozens of interconnected levels featuring nonlinear objectives and items that enable players to progress in several different ways; they’ll be able to obtain these in nearly any order, meaning its objectives will have several possible solutions.</p>
+			<p>My knowledge of several of these languages is still only <em>slightly</em> more than cursory, but in some cases (e.g., Rust, OpenGL, and C++), it is improving. (In C++&rsquo;s case, this is quite begrudging, as every time I find myself writing C++ code, I find myself wishing I were writing Rust or Lua instead.)</p>
 
-        <p>None of this is implemented yet, though, and <em>Chronicles</em> is currently on the backburner at least until <em>Tempus Irae Redux</em> is complete.</p>
-      </li>
-    </ul>
-  </li>
-</ul>
+			<p>Some foci of my original writing include how differences in communication styles and preferences shape people&rsquo;s experiences and perceptions; how our malleable memories and our imperfect awareness of our surroundings lead us to think we know and remember more than we actually do; and the dangers of power and resources becoming overly concentrated in the hands of a few.</p>
 
-<p>In case that wasn’t enough, I also run a <strong><a href="https://youtube.com/@MarathonVidmaster">YouTube channel</a></strong> and host repositories of <strong><a href="https://github.com/aaronfreed/marathonfilms"><em>Marathon</em> film files</a></strong> and <strong><a href="https://github.com/aaronfreed/marathonsounds"><em>Marathon</em> sounds</a></strong> (both the original in-game versions and my remastered/remixed versions).</p>
+			<p>You can contact me on Discord at <strong>@Aaron#6608</strong> (or <strong>@aaron6608</strong>). We&rsquo;ll need a server in common if you don&rsquo;t want to wait for me to check my message requests; the <strong><a href="https://discord.gg/DTMvjFqtTA" rel="nofollow"><em>Hellpak</em> Discord</a></strong> and <strong><a href="https://discord.gg/EME7pBpJV7" rel="nofollow"><em>The Fourth Curtain</em> Discord</a></strong> (for Alex Seropian&rsquo;s <a href="https://podfollow.com/thefourthcurtain" rel="nofollow">game history podcast</a>) are two of your best bets. You can also contact me through my <strong><a href="https://youtube.com/@MarathonVidmaster" rel="nofollow">YouTube channel</a></strong>. I don&rsquo;t check email often enough for that to be a reliable form of contact.</p>
 
-<p>All of the above game mods use the <strong><a href="https://alephone.lhowon.org/download.html">Aleph One engine</a></strong>. You may also wish to familiarize yourself with the <strong><a href="https://alephone.lhowon.org/scenarios.html"><em>Marathon</em> trilogy</a></strong>; in particular, <em>Hellpak</em> runs under <em>Marathon Infinity</em>.</p>
-
-<p>I’ve also begun collecting long-form reviews I’ve written of some of my favorite music. I’d previously posted older versions of these at websites such as Rate Your Music, but I’ve been wanting to collect all my best long-form writing in one place for a while.</p>
-<ul>
-  <li><strong><a href="/reviews/hostilearchitecture.html">Ashenspire’s <em>Hostile Architecture</em></a></strong> (≈2,550 words, with an additional ≈300-word intro)</li>
-  <li><strong><a href="/reviews/deathspellomega.html">Deathspell Omega’s collected 2004-2012 output</a></strong> (≈3,500 words, with an additional ≈500-word intro and ≈1,500-word appendix on the band’s use of Latin and Greek)</li>
-  <li><strong><a href="/reviews/theraindropthatfelltothesky.html">Chris Christodoulou’s “The Raindrop That Fell to the Sky” (<em>Risk of Rain 2</em>, 2020)</a></strong> (≈1,600 words)</li>
-</ul>
-
-<p>I have at least slightly more than cursory knowledge of the following languages (though in a few cases it was years or even decades ago):</p>
-
-<ul>
-  <li>English (obviously)</li>
-  <li>Spanish</li>
-  <li>Latin</li>
-  <li>German</li>
-  <li>C#</li>
-  <li>Python</li>
-  <li>HTML/CSS</li>
-  <li>Lua</li>
-  <li>Java</li>
-  <li>BASIC</li>
-  <li>Pascal</li>
-  <li>Assembly</li>
-  <li>C</li>
-  <li>C++</li>
-  <li>OpenGL</li>
-  <li>Rust</li>
-</ul>
-
-<p>My knowledge of several of these languages is still only <em>slightly</em> more than cursory, but in some cases (e.g., Rust, OpenGL, and C++), it is improving. (In C++’s case, this is quite begrudging, as every time I find myself writing C++ code, I find myself wishing I were writing Rust or Lua instead.)</p>
-
-<p>Some foci of my original writing include how differences in communication styles and preferences shape people’s experiences and perceptions; how our malleable memories and our imperfect awareness of our surroundings lead us to think we know and remember more than we actually do; and the dangers of power and resources becoming overly concentrated in the hands of a few.</p>
-
-<p>You can contact me on Discord at <strong>@Aaron#6608</strong> (or <strong>@aaron6608</strong>). We’ll need a server in common if you don’t want to wait for me to check my message requests; the <strong><a href="https://discord.gg/DTMvjFqtTA"><em>Hellpak</em> Discord</a></strong> and <strong><a href="https://discord.gg/EME7pBpJV7"><em>The Fourth Curtain</em> Discord</a></strong> (for Alex Seropian’s <a href="https://podfollow.com/thefourthcurtain">game history podcast</a>) are two of your best bets. You can also contact me through my <strong><a href="https://youtube.com/@MarathonVidmaster">YouTube channel</a></strong>. I don’t check email often enough for that to be a reliable form of contact.</p>
-
-<p>I’m also a member of <strong><a href="http://last.fm/user/Cassandra-Leo">last.fm</a></strong>, <strong><a href="https://rateyourmusic.com/~Cassandra_Leo">Rate Your Music</a></strong>, and several other websites that I check even less often than I check my email; however, those interested in my musical influences may find them enlightening.</p>
-
-<p>Also, in case the insane amount of detail here didn’t make it obvious, I’m neurodivergent.</p>
-
-<p>More to come when I feel like updating this further.</p>
-
-</body>
+			<p>I&rsquo;m also a member of <strong><a href="http://last.fm/user/Cassandra-Leo" rel="nofollow">last.fm</a></strong>, <strong><a href="https://rateyourmusic.com/~Cassandra_Leo" rel="nofollow">Rate Your Music</a></strong>, and several other websites that I check even less often than I check my email; however, those interested in my musical influences may find them enlightening.</p>
+			<p>Also, in case the insane amount of detail here didn&rsquo;t make it obvious, I&rsquo;m neurodivergent.</p>
+			<p>More to come when I feel like updating this further.</p>
+		</div>
+	</body>
 </html>

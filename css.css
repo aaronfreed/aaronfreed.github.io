@@ -137,6 +137,11 @@
 		color: var(--link-hover) !important;
 		font-size: 81.25%;
 	}
+	.linktext {
+		font-weight: var(--weight2);
+		color: var(--link-hover) !important;
+		font-size: 81.25%;
+	}
 	a[href^="#"]::after {
 		display: none !important;
 	} /* don't waste ink or paper displaying intra-page navigation URLs */
@@ -1434,6 +1439,9 @@ ol.upperroman {
 .breaker {
 	line-break: anywhere;
 }
+.nohyphens {
+	hyphens: none;
+}
 
 /* tables */
 table {
@@ -1914,6 +1922,9 @@ code {
 .musicalmodes .accent del.thick {
 	text-decoration-thickness: 3px;
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
+}
+del {
+	text-decoration-color: var(--main-translucent);
 }
 .musicalmodes th.highlight {
 	background-color: var(--offset-level-2);

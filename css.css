@@ -133,7 +133,7 @@
 	}
 	a:not(.noprintlink)::after {
 		font-weight: var(--weight2) !important;
-		content: " (" attr(href) ") ";
+		content: " \0027E8" attr(href) "\0027E9 ";
 		color: var(--link-hover) !important;
 		font-size: 81.25%;
 	}

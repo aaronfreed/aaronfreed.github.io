@@ -933,6 +933,12 @@ ol.toc > li > ol > li > ol :where(.integer, .decimal) {
 	font-size: initial;
 }
 
+.dropcap {
+	font-size: 200%;
+	line-height: 100%;
+	float: left;
+}
+
 /* headers and accents */
 h1,
 h2,

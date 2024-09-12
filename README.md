@@ -26,13 +26,13 @@ Pages currently hosted here:
             * Currently on hold; this approach felt increasingly impractical as I got further into it. I now plan to rewrite the Forge manual as a Weland manual when time permits.
    * **[The Annotated Anvil Help Balloons](https://aaronfreed.github.io/anvilhelp.html)** (updated to work as a ShapeFusion reference)
       * Based on the help strings for Anvil, Bungie&rsquo;s official physics, shapes, and sound file editor; with corrections and amendments for its modern replacement ShapeFusion.
-   * **[Circles and *Marathon* Mapmaking](marathoncircles.html)**
+   * **[Circles and *Marathon* Mapmaking](https://aaronfreed.github.io/marathoncircles.html)**
       * Aleph One can&rsquo;t *exactly* use circles, but it can create rough approximations. I&rsquo;m kind of (in)famous for using them in my maps. I address a few ways to create them and provide some tips for using them effectively, including a table to produce regular polygons with several common side counts and side lengths of 1 World Units.
-   * **[Map Complexity: A Case Study](mapcomplexity.html)**
+   * **[Map Complexity: A Case Study](https://aaronfreed.github.io/mapcomplexity.html)**
       * Wherein I examine *Eternal*&rsquo;s &ldquo;Where Giants Have Fallen&rdquo;, *Tempus Irae Redux*&rsquo;s &ldquo;Il grande silenzio&rdquo;, *Phoenix*&rsquo;s &ldquo;Stone Temple Pilates&rdquo;, and *Starlight*&rsquo;s &ldquo;Monument to All Your Sins&rdquo; as a demonstration of how much map detail is too much and how much is just enough.
-   * **[Reducing Map Index Use](mapindexreduction.html)**
+   * **[Reducing Map Index Use](https://aaronfreed.github.io/mapindexreduction.html)**
       * What to do if you&rsquo;ve made a map so complex it won&rsquo;t load.
-   * **[*Marathon Infinity* Sounds & Sources](marathonsounds.html)**
+   * **[*Marathon Infinity* Sounds & Sources](https://aaronfreed.github.io/marathonsounds.html)**
       * Invaluable information for anyone working with <em>Marathon Infinity</em>&rsquo;s sound file &ndash; or anyone curious where many of its sounds came from.
    * **[Example DefaultNames.txt for ShapeFusion](https://aaronfreed.github.io/defaultnames.html)**
       * Customize almost every ShapeFusion string to match your own scenario&rsquo;s data.

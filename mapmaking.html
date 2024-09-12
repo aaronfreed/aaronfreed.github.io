@@ -273,41 +273,42 @@ window.onload = function () {makeAllSortable();};
 <ul class="fixheight">
 	<li>You can override monster activation limits with MML scripts. If you&rsquo;re making a standalone scenario, override this in your scenario&rsquo;s <strong>Scripts</strong> folder. The code for this (which also raises some limits on rendered objects) is:
 
-<pre style="line-height: 150%;">&lt;marathon&gt;
-	&lt;dynamic_limits&gt;
-		&lt;objects value="1024"/&gt;
-		&lt;monsters value="512"/&gt;
-		&lt;paths value="512"/&gt;
-		&lt;projectiles value="256"/&gt;
-		&lt;effects value="2048"/&gt;
-		&lt;rendered value="1024"/&gt;
-		&lt;local_collision value="1024"/&gt;
-		&lt;global_collision value="1024"/&gt;
-	&lt;/dynamic_limits&gt;
+<pre style="line-height: 150%; margin-left: 30px;">&lt;marathon&gt;
+    &lt;dynamic_limits&gt;
+        &lt;objects value="1024"/&gt;
+        &lt;monsters value="512"/&gt;
+        &lt;paths value="512"/&gt;
+        &lt;projectiles value="256"/&gt;
+        &lt;effects value="2048"/&gt;
+        &lt;rendered value="1024"/&gt;
+        &lt;local_collision value="1024"/&gt;
+        &lt;global_collision value="1024"/&gt;
+    &lt;/dynamic_limits&gt;
 &lt;/marathon&gt;</pre>
 
 	Alter as needed. By contrast, if mapping for <em>Infinity</em>, you&rsquo;ll probably want to merge in MML, unless you&rsquo;re fine with monsters randomly deactivating when more than twenty are active. There are multiple ways to do this; which to use depends in large part on what kind of level you&rsquo;re creating.</li>
 	<li>If you&rsquo;re making a solo-only map, you have two ways to merge in scripts. You can save the above script as a TEXT resource (e.g., <strong>Resources/TEXT/10000.txt</strong>) and call it in <strong>Resources/TEXT/00128.txt</strong>:</li>
 
-<pre style="line-height: 150%;">&lt;marathon_levels&gt;
-	&lt;level index="0"&gt;
-		&lt;lua resource="420"&gt;
-		&lt;mml resource="10000"/&gt;
-		&lt;music file="Eternal-Data/Music/Craig/SwirlsPiano.ogg"/&gt;
-	&lt;/level&gt;
+<pre style="line-height: 150%; margin-left: 30px;">&lt;marathon_levels&gt;
+    &lt;level index="0"&gt;
+        &lt;lua resource="420"&gt;
+        &lt;mml resource="10000"/&gt;
+        &lt;music file="Eternal-Data/Music/Craig/SwirlsPiano.ogg"/&gt;
+    &lt;/level&gt;
 &lt;/marathon_levels&gt;</pre>
 	Or by including MML in each individual level&rsquo;s folder (i.e., <strong>00 The Far Side of Nowhere/Monster Limits.mml</strong>).
 	<div style="margin-top: 8px;">On the other hand, if you&rsquo;re making a multiplayer level for an existing scenario (this includes cooperative play), it&rsquo;s actually <em><strong>mandatory</strong></em> to use the latter method in most cases, since the game doesn&rsquo;t send TEXT resources to other players. Thus, if you use it for something that affects the game world, which includes limit-removing MML and most Lua, players will desync almost immediately. If you don&rsquo;t know if your script will affect the game world, it&rsquo;s safest to just assume it will. MML texture replacements, fog, and Treellama&rsquo;s ephemera-based precipitation script are some examples of things that don&rsquo;t affect the game world.</div>
 	<div style="margin-top: 8px;"><span id="ftnt_ref01" class="dotted" title="What, you don&rsquo;t have a third hand? Then you must not be Zaphod Beeblebrox.">On the third hand<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span>, if you&rsquo;re making a standalone scenario, you can include an MML script that includes the scenario and version number, which prevents anyone who <em>isn&rsquo;t</em> running that scenario and version number from joining network games. In these cases, you can safely assume anyone who <em>does</em> join your game already has the map, in which case they&rsquo;ll also have the scripts already and won&rsquo;t desync.</div>
 
-<pre style="line-height: 150%;">&lt;marathon&gt;
-	&lt;scenario id="Eternal X" id="Eternal X" version="1.3pre6" /&gt;
-&lt;/marathon&gt;</pre>
+<pre style="line-height: 150%; margin-left: 30px;">&lt;marathon&gt;
+    &lt;scenario id="Eternal X" id="Eternal X" version="1.3pre6" /&gt;
+&lt;/marathon&gt;
+</pre>
 
 	<div style="margin-top: 8px;">(Moving the map file out of the scenario folder or overwriting it with a different version of the map would fall into what I&rsquo;d consider &lsquo;Play stupid games, win stupid prizes&rsquo; territory. You may wish to put a caveat about this in your game&rsquo;s documentation, but I&rsquo;d imagine this would be a relatively rare occurrence.)</div></li>
 
 	<li>OpenGL replacement graphics are a special case. They don&rsquo;t affect the game world, but they also shouldn&rsquo;t be merged in with the map. It&rsquo;s ideal to make these into a plugin so that players can choose whether to use them or not &ndash; some players may dislike the extra loading time or prefer chunky 128&times;128 pixel&sup2; textures. (While replacement textures could theoretically be included in a map for another scenario, that would be quite odd &ndash; if you&rsquo;re to the point that you have replacement textures for your map, I&rsquo;d advise making that into a standalone scenario.)</li>
-	<li>The <code>&lt;marathon_levels&gt;</code> code excerpt above also shows how to merge in music (i.e., the &lsquo;music file&rsquo; line). It&rsquo;s also possible to use Lua to implement music; doing so will in fact give you more options: you can control when to start the music (<em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em> contains some examples of this), or change the music midlevel based on game events (<a href="https://simplici7y.com/items/eternal-x"><em>Eternal X</em> 1.3</a> contains some examples of this). A full explanation of Lua music is beyond the current scope of this guide &ndash; the music API&rsquo;s functionality is currently being expanded, so such a guide would become outdated almost immediately.</li>
+	<li>The <code>&lt;marathon_levels&gt;</code> code excerpt above also shows how to merge in music (i.e., the &lsquo;music file&rsquo; line). It&rsquo;s also possible to use Lua to implement music; doing so will in fact give you more options: you can control when to start the music (<em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em> contains some examples of this), or change the music midlevel based on game events (<a href="https://simplici7y.com/items/eternal-x"><em>Eternal X</em> 1.3</a> contains some examples of this). A full explanation of Lua music is beyond this guide&rsquo;s current scope, although &lsquo;write a guide to Lua&rsquo; is on my lengthy to-do list.</li>
 	<li>Monsters must be active to take passive damage from sources like lava. This is why you can soft-lock yourself by not killing enough enemies in &ldquo;What About Bob?&rdquo; before you flood the basement with lava &ndash; many of them will deactivate and not take damage, and because you&rsquo;ve flooded the basement with lava, you have no way to go back and reactivate them without dying. If you&rsquo;re going to duplicate a setup like the &ldquo;What About Bob?&rdquo; basement, make sure to raise the monster activation limits.</li>
 </ul>
 

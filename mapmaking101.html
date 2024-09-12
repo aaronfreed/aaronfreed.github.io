@@ -111,8 +111,7 @@ window.onload = function () {makeAllSortable();};
 				</li>
 			</ol>
 		</li>
-		<li><a href="#contact">Contact Info</a></li>
-		<li><a href="#bio">What qualifies you to write this, anyway?</a></li>
+		<li><a href="#bio">Author Biography & Contact Info</a></li>
 		<li><a href="#thanks">Acknowledgements</a></li>
 		<li><a href="#endnotes">Endnotes</a></li>
 	</ol>
@@ -393,11 +392,11 @@ window.onload = function () {makeAllSortable();};
 
 <h2 id="welandissues">Mapping Issues in Weland</h2>
 
-<p>Weland differs from Forge in a few ways and has a few (mostly minor) bugs. Some issues users may currently encounter:</p>
+<p>Weland has some differences from Forge and a few (mostly minor) bugs. It&rsquo;s worth being aware of these issues:</p>
 
 <ul>
 	<li>Forge threw an error if you attempted to enter Visual Mode or save a map with any concave polygons. Weland just lets you do it. However, Forge&rsquo;s more aggressive treatment of the matter was justified in that the engine crashes if a player ever enters those polygons. By default, Weland colors concave polygons orange in Draw Mode, but if a lot of your polygons overlap in X/Y space, concave polygons may not be visible at a given time. Thus, be especially careful when moving lines, points, or polygons.</li>
-	<li>Pressing &ldquo;Undo&rdquo; in any top-down view besides draw mode causes the selection to be reverted to the first item in the palette.</li>
+	<li>Pressing &lsquo;<strong>Undo</strong>&rsquo; in any top-down view besides draw mode causes the selection to be reverted to the first item in the palette.</li>
 	<li>&lsquo;<strong>Remember Deleted Sides</strong>&rsquo; is a wonderful Weland addition &ndash; it remembers the texturing and lighting of a side when you delete a polygon and refill it (e.g., with lines divided differently). Unfortunately, it doesn&rsquo;t always work.</li>
 	<li>&lsquo;<strong>Split Lines Attached to Polygons</strong>&rsquo;, another wonderful Weland addition, currently always results in lines being marked solid and transparent, regardless of whether they were originally.</li>
 </ul>
@@ -416,7 +415,7 @@ window.onload = function () {makeAllSortable();};
 		</ul>
 	</li>
 	<li>In old versions of Aleph One (prior to 1.6, if memory serves), frame interpolation could cause textures to jitter if you placed them without paving first. Some players also reported that placing textures without first paving could cause crashes (I never experienced this, and it was also supposedly fixed in the same Aleph One update). However, paving occasionally crashes Weland (I haven&rsquo;t isolated the cause, but it seems to be an index mismatch), so it&rsquo;s ideal to save, pave, then go into visual mode.</li>
-	<li>By necessity, texturing always loads all textures, so you may sometimes want to avoid using hi-res textures while texturing. You&rsquo;ll probably want to run through the map with the hi-res textures on once you&rsquo;ve finished your initial pass, though; when you do so, I recommend keeping as few other programs open as possible.</li>
+	<li>By necessity, texturing always loads all textures, so you may sometimes want to avoid using hi-res textures while texturing. You&rsquo;ll probably want to run through the map with hi-res assets on once you&rsquo;ve finished your initial pass, though; when you do, I recommend keeping as few other programs open as possible.</li>
 	<li>Visual Mode.lua did not handle wires correctly until version 3.0.2, released on 2024-01-19. If you&rsquo;re having trouble getting them to work correctly, upgrade to the latest version or use Vasara or VAF.</li>
 	<li>Forge&rsquo;s &ldquo;align heights in visual mode&rdquo; feature doesn&rsquo;t exist in any modern editor; it&rsquo;s necessary to exit visual mode, change the polygon&rsquo;s heights, then go back to visual mode to texture it (or use Lua to do that, if you know it; one of several reasons I added overlays to VAF was to facilitate this). If you&rsquo;re on the obsessive-compulsive spectrum like me, you probably hated Forge&rsquo;s implementation of this feature because it didn&rsquo;t actually align heights correctly (see <a href="https://github.com/aaronfreed/vaf#planned-features" target="_blank">my discussion in in VAF&rsquo;s readme</a> for specifics). However, I plan to add a less sloppy implementation to VAF once I&rsquo;m satisfied with my UI design. (I&rsquo;m not a UI specialist and have long held that UI is far too important to be left up to programmers that aren&rsquo;t UI specialists.)</li>
 	<li>Occasional issues with platforms&rsquo; texture alignment.
@@ -607,13 +606,13 @@ window.onload = function () {makeAllSortable();};
 
 	<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
-<h1 id="bio">Author Biography</h1>
+<h1 id="bio">Author Biography &amp; Contact Info</h1>
 
 	<p>I&rsquo;ve been modding for this engine off and on since 1997 and have worked on a long list of projects over the years; rather than list them all here, you can just check my <a href="portfolio.html">portfolio page</a>. As mentioned, I also have a much longer <a href="mapmaking.html">mapmaking page</a> that goes into much more depth.</p>
 
 	<p>You may also be interested in my <a href="soundtracks.html"><em>Marathon</em> soundtracks page</a>. I have some additional <em>Marathon</em>-related music on my <a href="discography.html">discography page</a>. Additionally, my <a href="remastering.html">notes on my remastering process</a> may be helpful to those working on sounds or music.</p>
 
-	<p>See my <a href="aboutme.html#bio">About Me page</a> for a bit more info.</p>
+	<p>See my <a href="aboutme.html#bio">About Me page</a> for a bit more info &amp; contact information.</p>
 
 	<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 

@@ -111,6 +111,18 @@
 	h5 {
 		break-after: avoid;
 	}
+	h1 {
+		font-size: 24px;
+	}
+	h2 {
+		font-size: 22px;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	h4 {
+		font-size: 18px;
+	}
 	a:link,
 	a:visited,
 	a:link:hover,
@@ -824,9 +836,13 @@ ol.dso-lps {
 	font-weight: var(--weight7);
 }*/
 
+/* font */
+@import url('https://github.com/mozilla/Fira/blob/master/fira.css');
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
 /* start main entry */
 body {
-	font-family: "Fira Sans", "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "FiraGO", "Fira Sans", "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 	text-align: justify;
 	margin: auto;
 	hyphens: auto;
@@ -843,7 +859,7 @@ body:not(.trigtables) {
 	width: 800px;
 }
 .normal, button {
-	font-family: "Fira Sans", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "FiraGO", "Fira Sans", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 	font-weight: var(--weight2);
 }
 .soundtracks strong,
@@ -852,7 +868,7 @@ body:not(.trigtables) {
 .soundtracks :where(h1, h2, h3, h4) {
 	font-weight: var(--weight5);
 	text-decoration-thickness: 2px;
-	font-family: "Fira Sans", "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "FiraGO", "Fira Sans", "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 }
 
 /* link stuff */
@@ -1624,7 +1640,7 @@ textarea {
 }
 .istoria :is(td, th) {
 	padding: 4px 12px;
-	font-family: "Fira Sans", "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "FiraGO", "Fira Sans", "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 	font-weight: var(--weight2);
 	border: 1px solid var(--offset-level-4);
 }
@@ -1647,7 +1663,7 @@ textarea {
 	font-size: 13px;
 }
 .istoria :where(td, th).topic {
-	font-family: "Fira Sans", "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "FiraGO", "Fira Sans", "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
 	font-weight: var(--weight3);
 	text-decoration-thickness: 1.375px;
 	text-align: right;

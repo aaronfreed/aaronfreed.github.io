@@ -70,7 +70,7 @@ window.onload = function () {makeAllSortable();};
 
 		<ul>
 			<li><strong>Reset:</strong> Restores the default grid settings.</li>
-			<li><strong>Rotation:</strong> How much to rotate the grid, from 0&deg; to 90&deg;. (90&deg; isn&rsquo;t quite accurate; I recommend using 0&deg; instead.)</li>
+			<li><strong>Rotation:</strong> How much to rotate the grid, from 0&deg; to 90&deg;. (90&deg; is slightly inaccurate; stick to 0&deg; instead.)</li>
 			<li><strong>Scale:</strong> The amount by which to multiply the size of the standard grid, from 0.125 (one-eighth) to 8.</li>
 			<li><strong>Origin:</strong> The point around which to center the grid&rsquo;s rotation and scale. This is input using internal units (1,024 IU = 1 WU), so &minus;32,768 (&minus;32 WU) to 32,767 (&asymp;31.999 WU).</li>
 			<li><strong>1, 2, 3, 4, 5, 6:</strong> Grid presets. <strong>2</strong> through <strong>6</strong> persist after you quit Weland, apart from the origin point (use them for the grids you use most often); <strong>1</strong> resets when you exit.</li>
@@ -89,7 +89,7 @@ window.onload = function () {makeAllSortable();};
 
 		<blockquote><strong>Protip:</strong> If you&rsquo;re having trouble finding (0, 0), you can rotate the grid forward and backward (it always rotates around the center point); or edit one point by double-clicking it; or start from 15&deg; and work back around to 0&deg;. (Again, I don&rsquo;t recommend using a <strong>Rotation</strong> of 90&deg;; it&rsquo;s not quite accurate.)</blockquote>
 
-		<p>From here, we must rotate the grid by regular increments (this might be the trickiest part). 360&deg; (the span of a circle) divided by 24 points (the number of vertices we&rsquo;re using) gives us 15&deg; increments, so our next angle is 15&deg;. Set <strong>Rotation</strong> to 15&deg; and draw lines out from the center. Rotating by another 15&deg; gives us 30&deg;, then 45&deg;, then 60&deg;, then 75&deg;. (We could do this with fewer rotations, but we&rsquo;ll save that for later.) All these steps are shown below.</p>
+		<p>From here, we must rotate the grid by regular increments (this might be the trickiest part). 360&deg; (a circle&rsquo;s full rotation) divided by 24 points (our vertex count) gives us 15&deg; increments, so our next angle is 15&deg;. Set <strong>Rotation</strong> to 15&deg; and draw lines out from the center. Rotating another 15&deg; gives us 30&deg;, then 45&deg;, then 60&deg;, then 75&deg;. (We could do this with fewer rotations, but we&rsquo;ll save that for later.) Here are visuals of all these steps:</p>
 
 		<div class="image"><img src="circle1.png" width="124" height="124" alt="15&deg; Circle Vertices" title="15&deg; Circle Vertices"/>
 		<img src="circle2.png" width="124" height="124" alt="30&deg; Circle Vertices" title="30&deg; Circle Vertices"/>
@@ -122,7 +122,7 @@ window.onload = function () {makeAllSortable();};
 
 	<h1 id="radii">Radii and Rotations to Create 1 WU</h1>
 
-		<p>These radii and rotations will create regular polygons with sides of 1 WU in length. (As pointless as including a triangle may seem, this is a fast way to get an equilateral triangle centered around a desired point.) <em>Italic numbers</em> are divisible by 8 (i.e, you can use Shift+Alt with 45&deg; angles); <strong>bold numbers</strong>, by 16 (22.5&deg; angles). 1 WU = 1,024 Internal Units; these are included for the circle plugin. It produces slightly different results, so they differ slightly.</p>
+		<p>These radii and rotations create regular polygons with sides of 1 WU in length. (Including a triangle may seem pointless, but this is a fast way to draw an equilateral triangle centered around a desired point.) <em>Italic numbers</em> are divisible by 8 (i.e, you can use Shift+Alt with 45&deg; angles); <strong>bold numbers</strong>, by 16 (22.5&deg; angles). 1 WU = 1,024 Internal Units; I included these for the circle plugin. It produces slightly different results, so they differ slightly.</p>
 
 		<p class="light" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
 

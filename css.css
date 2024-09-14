@@ -1035,7 +1035,8 @@ h5
 }
 .portfolio h2.first,
 .portfolio h3.first,
-.portfolio h4.first {
+.portfolio h4.first,
+.portfolio :is(h1 + h2, h2 + h3, h3 + h4) {
 	margin: 8px 0px;
 }
 .portfolio h5 {

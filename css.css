@@ -1595,7 +1595,9 @@ textarea {
 .compilation > thead,
 .compilation > tfoot,
 .unofficial > thead,
-.discography .endnotes > thead {
+.discography .endnotes > thead,
+tfoot tr.freshprince th,
+thead tr.freshprince th {
 	background-color: var(--offset-level-1);
 	print-color-adjust: economy;
 }
@@ -1921,17 +1923,29 @@ code {
 :is(.musicalmodes, table.curved) tr {
 	border: 1px solid var(--offset-level-2);
 }
-:is(.musicalmodes, table.curved) .lightleftborder {
+.lighttopborder {
+	border-top: 1px solid var(--offset-level-2);
+}
+.lightleftborder {
 	border-left: 1px solid var(--offset-level-2);
 }
-:is(.musicalmodes, table.curved) .lightrightborder {
+.lightrightborder {
 	border-right: 1px solid var(--offset-level-2);
 }
-:is(.musicalmodes, table.curved) .mediumleftborder {
+.lightbottomborder {
+	border-bottom: 1px solid var(--offset-level-2);
+}
+.mediumtopborder {
+	border-top: 1px solid var(--offset-level-3);
+}
+.mediumleftborder {
 	border-left: 1px solid var(--offset-level-3);
 }
-:is(.musicalmodes, table.curved) .mediumrightborder {
+.mediumrightborder {
 	border-right: 1px solid var(--offset-level-3);
+}
+.mediumbottomborder {
+	border-bottom: 1px solid var(--offset-level-3);
 }
 :is(.musicalmodes, table.curved) tr.mediumbottomborder :is(td, th),
 :is(.musicalmodes, table.curved) :is(td.mediumbottomborder, tr.mediumbottomborder),

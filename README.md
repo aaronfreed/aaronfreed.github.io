@@ -7,9 +7,10 @@ I’m currently heavily involved in developing the following code projects:
    * Our initial 0.9 release is all but certain to include:
       * a [unified build system](https://mesonbuild.com/) across Windows, Linux, and MacOS (probably about 95% implemented)
       * Solra and Nemo&rsquo;s Second Music System (which is already completely coded and just needs to be implemented)
-   * Additional goals, if we can complete them within a reasonable timeframe, are:
-      * yeet ffmpeg to an external binary, enabling more flexible encoding settings and hardware-accelerated encoding
+   * Additional goals for 0.9, if we can complete them within a reasonable timeframe, are:
+      * yeet ffmpeg to an external binary, enabling hardware-accelerated rendering and more flexible encoding settings
       * add a way to edit controls in-game, without quitting to the menu
+   * The [issues page](https://github.com/Aleph-Bet-Marathon/alephbet/issues) includes many, though by no means all, of our longer-term plans
 
 Pages currently hosted here:
 
@@ -57,6 +58,8 @@ Pages currently hosted here:
       * Detailed commentary on songs I&rsquo;ve written since 2023 for *hellpak vol. 2* and *Tempus Irae Redux* (plus credits for brief interpolations and a list of software used). Remains a work in progress (as do several of the compositions themselves).
    * **[Musical Modes and the Circle of Fifths](https://aaronfreed.github.io/musicalmodes.html)**
       * A lengthy and highly technical examination of how the major scale&rsquo;s seven modes (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, and Locrian) relate to each other and the circle of fifths (a musical concept inextricably linked to chords and key signatures). Contains dozens of tables illustrating the principle. Also goes into great detail about the ancient Greek scales that gave several of our modes their names (spoiler alert: the ancient &ldquo;Mixolydian&rdquo;, &ldquo;Phrygian&rdquo;, &ldquo;Dorian&rdquo;, and &ldquo;Lydian&rdquo; scales are not the ones bearing those names today).
+	* **[Twelve-Tone Equal Temperament in Hertz](https://aaronfreed.github.io/pitches.html)**
+		* The frequency, to the nearest 0.01 Hz, of every note in the scale used in almost all Western music since the 18th century, from C0 (16.35 Hz) to B8 (7902.13 Hz). This information is easily available online, but I wanted a URL I&rsquo;d easily remember. (Also, it was a programming exercise &ndash; I generated the tables and most of the surrounding HTML with a Lua script.)
 * **Gaming**
    * **[My portfolio](https://aaronfreed.github.io/portfolio.html)**
       * An overview of my creative output from the past several years, with a heavy focus on <em>Marathon</em> content I&rsquo;ve worked on.
@@ -72,12 +75,12 @@ I&rsquo;ve contributed in varying degrees to the following (mostly) playable gam
 
 * ***[Eternal X](http://eternal.bungie.org/)*** (2018&ndash;): maps, music, sound, writing, scripting, graphics, soundtrack (re)mastering, codirector *(alongside **pfhorrest**, for versions 1.2.1 and later)*
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kiy7CaniLiZSRi-5P-SKEN)
-   * This scenario remains under active development; a final release of version 1.3 is still forthcoming. We&rsquo;ve released six public previews of 1.3, most recently on 2024-03-07 (with a hotfix on 2024-03-29 to fix a scripting error in the level “Babylon X”), but further revisions to writing, music, and levels are still planned.
+   * This scenario remains under active development; a final release of version 1.3 is still forthcoming. We&rsquo;ve released six public previews of 1.3, most recently on 2024-03-07 (with a hotfix on 2024-03-29 for an omitted script in the level &ldquo;Babylon X&rdquo;), but further revisions to writing, music, and levels are still planned.
 * ***[Apotheosis X](https://simplici7y.com/items/apotheosis-x-5)*** (2020-2023): sound, scripting, testing
    * [Steam Workshop page](https://steamcommunity.com/workshop/filedetails/?id=3310069119)
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6mOBZaoKUAOqDsfuv-RIneq)
    * [Featured in *PC Gamer*!](https://pcgamer.com/marathon-mod-apotheosis-x)
-   * Further updates of *Apotheosis X* have not been ruled out but are not currently under active development.
+   * Further updates of <em>Apotheosis X</em> haven&rsquo;t been ruled out but aren&rsquo;t currently under active development.
 * ***[Dungeons Presents Hellpak Vol. 1: Not Recommended by Doctors](https://simplici7y.com/items/dungeons-hellpak-vol-1-not-recommended-by-doctors)*** (2020&ndash;2024): maps, scripting, soundtrack mastering, writing, graphics, documentation, bug fix releases
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kcfNGN3zh0BcsyaLRFkB0k)
    * [Discord server](https://discord.gg/DTMvjFqtTA)
@@ -96,7 +99,7 @@ I&rsquo;m also working on several forthcoming mods:
 * ***Dungeons Presents Hellpak Vol. 2: An Exercise in Questionable Taste*** (2023&ndash;, forthcoming): maps, scripting, music, soundtrack mastering, writing
    * [Discord server](https://discord.gg/DTMvjFqtTA)
    * [Preview of music and levels](https://youtu.be/lebTkbIkt5I) (the first song and the first five levels of this video are my work)
-   * Map and music submissions for *Vol. 2* closed at the end of 2023; we hope to release it at the end of 2024.
+   * *Vol. 2* map and music submissions closed at the end of 2023; we hope to release it at the end of 2024.
      * Note that we already have more than seven hours of music, which is more than enough for both *Vol. 2* and *Vol. 3*&rsquo;s soundtracks while giving us a decent head start on *Vol. 4*. You’re welcome to get a head start on mapping for *Vol. 3* now, though.
 * ***Tempus Irae Redux*** (2020&ndash;, forthcoming): maps, music, sound, scripting, writing, soundtrack mastering
    * [Get the original *Tempus Irae* here](http://nardo.bungie.org/alephone.php)
@@ -105,12 +108,12 @@ I&rsquo;m also working on several forthcoming mods:
 * ***Where Monsters Are in Dreams*** (2019&ndash;, forthcoming): maps, music, sound, scripting, soundtrack mastering, writing, graphics, codirector *(alongside **CryoS** and **hypersleep**)*
    * [Website](http://bighouse.bungie.org/wmaid/)
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6kB_7qLbTdgia1hiNOoYmEz)
-   * A perpetually in-development scenario (I believe its development stretches back at least as far as 2001). Hypersleep and CryoS are two of the main forces behind *Apotheosis X*; the three of us have recently recommitted to finally finishing this monster (pun intended) and have a detailed, step-by-step roadmap to do so. We&rsquo;re hoping for a 2025 release, but we&rsquo;ve overshot so many estimates that it&rsquo;s become a running gag, so take that with not just a grain or even a boulder of salt but in fact an entire salt mine.
+   * A perpetually in-development scenario (I believe its development stretches back at least as far as 2001). Hypersleep and CryoS are two of the main forces behind *Apotheosis X*; in 2023, the three of us recommitted to finally finishing this monster (pun intended) and have a detailed, step-by-step roadmap to do so. We hope to release it in 2025, but we&rsquo;ve overshot so many estimates that it&rsquo;s become a running gag, so take that with not just a grain or even a boulder of salt but in fact an entire salt mine.
 * ***Return to Marathon* Chapter 2** (2023&ndash;, forthcoming): maps, music, sound, scripting, graphics
    * [*Return to Marathon* website](http://bighouse.bungie.org/rtm/)
    * [*Return to Marathon* Chapter 1](https://citadel.lhowon.org/scenarios/return-to-marathon/)
    * I didn&rsquo;t contribute to *Return to Marathon*&rsquo;s first chapter, but I&rsquo;ll be helping to polish up its maps for the release of the full game. Development resumed in August 2023.
-* ***Marathon Chronicles*** (1997&ndash;, in progress): maps, writing, sound, music, graphics, soundtrack mastering, director
+* ***Marathon Chronicles*** (1997&ndash;, in progress): maps, writing, sound, music, graphics, director
    * [YouTube playlist](https://www.youtube.com/playlist?list=PLoysJW6pXQ6k1ExcIEZMIOWc9wfgIkYmL)
    * [Most recent public release](https://drive.google.com/open?id=1BtHg2LzQBth25hxB-AURAs8um3yyCaTE), which is now a few years old. I&rsquo;ll release a current build after we release *Tempus Irae Redux*, since *Chronicles* incorporates many of its textures; out of respect for James&rsquo; phenomenal efforts on *Tempus Irae* and *Redux*, I will not be releasing them in any form ahead of *Redux* itself.
    * *Chronicles* is planned to be a sort of grand finale to a loose arc between the fan games *Rubicon*, *Eternal X*, *Phoenix*, *Where Monsters Are in Dreams* (listed in original release order rather than in-universe chronological order). It is planned to resolve Hathor&rsquo;s story, to address some ramifications of *Rubicon*&rsquo;s story, and to resolve the ramifications of the conflict revealed towards the end of *Eternal*.

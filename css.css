@@ -1,4 +1,7 @@
-﻿:root {
+﻿/* fonts */
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|FiraMono:400,500,700');
+
+:root {
 	--background: #fff;
 	--background-translucent: #ffffffc6;
 	--offset-level-1: #eff0ff;
@@ -837,12 +840,12 @@ ol.dso-lps {
 }*/
 
 /* font */
-@import url('https://github.com/mozilla/Fira/blob/master/fira.css');
-@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+/*@import url('https://github.com/mozilla/Fira/blob/master/fira.css');*/
+/*@import url('https://free.bboxtype.com/embedfonts/?family=FiraSans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|FiraSans+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|FiraSans+Compressed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');*/
 
 /* start main entry */
 body {
-	font-family: "FiraGO", "Fira Sans", "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "FiraGO", sans-serif;
 	text-align: justify;
 	margin: auto;
 	hyphens: auto;
@@ -859,7 +862,7 @@ body:not(.trigtables) {
 	width: 800px;
 }
 .normal, button {
-	font-family: "FiraGO", "Fira Sans", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "FiraGO", sans-serif;
 	font-weight: var(--weight2);
 }
 .soundtracks strong,
@@ -868,7 +871,7 @@ body:not(.trigtables) {
 .soundtracks :where(h1, h2, h3, h4) {
 	font-weight: var(--weight5);
 	text-decoration-thickness: 2px;
-	font-family: "FiraGO", "Fira Sans", "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "FiraGO", sans-serif;
 }
 
 /* link stuff */
@@ -939,12 +942,12 @@ tr.bold > td
 }
 
 ol.toc > li > ol > li > ol :where(.integer, .decimal) {
-	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", monospace;
+	font-family: "Fira Mono", monospace;
 }
 .light .integer:not(a:link, a:visited, a:hover, a:active),
 .light .decimal:not(a:link, a:visited, a:hover, a:active),
 .numbertable :is(td.integer, th.integer, td.decimal, th.decimal, td.number, th.number) {
-	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", monospace;
+	font-family: "Fira Mono", monospace;
 }
 
 .italic {
@@ -1641,7 +1644,7 @@ textarea {
 }
 .istoria :is(td, th) {
 	padding: 4px 12px;
-	font-family: "FiraGO", "Fira Sans", "Numberwang", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "FiraGO", sans-serif;
 	font-weight: var(--weight2);
 	border: 1px solid var(--offset-level-4);
 }
@@ -1664,7 +1667,7 @@ textarea {
 	font-size: 13px;
 }
 .istoria :where(td, th).topic {
-	font-family: "FiraGO", "Fira Sans", "Numberwang Medium", "Candara", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "FiraGO", sans-serif;
 	font-weight: var(--weight3);
 	text-decoration-thickness: 1.375px;
 	text-align: right;
@@ -1752,13 +1755,13 @@ textarea {
 .integer,
 .decimal,
 .number {
-	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", monospace;
+	font-family: "Fira Mono", monospace;
 }
 .discography .number, .discography .dr, .discography .date, .discography .accent {
 	font-family: inherit;
 }
  .date:is:not(.music), :where(td, th).date {
-	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "Fira Mono", monospace;
 	font-weight: var(--weight5);
 	text-decoration-thickness: 2px;
 }
@@ -1767,7 +1770,7 @@ textarea {
 	white-space: nowrap;
 }
 .dr {
-	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", "Trebuchet MS", sans-serif;
+	font-family: "Fira Mono", monospace;
 	text-align: center;
 }
 
@@ -1819,7 +1822,7 @@ tr.force-justify :is(td, th) {
 pre,
 code {
 	font-weight: var(--weight1);
-	font-family: "Fira Mono", "Courier New", "Courier", monospace;
+	font-family: "Fira Mono", monospace;
 }
 .defaultnames pre {
 	margin: 0px;
@@ -1857,7 +1860,7 @@ code {
 }
 .trigtables :is(td, th) {
 	padding: 5px 10px;
-	font-family: "Fira Code", "Monaco", "PP Supply Mono", "Lucida Console", "Courier", "Courier New", monospace;
+	font-family: "Fira Code", monospace;
 }
 .trigtables .accent td {
 	color: var(--heading-color);

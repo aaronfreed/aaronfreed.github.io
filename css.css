@@ -942,7 +942,8 @@ ol.toc > li > ol > li > ol :where(.integer, .decimal) {
 	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", monospace;
 }
 .light .integer:not(a:link, a:visited, a:hover, a:active),
-.light .decimal:not(a:link, a:visited, a:hover, a:active) {
+.light .decimal:not(a:link, a:visited, a:hover, a:active),
+.numbertable :is(td.integer, th.integer, td.decimal, th.decimal, td.number, th.number) {
 	font-family: "Fira Mono", "Corbel", "Avenir", "Calibri", monospace;
 }
 

@@ -855,6 +855,12 @@ body {
 	color: var(--main);
 	text-decoration-color: color-mix(in sRGB, currentColor 69%, transparent);
 }
+.smol {
+	font-size: 13px;
+}
+.tiny {
+	font-size: 11px;
+}
 .maincolor {
 	color: var(--main);
 }
@@ -1486,6 +1492,9 @@ th {
 }
 .soundtracks :where(td, th) {
 	padding: 4px;
+}
+.pitches :where(td, th) {
+	padding: 4px 8px;
 }
 tbody:nth-child(even) tr:nth-child(even) {
 	background-color: var(--offset-level-1);

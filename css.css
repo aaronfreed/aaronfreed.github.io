@@ -1482,6 +1482,10 @@ ol.upperroman {
 	text-align: center;
 }
 
+.subentry {
+	margin-left: 30px;
+}
+
 /* breaking characters */
 .breaker {
 	line-break: anywhere;

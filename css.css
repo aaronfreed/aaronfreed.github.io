@@ -156,6 +156,7 @@
 		font-weight: var(--weight2);
 		color: var(--link-hover) !important;
 		font-size: 81.25%;
+		hyphens: none;
 	}
 	a[href^="#"]::after {
 		display: none !important;
@@ -212,7 +213,7 @@
 	}
 }
 @media screen {
-	.noscreen {
+	.noscreen, .linktext {
 		display: none !important;
 	}
 	a:visited {
@@ -873,11 +874,26 @@ body:not(.trigtables) {
 }
 .soundtracks strong,
 .soundtracks a:link,
-.soundtracks a:visited,
-.soundtracks :where(h1, h2, h3, h4) {
-	font-weight: var(--weight5);
+.soundtracks a:visited {
+	font-weight: var(--weight2);
 	text-decoration-thickness: 2px;
 	font-family: "FiraGO", sans-serif;
+}
+.soundtracks h4 {
+	font-weight: var(--weight3);
+}
+.soundtracks :is(strong, a:link, a:visited) :is(a:link, a:visited, strong),
+.soundtracks h3 {
+	font-weight: var(--weight4);
+	text-decoration-thickness: 2px;
+}
+.soundtracks h2 {
+	font-weight: var(--weight5);
+}
+.soundtracks :is(a:link, a:visited, strong) :is(a:link, a:visited, strong) :is(a:link, a:visited, strong),
+.soundtracks h1 {
+	font-weight: var(--weight6);
+	text-decoration-thickness: 2px;
 }
 
 /* link stuff */
@@ -906,15 +922,15 @@ a:active {
 /* define font weights */
 .light,
 .light :is(p, td, th, blockquote) {
-	font-weight: var(--weight1);
+	font-weight: var(--weight0);
 	text-decoration-thickness: 0.375px;
 }
 .light :where(strong, .bold, a:link, a:visited) {
-	font-weight: var(--weight3);
+	font-weight: var(--weight2);
 	text-decoration-thickness: 1.375px;
 }
 .light :where(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) {
-	font-weight: var(--weight5);
+	font-weight: var(--weight4);
 	text-decoration-thickness: 2px;
 }
 
@@ -922,8 +938,6 @@ strong,
 a:link,
 a:visited,
 .bold,
-.light :where(.integer, .decimal, .number, .date) :where(strong, .bold, a:link, a:visited),
-.light :where(strong, .bold, a:link, a:visited) :where(.integer, .decimal, .number, .date),
 :where(.bold, strong, a:link, a:visited) :where(.integer, .decimal, .number, .date),
 :where(.integer, .decimal, .number, .date) :where(.bold, strong, a:link, a:visited),
 .bold .normal :is(a:link, a:visited) {
@@ -931,6 +945,8 @@ a:visited,
 	text-decoration-thickness: 1.375px;
 }
 
+.light :where(.integer, .decimal, .number, .date) :where(strong, .bold, a:link, a:visited),
+.light :where(strong, .bold, a:link, a:visited) :where(.integer, .decimal, .number, .date),
 :is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited),
 :is(strong, .bold, a:link, a:visited) :where(strong, .bold, a:link, a:visited) :where(.integer, .decimal, .number, .date),
 ol.toc > :where(a:link, a:visited) :where(.integer, .decimal),
@@ -1007,6 +1023,10 @@ h5
 	text-align: center;
 }
 
+.music :is(h1 + h2, h2 + h3, h3 + h4, h4 + h4) {
+	margin: 8px 0px;
+}
+
 :where(.portfolio, .forgemanual) h1 {
 	font-size: 36px;
 }
@@ -1036,7 +1056,7 @@ h5
 .portfolio h2.first,
 .portfolio h3.first,
 .portfolio h4.first,
-.portfolio :is(h1 + h2, h2 + h3, h3 + h4) {
+:is(.portfolio) :is(h1 + h2, h2 + h3, h3 + h4) {
 	margin: 8px 0px;
 }
 .portfolio h5 {
@@ -1190,7 +1210,7 @@ ol.toc ol ol ol li::before {
 :is(ol.toc ol ol ol, ol.toclite ol ol, ol.tocliter ol) li::before, 
 :is(ol, ol ol, ol ol ol) li.light::before,
 :is(ol, ol ol, ol ol ol) :is(li.light, li.light a:link, li.light a:visited) {
-	font-weight: var(--weight1);
+	font-weight: var(--weight0);
 	text-decoration-thickness: 0.375px;
 }
 :is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1) li::before {
@@ -2263,7 +2283,7 @@ li.weight8,
 	text-decoration-thickness: 2.75px;
 }
 .fixheight {
-	line-height: 125%;
+	line-height: 133.33333%;
 }
 .discography .fixheight,
 .discography .fixheight :is(td, th) {
@@ -2345,7 +2365,19 @@ li.weight8,
 }
 .compositions2023-2024 ol.contents p:not(.sectionbreak),
 .compositions2023-2024 ol.contents blockquote:not(.sectionbreak) {
-	font-size: initial !important;
+	font-size: initial;
+}
+.compositions2023-2024 .songtitle {
+	margin-top: 0px;
+	margin-bottom: 8px;
+	page-break-after: avoid;
+	font-size: 21px;
+}
+.compositions2023-2024 .movementtitle {
+	margin-top: 0px;
+	margin-bottom: 8px;
+	page-break-after: avoid;
+	font-size: 18px;
 }
 .compositions2023-2024 ol.contents p.sectionbreak {
 	font-size: 13px;

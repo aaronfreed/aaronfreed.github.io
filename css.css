@@ -2159,6 +2159,7 @@ a.weight0:visited,
 td.weight0,
 th.weight0,
 li.weight0
+a:link.weight0
 {
 	font-weight: var(--weight0);
 	text-decoration-thickness: 0.25px;
@@ -2451,4 +2452,9 @@ a.songlink.weight3:hover
 	text-decoration-thickness: 2px;
 	text-decoration-color: color-mix(in sRGB, currentcolor 77.77777%, transparent);
 	text-decoration-skip-ink: all;
+}
+
+ol.toc4 li :is(a.weight0:link, a.weight0:visited)
+{
+	font-weight: var(--weight0);
 }

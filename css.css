@@ -921,7 +921,11 @@ a:active {
 
 /* define font weights */
 .light,
-.light :is(p, td, th, blockquote) {
+.light :is(p, td, th, blockquote),
+td.light,
+th.light,
+p.light,
+blockquote.light {
 	font-weight: var(--weight0);
 	text-decoration-thickness: 0.375px;
 }
@@ -1066,16 +1070,19 @@ h5
 	margin: 0px 0px 8px;
 }
 .portfolio h5.light {
-	font-weight: var(--weight2);
+	font-weight: var(--weight0);
 	text-decoration-thickness: 0.5px;
 }
 .portfolio h5.light strong {
-	font-weight: var(--weight3);
+	font-weight: var(--weight2);
 	text-decoration-thickness: 1px;
 }
 .portfolio h5.light strong strong {
 	font-weight: var(--weight4);
 	text-decoration-thickness: 1.5px;
+}
+.portfolio h5 .normal {
+	font-weight: var(--weight0);
 }
 
 /* paragraph, div, and list stuff */
@@ -1850,6 +1857,7 @@ tr.force-justify :is(td, th) {
 .balanced-wrap,
 .balanced-wrap :is(td, th, li) {
 	white-space: balance;
+	text-wrap: balance;
 }
 .pretty-wrap,
 .pretty-wrap :is(td, th, li) {

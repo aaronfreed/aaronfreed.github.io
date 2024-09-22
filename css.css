@@ -925,7 +925,11 @@ a:active {
 td.light,
 th.light,
 p.light,
-blockquote.light {
+blockquote.light,
+:is(.toc, .toclite, .tocliter) a.light:link,
+:is(.toc, .toclite, .tocliter) a.light:visited,
+:is(.toc, .toclite, .tocliter) a.weight0:link,
+:is(.toc, .toclite, .tocliter) a.weight0:visited {
 	font-weight: var(--weight0);
 	text-decoration-thickness: 0.375px;
 }
@@ -2466,3 +2470,17 @@ ol.toc4 li :is(a.weight0:link, a.weight0:visited)
 {
 	font-weight: var(--weight0);
 }
+
+.conway :is(table,tr,td) { border: 0; margin: 0; padding: 0; border-spacing: 0;}
+.conway body { background-color: var(--background); margin: 0; padding: 0;}
+.conway table#playfield {
+    position: absolute;
+    width: calc(min(100dvw, 100dvh));
+    height: calc(min(100dvw, 100dvh));
+    top: calc((100dvh - min(100dvw, 100dvh)) * 0.5);
+    left: calc((100dvw - min(100dvw, 100dvh)) * 0.5);
+}
+.conway table#playfield td { width: min(1dvw, 1dvh); height: min(1dvw, 1dvh); overflow: clip clip; }
+.conway table#playfield tr { height: min(1dvw, 1dvh); overflow: clip clip; }
+.conway table#playfield td.alive { background-color: var(--toc-counter); }
+.conway table#playfield td.dead { background-color: var(--offset-level-1); }

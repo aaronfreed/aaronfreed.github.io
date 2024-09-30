@@ -1311,6 +1311,39 @@ ol.toc7 li::before {
 	color: var(--accent);
 }
 
+ol.songtranslations {
+	counter-reset: counter1;
+	list-style-type: none;
+}
+ol.songtranslations > li::before {
+	counter-increment: counter1;
+	content: "";
+}
+ol.songtranslations > li > ol {
+	counter-reset: counter2;
+	list-style-type: none;
+}
+ol.songtranslations > li > ol > li::before {
+	counter-increment: counter2;
+	content: counters(counter1, ".") "." counters(counter2, ".") ". ";
+}
+ol.songtranslations > li > ol > li > :is(ol, ol.alphamovement, ol.greekmovement, ol.romanmovement) {
+	counter-reset: counter3;
+	list-style-type: none;
+}
+ol.songtranslations > li > ol > li > ol.alphamovement > li::before {
+	counter-increment: counter3;
+	content: counters(counter1, ".") "." counters(counter2, ".") "." counters(counter3, ".", lower-alpha) ". ";
+}
+ol.songtranslations > li > ol > li > ol.romanmovement > li::before {
+	counter-increment: counter3;
+	content: counters(counter1, ".") "." counters(counter2, ".") "." counters(counter3, ".", lower-roman) ". ";
+}
+ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
+	counter-increment: counter3;
+	content: counters(counter1, ".") "." counters(counter2, ".") "." counters(counter3, ".", lower-greek) ". ";
+}
+
 /* a bunch of weird stuff for the Forge manual table of contents */
 .forgecontents ol.toc {
 	counter-set: i1 -1;

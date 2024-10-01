@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="conway">
+	<head>
+		<title>人生ゲーム (Conway&rsquo;s Game of Life)</title>
+		<link rel="stylesheet" type="text/css" href="css.css"/>
+		<script>
+"use strict";
+
+function go() {
+
+const FRAMES_PER_STEP = 15;
+// NOT EDITABLE YET BUT IT WILL BE SOME DAY
+const PLAYFIELD_WIDTH = 100;
+// SAME DEAL
+const PLAYFIELD_HEIGHT = 100;
+let wrapAround = true;
+let cellElements = [];
+let cellStates = [];
+
+let stepsElapsed = 0;
+let stepsElement = document.getElementById("steps");
+
+function doWrapAround(num, size) {
+    return (num + size) % size;
+}
+
+function getCellState(x, y) {
+    if (wrapAround) {
+        x = doWrapAround(x, PLAYFIELD_WIDTH);
+        y = doWrapAround(y, PLAYFIELD_HEIGHT);
+    } else if (y < 0 || y >= PLAYFIELD_HEIGHT) {
+        return undefined;
+    }
+    return cellStates[y][x];
+}
+
+function updateCellState(x, y, amAlive) {
+    let className;
+    if(amAlive) className = "alive";
+    else className = "dead";
+    cellStates[y][x] = amAlive;
+    cellElements[y][x].className = className;
+}
+
+function countAliveNeighbors(x, y) {
+    let count = 0;
+    if(getCellState(x - 1, y - 1)) count = count + 1;
+    if(getCellState(x - 1, y)) count = count + 1;
+    if(getCellState(x - 1, y + 1)) count = count + 1;
+    if(getCellState(x, y - 1)) count = count + 1;
+    if(getCellState(x, y + 1)) count = count + 1;
+    if(getCellState(x + 1, y - 1)) count = count + 1;
+    if(getCellState(x + 1, y)) count = count + 1;
+    if(getCellState(x + 1, y + 1)) count = count + 1;
+    return count;
+}
+
+function step() {
+    let newCellStates = [];
+    for(let y = 0; y < PLAYFIELD_HEIGHT; ++y) {
+        newCellStates[y] = [];
+        for(let x = 0; x < PLAYFIELD_WIDTH; ++x) {
+            if(getCellState(x, y)) {
+                newCellStates[y][x] = (countAliveNeighbors(x, y) >= 2 && countAliveNeighbors(x, y) <= 3);
+            } else {
+                newCellStates[y][x] = (countAliveNeighbors(x, y) == 3);
+            }
+        }
+    }
+    for(let y = 0; y < PLAYFIELD_HEIGHT; ++y) {
+        for(let x = 0; x < PLAYFIELD_WIDTH; ++x) {
+            updateCellState(x, y, newCellStates[y][x]);
+        }
+    }
+    stepsElapsed += 1;
+    document.getElementById("steps").innerHTML = stepsElapsed;
+}
+
+function download(filename, url_string) {
+    var element = document.createElement('a');
+    element.setAttribute('href', url_string);
+    element.setAttribute('download', filename);
+  
+    element.style.display = 'none';
+    document.body.appendChild(element);
+  
+    element.click();
+  
+    document.body.removeChild(element);
+  }
+
+function doExport() {
+    const currentTime = new Date(Date.now());
+    const timeString = currentTime.toISOString();
+    
+    let blobParts = "";
+	blobParts += "Export from Conway's Game of Life at "
+        + timeString + " (" + stepsElapsed + " steps elapsed)\n\n";
+	for(let y = 0; y < PLAYFIELD_HEIGHT; ++y) {
+		for(let x = 0; x < PLAYFIELD_WIDTH; ++x) {
+			if(getCellState(x, y)) {
+				blobParts += "X";
+			} else {
+				blobParts += ".";
+			}
+		}
+		blobParts += "\n"
+	}
+
+    let lifeBlob = new Blob([blobParts], {type: 'text/plain'});
+
+    let url_string = URL.createObjectURL(lifeBlob);
+    
+    let filename = "conway_" + timeString + ".txt"; 
+
+    download(filename, url_string);
+}
+
+////////////////////////////////////////////////////////////////////////////
+// Make the cells!
+////////////////////////////////////////////////////////////////////////////
+{
+    let playfieldElement = document.getElementById("playfield");
+    for(let y = 0; y < PLAYFIELD_HEIGHT; ++y) {
+        let tr = document.createElement("TR");
+        let rowElements = [];
+        let rowStates = [];
+        for(let x = 0; x < PLAYFIELD_WIDTH; ++x) {
+            let td = document.createElement("TD");
+            td.className = "dead";
+			tr.appendChild(td);
+            rowElements.push(td);
+            rowStates.push(false);
+            td.addEventListener(
+                "click",
+                function() {
+                    let isAlive = getCellState(x, y);
+                    isAlive = !isAlive;
+                    updateCellState(x, y, isAlive);
+                }
+            );
+        }
+        playfieldElement.appendChild(tr);
+        cellElements.push(rowElements);
+        cellStates.push(rowStates);
+    }
+}
+
+let buttonElement = document.getElementById("step");
+buttonElement.addEventListener("click", function() {
+    step();
+});
+
+let amPlaying = false;
+let framesUntilNextStep;
+
+function doPlayLogic() {
+    if(!amPlaying) return;
+    window.requestAnimationFrame(doPlayLogic);
+    framesUntilNextStep -= 1;
+    if(framesUntilNextStep <= 0) {
+        framesUntilNextStep = FRAMES_PER_STEP;
+        step();
+    }
+}
+
+let playElement = document.getElementById("play");
+playElement.addEventListener("click", function() {
+    if(!amPlaying) {
+        window.requestAnimationFrame(doPlayLogic);
+        framesUntilNextStep = FRAMES_PER_STEP;
+    }
+    amPlaying = !amPlaying;
+});
+
+let exportElement = document.getElementById("export");
+exportElement.addEventListener("click", function() {
+    doExport();
+});
+}
+
+window.addEventListener("load", go);
+		</script>
+	</head>
+	<body>
+		<noscript>You need JavaScrUIpt fergnatrbn DTbHui DETrH83490.,</noscript>
+        <table id="playfield"></table>
+        <button id="step">Step</button>
+        <button id="play">Play/Pause</button>
+		<button id="export">Export</button>
+        <p>Steps elapsed: <span id="steps">0</span></p>
+		<p><a href="https://conwaylife.com" target="_blank">Conway&rsquo;s Game of Life Wiki</a></p>
+		<p><a href="index.html">Back to my website</a></p>
+
+	</body>
+</html>

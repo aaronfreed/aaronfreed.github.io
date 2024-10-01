@@ -2071,6 +2071,14 @@ th.sidepad4,
 }
 td:first-child.sidepad2 {padding-left: 0px;}
 td:last-child.sidepad2 {padding-right: 0px;}
+td.rightpad4,
+th.rightpad4 {
+	padding-right: 4px;
+}
+td.leftpad4,
+th.leftpad4 {
+	padding-left: 4px;
+}
 td.rightpad2,
 th.rightpad2 {
 	padding-right: 2px;
@@ -2086,6 +2094,21 @@ th.norightpad {
 td.noleftpad,
 th.noleftpad {
 	padding-left: 0px;
+}
+
+.translation-title {
+	padding-left: 6px;
+}
+.translation-number, .translation-language {
+	padding-left: 6px;
+	padding-right: 6px;
+}
+.translation-meaning {
+	padding-left: 0px;
+	padding-right: 6px;
+}
+.translation-number {
+	text-align: left;
 }
 
 .hue0, .hue0 td, .hue0 th {

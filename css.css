@@ -1314,7 +1314,6 @@ ol.toc7 li::before {
 ol.songtranslations {
 	counter-reset: counter1;
 	list-style-type: none;
-	list-style-position: outside;
 }
 ol.songtranslations > li::before {
 	counter-increment: counter1;
@@ -1327,11 +1326,18 @@ ol.songtranslations > li > ol {
 ol.songtranslations > li > ol > li::before {
 	counter-increment: counter2;
 	content: counters(counter1, ".") "." counters(counter2, ".") ". ";
-	display: list-item;
+	display: inline-block;
+	text-align: right;
+	white-space: pre;
 }
 ol.songtranslations > li > ol > li > :is(ol, ol.alphamovement, ol.greekmovement, ol.romanmovement) {
 	counter-reset: counter3;
 	list-style-type: none;
+}
+ol.songtranslations > li > ol > li > ol > li::before {
+	display: inline-block;
+	text-align: right;
+	white-space: pre;
 }
 ol.songtranslations > li > ol > li > ol.alphamovement > li::before {
 	counter-increment: counter3;

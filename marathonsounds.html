@@ -42,7 +42,7 @@ window.onload = function () {makeAllSortable();};
 <body class="marathonsounds light">
 	<header>
 		<h1 id="sounds" class="petitecaps centred"><em>Marathon Infinity</em> Sounds &amp; Sources</h1>
-			<p>A reference to the sounds for Bungie&rsquo;s first-person shooters <em>Marathon 2: Durandal</em> (1995) and <em>Marathon Infinity</em> (1996), with limited information on the sounds from its earlier games <em>Pathways into Darkness</em> (1993) and <em>Marathon</em> (1994). For further context, please refer to my <a href="mapmaking.html"><em>Marathon</em><wbr />/<wbr />Aleph One content creation guide</a> (or my <a href="mapmaking101.html">beginners&rsquo; guide</a>). Please <a href="aboutme.html">contact me</a> if you notice any errors or omissions.</p>
+			<p class="fixheight">A reference to the sounds for <span class="accent weight3">Bungie</span>&rsquo;s first-person shooters <em class="accent weight3">Marathon 2: Durandal</em> (1995) and <em class="accent weight3">Marathon Infinity</em> (1996), with limited information on the sounds from its earlier games <em class="accent weight3">Pathways into Darkness</em> (1993) and <em class="accent weight3">Marathon</em> (1994). For further context, please refer to my <a href="mapmaking.html" class="underlinelink"><em>Marathon</em><wbr />/<wbr />Aleph One content creation guide</a> (or my <a href="mapmaking101.html" class="underlinelink">beginners&rsquo; guide</a>). Please <a href="aboutme.html" class="underlinelink">contact me</a> if you notice any errors or omissions.</p>
 
 		<h1 id="toc" class="centred">Table of Contents</h1>
 			<ol class="toclite">
@@ -57,18 +57,18 @@ window.onload = function () {makeAllSortable();};
 	</header>
 <h1 id="soundids" class="centred">Vanilla <em>Infinity</em> Sound ID List</h1>
 
-<ul>
+<ul class="fixheight">
 	<li>Sounds have two different numbers associated with them: sound ID and sound number. Sound IDs can be anything from 130 to 32760, must be multiples of 5, and must be unique within the sound file. If the ID is &minus;1, the game won&rsquo;t play them. Unfortunately, they&rsquo;re in no logical order in the vanilla sound file, so I&rsquo;ve listed them all below. The vanilla <em>Infinity</em> sounds only use IDs between 10,000 and 19,210 (inclusive).</li>
 	<li>You can use up to 256 classes (sound numbers 0&ndash;255); Aleph One&rsquo;s developers advise against using more.</li>
 	<li>&lsquo;Volume&rsquo; affects not the sound&rsquo;s decibel level in-game but how far away it&rsquo;s audible.</li>
 	<li>I&rsquo;ve used the Lua mnemonics for these unless I had a reason not to, which I usually note in tooltips (also reproduced at the bottom of this document as endnotes). Parenthetical names are alternate names prominently used elsewhere (e.g., Anvil<wbr />/<wbr />ShapeFusion or Forge<wbr />/<wbr />Weland).</li>
-	<li>Sounds in <strong>bold</strong> below have all of their sources definitively identified (see <a href="#soundsources">Sound Sources</a> below for these). Sounds in <em>italics</em> have some of them definitively identified.</li>
+	<li>Sounds in <strong>bold</strong> below have all of their sources definitively identified (see <a href="#soundsources" class="underlinelink">Sound Sources</a> below for these). Sounds in <em>italics</em> have some of them definitively identified.</li>
 </ul>
 
 
-<p class="light" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
+<p class="light fixheight" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
 
-<table style="width: 500px;">
+<table style="width: 500px;" class="fixheight">
 	<thead>
 		<tr>
 			<th style="width: 40px;" class="right">ID</td>
@@ -1055,11 +1055,11 @@ window.onload = function () {makeAllSortable();};
 	</tbody>
 </table>
 
-<p>The following classes are empty and have ID -1:</p>
+<p class="fixheight">The following classes are empty and have ID -1:</p>
 
-<p class="light" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
+<p class="light fixheight" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
 
-<table style="width: 500px;">
+<table style="width: 500px;" class="fixheight">
 	<thead>
 		<tr>
 			<td style="width: 40px;" class="right">ID</td>
@@ -1176,13 +1176,13 @@ window.onload = function () {makeAllSortable();};
 
 <h1 id="soundsources" class="centred">Sound Sources</h1>
 
-<p>I&rsquo;ve been able to locate the sources of many vanilla <em>Marathon Infinity</em> sounds; others remain elusive. Nearly all the ones I&rsquo;ve found are from the Canadian company <strong>Sound Ideas</strong>&rsquo; 40-disc <a href="https://www.sound-ideas.com/Product/42/The-Original-General-Series-6000-Sound-Effect-Library" target="_blank">General Series 6000</a> collection. (Alternatively, see <a href="https://www.sound-ideas.com/Product/51/General-Series-6000-Combo" target="_blank">here</a> for a bundle of the General Series 6000 with, as of this writing, ten extensions, which are all too recent to be sources for <em>Marathon</em>.) The one exception I&rsquo;ve been able to locate, <strong>Fist Hitting</strong>, comes from the <a href="https://www.sound-ideas.com/Product/414/Series-4000-Hollywood-Sound-Effects-Library" target="_blank">Series 4000 Hollywood</a> collection. The Series 6000 sounds are ubiquitous not just in games (<em>Doom</em> also used many, for example) but across all types of media, so while you may be hearing shout-outs to <em>Marathon</em> when someone uses one of these sounds, it&rsquo;s likelier that they just used an industry-standard stock sound library.</p>
+<p class="fixheight">I&rsquo;ve been able to locate the sources of many vanilla <em>Marathon Infinity</em> sounds; others remain elusive. Nearly all the ones I&rsquo;ve found are from the Canadian company <strong>Sound Ideas</strong>&rsquo; 40-disc <a href="https://www.sound-ideas.com/Product/42/The-Original-General-Series-6000-Sound-Effect-Library" class="underlinelink" target="_blank">General Series 6000</a> collection. (Alternatively, see <a href="https://www.sound-ideas.com/Product/51/General-Series-6000-Combo" class="underlinelink" target="_blank">here</a> for a bundle of the General Series 6000 with, as of this writing, ten extensions, which are all too recent to be sources for <em>Marathon</em>.) The one exception I&rsquo;ve been able to locate, <strong>Fist Hitting</strong>, comes from the <a href="https://www.sound-ideas.com/Product/414/Series-4000-Hollywood-Sound-Effects-Library" class="underlinelink" target="_blank">Series 4000 Hollywood</a> collection. The Series 6000 sounds are ubiquitous not just in games (<em>Doom</em> also used many, for example) but across all types of media, so while you may be hearing shout-outs to <em>Marathon</em> when someone uses one of these sounds, it&rsquo;s likelier that they just used an industry-standard stock sound library.</p>
 
-<p>I&rsquo;ve remixed or remastered the entire <em>Infinity</em> sound file, using the original sources when I&rsquo;d found them and various audio tricks I&rsquo;ve learned over the years when I hadn&rsquo;t; a recent revision is available <a href="https://1drv.ms/u/s!AuD0MykSsmaRgclYqimDd-MxHhU4iA?e=erurzK">here</a>. As of 2024-04-12, this should be the current revision. An &lsquo;extended&rsquo; version with longer versions of some samples and more samples for some sounds is also available <a href="https://1drv.ms/u/s!AuD0MykSsmaRgclXf4GY3KndOZWVrg?e=shiViL">here</a>.</p>
+<p class="fixheight">I&rsquo;ve remixed or remastered the entire <em>Infinity</em> sound file, using the original sources when I&rsquo;d found them and various audio tricks I&rsquo;ve learned over the years when I hadn&rsquo;t; a recent revision is available <a href="https://1drv.ms/u/s!AuD0MykSsmaRgclYqimDd-MxHhU4iA?e=erurzK" class="underlinelink" class="_blank">here</a>. As of 2024-04-12, this should be the current revision. An &lsquo;extended&rsquo; version with longer versions of some samples and more samples for some sounds is also available <a href="https://1drv.ms/u/s!AuD0MykSsmaRgclXf4GY3KndOZWVrg?e=shiViL" class="underlinelink" class="_blank">here</a>.</p>
 
-<p>The sources I&rsquo;ve been able to locate are, in order by disc<wbr />/<wbr />track<wbr />/<wbr />index:</span></p>
+<p class="fixheight">The sources I&rsquo;ve been able to locate are, in order by disc<wbr />/<wbr />track<wbr />/<wbr />index:</span></p>
 
-<ul>
+<ul class="fixheight">
 	<li><strong>Fist Landing:</strong> Face Punch, Arm Swing and Jaw Sock (4003 track 50, index 2 &ndash; this is the one from Series 4000)</li>
 	<li><strong>Lh&rsquo;owon Loon:</strong> Common Loon (6003 track 19, indices 1, 2, and 4; 4 was sped up) with echo removed</li>
 	<li><strong>Tick Chatter</strong>, <strong>Fighter Scream</strong>, and <strong>F&rsquo;lickta Death</strong> are all taken from Porcupine (6003 track 94). Fighter Scream is shifted down an octave (twelve semitones) and slowed from about 100 to about 77 bpm. F&rsquo;lickta Death is shifted down an octave and a half (nineteen semitones) and slowed from 100 to 60 bpm.</li>
@@ -1246,23 +1246,23 @@ window.onload = function () {makeAllSortable();};
 	<li><strong>Underground Explosion</strong>: Large Explosion (6040 track 26, index 1)</li>
 </ul>
 
-<p>Also, at least two chapter screen sounds come from the Series 6000 General:</p>
+<p class="fixheight">Also, at least two chapter screen sounds come from the Series 6000 General:</p>
 
-<ul>
+<ul class="fixheight">
 	<li><strong><em>Marathon 2</em>, chapter 1</strong>: Thunderclap with Rumble (6039 track 63, index 3)</li>
 	<li><strong><em>Marathon 2</em>, chapter 2</strong> (I think): Entity Pass By (6018 track 92)</li>
 </ul>
 
-<p>And at least a few <em>Pathways into Darkness</em> sounds also come from the Series 6000 General:</p>
+<p class="fixheight">And at least a few <em>Pathways into Darkness</em> sounds also come from the Series 6000 General:</p>
 
-<ul>
+<ul class="fixheight">
 	<li><strong>Nightmare Attack</strong><wbr />/<wbr /><strong>Dying</strong>: Wild Cat: Hissing, Growl, Swat (6003 track 44, various indices)</li>
 	<li><strong>Phantasm Attack</strong><wbr />/<wbr /><strong>Dying</strong>: Lion, Roaring (6003 track 88, various indices)</li>
 </ul>
 
-<p>And various mods have also mined these sounds, including:</p>
+<p class="fixheight">And various mods have also mined these sounds, including:</p>
 
-<ul>
+<ul class="fixheight">
 	<li><strong><em>Tempus Irae</em> &ndash; Blue Jay</strong>: Blue Jay, Single Calls (6003 track 1, index 1&hellip; maybe?)</li>
 	<li><strong><em>Tempus Irae</em> &ndash; Owl</strong>: Owl, Calling (6003 track 21, index 2)</li>
 	<li><strong><em>Tempus Irae</em> &ndash; Horse Whinny</strong>: Horse, Interior, Whinny (6003 track 65, index 1)</li>
@@ -1270,15 +1270,15 @@ window.onload = function () {makeAllSortable();};
 	<li><em>Eternal</em> and </span><em>Tempus Irae Redux</em> use several as well; I&rsquo;ll document them eventually.</li>
 </ul>
 
-<p>If you&rsquo;re aware of any sources of vanilla sounds not listed here, either for <em>Marathon 1</em>, <em>Marathon Infinity</em>, or even <em>Pathways into Darkness</em>, please let me know.</p>
+<p class="fixheight">If you&rsquo;re aware of any sources of vanilla sounds not listed here, either for <em>Marathon 1</em>, <em>Marathon Infinity</em>, or even <em>Pathways into Darkness</em>, please let me know.</p>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
 
 <h1 id="thanks" class="centred">Acknowledgements</h2>
 
-	<ul>
-		<li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
-		<li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
+	<ul class="fixheight">
+		<li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260" class="underlinelink" target="_blank">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
+		<li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020" class="underlinelink" target="_blank">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
 		<li><strong>Solra Bizna</strong> for an incomprehensible amount of programming help, including the CSS that makes this exact page follow your computer&rsquo;s dark mode settings.</li>
 		<li><strong>W&rsquo;rkncacnter</strong> for pointing out a sound source that eluded me, namely that the <strong>Fighter Dying</strong> sound is a pitch-shift of the Porcupine sound. (I had already noticed that the Fighter and F&rsquo;lickta deaths had the same source, but it never occurred to me that the Tick also had the same source.)</li>
 		<li><strong>Bungie</strong>, for obvious reasons.</li> 
@@ -1288,7 +1288,7 @@ window.onload = function () {makeAllSortable();};
 
 <h1 id="endnotes" class="centred">Endnotes</h1>
 
-<table class="endnotes">
+<table class="endnotes fixheight">
 	<thead>
 		<tr>
 			<th class="right"><strong>#</strong></th>

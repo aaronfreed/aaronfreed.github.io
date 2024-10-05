@@ -2366,6 +2366,9 @@ li.weight8,
 .fixheight {
 	line-height: 133.33333%;
 }
+.fixheight :is(h1, h2, h3, h4) {
+	line-height: initial;
+}
 .discography .fixheight,
 .discography .fixheight :is(td, th) {
 	line-height: 21px;

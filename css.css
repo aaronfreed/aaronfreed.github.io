@@ -2083,8 +2083,22 @@ th.sidepad4,
 	padding-left: 4px; 
 	padding-right: 4px;
 }
-td:first-child.sidepad2 {padding-left: 0px;}
-td:last-child.sidepad2 {padding-right: 0px;}
+td.sidepad6,
+th.sidepad6,
+.sidepad6 :is(td, th) {
+	padding-left: 4px; 
+	padding-right: 4px;
+}
+td:first-child.sidepad2, td:first-child.sidepad4, td:first-child.sidepad6 {padding-left: 0px;}
+td:last-child.sidepad2, td:last-child.sidepad4, td:last-child.sidepad6 {padding-right: 0px;}
+td.rightpad6,
+th.rightpad6 {
+	padding-right: 6px;
+}
+td.leftpad6,
+th.leftpad6 {
+	padding-left: 6px;
+}
 td.rightpad4,
 th.rightpad4 {
 	padding-right: 4px;

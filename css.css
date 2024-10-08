@@ -1287,6 +1287,13 @@ ol.toc7 li::before {
 	color: var(--accent);
 }
 
+::is(ol.toc) li::before
+{
+	display: inline-block;
+	text-align: right;
+	white-space: pre;
+}
+
 .dso ol.toc :is(li, li a:link, li a:visited, li::before),
 .dso ol.toc li::before {
 	font-weight: var(--weight4);
@@ -1350,6 +1357,13 @@ ol.songtranslations > li > ol > li > ol.romanmovement > li::before {
 ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
 	counter-increment: counter3;
 	content: counters(counter1, ".") "." counters(counter2, ".") "." counters(counter3, ".", lower-greek) ". ";
+}
+
+li.clearafter::after {
+	content: "";
+	clear: both;
+	display: table; 
+	padding-bottom: 0px;
 }
 
 /* a bunch of weird stuff for the Forge manual table of contents */

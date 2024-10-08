@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Marathon Scenario Scenery Reference</title>
+	<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script>
+function sortTable(table, col, reverse) {
+	var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+		tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+		i;
+	reverse = -((+reverse) || -1);
+	tr = tr.sort(function (a, b) { // sort rows
+		return reverse // `-1 *` if want opposite order
+			* (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+				.localeCompare(b.cells[col].textContent.trim(), undefined, {numeric: true})
+			);
+	});
+	for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+	var th = table.tHead, i;
+	th && (th = th.rows[0]) && (th = th.cells);
+	if (th) i = th.length;
+	else return; // if no `<thead>` then do nothing
+	while (--i >= 0) (function (i) {
+		var dir = 1;
+		th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+	}(i));
+}
+
+function makeAllSortable(parent) {
+	parent = parent || document.body;
+	var t = parent.getElementsByTagName('table'), i = t.length;
+	while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+	</script>
+</head>
+<body class="fixheight light" style="width: 100%;">
+	<header style="width: 800px; margin: auto;">
+		<h1 id="sounds" class="petitecaps centred"><em>Marathon</em> Scenario Scenery Reference</h1>
+			<p class="fixheight">A reference for matching up scenery in third-party scenarios with the Weland entries.</p>
+	</header>
+
+	<h2 class="centred" id="lava">Lava</h2>
+	<table class="centred">
+		<thead class="accent weight3">
+			<tr>
+				<th>Lua</th>
+				<th>Weland</th>
+				<th>Tempus</th>
+				<th>Tempus Redux</th>
+				<th>Eternal</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>light dirt</td>
+				<td>(L) Light Dirt</td>
+				<td>Circe</td>
+				<td>Venus Italica</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>dark dirt</td>
+				<td>(L) Dark Dirt</td>
+				<td>Little Girl</td>
+				<td>Verrochio Putti (Marble)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>lava bones</td>
+				<td>(L) Bones</td>
+				<td>Bones</td>
+				<td>Bones</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>lava bone</td>
+				<td>(L) Bone</td>
+				<td>Hanging Lantern</td>
+				<td>Hanging Lantern</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>ribs</td>
+				<td>(L) Ribs</td>
+				<td>Ribcage</td>
+				<td>Ribcage</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>skull</td>
+				<td>(L) Skull</td>
+				<td>Skull</td>
+				<td>Skull</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>hanging light 1</td>
+				<td>(L) Hanging Light #1</td>
+				<td>Table Candle</td>
+				<td>Table Candle</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>hanging light 2</td>
+				<td>(L) Hanging Light #2</td>
+				<td>Corn</td>
+				<td>Corn</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>small cylinder</td>
+				<td>(L) Large Cylinder</td>
+				<td>Tree</td>
+				<td>Tree</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>large cylinder</td>
+				<td>(L) Small Cylinder</td>
+				<td>Urn and Plant</td>
+				<td>Urn and Plant</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>block 1</td>
+				<td>(L) Block #1</td>
+				<td>Pinkish Rock</td>
+				<td>Pinkish Rock</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>block 2</td>
+				<td>(L) Block #2</td>
+				<td>Hollow Tree</td>
+				<td>Hollow Tree</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>block 3</td>
+				<td>(L) Block #3</td>
+				<td>Grey Rock</td>
+				<td>Grey Rock</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2 class="centred" id="water">Water</h2>
+	<table class="centred">
+		<thead class="accent weight3">
+			<tr>
+				<th>Lua</th>
+				<th>Weland</th>
+				<th>Tempus</th>
+				<th>Tempus Redux</th>
+				<th>Eternal</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>pistol clip</td>
+				<td>(W) Pistol Clip</td>
+				<td>Moses</td>
+				<td>Verrochio's David</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>water short light</td>
+				<td>(W) Short Light</td>
+				<td>Hanging Lantern</td>
+				<td>Hanging Lantern</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>water long light</td>
+				<td>(W) Long Light</td>
+				<td>Table Candle</td>
+				<td>Table Candle</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>siren</td>
+				<td>(W) Siren</td>
+				<td>Corn</td>
+				<td>Corn</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>rocks</td>
+				<td>(W) Rocks</td>
+				<td>Various Rocks</td>
+				<td>Various Rocks</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>blood drops</td>
+				<td>(W) Blood Drops</td>
+				<td>Circe</td>
+				<td>Venus Italica</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>water thing</td>
+				<td>(W) Filtration Device</td>
+				<td>Flickering Candle</td>
+				<td>Candle Stand</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>gun</td>
+				<td>(W) Gun</td>
+				<td>Potted Plant</td>
+				<td>Potted Plant</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bob remains</td>
+				<td>(W) Bob Remains </td>
+				<td>Tree</td>
+				<td>Tree</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>puddles</td>
+				<td>(W) Puddles</td>
+				<td>Puddles</td>
+				<td>Puddles</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>big puddles</td>
+				<td>(W) Big Puddles</td>
+				<td>Big Puddles</td>
+				<td>Big Puddles</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>security monitor</td>
+				<td>(W) Security Monitor</td>
+				<td>Tree Stump</td>
+				<td>Tree Stump</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>water alien supply can</td>
+				<td>(W) Alien Supply Can</td>
+				<td>Larger Tree</td>
+				<td>Larger Tree</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>machine</td>
+				<td>(W) Machine</td>
+				<td>Fountain</td>
+				<td>Fountain</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>staff</td>
+				<td>(W) Fighter's Staff</td>
+				<td>Little Girl</td>
+				<td>Verrochio Putti (Marble)</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2 class="centred" id="sewage">Sewage</h2>
+	<table class="centred">
+		<thead class="accent weight3">
+			<tr>
+				<th>Lua</th>
+				<th>Weland</th>
+				<th>Tempus</th>
+				<th>Tempus Redux</th>
+				<th>Eternal</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>sewage short light</td>
+				<td>(S) Stubby Green Light</td>
+				<td>Hanging Lantern</td>
+				<td>Hanging Lantern</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>sewage long light</td>
+				<td>(S) Long Green Light</td>
+				<td>Wine Bottle</td>
+				<td>Wine Bottle</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>junk</td>
+				<td>(S) Junk</td>
+				<td>Decorations</td>
+				<td>Decorations</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>antenna</td>
+				<td>(S) Big Antenna #1</td>
+				<td>Michelangelo&rsquo;s David</td>
+				<td>Michelangelo&rsquo;s David</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>big antenna</td>
+				<td>(S) Big Antenna #2</td>
+				<td>Rib Cage</td>
+				<td>Rib Cage</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>sewage alien supply can</td>
+				<td>(S) Alien Supply Can</td>
+				<td>Burning Candle</td>
+				<td>Burning Candle</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>sewage bones</td>
+				<td>(S) Bones</td>
+				<td>Logs on Fire</td>
+				<td>Logs on Fire</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>sewage big bones</td>
+				<td>(S) Big Bones</td>
+				<td>Skeleton</td>
+				<td>Skeleton</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>pfhor pieces</td>
+				<td>(S) Pfhor Pieces</td>
+				<td>Trees</td>
+				<td>Trees</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bob pieces</td>
+				<td>(S) Bob Pieces</td>
+				<td>Little Girl</td>
+				<td>Verrochio Putti (Bronze)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bob blood</td>
+				<td>(S) Bob Blood</td>
+				<td>Big Moses</td>
+				<td>Michelangelo's Moses</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2 class="centred" id="pfhor">Pfhor</h2>
+	<table class="centred nowrap">
+		<thead class="accent weight3">
+			<tr>
+				<th class="nowrap">Lua</th>
+				<th class="nowrap">Weland</th>
+				<th class="nowrap">Tempus</th>
+				<th class="nowrap">Tempus Redux</th>
+				<th class="nowrap">Eternal</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>alien short light</td>
+				<td>(P) Green Light</td>
+				<td>Green Light</td>
+				<td>Green Light</td>
+				<td>Green Light</td>
+			</tr>
+			<tr>
+				<td>alien long light</td>
+				<td>(P) Small Alien Light</td>
+				<td>Small Light</td>
+				<td>Small Light</td>
+				<td>Small Light</td>
+			</tr>
+			<tr>
+				<td>alien ceiling rod light</td>
+				<td>(P) Alien Ceiling Rod Light</td>
+				<td>Ceiling Rod</td>
+				<td>Ceiling Rod</td>
+				<td>Ceiling Rod</td>
+			</tr>
+			<tr>
+				<td>bulbous yellow alien object</td>
+				<td>(P) Bulbous Yellow Alien Object</td>
+				<td>Alien Object 1</td>
+				<td>Alien Object 1</td>
+				<td>Alien Object 1</td>
+			</tr>
+			<tr>
+				<td>square gray organic object</td>
+				<td>(P) Square Grey Organic Object</td>
+				<td>Earth</td>
+				<td>Earth</td>
+				<td>Alien Object 2</td>
+			</tr>
+			<tr>
+				<td>pfhor skeleton</td>
+				<td>(P) Pfhor Skeleton</td>
+				<td>Pfhor Ship</td>
+				<td>Pfhor Ship</td>
+				<td>Pfhor Skeleton</td>
+			</tr>
+			<tr>
+				<td>pfhor mask</td>
+				<td>(P) Pfhor Mask</td>
+				<td>Planet</td>
+				<td>Planet</td>
+				<td>Pfhor Mask</td>
+			</tr>
+			<tr>
+				<td>green stuff</td>
+				<td>(P) Green Stuff</td>
+				<td>Green Stuff</td>
+				<td>Green Stuff</td>
+				<td>Green Stuff</td>
+			</tr>
+			<tr>
+				<td>hunter shield</td>
+				<td>(P) Hunter Shield</td>
+				<td>Hunter Shield</td>
+				<td>Hunter Shield</td>
+				<td>Hunter Shield</td>
+			</tr>
+			<tr>
+				<td>alien bones</td>
+				<td>(P) Bones</td>
+				<td>Sun</td>
+				<td>Sun</td>
+				<td>Alien Bones</td>
+			</tr>
+			<tr>
+				<td>alien sludge</td>
+				<td>(P) Alien Sludge</td>
+				<td>Alien Sludge</td>
+				<td>Alien Sludge</td>
+				<td>Alien Sludge</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2 class="centred" id="jjaro">Jjaro</h2>
+	<table class="centred">
+		<thead class="accent weight3">
+			<tr>
+				<th>Lua</th>
+				<th>Weland</th>
+				<th>Tempus</th>
+				<th>Tempus Redux</th>
+				<th>Eternal</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>jjaro short light</td>
+				<td>(J) Short Ceiling Light</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>jjaro long light</td>
+				<td>(J) Long Light</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>weird rod</td>
+				<td>(J) Weird Rod</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>pfhor ship</td>
+				<td>(J) Pfhor Ship</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>sun</td>
+				<td>(J) Sun</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>large glass container</td>
+				<td>(J) Large Glass Container</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>nub 1</td>
+				<td>(J) Nub #1</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>nub 2</td>
+				<td>(J) Nub #2</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>lh'owon</td>
+				<td>(J) Lh'owon</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>floor whip antenna</td>
+				<td>(J) Floor Whip Antenna</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>ceiling whip antenna</td>
+				<td>(J) Ceiling Whip Antenna</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	The Lua mnemonics for the sewage antennae are backwards: the one they claim to be the large antenna is the small antenna in Marathon 2/Infinity's shapes, and vice versa.

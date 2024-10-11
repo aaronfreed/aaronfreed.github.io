@@ -357,6 +357,11 @@
 		text-decoration: underline;
 	}
 
+	.lyrics :is(td, th) {
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}	
+
 	/* a metric ton of palette nonsense */
 
 	.bg-FFFFFF {background: #FFFFFF !important; color: #000 !important;} /*m1&2*/
@@ -995,11 +1000,7 @@ ol.toc > li > ol > li > ol :where(.integer, .decimal) {
 }
 
 /* headers and accents */
-h1,
-h2,
-h3,
-h4,
-h5
+h1, h2, h3, h4, h5
 {
 	margin: 12px 0px;
 	font-weight: var(--weight6);
@@ -1189,6 +1190,8 @@ ol {
 }
 :is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1) li {
 	display: block;
+}
+:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .overview) li {
 	margin-top: 4px;
 	margin-bottom: 4px;
 	line-height: 125%;

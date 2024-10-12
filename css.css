@@ -1690,6 +1690,7 @@ textarea {
 .compilation > tfoot,
 .unofficial > thead,
 .discography .endnotes > thead,
+.discography .endnotes > tfoot,
 tfoot tr.freshprince th,
 thead tr.freshprince th {
 	background-color: var(--offset-level-1);
@@ -1708,8 +1709,7 @@ thead tr.freshprince th {
 .master > tfoot,
 .multi > thead,
 .multi > tfoot,
-.unofficial > tfoot,
-.discography .endnotes > tfoot
+.unofficial > tfoot
 {
 	background-color: var(--background);
 }

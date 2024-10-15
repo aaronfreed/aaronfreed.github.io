@@ -39,20 +39,27 @@ function makeAllSortable(parent) {
 window.onload = function () {makeAllSortable();};
 	</script>
 </head>
-<body>
+<body class="light">
 
 <header>
 <h1 class="petitecaps centred"><em>Marathon</em> Mapmaking: Snafus &amp; Solutions</h1>
 	
-	<p class="fixheight">This document is a guide to content creation for <strong><a href="https://alephone.lhowon.org/" target="_blank">Marathon Aleph One</a></strong>, an open-source engine based on <strong>Bungie</strong>&rsquo;s groundbreaking first-person shooter trilogy (1994-1996) &ndash; <em>not</em> its upcoming extraction shooter (though I&rsquo;m quite intrigued by the latter).</p>
+	<p class="fixheight">This is an advanced content creation guide for <strong><a href="https://alephone.lhowon.org/" target="_blank">Marathon Aleph One</a></strong>, an open-source engine based on <strong>Bungie</strong>&rsquo;s groundbreaking 1994-1996 first-person shooter trilogy (<em>not</em> its upcoming extraction shooter). It contains far more information than beginners will need (or even want) to know. If you&rsquo;re just getting started, bookmark this page so you can return here when you&rsquo;ve mastered the basics; then, consult my <a href="mapmaking101.html">beginner&rsquo;s guide</a> for:
+	</p>
+		
+		<ul class="fixheight overview">
+			<li>links to editors</li>
+			<li>detailed instructions on launching the texture editors Vasara, VAF, and Visual Mode.lua from the map editor Weland on Windows and MacOS</li>
+			<li>links to the official Forge and Anvil documentation</li>
+			<li>links to the official Forge tutorials</li>
+			<li>links to other useful guides/resources</li>
+			<li>explanations of how mapping in modern editors differs from mapping in the classic editors</li>
+			<li>links to communities that may be able to solve problems my guides and the above resources don&rsquo;t address</li>
+		</ul>
 
-	<p class="fixheight">This is primarily designed as an advanced document and contains far more information than beginners will need (or even want) to know; if you&rsquo;re just getting started, you should consult my <a href="mapmaking101.html">beginner&rsquo;s guide</a> instead. However, I recommend bookmarking this link so you can return here when you&rsquo;ve mastered the basics.</p>
-	
-	<p class="fixheight">My beginners&rsquo; guide features links to editors, the official Forge and Anvil documentation, the official Forge tutorials, other useful guides/resources, and links to communities where users may be able to find solutions to problems not covered in any of my guides.</p>
+	<p class="fixheight">Meanwhile, this guide contains overviews of both common and uncommon problems creators may face (and solutions thereto). It&rsquo;s meant to help troubleshoot several problems with <em>Marathon</em> content creation that, as far as I know, aren&rsquo;t documented anywhere else well, if at all.</p>
 
-	<p class="fixheight">This guide contains overviews of both common and uncommon problems creators may face (and solutions thereto). It&rsquo;s meant to help troubleshoot several problems with <em>Marathon</em> content creation that, as far as I know, aren&rsquo;t documented anywhere else well, if at all.</p>
-
-	<p class="fixheight">I&rsquo;m currently reorganizing this guide into smaller, more digestible pages &ndash; apologies for the inconvenience, but the ultimate form should be both more accessible and more logically organized.</p>
+	<p class="fixheight">I&rsquo;ve been reorganizing this guide into smaller, more digestible pages, though I&rsquo;m <em>mostly</em> finished now &ndash; apologies for the inconvenience, but the ultimate form should be both more accessible and more logically organized.</p>
 
 	<p class="fixheight">Should you have any suggestions for improvements to this guide or notice any errors, please either <a href="aboutme.html">contact me or submit to this page&rsquo;s GitHub repository</a>. (If you&rsquo;d like to be credited, please let me know.)</p>
 
@@ -91,11 +98,11 @@ window.onload = function () {makeAllSortable();};
 						<li><a href="#looper">Looping Music</a></li>
 					</ol>-->
 				</li>
-				<li><a href="#tagsareterrible">Tags Are Terrible (though sometimes inexorable)</a>
+				<!--<li><a href="#tagsareterrible">Tags Are Terrible (though sometimes inexorable)</a>
 					<ol>
 						<li><a href="#waysaroundtags">Ways to Avoid Tags</a></li>
 					</ol>
-				</li>
+				</li>-->
 				<li><a href="#ambientsound">Ambient Sound</a></li>
 				<!--<li><a href="#texturingissues">Texturing Issues in Visual Mode.lua and Vasara</a>
 					<ol>
@@ -198,9 +205,9 @@ window.onload = function () {makeAllSortable();};
 	</li>
 	<li>There are several hazards with the <strong>Activates Only Once</strong> flag for platforms (i.e., lifts and doors). Misusing this is one of the most common causes of incompletable levels.
 		<ul>
-			<li>At the risk of being overly editorial: always, <em>always</em>, <strong><em>ALWAYS</em></strong> set <strong>Can&rsquo;t Deactivate Externally</strong> for these. I can&rsquo;t stress this strongly enough. If a door that&rsquo;s meant to open deactivates before a player passes through it (or it traps them on the wrong side), that can render a level incompletable, and to compound the matter, players may save their games in such a state without having any idea they&rsquo;ve done anything wrong &ndash; which can be as mundane as &ldquo;shot switch with shotgun&rdquo; or &ldquo;accidentally hit Tab twice&rdquo;. In a guide such as this one, I&rsquo;d rarely call something Objectively Bad Game Design. This is the exception.
+			<li>At the risk of being overly editorial: always, <em>always</em>, <strong><em>ALWAYS</em></strong> set <strong>Can&rsquo;t Deactivate Externally</strong> for these. I can&rsquo;t stress this strongly enough. If a door players need to pass through deactivates before they do so (or it traps them on the wrong side), that can render a level incompletable, and to compound the matter, they may save their games in such a state without having any idea they&rsquo;ve done anything wrong &ndash; which can be as mundane as &ldquo;shot switch with shotgun&rdquo; or &ldquo;accidentally hit Tab twice&rdquo;. In a guide such as this, I&rsquo;d rarely call something Objectively Bad Game Design. This is the exception.
 				 <ul>
-					<li>To make matters worse, <strong>Can&rsquo;t Deactivate Externally</strong> is necessary but not sufficient to prevent soft locks &ndash; for starters, a platform set to activate only once must <em>also</em> not border any platforms that have either <strong>Activates: Deactivates Adjacent Platform</strong> or <strong>Deactivates: Deactivates Adjacent Platform</strong> selected, since those override <strong>Can&rsquo;t Deactivate Externally</strong>. I&rsquo;m currently not sure if this is new behaviour; I need to test it on an emulator later.</li>
+					<li>To make matters worse, <strong>Can&rsquo;t Deactivate Externally</strong> is necessary but not sufficient to prevent soft locks &ndash; for starters, a platform set to activate only once must <em>also</em> not border any platforms that have either <strong>Activates: Deactivates Adjacent Platform</strong> or <strong>Deactivates: Deactivates Adjacent Platform</strong> selected, since those override <strong>Can&rsquo;t Deactivate Externally</strong>. <!--I&rsquo;m currently not sure if this is new behaviour; I need to test it on an emulator later.--></li>
 					<li class="fixheight">As an indication of how much you should know before you break this rule, I&rsquo;ve encountered several otherwise professional-quality maps with <strong>Activates Only Once</strong> softlocks, including several levels of the original <em>Tempus Irae</em> that got their creator a job at Monolith Productions &ndash; so &lsquo;professional-quality&rsquo; is in no sense hyperbole. Are your maps good enough to get you a game development job? That&rsquo;s where they should probably be before you <em>think</em> about breaking this rule. (My maps haven&rsquo;t gotten me a game dev job, just in case it sounds like I&rsquo;m appealing to my own authority here.)</li>
 					<li>The only <em>possible</em> acceptable exception to this rule is for missable secrets, but I&rsquo;d strongly discourage even that. If you absolutely <em>must</em> have a missable secret (please don&rsquo;t make your secrets missable), provide a way out for players caught on the wrong sides of doors (unless you mean to be <em>Marathon <span class="number">1</span></em>-level sadistic &ndash; please, <em>please</em> don&rsquo;t do this: secrets shouldn&rsquo;t <em>punish</em> players who find them!), and make sure any teleporters are usable (i.e., test them in-game).</li>
 				</ul>
@@ -212,6 +219,12 @@ window.onload = function () {makeAllSortable();};
 		</ul>
 	</li>
 	<li>Speaking of which, teleporters (and automatic exit polygons) behave oddly with media. If there&rsquo;s a liquid on the teleporter, it probably shouldn&rsquo;t have a current.</li>
+	<li>I really, really dislike tags and recommend avoiding them where possible. This page to have an entire section going into detail on this, but I&rsquo;ve moved it to <a href="tagsareterrible.html">its own page</a> because, even by my standards, it&rsquo;s both:
+		<ol class="loweralpha overview">
+			<li>very long</li>
+			<li>very opinionated</li>
+		</ol>
+	I continue to stand by everything I wrote in it, but I&rsquo;ve made it an appendix because I want the main part of this guide to be more objective in tone.</li>
 	<li>It isn&rsquo;t necessary to move the player&rsquo;s start point to texture maps in Weland; just select the arrow, hold down X, make sure caps lock is off, and click on a polygon to set a start point.</li>
 	<li>If you have a slider selected, the + and - keys will increment and decrement its value, and the Page Up and Page Down keys will increment and decrement it more (by a factor of ten, to be exact). Note that you must have <em>the slider</em> selected, not its associated button.</li>
 	<li>Hold down Ctrl (&#8984; on Mac) and press = and - to zoom the map in and out without selecting the zoom tool.</li>
@@ -310,83 +323,6 @@ window.onload = function () {makeAllSortable();};
 	<li>OpenGL replacement graphics are a special case. They don&rsquo;t affect the game world, but they also shouldn&rsquo;t be merged in with the map. It&rsquo;s ideal to make these into a plugin so that players can choose whether to use them or not &ndash; some players may dislike the extra loading time or prefer chunky 128&times;128 pixel&sup2; textures. (While replacement textures could theoretically be included in a map for another scenario, that would be quite odd &ndash; if you&rsquo;re to the point that you have replacement textures for your map, I&rsquo;d advise making that into a standalone scenario.)</li>
 	<li>The <code>&lt;marathon_levels&gt;</code> code excerpt above also shows how to merge in music (i.e., the &lsquo;music file&rsquo; line). It&rsquo;s also possible to use Lua to implement music; doing so will in fact give you more options: you can control when to start the music (<em><a href="https://simplici7y.com/items/apotheosis-x-5" target="_blank">Apotheosis X</a></em> contains some examples of this), or change the music midlevel based on game events (<a href="https://simplici7y.com/items/eternal-x"><em>Eternal X</em> 1.3</a> contains some examples of this). A full explanation of Lua music is beyond this guide&rsquo;s current scope, although &lsquo;write a guide to Lua&rsquo; is on my lengthy to-do list.</li>
 	<li>Monsters must be active to take passive damage from sources like lava. This is why you can soft-lock yourself by not killing enough enemies in &ldquo;What About Bob?&rdquo; before you flood the basement with lava &ndash; many of them will deactivate and not take damage, and because you&rsquo;ve flooded the basement with lava, you have no way to go back and reactivate them without dying. If you&rsquo;re going to duplicate a setup like the &ldquo;What About Bob?&rdquo; basement, make sure to raise the monster activation limits.</li>
-</ul>
-
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
-
-<h2 id="tagsareterrible">Tags Are Terrible (though sometimes inexorable)</h2>
-
-<p class="fixheight">Don&rsquo;t get me wrong &ndash; in the right circumstances, they&rsquo;re <em>immensely</em> useful. But they can also break the game if you don&rsquo;t know what you&rsquo;re doing, especially if they&rsquo;re marked as <strong>Repair</strong>. If you take two things away from this admittedly opinionated section:</p>
-	
-	<ol class="fixheight">
-		<li>Avoid ever marking tag switches or chip insertion slots as <strong>Repair</strong>.</li>
-		<li>If you absolutely <em>must</em> mark such a switch as <strong>repair</strong>, make sure it controls <em>both</em> a light <em>and</em> a platform that can <em>always</em> activate <em>or</em> deactivate &ndash; that will <em>probably</em> work around the worst bugs. <em>Probably</em>. (Though you&rsquo;d still be able to deactivate the tag switch, which would make it possible to change a level state from complete to incomplete &ndash; annoying design, to say the least. This aspect, at least, isn&rsquo;t a problem for chips &ndash; once a chip is inserted, it stays inserted.)</li>
-	</ol>
-	
-<p class="fixheight">Now, for the gory details:</p>
-	
-<ul class="fixheight">
-	<li>Tags must be possible to activate when players attempt to activate them. Thus, if a (tag switch/wires/chip slot) controls only something that&rsquo;s controllable by other means and:
-		<ul>
-			<li>could be active when a player activates the tag and/or</li>
-			<li>activates only once,</li>
-		</ul>
-	that can make a level impossible to complete.</li>
-	<li>If a player deactivates a tag switch set to <strong>Repair</strong> and can&rsquo;t reactivate it, they can&rsquo;t finish the mission. Tag switches can&rsquo;t be activated if nothing they control can be activated; rather than risk this, consider never <del>using them</del> marking them as <strong>Repair</strong>. <em>Usually</em> <strong>Repair</strong>-safe:
-		<ul>
-			<li>Destructible wires (they stay toggled).</li>
-			<li>Platform switches (the game remembers they were toggled even if they deactivate).</li>
-			<li>Light switches (they can be reactivated unless they&rsquo;re <strong>Destructible</strong> or <strong>Light Dependent</strong>).</li>
-		</ul>
-	</li>
-	<li>Chip slots are a &lsquo;maybe&rsquo; on the <strong>Repair</strong> count. Unless set to the &lsquo;dummy&rsquo; tag 0, a chip slot&rsquo;s tag must control something, or it&rsquo;ll consume chips without activating (which also renders levels unbeatable).
-		<blockquote style="margin-top: 8px; margin-bottom: 8px;"><em><strong>Note:</strong> Aleph One 1.7</span>, which was released on 2023-11-25</span>, fixes the &lsquo;chip eating&rsquo; bug. However, as of this writing, it&rsquo;s hardly safe to assume all players have upgraded their Aleph One applications yet. It&rsquo;s possible to use Lua to print a warning to players using old versions of Aleph One; I&rsquo;d recommend this if you&rsquo;re comfortable using Lua. (Lua is beyond the current scope of this guide, but maybe someday I&rsquo;ll write a section on it or, better yet, a guide. [This guide desperately needs to be split into separate pages to begin with.])</em></blockquote>
-	</li>
-	<li>These bugs can interact, as well. If a chip controls a tag that can&rsquo;t activate, it can&rsquo;t toggle the <strong>Repair</strong> mission flag (rendering the level incompletable) and will eat any chips a hapless player tries to insert (possibly rendering future levels incompletable as well, in case a player is meant to have them on said levels).</li>
-	<li>Avoid having multiple (chip slots/wires/tag switches) control the same tag.</li>
-	<li>If a tag switch controls <em>only</em> lights, it must match the state of at least one of the lights to be able to activate. This means that if you have a tag that controls only a light that starts out active, and the tag switch connected to that light starts out inactive, the tag switch will be impossible to activate. Note that <em>this</em> aspect of tag switch behaviour does not appear to apply to chip insertion &ndash; you will still be able to insert a chip. Confused yet? Good.</li>
-	<li>In a previous version of this guide, I wrote:
-		<blockquote style="margin-top: 8px; margin-bottom: 8px;">&ldquo;If a tag controls a light, it can activate&hellip; probably. Given the absolutely cursed mess I&rsquo;ve detailed above, I&rsquo;m no longer confident that there isn&rsquo;t some <em>other</em> weird edge case with lights that we haven&rsquo;t yet worked out.&rdquo;</blockquote>
-		To be fair, I qualified my statement, but we now know at least some exceptions. I&rsquo;m not confident that we know them all. The lesson I&rsquo;m drawing from this is that there are probably no universal rules with tags.</li>
-	<li>There are also <a href="mapmaking101.html#texturingissues">texturing issues</a> &ndash; in short, if you toggle wires in visual mode, they will get set to not-wires and players will be unable to finish your level. There may be others.</li>
-	<li>Basically, tags are awful; you should avoid marking them as &lsquo;<strong>Repair</strong>&rsquo; unless you&rsquo;re <em>completely</em> sure you know what you&rsquo;re doing, and even then, you should be sure you&rsquo;re not falling prey to the <a href="https://en.wikipedia.org/wiki/Dunning-Kruger_effect" target="_blank">Dunning-Kruger effect</a>. In all cases, I recommend using them with caution.</li></ul>
-	
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
-
-	<h3 id="waysaroundtags">Ways to Avoid Tags</h3>
-		
-	<p class="fixheight">Tags aren&rsquo;t always necessary; the main cases where they are necessary are for destructible wires, chip insertion, or very odd arrangements of platforms. In most other cases, a sufficiently determined mapper can avoid using them. Some tips:</p>
-	<ul class="fixheight">
-		<li>Platforms can activate adjacent platforms when they activate. Or when they deactivate. And they can also deactivate platforms in those same places. And they can also activate adjacent platforms both when fully extended and when fully contracted (&lsquo;<strong>Activates Adjacent at Each Level</strong>&rsquo;).
-		<li>Platforms can activate the lights on their floor and ceiling when they activate. They can also deactivate those lights when they deactivate.</li>
-		<li>If you have multiple adjoining platforms, it&rsquo;s generally <em>preferable</em> to use a platform switch and set &lsquo;<strong>Activates: Activates Adjacent Platforms</strong>&rsquo; for those platforms &ndash; that way, players won&rsquo;t have to hit a switch twice each time they want to raise or lower the platform.</li>
-		<li>If you want to get <em>really</em> adventurous, you can even make underground platform networks to connect otherwise unconnected platforms. Some notes on these:
-			<ul>
-				<li>Make them extend &lsquo;<strong>From Floor</strong>&rsquo; to reduce the odds of motion glitches, though you may still experience these occasionally (make sure to test the surrounding areas for them).</li>
-				<li>These platform networks look ugly in Weland, but players won&rsquo;t see them. If you don&rsquo;t want to see them in the visual mode map either, you can even give them landscape textures. (However, avoid doing that if players should be able to see the other side of a wall, or it&rsquo;ll disappear from the automap.)</li>
-				<li>&lsquo;The Midpoint of Somewhere&rsquo; (from <em><a href="https://eternal.bungie.org/" target="_blank">Eternal</a></em> versions 1.3 preview 4 and later) contains several examples of this. I admittedly went overboard with it, partly to keep players from undoing their progression midlevel (it&rsquo;s already a convoluted enough level), partly out of sheer stubbornness, and partly to prove that I didn&rsquo;t need tags (but I repeat myself).</li>
-			</ul>
-		</li>
-		<li>So, maybe you have a tag switch that you want to use to control your mission state, but you&rsquo;re &ndash; justifiably, given the absolutely cursed mess detailed above &ndash; afraid to actually mark it as &lsquo;<strong>Repair</strong>&rsquo;. What&rsquo;s a mapmaker to do? The most reliable case is probably to have the tag switch control an otherwise inaccessible platform (for the sake of our example, we&rsquo;ll call it Platform 42) that starts out inactive (ideally, just completely inaccessible from the rest of the map), and set one of the walls of Platform 42 as a platform switch that&rsquo;s marked as &lsquo;<strong>Repair</strong>&rsquo;. Then set the tag switch to activate Platform 42</span>. This also means that once you activate the tag switch, the game remembers that the platform switch was activated even if either the platform switch or the tag switch gets deactivated &ndash; thus working around another potential issue with using tag switches as &lsquo;<strong>Repair</strong>&rsquo;. I&rsquo;ve shown example settings for Platform 42</span> below.
-
-			<div class="image"><img src="platform42.png" width="637" height="472" alt="Settings for Platform 42, tag initially inactive" title="Settings for Platform 42, tag initially inactive" /></div>
-				
-			<ul>
-				<li>The tag switch in the above example must start out as &lsquo;<strong>Inactive</strong>&rsquo;. If you need your tag switch to start out as &lsquo;<strong>Active</strong>&rsquo;, connect another platform &ndash; we&rsquo;ll just call it Platform 43</span> &ndash; to Platform 42</span> (note that it <em>must</em> share at least one side, and it <em>must not</em> be the side that had the platform switch on it). Start Platform 43 as active, set it to &lsquo;<strong>Deactivates: Never</strong>&rsquo;, make sure &lsquo;<strong>Can&rsquo;t Deactivate Externally</strong>&rsquo; is <em><strong>unchecked</strong></em>, and make sure &lsquo;<strong>Deactivates: Activates Adjacent Platform</strong>&rsquo; is <em><strong>checked</strong></em>. In this example, you&rsquo;ll also want to remove the tag from Platform 42. Here are our settings for Platform 43.
-				<div class="image"><img src="platform43.png" width="637" height="472" alt="Settings for Platform 43, tag initially active" title="Settings for Platform 43, tag initially active" /></div>
-
-				<div style="margin-top: 12px;">And here are our revised settings for Platform 42.</div>
-
-				<div class="image"><img src="platform42a.png" width="637" height="472" alt="Settings for Platform 42, tag initially active" title="Settings for Platform 42, tag initially active" /></div>
-
-				<div style="margin-top: 12px;"><strong>Warning:</strong> I can&rsquo;t promise that either of these solutions are foolproof. If something messes with either platform&rsquo;s activation, it can still break the mission. And there are probably other potential ways to break them as well. I&rsquo;ve used wires, chip insertion switches, and tag switches as repair switches in some of my levels, but I&rsquo;ve also been doing this for some 26 years, and in 2023, I&rsquo;m still learning new things that can break tags. They&rsquo;re even more cursed than platforms, which is saying <em>a lot</em>.</div>
-
-				<div style="margin-top: 8px;">More importantly, given how convoluted this all is, I can almost guarantee you&rsquo;ll eventually misremember part of it and more than likely run afoul of one of the many things that can mess up tags. Bearing that in mind, isn&rsquo;t it safer to just avoid using them for repair missions at all? Of course it is.</div>
-				</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
 </ul>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="/">Website index</a></p>
@@ -643,6 +579,7 @@ window.onload = function () {makeAllSortable();};
 		</ul>
 	</li>
 	<li><a href="defaultnames.html" id="defaultnames">Example DefaultNames.txt</a> (see <a href="#ShapeFusion">reference</a> above).</li>
+	<li><a href="tagsareterrible.html" id="tagsareterrible">Tags Are Terrible (though sometimes inexorable)</a> and its subsection <a href="tagsareterrible.html#waysaroundtags" id="waysaroundtags">Ways to Avoid Tags</a> have been moved to their own page because they are very long and opinionated even by my standards. I continue to stand by everything I wrote in them, but I felt the main body of this guide should be more objective in tone.</li>
 	<li><a href="marathonlooper.html" id="looper">Looping Music</a> (Aleph One 1.7 renders this mostly superfluous).</li>
 	<li>Another new appendix, <a href="marathonmonsters.html">Where Are Monsters in Marathon&hellip;Maps</a>, examines what monsters appear in what <em>Marathon</em> trilogy levels to demonstrate an important game design paradox: sometimes decreasing variety <em>within</em> a small span of a game can <em>increase</em> variety <em>across</em> a much larger span of it (or all of it).</a></li>
 	<li>Two further new appendices collect the <em>Marathon</em> trilogy&rsquo;s 8-bit palettes:

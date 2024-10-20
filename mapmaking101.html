@@ -146,31 +146,38 @@ window.onload = function () {makeAllSortable();};
 	<h3 id="visualmodecomparisons">Comparisons of Texturing Utilities</h3>
 		
 	<ul class="fixheight">
-		<li><strong>Vasara <span class="number">1</span>.<span class="number">0</span>.<span class="number">3</span></strong>
+		<li><strong>Vasara 1.1</strong>
+			<blockquote style="margin: 8px 30px 8px 108px; text-indent: -48px;" class="toc-counter"><em><strong>NOTE:</strong> Since Vasara 1.1 was just released, I haven&rsquo;t had time to evalute it properly yet. Expect further revisions to this section once I&rsquo;ve done so.</em></blockquote>
 			<ul>
+				<li>Seems to aim to be accessible to all mappers.</li>
 				<li><strong>Pros:</strong> Has the most straightforward interface; likely to be the least intimidating for new mapmakers.</li>
-				<li><strong>Cons:</strong> Includes several bugs that aren&rsquo;t present in VAF and/or Visual Mode.lua; it has not been updated in eight years and does not support features like Aleph One 1.7&rsquo;s new transfer modes.</li>
+				<li><strong>Cons:</strong> Vasara 1.0.3 included several bugs that weren&rsquo;t present in VAF and/or Visual Mode.lua. I haven&rsquo;t yet tested how many of these bugs Vasara 1.1 fixes; I&rsquo;ll report back later. It is only updated sporadically (there were some eight years between version 1.0.3 and version 1.1). It also has fewer features than VAF (though for new mappers, this is probably not actually a negative).</li>
 			</ul>
 		</li>
 		<li><strong>VAF</strong>
 			<ul>
+				<li>Aimed primarily at experienced mappers who want more control over texturing.</li>
 				<li><strong>Pros:</strong> Fixes several of Vasara&rsquo;s bugs and adds several new features (though a few are still works in progress). Visual Mode.lua does not (and may never) have some of this functionlity.</li>
-				<li><strong>Cons:</strong> Its interface probably will initially be more intimidating than Vasara 1.0.3&rsquo;s, and beginning mapmakers won&rsquo;t need some of its features. It also will not work with Aleph One versions prior to 1.7.</li>
+				<li><strong>Cons:</strong> Its interface probably will initially be more intimidating than Vasara 1.0.3&rsquo;s, and beginning mapmakers won&rsquo;t need many of its added features. It also isn&rsquo;t up to date with Vasara 1.1 yet.</li>
 			</ul>
 		</li>
 		<li><strong>Visual Mode.lua</strong>
 			<ul>
-				<li><strong>Pros:</strong> It is extremely powerful and fast once you&rsquo;ve learned its interface, lacks several of Vasara 1.0.3&rsquo;s bugs, and has several features that aren&rsquo;t present in Vasara 1.0.3 (but are present in VAF).</li>
-				<li><strong>Cons:</strong> It will probably intimidate new mapmakers due to its bare-bones interface; it is missing several features of VAF (and will probably never have them).</li>
+				<li>Seems to be aimed at experienced mappers who want a minimalist texturing interface.</li>
+				<li><strong>Pros:</strong> It&rsquo;s extremely powerful and fast once you&rsquo;ve learned its interface, lacks several of Vasara 1.0.3&rsquo;s bugs, and has several features that aren&rsquo;t present in Vasara 1.0.3 (but are present in VAF).</li>
+				<li><strong>Cons:</strong> It will probably intimidate new mapmakers due to its bare-bones interface; it&rsquo;s missing (and will probably never have) several of VAF&rsquo;s features.</li>
 			</ul>
 		</li>
 		<li><strong>Forge+</strong>
 			<ul>
+				<li>This was meant to be a full-featured map editor, but it never got past the &ldquo;texturing maps&rdquo; stage.</li>
 				<li><strong>Pros:</strong> Since it runs in Unity, it can view maps from negative space, which would cause Aleph One to crash; this provides a much more holistic view of the shape of a level.</li>
 				<li><strong>Cons:</strong> Unlike the other three options, Forge+ can&rsquo;t be linked to Weland, so you&rsquo;ll have to continually close and reopen the two apps, which is a pain. It also can&rsquo;t view maps using hi-res textures, and it hasn&rsquo;t been updated since 2022, so it&rsquo;s missing features like Aleph One 1.7&rsquo;s new transfer modes.</li>
 			</ul>
 		</li>
 	</ul>
+
+	<p>I recommend for new mappers to start with Vasara 1.1; then, once you&rsquo;re comfortable with its features, try VAF and see if you find its added features useful.</p>
 
 	<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
@@ -421,7 +428,7 @@ window.onload = function () {makeAllSortable();};
 
 <ul class="fixheight">
 	<li>When you exit visual mode, tags should be in the state they&rsquo;re meant to start the level in. Thus, if you tabbed a tag switch that starts the level inactive so you could open some doors, reset the tag to inactive. Take special care with wires and chip insertion switches &ndash; messing them up can render levels uncompletable. This is one of several reasons I&rsquo;d recommend avoiding tags where possible &ndash; this is just the tip of the iceberg (you don&rsquo;t need to worry about <a href="tagsareterrible.html">the other reasons</a> until later).</li>
-	<li>In Visual Mode.lua and Vasara 1.0.x, walking on a <strong>Must Be Explored</strong> polygon (or even looking at it if <strong>Exploration (M1)</strong> is set) resets it to <strong>Normal.</strong> Be sure to reset these after texturing (or just don&rsquo;t set them until you&rsquo;ve finished texturing).
+	<li>In Visual Mode.lua and Vasara 1.0.x, walking on a <strong>Must Be Explored</strong> polygon (or even looking at it if <strong>Exploration (M1)</strong> is set) resets it to <strong>Normal.</strong> (I have not yet tested whether Vasara 1.1 fixes this; I will report back later.) Be sure to reset these after texturing (or just don&rsquo;t set them until you&rsquo;ve finished texturing).
 		<ul>
 			<li>By default, <a href="https://github.com/aaronfreed/vaf" target="_blank">VAF</a> fixes this in a <span id="ftnt_ref02" class="dotted" title="Namely, when VAF loads the map, it makes a table containing all polygons marked as &ldquo;Must Be Explored&rdquo;, then in Triggers.idle, Triggers.postidle, and Triggers.cleanup, it scans that list, and if any polygons have been set as &ldquo;Normal&rdquo;, it resets them to &ldquo;Must Be Explored&rdquo;. If this doesn&rsquo;t make sense to you, don&rsquo;t worry; it&rsquo;s in a footnote because it&rsquo;s far beyond the scope of this guide.">fairly hacky way<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span> that has the cost of making it impossible to complete <strong>Exploration</strong> mission types while VAF is running. However, VAF is a texturing app above all, and this is much closer to the Forge behaviour mapmakers are likely to expect.</li>
 		</ul>
@@ -446,7 +453,7 @@ window.onload = function () {makeAllSortable();};
 <h3 id="vasaratexturing">Further Texturing Issues in Vasara and VAF</h3>
 
 <ul class="fixheight">
-	<li>Vasara gets weird with more than 56 lights. If you have both &lsquo;Apply Light&rsquo; and &lsquo;Apply Texture&rsquo; selected with a light &#8805; 56, the HUD disappears; reduce the light value to something &lt; 56 and hit the action key to restore it. If one is selected, but not the other, the HUD functions normally.
+	<li>Vasara 1.0.x gets weird with more than 56 lights. If you have both &lsquo;Apply Light&rsquo; and &lsquo;Apply Texture&rsquo; selected with a light &#8805; 56, the HUD disappears; reduce the light value to something &lt; 56 and hit the action key to restore it. If one is selected, but not the other, the HUD functions normally.
 		<ul>
 			<li><a href="https://github.com/aaronfreed/vaf" target="_blank">VAF</a> fixes the Lua error spam. It currently does not display previews of lights greater than 55 correctly, but it lists lights from 0 to 97 in its options screen.</li>
 		</ul>

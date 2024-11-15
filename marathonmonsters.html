@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-	<title>Where Are Monsters in Marathon&hellip;Maps</title>
-	<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
-	<link rel="stylesheet" type="text/css" href="css.css">
-	<script>
+	<head>
+		<title>Where Are Monsters in Marathon&hellip;Maps</title>
+		<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
+		<link rel="stylesheet" type="text/css" href="css.css">
+		<script>
 function sortTable(table, col, reverse) {
 	var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
 		tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
@@ -37,894 +37,894 @@ function makeAllSortable(parent) {
 }
 
 window.onload = function () {makeAllSortable();};
-	</script>
-</head>
-<body class="monstermash">
-	<header><h1 class="petitecaps centred">Where Are Monsters in <em>Marathon</em>&hellip;Maps</h1>
-	<p>The <em>Marathon</em> trilogy only includes a few monster collections per level: <em>Marathon 2: Durandal</em> never exceeds three (except in the Windows 95 release, where one level contains four), while <em>Marathon</em> (1994) and <em>Marathon Infinity</em> only exceed four per level once apiece. There was a very practical reason for this: computers of the day had only a limited amount of RAM, and limiting the number of collections used meant the game required less memory to run. This had the added side effect of making each level feel unique. A sortable list of every monster collection used in all three games follows. Some general notes:</p>
+		</script>
+	</head>
+	<body class="monstermash">
+		<header>
+			<h1 class="petitecaps centred">Where Are Monsters in <em>Marathon</em>&hellip;Maps</h1>
+			<p>The <em>Marathon</em> trilogy only includes a few monster collections per level: <em>Marathon 2: Durandal</em> never exceeds three (except in the Windows 95 release, where one level contains four), while <em>Marathon</em> (1994) and <em>Marathon Infinity</em> only exceed four per level once apiece. There was a very practical reason for this: computers of the day had only a limited amount of RAM, and limiting the number of collections used meant the game required less memory to run. This had the added side effect of making each level feel unique. A sortable list of every monster collection used in all three games follows. Some general notes:</p>
 
-	<ul>
-		<li>For each table, clicking a column title sorts the table by that column&rsquo;s values, though due to the arbitrariness of the monster order (I ordered them by their positions in the game physics), only the first two column sorts are especially useful. Clicking a column a second time reverses the ordering.</li>
-		<li>&ldquo;Collection&rdquo; refers to how the shapes files for each game are organized. In lieu of a lengthy, potentially confusing explanation, I&rsquo;ll simply link to Lochnits.com&rsquo;s archives of all three games&rsquo; shapes by collection: 
 			<ul>
-				<li><em><a href="https://lochnits.com/marathon/shapes/m1_shapes" target="_blank">Marathon</a></em></li>
-				<li><em><a href="https://lochnits.com/marathon/shapes/m2_shapes" target="_blank">Marathon 2: Durandal</a></em></li>
-				<li><em><a href="https://lochnits.com/marathon/shapes/infinity_shapes" target="_blank">Marathon Infinity</a></em></li>
+				<li>For each table, clicking a column title sorts the table by that column&rsquo;s values, though due to the arbitrariness of the monster order (I ordered them by their positions in the game physics), only the first two column sorts are especially useful. Clicking a column a second time reverses the ordering.</li>
+				<li>&ldquo;Collection&rdquo; refers to how the shapes files for each game are organized. In lieu of a lengthy, potentially confusing explanation, I&rsquo;ll simply link to Lochnits.com&rsquo;s archives of all three games&rsquo; shapes by collection: 
+					<ul>
+						<li><em><a href="https://lochnits.com/marathon/shapes/m1_shapes" target="_blank">Marathon</a></em></li>
+						<li><em><a href="https://lochnits.com/marathon/shapes/m2_shapes" target="_blank">Marathon 2: Durandal</a></em></li>
+						<li><em><a href="https://lochnits.com/marathon/shapes/infinity_shapes" target="_blank">Marathon Infinity</a></em></li>
+					</ul>
+				</li>
+				<li>&ldquo;Flappyboi&rdquo;, for those of you not familiar with <em>Marathon</em> community memes, is given the more boring name of &ldquo;Tick&rdquo; in the game&rsquo;s code and editors, but we know better.</li>
+				<li>Levels in each game use varying numbers of monster collections (although <em>Marathon 2</em> is remarkably consistent, using three collections in every level except &ldquo;For Carnage, Apply Within&rdquo;, which uses two). If a column is blank, the level didn&rsquo;t have that many collections.
+				<li>If you&rsquo;re confused about aspects of mapmaking described here and desire further clarification, I have <a href="mapmaking101.html">beginner&rsquo;s</a> and <a href="mapmaking.html">advanced guides</a> that you may consult for more information and links to additional resources.</li>
+				<li>Please <a href="aboutme.html">contact me</a> if you notice any errors or omissions.</li>
 			</ul>
-		</li>
-		<li>&ldquo;Flappyboi&rdquo;, for those of you not familiar with <em>Marathon</em> community memes, is given the more boring name of &ldquo;Tick&rdquo; in the game&rsquo;s code and editors, but we know better.</li>
-		<li>Levels in each game use varying numbers of monster collections (although <em>Marathon 2</em> is remarkably consistent, using three collections in every level except &ldquo;For Carnage, Apply Within&rdquo;, which uses two). If a column is blank, the level didn&rsquo;t have that many collections.
-		<li>If you&rsquo;re confused about aspects of mapmaking described here and desire further clarification, I have <a href="mapmaking101.html">beginner&rsquo;s</a> and <a href="mapmaking.html">advanced guides</a> that you may consult for more information and links to additional resources.</li>
-		<li>Please <a href="aboutme.html">contact me</a> if you notice any errors or omissions.</li>
-	</ul>
 
-<h1 id="toc">Table of Contents</h1>
+		<h1 id="toc">Table of Contents</h1>
 
-	<ol class="toclite">
-		<li><a href="#top">Intro</a></li>
-		<li><a href="#toc">Table of Contents</a> (you&rsquo;re looking at it)</li>
-		<li><a href="#m1"><em>Marathon</em> (1994)</a></li>
-		<li><a href="#m2"><em>Marathon 2: Durandal</em> (1995)</a></li>
-		<li><a href="#infinity"><em>Marathon Infinity</em> (1996)</a></li>
-		<li><a href="#thanks">&hellip;why put this together?</a></li>
-		<li><a href="#thanks">Acknowledgements</a></li>
-		<li><a href="#endnotes">Endnotes</a></li>
-	</ol>
+			<ol class="toclite">
+				<li><a href="#top">Intro</a></li>
+				<li><a href="#toc">Table of Contents</a> (you&rsquo;re looking at it)</li>
+				<li><a href="#m1"><em>Marathon</em> (1994)</a></li>
+				<li><a href="#m2"><em>Marathon 2: Durandal</em> (1995)</a></li>
+				<li><a href="#infinity"><em>Marathon Infinity</em> (1996)</a></li>
+				<li><a href="#thanks">&hellip;why put this together?</a></li>
+				<li><a href="#thanks">Acknowledgements</a></li>
+				<li><a href="#endnotes">Endnotes</a></li>
+			</ol>
+		</header>
+		<h1 id="m1"><em>Marathon</em> (1994)</h1>
 
-<h1 id="m1"><em>Marathon</em> (1994)</h1>
+			<ul>
+				<li><em>Caveat l&emacr;ctor:</em> I do not have a fast way to verify the accuracy of the <em>Marathon 1</em> data at the moment; once I get a stable emulator setup working, I&rsquo;ll double-check it.</li>
+			</ul>
 
-	<ul>
-		<li><em>Caveat l&emacr;ctor:</em> I do not have a fast way to verify the accuracy of the <em>Marathon 1</em> data at the moment; once I get a stable emulator setup working, I&rsquo;ll double-check it.</li>
-	</ul>
+		<table>
+			<thead>
+				<tr>
+					<th class="right">#</th>
+					<th>Level Name</th>
+					<th>Class 1</th>
+					<th>Class 2</th>
+					<th>Class 3</th>
+					<th>Class 4</th>
+					<th>Class 5</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Arrival</td>
+					<td>Fighter</td>
+					<td>Compiler</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Bigger Guns Nearby</td>
+					<td>Fighter</td>
+					<td>Compiler</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Never Burn Money</td>
+					<td>Fighter</td>
+					<td>Compiler</td>
+					<td>Wasp</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Defend THIS!</td>
+					<td>MADD</td>
+					<td>Fighter</td>
+					<td>Compiler</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Couch Fishing</td>
+					<td>Fighter</td>
+					<td>Compiler</td>
+					<td>Trooper</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>The Rose</td>
+					<td>Bob</td>
+					<td>MADD</td>
+					<td>Fighter</td>
+					<td>Hulk</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Smells Like Napalm, Tastes Like Chicken!</td>
+					<td>Fighter</td>
+					<td>Compiler</td>
+					<td>Wasp</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>Cool Fusion</td>
+					<td>Fighter</td>
+					<td>Compiler</td>
+					<td>Trooper</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>G4 Sunbathing</td>
+					<td>MADD</td>
+					<td>Compiler</td>
+					<td>Hunter</td>
+					<td>Trooper</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>Blaspheme Quarantine</td>
+					<td>Fighter</td>
+					<td>Compiler</td>
+					<td>Hulk</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>Bob-B-Q</td>
+					<td>Bob</td>
+					<td>Fighter</td>
+					<td>Hunter</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>12</td>
+					<td>Shake Before Using&hellip;</td>
+					<td>Fighter</td>
+					<td>Compiler</td>
+					<td>Looker</td>
+					<td>Trooper</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td>Fire! Fire! Fire! Fire! Fire!</td>
+					<td>Compiler</td>
+					<td>Looker</td>
+					<td>Trooper</td>
+					<td>Wasp</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>14</td>
+					<td>Colony Ship for Sale, Cheap</td>
+					<td>Fighter</td>
+					<td>Looker</td>
+					<td>Wasp</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>15</td>
+					<td>Habe quiddam</td>
+					<td>Bob</td>
+					<td>Fighter</td>
+					<td>Looker</td>
+					<td>Wasp</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>16</td>
+					<td>Neither High Nor Low</td>
+					<td>Hunter</td>
+					<td>Looker</td>
+					<td>Wasp</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>17</td>
+					<td>Pfhor Your Eyes Only&hellip;</td>
+					<td>Fighter</td>
+					<td>Enforcer</td>
+					<td>Hunter</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>18</td>
+					<td><span class="dotted" id="ftnt_ref01" title="This level has spawn positions for a Juggernaut and a Compiler, but the level&rsquo;s &ldquo;Monster Parameters&rdquo; specify starting values of 0 and never provide means for them to spawn. This would still force the game to load the Juggernaut and Compiler collections, but I&rsquo;m only noting these in an endnote because I suspect it to have been an oversight.">No Artificial Colors<a href="#ftnt02" class="noprintlink">&#8317;&sup1;&#8318;</a></td>
+					<td>Bob</td>
+					<td>Fighter</td>
+					<td>Trooper</td>
+					<td>Wasp</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>19</td>
+					<td>Unpfhorgiven</td>
+					<td>Bob</td>
+					<td>Fighter</td>
+					<td>Hunter</td>
+					<td>Looker</td>
+					<td>Wasp</td>
+				</tr>
+				<tr>
+					<td>20</td>
+					<td>Two Times Two Equals&hellip;</td>
+					<td>Fighter</td>
+					<td>Enforcer</td>
+					<td>Trooper</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>21</td>
+					<td>Beware of Low-Flying Defense Drones&hellip;</td>
+					<td>MADD</td>
+					<td>Enforcer</td>
+					<td>Trooper</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>22</td>
+					<td>Eupfhoria</td>
+					<td>Enforcer</td>
+					<td>Hunter</td>
+					<td>Wasp</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>23</td>
+					<td>Pfhoraphobia</td>
+					<td>Fighter</td>
+					<td>Enforcer</td>
+					<td>Compiler</td>
+					<td>Cyborg</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Ain&rsquo;t Got Time Pfhor This&hellip;</td>
+					<td>Compiler</td>
+					<td>Trooper</td>
+					<td>Wasp</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>25</td>
+					<td>Welcome to the Revolution&hellip;</td>
+					<td>Compiler</td>
+					<td>Hunter</td>
+					<td>Trooper</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>26</td>
+					<td>Try Again</td>
+					<td>Enforcer</td>
+					<td>Hunter</td>
+					<td>Juggernaut</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>27</td>
+					<td>Ingue ferroque</td>
+					<td>Compiler</td>
+					<td>Fighter</td>
+					<td>Trooper</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
 
-<table>
-	<thead>
-		<tr>
-			<th class="right">#</th>
-			<th>Level Name</th>
-			<th>Class 1</th>
-			<th>Class 2</th>
-			<th>Class 3</th>
-			<th>Class 4</th>
-			<th>Class 5</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>1</td>
-			<td>Arrival</td>
-			<td>Fighter</td>
-			<td>Compiler</td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>Bigger Guns Nearby</td>
-			<td>Fighter</td>
-			<td>Compiler</td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>Never Burn Money</td>
-			<td>Fighter</td>
-			<td>Compiler</td>
-			<td>Wasp</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>Defend THIS!</td>
-			<td>MADD</td>
-			<td>Fighter</td>
-			<td>Compiler</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>Couch Fishing</td>
-			<td>Fighter</td>
-			<td>Compiler</td>
-			<td>Trooper</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>6</td>
-			<td>The Rose</td>
-			<td>Bob</td>
-			<td>MADD</td>
-			<td>Fighter</td>
-			<td>Hulk</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>7</td>
-			<td>Smells Like Napalm, Tastes Like Chicken!</td>
-			<td>Fighter</td>
-			<td>Compiler</td>
-			<td>Wasp</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>8</td>
-			<td>Cool Fusion</td>
-			<td>Fighter</td>
-			<td>Compiler</td>
-			<td>Trooper</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>9</td>
-			<td>G4 Sunbathing</td>
-			<td>MADD</td>
-			<td>Compiler</td>
-			<td>Hunter</td>
-			<td>Trooper</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>10</td>
-			<td>Blaspheme Quarantine</td>
-			<td>Fighter</td>
-			<td>Compiler</td>
-			<td>Hulk</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>11</td>
-			<td>Bob-B-Q</td>
-			<td>Bob</td>
-			<td>Fighter</td>
-			<td>Hunter</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>12</td>
-			<td>Shake Before Using&hellip;</td>
-			<td>Fighter</td>
-			<td>Compiler</td>
-			<td>Looker</td>
-			<td>Trooper</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>13</td>
-			<td>Fire! Fire! Fire! Fire! Fire!</td>
-			<td>Compiler</td>
-			<td>Looker</td>
-			<td>Trooper</td>
-			<td>Wasp</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>14</td>
-			<td>Colony Ship for Sale, Cheap</td>
-			<td>Fighter</td>
-			<td>Looker</td>
-			<td>Wasp</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>15</td>
-			<td>Habe quiddam</td>
-			<td>Bob</td>
-			<td>Fighter</td>
-			<td>Looker</td>
-			<td>Wasp</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>16</td>
-			<td>Neither High Nor Low</td>
-			<td>Hunter</td>
-			<td>Looker</td>
-			<td>Wasp</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>17</td>
-			<td>Pfhor Your Eyes Only&hellip;</td>
-			<td>Fighter</td>
-			<td>Enforcer</td>
-			<td>Hunter</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>18</td>
-			<td><span class="dotted" id="ftnt_ref01" title="This level has spawn positions for a Juggernaut and a Compiler, but the level&rsquo;s &ldquo;Monster Parameters&rdquo; specify starting values of 0 and never provide means for them to spawn. This would still force the game to load the Juggernaut and Compiler collections, but I&rsquo;m only noting these in an endnote because I suspect it to have been an oversight.">No Artificial Colors<a href="#ftnt02" class="noprintlink">&#8317;&sup1;&#8318;</a></td>
-			<td>Bob</td>
-			<td>Fighter</td>
-			<td>Trooper</td>
-			<td>Wasp</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>19</td>
-			<td>Unpfhorgiven</td>
-			<td>Bob</td>
-			<td>Fighter</td>
-			<td>Hunter</td>
-			<td>Looker</td>
-			<td>Wasp</td>
-		</tr>
-		<tr>
-			<td>20</td>
-			<td>Two Times Two Equals&hellip;</td>
-			<td>Fighter</td>
-			<td>Enforcer</td>
-			<td>Trooper</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>21</td>
-			<td>Beware of Low-Flying Defense Drones&hellip;</td>
-			<td>MADD</td>
-			<td>Enforcer</td>
-			<td>Trooper</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>22</td>
-			<td>Eupfhoria</td>
-			<td>Enforcer</td>
-			<td>Hunter</td>
-			<td>Wasp</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>23</td>
-			<td>Pfhoraphobia</td>
-			<td>Fighter</td>
-			<td>Enforcer</td>
-			<td>Compiler</td>
-			<td>Cyborg</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>24</td>
-			<td>Ain&rsquo;t Got Time Pfhor This&hellip;</td>
-			<td>Compiler</td>
-			<td>Trooper</td>
-			<td>Wasp</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>25</td>
-			<td>Welcome to the Revolution&hellip;</td>
-			<td>Compiler</td>
-			<td>Hunter</td>
-			<td>Trooper</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>26</td>
-			<td>Try Again</td>
-			<td>Enforcer</td>
-			<td>Hunter</td>
-			<td>Juggernaut</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>27</td>
-			<td>Ingue ferroque</td>
-			<td>Compiler</td>
-			<td>Fighter</td>
-			<td>Trooper</td>
-			<td></td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+		<h1 id="m2"><em>Marathon 2: Durandal</em> (1995)</h1>
+			<ul style="padding: 0px 0px 8px;">
+				<li>In most versions of the map, all levels use three monster collections except for &ldquo;For Carnage, Apply Within&rdquo;, which only uses Compilers and Enforcers. The third column is hence left blank for that level.</li>
+				<li>The Windows 95 version adds one additional exception, &ldquo;Waterloo Waterpark&rdquo;, as explained in the endnotes (you can also just hover over the level name, or click the link after the level name).</li>
+			</ul>
 
-<h1 id="m2"><em>Marathon 2: Durandal</em> (1995)</h1>
-	<ul style="padding: 0px 0px 8px;">
-		<li>In most versions of the map, all levels use three monster collections except for &ldquo;For Carnage, Apply Within&rdquo;, which only uses Compilers and Enforcers. The third column is hence left blank for that level.</li>
-		<li>The Windows 95 version adds one additional exception, &ldquo;Waterloo Waterpark&rdquo;, as explained in the endnotes (you can also just hover over the level name, or click the link after the level name).</li>
-	</ul>
+		<table>
+			<thead>
+				<tr>
+					<th class="right">#</th>
+					<th>Level Name</th>
+					<th>Class 1</th>
+					<th>Class 2</th>
+					<th>Class 3</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><strong>1</strong></td>
+					<td><span class="dotted" id="ftnt_ref02" title="The Windows 95 version of this level features a fourth enemy class: Compiler, found in the &ldquo;Arrival&rdquo; secret. All other official versions feature only three.">Waterloo Waterpark<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></td>
+					<td>Fighter</td>
+					<td>Bob</td>
+					<td>Drone</td>
+				</tr>
+				<tr>
+					<td><strong>2</strong></td>
+					<td>The Slings &amp; Arrows of Outrageous Fortune</td>
+					<td>Fighter</td>
+					<td>Drone</td>
+					<td>F&rsquo;lickta</td>
+				</tr>
+				<tr>
+					<td><strong>3</strong></td>
+					<td>Charon Doesn&rsquo;t Make Change</td>
+					<td>Flappyboi</td>
+					<td>Fighter</td>
+					<td>F&rsquo;lickta</td>
+				</tr>
+				<tr>
+					<td><strong>4</strong></td>
+					<td>What About Bob?</td>
+					<td>Fighter</td>
+					<td>Bob</td>
+					<td>Cyborg</td>
+				</tr>
+				<tr>
+					<td><strong>5</strong></td>
+					<td>Come and Take Your Medicine</td>
+					<td>Compiler</td>
+					<td>Drone</td>
+					<td>Trooper</td>
+				</tr>
+				<tr>
+					<td><strong>6</strong></td>
+					<td>We&rsquo;re Everywhere</td>
+					<td>Compiler</td>
+					<td>Bob</td>
+					<td>Hunter</td>
+				</tr>
+				<tr>
+					<td><strong>7</strong></td>
+					<td>Ex Cathedra</td>
+					<td>Drone</td>
+					<td>Trooper</td>
+					<td>F&rsquo;lickta</td>
+				</tr>
+				<tr>
+					<td><strong>8</strong></td>
+					<td>Nuke and Pave</td>
+					<td>Drone</td>
+					<td>Cyborg</td>
+					<td>Trooper</td>
+				</tr>
+				<tr>
+					<td><strong>9</strong></td>
+					<td>Curiouser and Curiouser&hellip;</td>
+					<td>Cyborg</td>
+					<td>Trooper</td>
+					<td>F&rsquo;lickta</td>
+				</tr>
+				<tr>
+					<td><strong>10</strong></td>
+					<td>Eat It, Vid Boi!</td>
+					<td>Compiler</td>
+					<td>Fighter</td>
+					<td>Cyborg</td>
+				</tr>
+				<tr>
+					<td><strong>11</strong></td>
+					<td>The Hard Stuff Rules&hellip;</td>
+					<td>Flappyboi</td>
+					<td>Cyborg</td>
+					<td>F&rsquo;lickta</td>
+				</tr>
+				<tr>
+					<td><strong>12</strong></td>
+					<td>Bob&rsquo;s Big Date</td>
+					<td>Hunter</td>
+					<td>Trooper</td>
+					<td>F&rsquo;lickta</td>
+				</tr>
+				<tr>
+					<td><strong>13</strong></td>
+					<td>Six Thousand Feet Under</td>
+					<td>Flappyboi</td>
+					<td>Cyborg</td>
+					<td>F&rsquo;lickta</td>
+				</tr>
+				<tr>
+					<td><strong>14</strong></td>
+					<td>If I Had a Rocket Launcher, I&rsquo;d Make Somebody Pay</td>
+					<td>Bob</td>
+					<td>Hunter</td>
+					<td>Trooper</td>
+				</tr>
+				<tr>
+					<td><strong>15</strong></td>
+					<td>Sorry Don&rsquo;t Make It So</td>
+					<td>Fighter</td>
+					<td>Cyborg</td>
+					<td>Enforcer</td>
+				</tr>
+				<tr>
+					<td><strong>16</strong></td>
+					<td>For Carnage, Apply Within</td>
+					<td>Compiler</td>
+					<td>Enforcer</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>17</strong></td>
+					<td>Begging for Mercy Makes Me Angry!</td>
+					<td>Enforcer</td>
+					<td>Hunter</td>
+					<td>Trooper</td>
+				</tr>
+				<tr>
+					<td><strong>18</strong></td>
+					<td>The Big House</td>
+					<td>Fighter</td>
+					<td>Bob</td>
+					<td>Enforcer</td>
+				</tr>
+				<tr>
+					<td><strong>19</strong></td>
+					<td>This Side Toward Enemy</td>
+					<td>Compiler</td>
+					<td>Trooper</td>
+					<td>F&rsquo;lickta</td>
+				</tr>
+				<tr>
+					<td><strong>20</strong></td>
+					<td>God Will Sort the Dead&hellip;</td>
+					<td>Bob</td>
+					<td>Hunter</td>
+					<td>Trooper</td>
+				</tr>
+				<tr>
+					<td><strong>21</strong></td>
+					<td>My Own Private Thermopylae</td>
+					<td>Bob</td>
+					<td>Cyborg</td>
+					<td>Trooper</td>
+				</tr>
+				<tr>
+					<td><strong>22</strong></td>
+					<td>Kill Your Television</td>
+					<td>Flappyboi</td>
+					<td>Cyborg</td>
+					<td>F&rsquo;lickta</td>
+				</tr>
+				<tr>
+					<td><strong>23</strong></td>
+					<td>Where the Twist Flops</td>
+					<td>Compiler</td>
+					<td>Bob</td>
+					<td>Hunter</td>
+				</tr>
+				<tr>
+					<td><strong>24</strong></td>
+					<td>Beware of Abandoned Rental Trucks</td>
+					<td>Cyborg</td>
+					<td>Enforcer</td>
+					<td>F&rsquo;lickta</td>
+				</tr>
+				<tr>
+					<td><strong>25</strong></td>
+					<td>Requiem for a Cyborg</td>
+					<td>Compiler</td>
+					<td>Fighter</td>
+					<td>Trooper</td>
+				</tr>
+				<tr>
+					<td><strong>26</strong></td>
+					<td>Fatum iustum stultorum</td>
+					<td>Bob</td>
+					<td>Trooper</td>
+					<td>Defender</td>
+				</tr>
+				<tr>
+					<td><strong>27</strong></td>
+					<td>Feel the Noise</td>
+					<td>Cyborg</td>
+					<td>Hunter</td>
+					<td>Defender</td>
+				</tr>
+				<tr>
+					<td><strong>28</strong></td>
+					<td>All Roads Lead to Sol&hellip;</td>
+					<td>Fighter</td>
+					<td>Hunter</td>
+					<td>Juggernaut</td>
+				</tr>
+			</tbody>
+		</table>
 
-<table>
-	<thead>
-		<tr>
-			<th class="right">#</th>
-			<th>Level Name</th>
-			<th>Class 1</th>
-			<th>Class 2</th>
-			<th>Class 3</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><strong>1</strong></td>
-			<td><span class="dotted" id="ftnt_ref02" title="The Windows 95 version of this level features a fourth enemy class: Compiler, found in the &ldquo;Arrival&rdquo; secret. All other official versions feature only three.">Waterloo Waterpark<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></td>
-			<td>Fighter</td>
-			<td>Bob</td>
-			<td>Drone</td>
-		</tr>
-		<tr>
-			<td><strong>2</strong></td>
-			<td>The Slings &amp; Arrows of Outrageous Fortune</td>
-			<td>Fighter</td>
-			<td>Drone</td>
-			<td>F&rsquo;lickta</td>
-		</tr>
-		<tr>
-			<td><strong>3</strong></td>
-			<td>Charon Doesn&rsquo;t Make Change</td>
-			<td>Flappyboi</td>
-			<td>Fighter</td>
-			<td>F&rsquo;lickta</td>
-		</tr>
-		<tr>
-			<td><strong>4</strong></td>
-			<td>What About Bob?</td>
-			<td>Fighter</td>
-			<td>Bob</td>
-			<td>Cyborg</td>
-		</tr>
-		<tr>
-			<td><strong>5</strong></td>
-			<td>Come and Take Your Medicine</td>
-			<td>Compiler</td>
-			<td>Drone</td>
-			<td>Trooper</td>
-		</tr>
-		<tr>
-			<td><strong>6</strong></td>
-			<td>We&rsquo;re Everywhere</td>
-			<td>Compiler</td>
-			<td>Bob</td>
-			<td>Hunter</td>
-		</tr>
-		<tr>
-			<td><strong>7</strong></td>
-			<td>Ex Cathedra</td>
-			<td>Drone</td>
-			<td>Trooper</td>
-			<td>F&rsquo;lickta</td>
-		</tr>
-		<tr>
-			<td><strong>8</strong></td>
-			<td>Nuke and Pave</td>
-			<td>Drone</td>
-			<td>Cyborg</td>
-			<td>Trooper</td>
-		</tr>
-		<tr>
-			<td><strong>9</strong></td>
-			<td>Curiouser and Curiouser&hellip;</td>
-			<td>Cyborg</td>
-			<td>Trooper</td>
-			<td>F&rsquo;lickta</td>
-		</tr>
-		<tr>
-			<td><strong>10</strong></td>
-			<td>Eat It, Vid Boi!</td>
-			<td>Compiler</td>
-			<td>Fighter</td>
-			<td>Cyborg</td>
-		</tr>
-		<tr>
-			<td><strong>11</strong></td>
-			<td>The Hard Stuff Rules&hellip;</td>
-			<td>Flappyboi</td>
-			<td>Cyborg</td>
-			<td>F&rsquo;lickta</td>
-		</tr>
-		<tr>
-			<td><strong>12</strong></td>
-			<td>Bob&rsquo;s Big Date</td>
-			<td>Hunter</td>
-			<td>Trooper</td>
-			<td>F&rsquo;lickta</td>
-		</tr>
-		<tr>
-			<td><strong>13</strong></td>
-			<td>Six Thousand Feet Under</td>
-			<td>Flappyboi</td>
-			<td>Cyborg</td>
-			<td>F&rsquo;lickta</td>
-		</tr>
-		<tr>
-			<td><strong>14</strong></td>
-			<td>If I Had a Rocket Launcher, I&rsquo;d Make Somebody Pay</td>
-			<td>Bob</td>
-			<td>Hunter</td>
-			<td>Trooper</td>
-		</tr>
-		<tr>
-			<td><strong>15</strong></td>
-			<td>Sorry Don&rsquo;t Make It So</td>
-			<td>Fighter</td>
-			<td>Cyborg</td>
-			<td>Enforcer</td>
-		</tr>
-		<tr>
-			<td><strong>16</strong></td>
-			<td>For Carnage, Apply Within</td>
-			<td>Compiler</td>
-			<td>Enforcer</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>17</strong></td>
-			<td>Begging for Mercy Makes Me Angry!</td>
-			<td>Enforcer</td>
-			<td>Hunter</td>
-			<td>Trooper</td>
-		</tr>
-		<tr>
-			<td><strong>18</strong></td>
-			<td>The Big House</td>
-			<td>Fighter</td>
-			<td>Bob</td>
-			<td>Enforcer</td>
-		</tr>
-		<tr>
-			<td><strong>19</strong></td>
-			<td>This Side Toward Enemy</td>
-			<td>Compiler</td>
-			<td>Trooper</td>
-			<td>F&rsquo;lickta</td>
-		</tr>
-		<tr>
-			<td><strong>20</strong></td>
-			<td>God Will Sort the Dead&hellip;</td>
-			<td>Bob</td>
-			<td>Hunter</td>
-			<td>Trooper</td>
-		</tr>
-		<tr>
-			<td><strong>21</strong></td>
-			<td>My Own Private Thermopylae</td>
-			<td>Bob</td>
-			<td>Cyborg</td>
-			<td>Trooper</td>
-		</tr>
-		<tr>
-			<td><strong>22</strong></td>
-			<td>Kill Your Television</td>
-			<td>Flappyboi</td>
-			<td>Cyborg</td>
-			<td>F&rsquo;lickta</td>
-		</tr>
-		<tr>
-			<td><strong>23</strong></td>
-			<td>Where the Twist Flops</td>
-			<td>Compiler</td>
-			<td>Bob</td>
-			<td>Hunter</td>
-		</tr>
-		<tr>
-			<td><strong>24</strong></td>
-			<td>Beware of Abandoned Rental Trucks</td>
-			<td>Cyborg</td>
-			<td>Enforcer</td>
-			<td>F&rsquo;lickta</td>
-		</tr>
-		<tr>
-			<td><strong>25</strong></td>
-			<td>Requiem for a Cyborg</td>
-			<td>Compiler</td>
-			<td>Fighter</td>
-			<td>Trooper</td>
-		</tr>
-		<tr>
-			<td><strong>26</strong></td>
-			<td>Fatum iustum stultorum</td>
-			<td>Bob</td>
-			<td>Trooper</td>
-			<td>Defender</td>
-		</tr>
-		<tr>
-			<td><strong>27</strong></td>
-			<td>Feel the Noise</td>
-			<td>Cyborg</td>
-			<td>Hunter</td>
-			<td>Defender</td>
-		</tr>
-		<tr>
-			<td><strong>28</strong></td>
-			<td>All Roads Lead to Sol&hellip;</td>
-			<td>Fighter</td>
-			<td>Hunter</td>
-			<td>Juggernaut</td>
-		</tr>
-	</tbody>
-</table>
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+		<h1 id="infinity"><em>Marathon Infinity</em> (1996)</h1>
+			<ul style="padding: 0px 0px 8px;">
+				<li>Owing to custom monster physics, the monster placements in <em>Marathon Infinity</em>&rsquo;s levels often don&rsquo;t match the expected shapes collections. Barring potential errors, this list takes that into account.</li>
+				<li><em>Infinity</em> levels range from using no monster collections at all (&ldquo;Two for the Price of One&rdquo;) to using five (&ldquo;One Thousand Thousand Slimy Things&rdquo;). Blank columns signify that a level used fewer collections than that.</li>
+				<li>I&rsquo;m also not counting the Items collection, which always loads for every level; <em>Infinity</em>&rsquo;s Items collection contains the &ldquo;ambient wildlife&rdquo; that the shapes file names <strong>Grendel</strong> (small creatures seen hopping about on the ground), <strong>Potato Anus</strong> (blue and orange spherical creatures seen wandering in all kinds of liquids), and <strong>Mothrid</strong> (translucent flying octopodes). Names of levels that use any of these monsters are <em>italicized</em>.</li>
+				<li>Since most of <em>Marathon Infinity</em>&rsquo;s levels actually have <em>Marathon 2</em>-formatted physics models merged in, the physics for monsters in the VacBob slots aren&rsquo;t set in stone (nor are the behaviours of the SMG and its projectiles). This is rarely consequential in the former case (most &ldquo;VacBobs&rdquo; you see in <em>Marathon Infinity</em> levels actually use the &ldquo;Bob&rdquo; slots), but there&rsquo;s a spawn for a Security VacBob in the northwest corner of &ldquo;A Converted Church in Venice, Italy&rdquo; that could be <a href="https://youtu.be/0hYZaqYCZyQ" target="_blank">something completely different</a> if you&rsquo;d loaded a physics model that reassigned the Security VacBob before loading &ldquo;A Converted Church&rdquo;. This list assumes the default physics for such cases.</li>
+			</ul>
+		<table>
+			<thead>
+				<tr>
+					<th class="right">#</th>
+					<th>Level Name</th>
+					<th>Class 1</th>
+					<th>Class 2</th>
+					<th>Class 3</th>
+					<th>Class 4</th>
+					<th>Class 5</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><strong>1</strong></td>
+					<td>Ne cede malis</td>
+					<td>Compiler</td>
+					<td>Fighter</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>2</strong></td>
+					<td>Rise Robot Rise</td>
+					<td>Fighter</td>
+					<td>Enforcer</td>
+					<td>Hunter</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>3</strong></td>
+					<td><em>Poor Yorick</em></td>
+					<td>Drone</td>
+					<td>Hunter</td>
+					<td>Trooper</td>
+					<td>F&rsquo;lickta</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>4</strong></td>
+					<td><em>Confound Delivery</em></td>
+					<td>Bob</td>
+					<td>Hunter</td>
+					<td>Juggernaut</td>
+					<td>F&rsquo;lickta</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>5</strong></td>
+					<td>Electric Sheep One</td>
+					<td>Flappyboi</td>
+					<td>Enforcer</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>6</strong></td>
+					<td>Where Are Monsters in Dreams</td>
+					<td>Defender</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>7</strong></td>
+					<td>Acme Station</td>
+					<td>Compiler</td>
+					<td>Fighter</td>
+					<td>Cyborg</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>8</strong></td>
+					<td>Post Naval Trauma</td>
+					<td>Fighter</td>
+					<td>Enforcer</td>
+					<td>Hunter</td>
+					<td>Juggernaut</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>9</strong></td>
+					<td>Where Some Rarely Go</td>
+					<td>Compiler</td>
+					<td>Fighter</td>
+					<td>F&rsquo;lickta</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>10</strong></td>
+					<td>Thing What Kicks&hellip;</td>
+					<td>Fighter</td>
+					<td>Drone</td>
+					<td>Juggernaut</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>11</strong></td>
+					<td>Electric Sheep Two</td>
+					<td>Flappyboi</td>
+					<td>Enforcer</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>12</strong></td>
+					<td><em>Whatever You Please</em></td>
+					<td>Compiler</td>
+					<td>Enforcer</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>13</strong></td>
+					<td>Naw Man He&rsquo;s Close</td>
+					<td>Compiler</td>
+					<td>VacBob</td>
+					<td>Trooper</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>14</strong></td>
+					<td>Foe Hammer</td>
+					<td>Compiler</td>
+					<td>VacBob</td>
+					<td>Cyborg</td>
+					<td>Hunter</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>15</strong></td>
+					<td>Hang Brain</td>
+					<td>Compiler</td>
+					<td>Bob</td>
+					<td>Hunter</td>
+					<td>Trooper</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>16</strong></td>
+					<td>Electric Sheep Three</td>
+					<td>Flappyboi</td>
+					<td>Enforcer</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>17</strong></td>
+					<td><em>Eat the Path</em></td>
+					<td>Flappyboi</td>
+					<td>Compiler</td>
+					<td>Enforcer</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>18</strong></td>
+					<td>By Committee</td>
+					<td>Fighter</td>
+					<td>Bob</td>
+					<td>Drone</td>
+					<td>Cyborg</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>19</strong></td>
+					<td><em>One Thousand Thousand Slimy Things</em></td>
+					<td>Compiler</td>
+					<td>Bob</td>
+					<td>Fighter</td>
+					<td>Trooper</td>
+					<td>Hunter</td>
+				</tr>
+				<tr>
+					<td><strong>20</strong></td>
+					<td><em>A Converted Church in Venice, Italy</em></td>
+					<td>Flappyboi</td>
+					<td>Bob</td>
+					<td>VacBob</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>21</strong></td>
+					<td>Son of Grendel</td>
+					<td>Fighter</td>
+					<td>Drone</td>
+					<td>Trooper</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>22</strong></td>
+					<td><em>Strange Aeons</em></td>
+					<td>F&rsquo;lickta</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>23</strong></td>
+					<td>Bagged Again</td>
+					<td>Fighter</td>
+					<td>Trooper</td>
+					<td>Defender</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>24</strong></td>
+					<td>You Think You&rsquo;re Big Time?<br />You&rsquo;re Gonna Die Big Time! <span class="normal">(Campaign)</span></td>
+					<td>Fighter</td>
+					<td>Hunter</td>
+					<td>Trooper</td>
+					<td>Juggernaut</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>25</strong></td>
+					<td>Aye Mak Sicur</td>
+					<td>Hunter</td>
+					<td>Defender</td>
+					<td>Juggernaut</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>26</strong></td>
+					<td>Robot World Arena</td>
+					<td>Fighter</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>27</strong></td>
+					<td>Two for the Price of One</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>28</strong></td>
+					<td>Aie Mak Sicur</td>
+					<td>Hunter</td>
+					<td>Defender</td>
+					<td>Juggernaut</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>29</strong></td>
+					<td>Carroll Street Station</td>
+					<td>Hunter</td>
+					<td>Defender</td>
+					<td>Juggernaut</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>30</strong></td>
+					<td>You&rsquo;re Wormfood, Dude</td>
+					<td>Hunter</td>
+					<td>Trooper</td>
+					<td>Defender</td>
+					<td>Juggernaut</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>31</strong></td>
+					<td><span class="dotted" id="ftnt_ref03" title="This level&rsquo;s &ldquo;Monster Parameters&rdquo; tell the game to spawn nine Bobs and twenty Possessed Drones at the start of the level, but they have no spawn points, so they will never appear. This would still force the game to load the Bob and Drone collections, but I&rsquo;m only noting these in an endnote because I suspect it to have been an oversight.">Try Again<a href="#ftnt03" class="noprintlink">&#8317;&sup3;&#8318;</a></td>
+					<td>Cyborg</td>
+					<td>Enforcer</td>
+					<td>Hunter</td>
+					<td>Juggernaut</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>32</strong></td>
+					<td>If I Had a Rocket Launcher,<br />I&rsquo;d Make Somebody Pay</td>
+					<td>Hunter</td>
+					<td>Trooper</td>
+					<td>VacBob</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><strong>33</strong></td>
+					<td>You Think You&rsquo;re Big Time?<br />You&rsquo;re Gonna Die Big Time! <span class="normal">(Secret)</span></td>
+					<td>Fighter</td>
+					<td>Hunter</td>
+					<td>Trooper</td>
+					<td>Juggernaut</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
 
-<h1 id="infinity"><em>Marathon Infinity</em> (1996)</h1>
-	<ul style="padding: 0px 0px 8px;">
-		<li>Owing to custom monster physics, the monster placements in <em>Marathon Infinity</em>&rsquo;s levels often don&rsquo;t match the expected shapes collections. Barring potential errors, this list takes that into account.</li>
-		<li><em>Infinity</em> levels range from using no monster collections at all (&ldquo;Two for the Price of One&rdquo;) to using five (&ldquo;One Thousand Thousand Slimy Things&rdquo;). Blank columns signify that a level used fewer collections than that.</li>
-		<li>I&rsquo;m also not counting the Items collection, which always loads for every level; <em>Infinity</em>&rsquo;s Items collection contains the &ldquo;ambient wildlife&rdquo; that the shapes file names <strong>Grendel</strong> (small creatures seen hopping about on the ground), <strong>Potato Anus</strong> (blue and orange spherical creatures seen wandering in all kinds of liquids), and <strong>Mothrid</strong> (translucent flying octopodes). Names of levels that use any of these monsters are <em>italicized</em>.</li>
-		<li>Since most of <em>Marathon Infinity</em>&rsquo;s levels actually have <em>Marathon 2</em>-formatted physics models merged in, the physics for monsters in the VacBob slots aren&rsquo;t set in stone (nor are the behaviours of the SMG and its projectiles). This is rarely consequential in the former case (most &ldquo;VacBobs&rdquo; you see in <em>Marathon Infinity</em> levels actually use the &ldquo;Bob&rdquo; slots), but there&rsquo;s a spawn for a Security VacBob in the northwest corner of &ldquo;A Converted Church in Venice, Italy&rdquo; that could be <a href="https://youtu.be/0hYZaqYCZyQ" target="_blank">something completely different</a> if you&rsquo;d loaded a physics model that reassigned the Security VacBob before loading &ldquo;A Converted Church&rdquo;. This list assumes the default physics for such cases.</li>
-	</ul>
-<table>
-	<thead>
-		<tr>
-			<th class="right">#</th>
-			<th>Level Name</th>
-			<th>Class 1</th>
-			<th>Class 2</th>
-			<th>Class 3</th>
-			<th>Class 4</th>
-			<th>Class 5</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><strong>1</strong></td>
-			<td>Ne cede malis</td>
-			<td>Compiler</td>
-			<td>Fighter</td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>2</strong></td>
-			<td>Rise Robot Rise</td>
-			<td>Fighter</td>
-			<td>Enforcer</td>
-			<td>Hunter</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>3</strong></td>
-			<td><em>Poor Yorick</em></td>
-			<td>Drone</td>
-			<td>Hunter</td>
-			<td>Trooper</td>
-			<td>F&rsquo;lickta</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>4</strong></td>
-			<td><em>Confound Delivery</em></td>
-			<td>Bob</td>
-			<td>Hunter</td>
-			<td>Juggernaut</td>
-			<td>F&rsquo;lickta</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>5</strong></td>
-			<td>Electric Sheep One</td>
-			<td>Flappyboi</td>
-			<td>Enforcer</td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>6</strong></td>
-			<td>Where Are Monsters in Dreams</td>
-			<td>Defender</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>7</strong></td>
-			<td>Acme Station</td>
-			<td>Compiler</td>
-			<td>Fighter</td>
-			<td>Cyborg</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>8</strong></td>
-			<td>Post Naval Trauma</td>
-			<td>Fighter</td>
-			<td>Enforcer</td>
-			<td>Hunter</td>
-			<td>Juggernaut</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>9</strong></td>
-			<td>Where Some Rarely Go</td>
-			<td>Compiler</td>
-			<td>Fighter</td>
-			<td>F&rsquo;lickta</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>10</strong></td>
-			<td>Thing What Kicks&hellip;</td>
-			<td>Fighter</td>
-			<td>Drone</td>
-			<td>Juggernaut</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>11</strong></td>
-			<td>Electric Sheep Two</td>
-			<td>Flappyboi</td>
-			<td>Enforcer</td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>12</strong></td>
-			<td><em>Whatever You Please</em></td>
-			<td>Compiler</td>
-			<td>Enforcer</td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>13</strong></td>
-			<td>Naw Man He&rsquo;s Close</td>
-			<td>Compiler</td>
-			<td>VacBob</td>
-			<td>Trooper</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>14</strong></td>
-			<td>Foe Hammer</td>
-			<td>Compiler</td>
-			<td>VacBob</td>
-			<td>Cyborg</td>
-			<td>Hunter</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>15</strong></td>
-			<td>Hang Brain</td>
-			<td>Compiler</td>
-			<td>Bob</td>
-			<td>Hunter</td>
-			<td>Trooper</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>16</strong></td>
-			<td>Electric Sheep Three</td>
-			<td>Flappyboi</td>
-			<td>Enforcer</td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>17</strong></td>
-			<td><em>Eat the Path</em></td>
-			<td>Flappyboi</td>
-			<td>Compiler</td>
-			<td>Enforcer</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>18</strong></td>
-			<td>By Committee</td>
-			<td>Fighter</td>
-			<td>Bob</td>
-			<td>Drone</td>
-			<td>Cyborg</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>19</strong></td>
-			<td><em>One Thousand Thousand Slimy Things</em></td>
-			<td>Compiler</td>
-			<td>Bob</td>
-			<td>Fighter</td>
-			<td>Trooper</td>
-			<td>Hunter</td>
-		</tr>
-		<tr>
-			<td><strong>20</strong></td>
-			<td><em>A Converted Church in Venice, Italy</em></td>
-			<td>Flappyboi</td>
-			<td>Bob</td>
-			<td>VacBob</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>21</strong></td>
-			<td>Son of Grendel</td>
-			<td>Fighter</td>
-			<td>Drone</td>
-			<td>Trooper</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>22</strong></td>
-			<td><em>Strange Aeons</em></td>
-			<td>F&rsquo;lickta</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>23</strong></td>
-			<td>Bagged Again</td>
-			<td>Fighter</td>
-			<td>Trooper</td>
-			<td>Defender</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>24</strong></td>
-			<td>You Think You&rsquo;re Big Time?<br />You&rsquo;re Gonna Die Big Time! <span class="normal">(Campaign)</span></td>
-			<td>Fighter</td>
-			<td>Hunter</td>
-			<td>Trooper</td>
-			<td>Juggernaut</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>25</strong></td>
-			<td>Aye Mak Sicur</td>
-			<td>Hunter</td>
-			<td>Defender</td>
-			<td>Juggernaut</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>26</strong></td>
-			<td>Robot World Arena</td>
-			<td>Fighter</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>27</strong></td>
-			<td>Two for the Price of One</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>28</strong></td>
-			<td>Aie Mak Sicur</td>
-			<td>Hunter</td>
-			<td>Defender</td>
-			<td>Juggernaut</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>29</strong></td>
-			<td>Carroll Street Station</td>
-			<td>Hunter</td>
-			<td>Defender</td>
-			<td>Juggernaut</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>30</strong></td>
-			<td>You&rsquo;re Wormfood, Dude</td>
-			<td>Hunter</td>
-			<td>Trooper</td>
-			<td>Defender</td>
-			<td>Juggernaut</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>31</strong></td>
-			<td><span class="dotted" id="ftnt_ref03" title="This level&rsquo;s &ldquo;Monster Parameters&rdquo; tell the game to spawn nine Bobs and twenty Possessed Drones at the start of the level, but they have no spawn points, so they will never appear. This would still force the game to load the Bob and Drone collections, but I&rsquo;m only noting these in an endnote because I suspect it to have been an oversight.">Try Again<a href="#ftnt03" class="noprintlink">&#8317;&sup3;&#8318;</a></td>
-			<td>Cyborg</td>
-			<td>Enforcer</td>
-			<td>Hunter</td>
-			<td>Juggernaut</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>32</strong></td>
-			<td>If I Had a Rocket Launcher,<br />I&rsquo;d Make Somebody Pay</td>
-			<td>Hunter</td>
-			<td>Trooper</td>
-			<td>VacBob</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><strong>33</strong></td>
-			<td>You Think You&rsquo;re Big Time?<br />You&rsquo;re Gonna Die Big Time! <span class="normal">(Secret)</span></td>
-			<td>Fighter</td>
-			<td>Hunter</td>
-			<td>Trooper</td>
-			<td>Juggernaut</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+		<h1 id="why">&hellip;why put this together?</h1>
 
-<h1 id="why">&hellip;why put this together?</h1>
+		<p>Two primary reasons:</p>
+			<ol>
+				<li>I think the techniques developers used to conserve memory in the &rsquo;80s and &rsquo;90s deserve much more attention than they&rsquo;ve received. Frankly, modern developers could learn a lot from the efficiency of &rsquo;80s and early &rsquo;90s games. This is just a small microcosm of that tendency.</li>
+				<li>I&rsquo;ve long held that most third-party scenarios place monsters too indiscriminately. If every level uses every monster type, then the combat throughout the game becomes effectively interchangeable. Restricting monsters to a few types per level results in each level&rsquo;s combat feeling far more unique. Seeing everything laid out like this may help drive home how restricted the monster placement in the original trilogy was.</li>	
+			</ol>
 
-<p>Two primary reasons:</p>
-	<ol>
-		<li>I think the techniques developers used to conserve memory in the &rsquo;80s and &rsquo;90s deserve much more attention than they&rsquo;ve received. Frankly, modern developers could learn a lot from the efficiency of &rsquo;80s and early &rsquo;90s games. This is just a small microcosm of that tendency.</li>
-		<li>I&rsquo;ve long held that most third-party scenarios place monsters too indiscriminately. If every level uses every monster type, then the combat throughout the game becomes effectively interchangeable. Restricting monsters to a few types per level results in each level&rsquo;s combat feeling far more unique. Seeing everything laid out like this may help drive home how restricted the monster placement in the original trilogy was.</li>	
-	</ol>
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="index.html">Website index</a></p>
 
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="index.html">Website index</a></p>
+		<h1 id="thanks">Acknowledgements</h1>
 
-<h1 id="thanks">Acknowledgements</h1>
+			<ul>
+				<li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
+				<li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
+				<li><strong>Solra Bizna</strong> for an incomprehensible amount of programming help, including the CSS that makes this exact page follow your computer&rsquo;s dark mode settings.</li>
+				<li><strong>fracai</strong>, whose <a href="https://fracai.github.io/marathon-svg/" target="_blank">utterly invaluable maps</a> saved me from having to open <strong>Pfhorte</strong> even once.</li>
+				<li><strong>Bungie</strong>, for obvious reasons.</li> 
+			</ul>
 
-	<ul>
-		<li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
-		<li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
-		<li><strong>Solra Bizna</strong> for an incomprehensible amount of programming help, including the CSS that makes this exact page follow your computer&rsquo;s dark mode settings.</li>
-		<li><strong>fracai</strong>, whose <a href="https://fracai.github.io/marathon-svg/" target="_blank">utterly invaluable maps</a> saved me from having to open <strong>Pfhorte</strong> even once.</li>
-		<li><strong>Bungie</strong>, for obvious reasons.</li> 
-	</ul>
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot;<a href="index.html">Website index</a></p>
 
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot;<a href="index.html">Website index</a></p>
+		<h1 id="endnotes">Endnotes</h1>
 
-<h1 id="endnotes">Endnotes</h1>
-
-<table class="light endnotes hyphenate">
-	<thead>
-		<tr>
-			<th class="right"><strong><strong>#</strong></strong></th>
-			<th><strong><strong>Note</strong></strong></th>
-		</tr>
-	</thead>
-	<tbody>	
-		<tr>
-			<td><strong><a id="ftnt03" href="#ftnt_ref01" class="noprintlink">1</a></strong></td>
-			<td>This level has spawn positions for a Juggernaut and a Compiler, but the level&rsquo;s &ldquo;Monster Parameters&rdquo; specify starting values of 0 and never provide means for them to spawn. This would still force the game to load the Juggernaut and Compiler collections, but I&rsquo;m only noting these in an endnote because I suspect it to have been an oversight.</td>
-		</tr>
-		<tr>
-			<td><strong><a id="ftnt02" href="#ftnt_ref02" class="noprintlink">2</a></strong></td>
-			<td>The <a href="http://files3.bungie.org/trilogy/Map.sce2.zip">Windows 95 version</a> of this level features a fourth enemy class: Compiler, found in the &ldquo;Arrival&rdquo; secret. All other official versions feature only three.</td>
-		</tr>
-		<tr>
-			<td><strong><a id="ftnt03" href="#ftnt_ref03" class="noprintlink">3</a></strong></td>
-			<td>This level&rsquo;s &ldquo;Monster Parameters&rdquo; tell the game to spawn nine Bobs and twenty Possessed Drones at the start of the level, but they have no spawn points, so they will never appear. This would still force the game to load the Bob and Drone collections, but I&rsquo;m only noting these in an endnote because I suspect it to have been an oversight.</td>
-		</tr>
-	</tbody>
-</table>
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
-
-</body>
+		<table class="light endnotes hyphenate">
+			<thead>
+				<tr>
+					<th class="right"><strong><strong>#</strong></strong></th>
+					<th><strong><strong>Note</strong></strong></th>
+				</tr>
+			</thead>
+			<tbody>	
+				<tr>
+					<td><strong><a id="ftnt03" href="#ftnt_ref01" class="noprintlink">1</a></strong></td>
+					<td>This level has spawn positions for a Juggernaut and a Compiler, but the level&rsquo;s &ldquo;Monster Parameters&rdquo; specify starting values of 0 and never provide means for them to spawn. This would still force the game to load the Juggernaut and Compiler collections, but I&rsquo;m only noting these in an endnote because I suspect it to have been an oversight.</td>
+				</tr>
+				<tr>
+					<td><strong><a id="ftnt02" href="#ftnt_ref02" class="noprintlink">2</a></strong></td>
+					<td>The <a href="http://files3.bungie.org/trilogy/Map.sce2.zip">Windows 95 version</a> of this level features a fourth enemy class: Compiler, found in the &ldquo;Arrival&rdquo; secret. All other official versions feature only three.</td>
+				</tr>
+				<tr>
+					<td><strong><a id="ftnt03" href="#ftnt_ref03" class="noprintlink">3</a></strong></td>
+					<td>This level&rsquo;s &ldquo;Monster Parameters&rdquo; tell the game to spawn nine Bobs and twenty Possessed Drones at the start of the level, but they have no spawn points, so they will never appear. This would still force the game to load the Bob and Drone collections, but I&rsquo;m only noting these in an endnote because I suspect it to have been an oversight.</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+	</body>
 </html>

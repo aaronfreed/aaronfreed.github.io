@@ -1,0 +1,705 @@
+<html lang="en-us">
+	<head>
+		<link rel="stylesheet" type="text/css" href="css.css">
+		<title>What Is Time? An Introduction to Rhythm</title>
+	</head>
+	<body class="compositions2023-2024 light">
+		<h1 class="petitecaps centred nobottommargin" style="line-height: 42px;">What Is Time?</h1>
+		<h2 class="petitecaps centred notopmargin nobottommargin" style="line-height: 36px;">A Miserable Little Pile of Chronitons</h2>
+		<h3 class="petitecaps centred notopmargin" style="line-height: 30px;">or: Baby, Don&rsquo;t Hurt Me, Don&rsquo;t Hurt Me No More</h3>
+
+		<p style="line-height: 24px;">This is the first part in a series I&rsquo;m writing on basic music theory. It&rsquo;s primarily aimed at people that want to learn how to write music. Most guides I&rsquo;ve found assume that the reader plays a specific instrument (or <em>any</em> instrument), but modern DAWs make it entirely possible for someone who doesn&rsquo;t play <em>any</em> instrument to compose music. My aim is to make music theory accessible to everyone, regardless of prior musical experience.</p>
+
+		<p style="line-height: 24px;">As a result, I&rsquo;m starting with notation, because to read music, it&rsquo;s necessary to know what the symbols mean. Since the most important symbols signify measurements of time, that is where we shall start.</p>
+
+		<p style="line-height: 24px;">This page is a work in progress. Don&rsquo;t fret if the &ldquo;Advanced Rhythmic Concepts&rdquo; aren&rsquo;t immediately accessible; the section is called that for a reason. I&rsquo;m likely to split them off to a separate page once I&rsquo;ve completed pages on basic melodic concepts. I still intend to explain a few other concepts in greater depth as well, notably syncopation, but I wanted a draft of this page up so I could solicit feedback before proceeding further.</p>
+
+		<h1 class="centred" id="toc">Table of Contents</h1>
+
+		<ol class="toclite">
+			<li><a href="#top">Introduction</a></li>
+			<li><a href="#notesymbols">Basic Symbols for Notes &amp; Rests</a>
+				<ol>
+					<li><span class="toc-counter weight0">Table:</span> <a href="#notesymboltable">Durations of Notes and Rests</a></li>
+				</ol>
+			</li>
+			<li><a href="#modifiers">Duration Modifiers (&amp; a few basic articulations)</a>
+				<ol>
+					<li><a href="#dots">Modifier Dots &amp; <em>Staccato</em></a></li>
+					<li><a href="#tuplets">Superscripts &amp; Tuplets</a></li>
+					<li><a href="#tiesandslurs">Ties &amp; Slurs</a></li>
+				</ol>
+			</li>
+			<li><a href="#noteetymology">Etymology of Note Names</a>
+				<ol>
+					<li><a href="#commontime">Common Time</a></li>
+					<li><a href="#allabreve"><em>Alla breve</em></a></li>
+				</ol>
+			</li>
+			<li><a href="#timesignatures">Time Signatures</a>
+				<ol>
+					<li><a href="#numeratorsanddenominators">Numerators &amp; Denominators</a></li>
+					<li><a href="#34vs68"><span style="font-size: 125%;">&sup3;&frasl;&#8324;</span> vs. <span style="font-size: 125%;">&#8310;&frasl;&#8328;</span>: Simple &amp; Compound Time Signatures</a>
+						<ol>
+							<li><span class="toc-counter">Table:</span> <a href="#countingouttime">Counting Out Time</a></li>
+						</ol>
+					</li>
+					<li><a href="#complextimesignatures">Complex Time Signatures</a>
+						<ol>
+							<li><span class="toc-counter">List:</span> <a href="#complexexamples">Famous Works in Complex Time Signatures</a></li>
+						</ol>
+					</li>
+					<li><a href="#decodingtimesignatures">Decoding Time Signatures</a>
+						<ol>
+							<li><span class="toc-counter">Table:</span> <a href="#missionimpossible">Rhythmic Analysis of the <em>Mission: Impossible</em> Theme</a></li>
+							<li><span class="toc-counter">Table:</span> <a href="#yyz">Rhythmic Analysis of Rush&rsquo;s &ldquo;YYZ&rdquo;</a></li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+			<li><a href="#tempo">Tempo and Beats Per Minute</a></li>
+			<li><a href="#advancedrhythm">Advanced Rhythmic Concepts</a>
+				<ol>
+					<li><a href="#polyrhythms">Polyrhythms</a>
+						<ol>
+							<li><span class="toc-counter">Table:</span> <a href="#3to2polyrhythm">3:2 Polyrhythms: <span style="font-size: 125%;">&sup3;&#x1D160;</span> against <span style="font-size: 125%;">&#x1D160;</span></a></li>
+							<li><span class="toc-counter">Table:</span> <a href="#4to3polyrhythm">4:3 Polyrhythms: <span style="font-size: 125%;">&sup3;&#x1D160;</span> against <span style="font-size: 125%;">&#x1D161;</span></a></li>
+							<li><span class="toc-counter">Audio File:</span> <a href="#polyrhythmexample">&ldquo;Polyrhythm Demonstration&rdquo;</a></li>
+							<li><span class="toc-counter">Table:</span> <a href="#polyrhythmkey">Key to &ldquo;Polyrhythm Demonstration&rdquo;</a></li>
+						</ol>
+					</li>
+					<li><a href="#timesignaturemodulation">Time Signature Modulation</a>
+						<ol>
+							<li><span class="toc-counter">Audio File:</span> <a href="#modulationexample">&ldquo;Sympathy for the Time Signature&rdquo;</a></li>
+							<li><span class="toc-counter">Table:</span> <a href="#sympathykey">Structure of &ldquo;Sympathy for the Time Signature&rdquo;</a></li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+		</ol>
+		
+		<h1 class="centred" id="rhythmnotation">Basic Music Notation: Rhythm</h1>
+		<h2 class="centred" id="notesymbols">Basic Symbols for Notes &amp; Rests</h2>
+
+		<p style="line-height: 24px;">A note&rsquo;s height signifies its pitch; the type of note signifies its duration. A related symbol called a rest signifies the absence of any note at a given time. The most common notes and rests in modern music notation are:</p>
+
+		<table class="curved fixheight centred" id="notesymboltable">
+			<thead>
+				<tr>
+					<th colspan="7" class="weight5 accent">Durations of Notes and Rests</th>
+				</tr>
+				<tr class="accent weight4">
+					<th>Length</th>
+					<th class="leftborder">Note</th>
+					<th>American</th>
+					<th>British</th>
+					<th class="leftborder">Rest</th>
+					<th>American</th>
+					<th>British</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>4</td>
+					<td class="leftborder left" style="font-size: 20px;"><div class="notopmargin nobottommargin" style="transform: translateX(9px);">&#x1D15D;</div></td>
+					<td>Whole note</td>
+					<td>Semibreve</td>
+					<td class="leftborder" style="font-size: 20px;">&#x1D13B;</td>
+					<td>Whole rest</td>
+					<td>Semibreve rest</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td class="leftborder left" style="font-size: 20px;"><div class="notopmargin nobottommargin" style="transform: translateY(5px) translateX(10px);">&#x1D15E;</div></td>
+					<td>Half note</td>
+					<td>Minim</td>
+					<td class="leftborder" style="font-size: 20px;"><div class="notopmargin nobottommargin">&#x1D13C;</div></td>
+					<td>Half rest</td>
+					<td>Minim rest</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td class="leftborder left" style="font-size: 20px;"><div class="notopmargin nobottommargin" style="transform: translateY(5px) translateX(10px);">&#x1D15F;</div></td>
+					<td>Quarter note</td>
+					<td>Crotchet</td>
+					<td class="leftborder" style="font-size: 20px;"><div class="notopmargin nobottommargin" style="transform: translateY(5px);">&#x1D13D;</div></td>
+					<td>Quarter rest</td>
+					<td>Crotchet rest</td>
+				</tr>
+				<tr>
+					<td>&sup1;&frasl;&#8322;</td>
+					<td class="leftborder left" style="font-size: 20px;"><div class="notopmargin nobottommargin" style="transform: translateY(5px) translateX(10px);">&#x1D160;</div></td>
+					<td>Eighth note</td>
+					<td>Quaver</td>
+					<td class="leftborder" style="font-size: 20px;"><div class="notopmargin nobottommargin" style="transform: translateY(5px);">&#x1D13E;</div></td>
+					<td>Eighth rest</td>
+					<td>Quaver rest</td>
+				</tr>
+				<tr>
+					<td>&sup1;&frasl;&#8324;</td>
+					<td class="leftborder left" style="font-size: 20px;"><div class="notopmargin nobottommargin" style="transform: translateY(5px) translateX(10px);">&#x1D161;</div></td>
+					<td>Sixteenth note</td>
+					<td>Semiquaver</td>
+					<td class="leftborder" style="font-size: 20px;"><div class="notopmargin nobottommargin" style="transform: translateY(5px);">&#x1D13F;</div></td>
+					<td>Sixteenth rest</td>
+					<td>Semiquaver rest</td>
+				</tr>
+				<tr>
+					<td>&sup1;&frasl;&#8328;</td>
+					<td class="leftborder left" style="font-size: 20px;"><div class="notopmargin nobottommargin" style="transform: translateY(5px) translateX(10px);">&#x1D162;</div></td>
+					<td>32nd note</td>
+					<td>Demisemiquaver</td>
+					<td class="leftborder" style="font-size: 20px;"><div class="notopmargin nobottommargin" style="transform: translateY(5px);">&#x1D140;</div></td>
+					<td>32nd rest</td>
+					<td>Demisemiquaver rest</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p style="line-height: 24px;">I&rsquo;ll be using the American names for notes throughout this document &ndash; to be honest, until I began researching it, I didn&rsquo;t even know the British names differed. Additionally, the above &ldquo;length&rdquo; field assumes common time (or some other time signature with a denominator of 4), which I will explain in a moment.</p>
+
+		<h2 class="centred" id="modifiers">Duration Modifiers (&amp; a few basic articulations)</h2>
+
+		<h3 class="centred" id="dots">Modifier Dots &amp; <em>Staccato</em></h3>
+		<p style="line-height: 24px;">The above notes can have modifiers. A <span class="toc-counter weight3">dot after a note or rest</span> multiplies the duration by one and a half. Thus, a dotted half note <span style="font-size: 20px;" class="accent musicnotation">&#x1D15E;&#x1D16D;</span> lasts for three beats in common time, and a dotted quarter note <span style="font-size: 20px;" class="accent musicnotation">&#x1D15F;&#x1D16D;</span> for one and a half. Rarely, you&rsquo;ll see a note or rest with two dots after it, multiplying its duration by one and three quarters. Thus, a doubly dotted half note <span style="font-size: 20px;" class="accent musicnotation">&#x1D15E;&#x1D16D;&#x1D16D;</span> lasts for three and a half beats.</p>
+
+		<p style="line-height: 24px;">A dot <em>after</em> a note should not be confused with a <span class="toc-counter weight3">dot <em>below or above</em> a note</span>, which signifies to play it <em class="toc-counter weight3">staccato</em>, Italian for <em>detached</em> or <em>disconnected</em>.</p>
+
+		<h3 class="centred" id="tuplets">Superscripts &amp; Tuplets</h3>
+		<p style="line-height: 24px;"><span class="toc-counter weight3">Superscripts</span> above notes (or rests) are slightly trickier. A superscript 3 above a note, which is by far the most common such superscript in music, means to multiply a note&rsquo;s duration by &sup2;&frasl;&#8323;. These are called <span class="toc-counter weight3">triplets</span>, and they&rsquo;re rarely found on anything longer than eighth notes. Thus, <span style="font-size: 20px;" class="accent">&sup3;&#x1D160;</span> lasts for &sup1;&frasl;&#8323; of a beat in common time, <span style="font-size: 20px;" class="accent">&sup3;&#x1D161;</span> lasts for &sup1;&frasl;&#8326; of a beat, and so on. <span class="toc-counter weight3">Quintuplets</span>, written with a superscript 5, are also sometimes seen; they multiply a note&rsquo;s duration by &sup2;&frasl;&#8325;. Thus, <span style="font-size: 20px;" class="accent">&#8309;&#x1D160;</span> lasts for &sup1;&frasl;&#8325; of a beat. That said, while higher superscripts are possible, I&rsquo;ve only ever seen two composers use them, and I&rsquo;m one of them. (The other is <a href="https://chrischristodoulou.bandcamp.com" target="_blank" rel="nofollow">Chris Christodoulou</a> of the <em>Risk of Rain</em> series and <em>Deadbolt</em>; &ldquo;Arctic Oscillation&rdquo; uses several tuplets.) Incidentally, superscript multiples of 2 would be entirely pointless: you could just use the next-lowest note value instead.</p>
+
+		<h3 class="centred" id="tiesandslurs">Ties &amp; Slurs</h3>
+		<p style="line-height: 24px;">A <span class="toc-counter weight3">tie</span> between two notes of the same pitch, which looks roughly like <span class="accent"><span class="musicnotation" style="letter-spacing: -6px;">&#x1D160;</span><span style="writing-mode: vertical-rl; transform: translateY(5px); line-height: 20px;">)</span><span class="musicnotation">&#x1D162;</span></span>, means to hold the first note for the duration of both. Thus, in this case, you&rsquo;d hold the note for the duration of an eighth note plus the duration of a thirty-second note, or &#8309;&frasl;&#8328; of a beat of common time.</p>
+
+		<p style="line-height: 24px;">Again, a tie should not be confused with a <span class="toc-counter weight3">slur</span> drawn between notes with <em>different</em> pitches. A slur means to play these notes <em class="toc-counter weight3">legato</em>, Italian for <em>connected</em>.</p>
+
+		<h2 class="centred" id="noteetymology">Etymology of Note Names</h2>
+		<h3 class="centred" id="commontime">Common Time</h3>
+
+		<p style="line-height: 24px;">The American names are derived from <span class="toc-counter weight3">common time</span>, written either as <span class="accent" style="font-size: 20px;">&#8308;&frasl;&#8324;</span> or with the symbol <span style="font-size: 20px;" class="accent">&#x1D134;</span>. It&rsquo;s called &ldquo;common time&rdquo; because it&rsquo;s Western music&rsquo;s most widely used time signature by far. (I&rsquo;m doing my part to change this, but I&rsquo;m only one person.) Thus, a whole note is so called because it lasts for a whole measure of <span class="accent" style="font-size: 20px;">&#8308;&frasl;&#8324;</span>; a half note lasts for half a measure of <span class="accent" style="font-size: 20px;">&#8308;&frasl;&#8324;</span>; a quarter note lasts for a quarter of a measure of <span class="accent" style="font-size: 20px;">&#8308;&frasl;&#8324;</span>; and so on.</p>
+
+		<h3 class="centred" id="allabreve"><em>Alla breve</em></h3>
+
+		<p style="line-height: 24px;">The related symbol <span style="font-size: 20px;" class="accent">&#x1D135;</span> represents <span class="accent" style="font-size: 20px;">&sup2;&frasl;&#8322;</span>, also called <em class="toc-counter weight3">alla breve</em> or <span class="toc-counter weight3">cut time</span>. This immediately raises my next point: Time signatures may look like fractions, but there are important differences. You might assume <span class="accent" style="font-size: 20px;">&#8308;&frasl;&#8324;</span> can be reduced to <span class="accent" style="font-size: 20px;">&sup2;&frasl;&#8322;</span> or even just <span class="accent" style="font-size: 20px;">&sup1;&frasl;&#8321;</span>. Likewise, you might assume that <span class="accent" style="font-size: 20px;">&#8310;&frasl;&#8328;</span> can be reduced to <span class="accent" style="font-size: 20px;">&sup3;&frasl;&#8324;</span>. However, all these sets of time signatures differ in practice.</p>
+
+		<h2 class="centred" id="timesignatures">Time Signatures</h2>
+		<h3 class="centred" id="numeratorsanddenominators">Numerators &amp; Denominators</h3>
+
+		<p style="line-height: 24px;">First, though, I need to explain what these numbers even mean. A time signature&rsquo;s denominator (its lower number, for those of you that don&rsquo;t remember your fractions) indicates which note type it counts. Thus, the 8 in <span class="accent" style="font-size: 20px;">&#8310;&frasl;&#8328;</span> counts eighth notes, while the 4 in <span class="accent" style="font-size: 20px;">&sup3;&frasl;&#8324;</span> counts quarter notes. The numerator (upper note) indicates how many of these notes occur per measure. Thus, a measure of <span class="accent" style="font-size: 20px;">&#8310;&frasl;&#8328;</span> lasts for six eighth notes, while a measure of <span class="accent" style="font-size: 20px;">&sup3;&frasl;&#8324;</span> lasts for three quarter notes.</p>
+
+		<h3 class="centred" id="34vs68">&sup3;&frasl;&#8324; vs. &#8310;&frasl;&#8328;: Simple &amp; Compound Time Signatures</h3>
+
+		<p style="line-height: 24px;">&ldquo;But those mean same thing,&rdquo; I hear you object. Well, in theory they should, but they don&rsquo;t in practice. <span class="accent" style="font-size: 20px;">&#8310;&frasl;&#8328;</span> is typically a compound meter, which subdivides its beats into threes: thus, six eighth notes in <span class="accent" style="font-size: 20px;">&#8310;&frasl;&#8328;</span> would contain two groupings of three, whereas in <span class="accent" style="font-size: 20px;">&sup3;&frasl;&#8324;</span>, they&rsquo;d contain three groupings of two. Put another way, <span class="accent" style="font-size: 20px;">&#8310;&frasl;&#8328;</span> typically has two accented beats per measure, whereas <span class="accent" style="font-size: 20px;">&sup3;&frasl;&#8324;</span> typically has three (or just one). Thus, over the same duration, you&rsquo;d count six eighth notes in <span class="accent" style="font-size: 20px;">&sup3;&frasl;&#8324;</span> and <span class="accent" style="font-size: 20px;">&#8310;&frasl;&#8328;</span> as:</p>
+
+		<table class="curved fixheight centred" id="countingouttime">
+			<thead>
+				<tr>
+					<th colspan="7" class="accent weight5">Counting Out Time</th>
+				</tr>
+				<tr class="accent weight1">
+					<th class="rightborder weight4">Meter</th>
+					<th>&#x1D160; #1</th>
+					<th>&#x1D160; #2</th>
+					<th>&#x1D160; #3</th>
+					<th>&#x1D160; #4</th>
+					<th>&#x1D160; #5</th>
+					<th>&#x1D160; #6</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="rightborder accent" style="font-size: 20px;">&sup3;&frasl;&#8324;</td>
+					<td><strong>ONE</strong></td>
+					<td>and</td>
+					<td>TWO</td>
+					<td>and</td>
+					<td>THREE</td>
+					<td>and</td>
+				</tr>
+				<tr>
+					<td class="rightborder accent" style="font-size: 20px;">&#8310;&frasl;&#8328;</td>
+					<td><strong>ONE</strong></td>
+					<td>two</td>
+					<td>three</td>
+					<td>FOUR</td>
+					<td>five</td>
+					<td>six</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p style="line-height: 24px;">Most music uses either a simple time signature (numerators of 2, 3, or 4) or a compound time signature (if a time signature&rsquo;s numerator is a multiple of 3, it usually, though not always, qualifies as compound). A piece in <span class="accent" style="font-size: 20px;">&sup3;&frasl;&#8324;</span> can easily be rewritten in <span class="accent" style="font-size: 20px;">&sup3;&frasl;&#8328;</span> simply by halving the duration of every note in the song. Likewise, a piece in <span class="accent" style="font-size: 20px;"><span style="letter-spacing: -1px;">&sup1;</span>&sup2;&frasl;&#8328;</span> can be rewritten as <span class="accent" style="font-size: 20px;">&#8308;&frasl;&#8324;</span> by using triplets. Ultimately, how to notate a piece is very much a matter of discretion.</p>
+
+		<h3 class="centred" id="complextimesignatures">Complex Time Signatures</h3>
+
+		<p style="line-height: 24px;">The third most common type of time signature is a complex time signature. These most often have numerators such as 5, 7, 10, 11, 13, and so on. These are commonplace in some non-Western music, and appeared in Greek music such as the <a href="https://en.wikipedia.org/wiki/Delphic_Hymns" target="_blank" rel="nofollow">Delphic Hymns to Apollo</a> (which were both in <span class="accent" style="font-size: 20px;">&#8309;&frasl;&#8328;</span>), but they rarely appeared in Western music until the 19th century. Modern classical works, progressive rock, game music, and various subgenres of metal frequently use them. A few well-known examples include:</p>
+
+		<h4 class="centred" id="complexexamples">Famous Works in Complex Time Signatures</h4>
+		<ul style="line-height: 24px;">
+			<li><span class="accent" style="font-size: 20px;">&#8309;&frasl;&#8324;</span>
+				<ul>
+					<li><span class="accent petitecaps weight4">Fr&eacute;d&eacute;ric Chopin</span>, <a href="https://youtu.be/Opj-2PDZ_qA" class="weight3 underline songlink" target="_blank" rel="nofollow"><em>Piano Sonata No. 1</em>, Movement 3</a> (written 1828, published 1851)</li>
+					<li><span class="accent petitecaps weight4">Gustav Holst</span>, <a href="https://youtu.be/8UfpgT9FMAk?list=list=OLAK5uy_lI9KilYfgmhQ-rCVTSfeNJ9ho6bB6sj4k" class="weight3 underline songlink" target="_blank" rel="nofollow">&ldquo;Mars, the Bringer of War&rdquo;</a> (mostly) and <a href="https://youtu.be/Qb2QrsN9UYo?list=list=OLAK5uy_lI9KilYfgmhQ-rCVTSfeNJ9ho6bB6sj4k" class="weight3 underline songlink" target="_blank" rel="nofollow">&ldquo;Neptune, the Mystic&rdquo;</a> (<em class="accent weight3">The Planets</em>, written from 1914 to 1917, premiered 1918-09-29)</li>
+					<li><span class="accent petitecaps weight4">Dave Brubeck Quartet</span>, <a href="https://youtu.be/ryA6eHZNnXY" class="weight3 underline songlink" target="_blank" rel="nofollow">&ldquo;Take Five&rdquo;</a>, composed by <span class="accent petitecaps weight4">Paul Desmond</span> (recorded 1959-07-01; released on <em class="accent weight3">Time Out</em>, 1959-12-14)</li>
+					<li><span class="accent petitecaps weight4">Lalo Schifrin</span>, <a href="https://youtu.be/O07WucFwdq8" class="weight3 underline songlink" target="_blank" rel="nofollow">&ldquo;Theme from <em>Mission: Impossible</em>&rdquo;</a> (1967)
+						<ul>
+							<li>Note: The film soundtracks feature lengthy <span class="accent" style="font-size: 20px;">&#8308;&frasl;&#8324;</span> segments, making them abominations unto Nuggan</li>
+						</ul>
+					</li>
+					<li><span class="accent petitecaps weight4">Rush</span>, intro to <a href="https://youtu.be/ftVTWDrtrlc" class="weight3 underline songlink" target="_blank" rel="nofollow">&ldquo;YYZ&rdquo;</a>, composed by <span class="accent petitecaps weight4">Geddy Lee</span> &amp; <span class="accent petitecaps weight4">Neil Peart</span> (recorded 1980; released on <em class="accent weight3">Moving Pictures</em>, 1981-02-12). (This may be just as fairly counted as syncopated <span class="accent" style="font-size: 20px;"><span style="letter-spacing: -1px;">&sup1;</span>&#8304;&frasl;&#8328;</span>).</li>
+				</ul>
+			</li>
+			<li><span class="accent" style="font-size: 20px;">&#8311;&frasl;&#8324;</span>
+				<ul>
+					<li><span class="accent petitecaps weight4">Pink Floyd</span>, <a href="https://youtu.be/2aW7HweAf3o" class="weight3 underline songlink" target="_blank" rel="nofollow">&ldquo;Money&rdquo;</a>, composed by <span class="accent petitecaps weight4">Roger Waters</span> (recorded from 1972-06-06 to 1973-01-09; released on <em class="accent weight3">The Dark Side of the Moon</em>, 1973-03-01) &ndash; mostly; the solo is partly in <span class="accent" style="font-size: 20px;">&#8308;&frasl;&#8324;</span></li>
+				</ul>
+			</li>
+			<li><span class="accent" style="font-size: 20px;">&#8313;&frasl;&#8328;</span>
+				<ul>
+					<li><span class="accent petitecaps weight4">Dave Brubeck Quartet</span>, <a href="https://youtu.be/vKNZqM0d-xo" class="weight3 underline songlink" target="_blank" rel="nofollow">&ldquo;Blue Rondo &agrave; la Turk&rdquo;</a> (recorded 1959-07-01; released on <em class="accent weight3">Time Out</em>, 1959-12-14) &ndash; mostly; one section uses <span class="accent" style="font-size: 20px;">&#8308;&frasl;&#8324;</span>
+						<ul>
+							<li>Uses an alternating pattern of three bars of <span class="accent" style="font-size: 20px;"><span style="letter-spacing: -1.5px;">&#8317;&sup2;&#8314;&sup2;&#8314;&sup2;&#8314;&sup3;</span>&#8318;&frasl;&#8328;</span> (complex meter) and one bar of <span class="accent" style="font-size: 20px;"><span style="letter-spacing: -1.5px;">&#8317;&sup3;&#8314;&sup3;&#8314;&sup3;</span>&#8318;&frasl;&#8328;</span> (compound meter), resulting in a distinctive, an off-kilter rhythm (in full: <span style="font-size: 20px;" class="accent">&#x1D160; &#x1D160; &#x1D160; &#x1D160;&#x1D16D; | &#x1D160; &#x1D160; &#x1D160; &#x1D160;&#x1D16D; | &#x1D160; &#x1D160; &#x1D160; &#x1D160;&#x1D16D; | &#x1D160;&#x1D16D; &#x1D160;&#x1D16D; &#x1D160;&#x1D16D;</span>). It was inspired by Turkish <em>aksak</em> time signatures; Brubeck heard its distinctive rhythm performed by Turkish musicians on the street and asked them where they got it, and they replied, &ldquo;This rhythm is to us what the blues is to you,&rdquo; hence the song title.</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><span class="accent" style="font-size: 20px;"><span style="letter-spacing: -2.5px;">&sup1;</span>&sup1;&frasl;&#8328;</span>
+				<ul>
+					<li><span class="accent petitecaps weight4">The Allman Brothers Band</span>, <span class="accent weight3">&ldquo;Whipping Post&rdquo;</span> opening &amp; reprises thereof, composed by <span class="accent petitecaps weight4">Gregg Allman</span> (<a href="https://youtu.be/nfrSIUE3iAE" class="weight3 underline songlink" target="_blank" rel="nofollow">studio version</a> recorded 1969-08-07 and released 1969-11-04 on <em class="accent weight3">The Allman Brothers Band</em>; <a href="https://youtu.be/4ppYldfTMiE" class="weight3 underline songlink" target="_blank" rel="nofollow">definitive live version</a> recorded 1971-03-13 and released 1971-07-06 on <em class="accent weight3">At Fillmore East</em>) 
+						<ul>
+							<li>Gregg Allman thought of it as <span class="accent" style="font-size: 20px;"><span style="letter-spacing: -1.5px;">&#8317;&sup3;&#8314;&sup3;&#8314;&sup3;&#8314;&sup2;</span>&#8318;&frasl;&#8328;</span>, which is entirely reasonable</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<h3 class="centred" title="decodingtimesignatures">Decoding Time Signatures</h3>
+
+		<p style="line-height: 24px;">Figuring out time signatures by ear can be tricky, especially because a lot of how to notate time signatures is up to a composer&rsquo;s discretion. The most important question is &ldquo;What would you tap your foot to?&rdquo; Finding the &ldquo;pulse&rdquo; of a piece of music is crucial to understanding its time signature.</p>
+		
+		<p style="line-height: 24px;">An important caveat here is that the division of time must be steady &ndash; &ldquo;Theme from <em>Mission: Impossible</em>&rdquo; has four accents per measure, but they occur at syncopated (irregular) intervals. The division actually goes as follows:</p>
+
+		<table class="curved fixheight centred" id="missionimpossible">
+			<thead>
+				<tr>
+					<th colspan="10" class="accent weight5">Rhythmic Analysis of the <em>Mission: Impossible</em> Theme</th>
+				</tr>
+				<tr class="accent weight4">
+					<th>1</th>
+					<th></th>
+					<th>2</th>
+					<th></th>
+					<th>3</th>
+					<th></th>
+					<th>4</th>
+					<th></th>
+					<th>5</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="weight4">
+					<td>X</td>
+					<td></td>
+					<td></td>
+					<td>X</td>
+					<td></td>
+					<td></td>
+					<td>X</td>
+					<td></td>
+					<td>X</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		Similarly, the intro to Rush&rsquo;s &ldquo;YYZ&rdquo; goes as follows:
+
+		<table class="curved fixheight centred" id="yyz">
+			<thead>
+				<tr>
+					<th colspan="11" class="accent weight5">Rhythmic Analysis of Rush&rsquo;s &ldquo;YYZ&rdquo;</th>
+				</tr>
+				<tr class="accent weight4">
+					<th class="rightborder"></th>
+					<th>1</th>
+					<th><span style="visibility: hidden;">&mdash;</span></th>
+					<th>2</th>
+					<th><span style="visibility: hidden;">&mdash;</span></th>
+					<th>3</th>
+					<th><span style="visibility: hidden;">&mdash;</span></th>
+					<th>4</th>
+					<th><span style="visibility: hidden;">&mdash;</span></th>
+					<th>5</th>
+					<th><span style="visibility: hidden;">&mdash;</span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="weight4">
+					<td class="rightborder"><span class="weight0">Bar 1</span></td>
+					<td>&mdash;</td>
+					<td></td>
+					<td>&bull;</td>
+					<td>&mdash;</td>
+					<td> </td>
+					<td>&mdash;</td>
+					<td></td>
+					<td>&mdash;</td>
+					<td><span style="visibility: hidden;">&mdash;</span></td>
+					<td>&bull;</td>
+				</tr>
+				<tr class="weight4">
+					<td class="rightborder"><span class="weight0">Bar 2</span></td>
+					<td>&mdash;</td>
+					<td></td>
+					<td>&mdash;</td>
+					<td> </td>
+					<td>&mdash;</td>
+					<td></td>
+					<td>&mdash;</td>
+					<td></td>
+					<td>&bull;</td>
+					<td>&bull;</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p style="line-height: 24px;">Observant readers may have noticed that this spells out the Morse code for &ldquo;YYZ&rdquo; (the IATA airport identification code for Toronto International Airport). This intro has lived rent-free in my head for over 20 years. (Also, note that since Rush are Canadian, Z is pronounced <em>zed</em>, and while I&rsquo;m at it, their drummer&rsquo;s name is pronounced <em>Piert</em>, not <em>Pert</em>.)</p>
+
+		<p style="line-height: 24px;">Finding the even pulse can be tricky at first, especially in songs with a lot of syncopation, but it gets easier. If you&rsquo;re having trouble figuring out complex time signatures, I recommend increasing the amount of listening you do to genres known for using them often. Modern classical music, soundtracks, progressive rock, several genres of metal (progressive metal, technical death metal, and black metal in particular), and the aptly named genres of math rock and mathcore tend to love them. It&rsquo;s also worth increasing your listening to genres known for using a lot of syncopation, such as jazz, funk, and most kinds of dance music.</p>
+
+		<p style="line-height: 24px;">Irrational time signatures have non-power-of-two denominators: thus, <span class="accent" style="font-size: 20px;">&#8310;&frasl;&#8326;</span> counts triplet quarter notes (<span class="accent" style="font-size: 20px;"><span style="font-size: 24px;">&#8310;</span>&#x1D15F;</span>), and <span class="accent" style="font-size: 20px;">&#8309;&frasl;&#8325;</span> counts quintuplet half notes (<span class="accent" style="font-size: 20px;"><span style="font-size: 24px;">&#8309;</span>&#x1D15E;</span>). Don&rsquo;t worry if this doesn&rsquo;t make sense; composers tend to avoid them since changing the tempo can accomplish the same thing in a less confusing way, and a lot of DAWs don&rsquo;t even support them, so you&rsquo;ll probably never encounter them. Speaking of which, it&rsquo;s time to explain tempi and time signature modulation, the latter of which can render irrational time signatures unnecessary.</p>
+
+		<h2 class="centred" id="tempo">Tempo and Beats Per Minute</h2>
+
+		<p style="line-height: 24px;">Tempi (singular: tempo, the Italian word for <em>time</em>) are typically expressed in the manner <span class="accent">&#x1D15F; = 120</span>, meaning a tempo of 120 quarter notes per minute, or two per second. <span class="accent">&#x1D15E; = 60</span> and <span class="accent">&#x1D160; = 240</span> signify the same tempo. Tempi typically use the time signature&rsquo;s denominator to signify beats per minute (bpm).</p>
+
+		<h2 class="centred" id="advancedrhythm">Advanced Rhythm</h2>
+
+		<h3 class="centred" id="polyrhythms">Polyrhythms</h3>
+
+		<p style="line-height: 24px;">A polyrhythm occurs when two simultaneous rhythms suggest different time signatures. Most commonly, you&rsquo;ll see 3:2 polyrhythms, expressed in forms like <span class="accent" style="font-size: 20px;"><span style="font-size: 24px;">&sup3;</span>&#x1D160;</span> against <span class="accent" style="font-size: 20px;">&#x1D160;</span>. This would result in the following rhythm across the duration of a beat of <span class="accent" style="font-size: 20px;">&#8308;&frasl;&#8324;</span>:</p>
+
+		<table class="curved fixheight centred" id="3to2polyrhythm">
+			<thead>
+				<tr>
+					<th colspan="7" class="accent weight5">3:2 Polyrhythms: <span style="font-size: 125%;">&sup3;&#x1D160;</span> against <span style="font-size: 125%;">&#x1D160;</span></th>
+				</tr>
+				<tr class="accent weight4">
+					<th class="rightborder">Note</th>
+					<th>1</th>
+					<th>1&sup1;&frasl;&#8326;</th>
+					<th>1&sup1;&frasl;&#8323;</th>
+					<th>1&sup1;&frasl;&#8322;</th>
+					<th>1&sup2;&frasl;&#8323;</th>
+					<th>1&#8309;&frasl;&#8326;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="rightborder">&sup3;&#x1D160;</td>
+					<td>&sup3;&#x1D160;</td>
+					<td></td>
+					<td>&sup3;&#x1D160;</td>
+					<td></td>
+					<td>&sup3;&#x1D160;</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="rightborder">&#x1D160;</td>
+					<td>&#x1D160;</td>
+					<td></td>
+					<td></td>
+					<td>&#x1D160;</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p style="line-height: 24px;">The next most common is 4:3, seen in forms like <span class="accent" style="font-size: 20px;"><span style="font-size: 24px;">&sup3;</span>&#x1D160;</span> against <span class="accent" style="font-size: 20px;">&#x1D161;</span>, which would result in the following rhythm:</p>
+
+
+		<table class="curved fixheight centred" id="4to3polyrhythm">
+			<thead>
+				<tr>
+					<th colspan="13" class="accent weight5">4:3 Polyrhythms: <span style="font-size: 125%;">&sup3;&#x1D160;</span> against <span style="font-size: 125%;">&#x1D161;</span></th>
+				</tr>
+				<tr class="accent weight4">
+					<th class="rightborder">Note</th>
+					<th>1</th>
+					<th>1&sup1;&frasl;<span style="letter-spacing: -1px;">&#8321;</span>&#8322;</th>
+					<th>1&sup1;&frasl;&#8326;</th>
+					<th>1&sup1;&frasl;&#8324;</th>
+					<th>1&sup1;&frasl;&#8323;</th>
+					<th>1&#8309;&frasl;<span style="letter-spacing: -1px;">&#8321;</span>&#8322;</th>
+					<th>1&sup1;&frasl;&#8322;</th>
+					<th>1&#8311;&frasl;<span style="letter-spacing: -1px;">&#8321;</span>&#8322;</th>
+					<th>1&sup2;&frasl;&#8323;</th>
+					<th>1&sup3;&frasl;&#8324;</th>
+					<th>1&#8309;&frasl;&#8326;</th>
+					<th>1<span style="letter-spacing: -1px;">&sup1;</span>&sup1;&frasl;<span style="letter-spacing: -1px;">&#8321;</span>&#8322;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="rightborder">&sup3;&#x1D160;</td>
+					<td>&sup3;&#x1D160;</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>&sup3;&#x1D160;</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>&sup3;&#x1D160;</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="rightborder">&#x1D161;</td>
+					<td>&#x1D161;</td>
+					<td></td>
+					<td></td>
+					<td>&#x1D161;</td>
+					<td></td>
+					<td></td>
+					<td>&#x1D161;</td>
+					<td></td>
+					<td></td>
+					<td>&#x1D161;</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p style="line-height: 24px;" id="polyrhythmexample">Because just seeing this printed out may not clarify how these actually sound, I&rsquo;ve put together a <a href="polyrhythm_demonstration.flac" class="underline songlink weight3" target="_blank" rel="nofollow">demonstration of several polyrhythms</a>. In order:</p>
+
+		<table class="curved fixheight centred" id="polyrhythmdemonstration">
+			<thead>
+				<tr><th colspan="8" class="accent weight5">Key to Polyrhythm Demonstration</th></tr>
+				<tr class="accent weight4">
+					<th>Start</th>
+					<th class="rightborder">End</th>
+					<th>Kick</th>
+					<th class="mediumrightborder">Snare</th>
+					<th class="mediumrightborder">Hi-Hat</th>
+					<th>Floor Tom</th>
+					<th>Medium Tom</th>
+					<th>High Tom</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>0:00</td>
+					<td class="rightborder">0:16</td>
+					<td>3</td>
+					<td class="mediumrightborder">2</td>
+					<td class="mediumrightborder">6</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>0:16</td>
+					<td class="rightborder">0:32</td>
+					<td>4</td>
+					<td class="mediumrightborder">3</td>
+					<td class="mediumrightborder">12</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>0:32</td>
+					<td class="rightborder">0:48</td>
+					<td>5</td>
+					<td class="mediumrightborder">2</td>
+					<td class="mediumrightborder">10</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>0:48</td>
+					<td class="rightborder">1:04</td>
+					<td>5</td>
+					<td class="mediumrightborder">3</td>
+					<td class="mediumrightborder">15</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>1:04</td>
+					<td class="rightborder">1:20</td>
+					<td>5</td>
+					<td class="mediumrightborder">4</td>
+					<td class="mediumrightborder">20</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>1:20</td>
+					<td class="rightborder">1:36</td>
+					<td>6</td>
+					<td class="mediumrightborder">5</td>
+					<td class="mediumrightborder">30</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>1:36</td>
+					<td class="rightborder">1:52</td>
+					<td>7</td>
+					<td class="mediumrightborder">2</td>
+					<td class="mediumrightborder">14</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>1:52</td>
+					<td class="rightborder">2:08</td>
+					<td>7</td>
+					<td class="mediumrightborder">3</td>
+					<td class="mediumrightborder">21</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>2:08</td>
+					<td class="rightborder">2:24</td>
+					<td>7</td>
+					<td class="mediumrightborder">4</td>
+					<td class="mediumrightborder">28</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>2:24</td>
+					<td class="rightborder">2:40</td>
+					<td>7</td>
+					<td class="mediumrightborder">5</td>
+					<td class="mediumrightborder">35</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>2:40</td>
+					<td class="rightborder">2:56</td>
+					<td>7</td>
+					<td class="mediumrightborder">6</td>
+					<td class="mediumrightborder">42</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>2:56</td>
+					<td class="rightborder">3:12</td>
+					<td>7</td>
+					<td class="mediumrightborder">6</td>
+					<td class="mediumrightborder">5</td>
+					<td>4</td>
+					<td>3</td>
+					<td>2</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p style="line-height: 24px;">In all except the last demonstration, the kick drum and snare represent a particular polyrhythm (e.g., 0:00-0:16 demonstrate a 3:2 polyrhythm), with the hi-hat serving as a metronome of sorts. Math-savvy individuals will note that, until the last demonstration, the hi-hat&rsquo;s number is always the multiple of snare and the kick drum&rsquo;s numbers. This is not coincidental. The final demonstration demonstrates a 7:6:5:4:3:2 polyrhythm.</p>
+
+		<h3 class="centred" id="timesignaturemodulation">Time Signature Modulation</h3>
+
+		<p style="line-height: 24px;">Occasionally, you&rsquo;ll encounter time signature modulation. If a piece in <span class="accent" style="font-size: 20px;">&sup3;&frasl;&#8324;</span> with 90 beats per minute suddenly modulates to <span class="accent" style="font-size: 20px;">&sup2;&frasl;&#8324;</span> with 60 beats per minute, you&rsquo;ve kept the same number of <em>measures</em> per minute but redefined the duration of a note. This will often be notated along the lines <span class="accent"><span style="font-size: 20px;">&#x1D15F;</span> = <span style="font-size: 20px;">&#x1D15F;&#x1D16D;</span></span>, in this case indicating that a quarter note has been redefined to last as long as a dotted quarter note had previously lasted. Often times, time signature modulation happens after a polyrhythm became easier to express in a different time signature (maybe the number of parts that used triplets wound up becoming greater than the number of parts that didn&rsquo;t, or maybe the parts that didn&rsquo;t use triplets no longer even existed).</p>
+
+		<p style="line-height: 24px;" id="modulationexample">I have put together a demonstration of this as well. <a href="sympathy_for_the_time_signature.flac" class="weight3 underline songlink" target="_blank" rel="nofollow">This piece</a>, which I&rsquo;ve somewhat cheekily entitled &ldquo;Sympathy for the Time Signature&rdquo;, contains the following structure:</p>
+
+		<table class="curved fixheight centred" id="sympathykey">
+			<thead>
+				<tr><th colspan="7" class="accent weight5">Structure of &ldquo;Sympathy for the Time Signature&rdquo;</th></tr>
+				<tr class="accent weight4">
+					<th>#1</th>
+					<th>#2</th>
+					<th>#3</th>
+					<th class="rightborder">#4</th>
+					<th>Tempo</th>
+					<th>Meter</th>
+					<th>Chords</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>0:00&ndash;0:10</td>
+					<td>1:02.5&ndash;1:12.5</td>
+					<td>2:05&ndash;2:15</td>
+					<td class="rightborder">3:07.5&ndash;3:17.5</td>
+					<td>120</td>
+					<td>&#8309;&frasl;&#8324;</td>
+					<td class="left">E, D, A, E</td>
+					<!--Please allow me to introduce myself. I'm a man of wealth and taste.-->
+				</tr>
+				<tr>
+					<td>0:10&ndash;0:20</td>
+					<td>1:12.5&ndash;1:22.5</td>
+					<td>2:15&ndash;2:25</td>
+					<td class="rightborder">3:17.5&ndash;3:27.5</td>
+					<td>96</td>
+					<td>&#8308;&frasl;&#8324;</td>
+					<td class="left">E, D, A, E</td>
+					<!--I've been around for a long, long year, stole many a man's soul and faith-->
+				</tr>
+				<tr>
+					<td>0:20&ndash;0:30</td>
+					<td>1:22.5&ndash;1:32.5</td>
+					<td>2:25&ndash;2:35</td>
+					<td class="rightborder">3:27.5&ndash;3:37.5</td>
+					<td>72</td>
+					<td>&sup3;&frasl;&#8324;</td>
+					<td class="left">E, D, A, E</td>
+					<!--I was around when Jesus Christ had his moment of doubt and pain-->
+				</tr>
+				<tr>
+					<td class="right">0:30&ndash;0:42.5</td>
+					<td class="left">1:32.5&ndash;1:45</td>
+					<td class="right">2:35&ndash;2:47.5</td>
+					<td class="rightborder left">3:37.5&ndash;3:50</td>
+					<td>48</td>
+					<td>&sup2;&frasl;&#8324;</td>
+					<td>E, D, A, E, E</td>
+					<!--Made damn sure that Pilate washed his hands and sealed his fate-->
+				</tr>
+				<tr>
+					<td class="right">0:42.5&ndash;0:52.5</td>
+					<td>1:45&ndash;1:55</td>
+					<td class="right">2:47.5&ndash;2:57.5</td>
+					<td class="rightborder">3:50&ndash;4:00</td>
+					<td>168</td>
+					<td>&#8311;&frasl;&#8324;</td>
+					<td class="left">B, B, E, E</td>
+					<!--Pleased to meet you, hope you guess my name-->
+				</tr>
+				<tr>
+					<td>0:52.5&ndash;1:02.5</td>
+					<td>1:55&ndash;2:05</td>
+					<td>2:57.5&ndash;3:07.5</td>
+					<td class="rightborder">4:00&ndash;4:10</td>
+					<td>144</td>
+					<td>&#8310;&frasl;&#8324;</td>
+					<td class="left">B, B, E, E</td>
+					<!--But what's puzzling you is just the nature of my game-->
+				</tr>
+			</tbody>
+		</table>
+
+		<p style="line-height: 24px;">Observant readers may have noticed that in every row, dividing the tempo by the time signature&rsquo;s numerator yields 24. This means that despite this piece&rsquo;s frequently changing tempi, its measures have a constant length of 2.5 seconds. Observant listeners, meanwhile, may have recognized that this piece has a familiar chord progression: I borrowed it outright from the Rolling Stones&rsquo; &ldquo;Sympathy for the Devil&rdquo;.</p>
+	</body>
+</html>

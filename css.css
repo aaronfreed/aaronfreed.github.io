@@ -2179,6 +2179,14 @@ th.sidepad6,
 }
 td:first-child.sidepad2, td:first-child.sidepad4, td:first-child.sidepad6 {padding-left: 0px;}
 td:last-child.sidepad2, td:last-child.sidepad4, td:last-child.sidepad6 {padding-right: 0px;}
+td.rightpad8,
+th.rightpad8 {
+	padding-right: 8px;
+}
+td.leftpad8,
+th.leftpad8 {
+	padding-left: 8px;
+}
 td.rightpad6,
 th.rightpad6 {
 	padding-right: 6px;

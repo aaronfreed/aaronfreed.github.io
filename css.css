@@ -1371,9 +1371,6 @@ ol.toc7 li::before {
 	font-weight: var(--weight1);
 	text-decoration-thickness: 0.375px;
 }
-.dso :is(li::before) {
-	color: var(--accent);
-}
 
 ::is(ol.toc) li::before
 {
@@ -1383,30 +1380,30 @@ ol.toc7 li::before {
 }
 
 .dso ol.toc :is(li, li a:link, li a:visited, li::before),
-.dso ol.toc li::before {
+.dso ol.toc li::marker {
 	font-weight: var(--weight4);
 	text-decoration-thickness: 1.5px;
 }
-.dso ol.toc ol :is(li, li a:link, li a:visited, li::before),
-.dso ol.toc ol li::before {
+.dso ol.toc ol :is(li, li a:link, li a:visited, li::marker),
+.dso ol.toc ol li::marker {
 	font-weight: var(--weight3);
 	text-decoration-thickness: 1.375px;
 }
-.dso ol.toc ol ol :is(li, li a:link, li a:visited, li::before),
-.dso ol.toc ol ol li::before {
+.dso ol.toc ol ol :is(li, li a:link, li a:visited, li::marker),
+.dso ol.toc ol ol li::marker {
 	font-weight: var(--weight2);
 	text-decoration-thickness: 0.5px;
 }
-.dso ol.toc ol ol ol :is(li, li a:link, li a:visited, li::before),
-.dso ol.toc ol ol ol li::before {
+.dso ol.toc ol ol ol :is(li, li a:link, li a:visited, li::marker),
+.dso ol.toc ol ol ol li::marker {
 	font-weight: var(--weight1);
 	text-decoration-thickness: 0.375px;
 }
-.dso :is(li::before) {
-	color: var(--accent);
+.dso :is(li::marker) {
+	color: var(--heading-color);
 }
 
-ol.songtranslations {
+/*ol.songtranslations {
 	counter-reset: counter1;
 	list-style-type: none;
 }
@@ -1445,14 +1442,14 @@ ol.songtranslations > li > ol > li > ol.romanmovement > li::before {
 ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
 	counter-increment: counter3;
 	content: counters(counter1, ".") "." counters(counter2, ".") "." counters(counter3, ".", lower-greek) ". ";
-}
+}*/
 
-li.clearafter::after {
+/*li.clearafter::after {
 	content: "";
 	clear: both;
 	display: table; 
 	padding-bottom: 0px;
-}
+}*/
 
 /* a bunch of weird stuff for the Forge manual table of contents */
 .forgecontents ol.toc {
@@ -1464,7 +1461,7 @@ li.clearafter::after {
 	font-weight: var(--weight6);
 	text-decoration-thickness: 2.25px;
 }
-.forgecontents ol.toc li::before {
+.forgecontents ol.toc li::marker {
 	counter-increment: i1;
 	content: counter(i1, upper-roman) ". ";
 	font-weight: var(--weight6);
@@ -1485,7 +1482,7 @@ li.clearafter::after {
 	font-size: 18px;
 	line-height: 125%;
 }
-.forgecontents ol.toc ol li::before {
+.forgecontents ol.toc ol li::marker {
 	font-weight: var(--weight5);
 	text-decoration-thickness: 2px;
 	counter-increment: i2;
@@ -1503,7 +1500,7 @@ li.clearafter::after {
 	text-decoration-thickness: 1.5px;
 	font-size: 16px;
 }
-.forgecontents ol.toc ol ol li::before {
+.forgecontents ol.toc ol ol li::marker {
 	font-weight: var(--weight4);
 	counter-increment: i3;
 	content: "[" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "] "
@@ -1519,7 +1516,7 @@ li.clearafter::after {
 	text-decoration-thickness: 1.375px;
 	font-style: inherit;
 }
-.forgecontents ol.toc ol ol ol li::before {
+.forgecontents ol.toc ol ol ol li::marker {
 	font-weight: var(--weight3);
 	counter-increment: i4;
 	font-style: inherit;
@@ -1535,7 +1532,7 @@ li.clearafter::after {
 	text-decoration-thickness: 0.5px;
 	font-size: 16px;
 }
-.forgecontents ol.toc ol ol ol ol li::before {
+.forgecontents ol.toc ol ol ol ol li::marker {
 	font-weight: var(--weight2);
 	text-decoration-thickness: 0.5px;
 	counter-increment: i5;
@@ -1612,7 +1609,7 @@ ol.upperroman {
 .istoria ol.toc {
 	margin-left: 0px;
 }
-.istoria .toc li::before {
+.istoria .toc li::marker {
 	float: left;
 	text-align: right;
 	padding-right: 5px;
@@ -2490,18 +2487,52 @@ li.weight8,
 .fixheight {
 	line-height: 133.33333%;
 }
-.fixheight :is(h1, h2, h3, h4) {
-	line-height: initial;
+.musictheory :is(p, td, th, .fixheight) {
+	line-height: 28px;
 }
 .discography .fixheight,
 .discography .fixheight :is(td, th) {
 	line-height: 21px;
 }
+:is(.musictheory, .fixheight) :is(h1, h2, h3, h4, .sectionbreak) {
+	line-height: initial;
+}
 .toc-counter {
 	color: var(--toc-counter);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
-/* a very stupid way of doing this, but it works? */
+.blue-list-numbers li::marker {
+	color: var(--heading-color);
+}
+.musictheory .timesignature {
+	color: var(--heading-color);
+	font-size: 15px;
+	line-height: .9;
+	text-align: center;
+}
+.musictheory span.timesignature {
+	display: inline-block;
+	height: 0px;
+	vertical-align: text-top;
+	transform: translateY(-2px);
+}
+.musictheory a:link .timesignature {
+	color: var(--link);
+}
+.musictheory a:visited .timesignature {
+	color: var(--link-visited);
+}
+.musictheory a:hover .timesignature {
+	color: var(--link-hover);
+}
+.musictheory a:active .timesignature {
+	color: var(--link-active);
+}
+.musictheory td.timesignature {
+	vertical-align: middle;
+}
+
+/* a very stupid way of doing this, but it works? sort of? */
 .radical-number {
 	text-decoration: underline;
 	text-decoration-skip-ink: none;
@@ -2607,14 +2638,6 @@ li.weight8,
 }
 .compositions2023-2024 :is(ol.normal, ol.shortmargin) li {
 	margin-top: 8px;
-}
-.compositions2023-2024 ol.interpolations ol li::before {
-	color: var(--toc-counter);
-	text-decoration-color: var(--toc-counter-translucent);
-} 
-.compositions2023-2024 li.accentbefore::before {
-	color: var(--heading-color);
-	text-decoration-color: var(--heading-color-translucent);
 }
 .compositions2023-2024 blockquote {
 	margin-top: 8px; 

@@ -40,124 +40,129 @@ window.onload = function () {makeAllSortable();};
 		</script>
 	</head>
 	<body>
-        <h1 class="petitecaps centred"><em>Marathon 2</em>/<em>Infinity</em> Damage per Second</h1>
-		<p>Minimum, median, and maximum single-target damage per second for most weapons in the game&hellip; almost. I forgot the pistol, and I didn&rsquo;t realize at the time I compiled this that the game will never select the maximum possible &ldquo;Damage Random&rdquo; value in the physics, so the median and maximum values are slightly higher than they should be. The minimum values are exactly correct. I&rsquo;ll recalculate everything when time permits.</p>
-
-		<table>
-			<thead>
-				<tr>
-					<th>weapon</th>
-					<th class="right">min</th>
-					<th class="right">med</th>
-					<th class="right">max</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>fusion (19 min + 1 maj)&sup1;</td>
-					<td class="integer">65.88</td>
-					<td class="integer">76.52</td>
-					<td class="integer">87.16</td>
-				</tr>
-				<tr>
-					<td>fusion (3 min + 5 maj)&sup1;</td>
-					<td class="integer">76.56</td>
-					<td class="integer">86.72</td>
-					<td class="integer">96.88</td>
-				</tr>
-				<tr>
-					<td>missile launcher&sup2;</td>
-					<td class="integer">102.74</td>
-					<td class="integer">113.01</td>
-					<td class="integer">123.29</td>
-				</tr>
-				<tr>
-					<td>alien weapon&sup3;</td>
-					<td class="integer">100.00</td>
-					<td class="integer">120.00</td>
-					<td class="integer">140.00</td>
-				</tr>
-				<tr>
-					<td>grenades&sup2;</td>
-					<td class="integer">112.75</td>
-					<td class="integer">126.85</td>
-					<td class="integer">140.94</td>
-				</tr>
-				<tr>
-					<td>single shotgun</td>
-					<td class="integer">120.00</td>
-					<td class="integer">132.00</td>
-					<td class="integer">144.00</td>
-				</tr>
-				<tr>
-					<td>assault rifle</td>
-					<td class="integer">104.78</td>
-					<td class="integer">139.70</td>
-					<td class="integer">174.63</td>
-				</tr>
-				<tr>
-					<td>smg</td>
-					<td class="integer">112.21</td>
-					<td class="integer">149.61</td>
-					<td class="integer">187.01</td>
-				</tr>
-				<tr>
-					<td>fusion (19 min + 1 maj, enemy weakness)&sup1;</td>
-					<td class="integer">131.76</td>
-					<td class="integer">153.04</td>
-					<td class="integer">174.32</td>
-				</tr>
-				<tr>
-					<td>fusion (3 min + 5 maj, enemy weakness)&sup1;</td>
-					<td class="integer">153.13</td>
-					<td class="integer">173.44</td>
-					<td class="integer">193.75</td>
-				</tr>
-				<tr>
-					<td>flamethrower</td>
-					<td class="integer">186.67</td>
-					<td class="integer">233.33</td>
-					<td class="integer">280.00</td>
-				</tr>
-				<tr>
-					<td>assault rifle + grenades&sup2;</td>
-					<td class="integer">188.36</td>
-					<td class="integer">233.73</td>
-					<td class="integer">279.10</td>
-				</tr>
-				<tr>
-					<td>dual shotguns</td>
-					<td class="integer">240.00</td>
-					<td class="integer">264.00</td>
-					<td class="integer">288.00</td>
-				</tr>
-			</tbody>
-		</table>
-        <p></p>
-		<table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Note</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td valign="top">1.</td>
-                    <td>
-                        <p class="upperpara">assumes optimal firing speed for charged shots &ndash; DPS will be lower in practice.</p>
-                        <p class="lowerpara">also, it&rsquo;s always most efficient to fire a charged shot on the last charge of a fusion battery and to use three uncharged shots before then; whether it&rsquo;s preferable to use 19 uncharged + 1 charged shots or 3 uncharged + 5 charged shots depends on whether you care more about ammo conservation or DPS.</p>
-                    </td>        
-                </tr>
-                <tr>
-                    <td valign="top">2.</td>
-                    <td>can have higher overall DPS if explosives hit multiple targets</td>
-                </tr>
-                <tr>
-                    <td valign="top">3.</td>
-                    <td>lower damage output on kindergarten and easy; cannot reload; between 25 and 50 shots per weapon</td>
-                </tr>
-            </tbody>
-        </table>
+		<header>
+        	<h1 class="petitecaps centred"><em>Marathon 2</em>/<em>Infinity</em> Damage per Second</h1>
+			<p>Minimum, median, and maximum single-target damage per second for most weapons in the game&hellip; almost. I forgot the pistol, and I didn&rsquo;t realize at the time I compiled this that the game will never select the maximum possible &ldquo;Damage Random&rdquo; value in the physics, so the median and maximum values are slightly higher than they should be. The minimum values are exactly correct. I&rsquo;ll recalculate everything when time permits.</p>
+		</header>
+		<main>
+			<table>
+				<thead>
+					<tr>
+						<th>weapon</th>
+						<th class="right">min</th>
+						<th class="right">med</th>
+						<th class="right">max</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>fusion (19 min + 1 maj)&sup1;</td>
+						<td class="integer">65.88</td>
+						<td class="integer">76.52</td>
+						<td class="integer">87.16</td>
+					</tr>
+					<tr>
+						<td>fusion (3 min + 5 maj)&sup1;</td>
+						<td class="integer">76.56</td>
+						<td class="integer">86.72</td>
+						<td class="integer">96.88</td>
+					</tr>
+					<tr>
+						<td>missile launcher&sup2;</td>
+						<td class="integer">102.74</td>
+						<td class="integer">113.01</td>
+						<td class="integer">123.29</td>
+					</tr>
+					<tr>
+						<td>alien weapon&sup3;</td>
+						<td class="integer">100.00</td>
+						<td class="integer">120.00</td>
+						<td class="integer">140.00</td>
+					</tr>
+					<tr>
+						<td>grenades&sup2;</td>
+						<td class="integer">112.75</td>
+						<td class="integer">126.85</td>
+						<td class="integer">140.94</td>
+					</tr>
+					<tr>
+						<td>single shotgun</td>
+						<td class="integer">120.00</td>
+						<td class="integer">132.00</td>
+						<td class="integer">144.00</td>
+					</tr>
+					<tr>
+						<td>assault rifle</td>
+						<td class="integer">104.78</td>
+						<td class="integer">139.70</td>
+						<td class="integer">174.63</td>
+					</tr>
+					<tr>
+						<td>smg</td>
+						<td class="integer">112.21</td>
+						<td class="integer">149.61</td>
+						<td class="integer">187.01</td>
+					</tr>
+					<tr>
+						<td>fusion (19 min + 1 maj, enemy weakness)&sup1;</td>
+						<td class="integer">131.76</td>
+						<td class="integer">153.04</td>
+						<td class="integer">174.32</td>
+					</tr>
+					<tr>
+						<td>fusion (3 min + 5 maj, enemy weakness)&sup1;</td>
+						<td class="integer">153.13</td>
+						<td class="integer">173.44</td>
+						<td class="integer">193.75</td>
+					</tr>
+					<tr>
+						<td>flamethrower</td>
+						<td class="integer">186.67</td>
+						<td class="integer">233.33</td>
+						<td class="integer">280.00</td>
+					</tr>
+					<tr>
+						<td>assault rifle + grenades&sup2;</td>
+						<td class="integer">188.36</td>
+						<td class="integer">233.73</td>
+						<td class="integer">279.10</td>
+					</tr>
+					<tr>
+						<td>dual shotguns</td>
+						<td class="integer">240.00</td>
+						<td class="integer">264.00</td>
+						<td class="integer">288.00</td>
+					</tr>
+				</tbody>
+			</table>
+			<p></p>
+		</main>
+		<footer>
+			<table>
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Note</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td valign="top">1.</td>
+						<td>
+							<p class="upperpara">assumes optimal firing speed for charged shots &ndash; DPS will be lower in practice.</p>
+							<p class="lowerpara">also, it&rsquo;s always most efficient to fire a charged shot on the last charge of a fusion battery and to use three uncharged shots before then; whether it&rsquo;s preferable to use 19 uncharged + 1 charged shots or 3 uncharged + 5 charged shots depends on whether you care more about ammo conservation or DPS.</p>
+						</td>        
+					</tr>
+					<tr>
+						<td valign="top">2.</td>
+						<td>can have higher overall DPS if explosives hit multiple targets</td>
+					</tr>
+					<tr>
+						<td valign="top">3.</td>
+						<td>lower damage output on kindergarten and easy; cannot reload; between 25 and 50 shots per weapon</td>
+					</tr>
+				</tbody>
+			</table>
+		</footer>
 	</body>
 </html>

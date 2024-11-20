@@ -394,10 +394,10 @@
 		color: inherit;
 	}
 	spoiler.chronicles::before {
-		content: "Chronicles spoiler, hover/select to view:";
+		content: "Chronicles spoiler; hover/select to view";
 	}
 	spoiler.rubicon::before {
-		content: "Rubicon spoiler, hover/select to view:";
+		content: "Rubicon spoiler; hover/select to view";
 	}
 	spoiler::before {
 		color: var(--link);
@@ -417,6 +417,9 @@
 		color: var(--link-active);
 		text-decoration-color: var(--link-active-translucent);
 		text-decoration: underline;
+	}
+	.light spoiler::before {
+		font-weight: var(--weight3);
 	}
 
 	.lyrics :is(td, th) {

@@ -2103,16 +2103,16 @@ code {
 :is(.musicalmodes, table.curved) tr {
 	border: 1px solid var(--offset-level-2);
 }
-.lighttopborder {
+.lighttopborder, .lighttopborder tr {
 	border-top: 1px solid var(--offset-level-2);
 }
-.lightleftborder {
+.lightleftborder, .lightleftborder tr {
 	border-left: 1px solid var(--offset-level-2);
 }
-.lightrightborder {
+.lightrightborder, .lightrightborder tr {
 	border-right: 1px solid var(--offset-level-2);
 }
-.lightbottomborder {
+.lightbottomborder, .lightbottomborder tr {
 	border-bottom: 1px solid var(--offset-level-2);
 }
 .mediumtopborder {

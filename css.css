@@ -875,21 +875,29 @@ ol.dso-lps {
 	system: fixed;
 	symbols: '1.1' '1.2' '1.3' '1.4' '1.5' '1.6' '1.7' '1.8'
 	         '2.1' '2.2' '2.3' '2.4' '2.5' '2.6' '2.7';
-	suffix: '. '
+	suffix: '. ';
 }
 @counter-style comp2023-2024movements {
 	system: fixed;
 	symbols: '1.1.a' '1.1.b' '1.1.c' '1.2.a' '1.2.b' '1.2.c' '1.4.a' '1.4.b'
 	         '1.5.i' '1.5.ii' '1.6.α' '1.6.β' '1.7.a' '1.7.b' '1.8.a' '1.8.b'
 	         '2.1.a' '2.1.b' '2.2.a' '2.2.b' '2.3.α' '2.3.β' '2.3.γ' '2.3.δ'
-	         '2.5.i' '2.5.ii' '2.6.a' '2.6.b' '2.7.i' '2.7.ii';
-	suffix: '. '
+	         '2.5.i' '2.5.ii' '2.7.i' '2.7.ii';
+	suffix: '. ';
+}
+@counter-style comp2023-2024appendices {
+	system: fixed;
+	symbols: 'A1' 'A2' 'A3' 'A4' 'A5' 'A6' 'A7' 'A8';
+	suffix: '. ';
 }
 ol.comp2023-2024 {
 	list-style: comp2023-2024;
 }
 ol.comp2023-2024movements {
 	list-style: comp2023-2024movements;
+}
+ol.comp2023-2024appendices {
+	list-style: comp2023-2024appendices;
 }
 
 /* reminder to self about CSS variables:

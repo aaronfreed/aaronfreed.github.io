@@ -1764,23 +1764,22 @@ textarea {
 	border-end-end-radius: 12px;
 	border-collapse: inherit !important;
 }
-.discography :is(.multi, .master) tbody > tr:is(:nth-child(3n+1), :nth-child(3n+2)) > td,
-.discography :is(.solo, .compilation) tbody > tr:is(:nth-child(3n+1), :nth-child(3n+2)) > td {
+.discography :is(.multi, .master, .solo, .compilation) tbody > tr:is(:nth-child(3n+1), :nth-child(3n+2)) > td {
 	border-bottom: none;
 }
-.discography :is(.multi, .master) tbody > tr:nth-child(3n) > td,
-.discography :is(.solo, .compilation) tbody > tr:nth-child(3n) > td,
+.discography :is(.solo, .multi, .compilation, .master) tbody > tr:nth-child(3n) > td,
 .discography thead tr:last-child th {
 	border-bottom: 1px solid var(--offset-level-2);
 }
 
-:is(.multi, .master) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
-:is(.solo, .compilation) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
+:is(.compilation) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
+:is(.solo, .multi, .master) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
 .unofficial-master tbody > tr:is(:nth-child(4n+3), :nth-child(4n+4)),
 .solo > thead, 
-.solo > tfoot,
-.compilation > thead,
-.compilation > tfoot,
+.master > thead,
+.master > tfoot,
+.multi > thead,
+.multi > tfoot,
 .unofficial > thead,
 .discography .endnotes > thead,
 .discography .endnotes > tfoot,
@@ -1789,19 +1788,18 @@ thead tr.freshprince th {
 	background-color: var(--offset-level-1);
 	print-color-adjust: economy;
 }
-:is(.multi, .master) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2)),
-:is(.solo, .compilation) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5))
+:is(.multi, .master, .solo, .compilation) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2)),
+:is(.solo, .compilation, .multi, .master) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5))
 {
 	border-color: var(--offset-level-1);
 }
 
-:is(.multi, .master) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
-:is(.solo, .compilation) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
+:is(.compilation) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
+:is(.solo, .multi, .master) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
 .unofficial-master tbody > tr:is(:nth-child(4n+1), :nth-child(4n+2)),
-.master > thead,
-.master > tfoot,
-.multi > thead,
-.multi > tfoot,
+.solo > tfoot,
+.compilation > thead,
+.compilation > tfoot,
 .unofficial > tfoot
 {
 	background-color: var(--background);

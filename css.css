@@ -1200,6 +1200,10 @@ li {
 	margin-top: 8px;
 	margin-bottom: 0px;
 }
+.midpara, .compositions2023-2024 ol.contents :is(ul, ul li) {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
 :where(.discography, .soundtracks, .portfolio) p {
 	margin: 12px 0px 6px;
 }

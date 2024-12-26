@@ -1,60 +1,54 @@
 ﻿/* fonts */
 @import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|FiraMono:400,500,700');
 
-/* noto-music-regular - latin_latin-ext_music */
 @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-display: swap; 
 	font-family: 'Noto Music';
 	font-style: normal;
 	font-weight: 400;
-	src: url('fonts/noto-music-v20-latin_latin-ext_music-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	src: url('fonts/noto-music-v20-latin_latin-ext_music-regular.woff2') format('woff2');
   }
-/* fira-code-300 - latin */
+
 @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-display: swap;
 	font-family: 'Fira Code';
 	font-style: normal;
 	font-weight: 300;
-	src: url('fonts/fira-code-v22-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	src: url('fonts/fira-code-v22-latin-300.woff2') format('woff2');
   }
   
-  /* fira-code-regular - latin */
   @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-display: swap;
 	font-family: 'Fira Code';
 	font-style: normal;
 	font-weight: 400;
-	src: url('fonts/fira-code-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	src: url('fonts/fira-code-v22-latin-regular.woff2') format('woff2');
   }
   
-  /* fira-code-500 - latin */
   @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-display: swap;
 	font-family: 'Fira Code';
 	font-style: normal;
 	font-weight: 500;
-	src: url('fonts/fira-code-v22-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	src: url('fonts/fira-code-v22-latin-500.woff2') format('woff2');
   }
   
-  /* fira-code-600 - latin */
   @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-display: swap;
 	font-family: 'Fira Code';
 	font-style: normal;
 	font-weight: 600;
-	src: url('fonts/fira-code-v22-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	src: url('fonts/fira-code-v22-latin-600.woff2') format('woff2');
   }
   
-  /* fira-code-700 - latin */
   @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-display: swap;
 	font-family: 'Fira Code';
 	font-style: normal;
 	font-weight: 700;
-	src: url('fonts/fira-code-v22-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }  
+	src: url('fonts/fira-code-v22-latin-700.woff2') format('woff2');
+  }
 
-  /* nishiki-teki */
   @font-face {
     font-family: 'Nishiki-teki Regular';
     font-style: normal;
@@ -2020,6 +2014,15 @@ tr.force-justify :is(td, th) {
 .pretty-wrap :is(td, th, li) {
 	white-space: pretty;
 }
+.top {
+	vertical-align: top;
+}
+.middle {
+	vertical-align: middle;
+}
+.bottom {
+	vertical-align: bottom;
+}
 pre,
 code {
 	font-weight: var(--weight1);
@@ -2288,6 +2291,107 @@ th.noleftpad {
 	font-size: 15px;
 	font-style: italic;
 	color: var(--heading-color) !important;
+}
+
+.selectedworks p.songwriters {
+	margin-top: 4px;
+	margin-left: 15px;
+}
+.selectedworks p.interpolation.songwriter {
+	margin-top: 4px;
+	margin-left: 30px;
+}
+.selectedworks span.composer {
+	font-weight: var(--weight2);
+	font-variant-caps: petite-caps;
+	color: var(--toc-counter);
+}
+.selectedworks .artist {
+	font-weight: var(--weight3);
+	font-variant-caps: petite-caps;
+	color: var(--toc-counter);
+}
+.selectedworks .interpolation .artist {
+	font-weight: var(--weight4);
+}
+.selectedworks .artistcredit {
+	font-weight: var(--weight4);
+	color: var(--toc-counter);
+	font-variant-caps: petite-caps;
+}
+.selectedworks .songcredit {
+	font-weight: var(--weight4);
+	color: var(--heading-color);
+}
+.selectedworks .albumcredit {
+	font-weight: var(--weight2);
+	color: var(--toc-counter);
+}
+.selectedworks .performercredit {
+	font-weight: var(--weight4);
+	color: var(--heading-color);
+	font-variant-caps: petite-caps;
+}
+
+.selectedworks .composercredit {
+	font-weight: var(--weight4);
+	font-variant-caps: petite-caps;
+	color: var(--toc-counter);
+}
+.selectedworks .subheading {
+	font-variant-caps: petite-caps;
+	color: var(--toc-counter);
+}
+.selectedworks .song {
+	font-weight: var(--weight4);
+	color: var(--toc-counter);
+	font-size: initial !important;
+}
+.selectedworks .movement {
+	font-weight: var(--weight3);
+	color: var(--toc-counter);
+	font-size: initial !important;
+}
+.selectedworks .length {
+	color: var(--link-active);
+	font-weight: var(--weight1);
+}
+.selectedworks .drscore {
+	color: var(--link-hover);
+	font-weight: var(--weight1);
+}
+
+.selectedworks .game {
+	color: var(--heading-color);
+	font-weight: var(--weight3);
+}
+.selectedworks .level {
+	font-weight: var(--weight1);
+	color: var(--toc-counter);
+}
+
+.selectedworks .translation {
+	color: var(--heading-color);
+	font-style: italic;
+	margin-top: 4px;
+	margin-right: 0px;
+}
+.selectedworks p.translation,
+.selectedworks blockquote.translation {
+	margin-top: 4px;
+	margin-left: 30px;
+	margin-right: 0px;
+}
+
+.selectedworks .interpolation {
+	margin-right: 0px;
+	margin-top: 4px;
+	margin-left: 15px;
+}
+.selectedworks ul.albumlist,
+.selectedworks .albumlist li {
+	color: var(--heading-color);
+	font-weight: var(--weight3);
 }
 
 hr {

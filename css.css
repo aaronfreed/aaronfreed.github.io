@@ -959,7 +959,7 @@ body {
 	color: var(--main);
 }
 body:not(.trigtables) {
-	width: 800px;
+	width: min(800px, calc(100vw - 16px));
 }
 .normal, button {
 	font-family: "FiraGO", "Noto Music", sans-serif;
@@ -1648,7 +1648,7 @@ ol.upperroman {
 
 /* breaking characters */
 .breaker {
-	line-break: anywhere;
+	line-break: anywhere !important;
 }
 .nohyphens {
 	hyphens: none;
@@ -2233,19 +2233,56 @@ th.noleftpad {
 	padding-left: 0px;
 }
 
-.translation-title {
+.compositions2023-2024 :is(span.translation, em.translation) {
+	font-weight: var(--weight3);
+	color: var(--toc-counter);
+}
+.compositions2023-2024 :is(span.romanization, em.romanization) {
+	font-weight: var(--weight2);
+	color: var(--toc-counter);
+}
+.compositions2023-2024 :is(span.hellenization, em.hellenization) {
+	font-weight: var(--weight3);
+	color: var(--heading-color);
+}
+.compositions2023-2024 :is(.translation-title, .translation-romanized, .translation-number, .translation-language) {
 	padding-left: 6px;
 }
-.translation-number, .translation-language {
-	padding-left: 6px;
+.compositions2023-2024 :is(.translation-number, .translation-language, .translation-meaning) {
 	padding-right: 6px;
 }
-.translation-meaning {
+.compositions2023-2024 .translation-meaning {
 	padding-left: 0px;
+	padding-right: 4px;
+}
+.compositions2023-2024 .translation-title:not(:has(+ .translation-romanized)),
+.compositions2023-2024 .translation-romanized {
+	padding-right: 0px;
+}
+.compositions2023-2024 .translation-title {
+	text-align: center;
+}
+.compositions2023-2024 .translation-title:has(+ .translation-romanized) {
+	text-align: right;
 	padding-right: 6px;
 }
-.translation-number {
+.compositions2023-2024 :is(.translation-romanized, .translation-number) {
 	text-align: left;
+}
+.compositions2023-2024 :is(
+	td.translation-number, th.translation-number,
+	td.translation-language, th.translation-language,
+	td.translation-title, th.translation-title,
+	td.translation-romanized, th.translation-romanized
+) {
+	border-right: 1px solid var(--offset-level-3);
+}
+
+.selectedworks .compositions2023-2024 :is(.translation-title, .translation-number, .translation-language) {
+	padding-left: 0px;
+}
+.selectedworks .compositions2023-2024 :is(.translation-number, .translation-language, .translation-meaning) {
+	padding-right: 0px;
 }
 
 .hue0, .hue0 td, .hue0 th {
@@ -2301,7 +2338,7 @@ th.noleftpad {
 	margin-top: 4px;
 	margin-left: 30px;
 }
-.selectedworks span.composer {
+.selectedworks :is(span.composer, em.composer) {
 	font-weight: var(--weight2);
 	font-variant-caps: petite-caps;
 	color: var(--toc-counter);
@@ -2320,7 +2357,7 @@ th.noleftpad {
 	font-variant-caps: petite-caps;
 }
 .selectedworks .songcredit {
-	font-weight: var(--weight4);
+	font-weight: var(--weight0);
 	color: var(--heading-color);
 }
 .selectedworks .albumcredit {
@@ -2342,15 +2379,18 @@ th.noleftpad {
 	font-variant-caps: petite-caps;
 	color: var(--toc-counter);
 }
-.selectedworks .song {
-	font-weight: var(--weight4);
-	color: var(--toc-counter);
+.selectedworks :is(.compositions2023-2024 .song, .song, .movement) {
+	font-weight: var(--weight0);
+	color: var(--heading-color);
 	font-size: initial !important;
 }
-.selectedworks .movement {
+.selectedworks .song strong,
+.selectedworks .songcredit strong,
+.selectedworks .compositions2023-2024 .song strong {
+	font-weight: var(--weight4);
+}
+.selectedworks .compositions2023-2024 .movement strong {
 	font-weight: var(--weight3);
-	color: var(--toc-counter);
-	font-size: initial !important;
 }
 .selectedworks .length {
 	color: var(--link-active);
@@ -2382,6 +2422,7 @@ th.noleftpad {
 	margin-left: 30px;
 	margin-right: 0px;
 }
+.selectedworks .translation-meaning
 
 .selectedworks .interpolation {
 	margin-right: 0px;

@@ -139,9 +139,15 @@
 	}
 }
 @media print {
+	:root {
+		--page-width: 100vw;
+	}
 	.noprint
 	{
 		display: none !important;
+	}
+	.nowrapprint {
+		white-space: nowrap;
 	}
 	.nopagebreak {
 		break-inside: avoid-page;
@@ -269,6 +275,9 @@
 	}
 }
 @media screen {
+	:root {
+		--page-width: min(800px, calc(100vw - 16px));
+	}
 	.noscreen, .linktext {
 		display: none !important;
 	}
@@ -959,7 +968,7 @@ body {
 	color: var(--main);
 }
 body:not(.trigtables) {
-	width: min(800px, calc(100vw - 16px));
+	width: var(--page-width);
 }
 .normal, button {
 	font-family: "FiraGO", "Noto Music", sans-serif;
@@ -2424,7 +2433,7 @@ th.noleftpad {
 }
 .selectedworks .translation-meaning
 
-.selectedworks .interpolation {
+.selectedworks .interpolation, .selectedworks blockquote.interpolation, .selectedworks p.interpolation {
 	margin-right: 0px;
 	margin-top: 4px;
 	margin-left: 15px;

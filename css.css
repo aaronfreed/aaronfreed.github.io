@@ -1285,16 +1285,16 @@ ol {
 }
 
 /* table of contents. this one is a doozy */
-:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1),
-:is(.toc, .toclite, .tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1) ol {
+:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1, ol.toc0),
+:is(.toc, .toclite, .tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1, ol.toc0) ol {
 	counter-reset: item;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1) li {
+:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0) li {
 	display: block;
 }
-:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .overview) li {
+:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li {
 	margin-top: 4px;
 	margin-bottom: 4px;
 	line-height: 125%;
@@ -1330,24 +1330,24 @@ ol.toc ol ol ol li::before {
 	font-weight: var(--weight0);
 	text-decoration-thickness: 0.375px;
 }
-:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1) li::before {
+:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1, ol.toc0) li::before {
 	content: "(" counters(item, ".")") ";
 	counter-increment: item;
 	color: var(--toc-counter);
 }
-:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1) ol li::before {
+:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1, ol.toc0) ol li::before {
 	content: "[" counters(item, ".")"] ";
 	counter-increment: item;
 	color: var(--toc-counter);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
-:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1) ol ol li::before {
+:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1, ol.toc0) ol ol li::before {
 	content: "{" counters(item, ".")"} ";
 	counter-increment: item;
 	color: var(--toc-counter);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
-:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1) ol ol ol li::before {
+:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1, ol.toc0) ol ol ol li::before {
 	content: "\27E8" counters(item, ".")"\27E9\0020";
 	counter-increment: item;
 	color: var(--toc-counter);
@@ -1388,6 +1388,12 @@ ol.toc7 li::before {
 :is(ol.toc7 ol ol ol ol ol ol, ol.toc6 ol ol ol ol ol, ol.toc5 ol ol ol ol, ol.toc4 ol ol ol, ol.toc3 ol ol, ol.toc2 ol, ol.toc1) li::before {
 	font-weight: var(--weight1);
 	text-decoration-thickness: 0.375px;
+}
+
+:is(ol.toc7 ol ol ol ol ol ol ol, ol.toc6 ol ol ol ol ol ol, ol.toc5 ol ol ol ol ol, ol.toc4 ol ol ol ol, ol.toc3 ol ol ol, ol.toc2 ol ol, ol.toc1 ol, ol.toc0) :is(li, li a:link, li a:visited),
+:is(ol.toc7 ol ol ol ol ol ol ol, ol.toc6 ol ol ol ol ol ol, ol.toc5 ol ol ol ol ol, ol.toc4 ol ol ol ol, ol.toc3 ol ol ol, ol.toc2 ol ol, ol.toc1 ol, ol.toc0) li::before {
+	font-weight: var(--weight0);
+	text-decoration-thickness: 0.25px;
 }
 
 ::is(ol.toc) li::before
@@ -2431,9 +2437,15 @@ th.noleftpad {
 	margin-left: 30px;
 	margin-right: 0px;
 }
-.selectedworks .translation-meaning
-
-.selectedworks .interpolation, .selectedworks blockquote.interpolation, .selectedworks p.interpolation {
+.selectedworks span.translation {
+	color: var(--heading-color);
+	font-weight: var(--weight0);
+}
+.selectedworks :is(p.translation, blockquote.translation, span.translation) strong {
+	font-weight: var(--weight3);
+}
+.selectedworks blockquote.interpolation,
+.selectedworks p.interpolation {
 	margin-right: 0px;
 	margin-top: 4px;
 	margin-left: 15px;

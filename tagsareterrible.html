@@ -1,102 +1,108 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-	<title>Marathon Mapmaking: Tags Are Terrible</title>
-	<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
-	<link rel="stylesheet" type="text/css" href="css.css">
-</head>
-<body class="light">
-<h1 id="tagsareterrible" class="centred petitecaps">Tags Are Terrible</h1>
+	<head>
+		<title>Marathon Mapmaking: Tags Are Terrible</title>
+		<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
+		<link rel="stylesheet" type="text/css" href="css.css">
+	</head>
+	<body class="light">
+		<header>
+			<h1 id="tagsareterrible" class="centred petitecaps">Tags Are Terrible</h1>
 
-<p class="fixheight">This rant used to be part of my <a href="mapmaking.html">advanced content creation guide</a> for <em>Marathon</em>/Aleph One. I continue to stand by the stances I&rsquo;ve taken in this section, but I&rsquo;ve split it off to its own page because, even by my standards, it&rsquo;s:</p>
-	<ol class="loweralpha">
-		<li>very long</li>
-		<li>very opinionated</li>
-	</ol>
-<p class="fixheight">Those lacking context for this may wish to consult my <a href="mapmaking101.html">beginners&rsquo; guide to Aleph One content creation</a> and my <a href="mapmaking.html">more advanced guide</a>.</p>
+			<p class="fixheight">This rant used to be part of my <a href="mapmaking.html">advanced content creation guide</a> for <em>Marathon</em>/Aleph One. I continue to stand by the stances I&rsquo;ve taken in this section, but I&rsquo;ve split it off to its own page because, even by my standards, it&rsquo;s:</p>
+				<ol class="loweralpha">
+					<li>very long</li>
+					<li>very opinionated</li>
+				</ol>
+			<p class="fixheight">Those lacking context for this may wish to consult my <a href="mapmaking101.html">beginners&rsquo; guide to Aleph One content creation</a> and my <a href="mapmaking.html">more advanced guide</a>.</p>
 
-<h2>Contents</h2>
-<ol class="tocliter" id="toc">
-	<li><a href="#tagsareterrible">Tags Are Terrible (though sometimes inexorable)</a>
-		<ol>
-			<li><a href="#waysaroundtags">Ways to Avoid Tags</a></li>
-		</ol>
-	</li>
-</ol>
-
-<h2 id="tagsareterrible">Tags Are Terrible (though sometimes inexorable)</h2>
-
-<p class="fixheight">Don&rsquo;t get me wrong &ndash; in the right circumstances, they&rsquo;re <em>immensely</em> useful. But they can also break the game if you don&rsquo;t know what you&rsquo;re doing, especially if they&rsquo;re marked as <strong>Repair</strong>. If you take two things away from this admittedly opinionated section:</p>
-	
-	<ol class="fixheight">
-		<li>Avoid ever marking tag switches or chip insertion slots as <strong>Repair</strong>.</li>
-		<li>If you absolutely <em>must</em> mark such a switch as <strong>repair</strong>, make sure it controls <em>both</em> a light <em>and</em> a platform that can <em>always</em> activate <em>or</em> deactivate &ndash; that will <em>probably</em> work around the worst bugs. <em>Probably</em>. (Though you&rsquo;d still be able to deactivate the tag switch, which would make it possible to change a level state from complete to incomplete &ndash; annoying design, to say the least. This aspect, at least, isn&rsquo;t a problem for chips &ndash; once a chip is inserted, it stays inserted.)</li>
-	</ol>
-	
-<p class="fixheight">Now, for the gory details:</p>
-	
-<ul class="fixheight">
-	<li>Tags must be possible to activate when players attempt to activate them. Thus, if a (tag switch/wires/chip slot) controls only something that&rsquo;s controllable by other means and:
-		<ul>
-			<li>could be active when a player activates the tag and/or</li>
-			<li>activates only once,</li>
-		</ul>
-	that can make a level impossible to complete.</li>
-	<li>If a player deactivates a tag switch set to <strong>Repair</strong> and can&rsquo;t reactivate it, they can&rsquo;t finish the mission. Tag switches can&rsquo;t be activated if nothing they control can be activated; rather than risk this, consider never <del>using them</del> marking them as <strong>Repair</strong>. <em>Usually</em> <strong>Repair</strong>-safe:
-		<ul>
-			<li>Destructible wires (they stay toggled).</li>
-			<li>Platform switches (the game remembers they were toggled even if they deactivate).</li>
-			<li>Light switches (they can be reactivated unless they&rsquo;re <strong>Destructible</strong> or <strong>Light Dependent</strong>).</li>
-		</ul>
-	</li>
-	<li>Chip slots are a &lsquo;maybe&rsquo; on the <strong>Repair</strong> count. Unless set to the &lsquo;dummy&rsquo; tag 0, a chip slot&rsquo;s tag must control something, or it&rsquo;ll consume chips without activating (which also renders levels unbeatable).
-		<blockquote style="margin-top: 8px; margin-bottom: 8px;"><em><strong>Note:</strong> Aleph One 1.7</span>, released on 2023-11-25</span>, fixes the &lsquo;chip eating&rsquo; bug. However, as of this writing, it&rsquo;s hardly safe to assume all players have upgraded their Aleph One applications yet. If you&rsquo;re comfortable using Lua, I&rsquo;d recommend using it to print a warning to players using old versions of Aleph One. (Lua is beyond my current scope, but maybe someday I&rsquo;ll write a guide to it.)</em></blockquote>
-	</li>
-	<li>These bugs can interact, as well. If a chip controls a tag that can&rsquo;t activate, it can&rsquo;t toggle the <strong>Repair</strong> mission flag (rendering the level incompletable) and will eat any chips a hapless player tries to insert (possibly rendering future levels incompletable as well, in case a player is meant to have them on said levels).</li>
-	<li>Avoid having multiple (chip slots/wires/tag switches) control the same tag.</li>
-	<li>If a tag switch controls <em>only</em> lights, it must match the state of at least one of the lights to be able to activate. This means that if you have a tag that controls only a light that starts out active, and the tag switch connected to that light starts out inactive, the tag switch will be impossible to activate. Note that <em>this</em> aspect of tag switch behaviour does not appear to apply to chip insertion &ndash; you will still be able to insert a chip. Confused yet? Good.</li>
-	<li>In a previous version of this guide, I wrote:
-		<blockquote style="margin-top: 8px; margin-bottom: 8px;">&ldquo;If a tag controls a light, it can activate&hellip; probably. Given the absolutely cursed mess I&rsquo;ve detailed above, I&rsquo;m no longer confident that there isn&rsquo;t some <em>other</em> weird edge case with lights that we haven&rsquo;t yet worked out.&rdquo;</blockquote>
-		To be fair, I qualified my statement, but we now know at least some exceptions. I&rsquo;m not confident that we know them all. The lesson I&rsquo;m drawing from this is that there are probably no universal rules with tags.</li>
-	<li>There are also <a href="mapmaking101.html#texturingissues">texturing issues</a> &ndash; in short, if you toggle wires in visual mode, they will get set to not-wires and players will be unable to finish your level. There may be others.</li>
-	<li>Basically, tags are awful; you should avoid marking them as &lsquo;<strong>Repair</strong>&rsquo; unless you&rsquo;re <em>completely</em> sure you know what you&rsquo;re doing, and even then, you should be sure you&rsquo;re not falling prey to the <a href="https://en.wikipedia.org/wiki/Dunning-Kruger_effect" target="_blank">Dunning-Kruger effect</a>. In all cases, I recommend using them with caution.</li></ul>
-	
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
-
-	<h3 id="waysaroundtags">Ways to Avoid Tags</h3>
-		
-	<p class="fixheight">Tags aren&rsquo;t always necessary; the main cases where they are necessary are for destructible wires, chip insertion, or very odd arrangements of platforms. In most other cases, a sufficiently determined mapper can avoid using them. Some tips:</p>
-	<ul class="fixheight">
-		<li>Platforms can activate adjacent platforms when they activate. Or when they deactivate. And they can also deactivate platforms in those same places. And they can also activate adjacent platforms both when fully extended and when fully contracted (&lsquo;<strong>Activates Adjacent at Each Level</strong>&rsquo;).
-		<li>Platforms can activate the lights on their floor and ceiling when they activate. They can also deactivate those lights when they deactivate.</li>
-		<li>If you have multiple adjoining platforms, it&rsquo;s generally <em>preferable</em> to use a platform switch and set &lsquo;<strong>Activates: Activates Adjacent Platforms</strong>&rsquo; for those platforms &ndash; that way, players won&rsquo;t have to hit a switch twice each time they want to raise or lower the platform.</li>
-		<li>If you want to get <em>really</em> adventurous, you can even make underground platform networks to connect otherwise unconnected platforms. Some notes on these:
-			<ul>
-				<li>Make them extend &lsquo;<strong>From Floor</strong>&rsquo; to reduce the odds of motion glitches, though you may still experience these occasionally (make sure to test the surrounding areas for them).</li>
-				<li>These platform networks look ugly in Weland, but players won&rsquo;t see them. If you don&rsquo;t want to see them in the visual mode map either, you can even give them landscape textures. (However, avoid doing that if players should be able to see the other side of a wall, or it&rsquo;ll disappear from the automap.)</li>
-				<li>&lsquo;The Midpoint of Somewhere&rsquo; (from <em><a href="https://eternal.bungie.org/" target="_blank">Eternal</a></em> versions 1.3 preview 4 and later) contains several examples of this. I admittedly went overboard with it, partly to keep players from undoing their progression midlevel (it&rsquo;s already a convoluted enough level), partly out of sheer stubbornness, and partly to prove that I didn&rsquo;t need tags (but I repeat myself).</li>
-			</ul>
-		</li>
-		<li>So, maybe you have a tag switch that you want to use to control your mission state, but you&rsquo;re &ndash; justifiably, given the absolutely cursed mess detailed above &ndash; afraid to actually mark it as &lsquo;<strong>Repair</strong>&rsquo;. What&rsquo;s a mapmaker to do? The most reliable case is probably to have the tag switch control an otherwise inaccessible platform (for the sake of our example, we&rsquo;ll call it Platform 42) that starts out inactive (ideally, just completely inaccessible from the rest of the map), and set one of the walls of Platform 42 as a platform switch that&rsquo;s marked as &lsquo;<strong>Repair</strong>&rsquo;. Then set the tag switch to activate Platform 42</span>. This also means that once you activate the tag switch, the game remembers that the platform switch was activated even if either the platform switch or the tag switch gets deactivated &ndash; thus working around another potential issue with using tag switches as &lsquo;<strong>Repair</strong>&rsquo;. I&rsquo;ve shown example settings for Platform 42</span> below.
-
-			<div class="image"><img src="platform42.png" width="637" height="472" alt="Settings for Platform 42, tag initially inactive" title="Settings for Platform 42, tag initially inactive" /></div>
-				
-			<ul>
-				<li>The tag switch in the above example must start out as &lsquo;<strong>Inactive</strong>&rsquo;. If you need your tag switch to start out as &lsquo;<strong>Active</strong>&rsquo;, connect another platform &ndash; we&rsquo;ll just call it Platform 43</span> &ndash; to Platform 42</span> (note that it <em>must</em> share at least one side, and it <em>must not</em> be the side that had the platform switch on it). Start Platform 43 as active, set it to &lsquo;<strong>Deactivates: Never</strong>&rsquo;, make sure &lsquo;<strong>Can&rsquo;t Deactivate Externally</strong>&rsquo; is <em><strong>unchecked</strong></em>, and make sure &lsquo;<strong>Deactivates: Activates Adjacent Platform</strong>&rsquo; is <em><strong>checked</strong></em>. In this example, you&rsquo;ll also want to remove the tag from Platform 42. Here are our settings for Platform 43.
-				<div class="image"><img src="platform43.png" width="637" height="472" alt="Settings for Platform 43, tag initially active" title="Settings for Platform 43, tag initially active" /></div>
-
-				<div style="margin-top: 12px;">And here are our revised settings for Platform 42.</div>
-
-				<div class="image"><img src="platform42a.png" width="637" height="472" alt="Settings for Platform 42, tag initially active" title="Settings for Platform 42, tag initially active" /></div>
-
-				<div style="margin-top: 12px;"><strong>Warning:</strong> I can&rsquo;t promise that either of these solutions are foolproof. If something messes with either platform&rsquo;s activation, it can still break the mission. And there are probably other potential ways to break them as well. I&rsquo;ve used wires, chip insertion switches, and tag switches as repair switches in some of my levels, but I&rsquo;ve also been doing this for some 26 years, and in 2023, I&rsquo;m still learning new things that can break tags. They&rsquo;re even more cursed than platforms, which is saying <em>a lot</em>.</div>
-
-				<div style="margin-top: 8px;">More importantly, given how convoluted this all is, I can almost guarantee you&rsquo;ll eventually misremember part of it and more than likely run afoul of one of the many things that can mess up tags. Bearing that in mind, isn&rsquo;t it safer to just avoid using them for repair missions at all? Of course it is.</div>
+			<h2>Contents</h2>
+			<ol class="tocliter" id="toc">
+				<li><a href="#tagsareterrible">Tags Are Terrible (though sometimes inexorable)</a>
+					<ol>
+						<li><a href="#waysaroundtags">Ways to Avoid Tags</a></li>
+					</ol>
 				</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
-</ul>
+			</ol>
+		</header>
 
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+		<main>
+			<h2 id="tagsareterrible">Tags Are Terrible (though sometimes inexorable)</h2>
+
+			<p class="fixheight">Don&rsquo;t get me wrong &ndash; in the right circumstances, they&rsquo;re <em>immensely</em> useful. But they can also break the game if you don&rsquo;t know what you&rsquo;re doing, especially if they&rsquo;re marked as <strong>Repair</strong>. If you take two things away from this admittedly opinionated section:</p>
+
+				<ol class="fixheight">
+					<li>Avoid ever marking tag switches or chip insertion slots as <strong>Repair</strong>.</li>
+					<li>If you absolutely <em>must</em> mark such a switch as <strong>repair</strong>, make sure it controls <em>both</em> a light <em>and</em> a platform that can <em>always</em> activate <em>or</em> deactivate &ndash; that will <em>probably</em> work around the worst bugs. <em>Probably</em>. (Though you&rsquo;d still be able to deactivate the tag switch, which would make it possible to change a level state from complete to incomplete &ndash; annoying design, to say the least. This aspect, at least, isn&rsquo;t a problem for chips &ndash; once a chip is inserted, it stays inserted.)</li>
+				</ol>
+
+			<p class="fixheight">Now, for the gory details:</p>
+
+			<ul class="fixheight">
+				<li>Tags must be possible to activate when players attempt to activate them. Thus, if a (tag switch/wires/chip slot) controls only something that&rsquo;s controllable by other means and:
+					<ul>
+						<li>could be active when a player activates the tag and/or</li>
+						<li>activates only once,</li>
+					</ul>
+				that can make a level impossible to complete.</li>
+				<li>If a player deactivates a tag switch set to <strong>Repair</strong> and can&rsquo;t reactivate it, they can&rsquo;t finish the mission. Tag switches can&rsquo;t be activated if nothing they control can be activated; rather than risk this, consider never <del>using them</del> marking them as <strong>Repair</strong>. <em>Usually</em> <strong>Repair</strong>-safe:
+					<ul>
+						<li>Destructible wires (they stay toggled).</li>
+						<li>Platform switches (the game remembers they were toggled even if they deactivate).</li>
+						<li>Light switches (they can be reactivated unless they&rsquo;re <strong>Destructible</strong> or <strong>Light Dependent</strong>).</li>
+					</ul>
+				</li>
+				<li>Chip slots are a &lsquo;maybe&rsquo; on the <strong>Repair</strong> count. Unless set to the &lsquo;dummy&rsquo; tag 0, a chip slot&rsquo;s tag must control something, or it&rsquo;ll consume chips without activating (which also renders levels unbeatable).
+					<blockquote style="margin-top: 8px; margin-bottom: 8px;"><em><strong>Note:</strong> Aleph One 1.7</span>, released on 2023-11-25</span>, fixes the &lsquo;chip eating&rsquo; bug. However, as of this writing, it&rsquo;s hardly safe to assume all players have upgraded their Aleph One applications yet. If you&rsquo;re comfortable using Lua, I&rsquo;d recommend using it to print a warning to players using old versions of Aleph One. (Lua is beyond my current scope, but maybe someday I&rsquo;ll write a guide to it.)</em></blockquote>
+				</li>
+				<li>These bugs can interact, as well. If a chip controls a tag that can&rsquo;t activate, it can&rsquo;t toggle the <strong>Repair</strong> mission flag (rendering the level incompletable) and will eat any chips a hapless player tries to insert (possibly rendering future levels incompletable as well, in case a player is meant to have them on said levels).</li>
+				<li>Avoid having multiple (chip slots/wires/tag switches) control the same tag.</li>
+				<li>If a tag switch controls <em>only</em> lights, it must match the state of at least one of the lights to be able to activate. This means that if you have a tag that controls only a light that starts out active, and the tag switch connected to that light starts out inactive, the tag switch will be impossible to activate. Note that <em>this</em> aspect of tag switch behaviour does not appear to apply to chip insertion &ndash; you will still be able to insert a chip. Confused yet? Good.</li>
+				<li>In a previous version of this guide, I wrote:
+					<blockquote style="margin-top: 8px; margin-bottom: 8px;">&ldquo;If a tag controls a light, it can activate&hellip; probably. Given the absolutely cursed mess I&rsquo;ve detailed above, I&rsquo;m no longer confident that there isn&rsquo;t some <em>other</em> weird edge case with lights that we haven&rsquo;t yet worked out.&rdquo;</blockquote>
+					To be fair, I qualified my statement, but we now know at least some exceptions. I&rsquo;m not confident that we know them all. The lesson I&rsquo;m drawing from this is that there are probably no universal rules with tags.</li>
+				<li>There are also <a href="mapmaking101.html#texturingissues">texturing issues</a> &ndash; in short, if you toggle wires in visual mode, they will get set to not-wires and players will be unable to finish your level. There may be others.</li>
+				<li>Basically, tags are awful; you should avoid marking them as &lsquo;<strong>Repair</strong>&rsquo; unless you&rsquo;re <em>completely</em> sure you know what you&rsquo;re doing, and even then, you should be sure you&rsquo;re not falling prey to the <a href="https://en.wikipedia.org/wiki/Dunning-Kruger_effect" target="_blank">Dunning-Kruger effect</a>. In all cases, I recommend using them with caution.</li></ul>
+
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+				<h3 id="waysaroundtags">Ways to Avoid Tags</h3>
+
+				<p class="fixheight">Tags aren&rsquo;t always necessary; the main cases where they are necessary are for destructible wires, chip insertion, or very odd arrangements of platforms. In most other cases, a sufficiently determined mapper can avoid using them. Some tips:</p>
+				<ul class="fixheight">
+					<li>Platforms can activate adjacent platforms when they activate. Or when they deactivate. And they can also deactivate platforms in those same places. And they can also activate adjacent platforms both when fully extended and when fully contracted (&lsquo;<strong>Activates Adjacent at Each Level</strong>&rsquo;).
+					<li>Platforms can activate the lights on their floor and ceiling when they activate. They can also deactivate those lights when they deactivate.</li>
+					<li>If you have multiple adjoining platforms, it&rsquo;s generally <em>preferable</em> to use a platform switch and set &lsquo;<strong>Activates: Activates Adjacent Platforms</strong>&rsquo; for those platforms &ndash; that way, players won&rsquo;t have to hit a switch twice each time they want to raise or lower the platform.</li>
+					<li>If you want to get <em>really</em> adventurous, you can even make underground platform networks to connect otherwise unconnected platforms. Some notes on these:
+						<ul>
+							<li>Make them extend &lsquo;<strong>From Floor</strong>&rsquo; to reduce the odds of motion glitches, though you may still experience these occasionally (make sure to test the surrounding areas for them).</li>
+							<li>These platform networks look ugly in Weland, but players won&rsquo;t see them. If you don&rsquo;t want to see them in the visual mode map either, you can even give them landscape textures. (However, avoid doing that if players should be able to see the other side of a wall, or it&rsquo;ll disappear from the automap.)</li>
+							<li>&lsquo;The Midpoint of Somewhere&rsquo; (from <em><a href="https://eternal.bungie.org/" target="_blank">Eternal</a></em> versions 1.3 preview 4 and later) contains several examples of this. I admittedly went overboard with it, partly to keep players from undoing their progression midlevel (it&rsquo;s already a convoluted enough level), partly out of sheer stubbornness, and partly to prove that I didn&rsquo;t need tags (but I repeat myself).</li>
+						</ul>
+					</li>
+					<li>So, maybe you have a tag switch that you want to use to control your mission state, but you&rsquo;re &ndash; justifiably, given the absolutely cursed mess detailed above &ndash; afraid to actually mark it as &lsquo;<strong>Repair</strong>&rsquo;. What&rsquo;s a mapmaker to do? The most reliable case is probably to have the tag switch control an otherwise inaccessible platform (for the sake of our example, we&rsquo;ll call it Platform 42) that starts out inactive (ideally, just completely inaccessible from the rest of the map), and set one of the walls of Platform 42 as a platform switch that&rsquo;s marked as &lsquo;<strong>Repair</strong>&rsquo;. Then set the tag switch to activate Platform 42</span>. This also means that once you activate the tag switch, the game remembers that the platform switch was activated even if either the platform switch or the tag switch gets deactivated &ndash; thus working around another potential issue with using tag switches as &lsquo;<strong>Repair</strong>&rsquo;. I&rsquo;ve shown example settings for Platform 42</span> below.
+
+						<div class="image"><img src="platform42.png" width="637" height="472" alt="Settings for Platform 42, tag initially inactive" title="Settings for Platform 42, tag initially inactive" /></div>
+
+						<ul>
+							<li>The tag switch in the above example must start out as &lsquo;<strong>Inactive</strong>&rsquo;. If you need your tag switch to start out as &lsquo;<strong>Active</strong>&rsquo;, connect another platform &ndash; we&rsquo;ll just call it Platform 43</span> &ndash; to Platform 42</span> (note that it <em>must</em> share at least one side, and it <em>must not</em> be the side that had the platform switch on it). Start Platform 43 as active, set it to &lsquo;<strong>Deactivates: Never</strong>&rsquo;, make sure &lsquo;<strong>Can&rsquo;t Deactivate Externally</strong>&rsquo; is <em><strong>unchecked</strong></em>, and make sure &lsquo;<strong>Deactivates: Activates Adjacent Platform</strong>&rsquo; is <em><strong>checked</strong></em>. In this example, you&rsquo;ll also want to remove the tag from Platform 42. Here are our settings for Platform 43.
+							<div class="image"><img src="platform43.png" width="637" height="472" alt="Settings for Platform 43, tag initially active" title="Settings for Platform 43, tag initially active" /></div>
+
+							<div style="margin-top: 12px;">And here are our revised settings for Platform 42.</div>
+
+							<div class="image"><img src="platform42a.png" width="637" height="472" alt="Settings for Platform 42, tag initially active" title="Settings for Platform 42, tag initially active" /></div>
+
+							<div style="margin-top: 12px;"><strong>Warning:</strong> I can&rsquo;t promise that either of these solutions are foolproof. If something messes with either platform&rsquo;s activation, it can still break the mission. And there are probably other potential ways to break them as well. I&rsquo;ve used wires, chip insertion switches, and tag switches as repair switches in some of my levels, but I&rsquo;ve also been doing this for some 26 years, and in 2023, I&rsquo;m still learning new things that can break tags. They&rsquo;re even more cursed than platforms, which is saying <em>a lot</em>.</div>
+
+							<div style="margin-top: 8px;">More importantly, given how convoluted this all is, I can almost guarantee you&rsquo;ll eventually misremember part of it and more than likely run afoul of one of the many things that can mess up tags. Bearing that in mind, isn&rsquo;t it safer to just avoid using them for repair missions at all? Of course it is.</div>
+							</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+		</main>
+	</body>
+</html>

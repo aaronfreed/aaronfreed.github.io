@@ -1007,19 +1007,27 @@ a:where(:link, :visited):where(:not(:hover, :active)) {
 }
 a:link {
 	color: var(--link);
-	text-decoration-color: color-mix(in sRGB, var(--link) 77.77777%, transparent);
 }
 a:visited {
 	color: var(--link-visited);
-	text-decoration-color: color-mix(in sRGB, var(--link-visited) 77.77777%, transparent);
 }
 a:hover {
 	color: var(--link-hover);
-	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
 a:active {
 	color: var(--link-active);
-	text-decoration-color: color-mix(in sRGB, var(--link-active) 77.77777%, transparent);
+}
+a:link, a:link u, a:link del {
+	text-decoration-color: var(--link-translucent);
+}
+a:visited, a:visited u, a:visited del {
+	text-decoration-color: var(--link-visited-translucent);
+}
+a:hover, a:hover u, a:hover del {
+	text-decoration-color: var(--link-hover-translucent);
+}
+a:active, a:active u, a:active del {
+	text-decoration-color: var(--link-active-translucent);
 }
 
 
@@ -1099,13 +1107,13 @@ ol.toc > li > ol > li > ol :where(.integer, .decimal) {
 }
 
 /* headers and accents */
-h1, h2, h3, h4, h5
+h1, h2, h3, h4, h5, h1 code, h2 code, h3 code, h4 code, h5 code
 {
 	margin: 12px 0px;
-	font-weight: var(--weight6);
+	font-weight: var(--weight5);
 	color: var(--heading-color);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
-	text-decoration-thickness: 2.25px;
+	text-decoration-thickness: 2px;
 }
 .music h1 {
 	font-size: 30px;

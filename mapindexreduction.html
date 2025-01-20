@@ -40,152 +40,153 @@ window.onload = function () {makeAllSortable();};
 	</script>
 </head>
 	<body>
-		<header>	
-		<h1 class="petitecaps"><em>Marathon</em> Mapmaking: Reducing Map Index Use</h1>
+		<header>
+			<h1 class="petitecaps"><em>Marathon</em> Mapmaking: Reducing Map Index Use</h1>
 
-		<p class="fixheight">A supplement to my <a href="mapmaking.html">advanced <em>Marathon</em> Aleph One mapmaking guide</a>, though if you&rsquo;re new to mapmaking, you should definitely start with my <a href="mapmaking101.html">beginners&rsquo; guide</a>. This is also something of a follow-up to a <a href="mapcomplexity.html">case study I wrote on map complexity</a>.</p>
-		
-		<p class="fixheight">Please <a href="aboutme.html">contact me</a> if you notice any errors or omissions.</p>
+			<p class="fixheight">A supplement to my <a href="mapmaking.html">advanced <em>Marathon</em> Aleph One mapmaking guide</a>, though if you&rsquo;re new to mapmaking, you should definitely start with my <a href="mapmaking101.html">beginners&rsquo; guide</a>. This is also something of a follow-up to a <a href="mapcomplexity.html">case study I wrote on map complexity</a>.</p>
 
-		<h1 id="contents">Table of Contents</h1>
-		<ol class="toclite">
-			<li><a href="#top">Intro</a></li>
-			<li><a href="#contents">Table of Contents</a> (you&rsquo;re looking at it)</li>
-			<li><a href="#outofindices">I ran out of map indices. Wat do?</a></li>
-			<li><a href="#polygonpruning">Prune Polygons Where Possible</a></li>
-			<li><a href="#principles">Principles of Pruning</a></li>
-			<li><a href="#pitfalls">Potential Pitfalls of Pruning</a></li>
-		</ol>
+			<p class="fixheight">Please <a href="aboutme.html">contact me</a> if you notice any errors or omissions.</p>
 
-		<h1 id="outofindices">I ran out of map indices. Wat do?</h1>
+			<h1 id="contents">Table of Contents</h1>
+			<ol class="toclite">
+				<li><a href="#top">Intro</a></li>
+				<li><a href="#contents">Table of Contents</a> (you&rsquo;re looking at it)</li>
+				<li><a href="#outofindices">I ran out of map indices. Wat do?</a></li>
+				<li><a href="#polygonpruning">Prune Polygons Where Possible</a></li>
+				<li><a href="#principles">Principles of Pruning</a></li>
+				<li><a href="#pitfalls">Potential Pitfalls of Pruning</a></li>
+			</ol>
+		</header>
 
-		<p class="fixheight">A problem that has plagued every creator of sufficiently complex <em>Marathon</em> Aleph One maps is its limit of 65,536 map indices &ndash; is its primary cap on map complexity. I explain the matter <a href="mapmaking.html#generalmapmaking">at greater length</a> in my general guide, but in short, each vertex, each line, each polygon, each line shorter than 0.5 World Units (polygon exclusion zones, used to denote lines players can&rsquo;t cross), each platform, and each polygon within a 10 World Unit X/Y radius of each sound object uses a map index. (<strong>Note:</strong> Take this list and all map index totals listed here with a grain of salt: the list may be incomplete, and I may not have every factor exactly right. I plan to do a deep dive into the source code within the coming weeks.) 65,536 initially sounds like a lot, but this all adds up quickly!</p>
+		<main>
+			<h1 id="outofindices">I ran out of map indices. Wat do?</h1>
 
-		<p class="fixheight">Unfortunately, if you run out of map indices, your only choice is to simplify your level &ndash; otherwise, it won&rsquo;t even load due to an assertion failure. If you have an easy way to split it into two levels without compromising the mission or the flow, that&rsquo;s by far the optimal choice, as it allows you to leave its detail intact. (The sole caveat is that you&rsquo;ll need to be sure any geometry shared between both levels remains consistent, or it&rsquo;ll spoil the effect of them being connected.)</p>
-		
-		<p class="fixheight">If that isn&rsquo;t an option, you&rsquo;ll have to reduce the level&rsquo;s count of one or more of the following:</p>
+			<p class="fixheight">A problem that has plagued every creator of sufficiently complex <em>Marathon</em> Aleph One maps is its limit of 65,536 map indices &ndash; is its primary cap on map complexity. I explain the matter <a href="mapmaking.html#generalmapmaking">at greater length</a> in my general guide, but in short, each vertex, each line, each polygon, each line shorter than 0.5 World Units (polygon exclusion zones, used to denote lines players can&rsquo;t cross), each platform, and each polygon within a 10 World Unit X/Y radius of each sound object uses a map index. (<strong>Note:</strong> Take this list and all map index totals listed here with a grain of salt: the list may be incomplete, and I may not have every factor exactly right. I plan to do a deep dive into the source code within the coming weeks.) 65,536 initially sounds like a lot, but this all adds up quickly!</p>
 
-		<ul class="fixheight">
-			<li>Polygons</li>
-			<li>Lines</li>
-			<li>Vertices</li>
-			<li>Platforms</li>
-			<li>Polygon exclusion zones (lines shorter than 0.5 World Units)</li>
-			<li>Sound objects</li>
-		</ul>
+			<p class="fixheight">Unfortunately, if you run out of map indices, your only choice is to simplify your level &ndash; otherwise, it won&rsquo;t even load due to an assertion failure. If you have an easy way to split it into two levels without compromising the mission or the flow, that&rsquo;s by far the optimal choice, as it allows you to leave its detail intact. (The sole caveat is that you&rsquo;ll need to be sure any geometry shared between both levels remains consistent, or it&rsquo;ll spoil the effect of them being connected.)</p>
 
-		<p class="fixheight">It may seem tempting to prune sound objects first, as they are by far the largest user of map indices, but I&rsquo;d advise caution in doing so &ndash; sudden transitions from one &lsquo;sound region&rsquo; to another can be jarring. Aleph One 1.7&rsquo;s new OpenAL sound engine actually lessens this problem somewhat by preventing sounds from suddenly <em>cutting off</em> when the player crosses from one boundary to another; however, they still suddenly <em>start up</em>, so only half the problem has been solved.</p>
-
-		<h1 id="polygonpruning">Prune Polygons Where Possible</h1>
-
-		<p class="fixheight">More importantly, though, you almost certainly didn&rsquo;t fill polygons as efficiently as you could&rsquo;ve. I mentioned in my <a href="mapcomplexity.html#monument">case study on map complexity</a> that &lsquo;Monument to All Your Sins&rsquo; (a massive level from RyokoTK&rsquo;s brilliant net map pack <em><a href="https://simplici7y.com/items/starlight/" target="_blank">Starlight</a></em>) has 1,843 polygons. In addition, it has 3,277 vertices and 5,171 lines.</p>
-
-        <p class="fixheight">Before I proceed here, I want to be extremely clear that the following is not in any sense meant to throw shade at Ryoko, who&rsquo;s one of the most prolific and consistently brilliant <em>Marathon</em> level designers in history. I&rsquo;m not on his level and doubt I ever will be. That said, the solo adaptation I created for <em>Marathon Chronicles</em>, from which I removed none of the original&rsquo;s visual complexity, contains 1,784 polygons, 3,271 vertices, and 5,106 lines (a savings of 59 polygons, 6 vertices, and 65 lines). The image below (click to enlarge) compares the two versions to show where I pruned polygons:</p>
-
-		<div class="image"><a href="monument-to-nonexistence.gif" target="_blank"><img src="monument-to-nonexistence.gif" title="I will destroy extraneous polygons! I will create a monument to fear, surprise, ruthless efficiency, an almost fanatical devotion to the pope, and nice, red uniforms&hellip; oh, bugger" width="512" /></a></div>
-
-		<p class="fixheight">The fact that I only found 59 polygons to prune is actually quite impressive. Here are a few levels from various editions of <em>Where Monsters Are in Dreams</em> with their initial polygon counts, the polygon counts I pruned them to, and the number of polygons I pruned. (In all cases, the levels&rsquo; appearance was not visibly changed.)</p>
-
-		<table class="fixheight">
-			<thead>
-				<tr>
-					<th>Level</th>
-					<th class="right">Ante</th>
-					<th class="right">Post</th>
-					<th class="right">&Delta;</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><strong>We Were Speaking of Fate</strong></td>
-					<td class="integer">1,705</td>
-					<td class="integer">1,500</td>
-					<td class="integer">&minus;205</td>
-				</tr>
-				<tr>
-					<td><strong>Cause &amp; Effect</strong> (first iteration)</td>
-					<td class="integer">2,466</td>
-					<td class="integer">2,222</td>
-					<td class="integer">&minus;244</td>
-				</tr>
-				<tr>
-					<td><strong>Burning Memories</strong></td>
-					<td class="integer">2,217</td>
-					<td class="integer">2,020</td>
-					<td class="integer">&minus;197</td>
-				</tr>
-				<tr>
-					<td><strong>Cast Your Fate to the Stars</strong></td>
-					<td class="integer">1,950</td>
-					<td class="integer">1,768</td>
-					<td class="integer">&minus;182</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<p class="fixheight">I&rsquo;m not letting myself off the hook for inefficient polygon use here: &lsquo;Cast Your Fate to the Stars&rsquo; is my level!</p>
-		
-		<p class="fixheight">In any case, I&rsquo;m not saying this because I think it demonstrates any kind of talent on my part (for one thing, as El Estepario Siberiano, arguably the greatest drummer alive, has argued, <a href="https://youtu.be/iproGrE6rCg" target="_blank">talent is a lie</a>); it simply requires attention to detail and understanding of geometry, both of which can be learned. I&rsquo;m revealing this solely to indicate how many polygons can often be removed without negatively impacting a map&rsquo;s appearance. Furthermore, not merely will pruning polygons reduce a level&rsquo;s map index use, but it will also improve its performance.</p>
-		
-		<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
-
-		<h1 id="principles">Principles of Pruning</h1>
-		<p class="fixheight">These principles have served me well:</p>
+			<p class="fixheight">If that isn&rsquo;t an option, you&rsquo;ll have to reduce the level&rsquo;s count of one or more of the following:</p>
 
 			<ul class="fixheight">
-				<li>Look at the floor and ceiling heights. If you have a large cluster of polygons at the same height, they may be inefficiently filled.</li>
-				<li>Triangles are rarely the most efficient way to fill a space. Examine them especially closely.</li>
-				<li>Moving a point by an amount that&rsquo;s imperceptible to humans can often change a convex angle into a concave angle, thus allowing two polygons to be combined into one.</li>
-				<li>Pruning lines and vertices that are attached to polygons is at least as important as pruning polygons, though it&rsquo;s harder to keep track of since Weland doesn&rsquo;t print those at the bottom of each level.
-					<ul>
-						<li>To find out how many lines and vertices your map has, draw a new line unconnected to any other line. Select the line; its index will be your line count. Select the vertex you drew <em>first</em>; its index will be your vertex count. Now delete it. (Lines and vertices that are unconnected to any polygon don&rsquo;t actually count to the map index count, so this won&rsquo;t give you an exact count, but it&rsquo;ll get you a rough estimate.)</li>
-					</ul>
-				</li>
-				<li>Pruning lines that are shorter than 0.5 World Units is more important, since they also use up polygon exclusion zones.</li>
-				<li>Pruning clusters of polygons that are close to sound objects is most important of all &ndash; as I&rsquo;ve said elsewhere, every single polygon within a 10 World Unit X/Y radius of a sound object uses up a map index. (Height doesn&rsquo;t matter at all here.)</li>
-				<li>Learn to recognize patterns. Here are three example patterns I find myself running into <em>all the time</em>. (We&rsquo;ll assume that none of the pitfalls mentioned in the section below this one apply to any of these cases.)
-				
-				<div class="image"><img src="example-savings.png" width="465" height="401" title="Three examples of geometry that can be filled more efficiently. (Note that 3a does not actually save map indices.)"/></div>
-
-					<ol>
-						<li>Our initial instinct might be to keep polygon sizes relatively constant here, but by redrawing the area so that the leftmost protrusion is one polygon and the remaining space is another, we save ourselves not only one polygon, but also three lines and two vertices &ndash; if I understand how map indices are allocated correctly, this saves us six.</li>
-						<li>It&rsquo;s often tempting to draw split polygons at every polygon boundary, but they can often be combined. In this case, we save ourselves four vertices, eight lines, four polygons, and possibly four polygon exclusion zones &ndash; again, if I understand map index allocation correctly (which may not be the case), this saves us a net <em>twenty</em>.</li>
-						<li>There are two options here, and they are not created equal:	
-							<ol class="loweralpha">
-								<li>Again, our instinct might be to keep polygon sizes equal, but filling this area with two equal-sized polygons actually <em>adds</em> a vertex while not reducing our line count &ndash; thus using the same number of indices we started with!</li>
-								<li>Simply combining the leftmost polygon with the bottom-most polygon, on the other hand, saves us both a polygon and a line. This represents the most modest savings among these three examples (two map indices), but it&rsquo;s also the most straightforward: it merely requires deleting a line and refilling a polygon. (You could also combine the rightmost polygon with the bottom-most one; of course, you can&rsquo;t do both.)</li>
-							</ol>
-						</li>
-					</ol>
-				</li>
+				<li>Polygons</li>
+				<li>Lines</li>
+				<li>Vertices</li>
+				<li>Platforms</li>
+				<li>Polygon exclusion zones (lines shorter than 0.5 World Units)</li>
+				<li>Sound objects</li>
 			</ul>
+
+			<p class="fixheight">It may seem tempting to prune sound objects first, as they are by far the largest user of map indices, but I&rsquo;d advise caution in doing so &ndash; sudden transitions from one &lsquo;sound region&rsquo; to another can be jarring. Aleph One 1.7&rsquo;s new OpenAL sound engine actually lessens this problem somewhat by preventing sounds from suddenly <em>cutting off</em> when the player crosses from one boundary to another; however, they still suddenly <em>start up</em>, so only half the problem has been solved.</p>
+
+			<h1 id="polygonpruning">Prune Polygons Where Possible</h1>
+
+			<p class="fixheight">More importantly, though, you almost certainly didn&rsquo;t fill polygons as efficiently as you could&rsquo;ve. I mentioned in my <a href="mapcomplexity.html#monument">case study on map complexity</a> that &lsquo;Monument to All Your Sins&rsquo; (a massive level from RyokoTK&rsquo;s brilliant net map pack <em><a href="https://simplici7y.com/items/starlight/" target="_blank">Starlight</a></em>) has 1,843 polygons. In addition, it has 3,277 vertices and 5,171 lines.</p>
+
+			<p class="fixheight">Before I proceed here, I want to be extremely clear that the following is not in any sense meant to throw shade at Ryoko, who&rsquo;s one of the most prolific and consistently brilliant <em>Marathon</em> level designers in history. I&rsquo;m not on his level and doubt I ever will be. That said, the solo adaptation I created for <em>Marathon Chronicles</em>, from which I removed none of the original&rsquo;s visual complexity, contains 1,784 polygons, 3,271 vertices, and 5,106 lines (a savings of 59 polygons, 6 vertices, and 65 lines). The image below (click to enlarge) compares the two versions to show where I pruned polygons:</p>
+
+			<div class="image"><a href="monument-to-nonexistence.gif" target="_blank"><img src="monument-to-nonexistence.gif" title="I will destroy extraneous polygons! I will create a monument to fear, surprise, ruthless efficiency, an almost fanatical devotion to the pope, and nice, red uniforms&hellip; oh, bugger" width="512" /></a></div>
+
+			<p class="fixheight">The fact that I only found 59 polygons to prune is actually quite impressive. Here are a few levels from various editions of <em>Where Monsters Are in Dreams</em> with their initial polygon counts, the polygon counts I pruned them to, and the number of polygons I pruned. (In all cases, the levels&rsquo; appearance was not visibly changed.)</p>
+
+			<table class="fixheight">
+				<thead>
+					<tr>
+						<th>Level</th>
+						<th class="right">Ante</th>
+						<th class="right">Post</th>
+						<th class="right">&Delta;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>We Were Speaking of Fate</strong></td>
+						<td class="integer">1,705</td>
+						<td class="integer">1,500</td>
+						<td class="integer">&minus;205</td>
+					</tr>
+					<tr>
+						<td><strong>Cause &amp; Effect</strong> (first iteration)</td>
+						<td class="integer">2,466</td>
+						<td class="integer">2,222</td>
+						<td class="integer">&minus;244</td>
+					</tr>
+					<tr>
+						<td><strong>Burning Memories</strong></td>
+						<td class="integer">2,217</td>
+						<td class="integer">2,020</td>
+						<td class="integer">&minus;197</td>
+					</tr>
+					<tr>
+						<td><strong>Cast Your Fate to the Stars</strong></td>
+						<td class="integer">1,950</td>
+						<td class="integer">1,768</td>
+						<td class="integer">&minus;182</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p class="fixheight">I&rsquo;m not letting myself off the hook for inefficient polygon use here: &lsquo;Cast Your Fate to the Stars&rsquo; is my level!</p>
+
+			<p class="fixheight">In any case, I&rsquo;m not saying this because I think it demonstrates any kind of talent on my part (for one thing, as El Estepario Siberiano, arguably the greatest drummer alive, has argued, <a href="https://youtu.be/iproGrE6rCg" target="_blank">talent is a lie</a>); it simply requires attention to detail and understanding of geometry, both of which can be learned. I&rsquo;m revealing this solely to indicate how many polygons can often be removed without negatively impacting a map&rsquo;s appearance. Furthermore, not merely will pruning polygons reduce a level&rsquo;s map index use, but it will also improve its performance.</p>
 
 			<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-		<h1 id="pitfalls">Potential Pitfalls of Pruning</h1>
-		<p class="fixheight">There are, of course, potential pitfalls as well:</p>
+			<h1 id="principles">Principles of Pruning</h1>
+			<p class="fixheight">These principles have served me well:</p>
 
-			<ul class="fixheight">
-				<li>The floor and ceiling heights should match.</li>
-				<li>The floor and ceiling textures should match.</li>
-				<li>The liquid assignments should match.</li>
-				<li>The floor, ceiling, and liquid lights should match (or at least be indistinguishable).</li>
-				<li>The ambient and random sounds on each polygon should match (or at least be indistinguishable).</li>
-				<li>The polygon types (and, if applicable, their permutations) should either match or be possible to reassign in a way that meaningfully preserves their gameplay effect.</li>
-				<li>Redrawing the polygons must not mess up movement either for the player or monsters. (If you need a refresher on how monsters move, see this <a href="https://citadel.lhowon.org/litterbox/Forge/hastursworkshop/things2.html" target="_blank">Hastur&rsquo;s Workshop piece</a> I linked above.)</li>
-				<li>You&rsquo;ll have to recreate any objects that occupied these polygons after remaking them.</li>
-				<li>If you have any terminals that use intralevel teleports, you&rsquo;ll probably have to redo them after deleting and remaking polygons.</li>
-				<li>If any teleporters took players to one of these polygons, you&rsquo;ll have to reassign them.</li>
-				<li>If there was a platform on one of these polygons, you&rsquo;ll have to remake it.
-					<ul><li>If any platform switches referred to such a platform, you&rsquo;ll have to reassign them.</li></ul>
-				</li>
-				<li>If redrawing the geometry causes &lsquo;bouncy walls&rsquo; that eject players upon collisions, you may wish to avoid doing so. (Bouncy walls are especially likely to happen with narrow polygons [&lt;1/4 WU width] or heavily acute angles, though not all bouncy walls are caused by acute angles or narrow polygons, and not all narrow polygons or acute angles cause bouncy walls.)</li>
-				<li>The overhead map uses polygon index to determine display order, which can mess up aesthetics &ndash; however, I should note that as conscious of aesthetics as I am, even I don&rsquo;t pay a ton of attention to this. (I plan to write a Weland plugin to swap two polygons&rsquo; indices soon&trade;.)</li>
-			</ul>
+				<ul class="fixheight">
+					<li>Look at the floor and ceiling heights. If you have a large cluster of polygons at the same height, they may be inefficiently filled.</li>
+					<li>Triangles are rarely the most efficient way to fill a space. Examine them especially closely.</li>
+					<li>Moving a point by an amount that&rsquo;s imperceptible to humans can often change a convex angle into a concave angle, thus allowing two polygons to be combined into one.</li>
+					<li>Pruning lines and vertices that are attached to polygons is at least as important as pruning polygons, though it&rsquo;s harder to keep track of since Weland doesn&rsquo;t print those at the bottom of each level.
+						<ul>
+							<li>To find out how many lines and vertices your map has, draw a new line unconnected to any other line. Select the line; its index will be your line count. Select the vertex you drew <em>first</em>; its index will be your vertex count. Now delete it. (Lines and vertices that are unconnected to any polygon don&rsquo;t actually count to the map index count, so this won&rsquo;t give you an exact count, but it&rsquo;ll get you a rough estimate.)</li>
+						</ul>
+					</li>
+					<li>Pruning lines that are shorter than 0.5 World Units is more important, since they also use up polygon exclusion zones.</li>
+					<li>Pruning clusters of polygons that are close to sound objects is most important of all &ndash; as I&rsquo;ve said elsewhere, every single polygon within a 10 World Unit X/Y radius of a sound object uses up a map index. (Height doesn&rsquo;t matter at all here.)</li>
+					<li>Learn to recognize patterns. Here are three example patterns I find myself running into <em>all the time</em>. (We&rsquo;ll assume that none of the pitfalls mentioned in the section below this one apply to any of these cases.)
 
-		<p class="fixheight">With all this in mind (not to mention what a pain it is to retexture areas after deleting and remaking polygons &ndash; Weland&rsquo;s &lsquo;Remember Deleted Sides&rsquo; only works some of the time), I can&rsquo;t blame anyone for not finding polygon pruning to be the most attractive solution. Ideally, you can prevent the need to prune by looking closely at your geometry before you even begin texturing. However, I&rsquo;m surely not the only person who&rsquo;s planned one thing for a level, then wound up doing something entirely different that required fewer polygons than expected.</p>
+					<div class="image"><img src="example-savings.png" width="465" height="401" title="Three examples of geometry that can be filled more efficiently. (Note that 3a does not actually save map indices.)"/></div>
 
-		<p class="fixheight">In any case, as time-consuming and frustrating as this process can be, it&rsquo;s still &ndash; to me at least &ndash; far preferable to having to sacrifice map complexity. Hopefully this helps.</p>
+						<ol>
+							<li>Our initial instinct might be to keep polygon sizes relatively constant here, but by redrawing the area so that the leftmost protrusion is one polygon and the remaining space is another, we save ourselves not only one polygon, but also three lines and two vertices &ndash; if I understand how map indices are allocated correctly, this saves us six.</li>
+							<li>It&rsquo;s often tempting to draw split polygons at every polygon boundary, but they can often be combined. In this case, we save ourselves four vertices, eight lines, four polygons, and possibly four polygon exclusion zones &ndash; again, if I understand map index allocation correctly (which may not be the case), this saves us a net <em>twenty</em>.</li>
+							<li>There are two options here, and they are not created equal:
+								<ol class="loweralpha">
+									<li>Again, our instinct might be to keep polygon sizes equal, but filling this area with two equal-sized polygons actually <em>adds</em> a vertex while not reducing our line count &ndash; thus using the same number of indices we started with!</li>
+									<li>Simply combining the leftmost polygon with the bottom-most polygon, on the other hand, saves us both a polygon and a line. This represents the most modest savings among these three examples (two map indices), but it&rsquo;s also the most straightforward: it merely requires deleting a line and refilling a polygon. (You could also combine the rightmost polygon with the bottom-most one; of course, you can&rsquo;t do both.)</li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+				</ul>
 
-			<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+				<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
+			<h1 id="pitfalls">Potential Pitfalls of Pruning</h1>
+			<p class="fixheight">There are, of course, potential pitfalls as well:</p>
+
+				<ul class="fixheight">
+					<li>The floor and ceiling heights should match.</li>
+					<li>The floor and ceiling textures should match.</li>
+					<li>The liquid assignments should match.</li>
+					<li>The floor, ceiling, and liquid lights should match (or at least be indistinguishable).</li>
+					<li>The ambient and random sounds on each polygon should match (or at least be indistinguishable).</li>
+					<li>The polygon types (and, if applicable, their permutations) should either match or be possible to reassign in a way that meaningfully preserves their gameplay effect.</li>
+					<li>Redrawing the polygons must not mess up movement either for the player or monsters. (If you need a refresher on how monsters move, see this <a href="https://citadel.lhowon.org/litterbox/Forge/hastursworkshop/things2.html" target="_blank">Hastur&rsquo;s Workshop piece</a> I linked above.)</li>
+					<li>You&rsquo;ll have to recreate any objects that occupied these polygons after remaking them.</li>
+					<li>If you have any terminals that use intralevel teleports, you&rsquo;ll probably have to redo them after deleting and remaking polygons.</li>
+					<li>If any teleporters took players to one of these polygons, you&rsquo;ll have to reassign them.</li>
+					<li>If there was a platform on one of these polygons, you&rsquo;ll have to remake it.
+						<ul><li>If any platform switches referred to such a platform, you&rsquo;ll have to reassign them.</li></ul>
+					</li>
+					<li>If redrawing the geometry causes &lsquo;bouncy walls&rsquo; that eject players upon collisions, you may wish to avoid doing so. (Bouncy walls are especially likely to happen with narrow polygons [&lt;1/4 WU width] or heavily acute angles, though not all bouncy walls are caused by acute angles or narrow polygons, and not all narrow polygons or acute angles cause bouncy walls.)</li>
+					<li>The overhead map uses polygon index to determine display order, which can mess up aesthetics &ndash; however, I should note that as conscious of aesthetics as I am, even I don&rsquo;t pay a ton of attention to this. (I plan to write a Weland plugin to swap two polygons&rsquo; indices soon&trade;.)</li>
+				</ul>
+
+			<p class="fixheight">With all this in mind (not to mention what a pain it is to retexture areas after deleting and remaking polygons &ndash; Weland&rsquo;s &lsquo;Remember Deleted Sides&rsquo; only works some of the time), I can&rsquo;t blame anyone for not finding polygon pruning to be the most attractive solution. Ideally, you can prevent the need to prune by looking closely at your geometry before you even begin texturing. However, I&rsquo;m surely not the only person who&rsquo;s planned one thing for a level, then wound up doing something entirely different that required fewer polygons than expected.</p>
+
+			<p class="fixheight">In any case, as time-consuming and frustrating as this process can be, it&rsquo;s still &ndash; to me at least &ndash; far preferable to having to sacrifice map complexity. Hopefully this helps.</p>
+
+			<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmak

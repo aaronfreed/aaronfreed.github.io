@@ -1131,9 +1131,25 @@ h1, h2, h3, h4, h5
 	text-align: center;
 }
 
-.music :is(h1 + h2, h2 + h3, h3 + h4, h4 + h4) {
+.music :is(h1 + h2, h2 + h3, h3 + h4, h4 + h5) {
 	margin: 8px 0px;
 }
+
+:is(h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h2 + h2, h2 + h3, h2 + h4,
+	h2 + h5, h3 + h3, h3 + h4, h3 + h5, h4 + h4, h4 + h5, h5 + h5)
+{
+	margin-top: 4px;
+}
+:is(
+	h1:has(+ h1, + h2, + h3, + h4, + h5),
+	h2:has(+ h2, + h3, + h4, + h5),
+	h3:has(+ h3, + h4, + h5),
+	h4:has(+ h4, + h5),
+	h5:has(+ h5))
+{
+	margin-bottom: 4px;
+}
+
 
 :where(.portfolio, .forgemanual) h1 {
 	font-size: 36px;
@@ -1966,6 +1982,9 @@ thead tr.freshprince th {
 .number {
 	font-family: "Fira Code", monospace;
 }
+.codeexample, code.codeexample, pre.codeexample {
+	font-family: "Fira Mono", monospace;
+}
 .discography .number, .discography .dr, .discography .date, .discography .accent {
 	font-family: inherit;
 }
@@ -2533,6 +2552,8 @@ a.weight0:link,
 a.weight0:visited,
 .weight0 :is(td, th, li),
 :is(.weight0, .weight1, .weight2, .weight3, .weight4, .weight5, .weight6, .weight7, .weight8) :is(td, th, li).weight0,
+blockquote.weight0,
+p.weight0,
 td.weight0,
 th.weight0,
 li.weight0
@@ -2546,6 +2567,8 @@ a.weight1:link,
 a.weight1:visited,
 .weight1 :is(td, th, li),
 :is(.weight0, .weight1, .weight2, .weight3, .weight4, .weight5, .weight6, .weight7, .weight8) :is(td, th, li).weight1,
+blockquote.weight1,
+p.weight1,
 td.weight1,
 th.weight1,
 li.weight1,
@@ -2558,6 +2581,8 @@ a.weight2:link,
 a.weight2:visited,
 .weight2 :is(td, th, li),
 :is(.weight0, .weight1, .weight2, .weight3, .weight4, .weight5, .weight6, .weight7, .weight8) :is(td, th, li).weight2,
+blockquote.weight2,
+p.weight2,
 td.weight2,
 th.weight2,
 li.weight2,
@@ -2571,6 +2596,8 @@ a.weight3:link,
 a.weight3:visited,
 .weight3 :is(td, th, li),
 :is(.weight0, .weight1, .weight2, .weight3, .weight4, .weight5, .weight6, .weight7, .weight8) :is(td, th, li).weight3,
+blockquote.weight3,
+p.weight3,
 td.weight3,
 th.weight3,
 li.weight3,
@@ -2585,6 +2612,8 @@ a.weight4:link,
 a.weight4:visited,
 .weight4 :is(td, th, li),
 :is(.weight0, .weight1, .weight2, .weight3, .weight4, .weight5, .weight6, .weight7, .weight8) :is(td, th, li).weight4,
+blockquote.weight4,
+p.weight4,
 td.weight4,
 th.weight4,
 li.weight4,
@@ -2600,6 +2629,8 @@ a.weight5:link,
 a.weight5:visited,
 .weight5 :is(td, th, li),
 :is(.weight0, .weight1, .weight2, .weight3, .weight4, .weight5, .weight6, .weight7, .weight8) :is(td, th, li).weight5,
+blockquote.weight5,
+p.weight5,
 td.weight5,
 th.weight5,
 li.weight5,
@@ -2616,6 +2647,8 @@ a.weight6:link,
 a.weight6:visited,
 .weight6 :is(td, th, li),
 :is(.weight0, .weight1, .weight2, .weight3, .weight4, .weight5, .weight6, .weight7, .weight8) :is(td, th, li).weight6,
+blockquote.weight6,
+p.weight6,
 td.weight6,
 th.weight6,
 li.weight6,
@@ -2633,6 +2666,8 @@ a.weight7:link,
 a.weight7:visited,
 .weight7 :is(td, th, li),
 :is(.weight0, .weight1, .weight2, .weight3, .weight4, .weight5, .weight6, .weight7, .weight8) :is(td, th, li).weight7,
+blockquote.weight7,
+p.weight7,
 td.weight7,
 th.weight7,
 li.weight7,
@@ -2651,6 +2686,8 @@ a.weight8:link,
 a.weight8:visited,
 .weight8 :is(td, th, li),
 :is(.weight0, .weight1, .weight2, .weight3, .weight4, .weight5, .weight6, .weight7, .weight8) :is(td, th, li).weight8,
+blockquote.weight8,
+p.weight8,
 td.weight8,
 th.weight8,
 li.weight8,

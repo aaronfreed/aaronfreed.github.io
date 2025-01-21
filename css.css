@@ -144,6 +144,7 @@
 	}
 	.noprint
 	{
+		visibility: collapse !important;
 		display: none !important;
 	}
 	.nowrapprint {
@@ -272,6 +273,15 @@
 	}
 	.compositions2023-2024 .print60toleft {
 		margin-left: -60px;
+	}
+	.print90 th, .print90 td, .print90 li, .print90 {
+		font-size: 90%;
+	}
+	.notopmarginprint {
+		margin-top: 0px;
+	}
+	.nobottommarginprint {
+		margin-bottom: 0px;
 	}
 }
 @media screen {

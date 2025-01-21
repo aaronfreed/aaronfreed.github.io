@@ -2287,36 +2287,44 @@ th.noleftpad {
 	font-weight: var(--weight3);
 	color: var(--heading-color);
 }
-.compositions2023-2024 :is(.translation-title, .translation-romanized, .translation-number, .translation-language) {
+th.translation-title, th.translation-romanized,
+td.translation-title, td.translation-romanized,
+th.translation-number, th.translation-language,
+td.translation-number, td.translation-language
+{
 	padding-left: 6px;
 }
-.compositions2023-2024 :is(.translation-number, .translation-language, .translation-meaning) {
+th.translation-number, th.translation-language, th.translation-meaning,
+td.translation-number, td.translation-language, td.translation-meaning
+{
 	padding-right: 6px;
 }
-.compositions2023-2024 .translation-meaning {
+td.translation-meaning, th.translation-meaning {
 	padding-left: 0px;
 	padding-right: 4px;
 }
-.compositions2023-2024 .translation-title:not(:has(+ .translation-romanized)),
-.compositions2023-2024 .translation-romanized {
+td.translation-title:not(:has(+ td.translation-romanized)),
+th.translation-title:not(:has(+ th.translation-romanized)),
+td.translation-romanized,
+th.translation-romanized {
 	padding-right: 0px;
 }
-.compositions2023-2024 .translation-title {
+th.translation-title, td.translation-title {
 	text-align: center;
 }
-.compositions2023-2024 .translation-title:has(+ .translation-romanized) {
+td.translation-title:has(+ td.translation-romanized),
+th.translation-title:has(+ th.translation-romanized) {
 	text-align: right;
 	padding-right: 6px;
 }
-.compositions2023-2024 :is(.translation-romanized, .translation-number) {
+th.translation-romanized, td.translation-romanized, td.translation-number {
 	text-align: left;
 }
-.compositions2023-2024 :is(
-	td.translation-number, th.translation-number,
-	td.translation-language, th.translation-language,
-	td.translation-title, th.translation-title,
-	td.translation-romanized, th.translation-romanized
-) {
+td.translation-number, th.translation-number,
+td.translation-language, th.translation-language,
+td.translation-title, th.translation-title,
+td.translation-romanized, th.translation-romanized
+{
 	border-right: 1px solid var(--offset-level-3);
 }
 

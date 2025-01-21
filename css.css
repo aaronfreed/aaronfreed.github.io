@@ -142,6 +142,9 @@
 	:root {
 		--page-width: 100vw;
 	}
+	:body {
+		--page-width: min(800px, calc(100vw - 16px)) !important;
+	}
 	.noprint
 	{
 		visibility: collapse !important;

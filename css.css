@@ -145,6 +145,30 @@
 	:body {
 		--page-width: min(800px, calc(100vw - 16px)) !important;
 	}
+	.printpadding8 td, .printpadding8 th {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	.printpadding6 td, .printpadding6 th {
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+	.printpadding4 td, .printpadding4 th {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.printpadding2 td, .printpadding2 th {
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+	:is(.printpadding8, .printpadding6, .printpadding4, .printpadding2)
+	:is(td:first-child, th:first-child) {
+		padding-left: 0px;
+	}
+	:is(.printpadding8, .printpadding6, .printpadding4, .printpadding2)
+	:is(td:last-child, th:last-child) {
+		padding-right: 0px;
+	}
 	.noprint
 	{
 		visibility: collapse !important;

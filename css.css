@@ -310,6 +310,9 @@
 	.nobottommarginprint {
 		margin-bottom: 0px;
 	}
+	del {
+		text-decoration: 1px var(--main-translucent) line-through;
+	}
 }
 @media screen {
 	:root {

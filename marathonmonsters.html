@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-UK">
 	<head>
 		<title>Where Are Monsters in Marathon&hellip;Maps</title>
 		<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
@@ -39,29 +39,29 @@ function makeAllSortable(parent) {
 window.onload = function () {makeAllSortable();};
 		</script>
 	</head>
-	<body class="monstermash">
+	<body class="monstermash fixheight">
 		<header>
 			<h1 class="petitecaps centred">Where Are Monsters in <em>Marathon</em>&hellip;Maps</h1>
-			<p>The <em>Marathon</em> trilogy only includes a few monster collections per level: <em>Marathon 2: Durandal</em> never exceeds three (except in the Windows 95 release, where one level contains four), while <em>Marathon</em> (1994) and <em>Marathon Infinity</em> only exceed four per level once apiece. There was a very practical reason for this: computers of the day had only a limited amount of RAM, and limiting the number of collections used meant the game required less memory to run. This had the added side effect of making each level feel unique. A sortable list of every monster collection used in all three games follows. Some general notes:</p>
+			<p class="light">The <strong><em>Marathon</em> trilogy</strong> only includes a few monster collections per level: <strong><em>Marathon 2: Durandal</em></strong> never exceeds three (except in the Windows 95 release, where one level contains four), while <strong><em>Marathon</em></strong> (1994) and <strong><em>Marathon Infinity</em></strong> only exceed four per level once apiece. There was a very practical reason for this: computers of the day had only a limited amount of RAM, and limiting the number of collections used meant the game required less memory to run. This had the added side effect of making each level feel unique. A sortable list of every monster collection used in all three games follows. Some general notes:</p>
 
-			<ul>
+			<ul class="light">
 				<li>For each table, clicking a column title sorts the table by that column&rsquo;s values, though due to the arbitrariness of the monster order (I ordered them by their positions in the game physics), only the first two column sorts are especially useful. Clicking a column a second time reverses the ordering.</li>
-				<li>&ldquo;Collection&rdquo; refers to how the shapes files for each game are organized. In lieu of a lengthy, potentially confusing explanation, I&rsquo;ll simply link to Lochnits.com&rsquo;s archives of all three games&rsquo; shapes by collection: 
+				<li>&ldquo;Collection&rdquo; refers to how the shapes files for each game are organized. In lieu of a lengthy, potentially confusing explanation, I&rsquo;ll simply link to <strong>Lochnits.com</strong>&rsquo;s archives of all three games&rsquo; shapes by collection: 
 					<ul>
-						<li><em><a href="https://lochnits.com/marathon/shapes/m1_shapes" target="_blank">Marathon</a></em></li>
-						<li><em><a href="https://lochnits.com/marathon/shapes/m2_shapes" target="_blank">Marathon 2: Durandal</a></em></li>
-						<li><em><a href="https://lochnits.com/marathon/shapes/infinity_shapes" target="_blank">Marathon Infinity</a></em></li>
+						<li style="margin-bottom: 4px;"><em><a href="https://lochnits.com/marathon/shapes/m1_shapes" target="_blank">Marathon</a></em></li>
+						<li style="margin-top: 4px; margin-bottom: 4px;"><em><a href="https://lochnits.com/marathon/shapes/m2_shapes" target="_blank">Marathon 2: Durandal</a></em></li>
+						<li style="margin-top: 4px;"><em><a href="https://lochnits.com/marathon/shapes/infinity_shapes" target="_blank">Marathon Infinity</a></em></li>
 					</ul>
 				</li>
-				<li>&ldquo;Flappyboi&rdquo;, for those of you not familiar with <em>Marathon</em> community memes, is given the more boring name of &ldquo;Tick&rdquo; in the game&rsquo;s code and editors, but we know better.</li>
-				<li>Levels in each game use varying numbers of monster collections (although <em>Marathon 2</em> is remarkably consistent, using three collections in every level except &ldquo;For Carnage, Apply Within&rdquo;, which uses two). If a column is blank, the level didn&rsquo;t have that many collections.
-				<li>If you&rsquo;re confused about aspects of mapmaking described here and desire further clarification, I have <a href="mapmaking101.html">beginner&rsquo;s</a> and <a href="mapmaking.html">advanced guides</a> that you may consult for more information and links to additional resources.</li>
+				<li><strong>&ldquo;Flappyboi&rdquo;</strong>, for those of you not familiar with <em>Marathon</em> community memes, is given the more boring name of <strong>&ldquo;Tick&rdquo;</strong> in the game&rsquo;s code and editors, but we know better.</li>
+				<li>Levels in each game use varying numbers of monster collections (although <strong><em>Marathon 2</em></strong> is remarkably consistent, using three collections in every level except <strong>&ldquo;For Carnage, Apply Within&rdquo;</strong>, which uses two). If a column is blank, the level didn&rsquo;t have that many collections.
+				<li>If you&rsquo;re confused about aspects of mapmaking described here and desire further clarification, I have <a href="mapmaking101.html">beginner&rsquo;s</a> and <a href="mapmaking.html">advanced guides</a> that contain more information and links to additional resources.</li>
 				<li>Please <a href="aboutme.html">contact me</a> if you notice any errors or omissions.</li>
 			</ul>
 
-		<h1 id="toc">Table of Contents</h1>
+		<h1 id="toc" class="centred">Table of Contents</h1>
 
-			<ol class="toclite">
+			<ol class="tocliter">
 				<li><a href="#top">Intro</a></li>
 				<li><a href="#toc">Table of Contents</a> (you&rsquo;re looking at it)</li>
 				<li><a href="#m1"><em>Marathon</em> (1994)</a></li>
@@ -74,13 +74,13 @@ window.onload = function () {makeAllSortable();};
 		</header>
 
 		<main>
-			<h1 id="m1"><em>Marathon</em> (1994)</h1>
+			<h1 id="m1" class="centred"><em>Marathon</em> (1994)</h1>
 
-			<ul>
+			<ul class="light">
 				<li><em>Caveat l&emacr;ctor:</em> I do not have a fast way to verify the accuracy of the <em>Marathon 1</em> data at the moment; once I get a stable emulator setup working, I&rsquo;ll double-check it.</li>
 			</ul>
 
-			<table>
+			<table class="curved">
 				<thead>
 					<tr>
 						<th class="right">#</th>
@@ -248,7 +248,7 @@ window.onload = function () {makeAllSortable();};
 					</tr>
 					<tr>
 						<td>18</td>
-						<td><span class="dotted" id="ftnt_ref01" title="This level has spawn positions for a Juggernaut and a Compiler, but the level&rsquo;s &ldquo;Monster Parameters&rdquo; specify starting values of 0 and never provide means for them to spawn. This would still force the game to load the Juggernaut and Compiler collections, but I&rsquo;m only noting these in an endnote because I suspect it to have been an oversight.">No Artificial Colors<a href="#ftnt02" class="noprintlink">&#8317;&sup1;&#8318;</a></td>
+						<td><span class="dotted" id="ftnt_ref01" title="This level&rsquo;s &ldquo;Monster Parameters&rdquo; say that nine Bobs and twenty Possessed Drones should spawn at the start of the level, but they have no spawn points, so they can&rsquo;t. This still forces the game to load the Bob and Drone collections, but I&rsquo;m only noting this in an endnote because I suspect that it was an oversight.">No Artificial Colors<a href="#ftnt02" class="noprintlink">&#8317;&sup1;&#8318;</a></td>
 						<td>Bob</td>
 						<td>Fighter</td>
 						<td>Trooper</td>
@@ -341,13 +341,13 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h1 id="m2"><em>Marathon 2: Durandal</em> (1995)</h1>
-				<ul style="padding: 0px 0px 8px;">
-					<li>In most versions of the map, all levels use three monster collections except for &ldquo;For Carnage, Apply Within&rdquo;, which only uses Compilers and Enforcers. The third column is hence left blank for that level.</li>
-					<li>The Windows 95 version adds one additional exception, &ldquo;Waterloo Waterpark&rdquo;, as explained in the endnotes (you can also just hover over the level name, or click the link after the level name).</li>
+			<h1 id="m2" class="centred"><em>Marathon 2: Durandal</em> (1995)</h1>
+				<ul style="padding: 0px 0px 8px;" class="light">
+					<li>In most versions of the map, all levels use three monster collections except for <strong>&ldquo;For Carnage, Apply Within&rdquo;</strong>, which only uses <strong>Compilers</strong> and <strong></strong>Enforcers. The third column is hence left blank for that level.</li>
+					<li>The Windows 95 version adds one additional exception, <strong>&ldquo;Waterloo Waterpark&rdquo;</strong>, as explained in the endnotes (you can also just hover over the level name, or click the link after the level name).</li>
 				</ul>
 
-			<table>
+			<table class="curved">
 				<thead>
 					<tr>
 						<th class="right">#</th>
@@ -559,14 +559,14 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h1 id="infinity"><em>Marathon Infinity</em> (1996)</h1>
-				<ul style="padding: 0px 0px 8px;">
+			<h1 id="infinity" class="centred"><em>Marathon Infinity</em> (1996)</h1>
+				<ul style="padding: 0px 0px 8px;" class="light">
 					<li>Owing to custom monster physics, the monster placements in <em>Marathon Infinity</em>&rsquo;s levels often don&rsquo;t match the expected shapes collections. Barring potential errors, this list takes that into account.</li>
-					<li><em>Infinity</em> levels range from using no monster collections at all (&ldquo;Two for the Price of One&rdquo;) to using five (&ldquo;One Thousand Thousand Slimy Things&rdquo;). Blank columns signify that a level used fewer collections than that.</li>
+					<li><em>Infinity</em> levels range from using no monster collections at all (<strong>&ldquo;Two for the Price of One&rdquo;</strong>) to using five (<strong>&ldquo;One Thousand Thousand Slimy Things&rdquo;</strong>). Blank columns signify that a level used fewer collections than that.</li>
 					<li>I&rsquo;m also not counting the Items collection, which always loads for every level; <em>Infinity</em>&rsquo;s Items collection contains the &ldquo;ambient wildlife&rdquo; that the shapes file names <strong>Grendel</strong> (small creatures seen hopping about on the ground), <strong>Potato Anus</strong> (blue and orange spherical creatures seen wandering in all kinds of liquids), and <strong>Mothrid</strong> (translucent flying octopodes). Names of levels that use any of these monsters are <em>italicized</em>.</li>
-					<li>Since most of <em>Marathon Infinity</em>&rsquo;s levels actually have <em>Marathon 2</em>-formatted physics models merged in, the physics for monsters in the VacBob slots aren&rsquo;t set in stone (nor are the behaviours of the SMG and its projectiles). This is rarely consequential in the former case (most &ldquo;VacBobs&rdquo; you see in <em>Marathon Infinity</em> levels actually use the &ldquo;Bob&rdquo; slots), but there&rsquo;s a spawn for a Security VacBob in the northwest corner of &ldquo;A Converted Church in Venice, Italy&rdquo; that could be <a href="https://youtu.be/0hYZaqYCZyQ" target="_blank">something completely different</a> if you&rsquo;d loaded a physics model that reassigned the Security VacBob before loading &ldquo;A Converted Church&rdquo;. This list assumes the default physics for such cases.</li>
+					<li>Since most levels in <em>Marathon Infinity</em>&rsquo;s map actually have <em>Marathon 2</em>-formatted physics models, physics for monsters in the <strong>VacBob</strong> slots aren&rsquo;t set in stone (nor are the behaviours of the <strong>SMG</strong> and its projectiles). This is rarely consequential in the former case (most &ldquo;VacBobs&rdquo; in <em>Marathon Infinity</em> levels actually use the &ldquo;Bob&rdquo; slots), but northwestern <strong>&ldquo;A Converted Church in Venice, Italy&rdquo;</strong> contains an <em>actual</em> <strong>Security VacBob</strong> who could be <a href="https://youtu.be/0hYZaqYCZyQ" target="_blank">something completely different</a> if you load physics that reassign Security VacBobs, then load &ldquo;A Converted Church&rdquo; without quitting the game. This list assumes the default physics in such cases.</li>
 				</ul>
-			<table>
+			<table class="curved">
 				<thead>
 					<tr>
 						<th class="right">#</th>
@@ -851,7 +851,7 @@ window.onload = function () {makeAllSortable();};
 					</tr>
 					<tr>
 						<td><strong>31</strong></td>
-						<td><span class="dotted" id="ftnt_ref03" title="This level&rsquo;s &ldquo;Monster Parameters&rdquo; tell the game to spawn nine Bobs and twenty Possessed Drones at the start of the level, but they have no spawn points, so they will never appear. This would still force the game to load the Bob and Drone collections, but I&rsquo;m only noting these in an endnote because I suspect it to have been an oversight.">Try Again<a href="#ftnt03" class="noprintlink">&#8317;&sup3;&#8318;</a></td>
+						<td><span class="dotted" id="ftnt_ref03" title="This level&rsquo;s &ldquo;Monster Parameters&rdquo; specify for nine Bobs and twenty Possessed Drones to spawn when it starts, but they can&rsquo;t, because they have no spawn points. This still forces the game to load the Bob and Drone collections, but I&rsquo;m only noting this in an endnote because I suspect that it was an oversight.">Try Again<a href="#ftnt03" class="noprintlink">&#8317;&sup3;&#8318;</a></td>
 						<td>Cyborg</td>
 						<td>Enforcer</td>
 						<td>Hunter</td>
@@ -881,10 +881,10 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h1 id="why">&hellip;why put this together?</h1>
+			<h1 id="why" class="centred">&hellip;why put this together?</h1>
 
-			<p>Two primary reasons:</p>
-				<ol>
+			<p class="light">Two primary reasons:</p>
+				<ol class="light">
 					<li>I think the techniques developers used to conserve memory in the &rsquo;80s and &rsquo;90s deserve much more attention than they&rsquo;ve received. Frankly, modern developers could learn a lot from the efficiency of &rsquo;80s and early &rsquo;90s games. This is just a small microcosm of that tendency.</li>
 					<li>I&rsquo;ve long held that most third-party scenarios place monsters too indiscriminately. If every level uses every monster type, then the combat throughout the game becomes effectively interchangeable. Restricting monsters to a few types per level results in each level&rsquo;s combat feeling far more unique. Seeing everything laid out like this may help drive home how restricted the monster placement in the original trilogy was.</li>
 				</ol>
@@ -893,9 +893,9 @@ window.onload = function () {makeAllSortable();};
 		</main>
 
 		<footer>
-			<h1 id="thanks">Acknowledgements</h1>
+			<h1 id="thanks" class="centred">Acknowledgements</h1>
 
-				<ul>
+				<ul class="light">
 					<li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
 					<li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
 					<li><strong>Solra Bizna</strong> for an incomprehensible amount of programming help, including the CSS that makes this exact page follow your computer&rsquo;s dark mode settings.</li>
@@ -905,9 +905,9 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="aboutme.html">Contact me</a> &middot;<a href="index.html">Website index</a></p>
 
-			<h1 id="endnotes">Endnotes</h1>
+			<h1 id="endnotes" class="centred">Endnotes</h1>
 
-			<table class="light endnotes hyphenate">
+			<table class="endnotes light hyphenate curved">
 				<thead>
 					<tr>
 						<th class="right"><strong><strong>#</strong></strong></th>
@@ -917,15 +917,15 @@ window.onload = function () {makeAllSortable();};
 				<tbody>
 					<tr>
 						<td><strong><a id="ftnt03" href="#ftnt_ref01" class="noprintlink">1</a></strong></td>
-						<td>This level has spawn positions for a Juggernaut and a Compiler, but the level&rsquo;s &ldquo;Monster Parameters&rdquo; specify starting values of 0 and never provide means for them to spawn. This would still force the game to load the Juggernaut and Compiler collections, but I&rsquo;m only noting these in an endnote because I suspect it to have been an oversight.</td>
+						<td class="hyphenate"><span class="light">This level has spawn points for a <strong>Juggernaut</strong> and <strong>Compiler</strong>, but its &ldquo;Monster Parameters&rdquo; give them initial counts of 0 and no means to ever spawn. This still forces the game to load the <strong>Juggernaut</strong> and <strong>Compiler</strong> collections, but I&rsquo;m only noting this in an endnote because I suspect that it was an oversight.</span></td>
 					</tr>
 					<tr>
 						<td><strong><a id="ftnt02" href="#ftnt_ref02" class="noprintlink">2</a></strong></td>
-						<td>The <a href="http://files3.bungie.org/trilogy/Map.sce2.zip">Windows 95 version</a> of this level features a fourth enemy class: Compiler, found in the &ldquo;Arrival&rdquo; secret. All other official versions feature only three.</td>
+						<td><span class="light">The <a href="http://files3.bungie.org/trilogy/Map.sce2.zip">Windows 95 version</a> of this level features a fourth enemy class: Compiler, found in the <strong>&ldquo;Arrival&rdquo;</strong> secret. All other official versions feature only three.</span></td>
 					</tr>
 					<tr>
 						<td><strong><a id="ftnt03" href="#ftnt_ref03" class="noprintlink">3</a></strong></td>
-						<td>This level&rsquo;s &ldquo;Monster Parameters&rdquo; tell the game to spawn nine Bobs and twenty Possessed Drones at the start of the level, but they have no spawn points, so they will never appear. This would still force the game to load the Bob and Drone collections, but I&rsquo;m only noting these in an endnote because I suspect it to have been an oversight.</td>
+						<td><span class="light">This level&rsquo;s &ldquo;Monster Parameters&rdquo; specify for nine <strong>Bobs</strong> and twenty <strong>Possessed Drones</strong> to spawn when it starts, but they can&rsquo;t, because they have no spawn points. This still forces the game to load the <strong>Bob</strong> and <strong>Drone</strong> collections, but I&rsquo;m only noting this in an endnote because I suspect that it was an oversight.</span></td>
 					</tr>
 				</tbody>
 			</table>

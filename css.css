@@ -2170,11 +2170,19 @@ code {
 :is(.musicalmodes, table.curved) td {
 	border-bottom: 1px solid var(--offset-level-2);
 }
+:is(.monstermash table.curved) td {
+	border-bottom: 1px solid var(--offset-level-3);
+}
 :is(.musicalmodes, table.curved) tr:last-child > th {
-	border-top: 2px solid var(--offset-level-3);
 	border-bottom: 2px solid var(--offset-level-3);
 }
-:is(.musicalmodes, table.curved) tr:last-child > td {
+:is(.musicalmodes, table.curved) tr:last-child:not(:only-of-type) > th {
+	border-top: 2px solid var(--offset-level-3);
+}
+table.curved thead > tr:first-child > th {
+	border-top: 0px;
+}
+:is(.musicalmodes, .monstermash table.curved, table.curved) tr:last-child > td {
 	border-bottom: none;
 }
 :is(.musicalmodes, table.curved) tr:first-child th:first-child {
@@ -2189,7 +2197,7 @@ code {
 :is(.musicalmodes, table.curved) tr:last-child td:last-child {
 	border-bottom-right-radius: 10px;
 }
-:is(.musicalmodes, table.curved) thead tr:first-child th:not(:first-child, :last-child) {
+:is(.musicalmodes, table.curved) thead tr:first-child:not(:only-of-type) th:not(:first-child, :last-child) {
 	border-top: 2px solid var(--offset-level-3);
 }
 :is(.musicalmodes, table.curved) tr {

@@ -200,19 +200,35 @@
 	:body {
 		--page-width: min(800px, calc(100vw - 16px)) !important;
 	}
-	.printpadding8 td, .printpadding8 th {
+	.printpadding8 td, .printpadding8 th,
+	.printpadding8.curved :is(
+		td:first-child, th:first-child,
+		td:last-child, th:last-child
+	) {
 		padding-left: 8px;
 		padding-right: 8px;
 	}
-	.printpadding6 td, .printpadding6 th {
+	.printpadding6 td, .printpadding6 th,
+	.printpadding6.curved :is(
+		td:first-child, th:first-child,
+		td:last-child, th:last-child
+	) {
 		padding-left: 6px;
 		padding-right: 6px;
 	}
-	.printpadding4 td, .printpadding4 th {
+	.printpadding4 td, .printpadding4 t,
+	.printpadding4.curved :is(
+		td:first-child, th:first-child,
+		td:last-child, th:last-child
+	) {
 		padding-left: 4px;
 		padding-right: 4px;
 	}
-	.printpadding2 td, .printpadding2 th {
+	.printpadding2 td, .printpadding2 th,
+	.printpadding2.curved :is(
+		td:first-child, th:first-child,
+		td:last-child, th:last-child
+	) {
 		padding-left: 2px;
 		padding-right: 2px;
 	}
@@ -224,6 +240,7 @@
 	:is(td:last-child, th:last-child) {
 		padding-right: 0px;
 	}
+	:is(.printpadding8.curved) :is(td:first-child)
 	.noprint
 	{
 		visibility: collapse !important;

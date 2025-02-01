@@ -216,7 +216,7 @@
 		padding-left: 6px;
 		padding-right: 6px;
 	}
-	.printpadding4 td, .printpadding4 t,
+	.printpadding4 td, .printpadding4 th,
 	.printpadding4.curved :is(
 		td:first-child, th:first-child,
 		td:last-child, th:last-child
@@ -240,7 +240,6 @@
 	:is(td:last-child, th:last-child) {
 		padding-right: 0px;
 	}
-	:is(.printpadding8.curved) :is(td:first-child)
 	.noprint
 	{
 		visibility: collapse !important;

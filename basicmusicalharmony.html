@@ -1,0 +1,527 @@
+<html lang="en-us">
+	<head>
+		<link rel="stylesheet" type="text/css" href="css.css">
+		<link rel="stylesheet" type="text/css" href="https://aaronfreed.github.io/css.css">
+		<title>Basic Musical Harmony</title>
+	</head><!--𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗𝟎-->
+	<body class="compositions2023-2024 light musictheory">
+		<header>
+			<h1 class="petitecaps centred nobottommargin" style="line-height: 42px;">Basic Musical Harmony</h1>
+			<h2 class="petitecaps centred notopmargin nobottommargin" style="line-height: 36px;">An Introduction to Pitches, Scales and Chords</h2>
+			<!--<h3 class="petitecaps centred notopmargin" style="line-height: 30px;"></h3>-->
+		
+			<p>This is the second part in a series I&rsquo;m writing on basic music theory, following <a href="whatistime.html" target="_blank">my page on rhythm</a>. It&rsquo;s aimed primarily at people that want to learn how to write music. Most guides I&rsquo;ve found assume the reader plays a specific instrument (or <em>any</em> instrument), but modern DAWs make it entirely possible for someone to compose music without playing an instrument. Although I do recommend learning an instrument to anyone who becomes serious about composing, having a basic grasp of music theory beforehand will make learning an instrument much easier, and it may even give you a better idea of what instruments you&rsquo;d enjoy learning. In any case, my aim here is to make music theory accessible to everyone, regardless of prior musical experience or lack thereof.</p>
+
+			<p>This page assumes that you&rsquo;ve familiarized yourself with part one&rsquo;s &ldquo;Basic Rhythmic Concepts&rdquo; and have at least a basic grasp on time signatures (though you needn&rsquo;t be able to identify them by ear). This page will introduce the treble and bass clefs and their pitches; the diatonic major and natural minor scales; major, minor, diminished, and augmented chords; a scale&rsquo;s tonic, subdominant, and dominant chords; sharps, flats, and naturals; and key signatures.</p>
+
+			<p>This page is also a work in progress; I&rsquo;ve uploaded it to make it easier to solicit feedback from people on its comprehensibility. Expect the final version to be substantially different; it may in fact be multiple pages.</p>
+		</header>
+
+		<h1 class="centred" id="pitchnotation">Basic Music Notation: Pitch</h1>
+		<h2 class="centred" id="clefs">Clefs</h2>
+
+		<p>I wrote on my page about rhythm that a note&rsquo;s height signifies its pitch; the type of note signifies its duration. I was oversimplifying slightly, though: to the left of the musical staff, you&rsquo;ll see a symbol called a <span class="toc-counter weight3">clef</span>. By far the most common of these are the <span class="toc-counter weight3">treble clef</span> (<span class="accent" style="font-size: 20px;">&#x1D11E;</span>) and the <span class="toc-counter weight3">bass clef</span> (<span class="accent" style="font-size: 20px;">&#x1D122;</span>).</p>
+		
+		<p>The clef you see affects what pitch values are written on the staff. In the treble clef, from bottom to top, the five lines represent the notes <span class="toc-counter weight4">E</span>, <span class="toc-counter weight4">G</span>, <span class="toc-counter weight4">B</span>, <span class="toc-counter weight4">D</span>, and <span class="toc-counter weight4">F</span>, for which <span class="toc-counter weight4">E</span>very <span class="toc-counter weight4">G</span>ood <span class="toc-counter weight4">B</span>oy <span class="toc-counter weight4">D</span>eserves <span class="toc-counter weight4">F</span>avor is commonly used as a menomnic. The spaces in between the lines are <span class="toc-counter weight4">F</span>, <span class="toc-counter weight4">A</span>, <span class="toc-counter weight4">C</span>, and <span class="toc-counter weight4">E</span>, which serve as their own mnemonic.</p>
+		
+		<p>The bass clef&rsquo;s notes are, from bottom to top, <span class="toc-counter weight4">G</span>, <span class="toc-counter weight4">B</span>, <span class="toc-counter weight4">D</span>, <span class="toc-counter weight4">F</span>, and <span class="toc-counter weight4">A</span>, for which the similar mnemonic <span class="toc-counter weight4">G</span>ood <span class="toc-counter weight4">B</span>oys <span class="toc-counter weight4">D</span>o <span class="toc-counter weight4">F</span>ine <span class="toc-counter weight4">A</span>lways is used. The spaces are <span class="toc-counter weight4">A</span>, <span class="toc-counter weight4">C</span>, <span class="toc-counter weight4">E</span>, and <span class="toc-counter weight4">G</span>, for which the mnemonic <span class="toc-counter weight4">A</span>ll <span class="toc-counter weight4">C</span>ows <span class="toc-counter weight4">E</span>at <span class="toc-counter weight4">G</span>rass is often used.</p>
+
+		<p>The clef is usually found at the left of a musical score, like so:</p>
+		
+		<!-- i apologize for this CSS war crime -->
+		<!--<div style="font-size: 30px; letter-spacing: -3px; position: relative; top: 0px; left: 0px; height: 45px; z-index: 1;" class="nowrap">&#x1D11A;&#x1D11A;&#x1D11A;&#x1D11A;&#x1D11A;&#x1D11A;&#x1D11A;&#x1D11A;&#x1D11A;&#x1D11A;&#x1D11A;</div><div style="font-size: 30px; position: relative; top: -53px; left: 3px; z-index: 2; height: 0px;" class="nowrap">&#x1D11E;<span style="letter-spacing: -1px;"><span style="position: relative; top: -25.6px;">&#9839;</span><span style="position: relative; top: -14.5px;">&#9839;</span><span style="position: relative; top: -29.3px;">&#9839;</span><span style="position: relative; top: -18.2px;">&#9839;</span><span style="position: relative; top: -7.1px;">&#9839;</span><span style="position: relative; top: -21.9px;">&#9839;</span></span><span style="position: relative; top: -11px; letter-spacing: 6px;">&#9839;</span></span><span class="timesignature" style="line-height: 15px; font-size: 21px; letter-spacing: 11px; color: var(--main);">&#x1D7D2;<br />&#x1D7D2;</span><span style="position: relative; top: 5px; text-decoration: underline; text-decoration-thickness: 1px; letter-spacing: -1px;">&nbsp;&nbsp;</span><span style="position: relative; top: 10.5px; left: -13.4px; letter-spacing: 12px;">&#x1D15F;<span style="position: relative; top: -3.5px;">&#x1D15F;<span style="position: relative; top: -3.5px;">&#x1D15F;<span style="position: relative; top: -3.5px;">&#x1D15F;</span></span></span></span><span style="position: relative; left: -12px;">&#x1D100;</span><span style="position: relative; top: 19.5px; letter-spacing: 12px;"><span style="display: inline-block; transform: rotate(180deg) translateX(12px) translateY(1.25px);">&#x1D15F;</span><span style="display: inline-block; transform: rotate(180deg) translateX(12px) translateY(5px);">&#x1D15F;</span><span style="display: inline-block; transform: rotate(180deg) translateX(12px) translateY(8.75px);">&#x1D15F;</span><span style="display: inline-block; transform: rotate(180deg) translateX(12px) translateY(12.5px);">&#x1D15F;</span></span><span style="position: relative; left: -2px;">&#x1D102;</span></div>-->
+
+		<div class="image"><a href="https://aaronfreed.github.io/images/csharpmajorscale.png" class="noprintlink"><img src="https://aaronfreed.github.io/images/csharpmajorscale.png" title="The C&#9839; major scale, starting at C&#9839;4, the note immediately above middle C" alt="The C&#9839; major scale, starting at C&#9839;4, the note immediately above middle C" height="153" width="800" class="dark-invert"></a></div>
+	
+		<p>This is the <strong class="toc-counter"><strong class="accent">C<span style="font-size: 30px;">&#9839;</strong> major</strong> scale, starting on <strong class="toc-counter"><strong class="accent">C<span style="font-size: 30px;">&#9839;</span></strong>4</strong>, the note immediately above <strong class="toc-counter">middle <strong class="accent">C</strong></strong>. But we&rsquo;re getting ahead of ourselves. We need to start with an explanation of <span class="toc-counter weight3">pitch</span>.</p>
+		
+		<h2 class="centred" id="chromaticscale">The Twelve-Tone Chromatic Scale</h2>
+
+		<p>The vast majority of Western music uses what&rsquo;s referred to as  <span class="toc-counter weight3">twelve-tone equal temperament</span>. Scientifically, this means every octave is subdivided into twelve equal ratios &ndash; more specifically, for those of you mathematics nerds out there, each note&rsquo;s pitch is exactly 2<span style="font-size: 14px; letter-spacing: -1px; display: inline-block; transform: translateY(-8px);">&sup1;&frasl;&#8321;&#8322;</span> (&asymp;1.05946309436) that of the note a half-step below it. If that doesn&rsquo;t make sense to you, don&rsquo;t worry; you needn&rsquo;t understand advanced mathematics to play or write music, though I&rsquo;ll use some simpler mathematics to explain harmony and dissonance later.</p>
+
+		<p>Although the octave is divided into twelve notes, most Western music uses a scale that selects only seven of those notes for the majority of its melodies and harmony. The white notes on the piano correspond to the <strong class="toc-counter"><strong class="accent">C</strong> major</strong> scale (or, alternately, the <strong class="toc-counter"><strong class="accent">A</strong> natural minor</strong> scale). The table below has these <span class="magenta weight3">highlighted</span>.</p>
+
+		<table id="notes" class="curved">
+			<thead>
+				<tr><th colspan="12" class="accent weight4" style="border-bottom: 2px solid var(--offset-level-3);">C major within the chromatic scale</th></tr>
+				<tr><th colspan="12" style="display:none;"></th></tr>
+			</thead>
+			<tbody class="centred">
+				<tr>
+					<td>B<span style="font-size: 24px;">&#9839;</span>/<span class="magenta weight4">C</span></td>
+					<td>C<span style="font-size: 24px;">&#9839;</span>/D<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="magenta weight4">D</td>
+					<td>D<span style="font-size: 24px;">&#9839;</span>/E<span style="font-size: 24px;">&#9837;</span></td>
+					<td><span class="magenta weight4">E</span>/F<span style="font-size: 24px;">&#9837;</span></td>
+					<td>E<span style="font-size: 24px;">&#9839;</span>/<span class="magenta weight4">F</span></td>
+					<td>F<span style="font-size: 24px;">&#9839;</span>/G<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="magenta weight4">G</td>
+					<td>G<span style="font-size: 24px;">&#9839;</span>/A<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="magenta weight4">A</td>
+					<td>A<span style="font-size: 24px;">&#9839;</span>/B<span style="font-size: 24px;">&#9837;</span></td>
+					<td><span class="magenta weight4">B</span>/C<span style="font-size: 24px;">&#9837;</span></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p style="line-height: 30px;">This immediately raises two questions:</p>
+			
+		<ol>
+			<li>Why do most of these notes have two names?</li>
+			<li>What do <span style="font-size: 24px;">&#9839;</span> and <span style="font-size: 24px;">&#9837;</span> mean?</li>
+		</ol>
+
+		<p style="line-height: 30px;">I&rsquo;ll answer these in the reverse order. <span style="font-size: 24px;" class="accent weight4">&#9839;</span>, the <span class="toc-counter weight3">sharp</span> symbol, raises a note a half-step above its normal value (e.g., <span class="accent weight4">A</span> &rarr; <span class="accent weight4">A<span style="font-size: 24px;">&#9839;</span></span>). <span style="font-size: 24px;" class="accent weight4">&#9837;</span>, the <span class="toc-counter weight3">flat</span> symbol, lowers it a half-step below its normal value (e.g., <span class="accent weight4">A</span> &rarr; <span class="accent weight4">A<span style="font-size: 24px;">&#9837;</span></span>). <span style="font-size: 24px;" class="accent weight4">&#9838;</span>, the <span class="toc-counter weight3">natural</span> symbol, negates either of these symbols and sets a note back to its non-sharp, non-flat value.</p>
+		
+		<p style="line-height: 30px;">If any of the above symbols appears immediately to the left of a note, it&rsquo;s considered an <span class="toc-counter weight3">accidental</span> and lasts until the end of a measure. There are different rules if they are set in the <span class="toc-counter weight3">key signature</span>, ordinarily seen immediately to the right of the clef. The key signature applies to all notes of a given pitch (thus, in a key signature specifying an <span class="accent weight4">F<span style="font-size: 24px;">&#9839;</span></span>, </span>all Fs become <span class="accent weight4">F<span style="font-size: 24px;">&#9839;</span></span>s unless otherwise specified). Generally, naturals aren&rsquo;t specified in a key signature, but sometimes the key signature changes mid-song (which is called <span class="toc-counter weight3">modulation</span>). In such cases, naturals may be specified (although they don&rsquo;t have to be). Key signature modulation is almost always preceded by a double bar (<span style="font-size: 24px;" class="toc-counter">&#x1D101;</span>), after which the new key signature is declared.</p>
+
+		<p style="line-height: 28px;">The key signature provides a useful sort of shorthand for musicians. If we had to specify F<span style="font-size: 30px;">&#9839;</span> every measure, not only would it be repetitive, but once an <span style="font-size: 30px;">&#9838;</span> finally occurred, it&rsquo;d be a musical Boy Who Cried Wolf of sorts &ndash; our brains would have gotten so used to the F<span style="font-size: 30px;">&#9839;</span> that they&rsquo;d just fill it in. Key signatures and accidentals notate a piece&rsquo;s most commonly used pitches more logically and concisely while making its outliers stand out more.</p>
+
+		<p style="line-height: 28px;">This, in turn, is part of why most of the notes have two names: raising C by half a step and lowering D by half a step are two ways to refer to the same pitch, but they&rsquo;re semantically different: the key signature of the passage affects which one is more logical to use (it wouldn&rsquo;t make sense to use both F<span style="font-size: 30px;">&#9839;</span> and G<span style="font-size: 30px;">&#9837;</span> in the same measure). D, G, and A are the only notes with a single name because they&rsquo;re the only ones sandwiched between two black piano keys. Here are the notes again; this time, white piano keys have lighter backgrounds.</p>
+
+		<table id="notes" class="curved">
+			<thead>
+				<tr><th colspan="12" class="accent weight4" style="border-bottom: 2px solid var(--offset-level-3);">The white keys on the piano</th></tr>
+				<tr><th colspan="12" style="display:none;"></th></tr>
+			</thead>
+			<tbody class="centred">
+				<tr class="">
+					<td class="mediumrightborder lightkey">B<span style="font-size: 24px;">&#9839;</span>/C</td>
+					<td class="mediumrightborder darkkey">C<span style="font-size: 24px;">&#9839;</span>/D<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="mediumrightborder lightkey">D</td>
+					<td class="mediumrightborder darkkey">D<span style="font-size: 24px;">&#9839;</span>/E<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="mediumrightborder lightkey">E/F<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="mediumrightborder lightkey">E<span style="font-size: 24px;">&#9839;</span>/F</td>
+					<td class="mediumrightborder darkkey">F<span style="font-size: 24px;">&#9839;</span>/G<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="mediumrightborder lightkey">G</td>
+					<td class="mediumrightborder darkkey">G<span style="font-size: 24px;">&#9839;</span>/A<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="mediumrightborder lightkey">A</td>
+					<td class="mediumrightborder darkkey">A<span style="font-size: 24px;">&#9839;</span>/B<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="lightkey">B/C<span style="font-size: 24px;">&#9837;</span></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>And here&rsquo;s a third presentation, with only one name for each white key.</p>
+
+		<table id="whitekeyssimple" class="curved">
+			<thead>
+				<tr><th colspan="12" class="accent weight4" style="border-bottom: 2px solid var(--offset-level-3);">The white keys on the piano, simplified</th></tr>
+				<tr><th colspan="12" style="display:none;"></th></tr>
+			</thead>
+			<tbody class="centred">
+				<tr>
+					<td class="mediumrightborder lightkey">C</td>
+					<td class="mediumrightborder darkkey">C<span style="font-size: 24px;">&#9839;</span>/D<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="mediumrightborder lightkey">D</td>
+					<td class="mediumrightborder darkkey">D<span style="font-size: 24px;">&#9839;</span>/E<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="mediumrightborder lightkey">E</td>
+					<td class="mediumrightborder lightkey">F</td>
+					<td class="mediumrightborder darkkey">F<span style="font-size: 24px;">&#9839;</span>/G<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="mediumrightborder lightkey">G</td>
+					<td class="mediumrightborder darkkey">G<span style="font-size: 24px;">&#9839;</span>/A<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="mediumrightborder lightkey">A</td>
+					<td class="mediumrightborder darkkey">A<span style="font-size: 24px;">&#9839;</span>/B<span style="font-size: 24px;">&#9837;</span></td>
+					<td class="highlight">B</span></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>Again, the highlighted keys correspond precisely to the C major scale. Scales using the same ratios as C major are referred to as <span class="toc-counter weight3">diatonic major scales</span>, meaning they feature the following intervals in the following order:</p>
+			<table class="curved">
+				<thead>
+					<tr><th colspan="3" class="accent weight4">Diatonic major scale intervals</th></tr>
+					<tr><th>#</th><th>Interval</th><th>Notes</th></tr>
+				</thead>
+				<tbody class="centred">
+					<tr><td>1 &rarr; 2</td><td class="weight3">WHOLE STEP</td><td>C &rarr; D</td></tr>
+					<tr><td>2 &rarr; 3</td><td class="weight3">WHOLE STEP</td><td>D &rarr; E</td></tr>
+					<tr><td>3 &rarr; 4</td><td>half step</td><td>E &rarr; F</td></tr>
+					<tr><td>4 &rarr; 5</td><td class="weight3">WHOLE STEP</td><td>F &rarr; G</td></tr>
+					<tr><td>5 &rarr; 6</td><td class="weight3">WHOLE STEP</td><td>G &rarr; A</td></tr>
+					<tr><td>6 &rarr; 7</td><td class="weight3">WHOLE STEP</td><td>A &rarr; B</td></tr>
+					<tr><td>7 &rarr; 1</td><td>half step</td><td>B &rarr; C</td></tr>
+				</tbody>
+			</table>
+					
+		<p>A scale, in turn, has different <span class="toc-counter weight3">modes</span>, which effectively serve as variants of the scale starting at different notes within the scale. The two most common modes of the diatonic major scale are <span class="toc-counter weight3">Ionian mode</span> (which is identical to the diatonic major scale) and <span class="toc-counter weight3">Aeolian mode</span>, another name for the <span class="toc-counter weight3">natural minor scale</span>. Aeolian mode starts at the sixth degree of the scale (A, in the case of C major) and runs up an octave to the next A:</p>
+		
+		<table class="curved">
+			<thead>
+				<tr><th colspan="4" class="accent weight4">Natural minor scale intervals</th></tr>
+				<tr><th>Major #</th><th>Minor #</th><th>Interval</th><th>Notes</th></tr>
+			</thead>
+			<tbody class="centred">
+				<tr><td>6 &rarr; 7</td><td>1 &rarr; 2</td><td class="weight3">WHOLE STEP</td><td>A &rarr; B</td></tr>
+				<tr><td>7 &rarr; 1</td><td>2 &rarr; 3</td><td>half step</td><td>B &rarr; C</td></tr>
+				<tr><td>1 &rarr; 2</td><td>3 &rarr; 4</td><td class="weight3">WHOLE STEP</td><td>C &rarr; D</td></tr>
+				<tr><td>2 &rarr; 3</td><td>4 &rarr; 5</td><td class="weight3">WHOLE STEP</td><td>D &rarr; E</td></tr>
+				<tr><td>3 &rarr; 4</td><td>5 &rarr; 6</td><td>half step</td><td>E &rarr; F</td></tr>
+				<tr><td>4 &rarr; 5</td><td>6 &rarr; 7</td><td class="weight3">WHOLE STEP</td><td>F &rarr; G</td></tr>
+				<tr><td>5 &rarr; 6</td><td>7 &rarr; 1</td><td class="weight3">WHOLE STEP</td><td>G &rarr; A</td></tr>
+			</tbody>
+		</table>
+
+		<p>I&rsquo;ve written a <a href="https://aaronfreed.github.io/musicalmodes.html" target="_blank" class="underline songlink noprintlink">detailed examination</a> of the diatonic major scale&rsquo;s modes, but it&rsquo;s quite technical and advanced and may not be entirely comprehensible without more theory knowledge. In brief, the diatonic major scale&rsquo;s seven modes are:</p>
+
+		<table class="curved">
+			<thead>
+				<tr><th colspan="9" class="accent weight4">Modes of the C major scale</th></tr>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>1&rarr;2</th>
+					<th>2&rarr;3</th>
+					<th>3&rarr;4</th>
+					<th>4&rarr;5</th>
+					<th>5&rarr;6</th>
+					<th>6&rarr;7</th>
+					<th>7&rarr;1</th>
+				</tr>
+			</thead>
+			<tbody class="centred">
+				<tr>
+					<td>1</td>
+					<td>Ionian</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="orange">h</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="orange">h</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Dorian</td>
+					<td class="azure weight3">W</td>
+					<td class="orange">h</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="orange">h</td>
+					<td class="azure weight3">W</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Phrygian</td>
+					<td class="orange">h</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="orange">h</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Lydian</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="orange">h</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="orange">h</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Mixolydian</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="orange">h</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="orange">h</td>
+					<td class="azure weight3">W</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Aeolian</td>
+					<td class="azure weight3">W</td>
+					<td class="orange">h</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="orange">h</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Locrian</td>
+					<td class="orange">h</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="orange">h</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+					<td class="azure weight3">W</td>
+				</tr>
+			</tbody>
+		</table>
+
+		Here are examples using the C major scale:
+
+		<table class="curved">
+			<thead>
+				<tr><th colspan="10" class="accent weight4">Modes of the C major scale</th></tr>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+					<th>7</th>
+					<th>1</th>
+				</tr>
+			</thead>
+			<tbody class="centred">
+				<tr>
+					<td>1</td>
+					<td>Ionian</td>
+					<td>C</td>
+					<td>D</td>
+					<td>E</td>
+					<td>F</td>
+					<td>G</td>
+					<td>A</td>
+					<td>B</td>
+					<td>C</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Dorian</td>
+					<td>D</td>
+					<td>E</td>
+					<td>F</td>
+					<td>G</td>
+					<td>A</td>
+					<td>B</td>
+					<td>C</td>
+					<td>D</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Phrygian</td>
+					<td>E</td>
+					<td>F</td>
+					<td>G</td>
+					<td>A</td>
+					<td>B</td>
+					<td>C</td>
+					<td>D</td>
+					<td>E</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Lydian</td>
+					<td>F</td>
+					<td>G</td>
+					<td>A</td>
+					<td>B</td>
+					<td>C</td>
+					<td>D</td>
+					<td>E</td>
+					<td>F</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Mixolydian</td>
+					<td>G</td>
+					<td>A</td>
+					<td>B</td>
+					<td>C</td>
+					<td>D</td>
+					<td>E</td>
+					<td>F</td>
+					<td>G</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Aeolian</td>
+					<td>A</td>
+					<td>B</td>
+					<td>C</td>
+					<td>D</td>
+					<td>E</td>
+					<td>F</td>
+					<td>G</td>
+					<td>A</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Locrian</td>
+					<td>B</td>
+					<td>C</td>
+					<td>D</td>
+					<td>E</td>
+					<td>F</td>
+					<td>G</td>
+					<td>A</td>
+					<td>B</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>The word <em>chromatic</em> is derived from the Greek word <em>χρωματικός</em> (romanized: <em>khrōmatikós</em>), meaning either <em>relating to colour</em> or <em>relating to one of the three types of tetrachord in Greek music</em>. Bearing this in mind, it occurs to me that some readers may find it helpful to see the chromatic scale&rsquo;s twelve degrees represented with twelve equally spaced <a href="https://bottosson.github.io/misc/colorpicker/" target="_blank">Oklab hues</a>: <span class="weight3" style="line-height: 18px; color: var(--oklab0);">C</span>, <span class="weight3" style="line-height: 18px; color: var(--oklab30);">C<span style="font-size: 24px;">&#9839;</span>/D<span style="font-size: 24px;">&#9837;</span></span>, <span class="weight3" style="line-height: 18px; color: var(--oklab60);">D</span>, <span class="weight3" style="line-height: 18px; color: var(--oklab90);">D<span style="font-size: 24px;">&#9839;</span>/E<span style="font-size: 24px;">&#9837;</span></span>, <span class="weight3" style="line-height: 18px; color: var(--oklab120);">E</span>, <span class="weight3" style="line-height: 18px; color: var(--oklab150);">F</span>, <span class="weight3" style="line-height: 18px; color: var(--oklab180);">F<span style="font-size: 24px;">&#9839;</span>/G<span style="font-size: 24px;">&#9837;</span></span>, <span class="weight3" style="line-height: 18px; color: var(--oklab210);">G</span>, <span class="weight3" style="line-height: 18px; color: var(--oklab240);">G<span style="font-size: 24px;">&#9839;</span>/A<span style="font-size: 24px;">&#9837;</span></span>, <span class="weight3" style="line-height: 18px; color: var(--oklab270);">A</span>, <span class="weight3" style="line-height: 18px; color: var(--oklab300);">A<span style="font-size: 24px;">&#9839;</span>/B<span style="font-size: 24px;">&#9837;</span></span>, <span class="weight3" style="line-height: 18px; color: var(--oklab330);">B</span>.</p>
+		<table class="curved">
+			<thead>
+				<tr><th colspan="10" class="accent weight4">Modes of the C major scale</th></tr>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+					<th>7</th>
+					<th>1</th>
+				</tr>
+			</thead>
+			<tbody class="centred">
+				<tr>
+					<td>1</td>
+					<td>Ionian</td>
+					<td class="weight4" style="color: var(--oklab0);">C</td>
+					<td class="weight4" style="color: var(--oklab60);">D</td>
+					<td class="weight4" style="color: var(--oklab120);">E</td>
+					<td class="weight4" style="color: var(--oklab150);">F</td>
+					<td class="weight4" style="color: var(--oklab210);">G</td>
+					<td class="weight4" style="color: var(--oklab270);">A</td>
+					<td class="weight4" style="color: var(--oklab330);">B</td>
+					<td class="weight4" style="color: var(--oklab0);">C</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Dorian</td>
+					<td class="weight4" style="color: var(--oklab60);">D</td>
+					<td class="weight4" style="color: var(--oklab120);">E</td>
+					<td class="weight4" style="color: var(--oklab150);">F</td>
+					<td class="weight4" style="color: var(--oklab210);">G</td>
+					<td class="weight4" style="color: var(--oklab270);">A</td>
+					<td class="weight4" style="color: var(--oklab330);">B</td>
+					<td class="weight4" style="color: var(--oklab0);">C</td>
+					<td class="weight4" style="color: var(--oklab60);">D</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Phrygian</td>
+					<td class="weight4" style="color: var(--oklab120);">E</td>
+					<td class="weight4" style="color: var(--oklab150);">F</td>
+					<td class="weight4" style="color: var(--oklab210);">G</td>
+					<td class="weight4" style="color: var(--oklab270);">A</td>
+					<td class="weight4" style="color: var(--oklab330);">B</td>
+					<td class="weight4" style="color: var(--oklab0);">C</td>
+					<td class="weight4" style="color: var(--oklab60);">D</td>
+					<td class="weight4" style="color: var(--oklab120);">E</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Lydian</td>
+					<td class="weight4" style="color: var(--oklab150);">F</td>
+					<td class="weight4" style="color: var(--oklab210);">G</td>
+					<td class="weight4" style="color: var(--oklab270);">A</td>
+					<td class="weight4" style="color: var(--oklab330);">B</td>
+					<td class="weight4" style="color: var(--oklab0);">C</td>
+					<td class="weight4" style="color: var(--oklab60);">D</td>
+					<td class="weight4" style="color: var(--oklab120);">E</td>
+					<td class="weight4" style="color: var(--oklab150);">F</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Mixolydian</td>
+					<td class="weight4" style="color: var(--oklab210);">G</td>
+					<td class="weight4" style="color: var(--oklab270);">A</td>
+					<td class="weight4" style="color: var(--oklab330);">B</td>
+					<td class="weight4" style="color: var(--oklab0);">C</td>
+					<td class="weight4" style="color: var(--oklab60);">D</td>
+					<td class="weight4" style="color: var(--oklab120);">E</td>
+					<td class="weight4" style="color: var(--oklab150);">F</td>
+					<td class="weight4" style="color: var(--oklab210);">G</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Aeolian</td>
+					<td class="weight4" style="color: var(--oklab270);">A</td>
+					<td class="weight4" style="color: var(--oklab330);">B</td>
+					<td class="weight4" style="color: var(--oklab0);">C</td>
+					<td class="weight4" style="color: var(--oklab60);">D</td>
+					<td class="weight4" style="color: var(--oklab120);">E</td>
+					<td class="weight4" style="color: var(--oklab150);">F</td>
+					<td class="weight4" style="color: var(--oklab210);">G</td>
+					<td class="weight4" style="color: var(--oklab270);">A</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Locrian</td>
+					<td class="weight4" style="color: var(--oklab330);">B</td>
+					<td class="weight4" style="color: var(--oklab0);">C</td>
+					<td class="weight4" style="color: var(--oklab60);">D</td>
+					<td class="weight4" style="color: var(--oklab120);">E</td>
+					<td class="weight4" style="color: var(--oklab150);">F</td>
+					<td class="weight4" style="color: var(--oklab210);">G</td>
+					<td class="weight4" style="color: var(--oklab270);">A</td>
+					<td class="weight4" style="color: var(--oklab330);">B</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>Notes are sometimes followed by numbers that represent what octave they belong to. C4 is defined as middle C. Since the diatonic major scale is considered the center of Western harmony, and the white keys on the piano are in turn given foremost importance, the note below C4 is not B4 but B3. (This should qualify as a violation of the Geneva convention against OCD sufferers.) The note above C4, meanwhile, is C&#9839;4. Thus, the entire chromatic scale goes C4, C&#9839;4, D4, D&#9839;4, E4, F4, F&#9839;4, G4, G&#9839;4, A4, A&#9839;4, B4, C5.</p>
+
+		<p>It may be helpful to understand that octaves are based on the fundamental ratio of 2:1. That is, Western music defines the pitch of A4 as 440 Hz. A3, found an octave below A4, is 220 Hz, or 440 / 2. A5, found an octave above A4, is 880 Hz, or 440 * 2. Several other foundational intervals approximate other superparticular ratios; these ratios were first specified by the Pythagoreans approximately <em>25 centuries ago</em>.</p>
+		
+		<p>In the following table, &ldquo;P&rdquo; stands for &ldquo;Pythagorean&rdquo; (i.e., the &ldquo;ideal&rdquo; ratios), &ldquo;M&rdquo; for &ldquo;Modern&rdquo; (i.e., the twelve-tone equal temperament employed by modern tuning), &ldquo;R&rdquo; for &ldquo;Ratio&rdquo;, and &ldquo;Q&rdquo; for &ldquo;Quotient&rdquo;. Mathematics nerds may find it interesting that our modern twelve-tone equal temperament is within about 0.0015 of the Pythagorean ratios for perfect fourths and fifths, while its ratios for the major and minor third are off by approximately 0.01.</p>
+
+		<table class="curved">
+			<thead>
+				<tr>
+					<th colspan="6" class="accent weight4">Mathematical Foundations of Harmonic Intervals</th>
+				</tr>
+				<tr>
+					<th>Interval</th><th>PR</th><th>PQ</th><th>MR</th><th>MQ</th><th>Difference</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Perfect fifth</td><td>3:2</td><td>1.5</td><td>2<sup>&#8311;&frasl;&#8321;&#8322;</sup></td><td>&asymp;1.49830707688</td><td>&asymp;-0.00169292312</td>
+				</tr>
+				<tr>
+					<td>Perfect fourth</td><td>4:3</td><td>1.3333&hellip;</td><td>2<sup>&#8309;&frasl;&#8321;&#8322;</sup></td><td>&asymp;1.33483985417</td><td>&asymp;0.00150652083</td>
+				</tr>
+				<tr>
+					<td>Major third</td><td>5:4</td><td>1.25</td><td>2<sup>&sup1;&frasl;&#8323;</sup></td><td>&asymp;1.25992104989</td><td>&asymp;0.00992104989</td>
+				</tr>
+				<tr>
+					<td>Minor third</td><td>6:5</td><td>1.2</td><td>2<sup>&sup1;&frasl;&#8324;</sup></td><td>&asymp;1.18920711500</td><td>&asymp;-0.01079288500</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>In short, the ear finds these superparticular ratios pleasing. However, drifting too far from these fundamental ratios results in dissonance. The <span class="toc-counter weight3">tritone</span>, which is simply a &Sqrt;<span class="radical-number">2</span>:1 ratio, is so dissonant that it historically was the interval most commonly called <em>diabolus in m&umacr;sic&amacr;</em> (Latin: &ldquo;the devil in music&rdquo;), although contrary to popular belief, it was never banned, nor could composers be excommunicated just for using it. Jazz bassist and music theorist <a href="https://en.wikipedia.org/wiki/Adam_Neely" target="_blank">Adam Neely</a> has called the minor ninth <a href="https://www.youtube.com/watch?v=QwSfQM_ES24" target="_blank">the most dissonant interval</a>; its ratio is 2<sup>&sup1;&sup3;&frasl;&#8321;&#8322;</sup>:1 (&asymp;2.11892618872).</p>
+
+		<p>However, understanding harmony and dissonance doesn&rsquo;t require fully understanding the mathematics behind them. It can help, but the important point is this: the ear finds octaves, perfect fifths, perfect fourths, and thirds pleasing, while intervals that stray too much from these in specific ways feel unsettling. A few examples:</p>
+		
+		<ul style="margin-left: 42px; margin-right: 30px;">
+			<li class="">A diminished chord (e.g., B3, D4, and F4) by itself contains two minor thirds (B3 to D4, D4 to F4), but it also contains a tritone (B3 to F4), which strays from both the perfect fourth and perfect fifth by enough to make the entire chord feel dissonant overall.</li>
+			<li class="">A major chord (e.g., C4, E4, and G4) contains a major third (C4 to E4), a perfect fifth (C4 to G4), and a minor third (E4 to G4). Since all of these intervals are harmonically pleasing, so is the chord itself.</li>
+			<li class="">A minor chord (e.g., A3, C4, and E4) contains a minor third (A3 to C4), a perfect fifth (A3 to E4), and a major third (C4 to E4). Thus, it feels harmonically pleasing for the same reason as the major chord.</li>
+			<li class="">A major chord&rsquo;s first inversion (e.g., E4, G4, and C5) contains a minor third (E4 to G4), a major sixth (E4 to C5), and a perfect fourth (G4 to C5). All of these are harmonically pleasing intervals.</li>
+			<li class="">A minor chord&rsquo;s first inversion (e.g., C4, E4, and A4) contains a major third (C4 to E4), a minor sixth (C4 to A4), and a perfect fourth (E4 to A4). These are likewise all harmonically pleasing.</li>
+			<li class="">A major chord&rsquo;s second inversion (e.g., G4, C5, and E5) contains a perfect fourth (G4 to C5), a major sixth (G4 to E5), and a major third (C5 to E5). Again, all harmonically pleasing.</li>
+			<li class="">A minor chord&rsquo;s second inversion (e.g., E4, A4, and C5) contains a perfect fourth (E4 to A4), a minor sixth (E4 to C5), and a perfect fourth (A4 to C5). Yet again, harmonically pleasing.</li>
+		</ul>
+
+		<p>This list omits an important three-note chord type: the augmented chord. Augmented chords do not appear in the diatonic major scale or any of its modes, so I&rsquo;ll address them below. Let&rsquo;s first return to the B-D-F diminished chord above. If we throw a G below those notes, we wind up with G-B-D-F. This is a G seventh chord. From G, we have a major third, a perfect fifth, and a minor seventh; from B, we have a minor third and a tritone; and from D, we have another minor third. This chord feels far less dissonant than the diminished chord, but it also carries an expectation of a resolution: the ear expects C major to follow it.</p>
+		
+		<p>If our key is C major, then C major itself is the <span class="toc-counter weight3">tonic</span> or <span class="toc-counter weight3">root chord</span> of the scale. The fifth chord of the scale, G major, is called the <span class="toc-counter weight3">dominant</span> chord. The dominant to tonic progression is the single most common chord progression in music, and it&rsquo;s the easiest way to establish the home key.</p>
+		
+		<p>I avoided mentioning one of the four fundamental types of chord above, because it cannot appear in the diatonic major scale or any of its modes. An augmented chord (e.g., C, E, and G&#9839;) contains two major thirds (C to E, E to G&#9839;) and a minor sixth (C to G&#9839;). It doesn&rsquo;t feel dissonant, but it does feel eerie. It belongs to one of the <span class="toc-counter weight3">whole-tone scales</span>, which consists of six equally spaced scale degrees (either C, D, E, F&#9839;, G&#9839;, A&#9839;, or C&#9839;, D&#9839;, F, G, A, B). Whole-tone scales can establish a dreamy or playful mood; because all scale degrees are evenly spaced, they also have no clear root key, which creates a sense of being suspended in space or time.</p>
+
+		<p>(To be continued.)</p>
+	</body>
+</html>

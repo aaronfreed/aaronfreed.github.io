@@ -70,24 +70,27 @@
 	--offset-level-4-translucent: #a0a0ffc6;
 	--link: #0099ff;
 	--link-translucent: #0099ffc6;
-	--link-visited: rgb(204, 0, 204);
+	--link-visited: #cc00cc;
 	--link-visited-translucent: #cc00ccc6;
-	--link-active: rgb(0, 153, 0);
+	--link-active: #009900;
 	--link-active-translucent: #009900c6;
 	--link-hover: #cc6600;
 	--link-hover-translucent: #cc6600c6;
-	--hue0: #ff0000;
-	--hue30: #ff7f00;
-	--hue60: #ffff00;
-	--hue90: #7fff00;
-	--hue120: #00ff00;
-	--hue150: #00ff7f;
-	--hue180: #00ffff;
-	--hue210: #007fff;
-	--hue240: #0000ff;
-	--hue270: #7f00ff;
-	--hue300: #ff00ff;
-	--hue330: #ff007f;
+	/* these are actually OKHSL 29/100/50, 59/100/50, etc., via Björn
+	Ottosson's color picker: https://bottosson.github.io/misc/colorpicker/
+	- 29° hue in OKHSV corresponds roughly to 0° hue in traditional HSV */
+	--oklab0: #e00003;
+	--oklab30: #af6000;
+	--oklab60: #937200;
+	--oklab90: #6f8100;
+	--oklab120: #008f3c;
+	--oklab150: #008b78;
+	--oklab180: #008696;
+	--oklab210: #007fba;
+	--oklab240: #4260ff;
+	--oklab270: #942aff;
+	--oklab300: #c200bf;
+	--oklab330: #d60074;
 	--heading-color: #2f5496;
 	--heading-color-translucent: #2f5496c6;
 	--portfolio-heading: #2f5496;
@@ -135,6 +138,21 @@
 			--toc-counter-translucent: #a8f0ffc6;
 			--main: #fff;
 			--main-translucent: #ffffffc6;
+			/* these are OKHSV 29/50/100, 59/50/100, etc., via Björn Ottosson's
+			color picker: https://bottosson.github.io/misc/colorpicker/ - 29°
+			hue in OKHSV corresponds roughly to 0° hue in traditional HSV */
+			--oklab0: #ff9485;
+			--oklab30: #ffb87f;
+			--oklab60: #ffdc80;
+			--oklab90: #e6ff88;
+			--oklab120: #96ffab;
+			--oklab150: #88ffe7;
+			--oklab180: #84eeff;
+			--oklab210: #85ceff;
+			--oklab240: #84a3ff;
+			--oklab270: #bf9dff;
+			--oklab300: #ff9ef9;
+			--oklab330: #ff93b7; 
 		}
 		thead .darkkey {
 			background-color: var(--offset-level-1);

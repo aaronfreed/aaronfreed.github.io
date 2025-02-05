@@ -2939,6 +2939,12 @@ li.weight8,
 	color: var(--toc-counter);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
+.toc-counter-faint {
+	color: var(--toc-counter-translucent);
+}
+.accent-faint {
+	color: var(--heading-color-translucent);
+}
 .blue-list-numbers li::marker {
 	color: var(--heading-color);
 }
@@ -2968,6 +2974,9 @@ li.weight8,
 }
 .musictheory td.timesignature {
 	vertical-align: middle;
+}
+.musictheory .musicsymbol {
+	font-size: 24px;
 }
 
 /* a very stupid way of doing this, but it works? sort of? */

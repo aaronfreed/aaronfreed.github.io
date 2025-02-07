@@ -325,9 +325,15 @@
 	.istoria thead tr:last-child th {
 		display: table-header-group;
 	}
-	a:not(.noprintlink)::after {
+	a:not(.noprintlink, .locallink)::after {
 		font-weight: var(--weight2) !important;
 		content: " \0027E8" attr(href) "\0027E9 ";
+		color: var(--link-hover) !important;
+		font-size: 81.25%;
+	}
+	a.locallink::after {
+		font-weight: var(--weight2) !important;
+		content: " \0027E8aaronfreed.github.io/" attr(href) "\0027E9 ";
 		color: var(--link-hover) !important;
 		font-size: 81.25%;
 	}
@@ -1985,13 +1991,13 @@ textarea {
 	border-bottom: 1px solid var(--offset-level-2);
 }
 
-:is(.compilation) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
-:is(.solo, .multi, .master) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
+:is(.compilation, .multi) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
+:is(.solo, .master) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
 .unofficial-master tbody > tr:is(:nth-child(4n+3), :nth-child(4n+4)),
 .solo > thead, 
+.solo > tfoot,
 .master > thead,
 .master > tfoot,
-.multi > thead,
 .multi > tfoot,
 .unofficial > thead,
 .discography .endnotes > thead,
@@ -2007,10 +2013,10 @@ thead tr.freshprince th {
 	border-color: var(--offset-level-1);
 }
 
-:is(.compilation) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
-:is(.solo, .multi, .master) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
+:is(.compilation, .multi) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
+:is(.solo, .master) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
 .unofficial-master tbody > tr:is(:nth-child(4n+1), :nth-child(4n+2)),
-.solo > tfoot,
+.multi > thead,
 .compilation > thead,
 .compilation > tfoot,
 .unofficial > tfoot

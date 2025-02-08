@@ -2572,20 +2572,20 @@ td.translation-romanized, th.translation-romanized
 	color: var(--heading-color) !important;
 }
 
-.selectedworks p.songwriters {
+p.songwriters {
 	margin-top: 4px;
 	margin-left: 15px;
 }
-.selectedworks p.interpolation.songwriter {
+p.interpolation.songwriter {
 	margin-top: 4px;
 	margin-left: 30px;
 }
-.selectedworks :is(span.composer, em.composer) {
+:is(span.composer, em.composer) {
 	font-weight: var(--weight2);
 	font-variant-caps: petite-caps;
 	color: var(--toc-counter);
 }
-.selectedworks .artist {
+.artist {
 	font-weight: var(--weight3);
 	font-variant-caps: petite-caps;
 	color: var(--toc-counter);
@@ -2593,26 +2593,26 @@ td.translation-romanized, th.translation-romanized
 .selectedworks .interpolation .artist {
 	font-weight: var(--weight4);
 }
-.selectedworks .artistcredit {
+.artistcredit {
 	font-weight: var(--weight4);
 	color: var(--toc-counter);
 	font-variant-caps: petite-caps;
 }
-.selectedworks .songcredit {
+.songcredit {
 	font-weight: var(--weight0);
 	color: var(--heading-color);
 }
-.selectedworks .albumcredit {
+.albumcredit {
 	font-weight: var(--weight2);
 	color: var(--toc-counter);
 }
-.selectedworks .performercredit {
+.performercredit {
 	font-weight: var(--weight4);
 	color: var(--heading-color);
 	font-variant-caps: petite-caps;
 }
 
-.selectedworks .composercredit {
+.composercredit {
 	font-weight: var(--weight4);
 	font-variant-caps: petite-caps;
 	color: var(--toc-counter);
@@ -2626,8 +2626,7 @@ td.translation-romanized, th.translation-romanized
 	color: var(--heading-color);
 	font-size: initial !important;
 }
-.selectedworks .song strong,
-.selectedworks .songcredit strong,
+.songcredit strong,
 .selectedworks .compositions2023-2024 .song strong {
 	font-weight: var(--weight4);
 }

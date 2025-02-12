@@ -415,6 +415,15 @@
 		background: var(--offset-level-1);
 		print-color-adjust: exact !important;
 	}
+	.metm ol.contents.comp2023-2024appendices > li::marker {
+		font-size: 14.5px;
+	}
+	.metm ol.contents > li::marker {
+		font-size: 20px;
+	}
+	.metm ol.movements > li::marker {
+		font-size: 18px;
+	}
 }
 @media screen {
 	:root {
@@ -959,6 +968,16 @@
 
 	.compositions2023-2024 .dotted {
 		border-bottom: 1px dotted;
+	}
+
+	.metm ol.contents > li::marker {
+		font-size: 20px;
+		line-height: 125%;
+	}
+
+	.metm ol.movements > li::marker {
+		font-size: 18px;
+		line-height: 125%;
 	}
 }
 
@@ -2617,7 +2636,7 @@ p.interpolation.songwriter {
 	font-variant-caps: petite-caps;
 	color: var(--toc-counter);
 }
-.selectedworks .subheading {
+:is(.selectedworks, .metm) .subheading {
 	font-variant-caps: petite-caps;
 	color: var(--toc-counter);
 }
@@ -2626,60 +2645,73 @@ p.interpolation.songwriter {
 	color: var(--heading-color);
 	font-size: initial !important;
 }
+.metm :is(.song, .movement) {
+	font-weight: var(--weight0);
+	color: var(--heading-color);
+}
 .songcredit strong,
+.contents .song strong,
 .selectedworks .compositions2023-2024 .song strong {
 	font-weight: var(--weight4);
 }
+.contents .movement strong,
 .selectedworks .compositions2023-2024 .movement strong {
 	font-weight: var(--weight3);
 }
-.selectedworks .length {
+:is(.selectedworks, .metm) .length {
 	color: var(--link-active);
 	font-weight: var(--weight1);
 }
-.selectedworks .drscore {
+:is(.selectedworks, .metm) .drscore {
 	color: var(--link-hover);
 	font-weight: var(--weight1);
 }
 
-.selectedworks .game {
+:is(.selectedworks, .metm) .game {
 	color: var(--heading-color);
 	font-weight: var(--weight3);
 }
-.selectedworks .level {
+:is(.selectedworks, .metm) .level {
 	font-weight: var(--weight1);
 	color: var(--toc-counter);
 }
 
-.selectedworks .translation {
+:is(.selectedworks, .metm) .translation {
 	color: var(--heading-color);
 	font-style: italic;
 	margin-top: 4px;
 	margin-right: 0px;
 }
-.selectedworks p.translation,
-.selectedworks blockquote.translation {
+:is(.selectedworks, .metm) :is(p.translation, blockquote.translation) {
 	margin-top: 4px;
 	margin-left: 30px;
 	margin-right: 0px;
 }
-.selectedworks span.translation {
+:is(.selectedworks, .metm) span.translation {
 	color: var(--heading-color);
 	font-weight: var(--weight0);
 }
-.selectedworks :is(p.translation, blockquote.translation, span.translation) strong {
+:is(.selectedworks, .metm) .translation strong {
 	font-weight: var(--weight3);
 }
-.selectedworks blockquote.interpolation,
-.selectedworks p.interpolation {
+:is(.selectedworks, .metm) :is(blockquote.interpolation, p.interpolation) {
 	margin-right: 0px;
 	margin-top: 4px;
 	margin-left: 15px;
 }
-.selectedworks ul.albumlist,
-.selectedworks .albumlist li {
+:is(.selectedworks, .metm) :is(ul.albumlist, .albumlist li) {
 	color: var(--heading-color);
 	font-weight: var(--weight3);
+}
+
+.metm ol.contents .trackheader {
+	font-size: 20px;
+	line-height: 125%;
+}
+
+.metm ol.movements .movementheader {
+	font-size: 18px;
+	line-height: 125%;
 }
 
 hr {

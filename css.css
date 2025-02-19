@@ -1105,6 +1105,18 @@ ol.dso-lps {
 	         'NA28' 'NA29' 'NA30' 'NA31' 'NA32' 'NA33' 'NA34' 'NA34' 'NA36';
 	suffix: '. ';
 }
+@counter-style lower-roman-minus-one {
+	system: fixed;
+	symbols: 'nulla' 'i' 'ii' 'iii' 'iv' 'v' 'vi' 'vii' 'viii' 'ix' 'x' 'xi'
+	         'xii' 'xiii' 'xiv' 'xv' 'xvi' 'xvii' 'xviii' 'xix' 'xx' 'xxi'
+	         'xxii' 'xxiii' 'xxiv' 'xxv' 'xxvi' 'xxvii' 'xxviii' 'xxix' 'xxx'
+}
+@counter-style upper-roman-minus-one {
+	system: fixed;
+	symbols: 'NVLLA' 'I' 'II' 'III' 'IV' 'V' 'VI' 'VII' 'VIII' 'IX' 'X' 'XI'
+	         'XII' 'XIII' 'XIV' 'XV' 'XVI' 'XVII' 'XVIII' 'XIX' 'XX' 'XXI'
+	         'XXII' 'XXIII' 'XXIV' 'XXV' 'XXVI' 'XXVII' 'XXVIII' 'XXIX' 'XXX'
+}
 ol.comp2023-2024 {
 	list-style: comp2023-2024;
 }
@@ -1802,6 +1814,18 @@ ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
 .forgemanual ol.toclite li.light :is(a:link, a:visited) {
 	font-weight: var(--weight2);
 	text-decoration-thickness: 0.5px;
+}
+
+.tempusiraeredux > ol.toclite > li::before {
+	content: " ";
+}
+.tempusiraeredux > ol.toclite > li > ol > li::before {
+	counter-increment: i2;
+	content: counter(i2, upper-roman-minus-one) ". "
+}
+.tempusiraeredux > ol.toclite > li > ol > li > ol > li::before {
+	counter-increment: i3;
+	content: counter(i3, decimal) ". "
 }
 
 /* counters for body of list. also a doozy */

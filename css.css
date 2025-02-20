@@ -399,6 +399,9 @@
 	.print90 th, .print90 td, .print90 li, .print90 {
 		font-size: 90%;
 	}
+	.print14px {
+		font-size: 14px;
+	}
 	img.print80 {
 		transform: scale(0.8);
 	}
@@ -424,7 +427,12 @@
 	.metm ol.movements > li::marker {
 		font-size: 18px;
 	}
-
+	.notopmarginprint, .notopmarginprint :is(li, td, th) {
+		margin-top: 0px !important;
+	}
+	.nobottommarginprint, .nobottommarginprint :is(li, td, th) {
+		margin-bottom: 0px !important;
+	}
 }
 @media screen {
 	:root {
@@ -1368,7 +1376,7 @@ h1, h2, h3, h4, h5, h1 code, h2 code, h3 code, h4 code, h5 code
 }
 
 :is(h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h2 + h2, h2 + h3, h2 + h4,
-	h2 + h5, h3 + h3, h3 + h4, h3 + h5, h4 + h4, h4 + h5, h5 + h5)
+	h2 + h5, h3 + h3, h3 + h4, h3 + h5, h4 + h4, h4 + h5, h5 + h5, .margintop4)
 {
 	margin-top: 4px;
 }
@@ -1377,7 +1385,8 @@ h1, h2, h3, h4, h5, h1 code, h2 code, h3 code, h4 code, h5 code
 	h2:has(+ h2, + h3, + h4, + h5),
 	h3:has(+ h3, + h4, + h5),
 	h4:has(+ h4, + h5),
-	h5:has(+ h5))
+	h5:has(+ h5),
+	.marginbottom4)
 {
 	margin-bottom: 4px;
 }
@@ -2582,40 +2591,40 @@ td.translation-romanized, th.translation-romanized
 }
 
 .hue0, .hue0 td, .hue0 th {
-	color: var(--hue0);
+	color: var(--oklab0);
 }
 .hue30, .hue30 td, .hue30 th {
-	color: var(--hue30);
+	color: var(--oklab30);
 }
 .hue60, .hue60 td, .hue60 th {
-	color: var(--hue60);
+	color: var(--oklab60);
 }
 .hue90, .hue90 td, .hue90 th {
-	color: var(--hue90);
+	color: var(--oklab90);
 }
 .hue120, .hue120 td, .hue120 th {
-	color: var(--hue120);
+	color: var(--oklab120);
 }
 .hue150, .hue150 td, .hue150 th {
-	color: var(--hue150);
+	color: var(--oklab150);
 }
 .hue180, .hue180 td, .hue180 th {
-	color: var(--hue180);
+	color: var(--oklab180);
 }
 .hue210, .hue210 td, .hue210 th {
-	color: var(--hue210);
+	color: var(--oklab210);
 }
 .hue240, .hue240 td, .hue240 th {
-	color: var(--hue240);
+	color: var(--oklab240);
 }
 .hue270, .hue270 td, .hue270 th {
-	color: var(--hue270);
+	color: var(--oklab270);
 }
 .hue300, .hue300 td, .hue300 th {
-	color: var(--hue300);
+	color: var(--oklab300);
 }
 .hue330, .hue330 td, .hue330 th {
-	color: var(--hue330);
+	color: var(--oklab330);
 }
 
 .speaker {
@@ -3011,11 +3020,34 @@ li.weight8,
 	color: var(--toc-counter);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
-.toc-counter-faint {
+.toc-counter-faint,
+.translucent .toc-counter,
+.toc-counter .translucent,
+.translucent.toc-counter
+{
 	color: var(--toc-counter-translucent);
 }
-.accent-faint {
+.accent-faint,
+.translucent .accent,
+.accent .translucent,
+.translucent.accent
+{
 	color: var(--heading-color-translucent);
+}
+.translucent, .maincolor .translucent, .toc-counter .maincolor .translucent {
+	color: var(--main-translucent);
+}
+.translucent a:link {
+	color: var(--link-translucent);
+}
+.translucent a:visited {
+	color: var(--link-visited-translucent);
+}
+.translucent a:hover {
+	color: var(--link-hover-translucent);
+}
+.translucent a:active {
+	color: var(--link-active-translucent);
 }
 .blue-list-numbers li::marker {
 	color: var(--heading-color);

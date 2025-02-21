@@ -149,7 +149,7 @@ window.onload = function () {makeAllSortable();};
 		<header class="light">
 			<h1 class="petitecaps centred"><em>Marathon</em> (1994)&rsquo;s 8-bit Color Palettes</h1>
 
-			<p class="fixheight">Strictly speaking, as far as I&rsquo;m aware, none of the <em>Marathon</em> games had predefined 256-color palettes; they simply built the palette ad-hoc from what was in their shapes files, with the small problem that if you tried to use more than 256 colors, they&rsquo;d crash. This is no longer necessary with Aleph One, but if you care about 8-bit software mode at all, it&rsquo;s still worth adhering to the predefined palettes.</p>
+			<p class="fixheight">Strictly speaking, as far as I&rsquo;m aware, none of Bungie&rsquo;s <em>Marathon</em> trilogy had predefined 256-color palettes; they simply built the palette ad-hoc from what was in their shapes files, with the small problem that if you tried to use more than 256 colors, they&rsquo;d crash. This is no longer necessary with Aleph One, but if you care about 8-bit software mode at all, it&rsquo;s still worth adhering to the predefined palettes.</p>
 
 			<p class="fixheight">ShapeFusion (the modern replacement for Bungie&rsquo;s shapes editor, Anvil) doesn&rsquo;t actually check whether you&rsquo;re using colors adhering to the shapes&rsquo; standard color palette. As a result, if you use it to generate a color ramp, the colors it creates may or may not actually adhere to your shapes file&rsquo;s pre-existing colors. If you generate a ramp of the same length from the same exact colors every time, its contents will be consistent <em>with each other</em> every time, but they may not adhere to Bungie&rsquo;s colors.</p>
 
@@ -161,7 +161,8 @@ window.onload = function () {makeAllSortable();};
 						</ul>
 					</li>
 					<li>Every color ramp ended with black; I only included it the first time.</li>
-					<li>The last three colors (#0000FF, #FF00FF, and #00FFFF) are &ldquo;dummy colors&rdquo; used to signify transparency and don&rsquo;t actually appear anywhere in the game; I&rsquo;ve included them for completeness&rsquo; sake.</li>
+					<li>The last three colors (<code>#0000FF</code>, <code>#FF00FF</code>, and <code>#00FFFF</code>) are &ldquo;dummy colors&rdquo; used to signify transparency and don&rsquo;t actually appear anywhere in the game; I&rsquo;ve included them for completeness&rsquo; sake.</li>
+					<li><em>Marathon 2</em> and <em>Infinity</em> used <a href="marathon2palette.html">a somewhat different palette</a>. Several color ramps remained identical between the games; a few others have some odd discrepancies (not counting black, the black-body ramp&rsquo;s last color is <code>#270000</code> in <em>Marathon 1</em> and <code>#270101</code> in <em>Marathon 2</em> and <em>Infinity</em>; not counting black, the last color of the <code>#00B0C9</code> ramp is <code>#000E0F</code> in <em>Marathon 1</em> and <code>#001415</code> in <em>Marathon 2</em> and <em>Infinity</em>).</li>
 				</ul>
 
 			<p class="fixheight">As always, please <a href="aboutme.html#contact">contact me</a> if you notice any errors or omissions; see <a href="mapmaking101.html">my introductory</a> and <a href="mapmaking.html">advanced mapmaking pages</a> and <a href="anvilhelp.html">annotated Anvil help balloons</a> for more context.</p>

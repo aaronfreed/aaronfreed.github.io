@@ -616,6 +616,7 @@
 	.bg-FE0601 {background: #FE0601 !important; color: #000 !important;} /*m1&2*/
 	.bg-FBAF8B {background: #FBAF8B !important; color: #000 !important;} /*m1&2*/
 	.bg-F65800 {background: #F65800 !important; color: #000 !important;} /*m2*/
+	.bg-F62500 {background: #F62500 !important; color: #000 !important;} /*m1*/
 	.bg-F1A37F {background: #F1A37F !important; color: #000 !important;} /*m1&2*/
 	.bg-F0F0F0 {background: #F0F0F0 !important; color: #000 !important;} /*m1&2*/
 	.bg-ECEB00 {background: #ECEB00 !important; color: #000 !important;} /*m2*/
@@ -626,6 +627,7 @@
 	.bg-E69773 {background: #E69773 !important; color: #000 !important;} /*m1&2*/
 	.bg-E40101 {background: #E40101 !important; color: #FFF !important;} /*m1&2*/
 	.bg-E35100 {background: #E35100 !important; color: #000 !important;} /*m2*/
+	.bg-E32200 {background: #E32200 !important; color: #FFF !important;} /*m1*/
 	.bg-E1E1E1 {background: #E1E1E1 !important; color: #000 !important;} /*m1&2*/
 	.bg-E1DDC3 {background: #E1DDC3 !important; color: #000 !important;} /*m1&2*/
 	.bg-DC8B67 {background: #DC8B67 !important; color: #000 !important;} /*m1&2*/
@@ -639,6 +641,7 @@
 	.bg-D2CCA5 {background: #D2CCA5 !important; color: #000 !important;} /*m1&2*/
 	.bg-D27F5B {background: #D27F5B !important; color: #000 !important;} /*m1&2*/
 	.bg-D04A00 {background: #D04A00 !important; color: #FFF !important;} /*m2*/
+	.bg-D01F00 {background: #D01F00 !important; color: #FFF !important;} /*m1*/
 	.bg-CFA093 {background: #CFA093 !important; color: #000 !important;} /*m2*/
 	.bg-CBC496 {background: #CBC496 !important; color: #000 !important;} /*m1&2*/
 	.bg-CB9757 {background: #CB9757 !important; color: #000 !important;} /*m1*/
@@ -654,6 +657,7 @@
 	.bg-BE0101 {background: #BE0101 !important; color: #FFF !important;} /*m1&2*/
 	.bg-BD6743 {background: #BD6743 !important; color: #000 !important;} /*m1&2*/
 	.bg-BD4300 {background: #BD4300 !important; color: #FFF !important;} /*m2*/
+	.bg-BD1C00 {background: #BD1C00 !important; color: #FFF !important;} /*m1*/
 	.bg-BB8347 {background: #BB8347 !important; color: #000 !important;} /*m1*/
 	.bg-B7B087 {background: #B7B087 !important; color: #000 !important;} /*m1&2*/
 	.bg-B79B8B {background: #B79B8B !important; color: #000 !important;} /*m1*/
@@ -670,6 +674,7 @@
 	.bg-AB8B7F {background: #AB8B7F !important; color: #000 !important;} /*m1*/
 	.bg-AB4A12 {background: #AB4A12 !important; color: #FFF !important;} /*m2*/
 	.bg-AA3D00 {background: #AA3D00 !important; color: #FFF !important;} /*m2*/
+	.bg-AA1A00 {background: #AA1A00 !important; color: #FFF !important;} /*m1*/
 	.bg-A9ADCD {background: #A9ADCD !important; color: #000 !important;} /*m1*/
 	.bg-A77337 {background: #A77337 !important; color: #000 !important;} /*m1*/
 	.bg-A5A5A5 {background: #A5A5A5 !important; color: #000 !important;} /*m1&2*/
@@ -693,6 +698,7 @@
 	.bg-976327 {background: #976327 !important; color: #FFF !important;} /*m1*/
 	.bg-975D16 {background: #975D16 !important; color: #FFF !important;} /*m1*/
 	.bg-973600 {background: #973600 !important; color: #FFF !important;} /*m2*/
+	.bg-971700 {background: #971700 !important; color: #FFF !important;} /*m1*/
 	.bg-969696 {background: #969696 !important; color: #000 !important;} /*m1&2*/
 	.bg-954C2E {background: #954C2E !important; color: #FFF !important;} /*m1&2*/
 	.bg-95005C {background: #95005C !important; color: #FFF !important;} /*m1*/
@@ -716,6 +722,7 @@
 	.bg-8588A1 {background: #8588A1 !important; color: #000 !important;} /*m1*/
 	.bg-8437DD {background: #8437DD !important; color: #FFF !important;} /*m1*/
 	.bg-843000 {background: #843000 !important; color: #FFF !important;} /*m2*/
+	.bg-841400 {background: #841400 !important; color: #FFF !important;} /*m1*/
 	.bg-83390D {background: #83390D !important; color: #FFF !important;} /*m2*/
 	.bg-82A500 {background: #82A500 !important; color: #000 !important;} /*m2*/
 	.bg-815521 {background: #815521 !important; color: #FFF !important;} /*m1*/
@@ -738,6 +745,7 @@
 	.bg-759600 {background: #759600 !important; color: #000 !important;} /*m2*/
 	.bg-740101 {background: #740101 !important; color: #FFF !important;} /*m1&2*/
 	.bg-722900 {background: #722900 !important; color: #FFF !important;} /*m2*/
+	.bg-721100 {background: #721100 !important; color: #FFF !important;} /*m1*/
 	.bg-7177A3 {background: #7177A3 !important; color: #000 !important;} /*m2*/
 	.bg-714546 {background: #714546 !important; color: #FFF !important;} /*m2*/
 	.bg-6F24CB {background: #6F24CB !important; color: #FFF !important;} /*m1*/
@@ -764,6 +772,7 @@
 	.bg-603B0E {background: #603B0E !important; color: #FFF !important;} /*m1*/
 	.bg-5F433F {background: #5F433F !important; color: #FFF !important;} /*m1*/
 	.bg-5F2200 {background: #5F2200 !important; color: #FFF !important;} /*m2*/
+	.bg-5F0E00 {background: #5F0E00 !important; color: #FFF !important;} /*m1*/
 	.bg-5F0033 {background: #5F0033 !important; color: #FFF !important;} /*m2*/
 	.bg-5E7800 {background: #5E7800 !important; color: #FFF !important;} /*m2*/
 	.bg-5B280A {background: #5B280A !important; color: #FFF !important;} /*m2*/
@@ -790,6 +799,7 @@
 	.bg-4E0000 {background: #4E0000 !important; color: #FFF !important;} /*m2*/
 	.bg-4C506C {background: #4C506C !important; color: #FFF !important;} /*m2*/
 	.bg-4C1B00 {background: #4C1B00 !important; color: #FFF !important;} /*m2*/
+	.bg-4C0B00 {background: #4C0B00 !important; color: #FFF !important;} /*m1*/
 	.bg-4B4B4B {background: #4B4B4B !important; color: #FFF !important;} /*m1&2*/
 	.bg-4A1492 {background: #4A1492 !important; color: #FFF !important;} /*m1*/
 	.bg-4A002E {background: #4A002E !important; color: #FFF !important;} /*m1*/
@@ -818,6 +828,7 @@
 	.bg-3A445C {background: #3A445C !important; color: #FFF !important;} /*m1*/
 	.bg-39E48B {background: #39E48B !important; color: #000 !important;} /*m1&2*/
 	.bg-391500 {background: #391500 !important; color: #FFF !important;} /*m2*/
+	.bg-390900 {background: #390900 !important; color: #FFF !important;} /*m1*/
 	.bg-372208 {background: #372208 !important; color: #FFF !important;} /*m1*/
 	.bg-36001D {background: #36001D !important; color: #FFF !important;} /*m2*/
 	.bg-351705 {background: #351705 !important; color: #FFF !important;} /*m2*/
@@ -846,6 +857,7 @@
 	.bg-270003 {background: #270003 !important; color: #FFF !important;} /*m1*/
 	.bg-270000 {background: #270000 !important; color: #FFF !important;} /*m1&2*/
 	.bg-260E00 {background: #260E00 !important; color: #FFF !important;} /*m2*/
+	.bg-260600 {background: #260600 !important; color: #FFF !important;} /*m1*/
 	.bg-252836 {background: #252836 !important; color: #FFF !important;} /*m2*/
 	.bg-250017 {background: #250017 !important; color: #FFF !important;} /*m1*/
 	.bg-245FA3 {background: #245FA3 !important; color: #FFF !important;} /*m2*/
@@ -887,6 +899,7 @@
 	.bg-131300 {background: #131300 !important; color: #FFF !important;} /*m2*/
 	.bg-130B0B {background: #130B0B !important; color: #FFF !important;} /*m1*/
 	.bg-130700 {background: #130700 !important; color: #FFF !important;} /*m2*/
+	.bg-130300 {background: #130300 !important; color: #FFF !important;} /*m1*/
 	.bg-112C4B {background: #112C4B !important; color: #FFF !important;} /*m2*/
 	.bg-0F0F0F {background: #0F0F0F !important; color: #FFF !important;} /*m1&2*/
 	.bg-0E253F {background: #0E253F !important; color: #FFF !important;} /*m2*/

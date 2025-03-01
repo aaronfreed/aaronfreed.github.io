@@ -155,7 +155,7 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">I&rsquo;ve thus compiled <em>Marathon</em> (1994)&rsquo;s palette, in both web color and RGB formats. A few notes:</p>
 				<ul class="fixheight">
-					<li>I&rsquo;ve indexed the &ldquo;white to black&rdquo; color ramp first, then the &ldquo;black body&rdquo; color ramp, then a faintly blue 17-color ramp, then the remaining 14-color ramps roughly from brightest to darkest, and finally a dark four-color ramp that seems to be entirely isolated.
+					<li>I&rsquo;ve indexed the &ldquo;white to black&rdquo; color ramp first, then the &ldquo;black body&rdquo; color ramp, then a faintly blue 17-color ramp, then the remaining 14-color ramps roughly from brightest to darkest, and finally a four-color ramp from the Interface collection that seems to be entirely isolated. (Remember, in the game, every ramp ends in black.) Observant readers will note that, because I used the Objectively Correct method of zero-based indexing, there are 257 colors here. However, the transparency colors are dummy colors that aren&rsquo;t ever actually displayed in the game, so it would&rsquo;ve been able to handle this fine even in 8-bit color mode.
 						<ul>
 							<li>Rows&rsquo; backgrounds are their colors; whether the text is black or white depends on contrast.</li>
 						</ul>
@@ -184,6 +184,7 @@ window.onload = function () {makeAllSortable();};
 						<li><span style="color: #C7AB9B !important;">&#11044;</span> <a href="#C7AB9B" class="noprintlink">#C7AB9B</a></li>
 						<li><span style="color: #00B0C9 !important;">&#11044;</span> <a href="#00B0C9" class="noprintlink">#00B0C9</a></li>
 						<li><span style="color: #FF0012 !important;">&#11044;</span> <a href="#FF0012" class="noprintlink">#FF0012</a></li>
+						<li><span style="color: #F62500 !important;">&#11044;</span> <a href="#F62500" class="noprintlink">#F62500</a></li>
 						<li><span style="color: #618961 !important;">&#11044;</span> <a href="#618961" class="noprintlink">#618961</a></li>
 						<li><span style="color: #B36E1A !important;">&#11044;</span> <a href="#B36E1A" class="noprintlink">#B36E1A</a></li>
 						<li><span style="color: #9B4AEE !important;">&#11044;</span> <a href="#9B4AEE" class="noprintlink">#9B4AEE</a></li>
@@ -378,78 +379,91 @@ window.onload = function () {makeAllSortable();};
 					<tr id="3B0004" class="bg-3B0004"><td class="right">169</td><td>#3B0004</td><td class="right"> 59</td><td class="right">  0</td><td class="right">  4</td></tr>
 					<tr id="270003" class="bg-270003"><td class="right">170</td><td>#270003</td><td class="right"> 39</td><td class="right">  0</td><td class="right">  3</td></tr>
 					<tr id="140001" class="bg-140001"><td class="right">171</td><td>#140001</td><td class="right"> 20</td><td class="right">  0</td><td class="right">  1</td></tr>
-					<tr id="618961" class="bg-618961"><td class="right">172</td><td>#618961</td><td class="right"> 97</td><td class="right">137</td><td class="right"> 97</td></tr>
-					<tr id="587E58" class="bg-587E58"><td class="right">173</td><td>#587E58</td><td class="right"> 88</td><td class="right">126</td><td class="right"> 88</td></tr>
-					<tr id="4E724E" class="bg-4E724E"><td class="right">174</td><td>#4E724E</td><td class="right"> 78</td><td class="right">114</td><td class="right"> 78</td></tr>
-					<tr id="456745" class="bg-456745"><td class="right">175</td><td>#456745</td><td class="right"> 69</td><td class="right">103</td><td class="right"> 69</td></tr>
-					<tr id="3B5B3B" class="bg-3B5B3B"><td class="right">176</td><td>#3B5B3B</td><td class="right"> 59</td><td class="right"> 91</td><td class="right"> 59</td></tr>
-					<tr id="345134" class="bg-345134"><td class="right">177</td><td>#345134</td><td class="right"> 52</td><td class="right"> 81</td><td class="right"> 52</td></tr>
-					<tr id="2E472E" class="bg-2E472E"><td class="right">178</td><td>#2E472E</td><td class="right"> 46</td><td class="right"> 71</td><td class="right"> 46</td></tr>
-					<tr id="273D27" class="bg-273D27"><td class="right">179</td><td>#273D27</td><td class="right"> 39</td><td class="right"> 61</td><td class="right"> 39</td></tr>
-					<tr id="213321" class="bg-213321"><td class="right">180</td><td>#213321</td><td class="right"> 33</td><td class="right"> 51</td><td class="right"> 33</td></tr>
-					<tr id="1A281A" class="bg-1A281A"><td class="right">181</td><td>#1A281A</td><td class="right"> 26</td><td class="right"> 40</td><td class="right"> 26</td></tr>
-					<tr id="141E14" class="bg-141E14"><td class="right">182</td><td>#141E14</td><td class="right"> 20</td><td class="right"> 30</td><td class="right"> 20</td></tr>
-					<tr id="0D140D" class="bg-0D140D"><td class="right">183</td><td>#0D140D</td><td class="right"> 13</td><td class="right"> 20</td><td class="right"> 13</td></tr>
-					<tr id="070A07" class="bg-070A07"><td class="right">184</td><td>#070A07</td><td class="right">  7</td><td class="right"> 10</td><td class="right">  7</td></tr>
-					<tr id="B36E1A" class="bg-B36E1A"><td class="right">185</td><td>#B36E1A</td><td class="right">179</td><td class="right">110</td><td class="right"> 26</td></tr>
-					<tr id="A56618" class="bg-A56618"><td class="right">186</td><td>#A56618</td><td class="right">165</td><td class="right">102</td><td class="right"> 24</td></tr>
-					<tr id="975D16" class="bg-975D16"><td class="right">187</td><td>#975D16</td><td class="right">151</td><td class="right"> 93</td><td class="right"> 22</td></tr>
-					<tr id="8A5514" class="bg-8A5514"><td class="right">188</td><td>#8A5514</td><td class="right">138</td><td class="right"> 85</td><td class="right"> 20</td></tr>
-					<tr id="7C4C12" class="bg-7C4C12"><td class="right">189</td><td>#7C4C12</td><td class="right">124</td><td class="right"> 76</td><td class="right"> 18</td></tr>
-					<tr id="6E4410" class="bg-6E4410"><td class="right">190</td><td>#6E4410</td><td class="right">110</td><td class="right"> 68</td><td class="right"> 16</td></tr>
-					<tr id="603B0E" class="bg-603B0E"><td class="right">191</td><td>#603B0E</td><td class="right"> 96</td><td class="right"> 59</td><td class="right"> 14</td></tr>
-					<tr id="53330C" class="bg-53330C"><td class="right">192</td><td>#53330C</td><td class="right"> 83</td><td class="right"> 51</td><td class="right"> 12</td></tr>
-					<tr id="452A0A" class="bg-452A0A"><td class="right">193</td><td>#452A0A</td><td class="right"> 69</td><td class="right"> 42</td><td class="right"> 10</td></tr>
-					<tr id="372208" class="bg-372208"><td class="right">194</td><td>#372208</td><td class="right"> 55</td><td class="right"> 34</td><td class="right">  8</td></tr>
-					<tr id="291906" class="bg-291906"><td class="right">195</td><td>#291906</td><td class="right"> 41</td><td class="right"> 25</td><td class="right">  6</td></tr>
-					<tr id="1C1104" class="bg-1C1104"><td class="right">196</td><td>#1C1104</td><td class="right"> 28</td><td class="right"> 17</td><td class="right">  4</td></tr>
-					<tr id="0E0802" class="bg-0E0802"><td class="right">197</td><td>#0E0802</td><td class="right"> 14</td><td class="right">  8</td><td class="right">  2</td></tr>
-					<tr id="9B4AEE" class="bg-9B4AEE"><td class="right">198</td><td>#9B4AEE</td><td class="right">155</td><td class="right"> 74</td><td class="right">238</td></tr>
-					<tr id="9040E5" class="bg-9040E5"><td class="right">199</td><td>#9040E5</td><td class="right">144</td><td class="right"> 64</td><td class="right">229</td></tr>
-					<tr id="8437DD" class="bg-8437DD"><td class="right">200</td><td>#8437DD</td><td class="right">132</td><td class="right"> 55</td><td class="right">221</td></tr>
-					<tr id="7A2ED4" class="bg-7A2ED4"><td class="right">201</td><td>#7A2ED4</td><td class="right">122</td><td class="right"> 46</td><td class="right">212</td></tr>
-					<tr id="6F24CB" class="bg-6F24CB"><td class="right">202</td><td>#6F24CB</td><td class="right">111</td><td class="right"> 36</td><td class="right">203</td></tr>
-					<tr id="631BC3" class="bg-631BC3"><td class="right">203</td><td>#631BC3</td><td class="right"> 99</td><td class="right"> 27</td><td class="right">195</td></tr>
-					<tr id="5718AB" class="bg-5718AB"><td class="right">204</td><td>#5718AB</td><td class="right"> 87</td><td class="right"> 24</td><td class="right">171</td></tr>
-					<tr id="4A1492" class="bg-4A1492"><td class="right">205</td><td>#4A1492</td><td class="right"> 74</td><td class="right"> 20</td><td class="right">146</td></tr>
-					<tr id="3E107A" class="bg-3E107A"><td class="right">206</td><td>#3E107A</td><td class="right"> 62</td><td class="right"> 16</td><td class="right">122</td></tr>
-					<tr id="310D61" class="bg-310D61"><td class="right">207</td><td>#310D61</td><td class="right"> 49</td><td class="right"> 13</td><td class="right"> 97</td></tr>
-					<tr id="240A49" class="bg-240A49"><td class="right">208</td><td>#240A49</td><td class="right"> 36</td><td class="right"> 10</td><td class="right"> 73</td></tr>
-					<tr id="190731" class="bg-190731"><td class="right">209</td><td>#190731</td><td class="right"> 25</td><td class="right">  7</td><td class="right"> 49</td></tr>
-					<tr id="0C0319" class="bg-0C0319"><td class="right">210</td><td>#0C0319</td><td class="right"> 12</td><td class="right">  3</td><td class="right"> 25</td></tr>
-					<tr id="A10064" class="bg-A10064"><td class="right">211</td><td>#A10064</td><td class="right">161</td><td class="right">  0</td><td class="right">100</td></tr>
-					<tr id="95005C" class="bg-95005C"><td class="right">212</td><td>#95005C</td><td class="right">149</td><td class="right">  0</td><td class="right"> 92</td></tr>
-					<tr id="880055" class="bg-880055"><td class="right">213</td><td>#880055</td><td class="right">136</td><td class="right">  0</td><td class="right"> 85</td></tr>
-					<tr id="7C004D" class="bg-7C004D"><td class="right">214</td><td>#7C004D</td><td class="right">124</td><td class="right">  0</td><td class="right"> 77</td></tr>
-					<tr id="6F0045" class="bg-6F0045"><td class="right">215</td><td>#6F0045</td><td class="right">111</td><td class="right">  0</td><td class="right"> 69</td></tr>
-					<tr id="63003E" class="bg-63003E"><td class="right">216</td><td>#63003E</td><td class="right"> 99</td><td class="right">  0</td><td class="right"> 62</td></tr>
-					<tr id="570036" class="bg-570036"><td class="right">217</td><td>#570036</td><td class="right"> 87</td><td class="right">  0</td><td class="right"> 54</td></tr>
-					<tr id="4A002E" class="bg-4A002E"><td class="right">218</td><td>#4A002E</td><td class="right"> 74</td><td class="right">  0</td><td class="right"> 46</td></tr>
-					<tr id="3E0026" class="bg-3E0026"><td class="right">219</td><td>#3E0026</td><td class="right"> 62</td><td class="right">  0</td><td class="right"> 38</td></tr>
-					<tr id="32001F" class="bg-32001F"><td class="right">220</td><td>#32001F</td><td class="right"> 50</td><td class="right">  0</td><td class="right"> 31</td></tr>
-					<tr id="250017" class="bg-250017"><td class="right">221</td><td>#250017</td><td class="right"> 37</td><td class="right">  0</td><td class="right"> 23</td></tr>
-					<tr id="19000F" class="bg-19000F"><td class="right">222</td><td>#19000F</td><td class="right"> 25</td><td class="right">  0</td><td class="right"> 15</td></tr>
-					<tr id="0C0008" class="bg-0C0008"><td class="right">223</td><td>#0C0008</td><td class="right"> 12</td><td class="right">  0</td><td class="right">  8</td></tr>
-					<tr id="0C00FF" class="bg-0C00FF"><td class="right">224</td><td>#0C00FF</td><td class="right"> 12</td><td class="right">  0</td><td class="right">255</td></tr>
-					<tr id="0B00EB" class="bg-0B00EB"><td class="right">225</td><td>#0B00EB</td><td class="right"> 11</td><td class="right">  0</td><td class="right">235</td></tr>
-					<tr id="0A00D8" class="bg-0A00D8"><td class="right">226</td><td>#0A00D8</td><td class="right"> 10</td><td class="right">  0</td><td class="right">216</td></tr>
-					<tr id="0900C4" class="bg-0900C4"><td class="right">227</td><td>#0900C4</td><td class="right">  9</td><td class="right">  0</td><td class="right">196</td></tr>
-					<tr id="0800B1" class="bg-0800B1"><td class="right">228</td><td>#0800B1</td><td class="right">  8</td><td class="right">  0</td><td class="right">177</td></tr>
-					<tr id="07009D" class="bg-07009D"><td class="right">229</td><td>#07009D</td><td class="right">  7</td><td class="right">  0</td><td class="right">157</td></tr>
-					<tr id="060089" class="bg-060089"><td class="right">230</td><td>#060089</td><td class="right">  6</td><td class="right">  0</td><td class="right">137</td></tr>
-					<tr id="060076" class="bg-060076"><td class="right">231</td><td>#060076</td><td class="right">  6</td><td class="right">  0</td><td class="right">118</td></tr>
-					<tr id="050062" class="bg-050062"><td class="right">232</td><td>#050062</td><td class="right">  5</td><td class="right">  0</td><td class="right"> 98</td></tr>
-					<tr id="04004E" class="bg-04004E"><td class="right">233</td><td>#04004E</td><td class="right">  4</td><td class="right">  0</td><td class="right"> 78</td></tr>
-					<tr id="03003B" class="bg-03003B"><td class="right">234</td><td>#03003B</td><td class="right">  3</td><td class="right">  0</td><td class="right"> 59</td></tr>
-					<tr id="020027" class="bg-020027"><td class="right">235</td><td>#020027</td><td class="right">  2</td><td class="right">  0</td><td class="right"> 39</td></tr>
-					<tr id="010014" class="bg-010014"><td class="right">236</td><td>#010014</td><td class="right">  1</td><td class="right">  0</td><td class="right"> 20</td></tr>
-					<tr id="3A445C" class="bg-3A445C"><td class="right">237</td><td>#3A445C</td><td class="right"> 58</td><td class="right"> 68</td><td class="right"> 92</td></tr>
-					<tr id="2E374C" class="bg-2E374C"><td class="right">238</td><td>#2E374C</td><td class="right"> 46</td><td class="right"> 55</td><td class="right"> 76</td></tr>
-					<tr id="222B40" class="bg-222B40"><td class="right">239</td><td>#222B40</td><td class="right"> 34</td><td class="right"> 43</td><td class="right"> 64</td></tr>
-					<tr id="1A202F" class="bg-1A202F"><td class="right">240</td><td>#1A202F</td><td class="right"> 26</td><td class="right"> 32</td><td class="right"> 47</td></tr>
-					<tr id="0000FF" class="bg-0000FF"><td class="right">241</td><td>#0000FF</td><td class="right">  0</td><td class="right">  0</td><td class="right">255</td></tr>
-					<tr id="FF00FF" class="bg-FF00FF"><td class="right">242</td><td>#FF00FF</td><td class="right">255</td><td class="right">  0</td><td class="right">255</td></tr>
-					<tr id="00FFFF" class="bg-00FFFF"><td class="right">243</td><td>#00FFFF</td><td class="right">  0</td><td class="right">255</td><td class="right">255</td></tr>
+					<tr id="F62500" class="bg-F62500"><td class="right">172</td><td>#F62500</td><td class="right">246</td><td class="right"> 37</td><td class="right">  0</td></tr>
+					<tr id="E32200" class="bg-E32200"><td class="right">173</td><td>#E32200</td><td class="right">227</td><td class="right"> 34</td><td class="right">  0</td></tr>
+					<tr id="D01F00" class="bg-D01F00"><td class="right">174</td><td>#D01F00</td><td class="right">208</td><td class="right"> 31</td><td class="right">  0</td></tr>
+					<tr id="BD1C00" class="bg-BD1C00"><td class="right">175</td><td>#BD1C00</td><td class="right">189</td><td class="right"> 28</td><td class="right">  0</td></tr>
+					<tr id="AA1A00" class="bg-AA1A00"><td class="right">176</td><td>#AA1A00</td><td class="right">170</td><td class="right"> 26</td><td class="right">  0</td></tr>
+					<tr id="971700" class="bg-971700"><td class="right">177</td><td>#971700</td><td class="right">151</td><td class="right"> 23</td><td class="right">  0</td></tr>
+					<tr id="841400" class="bg-841400"><td class="right">178</td><td>#841400</td><td class="right">132</td><td class="right"> 20</td><td class="right">  0</td></tr>
+					<tr id="721100" class="bg-721100"><td class="right">179</td><td>#721100</td><td class="right">114</td><td class="right"> 17</td><td class="right">  0</td></tr>
+					<tr id="5F0E00" class="bg-5F0E00"><td class="right">180</td><td>#5F0E00</td><td class="right"> 95</td><td class="right"> 14</td><td class="right">  0</td></tr>
+					<tr id="4C0B00" class="bg-4C0B00"><td class="right">181</td><td>#4C0B00</td><td class="right"> 76</td><td class="right"> 11</td><td class="right">  0</td></tr>
+					<tr id="390900" class="bg-390900"><td class="right">182</td><td>#390900</td><td class="right"> 57</td><td class="right">  9</td><td class="right">  0</td></tr>
+					<tr id="260600" class="bg-260600"><td class="right">183</td><td>#260600</td><td class="right"> 38</td><td class="right">  6</td><td class="right">  0</td></tr>
+					<tr id="130300" class="bg-130300"><td class="right">184</td><td>#130300</td><td class="right"> 19</td><td class="right">  3</td><td class="right">  0</td></tr>
+					<tr id="618961" class="bg-618961"><td class="right">185</td><td>#618961</td><td class="right"> 97</td><td class="right">137</td><td class="right"> 97</td></tr>
+					<tr id="587E58" class="bg-587E58"><td class="right">186</td><td>#587E58</td><td class="right"> 88</td><td class="right">126</td><td class="right"> 88</td></tr>
+					<tr id="4E724E" class="bg-4E724E"><td class="right">187</td><td>#4E724E</td><td class="right"> 78</td><td class="right">114</td><td class="right"> 78</td></tr>
+					<tr id="456745" class="bg-456745"><td class="right">188</td><td>#456745</td><td class="right"> 69</td><td class="right">103</td><td class="right"> 69</td></tr>
+					<tr id="3B5B3B" class="bg-3B5B3B"><td class="right">189</td><td>#3B5B3B</td><td class="right"> 59</td><td class="right"> 91</td><td class="right"> 59</td></tr>
+					<tr id="345134" class="bg-345134"><td class="right">190</td><td>#345134</td><td class="right"> 52</td><td class="right"> 81</td><td class="right"> 52</td></tr>
+					<tr id="2E472E" class="bg-2E472E"><td class="right">191</td><td>#2E472E</td><td class="right"> 46</td><td class="right"> 71</td><td class="right"> 46</td></tr>
+					<tr id="273D27" class="bg-273D27"><td class="right">192</td><td>#273D27</td><td class="right"> 39</td><td class="right"> 61</td><td class="right"> 39</td></tr>
+					<tr id="213321" class="bg-213321"><td class="right">193</td><td>#213321</td><td class="right"> 33</td><td class="right"> 51</td><td class="right"> 33</td></tr>
+					<tr id="1A281A" class="bg-1A281A"><td class="right">194</td><td>#1A281A</td><td class="right"> 26</td><td class="right"> 40</td><td class="right"> 26</td></tr>
+					<tr id="141E14" class="bg-141E14"><td class="right">195</td><td>#141E14</td><td class="right"> 20</td><td class="right"> 30</td><td class="right"> 20</td></tr>
+					<tr id="0D140D" class="bg-0D140D"><td class="right">196</td><td>#0D140D</td><td class="right"> 13</td><td class="right"> 20</td><td class="right"> 13</td></tr>
+					<tr id="070A07" class="bg-070A07"><td class="right">197</td><td>#070A07</td><td class="right">  7</td><td class="right"> 10</td><td class="right">  7</td></tr>
+					<tr id="B36E1A" class="bg-B36E1A"><td class="right">198</td><td>#B36E1A</td><td class="right">179</td><td class="right">110</td><td class="right"> 26</td></tr>
+					<tr id="A56618" class="bg-A56618"><td class="right">199</td><td>#A56618</td><td class="right">165</td><td class="right">102</td><td class="right"> 24</td></tr>
+					<tr id="975D16" class="bg-975D16"><td class="right">200</td><td>#975D16</td><td class="right">151</td><td class="right"> 93</td><td class="right"> 22</td></tr>
+					<tr id="8A5514" class="bg-8A5514"><td class="right">201</td><td>#8A5514</td><td class="right">138</td><td class="right"> 85</td><td class="right"> 20</td></tr>
+					<tr id="7C4C12" class="bg-7C4C12"><td class="right">202</td><td>#7C4C12</td><td class="right">124</td><td class="right"> 76</td><td class="right"> 18</td></tr>
+					<tr id="6E4410" class="bg-6E4410"><td class="right">203</td><td>#6E4410</td><td class="right">110</td><td class="right"> 68</td><td class="right"> 16</td></tr>
+					<tr id="603B0E" class="bg-603B0E"><td class="right">204</td><td>#603B0E</td><td class="right"> 96</td><td class="right"> 59</td><td class="right"> 14</td></tr>
+					<tr id="53330C" class="bg-53330C"><td class="right">205</td><td>#53330C</td><td class="right"> 83</td><td class="right"> 51</td><td class="right"> 12</td></tr>
+					<tr id="452A0A" class="bg-452A0A"><td class="right">206</td><td>#452A0A</td><td class="right"> 69</td><td class="right"> 42</td><td class="right"> 10</td></tr>
+					<tr id="372208" class="bg-372208"><td class="right">207</td><td>#372208</td><td class="right"> 55</td><td class="right"> 34</td><td class="right">  8</td></tr>
+					<tr id="291906" class="bg-291906"><td class="right">208</td><td>#291906</td><td class="right"> 41</td><td class="right"> 25</td><td class="right">  6</td></tr>
+					<tr id="1C1104" class="bg-1C1104"><td class="right">209</td><td>#1C1104</td><td class="right"> 28</td><td class="right"> 17</td><td class="right">  4</td></tr>
+					<tr id="0E0802" class="bg-0E0802"><td class="right">210</td><td>#0E0802</td><td class="right"> 14</td><td class="right">  8</td><td class="right">  2</td></tr>
+					<tr id="9B4AEE" class="bg-9B4AEE"><td class="right">211</td><td>#9B4AEE</td><td class="right">155</td><td class="right"> 74</td><td class="right">238</td></tr>
+					<tr id="9040E5" class="bg-9040E5"><td class="right">212</td><td>#9040E5</td><td class="right">144</td><td class="right"> 64</td><td class="right">229</td></tr>
+					<tr id="8437DD" class="bg-8437DD"><td class="right">213</td><td>#8437DD</td><td class="right">132</td><td class="right"> 55</td><td class="right">221</td></tr>
+					<tr id="7A2ED4" class="bg-7A2ED4"><td class="right">214</td><td>#7A2ED4</td><td class="right">122</td><td class="right"> 46</td><td class="right">212</td></tr>
+					<tr id="6F24CB" class="bg-6F24CB"><td class="right">215</td><td>#6F24CB</td><td class="right">111</td><td class="right"> 36</td><td class="right">203</td></tr>
+					<tr id="631BC3" class="bg-631BC3"><td class="right">216</td><td>#631BC3</td><td class="right"> 99</td><td class="right"> 27</td><td class="right">195</td></tr>
+					<tr id="5718AB" class="bg-5718AB"><td class="right">217</td><td>#5718AB</td><td class="right"> 87</td><td class="right"> 24</td><td class="right">171</td></tr>
+					<tr id="4A1492" class="bg-4A1492"><td class="right">218</td><td>#4A1492</td><td class="right"> 74</td><td class="right"> 20</td><td class="right">146</td></tr>
+					<tr id="3E107A" class="bg-3E107A"><td class="right">219</td><td>#3E107A</td><td class="right"> 62</td><td class="right"> 16</td><td class="right">122</td></tr>
+					<tr id="310D61" class="bg-310D61"><td class="right">220</td><td>#310D61</td><td class="right"> 49</td><td class="right"> 13</td><td class="right"> 97</td></tr>
+					<tr id="240A49" class="bg-240A49"><td class="right">221</td><td>#240A49</td><td class="right"> 36</td><td class="right"> 10</td><td class="right"> 73</td></tr>
+					<tr id="190731" class="bg-190731"><td class="right">222</td><td>#190731</td><td class="right"> 25</td><td class="right">  7</td><td class="right"> 49</td></tr>
+					<tr id="0C0319" class="bg-0C0319"><td class="right">223</td><td>#0C0319</td><td class="right"> 12</td><td class="right">  3</td><td class="right"> 25</td></tr>
+					<tr id="A10064" class="bg-A10064"><td class="right">224</td><td>#A10064</td><td class="right">161</td><td class="right">  0</td><td class="right">100</td></tr>
+					<tr id="95005C" class="bg-95005C"><td class="right">225</td><td>#95005C</td><td class="right">149</td><td class="right">  0</td><td class="right"> 92</td></tr>
+					<tr id="880055" class="bg-880055"><td class="right">226</td><td>#880055</td><td class="right">136</td><td class="right">  0</td><td class="right"> 85</td></tr>
+					<tr id="7C004D" class="bg-7C004D"><td class="right">227</td><td>#7C004D</td><td class="right">124</td><td class="right">  0</td><td class="right"> 77</td></tr>
+					<tr id="6F0045" class="bg-6F0045"><td class="right">228</td><td>#6F0045</td><td class="right">111</td><td class="right">  0</td><td class="right"> 69</td></tr>
+					<tr id="63003E" class="bg-63003E"><td class="right">229</td><td>#63003E</td><td class="right"> 99</td><td class="right">  0</td><td class="right"> 62</td></tr>
+					<tr id="570036" class="bg-570036"><td class="right">230</td><td>#570036</td><td class="right"> 87</td><td class="right">  0</td><td class="right"> 54</td></tr>
+					<tr id="4A002E" class="bg-4A002E"><td class="right">231</td><td>#4A002E</td><td class="right"> 74</td><td class="right">  0</td><td class="right"> 46</td></tr>
+					<tr id="3E0026" class="bg-3E0026"><td class="right">232</td><td>#3E0026</td><td class="right"> 62</td><td class="right">  0</td><td class="right"> 38</td></tr>
+					<tr id="32001F" class="bg-32001F"><td class="right">233</td><td>#32001F</td><td class="right"> 50</td><td class="right">  0</td><td class="right"> 31</td></tr>
+					<tr id="250017" class="bg-250017"><td class="right">234</td><td>#250017</td><td class="right"> 37</td><td class="right">  0</td><td class="right"> 23</td></tr>
+					<tr id="19000F" class="bg-19000F"><td class="right">235</td><td>#19000F</td><td class="right"> 25</td><td class="right">  0</td><td class="right"> 15</td></tr>
+					<tr id="0C0008" class="bg-0C0008"><td class="right">236</td><td>#0C0008</td><td class="right"> 12</td><td class="right">  0</td><td class="right">  8</td></tr>
+					<tr id="0C00FF" class="bg-0C00FF"><td class="right">237</td><td>#0C00FF</td><td class="right"> 12</td><td class="right">  0</td><td class="right">255</td></tr>
+					<tr id="0B00EB" class="bg-0B00EB"><td class="right">238</td><td>#0B00EB</td><td class="right"> 11</td><td class="right">  0</td><td class="right">235</td></tr>
+					<tr id="0A00D8" class="bg-0A00D8"><td class="right">239</td><td>#0A00D8</td><td class="right"> 10</td><td class="right">  0</td><td class="right">216</td></tr>
+					<tr id="0900C4" class="bg-0900C4"><td class="right">240</td><td>#0900C4</td><td class="right">  9</td><td class="right">  0</td><td class="right">196</td></tr>
+					<tr id="0800B1" class="bg-0800B1"><td class="right">241</td><td>#0800B1</td><td class="right">  8</td><td class="right">  0</td><td class="right">177</td></tr>
+					<tr id="07009D" class="bg-07009D"><td class="right">242</td><td>#07009D</td><td class="right">  7</td><td class="right">  0</td><td class="right">157</td></tr>
+					<tr id="060089" class="bg-060089"><td class="right">243</td><td>#060089</td><td class="right">  6</td><td class="right">  0</td><td class="right">137</td></tr>
+					<tr id="060076" class="bg-060076"><td class="right">244</td><td>#060076</td><td class="right">  6</td><td class="right">  0</td><td class="right">118</td></tr>
+					<tr id="050062" class="bg-050062"><td class="right">245</td><td>#050062</td><td class="right">  5</td><td class="right">  0</td><td class="right"> 98</td></tr>
+					<tr id="04004E" class="bg-04004E"><td class="right">246</td><td>#04004E</td><td class="right">  4</td><td class="right">  0</td><td class="right"> 78</td></tr>
+					<tr id="03003B" class="bg-03003B"><td class="right">247</td><td>#03003B</td><td class="right">  3</td><td class="right">  0</td><td class="right"> 59</td></tr>
+					<tr id="020027" class="bg-020027"><td class="right">248</td><td>#020027</td><td class="right">  2</td><td class="right">  0</td><td class="right"> 39</td></tr>
+					<tr id="010014" class="bg-010014"><td class="right">249</td><td>#010014</td><td class="right">  1</td><td class="right">  0</td><td class="right"> 20</td></tr>
+					<tr id="3A445C" class="bg-3A445C"><td class="right">250</td><td>#3A445C</td><td class="right"> 58</td><td class="right"> 68</td><td class="right"> 92</td></tr>
+					<tr id="2E374C" class="bg-2E374C"><td class="right">251</td><td>#2E374C</td><td class="right"> 46</td><td class="right"> 55</td><td class="right"> 76</td></tr>
+					<tr id="222B40" class="bg-222B40"><td class="right">252</td><td>#222B40</td><td class="right"> 34</td><td class="right"> 43</td><td class="right"> 64</td></tr>
+					<tr id="1A202F" class="bg-1A202F"><td class="right">253</td><td>#1A202F</td><td class="right"> 26</td><td class="right"> 32</td><td class="right"> 47</td></tr>
+					<tr id="0000FF" class="bg-0000FF"><td class="right">254</td><td>#0000FF</td><td class="right">  0</td><td class="right">  0</td><td class="right">255</td></tr>
+					<tr id="FF00FF" class="bg-FF00FF"><td class="right">255</td><td>#FF00FF</td><td class="right">255</td><td class="right">  0</td><td class="right">255</td></tr>
+					<tr id="00FFFF" class="bg-00FFFF"><td class="right">256</td><td>#00FFFF</td><td class="right">  0</td><td class="right">255</td><td class="right">255</td></tr>
 				</tbody>
 			</table>
 			

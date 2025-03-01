@@ -155,13 +155,14 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">I&rsquo;ve thus compiled <em>Marathon</em> (1994)&rsquo;s palette, in both web color and RGB formats. A few notes:</p>
 				<ul class="fixheight">
-					<li>I&rsquo;ve indexed the &ldquo;white to black&rdquo; color ramp first, then the &ldquo;black body&rdquo; color ramp, then a faintly blue 17-color ramp, then the remaining 14-color ramps roughly from brightest to darkest, and finally a four-color ramp from the Interface collection that seems to be entirely isolated. (Remember, in the game, every ramp ends in black.) Observant readers will note that, because I used the Objectively Correct method of zero-based indexing, there are 257 colors here. However, the transparency colors are dummy colors that aren&rsquo;t ever actually displayed in the game, so it would&rsquo;ve been able to handle this fine even in 8-bit color mode.
+					<li>I&rsquo;ve indexed the &ldquo;white to black&rdquo; color ramp first, then the &ldquo;black body&rdquo; color ramp, then a faintly blue 17-color ramp, then the remaining 14-color ramps roughly from brightest to darkest, and finally a four-color ramp from the Interface collection that seems to be entirely isolated.</li>
+					<li>In the game, every color ramp except the four-color Interface ramp ends with black; I only included it once.</li>
+					<li>Rows&rsquo; backgrounds are their colors; whether the text is black or white depends on contrast.</li>
+					<li>The last three colors (<code>#0000FF</code>, <code>#FF00FF</code>, and <code>#00FFFF</code>) are &ldquo;dummy colors&rdquo; used to signify transparency and don&rsquo;t actually appear anywhere in the game; I&rsquo;ve included them for completeness&rsquo; sake.
 						<ul>
-							<li>Rows&rsquo; backgrounds are their colors; whether the text is black or white depends on contrast.</li>
+							<li>Observant readers may note that there are really 257 colors here, since I indexed from zero (I will <em>die</em> on the hill that this is Objectively Correct). The transparency colors, however, are never actually displayed in the game, which is why it works fine in 256-color mode.</li>
 						</ul>
 					</li>
-					<li>Every color ramp ended with black; I only included it the first time.</li>
-					<li>The last three colors (<code>#0000FF</code>, <code>#FF00FF</code>, and <code>#00FFFF</code>) are &ldquo;dummy colors&rdquo; used to signify transparency and don&rsquo;t actually appear anywhere in the game; I&rsquo;ve included them for completeness&rsquo; sake.</li>
 					<li><em>Marathon 2</em> and <em>Infinity</em> used <a href="marathon2palette.html">a somewhat different palette</a>. Several color ramps remained identical between the games; a few others have some odd discrepancies (not counting black, the black-body ramp&rsquo;s last color is <code>#270000</code> in <em>Marathon 1</em> and <code>#270101</code> in <em>Marathon 2</em> and <em>Infinity</em>; not counting black, the last color of the <code>#00B0C9</code> ramp is <code>#000E0F</code> in <em>Marathon 1</em> and <code>#001415</code> in <em>Marathon 2</em> and <em>Infinity</em>).</li>
 				</ul>
 

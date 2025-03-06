@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-	<title>Marathon Infinity Sounds &amp; Sources</title>
-	<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
-	<link rel="stylesheet" type="text/css" href="css.css">
-	<script>
+	<head>
+		<title>Marathon Infinity Sounds &amp; Sources</title>
+		<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
+		<link rel="stylesheet" type="text/css" href="css.css">
+		<script>
 function sortTable(table, col, reverse) {
 	var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
 		tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
@@ -37,1303 +37,1306 @@ function makeAllSortable(parent) {
 }
 
 window.onload = function () {makeAllSortable();};
-	</script>
-</head>
-<body class="marathonsounds light">
-	<header>
-		<h1 id="sounds" class="petitecaps centred"><em>Marathon Infinity</em> Sounds &amp; Sources</h1>
-			<p class="fixheight">A reference to the sounds for <span class="accent weight3">Bungie</span>&rsquo;s first-person shooters <em class="accent weight3">Marathon 2: Durandal</em> (1995) and <em class="accent weight3">Marathon Infinity</em> (1996), with limited information on the sounds from its earlier games <em class="accent weight3">Pathways into Darkness</em> (1993) and <em class="accent weight3">Marathon</em> (1994). For further context, please refer to my <a href="mapmaking.html" class="underlinelink"><em>Marathon</em><wbr />/<wbr />Aleph One content creation guide</a> (or my <a href="mapmaking101.html" class="underlinelink">beginners&rsquo; guide</a>). Please <a href="aboutme.html" class="underlinelink">contact me</a> if you notice any errors or omissions.</p>
+		</script>
+	</head>
+	<body class="marathonsounds light">
+		<header>
+			<h1 id="sounds" class="petitecaps centred"><em>Marathon Infinity</em> Sounds &amp; Sources</h1>
+				<p class="fixheight">A reference to the sounds for <span class="accent weight3">Bungie</span>&rsquo;s first-person shooters <em class="accent weight3">Marathon 2: Durandal</em> (1995) and <em class="accent weight3">Marathon Infinity</em> (1996), with limited information on the sounds from its earlier games <em class="accent weight3">Pathways into Darkness</em> (1993) and <em class="accent weight3">Marathon</em> (1994). For further context, please refer to my <a href="mapmaking.html" class="underlinelink"><em>Marathon</em><wbr />/<wbr />Aleph One content creation guide</a> (or my <a href="mapmaking101.html" class="underlinelink">beginners&rsquo; guide</a>). Please <a href="aboutme.html" class="underlinelink">contact me</a> if you notice any errors or omissions.</p>
 
-			<p class="fixheight">The indispensable Marathon&rsquo;s Story page has <a href="https://marathon.bungie.org/story/sounds.html" target="_blank">additional sound references that may be helpful</a>.</p>
+				<p class="fixheight">The indispensable Marathon&rsquo;s Story page has <a href="https://marathon.bungie.org/story/sounds.html" target="_blank">additional sound references that may be helpful</a>.</p>
 
-		<h1 id="toc" class="centred">Table of Contents</h1>
-			<ol class="toclite">
-				<li><a href="#top">Introduction</a></li>
-				<li><a href="#toc">Table of Contents</a></li>
-				<li><a href="#soundids">Vanilla <em>Infinity</em> Sound ID List</a></li>
-				<li><a href="#soundsources">Sound Sources</a></li>
-				<li><a href="#thanks">Acknowledgements</a></li>
-				<li><a href="#endnotes">Endnotes</a></li>
-			</ol>
+			<h1 id="toc" class="centred">Table of Contents</h1>
+				<ol class="toclite">
+					<li><a href="#top">Introduction</a></li>
+					<li><a href="#toc">Table of Contents</a></li>
+					<li><a href="#soundids">Vanilla <em>Infinity</em> Sound ID List</a></li>
+					<li><a href="#soundsources">Sound Sources</a></li>
+					<li><a href="#thanks">Acknowledgements</a></li>
+					<li><a href="#endnotes">Endnotes</a></li>
+				</ol>
 
-	</header>
-<h1 id="soundids" class="centred">Vanilla <em>Infinity</em> Sound ID List</h1>
+		</header>
+		<main>
+			<h1 id="soundids" class="centred">Vanilla <em>Infinity</em> Sound ID List</h1>
 
-<ul class="fixheight">
-	<li>Sounds have two different numbers associated with them: sound ID and sound number. Sound IDs can be anything from 130 to 32760, must be multiples of 5, and must be unique within the sound file. If the ID is &minus;1, the game won&rsquo;t play them. Unfortunately, they&rsquo;re in no logical order in the vanilla sound file, so I&rsquo;ve listed them all below. The vanilla <em>Infinity</em> sounds only use IDs between 10,000 and 19,210 (inclusive).</li>
-	<li>You can use up to 256 classes (sound numbers 0&ndash;255); Aleph One&rsquo;s developers advise against using more.</li>
-	<li>&lsquo;Volume&rsquo; affects not the sound&rsquo;s decibel level in-game but how far away it&rsquo;s audible.</li>
-	<li>I&rsquo;ve used the Lua mnemonics for these unless I had a reason not to, which I usually note in tooltips (also reproduced at the bottom of this document as endnotes). Parenthetical names are alternate names prominently used elsewhere (e.g., Anvil<wbr />/<wbr />ShapeFusion or Forge<wbr />/<wbr />Weland).</li>
-	<li>Sounds in <strong>bold</strong> below have all of their sources definitively identified (see <a href="#soundsources" class="underlinelink">Sound Sources</a> below for these). Sounds in <em>italics</em> have some of them definitively identified.</li>
-</ul>
+			<ul class="fixheight">
+				<li>Sounds have two different numbers associated with them: sound ID and sound number. Sound IDs can be anything from 130 to 32760, must be multiples of 5, and must be unique within the sound file. If the ID is &minus;1, the game won&rsquo;t play them. Unfortunately, they&rsquo;re in no logical order in the vanilla sound file, so I&rsquo;ve listed them all below. The vanilla <em>Infinity</em> sounds only use IDs between 10,000 and 19,210 (inclusive).</li>
+				<li>You can use up to 256 classes (sound numbers 0&ndash;255); Aleph One&rsquo;s developers advise against using more.</li>
+				<li>&lsquo;Volume&rsquo; affects not the sound&rsquo;s decibel level in-game but how far away it&rsquo;s audible.</li>
+				<li>I&rsquo;ve used the Lua mnemonics for these unless I had a reason not to, which I usually note in tooltips (also reproduced at the bottom of this document as endnotes). Parenthetical names are alternate names prominently used elsewhere (e.g., Anvil<wbr />/<wbr />ShapeFusion or Forge<wbr />/<wbr />Weland).</li>
+				<li>Sounds in <strong>bold</strong> below have all of their sources definitively identified (see <a href="#soundsources" class="underlinelink">Sound Sources</a> below for these). Sounds in <em>italics</em> have some of them definitively identified.</li>
+			</ul>
 
 
-<p class="light fixheight" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
+			<p class="light fixheight" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
 
-<table style="width: 500px;" class="fixheight">
-	<thead>
-		<tr>
-			<th style="width: 40px;" class="right">ID</td>
-			<th style="width: 40px;" class="right">#</td>
-			<th>Sound</td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td class="right">10000</td>
-			<td class="right">1</td>
-			<td>Teleport In</td>
-		</tr>
-		<tr>
-			<td class="right">10010</td>
-			<td class="right">2</td>
-			<td>Teleport Out</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">10020</td>
-			<td class="right">3</td>
-			<td>Crushed</td>
-		</tr>
-		<tr>
-			<td class="right">10030</td>
-			<td class="right">5</td>
-			<td>Absorbed</td>
-		</tr>
-		<tr>
-			<td class="right">10040</td>
-			<td class="right">7</td>
-			<td>Oxygen Warning</td>
-		</tr>
-		<tr>
-			<td class="right">10050</td>
-			<td class="right">8</td>
-			<td>Suffocation</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">10060</td>
-			<td class="right">9</td>
-			<td>Energy Refuel</td>
-		</tr>
-		<tr>
-			<td class="right">10070</td>
-			<td class="right">10</td>
-			<td>Oxygen Refuel</td>
-		</tr>
-		<tr>
-			<td class="right">10080</td>
-			<td class="right">11</td>
-			<td>Can&rsquo;t Toggle Switch</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">10090</td>
-			<td class="right">12</td>
-			<td>Switch On</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">10100</td>
-			<td class="right">13</td>
-			<td>Switch Off</td>
-		</tr>
-		<tr>
-			<td class="right">10110</td>
-			<td class="right">14</td>
-			<td>Puzzle Switch</td>
-		</tr>
-		<tr>
-			<td class="right">10120</td>
-			<td class="right">15</td>
-			<td>Chip Insertion</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">10130</td>
-			<td class="right">16</td>
-			<td>Pattern Buffer</td>
-		</tr>
-		<tr>
-			<td class="right">10150</td>
-			<td class="right">18</td>
-			<td>Adjust Volume</td>
-		</tr>
-		<tr>
-			<td class="right">10160</td>
-			<td class="right">19</td>
-			<td><span class="dotted" id="ftnt_ref01a" title="The Lua mnemonics have &lsquo;GOT Powerup&rsquo;, but GET Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.">Got Powerup<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">10170</td>
-			<td class="right">20</td>
-			<td><span class="dotted" id="ftnt_ref01b" title="The Lua mnemonics have &lsquo;GOT Powerup&rsquo;, but GET Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.">Get Item<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span></td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">11000</td>
-			<td class="right">21</td>
-			<td>Bullet Ricochet</td>
-		</tr>
-		<tr>
-			<td class="right">11010</td>
-			<td class="right">22</td>
-			<td>Metallic Ricochet</td>
-		</tr>
-		<tr>
-			<td class="right">11020</td>
-			<td class="right">23</td>
-			<td>Empty Gun</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">11030</td>
-			<td class="right">34</td>
-			<td>Fist Hitting</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">11040</td>
-			<td class="right">35</td>
-			<td>Magnum Firing</td>
-		</tr>
-		<tr>
-			<td class="right">11050</td>
-			<td class="right">36</td>
-			<td>Magnum Reloading</td>
-		</tr>
-		<tr>
-			<td class="right">11060</td>
-			<td class="right">37</td>
-			<td>Assault Rifle Firing</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">11070</td>
-			<td class="right">38</td>
-			<td>Grenade Launcher Firing</td>
-		</tr>
-		<tr>
-			<td class="right">11080</td>
-			<td class="right">39</td>
-			<td><span class="dotted" id="ftnt_ref02" title="The Lua mnemonics (but not Anvil or ShapeFusion) misspell this as &lsquo;Grenade Expolding&rsquo;. I&rsquo;ve corrected it.">Grenade Exploding<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">11090</td>
-			<td class="right">40</td>
-			<td>Grenade Flyby</td>
-		</tr>
-		<tr>
-			<td class="right">11100</td>
-			<td class="right">41</td>
-			<td>Fusion Pistol Firing</td>
-		</tr>
-		<tr>
-			<td class="right">11110</td>
-			<td class="right">42</td>
-			<td>Fusion Exploding</td>
-		</tr>
-		<tr>
-			<td class="right">11120</td>
-			<td class="right">43</td>
-			<td>Fusion Flyby</td>
-		</tr>
-		<tr>
-			<td class="right">11130</td>
-			<td class="right">44</td>
-			<td>Fusion Charging</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">11140</td>
-			<td class="right">45</td>
-			<td><span class="dotted" id="ftnt_ref03" title="Misspelled in Anvil (and thus ShapeFusion) as &lsquo;Rocket Expoding&rsquo;. The Lua mnemonics get this one correct.">Rocket Exploding<a href="#ftnt03" class="noprintlink">&#8317;&sup3;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">11150</td>
-			<td class="right">46</td>
-			<td>Rocket Flyby</td>
-		</tr>
-		<tr>
-			<td class="right">11160</td>
-			<td class="right">47</td>
-			<td>Rocket Firing</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">11170</td>
-			<td class="right">48</td>
-			<td>Flamethrower</td>
-		</tr>
-		<tr>
-			<td class="right">11180</td>
-			<td class="right">49</td>
-			<td>Body Falling</td>
-		</tr>
-		<tr>
-			<td class="right">11190</td>
-			<td class="right">50</td>
-			<td>Body Exploding</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">11200</td>
-			<td class="right">51</td>
-			<td>Bullet Hit Flesh</td>
-		</tr>
-		<tr>
-			<td class="right">11210</td>
-			<td class="right">134</td>
-			<td>Assault Rifle Reloading</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">11220</td>
-			<td class="right">136</td>
-			<td>Shotgun Firing</td>
-		</tr>
-		<tr>
-			<td class="right">11230</td>
-			<td class="right">137</td>
-			<td>Shotgun Reloading</td>
-		</tr>
-		<tr>
-			<td class="right">11240</td>
-			<td class="right">141</td>
-			<td>Computer Login</td>
-		</tr>
-		<tr>
-			<td class="right">11250</td>
-			<td class="right">142</td>
-			<td>Computer Logout</td>
-		</tr>
-		<tr>
-			<td class="right">11260</td>
-			<td class="right">143</td>
-			<td>Computer Page</td>
-		</tr>
-		<tr>
-			<td class="right">11270</td>
-			<td class="right">135</td>
-			<td>Assault Rifle Shell Casings</td>
-		</tr>
-		<tr>
-			<td class="right">11280</td>
-			<td class="right">17</td>
-			<td>Destroy Control Panel</td>
-		</tr>
-		<tr>
-			<td class="right">11290</td>
-			<td class="right">132</td>
-			<td>Fusion Pistol Firing Charged</td>
-		</tr>
-		<tr>
-			<td class="right">11300</td>
-			<td class="right">138</td>
-			<td>Ball Bounce</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">11310</td>
-			<td class="right">139</td>
-			<td>You Are It</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">11320</td>
-			<td class="right">140</td>
-			<td>Got Ball</td>
-		</tr>
-		<tr>
-			<td class="right">11330</td>
-			<td class="right">133</td>
-			<td>Major Fusion Charged</td>
-		</tr>
-		<tr>
-			<td class="right">12000</td>
-			<td class="right">24</td>
-			<td><span class="dotted" id="ftnt_ref04a" title="In both Anvil/ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2024?">S&rsquo;pht Door Closing<a href="#ftnt04" class="noprintlink">&#8317;&#8308;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">12010</td>
-			<td class="right">25</td>
-			<td><span class="dotted" id="ftnt_ref04b" title="In both Anvil/ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2024?">S&rsquo;pht Door Opening<a href="#ftnt04" class="noprintlink">&#8317;&#8308;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">12020</td>
-			<td class="right">26</td>
-			<td>S&rsquo;pht Door Obstructed</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">12030</td>
-			<td class="right">27</td>
-			<td>S&rsquo;pht Platform Starting</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">12040</td>
-			<td class="right">28</td>
-			<td>S&rsquo;pht Platform Stopping</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">12080</td>
-			<td class="right">32</td>
-			<td>Heavy S&rsquo;pht Platform Starting</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">12090</td>
-			<td class="right">33</td>
-			<td>Heavy S&rsquo;pht Platform Stopping</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">13000</td>
-			<td class="right">144</td>
-			<td>Heavy S&rsquo;pht Door</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">13010</td>
-			<td class="right">145</td>
-			<td>Heavy S&rsquo;pht Door Opening</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">13020</td>
-			<td class="right">146</td>
-			<td>Heavy S&rsquo;pht Door Closing</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">13030</td>
-			<td class="right">147</td>
-			<td>Heavy S&rsquo;pht Door Open</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">13040</td>
-			<td class="right">148</td>
-			<td>Heavy S&rsquo;pht Door Closed</td>
-		</tr>
-		<tr>
-			<td class="right">13050</td>
-			<td class="right">149</td>
-			<td>Heavy S&rsquo;pht Door Obstructed</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14000</td>
-			<td class="right">90</td>
-			<td>Water</td>
-		</tr>
-		<tr>
-			<td class="right">14010</td>
-			<td class="right">91</td>
-			<td>Sewage</td>
-		</tr>
-		<tr>
-			<td class="right">14020</td>
-			<td class="right">92</td>
-			<td>Lava</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14030</td>
-			<td class="right">93</td>
-			<td>Goo</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14040</td>
-			<td class="right">94</td>
-			<td>Underwater</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14050</td>
-			<td class="right">95</td>
-			<td>Wind</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14060</td>
-			<td class="right">96</td>
-			<td>Waterfall</td>
-		</tr>
-		<tr>
-			<td class="right">14070</td>
-			<td class="right">97</td>
-			<td>Siren</td>
-		</tr>
-		<tr>
-			<td class="right">14080</td>
-			<td class="right">98</td>
-			<td>Fan</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14100</td>
-			<td class="right">100</td>
-			<td>S&rsquo;pht Platform</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14120</td>
-			<td class="right">101</td>
-			<td>Alien Harmonics (Jjaro Ship)</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14130</td>
-			<td class="right">102</td>
-			<td>Heavy S&rsquo;pht Platform</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14140</td>
-			<td class="right">103</td>
-			<td>Light Machinery</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14150</td>
-			<td class="right">104</td>
-			<td>Heavy Machinery</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14160</td>
-			<td class="right">105</td>
-			<td>Transformer</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14170</td>
-			<td class="right">106</td>
-			<td>Sparking Transformer</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14180</td>
-			<td class="right">169</td>
-			<td>Machine Binder</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14190</td>
-			<td class="right">170</td>
-			<td>Machine Bookpress</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14200</td>
-			<td class="right">171</td>
-			<td>Machine Puncher</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14210</td>
-			<td class="right">172</td>
-			<td>Electric Hum</td>
-		</tr>
-		<tr>
-			<td class="right">14220</td>
-			<td class="right">173</td>
-			<td>Alarm</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14230</td>
-			<td class="right">174</td>
-			<td>Night Wind</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14240</td>
-			<td class="right">201</td>
-			<td>Alien Noise 1 (Pfhor Ship #1)</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14250</td>
-			<td class="right">202</td>
-			<td>Alien Noise 2 (Pfhor Ship #2)</td>
-		</tr>
-		<tr style="font-style: italic;">
-			<td class="right">14260</td>
-			<td class="right">4</td>
-			<td><span class="dotted" id="ftnt_ref05" title="Inexplicably labeled in the Lua mnemonics as &lsquo;Nuclear Hard Death&rsquo;, the physics&rsquo; name for the screen flash and sound effect made when Juggernauts die. (Worst Prince cover ever.) That sound is Juggernaut Exploding (#198, ID 14650).">Jjaro Ship Creak<a href="#ftnt05" class="noprintlink">&#8317;&#8309;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">14500</td>
-			<td class="right">107</td>
-			<td>Water Drip</td>
-		</tr>
-		<tr style="font-style: italic;">
-			<td class="right">14510</td>
-			<td class="right">175</td>
-			<td>Surface Explosion (Thunder)</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14520</td>
-			<td class="right">176</td>
-			<td>Underground Explosion</td>
-		</tr>
-		<tr>
-			<td class="right">14530</td>
-			<td class="right">186</td>
-			<td>Lamp Exploding</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14540</td>
-			<td class="right">29</td>
-			<td>Loon</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14545</td>
-			<td class="right">187</td>
-			<td>Pfhor Platform Starting</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14550</td>
-			<td class="right">188</td>
-			<td>Pfhor Platform Stopping</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14560</td>
-			<td class="right">189</td>
-			<td>Pfhor Platform</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14570</td>
-			<td class="right">190</td>
-			<td><span class="dotted" id="ftnt_ref06a" title="The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.">Pfhor Door Closing<a href="#ftnt06" class="noprintlink">&#8317;&#8310;&#8318;</a></span></td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14580</td>
-			<td class="right">191</td>
-			<td><span class="dotted" id="ftnt_ref06b" title="The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.">Pfhor Door Opening<a href="#ftnt06" class="noprintlink">&#8317;&#8310;&#8318;</a></span></td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14590</td>
-			<td class="right">192</td>
-			<td>Pfhor Door Obstructed</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14600</td>
-			<td class="right">193</td>
-			<td>Pfhor Door</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14610</td>
-			<td class="right">194</td>
-			<td>Pfhor Switch On</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14620</td>
-			<td class="right">195</td>
-			<td>Pfhor Switch Off</td>
-		</tr>
-		<tr>
-			<td class="right">14630</td>
-			<td class="right">196</td>
-			<td>Juggernaut Firing</td>
-		</tr>
-		<tr>
-			<td class="right">14640</td>
-			<td class="right">197</td>
-			<td>Juggernaut Warning</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14650</td>
-			<td class="right">198</td>
-			<td>Juggernaut Exploding</td>
-		</tr>
-		<tr>
-			<td class="right">14660</td>
-			<td class="right">199</td>
-			<td>Juggernaut Start Attack</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">14670</td>
-			<td class="right">200</td>
-			<td>Enforcer Exploding</td>
-		</tr>
-		<tr>
-			<td class="right">15000</td>
-			<td class="right">71</td>
-			<td>Drone Activate</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">15010</td>
-			<td class="right">72</td>
-			<td>Drone Start Attack</td>
-		</tr>
-		<tr>
-			<td class="right">15020</td>
-			<td class="right">73</td>
-			<td>Drone Attack</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">15030</td>
-			<td class="right">74</td>
-			<td>Drone Dying</td>
-		</tr>
-		<tr>
-			<td class="right">15040</td>
-			<td class="right">75</td>
-			<td>Drone Death</td>
-		</tr>
-		<tr>
-			<td class="right">15050</td>
-			<td class="right">76</td>
-			<td>Drone Projectile Hit</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">15060</td>
-			<td class="right">77</td>
-			<td>Drone Projectile Flyby</td>
-		</tr>
-		<tr>
-			<td class="right">15100</td>
-			<td class="right">64</td>
-			<td>Cyborg Moving</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">15110</td>
-			<td class="right">65</td>
-			<td>Cyborg Attack</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">15120</td>
-			<td class="right">66</td>
-			<td>Cyborg Hit</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">15130</td>
-			<td class="right">67</td>
-			<td>Cyborg Death</td>
-		</tr>
-		<tr>
-			<td class="right">15140</td>
-			<td class="right">68</td>
-			<td>Cyborg Projectile Bounce</td>
-		</tr>
-		<tr>
-			<td class="right">15150</td>
-			<td class="right"><span class="dotted" title="Nice." id="ftnt_ref07">69<a href="#ftnt07" class="noprintlink">&#8317;&#8311;&#8318;</a></span></td>
-			<td>Cyborg Projectile Hit</td>
-		</tr>
-		<tr>
-			<td class="right">15200</td>
-			<td class="right">59</td>
-			<td>S&rsquo;pht Attack</td>
-		</tr>
-		<tr>
-			<td class="right">15210</td>
-			<td class="right">60</td>
-			<td>S&rsquo;pht Death</td>
-		</tr>
-		<tr>
-			<td class="right">15220</td>
-			<td class="right">61</td>
-			<td>S&rsquo;pht Hit</td>
-		</tr>
-		<tr>
-			<td class="right">15230</td>
-			<td class="right">62</td>
-			<td>S&rsquo;pht Projectile Flyby</td>
-		</tr>
-		<tr>
-			<td class="right">15240</td>
-			<td class="right">63</td>
-			<td>S&rsquo;pht Projectile Hit</td>
-		</tr>
-		<tr>
-			<td class="right">15300</td>
-			<td class="right">52</td>
-			<td>Fighter Activate</td>
-		</tr>
-		<tr>
-			<td class="right">15310</td>
-			<td class="right">53</td>
-			<td>Fighter Wail</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">15320</td>
-			<td class="right">54</td>
-			<td>Fighter Scream</td>
-		</tr>
-		<tr>
-			<td class="right">15330</td>
-			<td class="right">55</td>
-			<td>Fighter Chatter</td>
-		</tr>
-		<tr>
-			<td class="right">15340</td>
-			<td class="right">56</td>
-			<td>Fighter Attack</td>
-		</tr>
-		<tr>
-			<td class="right">15350</td>
-			<td class="right">57</td>
-			<td>Fighter Projectile Hit</td>
-		</tr>
-		<tr>
-			<td class="right">15360</td>
-			<td class="right">58</td>
-			<td>Fighter Projectile Flyby</td>
-		</tr>
-		<tr>
-			<td class="right">15400</td>
-			<td class="right">78</td>
-			<td>Bob Wail</td>
-		</tr>
-		<tr>
-			<td class="right">15410</td>
-			<td class="right">79</td>
-			<td>Bob Scream</td>
-		</tr>
-		<tr>
-			<td class="right">15420</td>
-			<td class="right">80</td>
-			<td>Bob Hit</td>
-		</tr>
-		<tr>
-			<td class="right">15430</td>
-			<td class="right">81</td>
-			<td>Bob Chatter</td>
-		</tr>
-		<tr>
-			<td class="right">15440</td>
-			<td class="right">82</td>
-			<td>Assimilated Bob Chatter</td>
-		</tr>
-		<tr>
-			<td class="right">15450</td>
-			<td class="right">83</td>
-			<td>Bob Trash Talk</td>
-		</tr>
-		<tr>
-			<td class="right">15460</td>
-			<td class="right">84</td>
-			<td>Bob Apology</td>
-		</tr>
-		<tr>
-			<td class="right">15470</td>
-			<td class="right">85</td>
-			<td>Bob Activation</td>
-		</tr>
-		<tr>
-			<td class="right">15480</td>
-			<td class="right">86</td>
-			<td>Bob Clear</td>
-		</tr>
-		<tr>
-			<td class="right">15490</td>
-			<td class="right">87</td>
-			<td>Bob Angry (Stop Shooting Me You Bastard)</td>
-		</tr>
-		<tr>
-			<td class="right">15500</td>
-			<td class="right">88</td>
-			<td>Bob Secure</td>
-		</tr>
-		<tr>
-			<td class="right">15510</td>
-			<td class="right">89</td>
-			<td>Bob Kill the Player</td>
-		</tr>
-		<tr>
-			<td class="right">15610</td>
-			<td class="right">151</td>
-			<td>Hunter Attack</td>
-		</tr>
-		<tr>
-			<td class="right">15630</td>
-			<td class="right">153</td>
-			<td>Hunter Landing</td>
-		</tr>
-		<tr>
-			<td class="right">15640</td>
-			<td class="right">154</td>
-			<td>Hunter Exploding</td>
-		</tr>
-		<tr>
-			<td class="right">15650</td>
-			<td class="right">155</td>
-			<td>Hunter Projectile Hit</td>
-		</tr>
-		<tr>
-			<td class="right">15660</td>
-			<td class="right">156</td>
-			<td>Hunter Projectile Flyby</td>
-		</tr>
-		<tr>
-			<td class="right">15700</td>
-			<td class="right">157</td>
-			<td>Enforcer Activate</td>
-		</tr>
-		<tr>
-			<td class="right">15710</td>
-			<td class="right">158</td>
-			<td>Enforcer Attack</td>
-		</tr>
-		<tr>
-			<td class="right">15720</td>
-			<td class="right">159</td>
-			<td>Enforcer Projectile Hit</td>
-		</tr>
-		<tr>
-			<td class="right">15730</td>
-			<td class="right">160</td>
-			<td>Enforcer Projectile Flyby</td>
-		</tr>
-		<tr>
-			<td class="right">15800</td>
-			<td class="right">161</td>
-			<td>F&rsquo;lickta Melee Attack</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">15810</td>
-			<td class="right">162</td>
-			<td>F&rsquo;lickta Melee Hit</td>
-		</tr>
-		<tr>
-			<td class="right">15820</td>
-			<td class="right">163</td>
-			<td>F&rsquo;lickta Projectile Attack</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">15830</td>
-			<td class="right">166</td>
-			<td>F&rsquo;lickta Projectile Lava Hit</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">15840</td>
-			<td class="right">167</td>
-			<td>F&rsquo;lickta Projectile Lava Flyby</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">15850</td>
-			<td class="right">168</td>
-			<td>F&rsquo;lickta Dying</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">15860</td>
-			<td class="right">164</td>
-			<td>F&rsquo;lickta Projectile Sewage Hit</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">16000</td>
-			<td class="right">177</td>
-			<td>S&rsquo;pht&rsquo;Kr Attack</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">16010</td>
-			<td class="right">178</td>
-			<td>S&rsquo;pht&rsquo;Kr Projectile Hit</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">16020</td>
-			<td class="right">179</td>
-			<td>S&rsquo;pht&rsquo;Kr Projectile Flyby</td>
-		</tr>
-		<tr>
-			<td class="right">16030</td>
-			<td class="right">180</td>
-			<td>S&rsquo;pht&rsquo;Kr Being Hit</td>
-		</tr>
-		<tr>
-			<td class="right">16040</td>
-			<td class="right">181</td>
-			<td>S&rsquo;pht&rsquo;Kr Exploding</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">17000</td>
-			<td class="right">182</td>
-			<td>Tick Chatter</td>
-		</tr>
-		<tr>
-			<td class="right">17020</td>
-			<td class="right">184</td>
-			<td>Tick Flapping</td>
-		</tr>
-		<tr>
-			<td class="right">18000</td>
-			<td class="right">30</td>
-			<td>SMG Firing</td>
-		</tr>
-		<tr>
-			<td class="right">18010</td>
-			<td class="right">31</td>
-			<td>SMG Reloading</td>
-		</tr>
-		<tr>
-			<td class="right">18100</td>
-			<td class="right">203</td>
-			<td>VacBob Wail</td>
-		</tr>
-		<tr>
-			<td class="right">18110</td>
-			<td class="right">204</td>
-			<td>VacBob Scream</td>
-		</tr>
-		<tr>
-			<td class="right">18120</td>
-			<td class="right">205</td>
-			<td>VacBob Hit</td>
-		</tr>
-		<tr>
-			<td class="right">18130</td>
-			<td class="right">206</td>
-			<td>VacBob Chatter</td>
-		</tr>
-		<tr>
-			<td class="right">18140</td>
-			<td class="right">207</td>
-			<td>Assimilated VacBob Chatter</td>
-		</tr>
-		<tr>
-			<td class="right">18150</td>
-			<td class="right">208</td>
-			<td>VacBob Trash Talk</td>
-		</tr>
-		<tr>
-			<td class="right">18160</td>
-			<td class="right">209</td>
-			<td>VacBob Apology</td>
-		</tr>
-		<tr>
-			<td class="right">18170</td>
-			<td class="right">210</td>
-			<td>VacBob Activation</td>
-		</tr>
-		<tr>
-			<td class="right">18180</td>
-			<td class="right">211</td>
-			<td>VacBob Clear</td>
-		</tr>
-		<tr>
-			<td class="right">18190</td>
-			<td class="right">212</td>
-			<td>VacBob Angry (Stop Shooting Me You Bastard)</td>
-		</tr>
-		<tr>
-			<td class="right">18200</td>
-			<td class="right">213</td>
-			<td>VacBob Secure</td>
-		</tr>
-		<tr>
-			<td class="right">18210</td>
-			<td class="right">214</td>
-			<td>VacBob Kill the Player</td>
-		</tr>
-		<tr>
-			<td class="right">19000</td>
-			<td class="right">108</td>
-			<td>Walking in Water</td>
-		</tr>
-		<tr>
-			<td class="right">19010</td>
-			<td class="right">109</td>
-			<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Water<a href="#ftnt08" id="ftnt_ref08a" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">19020</td>
-			<td class="right">110</td>
-			<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Water<a href="#ftnt08" id="ftnt_ref08b" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">19060</td>
-			<td class="right">115</td>
-			<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Lava<a href="#ftnt08" id="ftnt_ref08c" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">19070</td>
-			<td class="right">116</td>
-			<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Lava<a href="#ftnt08" id="ftnt_ref08d" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">19100</td>
-			<td class="right">111</td>
-			<td>Small Water Splash</td>
-		</tr>
-		<tr class="weight3">
-			<td class="right">19120</td>
-			<td class="right">113</td>
-			<td>Large Water Splash</td>
-		</tr>
-		<tr>
-			<td class="right">19130</td>
-			<td class="right">118</td>
-			<td>Small Lava Splash</td>
-		</tr>
-		<tr>
-			<td class="right">19150</td>
-			<td class="right">120</td>
-			<td>Large Lava Splash</td>
-		</tr>
-		<tr>
-			<td class="right">19170</td>
-			<td class="right">122</td>
-			<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Sewage<a href="#ftnt08" id="ftnt_ref08e" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">19180</td>
-			<td class="right">121</td>
-			<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Sewage<a href="#ftnt08" id="ftnt_ref08f" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">19190</td>
-			<td class="right">123</td>
-			<td>Small Sewage Splash</td>
-		</tr>
-		<tr>
-			<td class="right">19210</td>
-			<td class="right">125</td>
-			<td>Large Sewage Splash</td>
-		</tr>
-	</tbody>
-</table>
+			<table style="width: 500px;" class="fixheight">
+				<thead>
+					<tr class="accent weight3">
+						<th style="width: 40px;" class="right">ID</td>
+						<th style="width: 40px;" class="right">#</td>
+						<th>Sound</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="right">10000</td>
+						<td class="right">1</td>
+						<td>Teleport In</td>
+					</tr>
+					<tr>
+						<td class="right">10010</td>
+						<td class="right">2</td>
+						<td>Teleport Out</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">10020</td>
+						<td class="right">3</td>
+						<td>Crushed</td>
+					</tr>
+					<tr>
+						<td class="right">10030</td>
+						<td class="right">5</td>
+						<td>Absorbed</td>
+					</tr>
+					<tr>
+						<td class="right">10040</td>
+						<td class="right">7</td>
+						<td>Oxygen Warning</td>
+					</tr>
+					<tr>
+						<td class="right">10050</td>
+						<td class="right">8</td>
+						<td>Suffocation</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">10060</td>
+						<td class="right">9</td>
+						<td>Energy Refuel</td>
+					</tr>
+					<tr>
+						<td class="right">10070</td>
+						<td class="right">10</td>
+						<td>Oxygen Refuel</td>
+					</tr>
+					<tr>
+						<td class="right">10080</td>
+						<td class="right">11</td>
+						<td>Can&rsquo;t Toggle Switch</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">10090</td>
+						<td class="right">12</td>
+						<td>Switch On</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">10100</td>
+						<td class="right">13</td>
+						<td>Switch Off</td>
+					</tr>
+					<tr>
+						<td class="right">10110</td>
+						<td class="right">14</td>
+						<td>Puzzle Switch</td>
+					</tr>
+					<tr>
+						<td class="right">10120</td>
+						<td class="right">15</td>
+						<td>Chip Insertion</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">10130</td>
+						<td class="right">16</td>
+						<td>Pattern Buffer</td>
+					</tr>
+					<tr>
+						<td class="right">10150</td>
+						<td class="right">18</td>
+						<td>Adjust Volume</td>
+					</tr>
+					<tr>
+						<td class="right">10160</td>
+						<td class="right">19</td>
+						<td><span class="dotted" id="ftnt_ref01a" title="The Lua mnemonics have &lsquo;GOT Powerup&rsquo;, but GET Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.">Got Powerup<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">10170</td>
+						<td class="right">20</td>
+						<td><span class="dotted" id="ftnt_ref01b" title="The Lua mnemonics have &lsquo;GOT Powerup&rsquo;, but GET Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.">Get Item<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span></td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">11000</td>
+						<td class="right">21</td>
+						<td>Bullet Ricochet</td>
+					</tr>
+					<tr>
+						<td class="right">11010</td>
+						<td class="right">22</td>
+						<td>Metallic Ricochet</td>
+					</tr>
+					<tr>
+						<td class="right">11020</td>
+						<td class="right">23</td>
+						<td>Empty Gun</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">11030</td>
+						<td class="right">34</td>
+						<td>Fist Hitting</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">11040</td>
+						<td class="right">35</td>
+						<td>Magnum Firing</td>
+					</tr>
+					<tr>
+						<td class="right">11050</td>
+						<td class="right">36</td>
+						<td>Magnum Reloading</td>
+					</tr>
+					<tr>
+						<td class="right">11060</td>
+						<td class="right">37</td>
+						<td>Assault Rifle Firing</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">11070</td>
+						<td class="right">38</td>
+						<td>Grenade Launcher Firing</td>
+					</tr>
+					<tr>
+						<td class="right">11080</td>
+						<td class="right">39</td>
+						<td><span class="dotted" id="ftnt_ref02" title="The Lua mnemonics (but not Anvil or ShapeFusion) misspell this as &lsquo;Grenade Expolding&rsquo;. I&rsquo;ve corrected it.">Grenade Exploding<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">11090</td>
+						<td class="right">40</td>
+						<td>Grenade Flyby</td>
+					</tr>
+					<tr>
+						<td class="right">11100</td>
+						<td class="right">41</td>
+						<td>Fusion Pistol Firing</td>
+					</tr>
+					<tr>
+						<td class="right">11110</td>
+						<td class="right">42</td>
+						<td>Fusion Exploding</td>
+					</tr>
+					<tr>
+						<td class="right">11120</td>
+						<td class="right">43</td>
+						<td>Fusion Flyby</td>
+					</tr>
+					<tr>
+						<td class="right">11130</td>
+						<td class="right">44</td>
+						<td>Fusion Charging</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">11140</td>
+						<td class="right">45</td>
+						<td><span class="dotted" id="ftnt_ref03" title="Misspelled in Anvil (and thus ShapeFusion) as &lsquo;Rocket Expoding&rsquo;. The Lua mnemonics get this one correct.">Rocket Exploding<a href="#ftnt03" class="noprintlink">&#8317;&sup3;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">11150</td>
+						<td class="right">46</td>
+						<td>Rocket Flyby</td>
+					</tr>
+					<tr>
+						<td class="right">11160</td>
+						<td class="right">47</td>
+						<td>Rocket Firing</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">11170</td>
+						<td class="right">48</td>
+						<td>Flamethrower</td>
+					</tr>
+					<tr>
+						<td class="right">11180</td>
+						<td class="right">49</td>
+						<td>Body Falling</td>
+					</tr>
+					<tr>
+						<td class="right">11190</td>
+						<td class="right">50</td>
+						<td>Body Exploding</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">11200</td>
+						<td class="right">51</td>
+						<td>Bullet Hit Flesh</td>
+					</tr>
+					<tr>
+						<td class="right">11210</td>
+						<td class="right">134</td>
+						<td>Assault Rifle Reloading</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">11220</td>
+						<td class="right">136</td>
+						<td>Shotgun Firing</td>
+					</tr>
+					<tr>
+						<td class="right">11230</td>
+						<td class="right">137</td>
+						<td>Shotgun Reloading</td>
+					</tr>
+					<tr>
+						<td class="right">11240</td>
+						<td class="right">141</td>
+						<td>Computer Login</td>
+					</tr>
+					<tr>
+						<td class="right">11250</td>
+						<td class="right">142</td>
+						<td>Computer Logout</td>
+					</tr>
+					<tr>
+						<td class="right">11260</td>
+						<td class="right">143</td>
+						<td>Computer Page</td>
+					</tr>
+					<tr>
+						<td class="right">11270</td>
+						<td class="right">135</td>
+						<td>Assault Rifle Shell Casings</td>
+					</tr>
+					<tr>
+						<td class="right">11280</td>
+						<td class="right">17</td>
+						<td>Destroy Control Panel</td>
+					</tr>
+					<tr>
+						<td class="right">11290</td>
+						<td class="right">132</td>
+						<td>Fusion Pistol Firing Charged</td>
+					</tr>
+					<tr>
+						<td class="right">11300</td>
+						<td class="right">138</td>
+						<td>Ball Bounce</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">11310</td>
+						<td class="right">139</td>
+						<td>You Are It</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">11320</td>
+						<td class="right">140</td>
+						<td>Got Ball</td>
+					</tr>
+					<tr>
+						<td class="right">11330</td>
+						<td class="right">133</td>
+						<td>Major Fusion Charged</td>
+					</tr>
+					<tr>
+						<td class="right">12000</td>
+						<td class="right">24</td>
+						<td><span class="dotted" id="ftnt_ref04a" title="In both Anvil/ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2024?">S&rsquo;pht Door Closing<a href="#ftnt04" class="noprintlink">&#8317;&#8308;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">12010</td>
+						<td class="right">25</td>
+						<td><span class="dotted" id="ftnt_ref04b" title="In both Anvil/ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2024?">S&rsquo;pht Door Opening<a href="#ftnt04" class="noprintlink">&#8317;&#8308;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">12020</td>
+						<td class="right">26</td>
+						<td>S&rsquo;pht Door Obstructed</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">12030</td>
+						<td class="right">27</td>
+						<td>S&rsquo;pht Platform Starting</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">12040</td>
+						<td class="right">28</td>
+						<td>S&rsquo;pht Platform Stopping</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">12080</td>
+						<td class="right">32</td>
+						<td>Heavy S&rsquo;pht Platform Starting</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">12090</td>
+						<td class="right">33</td>
+						<td>Heavy S&rsquo;pht Platform Stopping</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">13000</td>
+						<td class="right">144</td>
+						<td>Heavy S&rsquo;pht Door</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">13010</td>
+						<td class="right">145</td>
+						<td>Heavy S&rsquo;pht Door Opening</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">13020</td>
+						<td class="right">146</td>
+						<td>Heavy S&rsquo;pht Door Closing</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">13030</td>
+						<td class="right">147</td>
+						<td>Heavy S&rsquo;pht Door Open</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">13040</td>
+						<td class="right">148</td>
+						<td>Heavy S&rsquo;pht Door Closed</td>
+					</tr>
+					<tr>
+						<td class="right">13050</td>
+						<td class="right">149</td>
+						<td>Heavy S&rsquo;pht Door Obstructed</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14000</td>
+						<td class="right">90</td>
+						<td>Water</td>
+					</tr>
+					<tr>
+						<td class="right">14010</td>
+						<td class="right">91</td>
+						<td>Sewage</td>
+					</tr>
+					<tr>
+						<td class="right">14020</td>
+						<td class="right">92</td>
+						<td>Lava</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14030</td>
+						<td class="right">93</td>
+						<td>Goo</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14040</td>
+						<td class="right">94</td>
+						<td>Underwater</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14050</td>
+						<td class="right">95</td>
+						<td>Wind</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14060</td>
+						<td class="right">96</td>
+						<td>Waterfall</td>
+					</tr>
+					<tr>
+						<td class="right">14070</td>
+						<td class="right">97</td>
+						<td>Siren</td>
+					</tr>
+					<tr>
+						<td class="right">14080</td>
+						<td class="right">98</td>
+						<td>Fan</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14100</td>
+						<td class="right">100</td>
+						<td>S&rsquo;pht Platform</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14120</td>
+						<td class="right">101</td>
+						<td>Alien Harmonics (Jjaro Ship)</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14130</td>
+						<td class="right">102</td>
+						<td>Heavy S&rsquo;pht Platform</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14140</td>
+						<td class="right">103</td>
+						<td>Light Machinery</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14150</td>
+						<td class="right">104</td>
+						<td>Heavy Machinery</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14160</td>
+						<td class="right">105</td>
+						<td>Transformer</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14170</td>
+						<td class="right">106</td>
+						<td>Sparking Transformer</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14180</td>
+						<td class="right">169</td>
+						<td>Machine Binder</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14190</td>
+						<td class="right">170</td>
+						<td>Machine Bookpress</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14200</td>
+						<td class="right">171</td>
+						<td>Machine Puncher</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14210</td>
+						<td class="right">172</td>
+						<td>Electric Hum</td>
+					</tr>
+					<tr>
+						<td class="right">14220</td>
+						<td class="right">173</td>
+						<td>Alarm</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14230</td>
+						<td class="right">174</td>
+						<td>Night Wind</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14240</td>
+						<td class="right">201</td>
+						<td>Alien Noise 1 (Pfhor Ship #1)</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14250</td>
+						<td class="right">202</td>
+						<td>Alien Noise 2 (Pfhor Ship #2)</td>
+					</tr>
+					<tr style="font-style: italic;">
+						<td class="right">14260</td>
+						<td class="right">4</td>
+						<td><span class="dotted" id="ftnt_ref05" title="Inexplicably labeled in the Lua mnemonics as &lsquo;Nuclear Hard Death&rsquo;, the physics&rsquo; name for the screen flash and sound effect made when Juggernauts die. (Worst Prince cover ever.) That sound is Juggernaut Exploding (#198, ID 14650).">Jjaro Ship Creak<a href="#ftnt05" class="noprintlink">&#8317;&#8309;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">14500</td>
+						<td class="right">107</td>
+						<td>Water Drip</td>
+					</tr>
+					<tr style="font-style: italic;">
+						<td class="right">14510</td>
+						<td class="right">175</td>
+						<td>Surface Explosion (Thunder)</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14520</td>
+						<td class="right">176</td>
+						<td>Underground Explosion</td>
+					</tr>
+					<tr>
+						<td class="right">14530</td>
+						<td class="right">186</td>
+						<td>Lamp Exploding</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14540</td>
+						<td class="right">29</td>
+						<td>Loon</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14545</td>
+						<td class="right">187</td>
+						<td>Pfhor Platform Starting</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14550</td>
+						<td class="right">188</td>
+						<td>Pfhor Platform Stopping</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14560</td>
+						<td class="right">189</td>
+						<td>Pfhor Platform</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14570</td>
+						<td class="right">190</td>
+						<td><span class="dotted" id="ftnt_ref06a" title="The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.">Pfhor Door Closing<a href="#ftnt06" class="noprintlink">&#8317;&#8310;&#8318;</a></span></td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14580</td>
+						<td class="right">191</td>
+						<td><span class="dotted" id="ftnt_ref06b" title="The default names for these (in both Anvil/ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.">Pfhor Door Opening<a href="#ftnt06" class="noprintlink">&#8317;&#8310;&#8318;</a></span></td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14590</td>
+						<td class="right">192</td>
+						<td>Pfhor Door Obstructed</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14600</td>
+						<td class="right">193</td>
+						<td>Pfhor Door</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14610</td>
+						<td class="right">194</td>
+						<td>Pfhor Switch On</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14620</td>
+						<td class="right">195</td>
+						<td>Pfhor Switch Off</td>
+					</tr>
+					<tr>
+						<td class="right">14630</td>
+						<td class="right">196</td>
+						<td>Juggernaut Firing</td>
+					</tr>
+					<tr>
+						<td class="right">14640</td>
+						<td class="right">197</td>
+						<td>Juggernaut Warning</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14650</td>
+						<td class="right">198</td>
+						<td>Juggernaut Exploding</td>
+					</tr>
+					<tr>
+						<td class="right">14660</td>
+						<td class="right">199</td>
+						<td>Juggernaut Start Attack</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">14670</td>
+						<td class="right">200</td>
+						<td>Enforcer Exploding</td>
+					</tr>
+					<tr>
+						<td class="right">15000</td>
+						<td class="right">71</td>
+						<td>Drone Activate</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">15010</td>
+						<td class="right">72</td>
+						<td>Drone Start Attack</td>
+					</tr>
+					<tr>
+						<td class="right">15020</td>
+						<td class="right">73</td>
+						<td>Drone Attack</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">15030</td>
+						<td class="right">74</td>
+						<td>Drone Dying</td>
+					</tr>
+					<tr>
+						<td class="right">15040</td>
+						<td class="right">75</td>
+						<td>Drone Death</td>
+					</tr>
+					<tr>
+						<td class="right">15050</td>
+						<td class="right">76</td>
+						<td>Drone Projectile Hit</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">15060</td>
+						<td class="right">77</td>
+						<td>Drone Projectile Flyby</td>
+					</tr>
+					<tr>
+						<td class="right">15100</td>
+						<td class="right">64</td>
+						<td>Cyborg Moving</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">15110</td>
+						<td class="right">65</td>
+						<td>Cyborg Attack</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">15120</td>
+						<td class="right">66</td>
+						<td>Cyborg Hit</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">15130</td>
+						<td class="right">67</td>
+						<td>Cyborg Death</td>
+					</tr>
+					<tr>
+						<td class="right">15140</td>
+						<td class="right">68</td>
+						<td>Cyborg Projectile Bounce</td>
+					</tr>
+					<tr>
+						<td class="right">15150</td>
+						<td class="right"><span class="dotted" title="Nice." id="ftnt_ref07">69<a href="#ftnt07" class="noprintlink">&#8317;&#8311;&#8318;</a></span></td>
+						<td>Cyborg Projectile Hit</td>
+					</tr>
+					<tr>
+						<td class="right">15200</td>
+						<td class="right">59</td>
+						<td>S&rsquo;pht Attack</td>
+					</tr>
+					<tr>
+						<td class="right">15210</td>
+						<td class="right">60</td>
+						<td>S&rsquo;pht Death</td>
+					</tr>
+					<tr>
+						<td class="right">15220</td>
+						<td class="right">61</td>
+						<td>S&rsquo;pht Hit</td>
+					</tr>
+					<tr>
+						<td class="right">15230</td>
+						<td class="right">62</td>
+						<td>S&rsquo;pht Projectile Flyby</td>
+					</tr>
+					<tr>
+						<td class="right">15240</td>
+						<td class="right">63</td>
+						<td>S&rsquo;pht Projectile Hit</td>
+					</tr>
+					<tr>
+						<td class="right">15300</td>
+						<td class="right">52</td>
+						<td>Fighter Activate</td>
+					</tr>
+					<tr>
+						<td class="right">15310</td>
+						<td class="right">53</td>
+						<td>Fighter Wail</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">15320</td>
+						<td class="right">54</td>
+						<td>Fighter Scream</td>
+					</tr>
+					<tr>
+						<td class="right">15330</td>
+						<td class="right">55</td>
+						<td>Fighter Chatter</td>
+					</tr>
+					<tr>
+						<td class="right">15340</td>
+						<td class="right">56</td>
+						<td>Fighter Attack</td>
+					</tr>
+					<tr>
+						<td class="right">15350</td>
+						<td class="right">57</td>
+						<td>Fighter Projectile Hit</td>
+					</tr>
+					<tr>
+						<td class="right">15360</td>
+						<td class="right">58</td>
+						<td>Fighter Projectile Flyby</td>
+					</tr>
+					<tr>
+						<td class="right">15400</td>
+						<td class="right">78</td>
+						<td>Bob Wail</td>
+					</tr>
+					<tr>
+						<td class="right">15410</td>
+						<td class="right">79</td>
+						<td>Bob Scream</td>
+					</tr>
+					<tr>
+						<td class="right">15420</td>
+						<td class="right">80</td>
+						<td>Bob Hit</td>
+					</tr>
+					<tr>
+						<td class="right">15430</td>
+						<td class="right">81</td>
+						<td>Bob Chatter</td>
+					</tr>
+					<tr>
+						<td class="right">15440</td>
+						<td class="right">82</td>
+						<td>Assimilated Bob Chatter</td>
+					</tr>
+					<tr>
+						<td class="right">15450</td>
+						<td class="right">83</td>
+						<td>Bob Trash Talk</td>
+					</tr>
+					<tr>
+						<td class="right">15460</td>
+						<td class="right">84</td>
+						<td>Bob Apology</td>
+					</tr>
+					<tr>
+						<td class="right">15470</td>
+						<td class="right">85</td>
+						<td>Bob Activation</td>
+					</tr>
+					<tr>
+						<td class="right">15480</td>
+						<td class="right">86</td>
+						<td>Bob Clear</td>
+					</tr>
+					<tr>
+						<td class="right">15490</td>
+						<td class="right">87</td>
+						<td>Bob Angry (Stop Shooting Me You Bastard)</td>
+					</tr>
+					<tr>
+						<td class="right">15500</td>
+						<td class="right">88</td>
+						<td>Bob Secure</td>
+					</tr>
+					<tr>
+						<td class="right">15510</td>
+						<td class="right">89</td>
+						<td>Bob Kill the Player</td>
+					</tr>
+					<tr>
+						<td class="right">15610</td>
+						<td class="right">151</td>
+						<td>Hunter Attack</td>
+					</tr>
+					<tr>
+						<td class="right">15630</td>
+						<td class="right">153</td>
+						<td>Hunter Landing</td>
+					</tr>
+					<tr>
+						<td class="right">15640</td>
+						<td class="right">154</td>
+						<td>Hunter Exploding</td>
+					</tr>
+					<tr>
+						<td class="right">15650</td>
+						<td class="right">155</td>
+						<td>Hunter Projectile Hit</td>
+					</tr>
+					<tr>
+						<td class="right">15660</td>
+						<td class="right">156</td>
+						<td>Hunter Projectile Flyby</td>
+					</tr>
+					<tr>
+						<td class="right">15700</td>
+						<td class="right">157</td>
+						<td>Enforcer Activate</td>
+					</tr>
+					<tr>
+						<td class="right">15710</td>
+						<td class="right">158</td>
+						<td>Enforcer Attack</td>
+					</tr>
+					<tr>
+						<td class="right">15720</td>
+						<td class="right">159</td>
+						<td>Enforcer Projectile Hit</td>
+					</tr>
+					<tr>
+						<td class="right">15730</td>
+						<td class="right">160</td>
+						<td>Enforcer Projectile Flyby</td>
+					</tr>
+					<tr>
+						<td class="right">15800</td>
+						<td class="right">161</td>
+						<td>F&rsquo;lickta Melee Attack</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">15810</td>
+						<td class="right">162</td>
+						<td>F&rsquo;lickta Melee Hit</td>
+					</tr>
+					<tr>
+						<td class="right">15820</td>
+						<td class="right">163</td>
+						<td>F&rsquo;lickta Projectile Attack</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">15830</td>
+						<td class="right">166</td>
+						<td>F&rsquo;lickta Projectile Lava Hit</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">15840</td>
+						<td class="right">167</td>
+						<td>F&rsquo;lickta Projectile Lava Flyby</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">15850</td>
+						<td class="right">168</td>
+						<td>F&rsquo;lickta Dying</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">15860</td>
+						<td class="right">164</td>
+						<td>F&rsquo;lickta Projectile Sewage Hit</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">16000</td>
+						<td class="right">177</td>
+						<td>S&rsquo;pht&rsquo;Kr Attack</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">16010</td>
+						<td class="right">178</td>
+						<td>S&rsquo;pht&rsquo;Kr Projectile Hit</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">16020</td>
+						<td class="right">179</td>
+						<td>S&rsquo;pht&rsquo;Kr Projectile Flyby</td>
+					</tr>
+					<tr>
+						<td class="right">16030</td>
+						<td class="right">180</td>
+						<td>S&rsquo;pht&rsquo;Kr Being Hit</td>
+					</tr>
+					<tr>
+						<td class="right">16040</td>
+						<td class="right">181</td>
+						<td>S&rsquo;pht&rsquo;Kr Exploding</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">17000</td>
+						<td class="right">182</td>
+						<td>Tick Chatter</td>
+					</tr>
+					<tr>
+						<td class="right">17020</td>
+						<td class="right">184</td>
+						<td>Tick Flapping</td>
+					</tr>
+					<tr>
+						<td class="right">18000</td>
+						<td class="right">30</td>
+						<td>SMG Firing</td>
+					</tr>
+					<tr>
+						<td class="right">18010</td>
+						<td class="right">31</td>
+						<td>SMG Reloading</td>
+					</tr>
+					<tr>
+						<td class="right">18100</td>
+						<td class="right">203</td>
+						<td>VacBob Wail</td>
+					</tr>
+					<tr>
+						<td class="right">18110</td>
+						<td class="right">204</td>
+						<td>VacBob Scream</td>
+					</tr>
+					<tr>
+						<td class="right">18120</td>
+						<td class="right">205</td>
+						<td>VacBob Hit</td>
+					</tr>
+					<tr>
+						<td class="right">18130</td>
+						<td class="right">206</td>
+						<td>VacBob Chatter</td>
+					</tr>
+					<tr>
+						<td class="right">18140</td>
+						<td class="right">207</td>
+						<td>Assimilated VacBob Chatter</td>
+					</tr>
+					<tr>
+						<td class="right">18150</td>
+						<td class="right">208</td>
+						<td>VacBob Trash Talk</td>
+					</tr>
+					<tr>
+						<td class="right">18160</td>
+						<td class="right">209</td>
+						<td>VacBob Apology</td>
+					</tr>
+					<tr>
+						<td class="right">18170</td>
+						<td class="right">210</td>
+						<td>VacBob Activation</td>
+					</tr>
+					<tr>
+						<td class="right">18180</td>
+						<td class="right">211</td>
+						<td>VacBob Clear</td>
+					</tr>
+					<tr>
+						<td class="right">18190</td>
+						<td class="right">212</td>
+						<td>VacBob Angry (Stop Shooting Me You Bastard)</td>
+					</tr>
+					<tr>
+						<td class="right">18200</td>
+						<td class="right">213</td>
+						<td>VacBob Secure</td>
+					</tr>
+					<tr>
+						<td class="right">18210</td>
+						<td class="right">214</td>
+						<td>VacBob Kill the Player</td>
+					</tr>
+					<tr>
+						<td class="right">19000</td>
+						<td class="right">108</td>
+						<td>Walking in Water</td>
+					</tr>
+					<tr>
+						<td class="right">19010</td>
+						<td class="right">109</td>
+						<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Water<a href="#ftnt08" id="ftnt_ref08a" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">19020</td>
+						<td class="right">110</td>
+						<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Water<a href="#ftnt08" id="ftnt_ref08b" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">19060</td>
+						<td class="right">115</td>
+						<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Lava<a href="#ftnt08" id="ftnt_ref08c" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">19070</td>
+						<td class="right">116</td>
+						<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Lava<a href="#ftnt08" id="ftnt_ref08d" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">19100</td>
+						<td class="right">111</td>
+						<td>Small Water Splash</td>
+					</tr>
+					<tr class="weight3">
+						<td class="right">19120</td>
+						<td class="right">113</td>
+						<td>Large Water Splash</td>
+					</tr>
+					<tr>
+						<td class="right">19130</td>
+						<td class="right">118</td>
+						<td>Small Lava Splash</td>
+					</tr>
+					<tr>
+						<td class="right">19150</td>
+						<td class="right">120</td>
+						<td>Large Lava Splash</td>
+					</tr>
+					<tr>
+						<td class="right">19170</td>
+						<td class="right">122</td>
+						<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Sewage<a href="#ftnt08" id="ftnt_ref08e" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">19180</td>
+						<td class="right">121</td>
+						<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Sewage<a href="#ftnt08" id="ftnt_ref08f" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">19190</td>
+						<td class="right">123</td>
+						<td>Small Sewage Splash</td>
+					</tr>
+					<tr>
+						<td class="right">19210</td>
+						<td class="right">125</td>
+						<td>Large Sewage Splash</td>
+					</tr>
+				</tbody>
+			</table>
 
-<p class="fixheight">The following classes are empty and have ID -1:</p>
+			<p class="fixheight">The following classes are empty and have ID -1:</p>
 
-<p class="light fixheight" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
+			<p class="light fixheight" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
 
-<table style="width: 500px;" class="fixheight">
-	<thead>
-		<tr>
-			<td style="width: 40px;" class="right">ID</td>
-			<td style="width: 40px;" class="right">#</td>
-			<td>Sound</td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">0</td>
-			<td>Startup</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">6</td>
-			<td>Breathing</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">70</td>
-			<td>Cyborg Projectile Flyby</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">99</td>
-			<td>S&rsquo;pht Door</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">112</td>
-			<td>Medium Water Splash</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">114</td>
-			<td>Walking in Lava</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">118</td>
-			<td>Medium Lava Splash</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">120</td>
-			<td>Walking in Sewage</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">124</td>
-			<td>Medium Sewage Splash</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">126</td>
-			<td>Walking in Goo</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">127</td>
-			<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Goo<a href="#ftnt08" id="ftnt_ref08g" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">128</td>
-			<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Goo<a href="#ftnt08" id="ftnt_ref08h" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">129</td>
-			<td>Small Goo Splash</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">130</td>
-			<td>Medium Goo Splash</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">131</td>
-			<td>Large Goo Splash</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">150</td>
-			<td>Hunter Activate</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">152</td>
-			<td>Hunter Dying</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">165</td>
-			<td>F&rsquo;lickta Projectile Sewage Flyby</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">183</td>
-			<td>Tick Falling</td>
-		</tr>
-		<tr>
-			<td class="right">-1</td>
-			<td class="right">185</td>
-			<td>Tick Exploding</td>
-		</tr>
-	</tbody>
-</table>
-<p>You&rsquo;ll thus need to change their IDs if you add sounds to them; likewise with all new classes you create.</p>
+			<table style="width: 500px;" class="fixheight">
+				<thead>
+					<tr class="accent weight3">
+						<td style="width: 40px;" class="right">ID</td>
+						<td style="width: 40px;" class="right">#</td>
+						<td>Sound</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">0</td>
+						<td>Startup</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">6</td>
+						<td>Breathing</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">70</td>
+						<td>Cyborg Projectile Flyby</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">99</td>
+						<td>S&rsquo;pht Door</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">112</td>
+						<td>Medium Water Splash</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">114</td>
+						<td>Walking in Lava</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">118</td>
+						<td>Medium Lava Splash</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">120</td>
+						<td>Walking in Sewage</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">124</td>
+						<td>Medium Sewage Splash</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">126</td>
+						<td>Walking in Goo</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">127</td>
+						<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Exiting Goo<a href="#ftnt08" id="ftnt_ref08g" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">128</td>
+						<td><span class="dotted" title="&lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.">Entering Goo<a href="#ftnt08" id="ftnt_ref08h" class="noprintlink">&#8317;&#8312;&#8318;</a></span></td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">129</td>
+						<td>Small Goo Splash</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">130</td>
+						<td>Medium Goo Splash</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">131</td>
+						<td>Large Goo Splash</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">150</td>
+						<td>Hunter Activate</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">152</td>
+						<td>Hunter Dying</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">165</td>
+						<td>F&rsquo;lickta Projectile Sewage Flyby</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">183</td>
+						<td>Tick Falling</td>
+					</tr>
+					<tr>
+						<td class="right">-1</td>
+						<td class="right">185</td>
+						<td>Tick Exploding</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>You&rsquo;ll thus need to change their IDs if you add sounds to them; likewise with all new classes you create.</p>
 
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-<h1 id="soundsources" class="centred">Sound Sources</h1>
+			<h1 id="soundsources" class="centred">Sound Sources</h1>
 
-<p class="fixheight">I&rsquo;ve been able to locate the sources of many vanilla <em>Marathon Infinity</em> sounds; others remain elusive. Nearly all the ones I&rsquo;ve found are from the Canadian company <strong>Sound Ideas</strong>&rsquo; 40-disc <a href="https://www.sound-ideas.com/Product/42/The-Original-General-Series-6000-Sound-Effect-Library" class="underlinelink" target="_blank">General Series 6000</a> collection. (Alternatively, see <a href="https://www.sound-ideas.com/Product/51/General-Series-6000-Combo" class="underlinelink" target="_blank">here</a> for a bundle of the General Series 6000 with, as of this writing, ten extensions, which are all too recent to be sources for <em>Marathon</em>.) The one exception I&rsquo;ve been able to locate, <strong>Fist Hitting</strong>, comes from the <a href="https://www.sound-ideas.com/Product/414/Series-4000-Hollywood-Sound-Effects-Library" class="underlinelink" target="_blank">Series 4000 Hollywood</a> collection. The Series 6000 sounds are ubiquitous not just in games (<em>Doom</em> also used many, for example) but across all types of media, so while you may be hearing shout-outs to <em>Marathon</em> when someone uses one of these sounds, it&rsquo;s likelier that they just used an industry-standard stock sound library.</p>
+			<p class="fixheight">I&rsquo;ve been able to locate the sources of many vanilla <em>Marathon Infinity</em> sounds; others remain elusive. Nearly all the ones I&rsquo;ve found are from the Canadian company <strong>Sound Ideas</strong>&rsquo; 40-disc <a href="https://www.sound-ideas.com/Product/42/The-Original-General-Series-6000-Sound-Effect-Library" class="underlinelink" target="_blank">General Series 6000</a> collection. (Alternatively, see <a href="https://www.sound-ideas.com/Product/51/General-Series-6000-Combo" class="underlinelink" target="_blank">here</a> for a bundle of the General Series 6000 with, as of this writing, ten extensions, which are all too recent to be sources for <em>Marathon</em>.) The one exception I&rsquo;ve been able to locate, <strong>Fist Hitting</strong>, comes from the <a href="https://www.sound-ideas.com/Product/414/Series-4000-Hollywood-Sound-Effects-Library" class="underlinelink" target="_blank">Series 4000 Hollywood</a> collection. The Series 6000 sounds are ubiquitous not just in games (<em>Doom</em> also used many, for example) but across all types of media, so while you may be hearing shout-outs to <em>Marathon</em> when someone uses one of these sounds, it&rsquo;s likelier that they just used an industry-standard stock sound library.</p>
 
-<p class="fixheight">I&rsquo;ve remixed or remastered the entire <em>Infinity</em> sound file, using the original sources when I&rsquo;d found them and various audio tricks I&rsquo;ve learned over the years when I hadn&rsquo;t; a recent revision is available <a href="https://1drv.ms/u/s!AuD0MykSsmaRgclYqimDd-MxHhU4iA?e=erurzK" class="underlinelink" class="_blank">here</a>. As of 2024-04-12, this should be the current revision. An &lsquo;extended&rsquo; version with longer versions of some samples and more samples for some sounds is also available <a href="https://1drv.ms/u/s!AuD0MykSsmaRgclXf4GY3KndOZWVrg?e=shiViL" class="underlinelink" class="_blank">here</a>.</p>
+			<p class="fixheight">I&rsquo;ve remixed or remastered the entire <em>Infinity</em> sound file, using the original sources when I&rsquo;d found them and various audio tricks I&rsquo;ve learned over the years when I hadn&rsquo;t; a recent revision is available <a href="https://1drv.ms/u/s!AuD0MykSsmaRgclYqimDd-MxHhU4iA?e=erurzK" class="underlinelink" class="_blank">here</a>. As of 2024-04-12, this should be the current revision. An &lsquo;extended&rsquo; version with longer versions of some samples and more samples for some sounds is also available <a href="https://1drv.ms/u/s!AuD0MykSsmaRgclXf4GY3KndOZWVrg?e=shiViL" class="underlinelink" class="_blank">here</a>.</p>
 
-<p class="fixheight">The sources I&rsquo;ve been able to locate are, in order by disc<wbr />/<wbr />track<wbr />/<wbr />index:</span></p>
+			<p class="fixheight">The sources I&rsquo;ve been able to locate are, in order by the earliest disc<wbr />/<wbr />track<wbr />/<wbr />index appearing within a sample:</p>
 
-<ul class="fixheight">
-	<li><strong>Fist Landing:</strong> Face Punch, Arm Swing and Jaw Sock (4003 track 50, index 2 &ndash; this is the one from Series 4000)</li>
-	<li><strong>Lh&rsquo;owon Loon:</strong> Common Loon (6003 track 19, indices 1, 2, and 4; 4 was sped up) with echo removed</li>
-	<li><strong>Tick Chatter</strong>, <strong>Fighter Scream</strong>, and <strong>F&rsquo;lickta Death</strong> are all taken from Porcupine (6003 track 94). Fighter Scream is shifted down an octave (twelve semitones) and slowed from about 100 to about 77 bpm. F&rsquo;lickta Death is shifted down an octave and a half (nineteen semitones) and slowed from 100 to 60 bpm.</li>
-	<li><strong>F&rsquo;lickta Lava Impact</strong> and <strong>S&rsquo;pht&rsquo;Kr Being Hit</strong>: Small Burst of Flames in Wood Stove (6015 track 20, index 3, excerpt). The latter is reversed and twice as fast (but the same pitch).</li>
-	<li><strong>Flamethrower</strong>: Flamethrower Long Burst (6015 track 23, index 1, excerpt)</li>
-	<li><strong>F&rsquo;lickta Lava Flyby</strong>: Short, Large Burst of Flame (6015 track 26. I can&rsquo;t recall the index, but it&rsquo;s sped up)</li>
-	<li><strong>S&rsquo;pht&rsquo;Kr Attack</strong>: Fireball Impact and Large Fire Burst (6015 track 28, excerpt)</li>
-	<li><strong>Transformer</strong>: Electric Transformer Hum (6018 track 39, index 2)</li>
-	<li><strong>S&rsquo;pht Platform</strong>: Passenger elevator (6018 track 42, index 4). The <strong>Marathon Platform</strong> is a different edit of the same sound. Bungie also mined a later part of the same sample for the <strong>Energy Recharger</strong>.</li>
-	<li><strong>Bullet Hitting Flesh</strong>: Horror Axe Chop, Human (6018 track 80, indices 1, 2, and 3, excerpts)</li>
-	<li><strong>Body Falling</strong>: probably Horror Blood Splat, Human (6018 track 82, index 1, excerpt), pitch-shifted down about three semitones</li>
-	<li><strong>F&rsquo;lickta Melee Hit</strong>: Horror Head Crunch, Human (6018 track 87, indices 1 and 2)</li>
-	<li><strong>Crushed Under Platform</strong>: probably Horror Head Crunch, Human (6018 track 87, either index 3 or 4, possibly pitch-shifted or slowed down)</li>
-	<li><strong>Wasp Glob Impact</strong>: probably Horror Head Crunch, Human (6018 track 88, index 1, maybe pitch-shifted)</li>
-	<li><strong>Switch On<wbr />/<wbr />Off</strong>: Small Breaker Switch (6021 track 44, indices 1/2)</li>
-	<li><strong>Machine Binder</strong>: Binder (6022 track 3)</li>
-	<li><strong>Light Machinery</strong>: Compressor (6022 track 5)</li>
-	<li><strong>Heavy Machinery</strong>: Wahlenberg cutter (6022 track 11)</li>
-	<li><strong>Heavy S&rsquo;pht Platform</strong>: Electric Hydraulic Machine (6022 track 18)</li>
-	<li><strong>Machine Bookpress</strong>: Book Press (6022 track 25)</li>
-	<li><strong>Machine Puncher</strong>: Auto Plant Punch Press (6022 track 36)</li>
-	<li><strong>Pfhor Door</strong>: Clothes Cleaning Plant Steam Release (6023 track 5). They reversed one of these to get the opening sound (mislabeled as the closing sound in most lists of sounds)</li>
-	<li><strong>Pfhor Platform</strong>: Clothes Cleaning Plant Steam Supply Generator (6023 track 6; the <strong>Oxygen Recharger</strong> may also come from this track, but it&rsquo;s such a short sample that it&rsquo;s hard to be sure)</li>
-	<li><strong>Magnum Firing</strong>: .44 Magnum (6025 track 6; index 2 is definitely one source, if not both; they may have used each channel for one of the sounds, or may have excerpted a later index to make the other sound)</li>
-	<li><strong>Grenade Launcher Firing</strong>: Anti-tank 20mm (6025 track 25, probably index 1 or 2)</li>
-	<li><strong>Bullet Ricochet</strong>: Gun Ricochet, Single Shot, Bullet (6025 track 28, probably indices 1 and 2)</li>
-	<li><strong>Rocket Exploding</strong>: Tank Howitzer (6025 track 31, index 2)</li>
-	<li><strong>Shotgun Firing</strong>: Tank Howitzer (6025 track 31, index 4; they used each channel to make one sound)</li>
-	<li><strong>Cyborg Firing</strong>: Small Grenade Blast (6025 track 55, index 1)</li>
-	<li><strong>Cyborg Projectile Hit</strong>: May be a pitch-shifted version of Small Grenade Blast (6025 track 55, index 3). The game doesn&rsquo;t actually use this sound; cyborgs may have used different projectiles earlier in development</li>
-	<li><strong>Cyborg Death</strong>: Small Grenade Blast (6025 track 55, indices 1-3) &amp; High Voltage Electricity Spark (6039 track 61, index 1)</li>
-	<li><strong>Surface Explosions</strong><wbr />/<wbr /><strong>Thunder</strong>: Mostly Large Explosions (6025 track 56, various indices, and 6040 track 24, index 2), but they supplemented the first sound with another source I haven&rsquo;t yet found</li>
-	<li><strong>You Are It</strong>: Guitar Low Note, Bend Down (6027 track 33, index 5)</li>
-	<li><strong>Got the Ball</strong>: Human Vocal Voice, &ldquo;Play Ball&rdquo;, Male Baseball Umpire (6032 track 41, index 1)</li>
-	<li><strong>Jjaro Ship Creak</strong>: One sound comes from Metal Movement and Squeaks (6032 track 58, index 2, excerpt starting about 40 seconds in). I haven&rsquo;t yet found the other</li>
-	<li><strong>Large Water Splash</strong>: Rock, Splash into Water (6032 track 92, index 3)</li>
-	<li><strong>F&rsquo;lickta Projectile Sewage Hit</strong>: Rock, Fall on Dirt (6032 track 92, index 2)</li>
-	<li><strong>Waterfall</strong>: Small Waterfalls (6035 track 1)</li>
-	<li><strong>Water</strong>: Water, Lake Waves Coming In, Light (6035 track 7)</li>
-	<li><strong>Goo</strong>: Excerpts from Geyser, Underground Rumble, Water Spraying Out (6035 track 38)</li>
-	<li><strong>Under Media</strong>: Underwater Diver Jumping into Water, Air Release, Scuba (6035 track 42)</li>
-	<li><strong>Wind</strong>: Thunderclap and Rumble (6036 track 6) and Ghost Town Wind (6036 track 49)</li>
-	<li><strong>Night Wind</strong>: Eerie Wind (6036 track 46)</li>
-	<li><strong>Heavy S&rsquo;pht Door</strong>: Space Door Activate (6037 track 6, index 2) and Spaceship Door (6039 track 24, indices 3 and 4). Still haven&rsquo;t found the &lsquo;Heavy S&rsquo;pht Door Obstructed&rsquo; sound</li>
-	<li><strong>Drone Dying</strong> and <strong>Cyborg Hit</strong>: Steam Single Blast (6037 track 15, index 5). <strong>Cyborg Hit</strong> isn&rsquo;t actually used in the game and is a sped-up version of this sample</li>
-	<li><strong>Electric Hum</strong>: Electricity, Various Hums from Drone Tube (6038 track 46), pitch-shifted up five semitones. The in-game excerpt may start at approximately 8.107 seconds (357,519 samples); I&rsquo;m not 100% sure</li>
-	<li><strong>Pfhor Switch On<wbr />/<wbr />Off</strong>: Hydraulic Activator (6038 track 58, excerpted). The &lsquo;off&rsquo; sound is slowed down and pitch-shifted down by two semitones</li>
-	<li><strong>Enforcer Exploding</strong>: Single Firing of Tank Gun (6038 track 90, probably index 1 but might be 2)</li>
-	<li><strong>Pfhor Ship #2</strong><wbr />/<wbr /><strong>Alien Noise 2</strong>: Spaceship Control Room (6039 track 1)</li>
-	<li><strong>Jjaro Ship</strong><wbr />/<wbr /><strong>Alien Harmonics</strong>: Alien Spacecraft Interior (6039 track 9)</li>
-	<li><strong>Pfhor Ship #1</strong><wbr />/<wbr /><strong>Alien Noise 1</strong>: Spaceship Interior Rumble (6039 track 11)</li>
-	<li><strong>Pattern Buffer</strong>: Computer Spaceship Console Beep (6039 track 27, index 2)</li>
-	<li><strong>Drone Start Attack</strong>: slightly shortened version of Robot Servo Motor (6039 track 29, index 5)</li>
-	<li><strong>Juggernaut Start Attack</strong>: slightly shortened version of Robot Servo Motor (6039 track 31, index 2)</li>
-	<li><strong>Sparking Transformer</strong>: Electric Transformer Hum (6018 track 39, index 2) and High Voltage Electricity Spark (6039 track 61, various indices)</li>
-	<li><strong>Drone Attack</strong>: partly excerpted from Electronic Magical Swish (6039 track 51, index 1); I haven&rsquo;t located the sample&rsquo;s other component(s)</li>
-	<li><strong>Drone Projectile Flyby</strong>: Electronic Magical Zap (6039 track 56, index 2), possibly sped up a bit. (6039 track 57, index 1, is a close variant of the same sound)</li>
-	<li><strong>S&#39;pht&#39;Kr Projectile Hit</strong> and </span><strong>Flyby</strong>: Archery Whoosh and Impact (6039 track 71, excerpts of indices 1 and 2)</li>
-	<li><strong>Water Drip</strong>: Most likely excerpts from Water Dripping in Cave (6039 tracks 82 and<wbr />/<wbr />or 84)</li>
-	<li><strong>Juggernaut Explosion</strong>: Large Explosion (6040 track 24, index 3)</li>
-	<li><strong>Underground Explosion</strong>: Large Explosion (6040 track 26, index 1)</li>
-</ul>
+			<ul class="fixheight">
+				<li><strong class="hue210">Fist Landing</strong>: <span class="hue120">Face Punch, Arm Swing and Jaw Sock</span> (<span class="hue30">4003 track 50, index 2</span> &ndash; this is the one from Series 4000)</li>
+				<li><strong class="hue210">Lh&rsquo;owon Loon</strong>: <span class="hue120">Common Loon</span> (<span class="hue30">6003 track 19, indices 1, 2, &amp; 4</span>) with echo removed (4 was also sped up)</li>
+				<li><strong class="hue210">Tick Chatter</strong>, <strong class="hue210">Fighter Scream</strong>, &amp; <strong class="hue210">F&rsquo;lickta Death</strong>: <span class="hue120">Porcupine</span> (<span class="hue30">6003 track 94</span>). <span class="hue210">Fighter Scream</span> is shifted down an octave (twelve semitones) and slowed from about 100 to about 77 bpm. <span class="hue210">F&rsquo;lickta Death</span> is shifted down an octave and a half (nineteen semitones) and slowed from 100 to 60 bpm.</li>
+				<li><strong class="hue210">F&rsquo;lickta Lava Impact</strong> &amp; <strong class="hue210">S&rsquo;pht&rsquo;Kr Being Hit</strong>: <span class="hue120">Small Burst of Flames in Wood Stove</span> (<span class="hue30">6015 track 20, index 3</span>, excerpt). The latter is reversed and twice as fast (but the same pitch).</li>
+				<li><strong class="hue210">Flamethrower</strong>: <span class="hue120">Flamethrower Long Burst</span> (<span class="hue30">6015 track 23, index 1</span>, excerpt)</li>
+				<li><strong class="hue210">F&rsquo;lickta Lava Flyby</strong>: <span class="hue120">Short, Large Burst of Flame</span> (<span class="hue30">6015 track 26</span>. I can&rsquo;t recall the index, but it&rsquo;s sped up)</li>
+				<li><strong class="hue210">S&rsquo;pht&rsquo;Kr Attack</strong>: <span class="hue120">Fireball Impact and Large Fire Burst</span> (<span class="hue30">6015 track 28</span>, excerpt)</li>
+				<li><strong class="hue210">Transformer</strong>: <span class="hue120">Electric Transformer Hum</span> (<span class="hue30">6018 track 39, index 2</span>). <strong class="hue210">Sparking Transformer</strong> combines this with <span class="hue120">High Voltage Electricity Spark</span> (<span class="hue30">6039 track 61</span>, various indices)</li>
+				<li><strong class="hue210">S&rsquo;pht Platform</strong>: <span class="hue120">Passenger Elevator</span> (<span class="hue30">6018 track 42, index 4</span>). The <strong class="hue210">Marathon Platform</strong> is a different edit of the same sound. Bungie also mined a later part of the same sample for the <strong class="hue210">Energy Recharger</strong>.</li>
+				<li><strong class="hue210">Bullet Hitting Flesh</strong>: <span class="hue120">Horror Axe Chop, Human</span> (<span class="hue30">6018 track 80, indices 1, 2, &amp; 3</span>, excerpts)</li>
+				<li><strong class="hue210">Body Falling</strong>: probably <span class="hue120">Horror Blood Splat, Human</span> (<span class="hue30">6018 track 82, index 1</span>, excerpt), pitch-shifted down about three semitones</li>
+				<li><strong class="hue210">F&rsquo;lickta Melee Hit</strong>: <span class="hue120">Horror Head Crunch, Human</span> (<span class="hue30">6018 track 87, indices 1 &amp; 2</span>)</li>
+				<li><strong class="hue210">Crushed Under Platform</strong>: probably <span class="hue120">Horror Head Crunch, Human</span> (<span class="hue30">6018 track 87, either index 3 or 4</span>, possibly pitch-shifted or slowed down)</li>
+				<li><strong class="hue210">Wasp Glob Impact</strong>: probably <span class="hue120">Horror Head Crunch, Human</span> (<span class="hue30">6018 track 88, index 1</span>, maybe pitch-shifted)</li>
+				<li><strong class="hue210">Switch On</strong><wbr />/<wbr /><strong class="hue210">Switch Off</strong>: <span class="hue120">Small Breaker Switch</span> (<span class="hue30">6021 track 44, indices 1 &amp; 2</span>)</li>
+				<li><strong class="hue210">Machine Binder</strong>: <span class="hue120">Binder</span> (<span class="hue30">6022 track 3</span>)</li>
+				<li><strong class="hue210">Light Machinery</strong>: <span class="hue120">Compressor</span> (<span class="hue30">6022 track 5</span>)</li>
+				<li><strong class="hue210">Heavy Machinery</strong>: <span class="hue120">Wahlenberg Cutter</span> (<span class="hue30">6022 track 11</span>)</li>
+				<li><strong class="hue210">Heavy S&rsquo;pht Platform</strong>: <span class="hue120">Electric Hydraulic Machine</span> (<span class="hue30">6022 track 18</span>)</li>
+				<li><strong class="hue210">Machine Bookpress</strong>: <span class="hue120">Book Press</span> (<span class="hue30">6022 track 25</span>)</li>
+				<li><strong class="hue210">Machine Puncher</strong>: <span class="hue120">Auto Plant Punch Press</span> (<span class="hue30">6022 track 36</span>)</li>
+				<li><strong class="hue210">Pfhor Door</strong>: <span class="hue120">Clothes Cleaning Plant Steam Release</span> (<span class="hue30">6023 track 5</span>). The opening sound (mislabeled in most lists of sounds as the closing sound) is a reversed sample of this</li>
+				<li><strong class="hue210">Pfhor Platform</strong>: <span class="hue120">Clothes Cleaning Plant Steam Supply Generator</span> (<span class="hue30">6023 track 6</span>). The <strong class="hue210">Oxygen Recharger</strong> may also come from this track, but it&rsquo;s such a short sample that it&rsquo;s hard to be sure</li>
+				<li><strong class="hue210">Magnum Firing</strong>: <span class="hue120">.44 Magnum</span> (<span class="hue30">6025 track 6</span>; <span class="hue30">index 2</span> is definitely one source, if not both; they may have used each channel for one of the sounds, or may have excerpted a later index to make the other sound)</li>
+				<li><strong class="hue210">Grenade Launcher Firing</strong>: <span class="hue120">Anti-tank 20mm</span> (<span class="hue30">6025 track 25</span>, probably <span class="hue30">index 1 or 2</span>)</li>
+				<li><strong class="hue210">Bullet Ricochet</strong>: <span class="hue120">Gun Ricochet, Single Shot, Bullet</span> (<span class="hue30">6025 track 28</span>, probably <span class="hue30">indices 1 &amp; 2</span>)</li>
+				<li><strong class="hue210">Rocket Exploding</strong>: <span class="hue120">Tank Howitzer</span> (<span class="hue30">6025 track 31, index 2</span>)</li>
+				<li><strong class="hue210">Shotgun Firing</strong>: <span class="hue120">Tank Howitzer</span> (<span class="hue30">6025 track 31, index 4</span>; they used each channel to make one sound)</li>
+				<li><strong class="hue210">Cyborg Firing</strong>: <span class="hue120">Small Grenade Blast</span> (<span class="hue30">6025 track 55, index 1</span>)</li>
+				<li><strong class="hue210">Cyborg Projectile Hit</strong>: May be a pitch-shifted version of <span class="hue120">Small Grenade Blast</span> (<span class="hue30">6025 track 55, index 3</span>). The game doesn&rsquo;t actually use this sound; cyborgs may have used different projectiles earlier in development</li>
+				<li><strong class="hue210">Cyborg Death</strong>: <span class="hue120">Small Grenade Blast</span> (<span class="hue30">6025 track 55, indices 1-3</span>) &amp; <span class="hue120">High Voltage Electricity Spark</span> (<span class="hue30">6039 track 61, index 1</span>)</li>
+				<li><strong class="hue210">Surface Explosions</strong><wbr />/<wbr /><strong class="hue210">Thunder</strong>: Mostly <span class="hue120">Large Explosions</span> (<span class="hue30">6025 track 56, various indices</span>, &amp; <span class="hue30">6040 track 24, index 2</span>), but they supplemented the first sound with another source I haven&rsquo;t yet found</li>
+				<li><strong class="hue210">You Are It</strong>: <span class="hue120">Guitar Low Note, Bend Down</span> (<span class="hue30">6027 track 33, index 5</span>)</li>
+				<li><strong class="hue210">Got the Ball</strong>: <span class="hue120">Human Vocal Voice, &ldquo;Play Ball&rdquo;, Male Baseball Umpire</span> (<span class="hue30">6032 track 41, index 1</span>)</li>
+				<li><strong class="hue210">Jjaro Ship Creak</strong>: One sound comes from <span class="hue120">Metal Movement and Squeaks</span> (<span class="hue30">6032 track 58, index 2</span>, excerpt starting about 40 seconds in). I haven&rsquo;t yet found the other</li>
+				<li><strong class="hue210">Large Water Splash</strong>: <span class="hue120">Rock, Splash into Water</span> (<span class="hue30">6032 track 92, index 3</span>)</li>
+				<li><strong class="hue210">F&rsquo;lickta Projectile Sewage Hit</strong>: <span class="hue120">Rock, Fall on Dirt</span> (<span class="hue30">6032 track 92, index 2</span>)</li>
+				<li><strong class="hue210">Waterfall</strong>: <span class="hue120">Small Waterfalls</span> (<span class="hue30">6035 track 1</span>)</li>
+				<li><strong class="hue210">Water</strong>: <span class="hue120">Water, Lake Waves Coming In, Light</span> (<span class="hue30">6035 track 7</span>)</li>
+				<li><strong class="hue210">Goo</strong>: Excerpts from <span class="hue120">Geyser, Underground Rumble, Water Spraying Out</span> (<span class="hue30">6035 track 38</span>)</li>
+				<li><strong class="hue210">Under Media</strong>: <span class="hue120">Underwater Diver Jumping into Water, Air Release, Scuba</span> (<span class="hue30">6035 track 42</span>)</li>
+				<li><strong class="hue210">Wind</strong>: <span class="hue120">Thunderclap and Rumble</span> (<span class="hue30">6036 track 6</span>) &amp; <span class="hue120">Ghost Town Wind</span> (<span class="hue30">6036 track 49</span>)</li>
+				<li><strong class="hue210">Night Wind</strong>: <span class="hue120">Eerie Wind</span> (<span class="hue30">6036 track 46</span>)</li>
+				<li><strong class="hue210">Heavy S&rsquo;pht Door</strong>: <span class="hue120">Space Door Activate</span> (<span class="hue30">6037 track 6, index 2</span>) &amp; <span class="hue120">Spaceship Door</span> (<span class="hue30">6039 track 24, indices 3 &amp; 4</span>). Still haven&rsquo;t found the <span class="hue210">&lsquo;Heavy S&rsquo;pht Door Obstructed&rsquo;</span> sound</li>
+				<li><strong class="hue210">Drone Dying</strong> &amp; <strong class="hue210">Cyborg Hit</strong>: <span class="hue120">Steam Single Blast</span> (<span class="hue30">6037 track 15, index 5</span>). <span class="hue210">Cyborg Hit</span> isn&rsquo;t actually used in the game and is a sped-up version of this sample</li>
+				<li><strong class="hue210">Electric Hum</strong>: <span class="hue120">Electricity, Various Hums from Drone Tube</span> (<span class="hue30">6038 track 46</span>), pitch-shifted up five semitones. The in-game excerpt may start at approximately 8.107 seconds (357,519 samples); I&rsquo;m not 100% sure</li>
+				<li><strong class="hue210">Pfhor Switch On<wbr />/<wbr />Off</strong>: <span class="hue120">Hydraulic Activator</span> (<span class="hue30">6038 track 58</span>, excerpt). The &lsquo;off&rsquo; sound is slowed down &amp; pitch-shifted down two semitones</li>
+				<li><strong class="hue210">Enforcer Exploding</strong>: <span class="hue120">Single Firing of Tank Gun</span> (<span class="hue30">6038 track 90</span>, probably <span class="hue30">index 1</span> but might be <span class="hue30">index 2</span>)</li>
+				<li><strong class="hue210">Pfhor Ship #2<wbr />/<wbr />Alien Noise 2</strong>: <span class="hue120">Spaceship Control Room</span> (<span class="hue30">6039 track 1</span>)</li>
+				<li><strong class="hue210">Jjaro Ship<wbr />/<wbr />Alien Harmonics</strong>: <span class="hue120">Alien Spacecraft Interior</span> (<span class="hue30">6039 track 9</span>)</li>
+				<li><strong class="hue210">Pfhor Ship #1<wbr />/<wbr />Alien Noise 1</strong>: <span class="hue120">Spaceship Interior Rumble</span> (<span class="hue30">6039 track 11</span>)</li>
+				<li><strong class="hue210">Pattern Buffer</strong>: <span class="hue120">Computer Spaceship Console Beep</span> (<span class="hue30">6039 track 27, index 2</span>)</li>
+				<li><strong class="hue210">Drone Start Attack</strong>: slightly shortened version of <span class="hue120">Robot Servo Motor</span> (<span class="hue30">6039 track 29, index 5</span>)</li>
+				<li><strong class="hue210">Juggernaut Start Attack</strong>: slightly shortened version of <span class="hue120">Robot Servo Motor</span> (<span class="hue30">6039 track 31, index 2</span>)</li>
+				<li><strong class="hue210">Drone Attack</strong>: <span class="hue120">Electronic Magical Swish</span> (<span class="hue30">6039 track 51, index 1</span>) &amp; at least one other unknown component</li>
+				<li><strong class="hue210">Drone Projectile Flyby</strong>: <span class="hue120">Electronic Magical Zap</span> (<span class="hue30">6039 track 56, index 2</span>), possibly sped up a bit. (<span class="hue30">6039 track 57, index 1</span>, is a close variant of the same sound)</li>
+				<li><strong class="hue210">S&rsquo;pht&rsquo;Kr Projectile Hit</strong> &amp; <strong class="hue210">S&rsquo;pht&rsquo;Kr Projectile Flyby</strong>: <span class="hue120">Archery Whoosh and Impact</span> (<span class="hue30">6039 track 71, indices 1 &amp; 2</span>, excerpts)</li>
+				<li><strong class="hue210">Water Drip</strong>: Most likely excerpts from <span class="hue120">Water Dripping in Cave</span> (<span class="hue30">6039 tracks 82</span> and<wbr />/<wbr />or <span class="hue30">84</span>)</li>
+				<li><strong class="hue210">Juggernaut Explosion</strong>: <span class="hue120">Large Explosion</span> (<span class="hue30">6040 track 24, index 3</span>)</li>
+				<li><strong class="hue210">Underground Explosion</strong>: <span class="hue120">Large Explosion</span> (<span class="hue30">6040 track 26, index 1</span>)</li>
+			</ul>
 
-<p class="fixheight">Also, at least two chapter screen sounds come from the Series 6000 General:</p>
+			<p class="fixheight">Also, at least two chapter screen sounds come from the Series 6000 General:</p>
 
-<ul class="fixheight">
-	<li><strong><em>Marathon 2</em>, chapter 1</strong>: Thunderclap with Rumble (6039 track 63, index 3)</li>
-	<li><strong><em>Marathon 2</em>, chapter 2</strong> (I think): Entity Pass By (6018 track 92)</li>
-</ul>
+			<ul class="fixheight">
+				<li><strong class="hue210"><em>Marathon 2</em>, chapter 1</strong>: <span class="hue120">Thunderclap with Rumble</span> (<span class="hue30">6039 track 63, index 3</span>)</li>
+				<li><strong class="hue210"><em>Marathon 2</em>, chapter 2</strong>: <span class="hue120">Entity Pass By</span> (<span class="hue30">6018 track 92</span>)</li>
+			</ul>
 
-<p class="fixheight">And at least a few <em>Pathways into Darkness</em> sounds also come from the Series 6000 General:</p>
+			<p class="fixheight">And at least a few <em>Pathways into Darkness</em> sounds also come from the Series 6000 General:</p>
 
-<ul class="fixheight">
-	<li><strong>Nightmare Attack</strong><wbr />/<wbr /><strong>Dying</strong>: Wild Cat: Hissing, Growl, Swat (6003 track 44, various indices)</li>
-	<li><strong>Phantasm Attack</strong><wbr />/<wbr /><strong>Dying</strong>: Lion, Roaring (6003 track 88, various indices)</li>
-</ul>
+			<ul class="fixheight">
+				<li><strong class="hue210">Nightmare Attack</strong><wbr />/<wbr /><strong class="hue210">Nightmare Dying</strong>: <span class="hue120">Wild Cat: Hissing, Growl, Swat</span> (<span class="hue30">6003 track 44</span>, various indices)</li>
+				<li><strong class="hue210">Phantasm Attack</strong><wbr />/<wbr /><strong class="hue210">Phantasm Dying</strong>: <span class="hue120">Lion, Roaring</span> (<span class="hue30">6003 track 88</span>, various indices)</li>
+			</ul>
 
-<p class="fixheight">And various mods have also mined these sounds, including:</p>
+			<p class="fixheight">And various mods have also mined these sounds, including:</p>
 
-<ul class="fixheight">
-	<li><strong><em>Tempus Irae</em> &ndash; Blue Jay</strong>: Blue Jay, Single Calls (6003 track 1, index 1&hellip; maybe?)</li>
-	<li><strong><em>Tempus Irae</em> &ndash; Owl</strong>: Owl, Calling (6003 track 21, index 2)</li>
-	<li><strong><em>Tempus Irae</em> &ndash; Horse Whinny</strong>: Horse, Interior, Whinny (6003 track 65, index 1)</li>
-	<li><strong><em>Rubicon</em> &ndash; Alarm</strong>: General Alarm on Aircraft Carrier (6025, track 66, index 1)</li>
-	<li><em>Eternal</em> and </span><em>Tempus Irae Redux</em> use several as well; I&rsquo;ll document them eventually.</li>
-</ul>
+			<ul class="fixheight">
+				<li><strong class="hue210"><em>Tempus Irae</em> &ndash; Blue Jay</strong>: <span class="hue120">Blue Jay, Single Calls</span> (<span class="hue30">6003 track 1, index 1</span>&hellip; maybe?)</li>
+				<li><strong class="hue210"><em>Tempus Irae</em> &ndash; Owl</strong>: <span class="hue120">Owl, Calling</span> (<span class="hue30">6003 track 21, index 2</span>)</li>
+				<li><strong class="hue210"><em>Tempus Irae</em> &ndash; Horse Whinny</strong>: <span class="hue120">Horse, Interior, Whinny</span> (<span class="hue30">6003 track 65, index 1</span>)</li>
+				<li><strong class="hue210"><em>Rubicon</em> &ndash; Alarm</strong>: <span class="hue120">General Alarm on Aircraft Carrier</span> (<span class="hue30">6025, track 66, index 1</span>)</li>
+				<li><em>Eternal</em> and </span><em>Tempus Irae Redux</em> use several as well; I&rsquo;ll document them eventually.</li>
+			</ul>
 
-<p class="fixheight">If you&rsquo;re aware of any sources of vanilla sounds not listed here, either for <em>Marathon 1</em>, <em>Marathon Infinity</em>, or even <em>Pathways into Darkness</em>, please let me know.</p>
+			<p class="fixheight">If you&rsquo;re aware of any sources of vanilla sounds not listed here, either for <em>Marathon 1</em>, <em>Marathon Infinity</em>, or even <em>Pathways into Darkness</em>, please let me know.</p>
 
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-<h1 id="thanks" class="centred">Acknowledgements</h2>
+		</main>
+		<footer>
 
-	<ul class="fixheight">
-		<li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260" class="underlinelink" target="_blank">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
-		<li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020" class="underlinelink" target="_blank">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
-		<li><strong>Solra Bizna</strong> for an incomprehensible amount of programming help, including the CSS that makes this exact page follow your computer&rsquo;s dark mode settings.</li>
-		<li><strong>W&rsquo;rkncacnter</strong> for pointing out a sound source that eluded me, namely that the <strong>Fighter Dying</strong> sound is a pitch-shift of the Porcupine sound. (I had already noticed that the Fighter and F&rsquo;lickta deaths had the same source, but it never occurred to me that the Tick also had the same source.)</li>
-		<li><strong>Bungie</strong>, for obvious reasons.</li> 
-	</ul>
+			<h1 id="thanks" class="centred">Acknowledgements</h1>
 
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+				<ul class="fixheight">
+					<li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260" class="underlinelink" target="_blank">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
+					<li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020" class="underlinelink" target="_blank">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
+					<li><strong>Solra Bizna</strong> for an incomprehensible amount of programming help, including the CSS that makes this exact page follow your computer&rsquo;s dark mode settings.</li>
+					<li><strong>W&rsquo;rkncacnter</strong> for pointing out a sound source that eluded me, namely that the <strong>Fighter Dying</strong> sound is a pitch-shift of the Porcupine sound. (I had already noticed that the Fighter and F&rsquo;lickta deaths had the same source, but it never occurred to me that the Tick also had the same source.)</li>
+					<li><strong>Bungie</strong>, for obvious reasons.</li> 
+				</ul>
 
-<h1 id="endnotes" class="centred">Endnotes</h1>
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-<table class="endnotes fixheight">
-	<thead>
-		<tr>
-			<th class="right"><strong>#</strong></th>
-			<th><strong>Note</strong></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td class="right"><strong id="ftnt01">1</strong></td>
-			<td><a href="#ftnt_ref01a" class="noprintlink">&#8317;&#x1D43;&#8318;</a> <a href="#ftnt_ref01b" class="noprintlink">&#8317;&#x1D47;&#8318;</a> The Lua mnemonics have &lsquo;<strong>Got</strong> Powerup&rsquo;, but &lsquo;<strong>Get</strong> Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.</td>
-		</tr>
-		<tr>
-			<td class="right"><a href="#ftnt_ref02" id="ftnt02" class="noprintlink"><strong>2</strong></a></td>
-			<td>The Lua mnemonics (but not Anvil or ShapeFusion) misspell this as &lsquo;Grenade <strong>Expolding</strong>&rsquo;. I&rsquo;ve corrected it.</td>
-		</tr>
-		<tr>
-			<td class="right"><a href="#ftnt_ref03" id="ftnt03" class="noprintlink"><strong>3</strong></a></td>
-			<td>Misspelled in Anvil (and thus ShapeFusion) as &lsquo;Rocket <strong>Expoding</strong>&rsquo;. The Lua mnemonics get this one correct.</td>
-		</tr>
-		<tr>
-			<td class="right"><strong id="ftnt04">4</strong></td>
-			<td><a href="#ftnt_ref04a" class="noprintlink">&#8317;&#x1D43;&#8318;</a> <a href="#ftnt_ref04b" class="noprintlink">&#8317;&#x1D47;&#8318;</a> In both Anvil<wbr />/<wbr />ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2024?</td>
-		</tr>
-		<tr>
-			<td class="right"><a href="#ftnt_ref05" id="ftnt05" class="noprintlink"><strong>5</strong></a></td>
-			<td>Inexplicably labeled in the Lua mnemonics as &lsquo;Nuclear Hard Death&rsquo;, the physics&rsquo; name for the screen flash and sound effect made when Juggernauts die. (Worst Prince cover ever.) That sound is Juggernaut Exploding (#198, ID 14650).</td>
-		</tr>
-		<tr>
-			<td class="right"><strong id="ftnt06">6</strong></td>
-			<td><a href="#ftnt_ref06a" class="noprintlink">&#8317;&#x1D43;&#8318;</a> <a href="#ftnt_ref06b" class="noprintlink">&#8317;&#x1D47;&#8318;</a> The default names for these (in both Anvil<wbr />/<wbr />ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.</td>
-		</tr>
-		<tr>
-			<td class="right"><a href="#ftnt_ref07" id="ftnt07" class="noprintlink"><strong>7</strong></a></td>
-			<td>Nice.</td>
-		</tr>
-		<tr>
-			<td class="right"><a id="ftnt08"><strong>8</strong></span></a></td>
-			<td><a href="#ftnt_ref08a" class="normal noprintlink">&#8317;&#x1D43;&#8318;</a> <a href="#ftnt_ref08b" class="normal noprintlink">&#8317;&#x1D47;&#8318;</a> <a href="#ftnt_ref08c" class="normal noprintlink">&#8317;&#x1D9c;&#8318;</a> <a href="#ftnt_ref08d" class="normal noprintlink">&#8317;&#x1d48;&#8318;</a> <a href="#ftnt_ref08e" class="normal noprintlink">&#8317;&#x1D49;&#8318;</a> <a href="#ftnt_ref08f" class="normal noprintlink">&#8317;&#x1DA0;&#8318;</a> <a href="#ftnt_ref08g noprintlink" class="normal">&#8317;&#x1D4D;&#8318;</a> <a href="#ftnt_ref08h" class="normal noprintlink">&#8317;&#x02B0;&#8318;</a> &lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.</td>
-		</tr>
-	</tbody>
-</table>
+			<h1 id="endnotes" class="centred">Endnotes</h1>
 
-<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+			<table class="endnotes fixheight">
+				<thead>
+					<tr>
+						<th class="right"><strong>#</strong></th>
+						<th><strong>Note</strong></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="right"><strong id="ftnt01">1</strong></td>
+						<td><a href="#ftnt_ref01a" class="noprintlink">&#8317;&#x1D43;&#8318;</a> <a href="#ftnt_ref01b" class="noprintlink">&#8317;&#x1D47;&#8318;</a> The Lua mnemonics have &lsquo;<strong>Got</strong> Powerup&rsquo;, but &lsquo;<strong>Get</strong> Item&rsquo;. Note the dichotomy here so you don&rsquo;t get got.</td>
+					</tr>
+					<tr>
+						<td class="right"><a href="#ftnt_ref02" id="ftnt02" class="noprintlink"><strong>2</strong></a></td>
+						<td>The Lua mnemonics (but not Anvil or ShapeFusion) misspell this as &lsquo;Grenade <strong>Expolding</strong>&rsquo;. I&rsquo;ve corrected it.</td>
+					</tr>
+					<tr>
+						<td class="right"><a href="#ftnt_ref03" id="ftnt03" class="noprintlink"><strong>3</strong></a></td>
+						<td>Misspelled in Anvil (and thus ShapeFusion) as &lsquo;Rocket <strong>Expoding</strong>&rsquo;. The Lua mnemonics get this one correct.</td>
+					</tr>
+					<tr>
+						<td class="right"><strong id="ftnt04">4</strong></td>
+						<td><a href="#ftnt_ref04a" class="noprintlink">&#8317;&#x1D43;&#8318;</a> <a href="#ftnt_ref04b" class="noprintlink">&#8317;&#x1D47;&#8318;</a> In both Anvil<wbr />/<wbr />ShapeFusion and the Lua mnemonics, the sounds purporting to be &lsquo;S&rsquo;pht Door Opening&rsquo; (#24) and &lsquo;S&rsquo;pht Door Closing&rsquo; (#25) are labeled correctly for the 8-bit versions but incorrectly for the 16-bit versions, which are inexplicably swapped. I&rsquo;ve changed them here to match the 16-bit versions, because who uses 8-bit sound in 2024?</td>
+					</tr>
+					<tr>
+						<td class="right"><a href="#ftnt_ref05" id="ftnt05" class="noprintlink"><strong>5</strong></a></td>
+						<td>Inexplicably labeled in the Lua mnemonics as &lsquo;Nuclear Hard Death&rsquo;, the physics&rsquo; name for the screen flash and sound effect made when Juggernauts die. (Worst Prince cover ever.) That sound is Juggernaut Exploding (#198, ID 14650).</td>
+					</tr>
+					<tr>
+						<td class="right"><strong id="ftnt06">6</strong></td>
+						<td><a href="#ftnt_ref06a" class="noprintlink">&#8317;&#x1D43;&#8318;</a> <a href="#ftnt_ref06b" class="noprintlink">&#8317;&#x1D47;&#8318;</a> The default names for these (in both Anvil<wbr />/<wbr />ShapeFusion and in the Lua mnemonics) are just wrong, both for their 8-bit and 16-bit versions. Again, I&rsquo;ve corrected them.</td>
+					</tr>
+					<tr>
+						<td class="right"><a href="#ftnt_ref07" id="ftnt07" class="noprintlink"><strong>7</strong></a></td>
+						<td>Nice.</td>
+					</tr>
+					<tr>
+						<td class="right"><a id="ftnt08"><strong>8</strong></span></a></td>
+						<td><a href="#ftnt_ref08a" class="normal noprintlink">&#8317;&#x1D43;&#8318;</a> <a href="#ftnt_ref08b" class="normal noprintlink">&#8317;&#x1D47;&#8318;</a> <a href="#ftnt_ref08c" class="normal noprintlink">&#8317;&#x1D9c;&#8318;</a> <a href="#ftnt_ref08d" class="normal noprintlink">&#8317;&#x1d48;&#8318;</a> <a href="#ftnt_ref08e" class="normal noprintlink">&#8317;&#x1D49;&#8318;</a> <a href="#ftnt_ref08f" class="normal noprintlink">&#8317;&#x1DA0;&#8318;</a> <a href="#ftnt_ref08g noprintlink" class="normal">&#8317;&#x1D4D;&#8318;</a> <a href="#ftnt_ref08h" class="normal noprintlink">&#8317;&#x02B0;&#8318;</a> &lsquo;Exiting&rsquo; and &lsquo;Entering&rsquo; are ordered inconsistently for different media types, both ID-wise and number-wise. Be careful.</td>
+					</tr>
+				</tbody>
+			</table>
 
-</body>
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+		</footer>
+	</body>
 </html>

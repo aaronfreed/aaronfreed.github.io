@@ -433,6 +433,12 @@
 	.nobottommarginprint, .nobottommarginprint :is(li, td, th) {
 		margin-bottom: 0px !important;
 	}
+	.paladinoath ol, .paladinoath ul, .paladinoath li, .paladinoath p {
+		margin-top: 0.25em; margin-bottom: 0.25em;
+	}
+	.paladinoath h1 {
+		margin-top: 0px; margin-bottom: 0.25em;
+	}
 }
 @media screen {
 	:root {

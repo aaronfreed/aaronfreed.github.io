@@ -1366,6 +1366,16 @@ h1, h2, h3, h4, h5, h1 code, h2 code, h3 code, h4 code, h5 code
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 	text-decoration-thickness: 2px;
 }
+h2 .subtitle {
+	font-size: 21px;
+	font-weight: var(--weight0);
+	font-style: italic;
+}
+h3 .subtitle {
+	font-size: 17px;
+	font-weight: var(--weight0);
+	font-style: italic;
+}
 .music h1 {
 	font-size: 30px;
 }

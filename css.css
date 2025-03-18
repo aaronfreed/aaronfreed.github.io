@@ -1153,6 +1153,9 @@ ol.comp2023-2024movements {
 ol.comp2023-2024appendices {
 	list-style: comp2023-2024appendices;
 }
+.texttop td, .texttop th, td.texttop, th.texttop, .texttop {
+	vertical-align: text-top;
+}
 
 /* reminder to self about CSS variables:
    two entries (ah! ah! ah!): vertical, horizontal
@@ -2513,8 +2516,14 @@ th.sidepad4,
 td.sidepad6,
 th.sidepad6,
 .sidepad6 :is(td, th) {
-	padding-left: 4px; 
-	padding-right: 4px;
+	padding-left: 6px; 
+	padding-right: 6px;
+}
+td.sidepad8,
+th.sidepad8,
+.sidepad8 :is(td, th) {
+	padding-left: 8px; 
+	padding-right: 8px;
 }
 td:first-child.sidepad2, td:first-child.sidepad4, td:first-child.sidepad6 {padding-left: 0px;}
 td:last-child.sidepad2, td:last-child.sidepad4, td:last-child.sidepad6 {padding-right: 0px;}
@@ -2814,11 +2823,17 @@ table.noborder {
 	padding-bottom: 0px;
 }
 .notopmargin,
-.notopmargin :is(li, td, th) {
+.notopmargin :is(li, td, th),
+.notopmarginstart,
+.notopmarginstart :is(li:first-of-type),
+.notablemargin li:first-of-type {
 	margin-top: 0px;
 }
 .nobottommargin,
-.nobottommargin :is(li, td, th) {
+.nobottommargin :is(li, td, th),
+.nobottommarginend,
+.nobottommarginend :is(li:last-of-type),
+.notablemargin li:last-of-type {
 	margin-bottom: 0px;
 }
 .norightmargin,
@@ -2830,7 +2845,9 @@ table.noborder {
 	margin-left: 0px;
 }
 .noverticalmargin,
-.noverticalmargin :is(li, td, th) {
+.noverticalmargin :is(li, td, th),
+ol.notablemargin,
+ul.notablemargin {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }

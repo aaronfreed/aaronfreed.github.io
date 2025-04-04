@@ -737,7 +737,7 @@
 	.bg-7C4C12 {background: #7C4C12 !important; color: #FFF !important;} /*m1*/
 	.bg-7C004D {background: #7C004D !important; color: #FFF !important;} /*m1*/
 	.bg-7B5F57 {background: #7B5F57 !important; color: #FFF !important;} /*m1*/
-	.bg-7A765A {background: #7A765A !important; color: #000 !important;} /*m1&2*/
+	.bg-7A765A {background: #7A765A !important; color: #FFF !important;} /*m1&2*/
 	.bg-7A2ED4 {background: #7A2ED4 !important; color: #FFF !important;} /*m1*/
 	.bg-7A0041 {background: #7A0041 !important; color: #FFF !important;} /*m2*/
 	.bg-797C92 {background: #797C92 !important; color: #000 !important;} /*m1*/
@@ -773,7 +773,7 @@
 	.bg-625908 {background: #625908 !important; color: #FFF !important;} /*m1*/
 	.bg-620007 {background: #620007 !important; color: #FFF !important;} /*m1*/
 	.bg-620000 {background: #620000 !important; color: #FFF !important;} /*m2*/
-	.bg-618961 {background: #618961 !important; color: #FFF !important;} /*m1&2*/
+	.bg-618961 {background: #618961 !important; color: #000 !important;} /*m1&2*/
 	.bg-616375 {background: #616375 !important; color: #FFF !important;} /*m1*/
 	.bg-603B0E {background: #603B0E !important; color: #FFF !important;} /*m1*/
 	.bg-5F433F {background: #5F433F !important; color: #FFF !important;} /*m1*/
@@ -1976,7 +1976,15 @@ table {
 	margin: auto;
 	hyphens: none;
 }
-table.hyphenate, td.hyphenate {
+table.hyphenate,
+td.hyphenate, 
+table.hyphenate > :is(
+	tbody > tr > td,
+	thead > tr > th,
+	tfoot > tr > th,
+	tr > td,
+	tr > th
+) {
 	hyphens: auto;
 }
 td,

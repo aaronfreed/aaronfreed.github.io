@@ -399,17 +399,23 @@
 	.print90 th, .print90 td, .print90 li, .print90 {
 		font-size: 90%;
 	}
+	.print85 th, .print85 td, .print85 li, .print85 {
+		font-size: 85%;
+	}
+	.print80 th, .print80 td, .print80 li, .print80 {
+		font-size: 80%;
+	}
 	.print14px {
 		font-size: 14px;
 	}
-	img.print80 {
+	img.print80, .print80 img {
 		transform: scale(0.8);
 	}
 	.notopmarginprint {
-		margin-top: 0px;
+		margin-top: 0px !important;
 	}
 	.nobottommarginprint {
-		margin-bottom: 0px;
+		margin-bottom: 0px !important;
 	}
 	del {
 		text-decoration: 1px var(--main-translucent) line-through;
@@ -3057,7 +3063,7 @@ li.weight8,
 	font-weight: var(--weight8);
 	text-decoration-thickness: 2.75px;
 }
-.fixheight {
+.fixheight, h1.fixheight, h2.fixheight, h3.fixheight, h4.fixheight {
 	line-height: 133.33333%;
 }
 .musictheory :is(p, td, th, .fixheight, li) {

@@ -561,12 +561,28 @@
 		background-color: var(--offset-level-2);
 	}
 
-	spoiler {
+	spoiler,
+	spoiler .toc-counter,
+	spoiler .accent,
+	spoiler .toc-counter-faint,
+	spoiler .accent-faint {
 		color: transparent;
 	}
 	spoiler:hover,
 	spoiler:focus {
 		color: inherit;
+	}
+	spoiler:hover .toc-counter {
+		color: var(--toc-counter);
+	}
+	spoiler:hover .toc-counter-faint {
+		color: var(--toc-counter-translucent);
+	}
+	spoiler:hover .accent {
+		color: var(--heading-color);
+	}
+	spoiler:hover .active-faint {
+		color: var(--heading-color-translucent);
 	}
 	spoiler.chronicles::before {
 		content: "Chronicles spoiler; hover/select to view";

@@ -1615,6 +1615,9 @@ ol {
 	counter-increment: item;
 	color: var(--toc-counter);
 }*/
+li::before {
+	font-variant-numeric: tabular-nums oldstyle-nums;
+}
 ol.toc :is(li, li a:link, li a:visited),
 ol.toc li::before {
 	font-weight: var(--weight7);
@@ -2770,13 +2773,21 @@ p.interpolation.songwriter, p.interpolation-songwriters {
 .selectedworks .compositions2023-2024 .movement strong {
 	font-weight: var(--weight3);
 }
-:is(.selectedworks, .metm) .length {
+.length {
 	color: var(--link-active);
 	font-weight: var(--weight1);
+	font-variant-numeric: tabular-nums oldstyle-nums;
 }
-:is(.selectedworks, .metm) .drscore {
+.drscore {
 	color: var(--link-hover);
 	font-weight: var(--weight1);
+	font-variant-numeric: tabular-nums oldstyle-nums;
+}
+.tabular-oldstyle {
+	font-variant-numeric: tabular-nums oldstyle-nums;
+}
+.fraction {
+	font-variant-numeric: tabular-nums oldstyle-nums diagonal-fractions;
 }
 
 :is(.selectedworks, .metm) .game {

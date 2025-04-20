@@ -2765,12 +2765,14 @@ p.interpolation.songwriter, p.interpolation-songwriters {
 	color: var(--heading-color);
 }
 .songcredit strong,
+.weight0 .songcredit strong,
+.compositions2023-2024 span.songcredit strong
 .contents .song strong,
 .selectedworks .compositions2023-2024 .song strong {
 	font-weight: var(--weight4);
 }
 .contents .movement strong,
-.selectedworks .compositions2023-2024 .movement strong {
+.selectedworks .compositions2023-2024 .movement > strong {
 	font-weight: var(--weight3);
 }
 .length {
@@ -2946,7 +2948,9 @@ p.weight1,
 td.weight1,
 th.weight1,
 li.weight1,
-.weight0 :is(a:link, a:visited, strong) {
+.weight0 a:link
+.weight0 a:visited, strong,
+.weight0 strong {
 	font-weight: var(--weight1);
 	text-decoration-thickness: 0.375px;
 }

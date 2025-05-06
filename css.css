@@ -2788,6 +2788,9 @@ p.interpolation.songwriter, p.interpolation-songwriters {
 .tabular-oldstyle {
 	font-variant-numeric: tabular-nums oldstyle-nums;
 }
+.tabular-oldstyle ol li::marker {
+	font-variant-numeric: tabular-nums oldstyle-nums;
+}
 .fraction {
 	font-variant-numeric: tabular-nums oldstyle-nums diagonal-fractions;
 }

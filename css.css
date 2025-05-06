@@ -1615,7 +1615,7 @@ ol {
 	counter-increment: item;
 	color: var(--toc-counter);
 }*/
-li::before {
+li::before, li::marker {
 	font-variant-numeric: tabular-nums oldstyle-nums;
 }
 ol.toc :is(li, li a:link, li a:visited),
@@ -2786,9 +2786,6 @@ p.interpolation.songwriter, p.interpolation-songwriters {
 	font-variant-numeric: tabular-nums oldstyle-nums;
 }
 .tabular-oldstyle {
-	font-variant-numeric: tabular-nums oldstyle-nums;
-}
-.tabular-oldstyle ol li::marker {
 	font-variant-numeric: tabular-nums oldstyle-nums;
 }
 .fraction {

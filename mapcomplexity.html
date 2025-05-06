@@ -40,10 +40,10 @@ function makeAllSortable(parent) {
 window.onload = function () {makeAllSortable();};
 	</script>
 </head>
-	<body>
+	<body class="light tabular-oldstyle">
 		<header>
 
-			<h1 class="petitecaps"><em>Marathon</em> Map Complexity: A Case Study</h1>
+			<h1 class="petitecaps centred"><em>Marathon</em> Map Complexity: A Case Study</h1>
             
 			<p class="fixheight">This is an appendix to my <a href="mapmaking.html">advanced mapmaking guide</a> for <em>Marathon</em> Aleph One; please refer there for further context &ndash; though if you&rsquo;re completely lost and wish to understand mapmaking for this engine, I advise starting with my <a href="mapmaking101.html">beginners&rsquo; guide</a>.</p>
 
@@ -53,7 +53,7 @@ window.onload = function () {makeAllSortable();};
 		<main>
 			<p class="fixheight">I mentioned in the advanced page&rsquo;s <a href="mapmaking.html#generalmapmaking">General Notes</a> section that <span id="ftnt_ref01" class="dotted" name="I highly advise just following the link for an explanation, but in brief, you&rsquo;re limited to 65,536 map indices. That sounds like a lot, but each vertex, each line, each polygon, each line shorter than 0.5 World Units, each platform, and each polygon within a 10 World Unit X/Y radius of each sound object uses a map index, and that&rsquo;s just off the top of my head &ndash; you run out of them quickly. (This is a slight oversimplification &ndash; lines and vertices that aren&rsquo;t attached to polygons don&rsquo;t actually count.) In practice, you generally start to run out somewhere between 1,500 and 2,000 polygons. The largest polygon count I&rsquo;ve seen in a playable map layout is 2,466.">map indices<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span> are the primary limit on map complexity and advised avoiding too many small polygons in a given area. Two more reasons to avoid too much complexity, though, are to avoid frustration and to improve map performance. This case study largely centers on the once-infamous <em>Eternal</em> level <strong>&lsquo;Where Giants Have Fallen&rsquo;</strong>. I apologize in advance for the length and number of images; the main lessons can be summarized as &lsquo;Don&rsquo;t overuse greeble or sound objects,&rsquo; but I think illustrating what that means would be helpful.</p>
 
-			<h1 id="contents">Contents</h1>
+			<h1 id="contents" class="centred">Contents</h1>
 			<ol class="toc">
 				<li><a href="#top">Intro</a></li>
 				<li><a href="#contents">Table of Contents</a> (you&rsquo;re looking at it)</li>
@@ -83,9 +83,9 @@ window.onload = function () {makeAllSortable();};
 				<li><a href="#endnotes">Endnotes</a></li>
 			</ol>
 
-			<h1 id="wghf" style="margin: 24px 0px 8px;">Three Iterations of &lsquo;Where Giants Have Fallen&rsquo;</h1>
-			<h2 id="wghf-mv" style="margin: 8px 0px;">Iteration 1 (<em>Eternal</em> Mark V)</h2>
-			<h4 class="weight3 notopmargin fixheight">Designer: Forrest Cameranesi</h4>
+			<h1 class="centred" id="wghf" style="margin: 24px 0px 8px;">Three Iterations of &lsquo;Where Giants Have Fallen&rsquo;</h1>
+			<h2 class="centred" id="wghf-mv" style="margin: 8px 0px;">Iteration 1 (<em>Eternal</em> Mark V)</h2>
+			<h4 class="centred weight3 notopmargin fixheight">Designer: Forrest Cameranesi</h4>
 
 			<p class="fixheight">This is a Weland view of <em>Eternal Mark V</em>&rsquo;s &lsquo;Where Giants Have Fallen&rsquo;:</p>
 
@@ -103,8 +103,8 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h2 id="wghf-10" style="margin-bottom: 8px;">Iteration 2 (<em>Eternal X</em> 1.0)</h2>
-			<h4 class="weight3" style="margin-top: 8px;" class="fixheight">Designer: Adam Ashwell</h4>
+			<h2 class="centred " id="wghf-10" style="margin-bottom: 8px;">Iteration 2 (<em>Eternal X</em> 1.0)</h2>
+			<h4 class="centred weight3" style="margin-top: 8px;" class="fixheight">Designer: Adam Ashwell</h4>
 
 			<p class="fixheight"><em>Eternal X</em> 1.0 overhauled the level, but the new version was even slower. It looked like this in Weland:</p>
 
@@ -120,8 +120,8 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h2 id="wghf-13" style="margin-bottom: 8px;">Iteration 3 (<em>Eternal X</em> 1.3)</h2>
-			<h4 class="weight3 fixheight" style="margin-top: 8px;">Designers: CryoS and Aaron Freed</h4>
+			<h2 class="centred" id="wghf-13" style="margin-bottom: 8px;">Iteration 3 (<em>Eternal X</em> 1.3)</h2>
+			<h4 class="weight3 fixheight centred" style="margin-top: 8px;">Designers: CryoS and Aaron Freed</h4>
 
 			<p class="fixheight">Our new version &ndash; and I&rsquo;ll withhold its polygon count for a moment &ndash; looks like this in Weland (minus some map writing that I&rsquo;ve removed to make the screenshot more legible):</p>
 
@@ -137,7 +137,7 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h3 id="crossbeams">Crossbeams: A Closer Look</h3>
+			<h3 class="centred" id="crossbeams">Crossbeams: A Closer Look</h3>
 
 			<p class="fixheight">But doesn&rsquo;t it look like you can see over the crossbeams? Yes. This <del>trick</del> <em>illusion</em> employs &lsquo;5D space&rsquo;, the engine&rsquo;s ability to overlap spaces in X/Y/Z coordinates. It can do this because it uses <em>four</em> dimensions to render spaces: <strong>X</strong>, <strong>Y</strong>, <strong>Z</strong>, and <strong>polygon</strong>. This is related to it being a portal engine: it determines what to render based on how lines connect polygons. I feel a bit like a magician revealing how to perform <del>a trick</del> <em>an illusion</em> here, but&hellip; if you could get to the area of the crossbeam with the blue pillars, you&rsquo;d see this:</p>
 
@@ -151,7 +151,7 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h3 id="escapewillmakemegod">Escape Will Make Me God</h3>
+			<h3 class="centred" id="escapewillmakemegod">Escape Will Make Me God</h3>
 
 			<p class="fixheight">But in a few cases, players can actually escape the constriction. One is if they fall to their deaths, which, who cares. In a few others, though, they can use the assault rifle (or a similar weapon) to boost themselves over onto the edges of the crossbeams, whence they&rsquo;ll get a clear view of two sextants at once:</p>
 
@@ -165,7 +165,7 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h3 id="pillars">The Magic Disappearing Pillar</h3>
+			<h3 class="centred" id="pillars">The Magic Disappearing Pillar</h3>
 
 			<p class="fixheight">There are other seams in the level design as well, but there&rsquo;s usually enough going on in the level to distract players from noticing. Another case relates to the blue pillars. Two are clearly visible from here:</p>
 
@@ -179,11 +179,11 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h3 id="limits">How We Stayed Within the Index Limits</h3>
+			<h3 class="centred" id="limits">How We Stayed Within the Index Limits</h3>
 
 			<p class="fixheight">This is the largest map I&rsquo;ve constructed (mostly) from scratch that never once exceeded the map index limit. There are a few reasons for this, but I think the two biggest are ambient sounds and greeble.</p>
 
-			<h4 id="greeble">i. Minimal Greeble Density</h4>
+			<h4 class="centred" id="greeble">i. Minimal Greeble Density</h4>
 
 			<p class="fixheight">Greeble, in this case, refers to map detailing. This may not be evident to anyone else but me, but the newest &lsquo;Where Giants Have Fallen&rsquo; was effectively my second attempt to make a pastiche of <em>Phoenix</em>&rsquo;s &lsquo;Stone Temple Pilates&rsquo;, in this case combining its style with those of <em>Apotheosis X</em> (hence all the hexagons, though I already felt obligated to use them due to Tacticus&rsquo; brilliant sky texture), <em>Eternal</em> itself, and of course my own compulsion to make everything as circular as possible. (Ironically, the one part I didn&rsquo;t create from scratch is the central structure, the most circular part of the whole level &ndash; that was CryoS&rsquo; work.)</p>
 
@@ -191,7 +191,7 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h4 id="soundobjects">ii. The Law of Conservation of Sound Objects</h4>
+			<h4 class="centred" id="soundobjects">ii. The Law of Conservation of Sound Objects</h4>
 
 			<p class="fixheight">The other way I saved a lot of headache was by using as few sound objects as possible; to avoid using too many, I even went to the trouble of making new ambient sounds that combined existing sounds. For instance, this sound may <em>say</em> <strong>&lsquo;Waterfall&rsquo;</strong>:</p>
 
@@ -200,15 +200,15 @@ window.onload = function () {makeAllSortable();};
 			<p class="fixheight">However, the following script is merged in with the level:</p>
 
 			<blockquote><pre>&lt;marathon&gt;
-		&lt;!-- puts Water &amp; Waterfall into the Waterfall slot --&gt;
-		&lt;sounds&gt;
-			&lt;ambient index=&quot;6&quot; sound=&quot;251&quot;/&gt;
-		&lt;/sounds&gt;
-		&lt;!-- sets Water to use the Waterfall sound slot --&gt;
-		&lt;liquid index=&quot;0&quot;&gt;
-			&lt;sound type=&quot;5&quot; which=&quot;6&quot;/&gt;
-		&lt;/liquid&gt;
-	&lt;/marathon&gt;</pre></blockquote>
+	&lt;!-- puts Water &amp; Waterfall into the Waterfall slot --&gt;
+	&lt;sounds&gt;
+		&lt;ambient index=&quot;6&quot; sound=&quot;251&quot;/&gt;
+	&lt;/sounds&gt;
+	&lt;!-- sets Water to use the Waterfall sound slot --&gt;
+	&lt;liquid index=&quot;0&quot;&gt;
+		&lt;sound type=&quot;5&quot; which=&quot;6&quot;/&gt;
+	&lt;/liquid&gt;
+&lt;/marathon&gt;</pre></blockquote>
 
 			<p class="fixheight">As the comments suggest, this reassigns the &lsquo;Waterfall&rsquo; ambient sound to use a separate ambient sound created by mix-pasting the &lsquo;Water&rsquo; and &lsquo;Waterfall&rsquo; sounds; and it plays that sound whenever the player&rsquo;s head is above water. This effectively cuts in half the number of sounds I need water to play, and cuts the number of sound objects on the level by eight.</p>
 
@@ -216,13 +216,13 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h1 id="igs" class="nobottommargin">&lsquo;Il grande silenzio&rsquo;</h1>
-			<h4 class="notopmargin nobottommargin fixheight">Collection: <em>Tempus Irae Redux</em></h4>
-			<h4 class="notopmargin fixheight weight3">Designer: Aaron Freed</h4>
+			<h1 class="centred" id="igs" class="nobottommargin">&lsquo;Il grande silenzio&rsquo;</h1>
+			<h4 class="centred notopmargin nobottommargin fixheight">Collection: <em>Tempus Irae Redux</em></h4>
+			<h4 class="centred notopmargin fixheight weight3">Designer: Aaron Freed</h4>
 
 			<div class="image"><a href="igs-0.png" target="_blank" class="noprintlink"><img alt="&lsquo;Il grande silenzio&rsquo; Draw Mode" src="igs-0.png" width="512" height="512" title="&lsquo;Il grande silenzio&rsquo; 1.3 Draw Mode"></a></div>
 
-			<p class="fixheight">My first pastiche of &lsquo;Stone Temple Pilates&rsquo;, seen above in its current state (1,751 polygons), went a lot differently. It&rsquo;s called &lsquo;Il grande silenzio&rsquo; (after a brilliant Corbucci spaghetti western with an equally brilliant Morricone soundtrack); it&rsquo;s from a project that, as of this revision (2023-03-31), still hasn&rsquo;t been released: <em>Tempus Irae Redux</em> (hopefully, we&rsquo;ll have it out in April 2024). There are obvious stylistic differences, starting with the mathematical regularity of &lsquo;Where Giants Have Fallen&rsquo;; we can also see how much more densely the sound, points, and polygons are clustered in many areas of &lsquo;Il grande silenzio&rsquo; (and, as a direct consequence, how much less densely they&rsquo;re clustered in others).</p>
+			<p class="fixheight">My first pastiche of &lsquo;Stone Temple Pilates&rsquo;, seen above in a near-final state (1,751 polygons), went a lot differently. Called &lsquo;Il grande silenzio&rsquo; (after a brilliant Corbucci spaghetti western with an equally brilliant Morricone soundtrack), it appears in <em>Tempus Irae Redux</em>, which came out in March 2025. There are obvious stylistic differences, starting with the mathematical regularity of &lsquo;Where Giants Have Fallen&rsquo;; we can also see how much more densely the sound, points, and polygons are clustered in many areas of &lsquo;Il grande silenzio&rsquo; (and, as a direct consequence, how much less densely they&rsquo;re clustered in others).</p>
 
 			<p class="fixheight">In fact, I first ran out of map indices at around 1,500 polygons and had to prune dozens of sound objects. This is partly because I set almost all my doors to Heavy S&rsquo;pht Doors (well, Heavy Italian Doors, as we might call them in <em>Tempus Irae Redux</em>), which each require sound objects to keep their ambient sounds from cutting off; and partly because I was pastiching two brilliant mapmakers: <strong>RyokoTK</strong> and my co-conspirator <strong>James Hastings-Trew</strong>, who both tend to employ a lot of greeble. Ryoko noted on Discord that I &lsquo;underestimated just how damn wasteful&rsquo; his polygon use is, but funnily enough, I deliberately set out to <em>exceed</em> the amount of greeble they use, reasoning, &lsquo;Modern computers can handle it.&rsquo; (This was my first mistake; it was before Aleph One had frame interpolation.) But thanks to the snow script and the comparative lack of negative space, the map chugs in a few places:</p>
 
@@ -230,7 +230,7 @@ window.onload = function () {makeAllSortable();};
 
 			<div class="image"><a href="igs-2.png" target="_blank" class="noprintlink"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #2" src="igs-2.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #2"></a></div>
 
-			<p class="fixheight">Further revisions will require me to fix that, which in turn will likely require removing and reconstructing a few parts of the map from scratch &ndash; a painful process.</p>
+			<p class="fixheight">I initially wanted to fix that, but I kept procrastinating because I couldn&rsquo;t face the idea of removing and reconstructing parts of the map from scratch. By the time the project came out, we decided computers had gotten fast enough that performance shouldn&rsquo;t be an issue. Moral of the story: Sometimes procrastination pays off, kids!</p>
 
 			<p class="fixheight">It might be more instructive to show screenshots of these maps consecutively:</p>
 
@@ -242,9 +242,9 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h1 id="monument" class="nobottommargin">&lsquo;Monument to All Your Sins&rsquo;</h1>
-			<h4 class="notopmargin nobottommargin fixheight">Collection: <em>Starlight</em></h4>
-			<h4 class="notopmargin weight3 fixheight">Designer: RyokoTK</h4>
+			<h1 class="centred" id="monument" class="nobottommargin">&lsquo;Monument to All Your Sins&rsquo;</h1>
+			<h4 class="centred notopmargin nobottommargin fixheight">Collection: <em>Starlight</em></h4>
+			<h4 class="centred notopmargin weight3 fixheight">Designer: RyokoTK</h4>
 
 			<p class="fixheight">That said, I&rsquo;m showing these screenshots not to show off the maps, but to illustrate how overusing greeble causes problems, and to provide a better yardstick for <em>what &lsquo;overusing greeble&rsquo; even means</em>. Greeble looks cool, but you have to know how much is too much. There&rsquo;s probably no way to truly learn this except through trial and error, but examining mapmakers&rsquo; styles more closely than I did can help. Ryoko doesn&rsquo;t use as much greeble as I thought he did when I made &lsquo;Il grande silenzio&rsquo;. I believe &lsquo;Monument to All Your Sins&rsquo; from <em>Starlight</em> still has the highest polygon count of any map he&rsquo;s released (1,843):</p>
 
@@ -260,15 +260,15 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h1 id="stp" class="nobottommargin">&lsquo;Stone Temple Pilates&rsquo;</h1>
-			<h4 class="notopmargin nobottommargin fixheight">Collection: <em>Marathon Phoenix</em></h4>
-			<h4 class="weight3 notopmargin fixheight">Designer: RyokoTK</h4>
+			<h1 class="centred" id="stp" class="nobottommargin">&lsquo;Stone Temple Pilates&rsquo;</h1>
+			<h4 class="centred notopmargin nobottommargin fixheight">Collection: <em>Marathon Phoenix</em></h4>
+			<h4 class="centred weight3 notopmargin fixheight">Designer: RyokoTK</h4>
 
 			<p class="fixheight">While I&rsquo;m at it, here&rsquo;s &lsquo;Stone Temple Pilates&rsquo;, which has 1,771 polygons. The Weland view looks like this:</p>
 
 			<div class="image"><a href="stp-0.png" target="_blank" class="noprintlink"><img alt="&lsquo;Stone Temple Pilates&rsquo; Draw Mode" src="stp-0.png" width="512" height="512" title="&lsquo;Stone Temple Pilates&rsquo; Draw Mode"></a></div>
 
-			<p class="fixheight">I think the map&rsquo;s overall polygon density is comparable to what I wanted &lsquo;Il grande silenzio&rsquo; to have, but there are some important differences. The clusters of small polygons aren&rsquo;t as densely packed together, and while there are a lot of sound objects, Ryoko has few of them near polygon clusters as dense as mine. (Scroll back to the &lsquo;Il grande silenzio&rsquo; Weland screenshot again and look at how densely clustered the polygons in some of my houses are &ndash; then bear in mind that many have two floors, so they&rsquo;re even more densely detailed than they look.)</p>
+			<p class="fixheight">I think the map&rsquo;s overall polygon density is comparable to what I wanted &lsquo;Il grande silenzio&rsquo; to have, but there are some important differences. The clusters of small polygons aren&rsquo;t as densely packed together, and while there are a lot of sound objects, Ryoko has few of them near polygon clusters as dense as mine. (Scroll back to the &lsquo;Il grande silenzio&rsquo; Weland screenshot and look at how densely clustered the polygons in some of my houses are &ndash; then bear in mind that many have two floors, so they&rsquo;re even more densely detailed than they look.)</p>
 
 			<p class="fixheight">&lsquo;Stone Temple Pilates&rsquo; looks like this in Vasara:</p>
 
@@ -276,11 +276,11 @@ window.onload = function () {makeAllSortable();};
 
 			<div class="image"><a href="stp-2.png" target="_blank" class="noprintlink"><img alt="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2" src="stp-2.png" width="600" height="300" title="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2"></a></div>
 
-			<p class="fixheight">This map slaps. Its influence on &lsquo;Il grande silenzio&rsquo; is probably especially obvious; its influence on &lsquo;Where Giants Have Fallen&rsquo; is probably less so, besides the isolated islands from which Enforcers snipe at players, but it&rsquo;s nonetheless there.</p>
+			<p class="fixheight">This map slaps. Its influence on &lsquo;Il grande silenzio&rsquo; is probably obvious; its influence on &lsquo;Where Giants Have Fallen&rsquo; may be less so, besides the isolated islands whence Enforcers snipe at players, but it&rsquo;s nonetheless there.</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h1 id="lessons">Lessons</h1>
+			<h1 class="centred" id="lessons">Lessons</h1>
 
 			<p class="fixheight">We can boil down the lessons of this case study to two major principles:</p>
 
@@ -299,9 +299,9 @@ window.onload = function () {makeAllSortable();};
 		</main>
 
 		<footer>
-			<h1 id="endnotes">Endnotes</h1>
+			<h1 class="centred" id="endnotes">Endnotes</h1>
 
-			<table class="endnotes fixheight weight1">
+			<table class="curved endnotes fixheight weight1">
 				<thead>
 					<tr class="weight3">
 						<th class="right"><strong>#</strong></th>

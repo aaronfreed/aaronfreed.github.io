@@ -2193,6 +2193,9 @@ thead tr.freshprince th {
 	font-weight: var(--weight2);
 	border: 1px solid var(--offset-level-4);
 }
+.istoria :is(th.response, td.response, td.light, td.level) {
+	font-weight: var(--weight0);
+}
 .istoria thead tr:nth-child(even) {
 	background-color: var(--offset-level-1);
 }

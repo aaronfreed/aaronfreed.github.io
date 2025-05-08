@@ -678,7 +678,7 @@ window.onload = function () {makeAllSortable();};
 
 			<h1 id="endnotes" class="centred">Endnotes</h1>
 
-			<table class="light endnotes fixheight">
+			<table class="light endnotes fixheight curved">
 				<thead>
 					<tr>
 						<th class="integer"><strong>#</strong></th>
@@ -687,15 +687,15 @@ window.onload = function () {makeAllSortable();};
 				</thead>
 				<tbody>
 					<tr>
-						<td class="integer"><a href="#ftnt_ref01" id="ftnt01" class="noprintlink"><strong>1</strong></a></td>
+						<td class="right"><a href="#ftnt_ref01" id="ftnt01" class="noprintlink"><strong>1</strong><span class="weight0">.</span></a></td>
 						<td>By my standards, at least!</td>
 					</tr>
 					<tr>
-						<td class="integer"><a href="#ftnt_ref02" id="ftnt02" class="noprintlink"><strong>2</strong></a></td>
+						<td class="right"><a href="#ftnt_ref02" id="ftnt02" class="noprintlink"><strong>2</strong><span class="weight0">.</span></a></td>
 						<td>Namely, when VAF loads the map, it makes a table containing all polygons marked as &ldquo;Must Be Explored&rdquo;, then in <code>Triggers.idle</code>, <code>Triggers.postidle</code>, and <code>Triggers.cleanup</code>, it scans that list, and if any polygons have been set as &ldquo;Normal&rdquo;, it resets them to &ldquo;Must Be Explored&rdquo;. If this doesn&rsquo;t make sense to you, don&rsquo;t worry; it&rsquo;s in a footnote because it&rsquo;s far beyond the scope of this guide.</td>
 					</tr>
 					<tr>
-						<td class="integer"><a href="#ftnt_ref03" id="ftnt03" class="noprintlink"><strong>3</strong></a></td>
+						<td class="right"><a href="#ftnt_ref03" id="ftnt03" class="noprintlink"><strong>3</strong><span class="weight0">.</span></a></td>
 						<td><ul style="margin-top: 0px; margin-bottom: 0px;">
 								<li style="margin-top: 0px;">Tie the platform&rsquo;s activation to some specific action on the map, such as a &ldquo;platform on trigger&rdquo; on the player&rsquo;s spawn polygon; then X+click to load the level from elsewhere when you go to texture.</li>
 								<li>Set the &ldquo;platform on trigger&rdquo; as something besides the starting polygon that players must walk on before they can see the platform; then teleport around the map to avoid walking on it.</li>
@@ -705,13 +705,13 @@ window.onload = function () {makeAllSortable();};
 						</td>
 					</tr>
 					<tr>
-						<td class="integer"><a href="#ftnt_ref04" id="ftnt04" class="noprintlink"><strong>4</strong></a></td>
-						<td><em>Trojan</em>, <em>EVIL</em>, <em>Tempus Irae Redux</em>, <em>RED</em>, <em>Eternal X</em>, <em>Rubicon X</em>, <em>Phoenix</em>, <em>Mararthon Yuge</em>, <em>Apotheosis X</em>, and <em>Istoria</em>.
+						<td class="right"><a href="#ftnt_ref04" id="ftnt04" class="noprintlink"><strong>4</strong><span class="weight0">.</span></a></td>
+						<td><em>Trojan</em>, <em>EVIL</em>, <em>Tempus Irae Redux</em>, <em>RED</em>, <em>Eternal X</em>, <em>Rubicon X</em>, <em>Phoenix</em>, <em>Mararthon Yuge</em>, <em>Apotheosis X</em>, &amp; <em>Istoria</em>.
 
 							<ul style="margin-bottom: 0px;">
-								<li>I recommend <em>Tempus Irae Redux</em>, <em>Eternal X</em>, <em>Phoenix</em>, and <em>Apotheosis X</em> to anyone reading this page, but I&rsquo;m hardly impartial: I remastered <em>Phoenix</em>&rsquo;s music; wrote <em>Apotheosis X</em>&rsquo;s Lua and remixed<span class="breaker">/</span>remastered many of its sounds; and did too many things to list for <em>Eternal X</em> and <em>Tempus Irae Redux</em>. Still, I listed all four of these scenarios (or their predecessors) on what was, at the time, my top five list long before I worked on them, so you&rsquo;d need a microscope to see that caveat. (My other issues with a few of these mods probably aren&rsquo;t of interest to general audiences.)</li>
+								<li>If you&rsquo;re here, you&rsquo;ll likely enjoy <em>Tempus Irae Redux</em>, <em>Eternal X</em>, <em>Phoenix</em>, and <em>Apotheosis X</em>. I&rsquo;m hardly impartial (I remastered <em>Phoenix</em>&rsquo;s music; wrote <em>Apotheosis X</em>&rsquo;s Lua and remixed<span class="breaker">/</span>remastered many of its sounds; and worked on nearly every aspect of <em>Eternal X</em> and <em>Tempus Irae Redux</em>), but I listed all four of these scenarios (or their predecessors) on what was, at the time, my top five list long before I worked on them, so you&rsquo;d probably need a microscope to see that caveat.</li>
 								<li><em>Rubicon X</em> and <em>Istoria</em> round out my top six with the caveats &lsquo;don&rsquo;t play <em>Rubicon X</em> above Normal unless you think <a href="https://www.halopedia.org/Mythic_(difficulty)" target="_blank" rel="noopener noreferrer">LASO</a> is fun&rsquo; and <span class="dotted" id="ftnt_ref05" title="To be fair, Istoria 1.1, which I haven&rsquo;t played yet, rebalances the Flame IADD fight &ndash; what I&rsquo;ve read leads me to suspect that I&rsquo;ll find the redesigned version somewhat less obnoxious. &para; &hellip;Also, I&rsquo;ve technically contributed to Rubicon X as well, though I&rsquo;m uncredited; on 2022-09-21, I released a plugin that was effectively integrated wholesale into the game in 2024-04-25. I&rsquo;m not especially fussed about being uncredited; the plugin can&rsquo;t have taken me more than thirty minutes to make, and it&rsquo;s easily the least significant of my contributions to what, at the time I wrote it, were my top five scenarios. &para; I can&rsquo;t say that I&rsquo;ve contributed to all my favorite scenarios, though, because my top five is now a top six. I haven&rsquo;t contributed in any way to Istoria and doubt I ever will; I can&rsquo;t imagine them ever needing my help.">&lsquo;the Flame IADD fight can heck right off&rsquo;.<a href="#ftnt05" class="noprintlink">&#8317;&#8309;&#8318;</a></span></li>
-								<li>If you&rsquo;re attuned to <em>Yuge</em>&rsquo;s irreverent humour, it&rsquo;ll reward you with fantastic gameplay and a remarkable demonstration of procedural level design.</li>
+								<li>If you&rsquo;re attuned to <em>Yuge</em>&rsquo;s irreverent humour (yes, it&rsquo;s <em>Mara<strong class="weight3 hue300">r</strong>thon Yuge</em>), it&rsquo;ll reward you with fantastic gameplay and a remarkable demonstration of procedural level design.</li>
 								<li><em>Trojan</em> is great for those who wish <em>Marathon 1</em> had been longer. Even if you don&rsquo;t play it, check out <a href="https://youtu.be/bKQnv8zg8rk" target="_blank">the OST</a>, which slaps. (Also, I remastered the music and sounds for the <a href="https://hhas01.itch.io/trojan-se">standalone edition</a>; unfortunately, its fork of Aleph One is years behind its current feature set).</li>
 								<li><em>RED</em>&rsquo;s execution can be sloppy, and it&rsquo;s probably too difficult, but it has some fantastic ideas and artwork, and it&rsquo;s remarkable for having been made almost entirely by a single person &ndash; a teenager at the time, to boot. It&rsquo;s little surprise that he later became a professional game and webcomic artist with credits including the <em>Slime Rancher</em> series, <em>Spiral Knights</em>, <em>Three Panel Soul</em>, and <em>Mac Hall</em>.</li>
 								<li style="margin-bottom: 0px;">Lastly, <em>EVIL</em>&rsquo;s strengths include professional-quality sprites; fantastic sounds, monsters, and weapons; and sometimes brilliant (if frustratingly inconsistent) level design.</li>
@@ -719,7 +719,7 @@ window.onload = function () {makeAllSortable();};
 						</td>
 					</tr>
 					<tr>
-						<td class="integer"><a href="#ftnt_ref05" id="ftnt05" class="noprintlink"><strong>5</strong></a></td>
+						<td class="right"><a href="#ftnt_ref05" id="ftnt05" class="noprintlink"><strong>5</strong><span class="weight0">.</span></a></td>
 						<td>To be fair, <em>Istoria</em> 1.1, which I haven&rsquo;t played yet, rebalances the Flame IADD fight &ndash; what I&rsquo;ve read leads me to suspect that I&rsquo;ll find the redesigned version somewhat less obnoxious.
 						<p class="midpara">&hellip;Also, I&rsquo;ve technically contributed to <em>Rubicon X</em> as well, though I&rsquo;m uncredited; on 2022-09-21, I released <a href="https://simplici7y.com/items/rubicon-x-bloom-monster-fix/" target="_blank">a plugin</a> that was effectively integrated wholesale into the game on 2024-04-25. I&rsquo;m not especially fussed about being uncredited; the plugin can&rsquo;t have taken me more than thirty minutes to make, and it&rsquo;s easily the least significant of my contributions to what, at the time I wrote it, were my top five scenarios.</p>
 						I can&rsquo;t say that I&rsquo;ve contributed to all my favorite scenarios, though, because my top five is now a top six. I haven&rsquo;t contributed in any way to <em>Istoria</em> and doubt I ever will; I can&rsquo;t imagine them ever needing my help.</td>

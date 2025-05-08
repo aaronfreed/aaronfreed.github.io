@@ -53,7 +53,7 @@ window.onload = function () {makeAllSortable();};
 				<li><a href="#top">Intro</a></li>
 				<li><a href="#toc">Table of Contents</a> (you&rsquo;re looking at it)</li>
 				<li><a href="#circles">Circles and Weland&rsquo;s Custom Grid</a></li>
-				<li><a href="#radii">Radii and Rotations for 1 WU Sides</a></li>
+				<li><a href="#radii">Radii and Rotations to Create 1 WU Sides</a></li>
 				<li><a href="thanks">Acknowledgements</a></li>
 			</ol>
 		</header>
@@ -124,14 +124,22 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<h1 id="radii" class="centred">Radii and Rotations to Create 1 WU</h1>
+			<h1 id="radii" class="centred">Radii and Rotations to Create 1 WU Sides</h1>
 
-			<p>These radii and rotations create regular polygons with sides of 1 WU in length. (Including a triangle may seem pointless, but this is a fast way to draw an equilateral triangle centered around a desired point.) <em>Italic numbers</em> are divisible by 8 (i.e, you can use Shift+Alt with 45&deg; angles); <strong>bold numbers</strong>, by 16 (22.5&deg; angles). 1 WU = 1,024 Internal Units; I included these for the circle plugin. It produces slightly different results, so they differ slightly.</p>
+			<p>These radii and rotations create regular polygons with sides of 1 WU in length; multiply by the desired number of world units per side to get the approximate radius to use. (I included the triangle because it&rsquo;s a fast way to center an equilateral triangle around a desired point.) Most of these don&rsquo;t require full 360&deg; rotations:</p>
+				<ul>
+					<li><span class="weight4 italic hue120">Bold, italic, green</span> (multiples of 16, or 22.5&deg;): you can use every possible Shift+Alt interval of each rotation.</li>
+					<li><span class="weight3 hue30">Bold, orange</span> (multiples of 8, or 45&deg;): you can use half the possible Shift+Alt intervals of each rotation.</li>
+					<li><span class="italic hue300">Italic, magenta</span> (multiples of 4, or 90&deg;): you can use all four directions of each rotation.</li>
+					<li><span class="hue210">Azure</span> (multiples of 2, or 180&deg;): you can only use two directions per rotation (e.g., up/down or left/right).</li>
+					<li>Odd numbers are the only ones that require rotating around the entire grid.</li>
+				</ul>
+			<p>1 WU = 1,024 Internal Units, but as I included the IU radii for the circle plugin (which produces slightly different results), they aren&rsquo;t always what you&rsquo;d get from multiplying the WU radii by 1024.</p>
 
 			<p class="light" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
 
-			<table>
-				<thead>
+			<table class="curved">
+				<thead class="accent weight3">
 					<tr>
 						<td class="right"># Sides</strong></td>
 						<td class="right">WU Radius</td>
@@ -152,7 +160,7 @@ window.onload = function () {makeAllSortable();};
 						<td class="right">871</td>
 						<td><span class="hidden">0</span>72.0&deg;</td>
 					</tr>
-					<tr>
+					<tr class="hue210">
 						<td class="right">6</td>
 						<td class="right">1.000</td>
 						<td class="right">1024</td>
@@ -164,121 +172,121 @@ window.onload = function () {makeAllSortable();};
 						<td class="right">1180</td>
 						<td><span class="hidden">0</span>51.42857142&hellip;&deg;</td>
 					</tr>
-					<tr style="font-style: italic;">
+					<tr class="weight3 hue30">
 						<td class="right">8</td>
 						<td class="right">1.306</td>
 						<td class="right">1338</td>
 						<td><span class="hidden">0</span>45.0&deg;</td>
 					</tr>
-					<tr>
+					<tr class="hue210">
 						<td class="right">10</td>
 						<td class="right">1.618</td>
 						<td class="right">1657</td>
 						<td><span class="hidden">0</span>36.0&deg;</td>
 					</tr>
-					<tr>
+					<tr class="italic hue300">
 						<td class="right">12</td>
 						<td class="right">1.934</td>
 						<td class="right">1978</td>
 						<td><span class="hidden">0</span>30.0&deg;</td>
 					</tr>
-					<tr>
+					<tr class="hue210">
 						<td class="right">14</td>
 						<td class="right">2.247</td>
 						<td class="right">2301</td>
 						<td><span class="hidden">0</span>25.71428571&hellip;&deg;</td>
 					</tr>
-					<tr class="bold">
+					<tr class="weight4 italic hue120">
 						<td class="right">16</td>
 						<td class="right">2.563</td>
 						<td class="right">2624</td>
 						<td><span class="hidden">0</span>22.5&deg;</td>
 					</tr>
-					<tr>
+					<tr class="hue210">
 						<td class="right">18</td>
 						<td class="right">2.880</td>
 						<td class="right">2948</td>
 						<td><span class="hidden">0</span>20.0&deg;</td>
 					</tr>
-					<tr>
+					<tr class="italic hue300">
 						<td class="right">20</td>
 						<td class="right">3.197</td>
 						<td class="right">3272</td>
 						<td><span class="hidden">0</span>18.0&deg;</td>
 					</tr>
-					<tr style="font-style: italic;">
+					<tr class="weight3 hue30">
 						<td class="right">24</td>
 						<td class="right">3.831</td>
 						<td class="right">3922</td>
 						<td><span class="hidden">0</span>15.0&deg;</td>
 					</tr>
-					<tr>
+					<tr class="italic hue300">
 						<td class="right">28</td>
 						<td class="right">4.467</td>
 						<td class="right">4574</td>
 						<td><span class="hidden">0</span>12.85714285&hellip;&deg;</td>
 					</tr>
-					<tr class="bold">
+					<tr class="weight4 italic hue120">
 						<td class="right">32</td>
 						<td class="right">5.102</td>
 						<td class="right">5224</td>
 						<td><span class="hidden">0</span>11.25&deg;</td>
 					</tr>
-					<tr>
+					<tr class="italic hue300">
 						<td class="right">36</td>
 						<td class="right">5.735</td>
 						<td class="right">5873</td>
 						<td><span class="hidden">0</span>10.0&deg;</td>
 					</tr>
-					<tr style="font-style: italic;">
+					<tr class="weight3 hue30">
 						<td class="right">40</td>
 						<td class="right">6.372</td>
 						<td class="right">6525</td>
 						<td><span class="hidden">00</span>9.0&deg;</td>
 					</tr>
-					<tr>
+					<tr class="hue210">
 						<td class="right">42</td>
 						<td class="right">6.690</td>
 						<td class="right">6851</td>
 						<td><span class="hidden">00</span>8.57142857&hellip;&deg;</td>
 					</tr>
-					<tr>
+					<tr class="italic hue300">
 						<td class="right">44</td>
 						<td class="right">7.008</td>
 						<td class="right">7176</td>
 						<td><span class="hidden">00</span>8.1818&hellip;&deg;</td>
 					</tr>
-					<tr class="bold">
+					<tr class="weight4 italic hue120">
 						<td class="right">48</td>
 						<td class="right">7.647</td>
 						<td class="right">7830</td>
 						<td><span class="hidden">00</span>7.5&deg;</td>
 					</tr>
-					<tr>
+					<tr class="italic hue300">
 						<td class="right">52</td>
 						<td class="right">8.283 (use 4.142)</td>
 						<td class="right">8482</td>
 						<td><span class="hidden">00</span>6.92307692&hellip;&deg;</td>
 					</tr>
-					<tr style="font-style: italic;">
+					<tr class="weight3 hue30">
 						<td class="right">56</td>
 						<td class="right">8.918 (use 4.459)</td>
 						<td class="right">9130</td>
 						<td><span class="hidden">00</span>6.42857142&hellip;&deg;</td>
 					</tr>
-					<tr>
+					<tr class="italic hue300">
 						<td class="right">60</td>
 						<td class="right">9.558 (use 4.779)</td>
 						<td class="right">9780</td>
 						<td><span class="hidden">00</span>6.0&deg;</td>
 					</tr>
-					<tr class="bold">
+					<tr class="weight4 italic hue120">
 						<td class="right">64</td>
 						<td class="right">10.190 (use 5.095)</td>
 						<td class="right">10435</td>
 						<td><span class="hidden">00</span>5.625&deg;</td>
 					</tr>
-					<tr style="font-style: italic;">
+					<tr class="weight3 hue30">
 						<td class="right">72</td>
 						<td class="right">11.468 (use 5.734)</td>
 						<td class="right">11740</td>

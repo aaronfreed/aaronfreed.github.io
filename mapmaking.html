@@ -427,9 +427,9 @@ window.onload = function () {makeAllSortable();};
 			<h2 id="directionality" class="centred">Directionality</h2>
 			<p style="margin-bottom: 16px;" class="fixheight">Angles in Weland can vary in two, not three, but <em>four</em> different ways. Its representation of objects&rsquo; angles corresponds to <span id="ftnt_ref02" class="dotted" title="The game actually represents the player&rsquo;s yaw internally as a 9-bit value, ranging from 0 to 511; an increase of 1 in its internal representation corresponds to an increase of 0.703125&deg;, i.e., 360/512. If you press F10, it shows the angle as a value ranging from &ndash;179.296875&deg; to 180&deg;, but this is because it subtracts 360&deg; from angles greater than 180&deg; &ndash; printing the value in the Lua console returns values from 0&deg; to 359.296875&deg;.">the game&rsquo;s representation of the player&rsquo;s yaw (non-vertical angle)<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span>.</p>
 
-			<table>
+			<table class="curved">
 				<thead class="fixheight">
-					<tr class="accent">
+					<tr class="accent weight4 centred">
 						<td class="right">Angle</td>
 						<td>Yaw</td>
 						<td>Objects</td>
@@ -441,35 +441,35 @@ window.onload = function () {makeAllSortable();};
 				<tbody class="fixheight">
 					<tr>
 						<td class="right"><strong>0&deg;</strong></td>
-						<td>Faces east</td>
-						<td>Faces east</td>
-						<td>From west</td>
-						<td>East to west</td>
-						<td>West to east</td>
+						<td class="left">Faces east</td>
+						<td class="left">Faces east</td>
+						<td class="left">From west</td>
+						<td class="centred">East to west</td>
+						<td class="centred">West to east</td>
 					</tr>
 					<tr>
 						<td class="right"><strong>90&deg;</strong></td>
-						<td>Faces south</td>
-						<td>Faces south</td>
-						<td>From north</td>
-						<td>South to north</td>
-						<td>South to north</td>
+						<td class="left">Faces south</td>
+						<td class="left">Faces south</td>
+						<td class="left">From north</td>
+						<td class="centred">South to north</td>
+						<td class="centred">South to north</td>
 					</tr>
 					<tr>
 						<td class="right"><strong>180&deg;</strong></td>
-						<td>Faces west</td>
-						<td>Faces west</td>
-						<td>From east</td>
-						<td>West to east</td>
-						<td>East to west</td>
+						<td class="left">Faces west</td>
+						<td class="left">Faces west</td>
+						<td class="left">From east</td>
+						<td class="centred">West to east</td>
+						<td class="centred">East to west</td>
 					</tr>
 					<tr>
 						<td class="right"><strong>270&deg;</strong></td>
-						<td>Faces north</td>
-						<td>Faces north</td>
-						<td>From south</td>
-						<td>North to south</td>
-						<td>North to south</td>
+						<td class="left">Faces north</td>
+						<td class="left">Faces north</td>
+						<td class="left">From south</td>
+						<td class="centred">North to south</td>
+						<td class="centred">North to south</td>
 					</tr>
 				</tbody>
 			</table>
@@ -671,7 +671,7 @@ window.onload = function () {makeAllSortable();};
 
 			<h1 id="endnotes" class="centred">Endnotes</h1>
 
-			<table class="light endnotes fixheight">
+			<table class="light endnotes fixheight curved">
 				<thead>
 					<tr>
 						<th class="integer"><strong>#</strong></th>
@@ -685,7 +685,7 @@ window.onload = function () {makeAllSortable();};
 					</tr>
 					<tr>
 						<td class="integer"><a href="#ftnt_ref02" id="ftnt02"><strong>2</strong></a></td>
-						<td>The game actually represents the player&rsquo;s yaw internally as a 9-bit value, ranging from 0 to 511; an increase of 1 in its internal representation corresponds to an increase of 0.703125&deg;, i.e., 360/512. If you press F10, it shows the angle as a value ranging from &ndash;179.296875&deg; to 180&deg;, but this is because it subtracts 360&deg; from angles greater than 180&deg; &ndash; printing the value in the Lua console returns values from 0&deg; to 359.296875&deg;.</td>
+						<td>The game actually represents the player&rsquo;s yaw internally as a 9-bit value, ranging from 0 to 511; an increase of 1 in its internal representation corresponds to an increase of 0.703125&deg;, i.e., 360/512. If you press F10, it shows the angle as a value ranging from &minus;179.296875&deg; to 180&deg;, but this is because it subtracts 360&deg; from angles greater than 180&deg; &ndash; printing the value in the Lua console returns values from 0&deg; to 359.296875&deg;.</td>
 					</tr>
 			<!--		<tr>
 						<td class="integer"><a href="#ftnt_ref02" id="ftnt02"><strong>2</strong></a></td>

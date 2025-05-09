@@ -2664,40 +2664,40 @@ td.translation-romanized, th.translation-romanized
 	padding-right: 0px;
 }
 
-.hue0, .hue0 td, .hue0 th {
+.hue0, .hue0 td, .hue0 th, td.hue0, th.hue0 {
 	color: var(--oklab0);
 }
-.hue30, .hue30 td, .hue30 th {
+.hue30, .hue30 td, .hue30 th, td.hue30, th.hue30 {
 	color: var(--oklab30);
 }
-.hue60, .hue60 td, .hue60 th {
+.hue60, .hue60 td, .hue60 th, td.hue60, th.hue60 {
 	color: var(--oklab60);
 }
-.hue90, .hue90 td, .hue90 th {
+.hue90, .hue90 td, .hue90 th, td.hue90, th.hue90 {
 	color: var(--oklab90);
 }
-.hue120, .hue120 td, .hue120 th {
+.hue120, .hue120 td, .hue120 th, td.hue120, th.hue120 {
 	color: var(--oklab120);
 }
-.hue150, .hue150 td, .hue150 th {
+.hue150, .hue150 td, .hue150 th, td.hue150, th.hue150 {
 	color: var(--oklab150);
 }
-.hue180, .hue180 td, .hue180 th {
+.hue180, .hue180 td, .hue180 th, td.hue180, th.hue180 {
 	color: var(--oklab180);
 }
-.hue210, .hue210 td, .hue210 th {
+.hue210, .hue210 td, .hue210 th, td.hue210, th.hue210 {
 	color: var(--oklab210);
 }
-.hue240, .hue240 td, .hue240 th {
+.hue240, .hue240 td, .hue240 th, td.hue240, th.hue240 {
 	color: var(--oklab240);
 }
-.hue270, .hue270 td, .hue270 th {
+.hue270, .hue270 td, .hue270 th, td.hue270, th.hue270 {
 	color: var(--oklab270);
 }
-.hue300, .hue300 td, .hue300 th {
+.hue300, .hue300 td, .hue300 th, td.hue300, th.hue300 {
 	color: var(--oklab300);
 }
-.hue330, .hue330 td, .hue330 th {
+.hue330, .hue330 td, .hue330 th, td.hue330, th.hue330 {
 	color: var(--oklab330);
 }
 

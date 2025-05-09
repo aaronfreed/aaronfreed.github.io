@@ -79,6 +79,8 @@ window.onload = function () {makeAllSortable();};
 
 			<p>It may seem tempting to prune sound objects first, as they are by far the largest user of map indices, but I&rsquo;d advise caution in doing so &ndash; sudden transitions from one &lsquo;sound region&rsquo; to another can be jarring. Aleph One 1.7&rsquo;s new OpenAL sound engine actually lessens this problem somewhat by preventing sounds from suddenly <em>cutting off</em> when the player crosses from one boundary to another; however, they still suddenly <em>start up</em>, so only half the problem has been solved.</p>
 
+			<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
 			<h1 class="centred" id="polygonpruning">Prune Polygons Where Possible</h1>
 
 			<p>More importantly, though, you almost certainly didn&rsquo;t fill polygons as efficiently as you could&rsquo;ve. I mentioned in my <a href="mapcomplexity.html#monument">case study on map complexity</a> that &lsquo;Monument to All Your Sins&rsquo; (a massive level from RyokoTK&rsquo;s brilliant net map pack <em><a href="https://simplici7y.com/items/starlight/" target="_blank">Starlight</a></em>) has 1,843 polygons. In addition, it has 3,277 vertices and 5,171 lines.</p>

@@ -3214,6 +3214,34 @@ li.weight8,
 .blue-list-numbers li::marker {
 	color: var(--heading-color);
 }
+
+.timesignature {
+	font-size: 12px;
+	line-height: .9;
+	text-align: center;
+}
+span.timesignature {
+	display: inline-block;
+	height: 0px;
+	vertical-align: text-top;
+	transform: translateY(-2px);
+}
+a:link .timesignature {
+	color: var(--link);
+}
+a:visited .timesignature {
+	color: var(--link-visited);
+}
+a:hover .timesignature {
+	color: var(--link-hover);
+}
+a:active .timesignature {
+	color: var(--link-active);
+}
+td.timesignature {
+	vertical-align: middle;
+}
+
 .musictheory .timesignature {
 	color: var(--heading-color);
 	font-size: 15px;

@@ -1371,6 +1371,9 @@ ol.toc > li > ol > li > ol :where(.integer, .decimal) {
 .italic {
 	font-style: italic;
 }
+.roman {
+	font-style: normal;
+}
 
 .initialsize {
 	font-size: initial;
@@ -1443,6 +1446,71 @@ h3 .subtitle {
 	.marginbottom4)
 {
 	margin-bottom: 4px;
+}
+
+.marginleft8 {
+	margin-left: 8px;
+}
+.marginright8 {
+	margin-right: 8px;
+}
+.marginbottom8 {
+	margin-bottom: 8px;
+}
+.margintop8 {
+	margin-top: 8px;
+}
+
+.marginleft12 {
+	margin-left: 12px;
+}
+.marginright12 {
+	margin-right: 12px;
+}
+.marginbottom12 {
+	margin-bottom: 12px;
+}
+.margintop12 {
+	margin-top: 12px;
+}
+
+.marginleft15 {
+	margin-left: 15px;
+}
+.marginright15 {
+	margin-right: 15px;
+}
+.marginbottom15 {
+	margin-bottom: 15px;
+}
+.margintop15 {
+	margin-top: 15px;
+}
+
+.marginleft20 {
+	margin-left: 20px;
+}
+.marginright20 {
+	margin-right: 20px;
+}
+.marginbottom20 {
+	margin-bottom: 20px;
+}
+.margintop20 {
+	margin-top: 20px;
+}
+
+.marginleft30 {
+	margin-left: 30px;
+}
+.marginright30 {
+	margin-right: 30px;
+}
+.marginbottom30 {
+	margin-bottom: 30px;
+}
+.margintop30 {
+	margin-top: 30px;
 }
 
 

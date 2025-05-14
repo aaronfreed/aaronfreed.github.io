@@ -3173,7 +3173,37 @@ li.weight8,
 .weight0 strong strong strong strong strong strong strong strong {
 	font-weight: var(--weight8);
 	text-decoration-thickness: 2.75px;
+
 }
+.weight0thickness {
+	text-decoration-thickness: 0.25px;
+}
+.weight1thickness {
+	text-decoration-thickness: 0.375px;
+}
+.weight2thickness {
+	text-decoration-thickness: 0.5px;
+}
+.weight3thickness {
+	text-decoration-thickness: 1.375px;
+}
+.weight4thickness {
+	text-decoration-thickness: 1.5px;
+}
+.weight5thickness {
+	text-decoration-thickness: 2px;
+}
+.weight6thickness {
+	text-decoration-thickness: 2.25px;
+}
+.weight7thickness {
+	text-decoration-thickness: 2.5px;
+}
+.weight8thickness {
+	text-decoration-thickness: 2.75px;
+}
+
+
 .fixheight, h1.fixheight, h2.fixheight, h3.fixheight, h4.fixheight {
 	line-height: 133.33333%;
 }

@@ -153,6 +153,18 @@
 			--oklab270: #bf9dff;
 			--oklab300: #ff9ef9;
 			--oklab330: #ff93b7; 
+			--oklab0-translucent: #ff9485c6;
+			--oklab30-translucent: #ffb87fc6;
+			--oklab60-translucent: #ffdc80c6;
+			--oklab90-translucent: #e6ff88c6;
+			--oklab120-translucent: #96ffabc6;
+			--oklab150-translucent: #88ffe7c6;
+			--oklab180-translucent: #84eeffc6;
+			--oklab210-translucent: #85ceffc6;
+			--oklab240-translucent: #84a3ffc6;
+			--oklab270-translucent: #bf9dffc6;
+			--oklab300-translucent: #ff9ef9c6;
+			--oklab330-translucent: #ff93b7c6; 
 		}
 		thead .darkkey {
 			background-color: var(--offset-level-1);
@@ -1292,6 +1304,52 @@ a:hover {
 }
 a:active {
 	color: var(--link-active);
+}
+
+del {
+	text-decoration-color: var(--main-translucent);
+}
+.accent del, del.accent, s.accent, .accent s {
+	text-decoration-color: var(--heading-color-translucent);
+}
+.toc-counter del, del.toc-counter, s.toc-counter, .toc-counter s {
+	text-decoration-color: var(--toc-counter-translucent);
+}
+.hue0 del, del.hue0, s.hue0, .hue0 s {
+	text-decoration-color: var(--oklab0-translucent);
+}
+.hue30 del, del.hue30, s.hue30, .hue30 s {
+	text-decoration-color: var(--oklab30-translucent);
+}
+.hue60 del, del.hue60, s.hue60, .hue60 s {
+	text-decoration-color: var(--oklab60-translucent);
+}
+.hue90 del, del.hue90, s.hue90, .hue90 s {
+	text-decoration-color: var(--oklab90-translucent);
+}
+.hue120 del, del.hue120, s.hue120, .hue120 s {
+	text-decoration-color: var(--oklab120-translucent);
+}
+.hue150 del, del.hue150, s.hue150, .hue150 s {
+	text-decoration-color: var(--oklab150-translucent);
+}
+.hue180 del, del.hue180, s.hue180, .hue180 s {
+	text-decoration-color: var(--oklab180-translucent);
+}
+.hue210 del, del.hue210, s.hue210, .hue210 s {
+	text-decoration-color: var(--oklab210-translucent);
+}
+.hue240 del, del.hue240, s.hue240, .hue240 s {
+	text-decoration-color: var(--oklab240-translucent);
+}
+.hue270 del, del.hue270, s.hue270, .hue270 s {
+	text-decoration-color: var(--oklab270-translucent);
+}
+.hue300 del, del.hue300, s.hue300, .hue300 s {
+	text-decoration-color: var(--oklab300-translucent);
+}
+.hue330 del, del.hue330, s.hue330, .hue330 s {
+	text-decoration-color: var(--oklab330-translucent);
 }
 a:link, a:link u, a:link del {
 	text-decoration-color: var(--link-translucent);
@@ -2591,9 +2649,6 @@ table.curved thead > tr:first-child > th {
 .musicalmodes .accent del.thick {
 	text-decoration-thickness: 3px;
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
-}
-del {
-	text-decoration-color: var(--main-translucent);
 }
 .musicalmodes th.highlight {
 	background-color: var(--offset-level-2);

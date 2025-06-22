@@ -2654,6 +2654,17 @@ table.curved thead > tr:first-child > th {
 	background-color: var(--offset-level-2);
 }
 
+table.nobg, 
+table.nobg > tr,
+table.nobg > tr > :is(th, td),
+table.nobg > :is(thead, tbody, tfoot),
+table.nobg > :is(thead, tbody, tfoot) > tr,
+table.nobg > :is(thead, tbody, tfoot) > tr > :is(th, td) {
+	border-collapse: unset;
+	border: unset;
+	background: none !important;
+}
+
 td.nosidepad,
 th.nosidepad,
 .nosidepad :is(td, th) {

@@ -3043,16 +3043,32 @@ ul.notablemargin {
 	color: var(--link-hover);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
+.orange-translucent {
+	color: var(--link-hover-translucent);
+	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
+}
 .green {
 	color: var(--link-active);
+	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
+}
+.green-translucent {
+	color: var(--link-active-translucent);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
 .azure {
 	color: var(--link);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
+.azure-translucent {
+	color: var(--link-translucent);
+	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
+}
 .magenta {
 	color: var(--link-visited);
+	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
+}
+.magenta-translucent {
+	color: var(--link-visited-translucent);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
 

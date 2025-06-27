@@ -1,0 +1,86 @@
+[
+    {
+        "names": ["Chromatic Dorian", "Kanakangi"],
+        "notes": ["C", "D♭", "E𝄫", "F", "G", "A♭", "B𝄫"]
+    },
+    {
+        "names": ["Altered diminished", "Super-Locrian 𝄫2"],
+        "notes": ["C", "D♭", "E♭", "F♭", "G♭", "A♭", "B𝄫"]
+    },
+    {
+        "names": ["Altered dominant", "Super-Locrian"],
+        "notes": ["C", "D♭", "E♭", "F♭", "G♭", "A♭", "B♭"]
+    },
+    {
+        "names": ["Locrian ♮6"],
+        "notes": ["C", "D♭", "E♭", "F", "G♭", "A", "B♭"]
+    },
+    {
+        "names": ["Dorian ♭2", "Phrygian ♯6"],
+        "notes": ["C", "D♭", "E♭", "F", "G", "A", "B♭"]
+    },
+    {
+        "names": ["Phrygian dominant"],
+        "notes": ["C", "D♭", "E", "F", "G", "A♭", "B♭"]
+    },
+    {
+        "names": ["Flamenco mode", "Major Phrygian"],
+        "notes": ["C", "D♭", "E", "F", "G", "A♭", "B"]
+	},
+    {
+        "names": ["Aeolian ♭5", "Locrian ♯2"],
+        "notes": ["C", "D", "E♭", "F", "G♭", "A♭", "B♭"]
+    },
+    {
+        "names": ["Harmonic minor ♯5"],
+        "notes": ["C", "D", "E♭", "F", "G♭", "A♭", "B"]
+    },
+    {
+        "names": ["Harmonic minor", "Aeolian ♯7"],
+        "notes": ["C", "D", "E♭", "F", "G", "A♭", "B"]
+    },
+    {
+        "names": ["Ascending melodic minor"],
+        "notes": ["C", "D", "E♭", "F", "G", "A", "B"]
+    },
+    {
+        "names": ["Hungarian minor"],
+        "notes": ["C", "D", "E♭", "F♯", "G", "A♭", "B"]
+    },
+    {
+        "names": ["Ukrainian Dorian"],
+        "notes": ["C", "D", "E♭", "F♯", "G", "A", "B♭"]
+    },
+    {
+        "names": ["Aeolian dominant", "Mixolydian ♭6"],
+        "notes": ["C", "D", "E", "F", "G", "A♭", "B♭"]
+    },
+    {
+        "names": ["Augmented major", "Ionian ♯5"],
+        "notes": ["C", "D", "E", "F", "G♯", "A", "B"]
+    },
+    {
+        "names": ["Lydian augmented"],
+        "notes": ["C", "D", "E", "F♯", "G♯", "A", "B"]
+    },
+    {
+        "names": ["Lydian dominant", "Mixolydian ♯4"],
+        "notes": ["C", "D", "E", "F♯", "G", "A", "B♭"]
+    },
+    {
+        "names": ["Chromatic Dorian inverse"],
+        "notes": ["C", "D♯", "E", "F", "G", "A♯", "B"]
+    },
+    {
+        "names": ["Aeolian harmonic", "Lydian ♯2"],
+        "notes": ["C", "D♯", "E", "F♯", "G", "A", "B"]
+    },
+    {
+        "names": ["Chromatic Hypophrygian"],
+        "notes": ["C", "D♯", "E♯", "F♯", "G", "A♯", "B"]
+    },
+    {
+        "names": ["Superlydian augmented"],
+        "notes": ["C", "D♯", "E♯", "F♯", "G♯", "A♯", "B"]
+	}
+]

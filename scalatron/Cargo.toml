@@ -1,0 +1,11 @@
+[package]
+name = "scalatron"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.98"
+serde = {version = "1.0.219", features=["derive"]}
+serde_json = "1.0.140"
+serde_with = "3.13.0"
+thiserror = "2.0.12"

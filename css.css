@@ -2695,14 +2695,62 @@ th.sidepad8,
 	padding-left: 8px; 
 	padding-right: 8px;
 }
-td:first-child.sidepad2, td:first-child.sidepad4, td:first-child.sidepad6 {padding-left: 0px;}
-td:last-child.sidepad2, td:last-child.sidepad4, td:last-child.sidepad6 {padding-right: 0px;}
+td.sidepad10,
+th.sidepad10,
+.sidepad10 :is(td, th) {
+	padding-left: 10px; 
+	padding-right: 10px;
+}
+td.sidepad15,
+th.sidepad15,
+.sidepad15 :is(td, th) {
+	padding-left: 15px; 
+	padding-right: 15px;
+}
+td.sidepad12,
+th.sidepad12,
+.sidepad12 :is(td, th) {
+	padding-left: 12px; 
+	padding-right: 12px;
+}
+td:first-child.sidepad2, td:first-child.sidepad4, td:first-child.sidepad6, td:first-child.sidepad8, td:first-child.sidepad10, td:first-child.sidepad12, td:first-child.sidepad15 {padding-left: 0px;}
+td:last-child.sidepad2, td:last-child.sidepad4, td:last-child.sidepad6, td:last-child.sidepad8, td:last-child.sidepad10, td:last-child.sidepad12, td:last-child.sidepad15 {padding-right: 0px;}
+td.rightpad10,
+th.rightpad10,
+:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad8, table.sidepad10, table.sidepad12, table.sidepad15) :is(td.rightpad10, th.rightpad10)
+ {
+	padding-right: 15px;
+}
+td.leftpad15,
+th.leftpad15,
+:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad8, table.sidepad10, table.sidepad12, table.sidepad15) :is(td.leftpad15, th.leftpad15) {
+	padding-left: 15px;
+}
+td.rightpad10,
+th.rightpad10,
+:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad8, table.sidepad10, table.sidepad12, table.sidepad15) :is(td.rightpad10, th.rightpad10)
+ {
+	padding-right: 10px;
+}
+td.leftpad10,
+th.leftpad10,
+:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad8, table.sidepad10, table.sidepad12, table.sidepad15) :is(td.leftpad10, th.leftpad10) {
+	padding-left: 10px;
+}
+td.leftpad12,
+th.leftpad12,
+:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad8, table.sidepad10, table.sidepad12, table.sidepad15) :is(td.leftpad10, th.leftpad10) {
+	padding-left: 12px;
+}
 td.rightpad8,
-th.rightpad8 {
+th.rightpad8,
+:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad10, table.sidepad15) :is(td.rightpad8, th.rightpad8)
+ {
 	padding-right: 8px;
 }
 td.leftpad8,
-th.leftpad8 {
+th.leftpad8,
+:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad10, table.sidepad15) :is(td.leftpad8, th.leftpad8) {
 	padding-left: 8px;
 }
 td.rightpad6,

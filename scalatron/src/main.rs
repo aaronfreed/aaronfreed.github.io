@@ -72,7 +72,7 @@ fn main() {
                     _ => 5,
                 },
                 color = match note.accidental {
-                    -3 | -2 => "azure-transparent ",
+                    -3 | -2 => "azure-translucent ",
                     -1 => "azure ",
                     0 => "",
                     1 | 2 => "orange ",

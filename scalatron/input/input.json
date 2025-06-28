@@ -12,11 +12,11 @@
         "notes": ["C", "D♭", "E♭", "F♭", "G♭", "A♭", "B♭"]
     },
     {
-        "names": ["Locrian ♮6"],
+        "names": ["Locrian ♮6", "Maqam Tarznauyn"],
         "notes": ["C", "D♭", "E♭", "F", "G♭", "A", "B♭"]
     },
     {
-        "names": ["Dorian ♭2", "Phrygian ♯6"],
+        "names": ["Jazz minor inverse"],
         "notes": ["C", "D♭", "E♭", "F", "G", "A", "B♭"]
     },
     {
@@ -28,15 +28,15 @@
         "notes": ["C", "D♭", "E", "F", "G", "A♭", "B"]
 	},
     {
-        "names": ["Aeolian ♭5", "Locrian ♯2"],
+        "names": ["Half-diminished"],
         "notes": ["C", "D", "E♭", "F", "G♭", "A♭", "B♭"]
     },
     {
-        "names": ["Harmonic minor ♯5"],
+        "names": ["Harmonic minor ♭5"],
         "notes": ["C", "D", "E♭", "F", "G♭", "A♭", "B"]
     },
     {
-        "names": ["Harmonic minor", "Aeolian ♯7"],
+        "names": ["Harmonic minor"],
         "notes": ["C", "D", "E♭", "F", "G", "A♭", "B"]
     },
     {
@@ -82,5 +82,148 @@
     {
         "names": ["Superlydian augmented"],
         "notes": ["C", "D♯", "E♯", "F♯", "G♯", "A♯", "B"]
-	}
+	},
+    {
+        "names": ["Harmonic minor"],
+        "notes": ["C", "D", "E♭", "F", "G", "A♭", "B"]
+    },
+    {
+        "names": ["Locrian ♮6", "Maqam Tarznauyn"],
+        "notes": ["C", "D♭", "E♭", "F", "G♭", "A", "B♭"]
+    },
+    {
+        "names": ["Augmented major", "Ionian ♯5"],
+        "notes": ["C", "D", "E", "F", "G♯", "A", "B"]
+    },
+    {
+        "names": ["Ukrainian Dorian"],
+        "notes": ["C", "D", "E♭", "F♯", "G", "A", "B♭"]
+    },
+    {
+        "names": ["Phrygian dominant"],
+        "notes": ["C", "D♭", "E", "F", "G", "A♭", "B♭"]
+    },
+    {
+        "names": ["Aeolian harmonic", "Lydian ♯2"],
+        "notes": ["C", "D♯", "E", "F♯", "G", "A", "B"]
+    },
+    {
+        "names": ["Altered diminished", "Super-Locrian 𝄫2"],
+        "notes": ["C", "D♭", "E♭", "F♭", "G♭", "A♭", "B𝄫"]
+    },
+
+    {
+        "names": ["Ascending melodic minor"],
+        "notes": ["C", "D", "E♭", "F", "G", "A", "B"]
+    },
+    {
+        "names": ["Jazz minor inverse"],
+        "notes": ["C", "D♭", "E♭", "F", "G", "A", "B♭"]
+    },
+    {
+        "names": ["Lydian augmented"],
+        "notes": ["C", "D", "E", "F♯", "G♯", "A", "B"]
+    },
+    {
+        "names": ["Lydian dominant", "Mixolydian ♯4"],
+        "notes": ["C", "D", "E", "F♯", "G", "A", "B♭"]
+    },
+    {
+        "names": ["Aeolian dominant", "Mixolydian ♭6"],
+        "notes": ["C", "D", "E", "F", "G", "A♭", "B♭"]
+    },
+    {
+        "names": ["Half-diminished"],
+        "notes": ["C", "D", "E♭", "F", "G♭", "A♭", "B♭"]
+    },
+    {
+        "names": ["Altered dominant", "Super-Locrian"],
+        "notes": ["C", "D♭", "E♭", "F♭", "G♭", "A♭", "B♭"]
+    },
+
+    {
+        "names": ["Ionian"],
+        "notes": ["C", "D", "E", "F", "G", "A", "B"]
+    },
+    {
+        "names": ["Dorian"],
+        "notes": ["C", "D", "E♭", "F", "G", "A", "B♭"]
+    },
+    {
+        "names": ["Phrygian"],
+        "notes": ["C", "D♭", "E♭", "F", "G", "A♭", "B♭"]
+    },
+    {
+        "names": ["Mixolydian"],
+        "notes": ["C", "D", "E", "F", "G", "A", "B♭"]
+    },
+    {
+        "names": ["Lydian"],
+        "notes": ["C", "D", "E", "F♯", "G", "A", "B"]
+    },
+    {
+        "names": ["Aeolian"],
+        "notes": ["C", "D", "E♭", "F", "G", "A♭", "B♭"]
+    },
+    {
+        "names": ["Locrian"],
+        "notes": ["C", "D♭", "E♭", "F", "G♭", "A♭", "B♭"]
+    },
+
+    {
+        "names": ["Chromatic Mixolydian"],
+        "notes": ["C", "D♭", "E𝄫", "F", "G♭", "A𝄫", "B♭"]
+    },
+    {
+        "names": ["Chromatic Lydian"],
+        "notes": ["C", "D♭", "E", "F", "G♭", "A", "B"]
+    },
+    {
+        "names": ["Chromatic Phrygian"],
+        "notes": ["C", "D♯", "E", "F", "G♯", "A♯", "B"]
+    },
+    {
+        "names": ["Chromatic Dorian", "Kanakangi"],
+        "notes": ["C", "D♭", "E𝄫", "F", "G", "A♭", "B𝄫"]
+    },
+    {
+        "names": ["Chromatic Hypophrygian"],
+        "notes": ["C", "D♯", "E♯", "F♯", "G", "A♯", "B"]
+    },
+    {
+        "names": ["Chromatic Hypolydian"],
+        "notes": ["C", "D♭", "E", "F♯", "G", "A♭", "B"]
+    },
+    {
+        "names": ["Chromatic Hypodorian"],
+        "notes": ["C", "D", "E♭", "F♭", "G", "A♭", "B𝄫"]
+    },
+    {
+        "names": ["Chromatic Mixolydian inverse"],
+        "notes": ["C", "D", "E♯", "F♯", "G", "A♯", "B"]
+    },
+    {
+        "names": ["Chromatic Lydian inverse"],
+        "notes": ["C", "D♭", "E♭", "F♯", "G", "A♭", "B"]
+    },
+    {
+        "names": ["Chromatic Dorian inverse"],
+        "notes": ["C", "D♯", "E", "F", "G", "A♯", "B"]
+    },
+    {
+        "names": ["Chromatic Phrygian inverse"],
+        "notes": ["C", "D♭", "E𝄫", "F♭", "G", "A♭", "B𝄫"]
+    },
+    {
+        "names": ["Chromatic Hypolydian inverse"],
+        "notes": ["C", "D♭", "E", "F", "G♭", "A♭", "B"]
+    },
+    {
+        "names": ["Chromatic Hypophrygian inverse"],
+        "notes": ["C", "D♭", "E𝄫", "F", "G♭", "A𝄫", "B𝄫"]
+    },
+    {
+        "names": ["Chromatic Hypodorian inverse"],
+        "notes": ["C", "D♯", "E", "F", "G♯", "A", "B♭"]
+    }
 ]

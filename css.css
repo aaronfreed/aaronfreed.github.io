@@ -2178,6 +2178,18 @@ tbody:nth-child(even) tr:nth-child(odd) {
 tbody:nth-child(even) tr:nth-child(odd) .highlight {
 	background-color: var(--offset-level-1);
 }
+.offset1 {
+	background-color: var(--offset-level-1);
+}
+.offset2 {
+	background-color: var(--offset-level-2);
+}
+.offset3 {
+	background-color: var(--offset-level-3);
+}
+.offset4 {
+	background-color: var(--offset-level-4);
+}
 tbody:nth-child(even) tr:nth-child(even) .hidden {
 	/*color: var(--offset-level-1);*/ visibility: hidden !important;
 }
@@ -2963,7 +2975,8 @@ p.interpolation.songwriter, p.interpolation-songwriters {
 .weight0 .songcredit strong,
 .compositions2023-2024 span.songcredit strong
 .contents .song strong,
-.selectedworks .compositions2023-2024 .song strong {
+.selectedworks .compositions2023-2024 .song strong,
+.songcredit :is(a:link, a:visited, a:hover, a:active) {
 	font-weight: var(--weight4);
 }
 .contents .movement strong,
@@ -3220,7 +3233,8 @@ li.weight4,
 .weight3 :is(a:link, a:visited, strong),
 .weight2 :is(strong strong, a:link strong, a:visited strong, a.bold:link, a.bold:visited, strong a:link, strong a:visited),
 .weight1 strong strong strong,
-.weight0 strong strong strong strong {
+.weight0 strong strong strong strong,
+.songcredit :is(a:link, a:visited, a:hover, a:active) {
 	font-weight: var(--weight4);
 	text-decoration-thickness: 1.5px;
 }

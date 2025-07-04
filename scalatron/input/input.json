@@ -183,16 +183,16 @@
         "notes": ["C", "D♯", "E", "F", "G♯", "A♯", "B"]
     },
     {
-        "names": ["Chromatic Dorian", "Kanakangi"],
+        "names": ["Chromatic Dorian"],
         "notes": ["C", "D♭", "E𝄫", "F", "G", "A♭", "B𝄫"]
-    },
-    {
-        "names": ["Chromatic Hypophrygian"],
-        "notes": ["C", "D♯", "E♯", "F♯", "G", "A♯", "B"]
     },
     {
         "names": ["Chromatic Hypolydian"],
         "notes": ["C", "D♭", "E", "F♯", "G", "A♭", "B"]
+    },
+    {
+        "names": ["Chromatic Hypophrygian"],
+        "notes": ["C", "D♯", "E♯", "F♯", "G", "A♯", "B"]
     },
     {
         "names": ["Chromatic Hypodorian"],

@@ -1,45 +1,41 @@
+use std::path::PathBuf;
+
+use clap::{Parser, Subcommand};
+
 use scalatron::*;
 
+#[derive(Subcommand)]
+enum Command {
+    /// Make a chart of scales from a JSON file containing an array of scales,
+    /// which must have notes, intervals, or both (but not neither). If it has
+    /// both, will check that the notes and intervals line up. (TODO: intervals)
+    MakeScaleChart { input_json: PathBuf },
+}
+
+#[derive(Parser)]
+struct Invocation {
+    #[clap(subcommand)]
+    command: Command,
+}
+
 fn main() {
+    let invocation = Invocation::parse();
+    match invocation.command {
+        Command::MakeScaleChart { input_json } => make_scale_chart(input_json),
+    }
+}
+
+fn make_scale_chart(input_path: PathBuf) {
     let scales: Vec<Scale> = serde_json::from_reader(
         /* way out in the water see it swimming */
-        std::fs::File::open("input/input.json").expect("WHERE IS MY INPUT"),
+        std::fs::File::open(&input_path).expect("could not open input"),
     )
     .expect("input is not valid");
-    for scale in scales {
-        let polarity = scale.get_polarity().unwrap();
-        let mut intervals = Vec::new();
-        match polarity {
-            ScalePolarity::Descending => {
-                for pair in scale.notes.windows(2) {
-                    intervals.push(pair[1].semitones_below(pair[0]))
-                }
-                intervals.push(
-                    scale
-                        .notes
-                        .first()
-                        .unwrap()
-                        .semitones_below(*scale.notes.last().unwrap()),
-                );
-            }
-            ScalePolarity::Ascending => {
-                for pair in scale.notes.windows(2) {
-                    intervals.push(pair[1].semitones_above(pair[0]))
-                }
-                intervals.push(
-                    scale
-                        .notes
-                        .first()
-                        .unwrap()
-                        .semitones_above(*scale.notes.last().unwrap()),
-                );
-            }
-        }
-        assert_eq!(
-            intervals.iter().copied().sum::<i32>(),
-            12,
-            "A scale’s intervals didn’t add up to 12. Something is wrong with the input."
-        );
+    for mut scale in scales {
+        scale.fill_blanks();
+        let intervals = scale.get_intervals().unwrap();
+        let _polarity = scale.get_polarity().unwrap();
+        let notes = scale.notes.as_ref().expect("no notes");
         print!("<tr>");
         match scale.names.len() {
             1 => {
@@ -55,10 +51,12 @@ fn main() {
                 );
             }
             _ => {
-                panic!("a scale had a weird number of names, we expect 1 or 2");
+                panic!(
+                    "a scale had a weird number of names, we expect 1 or 2"
+                );
             }
         }
-        for (i, note) in scale.notes.iter().enumerate() {
+        for (i, note) in notes.iter().enumerate() {
             print!(
                 "<td class=\"{borderpad}{color}weight{weight}\">{note}{invisinat}</td>",
                 borderpad = if i == 0 { "leftborder leftpad15 " } else { "" },

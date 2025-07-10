@@ -117,27 +117,46 @@ pub struct Note {
     pub accidental: i32, // -flat, +sharp
 }
 
+#[derive(Debug, Error, PartialEq, Eq, Hash)]
+pub enum NoteParseError {
+    #[error("note name must be one of C, D, E, F, G, A, B")]
+    InvalidName,
+    #[error("natural cannot be mixed with sharps or flats")]
+    NaturalAccidental,
+    #[error("cannot use sharps and flats on the same note")]
+    AccidentalMix,
+    #[error("accidentals must be one or more of ♭, b, ♯, or #, or exactly one of ♮, 𝄫, or 𝄪")]
+    UnknownAccidental,
+}
+
 impl Note {
     /// How many semitones off from C we are, according to Ionian (CDEFGAB) octave-ing.
     pub fn semitones_ionian(&self) -> i32 {
         self.name.semitones_ionian() + self.accidental
     }
-    /// Used when you know this note should be *higher* than the other note. (This is standard in modern Western harmony.)
+    /// Used when you know this note should be *higher* than the other note.
+    /// (This is standard in modern Western harmony.)
     ///
-    /// The answer will ALWAYS be in the range 0..12.
+    /// The answer will ALWAYS be in the range 0..n, where n is the number of
+    /// subdivisions of the octave (currently, only 12 is supported).
     pub fn semitones_above(&self, other_note: Note) -> i32 {
         let our_semitone = self.semitones_ionian();
         let their_semitone = other_note.semitones_ionian();
         (our_semitone - their_semitone).rem_euclid(12)
     }
-    /// Used when you know this note should be *lower* than the other note. (Ancient Greek musical harmony used this, and the curse has endured for thousands of years. Medieval Europeans not understanding that is also why our mode names are all wrong!)
+    /// Used when you know this note should be *lower* than the other note.
+    /// (Ancient Greek musical harmony used this, and the curse has endured for
+    /// thousands of years. Medieval Europeans not understanding that is also
+    /// why our mode names are all wrong!)
     ///
-    /// The answer will ALWAYS be in the range 0..12.
+    /// The answer will ALWAYS be in the range 0..n, where n is the number of
+    /// subdivisions of the octave (currently, only 12 is supported).
     pub fn semitones_below(&self, other_note: Note) -> i32 {
         other_note.semitones_above(*self)
     }
     /// Returns semitones_above or (negated) semitones_below, whichever has the
-    /// smaller magnitude. If the magnitude is 6, return -6.
+    /// smaller magnitude. For n-TET, where n is an even integer,
+    /// if the magnitude is (n / 2), return -(n / 2).
     pub fn semitone_delta(&self, other_note: Note) -> i32 {
         if self.semitones_above(other_note) > 6 {
             self.semitones_below(other_note)
@@ -282,7 +301,7 @@ pub struct Scale {
 }
 
 #[derive(Debug, Error, PartialEq, Eq, Hash)]
-pub enum ScalePolarityDeterminationError {
+pub enum PolarityDeterminationError {
     #[error("tried to get polarity of a scale with fewer than two notes")]
     NotEnoughNotes,
     #[error("scale started with tritone ({first_note}, {second_note})")]
@@ -313,32 +332,39 @@ impl Scale {
             <= 7
     }
     /**
-    Returns whether the scale appears to ascend or descend. The scale must
-    have notes.
-
-    For a scale to be considered ascending or descending:
+    Returns whether a scale appears to ascend or descend. For a scale to be
+    considered ascending or descending:
 
     - It must contain at least two notes
     - Its **first two** notes must not be **exactly** a tritone (six
-      semitones) apart (e.g. C, F♯)
+      semitones in 12-tone equal temperament) apart (e.g. C, F♯)
     - Two consecutive notes **after** the first two must not be **more than**
-      six semitones apart (e.g. C, D, B)
+      a tritone apart (e.g. C, D, B)
     - Two consecutive notes must not have the same pitch (e.g. C♯, D♭)
-    - Two consecutive notes must not have the same name (e.g. C, C♯) UNLESS you have more than seven notes in your scale (in which case it can't be avoided without ridiculous accidental trains)
+    - Two consecutive notes must not have the same name (e.g. C, C♯) **unless**
+      the scale has more than seven notes (in which case it can't be helped
+      without ridiculous accidental trains)
 
     OR:
 
     - It must already have intervals
+    - Its intervals must all have the same sign
     */
     pub fn get_polarity(
         &self,
-    ) -> Result<ScalePolarity, ScalePolarityDeterminationError> {
-        use ScalePolarityDeterminationError::*;
+    ) -> Result<ScalePolarity, PolarityDeterminationError> {
+        use PolarityDeterminationError::*;
         if let Some(intervals) = &self.intervals {
             if !intervals.is_empty() {
-                // TODO: do a sanity check to make sure they're all in one direction
-                return ScalePolarity::from_sign(intervals[0])
-                    .ok_or(InvalidInterval);
+                let interval_sign = intervals[0].signum();
+                if intervals[1..].iter().any(|x| x.signum() != interval_sign) {
+                    return Err(
+                        PolarityDeterminationError::InconsistentIntervals,
+                    );
+                } else {
+                    return ScalePolarity::from_sign(interval_sign)
+                        .ok_or(InvalidInterval);
+                }
             }
         }
         let mut first_delta: Option<i32> = None;
@@ -573,58 +599,117 @@ mod tests {
             Ok(ScalePolarity::Descending)
         );
     }
+    /// Tests that `fill_blanks` works correctly, returning scales with the
+    /// same number of intervals as notes.
     #[test]
     fn scale_sanity() {
-        // same number of intervals and notes
-        // (must quietly validate and succeed)
+        struct TestCase {
+            name: &'static str,
+            starting_notes: &'static [Note],
+            starting_intervals: &'static [i32],
+            expected_notes: &'static [Note],
+            expected_intervals: &'static [i32],
+        }
+        let tests: &[TestCase] = &[
+            TestCase {
+                // same number of intervals and notes
+                // (must quietly validate and succeed)
+                name: "Solronian Ecstatic Augmented <del>Chord</del> [Scale]",
+                starting_notes: &[note!(C), note!(E), note!(G #)],
+                starting_intervals: &[4, 4, 4],
+                expected_notes: &[note!(C), note!(E), note!(G #)],
+                expected_intervals: &[4, 4, 4],
+            },
+            TestCase {
+                // more intervals than notes
+                // (must add notes to scale)
+                name: "Jovian Suicide Scale",
+                starting_notes: &[note!(C), note!(D #), note! (F #)],
+                starting_intervals: &[3, 3, 3, 3],
+                expected_notes: &[note!(C), note!(D #), note!(F #), note!(A)],
+                expected_intervals: &[3, 3, 3, 3],
+            },
+            TestCase {
+                // more notes than intervals
+                // (must fill in remaining intervals)
+                name: "Izshatonic Guilt Scale",
+                starting_notes: &[
+                    note!(C),
+                    note!(D #),
+                    note!(F),
+                    note!(G #),
+                    note!(A #),
+                ],
+                starting_intervals: &[3, 2, 3],
+                expected_notes: &[
+                    note!(C),
+                    note!(D #),
+                    note!(F),
+                    note!(G #),
+                    note!(A #),
+                ],
+                expected_intervals: &[3, 2, 3, 2, 2],
+            },
+        ];
+        let mut ok = true;
+        for test in tests {
+            let mut scale = Scale {
+                names: vec![test.name.to_string()],
+                notes: Some(test.starting_notes.to_vec()),
+                intervals: Some(test.starting_intervals.to_vec()),
+            };
+            scale.fill_blanks();
+            if scale.get_notes().unwrap() != test.expected_notes {
+                println!(
+                    "fill_blanks did not match expected notes for scale {}",
+                    test.name
+                );
+                ok = false;
+            };
+            assert_eq!(
+                scale.get_intervals().unwrap(),
+                test.expected_intervals
+            );
+            if scale.get_intervals().unwrap() != test.expected_intervals {
+                println!(
+                    "fill_blanks did not match expected intervals for scale {}",
+                    test.name
+                );
+                ok = false;
+            };
+            if scale.get_intervals().unwrap().len()
+                != scale.get_notes().unwrap().len()
+            {
+                ok = false;
+                println!(
+                    "fill_blanks gave scale {} {} notes and {} intervals (values should match)",
+                    test.name,
+                    scale.get_notes().unwrap().len(),
+                    scale.get_intervals().unwrap().len()
+                );
+            }
+        }
+        if !ok {
+            panic!("one or more test cases failed");
+        }
+    }
+    // TODO: Test that more than seven notes validates with consecutive note names
+    // TODO: Test that seven or fewer notes does not validate with consecutive note names
+    // TODO: Test case for filling in notes with a descending scale
+    // TODO: if intervals are provided, the first interval is enough to learn the polarity
+    /// Test that `fill_blanks` correctly blows up if a scale’s notes and intervals are both `None`.
+    #[test]
+    #[should_panic]
+    fn scale_emptiness() {
         let mut scale = Scale {
-            names: vec![
-                "Solronian Ecstatic Augmented <del>Chord</del> [Scale]"
-                    .to_string(),
-            ],
-            notes: Some(vec![note!(C), note!(E), note!(G #)]),
-            intervals: Some(vec![4, 4, 4]),
-        };
-        scale.fill_blanks();
-        // more intervals than notes (must add notes to scale)
-        let mut scale = Scale {
-            names: vec!["Jovian Suicide Scale".to_string()],
-            notes: Some(vec![note!(C), note!(D #), note! (F #)]),
-            intervals: Some(vec![3, 3, 3, 3]),
-        };
-        scale.fill_blanks();
-        assert_eq!(
-            scale.get_notes(),
-            Some(&[note!(C), note!(D #), note!(F #), note!(A),] as &[Note])
-        );
-        // more notes than intervals (must fill in remaining intervals)
-        let mut scale = Scale {
-            names: vec!["Izshatonic Guilt Scale".to_string()],
-            notes: Some(vec![
-                note!(C),
-                note!(D #),
-                note!(F),
-                note!(G #),
-                note!(A #),
-            ]),
-            intervals: Some(vec![3, 2, 3]),
-        };
-        scale.fill_blanks();
-        assert_eq!(scale.get_intervals(), Some(&[3, 2, 3, 2, 2] as &[i32]));
-        // what if no notes?
-        let scale = Scale {
             names: vec!["Ye Absentmindical Forgottene Scale".to_string()],
             notes: None,
             intervals: None,
         };
-        assert_eq!(scale.get_notes(), None);
-        assert_eq!(scale.get_intervals(), None);
-        // TODO: Test case, assume C is base if no notes provided
-        // TODO: Test that more than seven notes validates with consecutive note names
-        // TODO: Test that seven or fewer notes does not validate with consecutive note names
-        // TODO: Test case for filling in notes with a descending scale
-        // TODO: if intervals are provided, the first interval is enough to learn the polarity
+        scale.fill_blanks();
     }
+    /// Test that `semitone_delta` returns the correct offsets for several
+    /// crucial intervals. Also tests `semitones_above` and `semitones_below`.
     #[test]
     fn semitone_delta_test() {
         const TEST_CASES: &[(Note, Note, i32, i32, i32)] = &[
@@ -669,6 +754,8 @@ mod tests {
             panic!("Some test cases failed!");
         }
     }
+    /// Test that scales with no notes specified start on C, and that scales
+    /// with any notes specified do not change roots.
     #[test]
     fn c_base_test() {
         let mut c_base_test = Scale {

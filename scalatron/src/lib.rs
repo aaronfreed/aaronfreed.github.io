@@ -323,7 +323,15 @@ pub enum PolarityDeterminationError {
 }
 
 impl Scale {
-    pub fn can_have_consecutive_letters(&self) -> bool {
+    /// If a scale within a single octave has more than seven notes, it MUST
+    /// reuse a letter in succession, so we will allow it to do so. If it has
+    /// seven or fewer, we can express all note combinations WITHOUT reusing a
+    /// letter (though some will require ridiculous numbers of accidentals), so
+    /// we currently DISALLOW such scales to reuse the same letter in
+    /// succession. (Eventually, we may introduce a flag that allows users to
+    /// disable this check, but doing so may require rewriting certain other
+    /// parts of our code.)
+    pub fn can_reuse_letter_consecutively(&self) -> bool {
         self.notes
             .as_ref()
             .map(|x| x.len())
@@ -377,7 +385,7 @@ impl Scale {
             let first_note = pair[0];
             let second_note = pair[1];
             if first_note.name == second_note.name
-                && !self.can_have_consecutive_letters()
+                && !self.can_reuse_letter_consecutively()
             {
                 return Err(ConsecutiveNotesHadSameName {
                     first_note,
@@ -500,7 +508,8 @@ impl Scale {
             new_notes.extend_from_slice(notes);
             let _polarity = self.get_polarity().unwrap();
             // TODO: support descending polarity
-            let use_consecutive_letters = self.can_have_consecutive_letters();
+            let try_reusing_letter_consecutively =
+                self.can_reuse_letter_consecutively();
             if notes.is_empty() {
                 new_notes.push(note!(C));
             }
@@ -512,7 +521,7 @@ impl Scale {
                     name: prev_note.name,
                     accidental: prev_note.accidental + prev_interval,
                 };
-                if !use_consecutive_letters {
+                if !try_reusing_letter_consecutively {
                     new_note = new_note.same_pitch_next_letter();
                 }
                 while new_note.accidental >= 2
@@ -693,10 +702,7 @@ mod tests {
             panic!("one or more test cases failed");
         }
     }
-    // TODO: Test that more than seven notes validates with consecutive note names
-    // TODO: Test that seven or fewer notes does not validate with consecutive note names
-    // TODO: Test case for filling in notes with a descending scale
-    // TODO: if intervals are provided, the first interval is enough to learn the polarity
+
     /// Test that `fill_blanks` correctly blows up if a scale’s notes and intervals are both `None`.
     #[test]
     #[should_panic]
@@ -781,4 +787,55 @@ mod tests {
             "Scale with first note defined as D somehow wound up starting somewhere else"
         );
     }
+    /// Test that scales with more than seven notes may reuse note names
+    /// consecutively (e.g., ALLOW A, B♭, B, C, D♭, D, E♭, E, F, G♭, G, A♭
+    /// [i.e., the entire chromatic scale])
+    #[test]
+    fn long_scale_letter_reuse_test() {
+        let mut scale = Scale {
+            names: vec!["Chromatic Aromatic Scale".to_string()],
+            notes: Some(vec![
+                note!(A),
+                note!(B b),
+                note!(B),
+                note!(C),
+                note!(D b),
+                note!(D),
+                note!(E b),
+                note!(E),
+                note!(F),
+                note!(G b),
+                note!(G),
+                note!(A b),
+            ]),
+            intervals: Some(vec![1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]),
+        };
+        scale.fill_blanks();
+    }
+    #[test]
+    #[should_panic]
+    // Test that scales with seven or fewer notes CANNOT reuse note names
+    // consecutively (i.e., DISALLOW A♭, A, A♯, D, E, F, G)
+    fn short_scale_letter_reuse_test() {
+        let mut scale = Scale {
+            names: vec![
+                "Partly Chromatic Discombobulatory Wreck Scale".to_string()
+            ],
+            notes: Some(vec![
+                note!(A),
+                note!(B b),
+                note!(B),
+                note!(F),
+                note!(G b),
+                note!(G),
+                note!(A b),
+            ]),
+            intervals: Some(vec![1, 1, 6, 1, 1, 1]),
+        };
+        scale.fill_blanks();
+    }
+
+    // TODO: Test case for filling in notes with a descending scale
+    // TODO: if intervals are provided, the first interval is enough to learn the polarity
+    // TODO: Add flag to disable consecutive note name check
 }

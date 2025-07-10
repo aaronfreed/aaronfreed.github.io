@@ -182,6 +182,24 @@ impl Note {
             accidental,
         }
     }
+    /// Returns another `Note` that is equivalent in *pitch* to this `Note`,
+    /// but uses the previous letter. (e.g. `A♭.same_pitch_previous_letter() == G♯`)
+    pub fn same_pitch_previous_letter(&self) -> Note {
+        let previous_letter = self.name.previous_letter();
+        let accidental = self.accidental
+            + Note {
+                name: self.name,
+                accidental: 0,
+            }
+            .semitones_above(Note {
+                name: previous_letter,
+                accidental: 0,
+            });
+        Note {
+            name: previous_letter,
+            accidental,
+        }
+    }
 }
 
 impl Debug for Note {
@@ -506,7 +524,10 @@ impl Scale {
             // the rest of the <del>owl (◎▼◎)</del> [notes (♪♫)]
             let mut new_notes = Vec::new();
             new_notes.extend_from_slice(notes);
-            let _polarity = self.get_polarity().unwrap();
+            let polarity = self.get_polarity().unwrap();
+            if polarity == ScalePolarity::Descending {
+                todo!("actually implement descending polarity");
+            }
             // TODO: support descending polarity
             let try_reusing_letter_consecutively =
                 self.can_reuse_letter_consecutively();
@@ -519,16 +540,47 @@ impl Scale {
                 let prev_interval = intervals[i];
                 let mut new_note = Note {
                     name: prev_note.name,
-                    accidental: prev_note.accidental + prev_interval,
+                    accidental: match polarity {
+                        ScalePolarity::Ascending => {
+                            prev_note.accidental + prev_interval
+                        }
+                        ScalePolarity::Descending => {
+                            prev_note.accidental + prev_interval
+                        }
+                        _ => unreachable!(),
+                    },
                 };
                 if !try_reusing_letter_consecutively {
-                    new_note = new_note.same_pitch_next_letter();
+                    if polarity == ScalePolarity::Ascending {
+                        new_note = new_note.same_pitch_next_letter();
+                    } else {
+                        new_note = new_note.same_pitch_previous_letter();
+                    }
                 }
-                while new_note.accidental >= 2
-                    || (new_note.accidental == 1
-                        && new_note.same_pitch_next_letter().accidental == 0)
-                {
-                    new_note = new_note.same_pitch_next_letter();
+                match polarity {
+                    ScalePolarity::Ascending => {
+                        while new_note.accidental >= 2
+                            || (new_note.accidental == 1
+                                && new_note
+                                    .same_pitch_next_letter()
+                                    .accidental
+                                    == 0)
+                        {
+                            new_note = new_note.same_pitch_next_letter();
+                        }
+                    }
+                    ScalePolarity::Descending => {
+                        while new_note.accidental <= -2
+                            || (new_note.accidental == -1
+                                && new_note
+                                    .same_pitch_previous_letter()
+                                    .accidental
+                                    == 0)
+                        {
+                            new_note = new_note.same_pitch_previous_letter();
+                        }
+                    }
+                    _ => unreachable!(),
                 }
                 new_notes.push(new_note);
             }
@@ -558,6 +610,22 @@ mod tests {
                 name: NoteName::A,
                 accidental: 8
             }
+        );
+    }
+    #[test]
+    fn same_pitch_previous_letter() {
+        assert_eq!(note!(A), note!(B bb).same_pitch_previous_letter());
+        assert_eq!(note!(E), note!(F b).same_pitch_previous_letter());
+        assert_eq!(
+            Note {
+                name: NoteName::G,
+                accidental: 10,
+            },
+            Note {
+                name: NoteName::A,
+                accidental: 8
+            }
+            .same_pitch_previous_letter()
         );
     }
     #[test]
@@ -833,6 +901,36 @@ mod tests {
             intervals: Some(vec![1, 1, 6, 1, 1, 1]),
         };
         scale.fill_blanks();
+    }
+
+    #[test]
+    /// Tests whether scales with descending intervals fill in the correct
+    /// notes. This is not correctly implemented yet, so the test fails.
+    fn test_descending_intervals() {
+        todo!("actually implement this");
+        let mut scale = Scale {
+            names: vec!["Ancient Greek Chromatic Aromatic Scale".to_string()],
+            notes: Some(vec![note!(A b)]),
+            intervals: Some(vec![
+                -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+            ]),
+        };
+        let expected_notes = vec![
+            note!(A b),
+            note!(G),
+            note!(F #),
+            note!(F),
+            note!(E),
+            note!(D #),
+            note!(D),
+            note!(C #),
+            note!(C),
+            note!(B),
+            note!(A #),
+            note!(A),
+        ];
+        scale.fill_blanks();
+        assert_eq!(scale.get_notes().unwrap(), expected_notes);
     }
 
     // TODO: Test case for filling in notes with a descending scale

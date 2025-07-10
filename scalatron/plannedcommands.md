@@ -5,6 +5,7 @@
 * transpose scale to all 12 keys of chromatic scale
 * output all possible modes of scale for specified key (or -a for all 12 keys of chromatic scale)
 * user can specify a no_consecutive_same_letter flag
+* prefer_flats flag for filling in new notes (defaults to false, since most DAWs default to sharps for most of their notation)
 
 stretch goals:
 

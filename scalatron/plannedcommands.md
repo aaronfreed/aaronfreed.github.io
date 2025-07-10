@@ -3,7 +3,8 @@
 * take interval input from json and output table with notes and intervals
 * transpose scale to specified key
 * transpose scale to all 12 keys of chromatic scale
-* output all possible modes of scale
+* output all possible modes of scale for specified key (or -a for all 12 keys of chromatic scale)
+* user can specify a no_consecutive_same_letter flag
 
 stretch goals:
 

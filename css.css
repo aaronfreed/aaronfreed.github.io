@@ -91,6 +91,42 @@
 	--oklab270: #942aff;
 	--oklab300: #c200bf;
 	--oklab330: #d60074;
+	--oklab0-translucent: #e00003c6;
+	--oklab30-translucent: #af6000c6;
+	--oklab60-translucent: #937200c6;
+	--oklab90-translucent: #6f8100c6;
+	--oklab120-translucent: #008f3cc6;
+	--oklab150-translucent: #008b78c6;
+	--oklab180-translucent: #008696c6;
+	--oklab210-translucent: #007fbac6;
+	--oklab240-translucent: #4260ffc6;
+	--oklab270-translucent: #942affc6;
+	--oklab300-translucent: #c200bfc6;
+	--oklab330-translucent: #d60074c6;
+	--oklab0-bg: #ff9485;
+	--oklab30-bg: #ffb87f;
+	--oklab60-bg: #ffdc80;
+	--oklab90-bg: #e6ff88;
+	--oklab120-bg: #96ffab;
+	--oklab150-bg: #88ffe7;
+	--oklab180-bg: #84eeff;
+	--oklab210-bg: #85ceff;
+	--oklab240-bg: #84a3ff;
+	--oklab270-bg: #bf9dff;
+	--oklab300-bg: #ff9ef9;
+	--oklab330-bg: #ff93b7; 
+	--oklab0-bg-translucent: #ff9485c6;
+	--oklab30-bg-translucent: #ffb87fc6;
+	--oklab60-bg-translucent: #ffdc80c6;
+	--oklab90-bg-translucent: #e6ff88c6;
+	--oklab120-bg-translucent: #96ffabc6;
+	--oklab150-bg-translucent: #88ffe7c6;
+	--oklab180-bg-translucent: #84eeffc6;
+	--oklab210-bg-translucent: #85ceffc6;
+	--oklab240-bg-translucent: #84a3ffc6;
+	--oklab270-bg-translucent: #bf9dffc6;
+	--oklab300-bg-translucent: #ff9ef9c6;
+	--oklab330-bg-translucent: #ff93b7c6; 
 	--heading-color: #2f5496;
 	--heading-color-translucent: #2f5496c6;
 	--portfolio-heading: #2f5496;
@@ -165,6 +201,30 @@
 			--oklab270-translucent: #bf9dffc6;
 			--oklab300-translucent: #ff9ef9c6;
 			--oklab330-translucent: #ff93b7c6; 
+			--oklab0-bg: #720001;
+			--oklab30-bg: #582d00;
+			--oklab60-bg: #493700;
+			--oklab90-bg: #363f00;
+			--oklab120-bg: #00471a;
+			--oklab150-bg: #00443b;
+			--oklab180-bg: #00424b;
+			--oklab210-bg: #003e5e;
+			--oklab240-bg: #1a01ae;
+			--oklab270-bg: #4b008a;
+			--oklab300-bg: #620061;
+			--oklab330-bg: #6d0038;
+			--oklab0-bg-translucent: #720001c6;
+			--oklab30-bg-translucent: #582d00c6;
+			--oklab60-bg-translucent: #493700c6;
+			--oklab90-bg-translucent: #363f00c6;
+			--oklab120-bg-translucent: #00471ac6;
+			--oklab150-bg-translucent: #00443bc6;
+			--oklab180-bg-translucent: #00424bc6;
+			--oklab210-bg-translucent: #003e5ec6;
+			--oklab240-bg-translucent: #1a01aec6;
+			--oklab270-bg-translucent: #4b008ac6;
+			--oklab300-bg-translucent: #620061c6;
+			--oklab330-bg-translucent: #6d0038c6;
 		}
 		thead .darkkey {
 			background-color: var(--offset-level-1);
@@ -1363,6 +1423,9 @@ a:hover, a:hover u, a:hover del {
 a:active, a:active u, a:active del {
 	text-decoration-color: var(--link-active-translucent);
 }
+del.thick {
+	text-decoration-thickness: 3px;
+}
 
 
 /* define font weights */
@@ -2189,6 +2252,78 @@ tbody:nth-child(even) tr:nth-child(odd) .highlight {
 }
 .offset4 {
 	background-color: var(--offset-level-4);
+}
+.bghue0, .bghue0 :is(tr > td), .bghue0-tl ~ td.highlight {
+	background-color: var(--oklab0-bg) !important;
+}
+.bghue30, .bghue30 :is(tr > td), .bghue30-tl ~ td.highlight {
+	background-color: var(--oklab30-bg) !important;
+}
+.bghue60, .bghue60 :is(tr > td), .bghue60-tl ~ td.highlight {
+	background-color: var(--oklab60-bg) !important;
+}
+.bghue90, .bghue90 :is(tr > td), .bghue90-tl ~ td.highlight {
+	background-color: var(--oklab90-bg) !important;
+}
+.bghue120, .bghue120 :is(tr > td), .bghue120-tl ~ td.highlight {
+	background-color: var(--oklab120-bg) !important;
+}
+.bghue150, .bghue150 :is(tr > td), .bghue150-tl ~ td.highlight {
+	background-color: var(--oklab150-bg) !important;
+}
+.bghue180, .bghue180 :is(tr > td), .bghue180-tl ~ td.highlight {
+	background-color: var(--oklab180-bg) !important;
+}
+.bghue210, .bghue210 :is(tr > td), .bghue210-tl ~ td.highlight {
+	background-color: var(--oklab210-bg) !important;
+}
+.bghue240, .bghue240 :is(tr > td), .bghue240-tl ~ td.highlight {
+	background-color: var(--oklab240-bg) !important;
+}
+.bghue270, .bghue270 :is(tr > td), .bghue270-tl ~ td.highlight {
+	background-color: var(--oklab270-bg) !important;
+}
+.bghue300, .bghue300 :is(tr > td), .bghue300-tl ~ td.highlight {
+	background-color: var(--oklab300-bg) !important;
+}
+.bghue330, .bghue330 :is(tr > td), .bghue330-tl ~ td.highlight {
+	background-color: var(--oklab330-bg) !important;
+}
+.bghue0-tl, .bghue0-tl :is(tr > td) {
+	background-color: var(--oklab0-bg-translucent);
+}
+.bghue30-tl, .bghue30-tl :is(tr > td) {
+	background-color: var(--oklab30-bg-translucent);
+}
+.bghue60-tl, .bghue60-tl :is(tr > td) {
+	background-color: var(--oklab60-bg-translucent);
+}
+.bghue90-tl, .bghue90-tl :is(tr > td) {
+	background-color: var(--oklab90-bg-translucent);
+}
+.bghue120-tl, .bghue120-tl :is(tr > td) {
+	background-color: var(--oklab120-bg-translucent);
+}
+.bghue150-tl, .bghue150-tl :is(tr > td) {
+	background-color: var(--oklab150-bg-translucent);
+}
+.bghue180-tl, .bghue180-tl :is(tr > td) {
+	background-color: var(--oklab180-bg-translucent);
+}
+.bghue210-tl, .bghue210-tl :is(tr > td) {
+	background-color: var(--oklab210-bg-translucent);
+}
+.bghue240-tl, .bghue240-tl :is(tr > td) {
+	background-color: var(--oklab240-bg-translucent);
+}
+.bghue270-tl, .bghue270-tl :is(tr > td) {
+	background-color: var(--oklab270-bg-translucent);
+}
+.bghue300-tl, .bghue300-tl :is(tr > td) {
+	background-color: var(--oklab300-bg-translucent);
+}
+.bghue330-tl, .bghue330-tl :is(tr > td) {
+	background-color: var(--oklab330-bg-translucent);
 }
 tbody:nth-child(even) tr:nth-child(even) .hidden {
 	/*color: var(--offset-level-1);*/ visibility: hidden !important;

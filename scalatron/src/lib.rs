@@ -953,7 +953,27 @@ mod tests {
         assert_eq!(scale.get_intervals().unwrap(), expected_intervals);
     }
 
-    // TODO: Test case for filling in notes with a descending scale
-    // TODO: if intervals are provided, the first interval is enough to learn the polarity
-    // TODO: Add flag to disable consecutive note name check
+    /// Test whether get_polarity can correctly determine scale polarity from
+    /// only a single interval (and no notes).
+    #[test]
+    fn polarity_of_darkness() {
+        let scale = Scale {
+            names: vec!["Scala Tenebrarum Polarium Incompletarum".to_string()],
+            notes: None,
+            intervals: Some(vec![-6]),
+        };
+        assert_eq!(scale.get_polarity(), Ok(ScalePolarity::Descending));
+        let scale = Scale {
+            names: vec!["Scala Lucum Polarium Incompletarum".to_string()],
+            notes: None,
+            intervals: Some(vec![6]),
+        };
+        assert_eq!(scale.get_polarity(), Ok(ScalePolarity::Ascending));
+        let scale = Scale {
+            names: vec!["Scala Neutralium Impossibilium".to_string()],
+            notes: None,
+            intervals: Some(vec![0]),
+        };
+        assert!(scale.get_polarity().is_err());
+    }
 }

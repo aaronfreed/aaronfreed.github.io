@@ -511,9 +511,9 @@ impl Scale {
                 }
             }
             assert_eq!(
-                new_intervals.iter().copied().sum::<i32>(),
+                new_intervals.iter().copied().sum::<i32>().abs(),
                 12,
-                "A scale’s intervals didn’t add up to 12. Something is wrong with the input."
+                "A scale’s intervals didn’t add up to ±12. Something is wrong with the input."
             );
             self.intervals = Some(new_intervals);
         } else if notes.len() < intervals.len() {
@@ -895,7 +895,7 @@ mod tests {
 
     #[test]
     /// Tests whether scales with descending intervals fill in the correct
-    /// notes. This is not correctly implemented yet, so the test fails.
+    /// notes.
     fn test_descending_intervals() {
         let mut scale = Scale {
             names: vec![
@@ -922,6 +922,35 @@ mod tests {
         ];
         scale.fill_blanks();
         assert_eq!(scale.get_notes().unwrap(), expected_notes);
+    }
+    /// Tests whether scales with descending notes fill in the correct
+    /// intervals.
+    #[test]
+    fn test_descending_notes() {
+        let mut scale = Scale {
+            names: vec![
+                "Ancient Greek Chromatic Aromatic Erotic Scale".to_string()
+            ],
+            notes: Some(vec![
+                note!(G #),
+                note!(G),
+                note!(F #),
+                note!(F),
+                note!(E),
+                note!(D #),
+                note!(D),
+                note!(C #),
+                note!(C),
+                note!(B),
+                note!(A #),
+                note!(A),
+            ]),
+            intervals: None,
+        };
+        let expected_intervals =
+            vec![-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
+        scale.fill_blanks();
+        assert_eq!(scale.get_intervals().unwrap(), expected_intervals);
     }
 
     // TODO: Test case for filling in notes with a descending scale

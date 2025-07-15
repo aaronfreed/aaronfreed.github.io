@@ -1,3 +1,4 @@
+* split this off into its own repo
 * take note input from json and output table with notes and intervals
 * take interval input from json and output table with notes and intervals
 * transpose scale to specified key

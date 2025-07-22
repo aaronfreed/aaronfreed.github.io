@@ -69,6 +69,13 @@ impl NoteName {
             Self::B => -1,
         }
     }
+    pub fn adjacent_letter(&self, polarity: ScalePolarity) -> NoteName {
+        if polarity == ScalePolarity::Ascending {
+            self.next_letter()
+        } else {
+            self.previous_letter()
+        }
+    }
 }
 
 impl Display for NoteName {
@@ -319,7 +326,7 @@ pub struct Scale {
 }
 
 #[derive(Debug, Error, PartialEq, Eq, Hash)]
-pub enum PolarityDeterminationError {
+pub enum GetPolarityError {
     #[error("tried to get polarity of a scale with fewer than two notes")]
     NotEnoughNotes,
     #[error("scale started with tritone ({first_note}, {second_note})")]
@@ -338,6 +345,26 @@ pub enum PolarityDeterminationError {
     InvalidInterval,
     #[error("provided intervals are not consistently in the same direction")]
     InconsistentIntervals,
+}
+
+#[derive(Debug, Error, PartialEq, Eq, Hash)]
+pub enum FillBlanksError {
+    #[error("error getting polarity: {inner}")]
+    GetPolarityError { inner: GetPolarityError },
+    #[error("provided notes ({notes:?}) and intervals ({intervals:?}) do not match at index {index}: delta between notes is {delta}, but provided interval is {provided_interval}")]
+    ContradictoryInput {
+        notes: Vec<Note>,
+        intervals: Vec<i32>,
+        index: usize,
+        delta: i32,
+        provided_interval: i32,
+    },
+    #[error("called fill_blanks on a scale with neither notes nor intervals")]
+    EmptyScale,
+    #[error("scale's intervals do not add up to ±12")]
+    NonOctaveScale,
+    #[error("seven-note scale skipped a letter or used letters out of order")]
+    InvalidNoteOrder,
 }
 
 impl Scale {
@@ -371,17 +398,13 @@ impl Scale {
     - It must already have intervals
     - Its intervals must all have the same sign
     */
-    pub fn get_polarity(
-        &self,
-    ) -> Result<ScalePolarity, PolarityDeterminationError> {
-        use PolarityDeterminationError::*;
+    pub fn get_polarity(&self) -> Result<ScalePolarity, GetPolarityError> {
+        use GetPolarityError::*;
         if let Some(intervals) = &self.intervals {
             if !intervals.is_empty() {
                 let interval_sign = intervals[0].signum();
                 if intervals[1..].iter().any(|x| x.signum() != interval_sign) {
-                    return Err(
-                        PolarityDeterminationError::InconsistentIntervals,
-                    );
+                    return Err(InconsistentIntervals);
                 } else {
                     return ScalePolarity::from_sign(interval_sign)
                         .ok_or(InvalidInterval);
@@ -451,19 +474,19 @@ impl Scale {
     /// If there are fewer `Note`s than intervals, synthesize the missing
     /// notes. If there are fewer intervals than `Note`s, synthesize the
     /// missing intervals. If there are no intervals or notes, PANIC.
-    pub fn fill_blanks(&mut self) {
-        let (notes, intervals) = match (
-            self.notes.as_ref(),
-            self.intervals.as_ref(),
-        ) {
-            (None, None) => {
-                panic!("called fill_blanks on a scale with neither notes nor intervals")
-            }
-            (notes, intervals) => (
-                notes.map(|x| &x[..]).unwrap_or(&[]),
-                intervals.map(|x| &x[..]).unwrap_or(&[]),
-            ),
-        };
+    // TODO: never panic on bad input, only on bad usage
+    pub fn fill_blanks(&mut self) -> Result<(), FillBlanksError> {
+        use FillBlanksError::*;
+        let (notes, intervals) =
+            match (self.notes.as_ref(), self.intervals.as_ref()) {
+                (None, None) => {
+                    return Err(EmptyScale);
+                }
+                (notes, intervals) => (
+                    notes.map(|x| &x[..]).unwrap_or(&[]),
+                    intervals.map(|x| &x[..]).unwrap_or(&[]),
+                ),
+            };
         let amount_of_intervals_to_check = if notes.len() == intervals.len() {
             notes.len()
         } else {
@@ -471,21 +494,22 @@ impl Scale {
         };
         for i in 0..amount_of_intervals_to_check {
             let delta = notes[i].semitone_delta(notes[(i + 1) % notes.len()]);
-            assert_eq!(
-                delta,
-                intervals[i],
-                "provided intervals do not match provided notes\n\
-                notes: {notes:?}\n\
-                intervals: {intervals:?}\n\
-                at index {i}, delta between notes is {delta}, but provided interval is {}",
-                intervals[i],
-            );
+            if delta != intervals[i] {
+                return Err(ContradictoryInput {
+                    notes: notes.to_vec(),
+                    intervals: intervals.to_vec(),
+                    index: i,
+                    delta,
+                    provided_interval: intervals[i],
+                });
+            };
         }
+        let polarity = self.get_polarity().unwrap();
         #[allow(clippy::comparison_chain)]
         if notes.len() > intervals.len() {
+            // TODO: break into function
             let mut new_intervals = Vec::new();
             new_intervals.extend_from_slice(intervals);
-            let polarity = self.get_polarity().unwrap();
             match polarity {
                 ScalePolarity::Descending => {
                     for pair in notes.windows(2).skip(intervals.len()) {
@@ -510,17 +534,15 @@ impl Scale {
                     );
                 }
             }
-            assert_eq!(
-                new_intervals.iter().copied().sum::<i32>().abs(),
-                12,
-                "A scale’s intervals didn’t add up to ±12. Something is wrong with the input."
-            );
+            if new_intervals.iter().copied().sum::<i32>().abs() != 12 {
+                return Err(NonOctaveScale);
+            }
             self.intervals = Some(new_intervals);
         } else if notes.len() < intervals.len() {
+            // TODO: break into function
             // the rest of the <del>owl (◎▼◎)</del> [notes (♪♫)]
             let mut new_notes = Vec::new();
             new_notes.extend_from_slice(notes);
-            let polarity = self.get_polarity().unwrap();
             let try_reusing_letter_consecutively =
                 !self.must_use_every_letter_once();
             if notes.is_empty() {
@@ -576,6 +598,20 @@ impl Scale {
             }
             self.notes = Some(new_notes);
         }
+        // From this point forward, we're only checking.
+        let notes = self.notes.as_ref().unwrap();
+        let intervals = self.intervals.as_ref().unwrap();
+        if notes.len() == 7 {
+            for i in 0..7 {
+                if notes[i].name.adjacent_letter(polarity)
+                    != notes[(i + 1) % 7].name
+                {
+                    return Err(InvalidNoteOrder);
+                }
+            }
+        }
+        // <-- check goes here
+        Ok(())
     }
 }
 
@@ -627,7 +663,7 @@ mod tests {
             notes: Some(vec![note!(C), note!(F #)]),
             intervals: Some(vec![6, 6]),
         };
-        scale.fill_blanks();
+        scale.fill_blanks().unwrap();
     }
     #[test]
     fn scale_polarity() {
@@ -770,7 +806,7 @@ mod tests {
             notes: None,
             intervals: None,
         };
-        scale.fill_blanks();
+        scale.fill_blanks().unwrap();
     }
     /// Test that `semitone_delta` returns the correct offsets for several
     /// crucial intervals. Also tests `semitones_above` and `semitones_below`.
@@ -890,7 +926,7 @@ mod tests {
             ]),
             intervals: Some(vec![1, 1, 6, 1, 1, 1]),
         };
-        scale.fill_blanks();
+        scale.fill_blanks().unwrap();
     }
 
     #[test]
@@ -975,5 +1011,49 @@ mod tests {
             intervals: Some(vec![0]),
         };
         assert!(scale.get_polarity().is_err());
+    }
+
+    /// When notes and intervals are both provided in full, we should BLOW UP
+    /// if they do not match. We have no way to determine which one is correct,
+    /// so we will leave it up to the user to correct their input.
+    #[test]
+    #[should_panic]
+    fn test_interval_and_note_match() {
+        let mut scale = Scale {
+            names: vec!["Roman Catholic Scale".to_string()],
+            notes: Some(vec![
+                note!(C),
+                note!(D #),
+                note!(E),
+                note!(F #),
+                note!(G),
+                note!(A #),
+                note!(B),
+            ]),
+            intervals: Some(vec![2, 2, 1, 2, 2, 2, 1]),
+        };
+        scale.fill_blanks().unwrap();
+    }
+
+    /// Test that seven-note scales are not allowed to skip letter names. (Test is currently unfinished)
+    #[test]
+    #[should_panic]
+    fn test_name_skip() {
+        let mut scale = Scale {
+            // Chromatic Mixolydian tonos
+            names: vec!["Χρωμᾰτῐκός μιξο-Λῡδός τόνος".to_string()],
+            // these should really be C, D, E#, F#, G, A#, B
+            notes: Some(vec![
+                note!(C),
+                note!(D),
+                note!(F),
+                note!(E ##),
+                note!(G),
+                note!(B b),
+                note!(A ##),
+            ]),
+            intervals: None,
+        };
+        scale.fill_blanks().unwrap();
     }
 }

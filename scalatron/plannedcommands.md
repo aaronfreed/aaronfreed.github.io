@@ -14,3 +14,4 @@ stretch goals:
 	* for HTML output, make it possible to add custom formatting parameters to notes, intervals, or both, depending either on values, offsets, positions within the scale, patterns, etc.
 * automatically find links to scales’ pages on Ian Ring’s site
 * potential `no_consecutive_same_letter` method for `scale` (or some better way to handle this; Solra says that flags like this are more trouble than they’re worth, and Aaron has agreed to an armistice on this topic for now :P)
+* potential method to automatically fill in last interval of scale whose intervals are between -12 and 12 (non-inclusive)? (this might also be more trouble than it’s worth)

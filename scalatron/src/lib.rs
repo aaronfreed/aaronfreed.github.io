@@ -20,6 +20,8 @@ pub enum NoteName {
     B,
 }
 
+pub const OCTAVE_SIZE: i32 = 12;
+
 impl NoteName {
     /// Returns the next note letter in the sequence, wrapping from G to A.
     pub const fn next_letter(&self) -> NoteName {
@@ -161,11 +163,29 @@ impl Note {
     pub fn semitones_below(&self, other_note: Note) -> i32 {
         other_note.semitones_above(*self)
     }
-    /// Returns semitones_above or (negated) semitones_below, whichever has the
-    /// smaller magnitude. For n-TET, where n is an even integer,
-    /// if the magnitude is (n / 2), return -(n / 2).
-    pub fn semitone_delta(&self, other_note: Note) -> i32 {
-        if self.semitones_above(other_note) > 6 {
+    /// Returns how many steps you must increment/decrement `self` to reach the
+    /// pitch of `other_note`. Steps sharp are positive, steps flat are
+    /// negative.
+    ///
+    /// How we return our result depends on `known_polarity`:
+    /// - `None`: Returns whichever direction needs the fewest steps. In the
+    ///    event of a tie, returns the negative value.
+    /// - `Some(ScalePolarity::Ascending)`: Always returns sharps (i.e., as
+    ///    if you called `semitones_below`)
+    /// - `Some(ScalePolarity::Descending)`: Always returns flats (i.e., as
+    ///    if you called `-semitones_above`)
+    pub fn semitone_delta(
+        &self,
+        other_note: Note,
+        known_polarity: Option<ScalePolarity>,
+    ) -> i32 {
+        if let Some(polarity) = known_polarity {
+            if polarity == ScalePolarity::Ascending {
+                self.semitones_below(other_note)
+            } else {
+                -self.semitones_above(other_note)
+            }
+        } else if self.semitones_above(other_note) > OCTAVE_SIZE / 2 {
             self.semitones_below(other_note)
         } else {
             -self.semitones_above(other_note)
@@ -361,9 +381,9 @@ pub enum FillBlanksError {
     },
     #[error("called fill_blanks on a scale with neither notes nor intervals")]
     EmptyScale,
-    #[error("scale's intervals do not add up to ±12")]
+    #[error("scale's intervals do not add up to ±OCTAVE_SIZE (currently, OCTAVE_SIZE is always 12)")]
     NonOctaveScale,
-    #[error("seven-note scale skipped a letter or used letters out of order")]
+    #[error("seven-note scale skipped a letter or used letters out of order or used the same letter more than once")]
     InvalidNoteOrder,
 }
 
@@ -429,16 +449,23 @@ impl Scale {
                 });
             }
             // TODO: ensure seven-note scales don't skip letters (e.g., A to C)
-            let delta = first_note.semitone_delta(second_note);
+            let delta = first_note.semitone_delta(second_note, None);
             if delta == 0 {
                 return Err(ConsecutiveNotesHadSamePitch {
                     first_note,
                     second_note,
                 });
+            } else {
+                if delta.abs() == OCTAVE_SIZE / 2 {
+                    return Err(FirstPairWasTritone {
+                        first_note,
+                        second_note,
+                    });
+                }
             }
-            debug_assert!(delta.abs() <= 6);
+            debug_assert!(delta.abs() <= OCTAVE_SIZE / 2);
             if let Some(first_delta) = first_delta {
-                if delta.abs() == 6 {
+                if delta.abs() == OCTAVE_SIZE / 2 {
                     // just assume this pair is going the right way
                     continue;
                 }
@@ -449,7 +476,7 @@ impl Scale {
                     });
                 }
             } else {
-                if delta.abs() == 6 {
+                if delta.abs() == OCTAVE_SIZE / 2 {
                     return Err(FirstPairWasTritone {
                         first_note,
                         second_note,
@@ -492,19 +519,9 @@ impl Scale {
         } else {
             intervals.len().min(notes.len().saturating_sub(1))
         };
-        for i in 0..amount_of_intervals_to_check {
-            let delta = notes[i].semitone_delta(notes[(i + 1) % notes.len()]);
-            if delta != intervals[i] {
-                return Err(ContradictoryInput {
-                    notes: notes.to_vec(),
-                    intervals: intervals.to_vec(),
-                    index: i,
-                    delta,
-                    provided_interval: intervals[i],
-                });
-            };
-        }
-        let polarity = self.get_polarity().unwrap();
+        let polarity = self
+            .get_polarity()
+            .map_err(|e| FillBlanksError::GetPolarityError { inner: e })?;
         #[allow(clippy::comparison_chain)]
         if notes.len() > intervals.len() {
             // TODO: break into function
@@ -534,7 +551,8 @@ impl Scale {
                     );
                 }
             }
-            if new_intervals.iter().copied().sum::<i32>().abs() != 12 {
+            if new_intervals.iter().copied().sum::<i32>().abs() != OCTAVE_SIZE
+            {
                 return Err(NonOctaveScale);
             }
             self.intervals = Some(new_intervals);
@@ -601,6 +619,19 @@ impl Scale {
         // From this point forward, we're only checking.
         let notes = self.notes.as_ref().unwrap();
         let intervals = self.intervals.as_ref().unwrap();
+        for i in 0..amount_of_intervals_to_check {
+            let delta = notes[i]
+                .semitone_delta(notes[(i + 1) % notes.len()], Some(polarity));
+            if delta != intervals[i] {
+                return Err(ContradictoryInput {
+                    notes: notes.to_vec(),
+                    intervals: intervals.to_vec(),
+                    index: i,
+                    delta,
+                    provided_interval: intervals[i],
+                });
+            };
+        }
         if notes.len() == 7 {
             for i in 0..7 {
                 if notes[i].name.adjacent_letter(polarity)
@@ -655,15 +686,22 @@ mod tests {
         );
     }
     #[test]
-    #[should_panic]
     fn scale_insanity() {
         // too wide to determine polarity, Jon Pertwee walked off the set
         let mut scale = Scale {
             names: vec!["Biznebian Pathetic Tritone Scale".to_string()],
             notes: Some(vec![note!(C), note!(F #)]),
-            intervals: Some(vec![6, 6]),
+            intervals: None,
         };
-        scale.fill_blanks().unwrap();
+        assert_eq!(
+            scale.fill_blanks(),
+            Err(FillBlanksError::GetPolarityError {
+                inner: GetPolarityError::FirstPairWasTritone {
+                    first_note: note!(C),
+                    second_note: note!(F #)
+                }
+            })
+        );
     }
     #[test]
     fn scale_polarity() {
@@ -797,16 +835,16 @@ mod tests {
         }
     }
 
-    /// Test that `fill_blanks` correctly blows up if a scale’s notes and intervals are both `None`.
+    /// Test that `fill_blanks` correctly returns an error if a scale’s notes
+    /// and intervals are both `None`.
     #[test]
-    #[should_panic]
     fn scale_emptiness() {
         let mut scale = Scale {
             names: vec!["Ye Absentmindical Forgottene Scale".to_string()],
             notes: None,
             intervals: None,
         };
-        scale.fill_blanks().unwrap();
+        assert_eq!(scale.fill_blanks(), Err(FillBlanksError::EmptyScale));
     }
     /// Test that `semitone_delta` returns the correct offsets for several
     /// crucial intervals. Also tests `semitones_above` and `semitones_below`.
@@ -827,7 +865,7 @@ mod tests {
         for (lhs, rhs, correct_above, correct_below, correct_delta) in
             TEST_CASES
         {
-            let our_delta = lhs.semitone_delta(*rhs);
+            let our_delta = lhs.semitone_delta(*rhs, None);
             if our_delta != *correct_delta {
                 println!("{lhs}.semitone_delta({rhs}) → {our_delta} (WRONG, should be {correct_delta})");
                 ok = false;
@@ -854,8 +892,7 @@ mod tests {
             panic!("Some test cases failed!");
         }
     }
-    /// Test that scales with no notes specified start on C, and that scales
-    /// with any notes specified do not change roots.
+    /// Test that `fill_blanks` starts scales on C if no notes are specified.
     #[test]
     fn c_base_test() {
         let mut c_base_test = Scale {
@@ -863,27 +900,32 @@ mod tests {
             notes: None,
             intervals: Some(vec![2, 2, 1, 2, 2, 2, 1]),
         };
-        let mut d_base_test = Scale {
-            names: vec!["D(efinite) Note Scale".to_string()],
-            notes: Some(vec![note!(D)]),
-            intervals: Some(vec![2, 2, 1, 2, 2, 2, 1]),
-        };
         c_base_test.fill_blanks();
-        d_base_test.fill_blanks();
         assert_eq!(
             c_base_test.notes.unwrap()[0],
             note!(C),
             "Did not assume scale with no notes started on C"
         );
+    }
+    /// Test that `fill_blanks` does not change the roots of scales with notes
+    /// specified.
+    #[test]
+    fn d_base_test() {
+        let mut d_base_test = Scale {
+            names: vec!["D(efinite) Note Scale".to_string()],
+            notes: Some(vec![note!(D)]),
+            intervals: Some(vec![2, 2, 1, 2, 2, 2, 1]),
+        };
+        d_base_test.fill_blanks();
         assert_eq!(
             d_base_test.notes.unwrap()[0],
             note!(D),
             "Scale with first note defined as D somehow wound up starting somewhere else"
         );
     }
-    /// Test that scales with more than seven notes may reuse note names
-    /// consecutively (e.g., ALLOW A, B♭, B, C, D♭, D, E♭, E, F, G♭, G, A♭
-    /// [i.e., the entire chromatic scale])
+    /// Test that `fill_blanks` ALLOWS scales with more than seven notes to reuse
+    /// note names consecutively (e.g., ALLOW A, B♭, B, C, D♭, D, E♭, E, F, G♭,
+    /// G, A♭ [i.e., the entire chromatic scale])
     #[test]
     fn long_scale_letter_reuse_test() {
         let mut scale = Scale {
@@ -907,9 +949,8 @@ mod tests {
         scale.fill_blanks();
     }
     #[test]
-    #[should_panic]
-    // Test that scales with seven or fewer notes CANNOT reuse note names
-    // consecutively (i.e., DISALLOW A♭, A, A♯, D, E, F, G)
+    /// Test that `fill_blanks` DISALLOWS scales with seven notes from reusing
+    /// note names consecutively (i.e., DISALLOW A♭, A, A♯, D, E, F, G)
     fn short_scale_letter_reuse_test() {
         let mut scale = Scale {
             names: vec![
@@ -924,14 +965,22 @@ mod tests {
                 note!(G),
                 note!(A b),
             ]),
-            intervals: Some(vec![1, 1, 6, 1, 1, 1]),
+            intervals: Some(vec![1, 1, 6, 1, 1, 1, 1]),
         };
-        scale.fill_blanks().unwrap();
+        assert_eq!(
+            scale.fill_blanks(),
+            Err(FillBlanksError::GetPolarityError {
+                inner: GetPolarityError::ConsecutiveNotesHadSameName {
+                    first_note: note!(B b),
+                    second_note: note!(B)
+                }
+            })
+        );
     }
 
     #[test]
-    /// Tests whether scales with descending intervals fill in the correct
-    /// notes.
+    /// Tests whether `fill_blanks` returns the correct notes for scales with
+    /// with descending intervals.
     fn test_descending_intervals() {
         let mut scale = Scale {
             names: vec![
@@ -959,8 +1008,8 @@ mod tests {
         scale.fill_blanks();
         assert_eq!(scale.get_notes().unwrap(), expected_notes);
     }
-    /// Tests whether scales with descending notes fill in the correct
-    /// intervals.
+    /// Tests whether `fill_blanks` returns the correct intervals for scales
+    /// with descending notes.
     #[test]
     fn test_descending_notes() {
         let mut scale = Scale {
@@ -989,8 +1038,10 @@ mod tests {
         assert_eq!(scale.get_intervals().unwrap(), expected_intervals);
     }
 
-    /// Test whether get_polarity can correctly determine scale polarity from
-    /// only a single interval (and no notes).
+    /// Test whether `get_polarity` correctly determines scale polarity from
+    /// only one interval (and no notes).
+    ///
+    /// Dedicated to Ozzy Osbourne (1948-2025).
     #[test]
     fn polarity_of_darkness() {
         let scale = Scale {
@@ -1013,11 +1064,10 @@ mod tests {
         assert!(scale.get_polarity().is_err());
     }
 
-    /// When notes and intervals are both provided in full, we should BLOW UP
-    /// if they do not match. We have no way to determine which one is correct,
-    /// so we will leave it up to the user to correct their input.
+    /// When notes and intervals are both provided in full, we should return an
+    /// error if they don’t match. We have no way to determine which one is
+    /// correct, so we’ll leave it up to users to correct their input.
     #[test]
-    #[should_panic]
     fn test_interval_and_note_match() {
         let mut scale = Scale {
             names: vec!["Roman Catholic Scale".to_string()],
@@ -1032,12 +1082,28 @@ mod tests {
             ]),
             intervals: Some(vec![2, 2, 1, 2, 2, 2, 1]),
         };
-        scale.fill_blanks().unwrap();
+        assert_eq!(
+            scale.fill_blanks(),
+            Err(FillBlanksError::ContradictoryInput {
+                notes: vec![
+                    note!(C),
+                    note!(D #),
+                    note!(E),
+                    note!(F #),
+                    note!(G),
+                    note!(A #),
+                    note!(B)
+                ],
+                intervals: vec![2, 2, 1, 2, 2, 2, 1],
+                index: 0,
+                delta: 3,
+                provided_interval: 2
+            })
+        );
     }
 
-    /// Test that seven-note scales are not allowed to skip letter names. (Test is currently unfinished)
+    /// Test that `fill_blanks` does not allow seven-note scales to skip letters.
     #[test]
-    #[should_panic]
     fn test_name_skip() {
         let mut scale = Scale {
             // Chromatic Mixolydian tonos
@@ -1054,6 +1120,27 @@ mod tests {
             ]),
             intervals: None,
         };
-        scale.fill_blanks().unwrap();
+        assert_eq!(
+            scale.fill_blanks(),
+            Err(FillBlanksError::InvalidNoteOrder)
+        );
+    }
+
+    /// Test that `semitone_delta` returns a value of -n/2, where n is the
+    /// number of equal divisions of the octave, for tritones. (Currently, -n/2
+    /// will always be -6, but when we introduce support for other tuning
+    /// systems, this will need to be updated.)
+    #[test]
+    fn semitone_delta_tritone_test() {
+        assert_eq!(note!(C).semitone_delta(note!(F #), None), -6);
+    }
+
+    /// Test that `semitones_above` returns a value of n/2, where n is the
+    /// number of equal divisions of the octave, for tritones. (Currently, n/2
+    /// will always be 6, but when we introduce support for other tuning
+    /// systems, this will need to be updated.)
+    #[test]
+    fn semitones_above_tritone_test() {
+        assert_eq!(note!(F).semitones_above(note!(B)), 6);
     }
 }

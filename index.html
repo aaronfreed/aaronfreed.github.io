@@ -41,6 +41,7 @@
 		<ol class="toclite">
 			<li><a href="#code">Code Projects</a>
 				<ol>
+					<li><a href="#scalatron">Scalatron</a></li>
 					<li><a href="#vaf">VAF</a></li>
 					<li><a href="#alephbet">Aleph Bet</a></li>
 				</ol>
@@ -81,6 +82,63 @@
 
 		<p class="fixheight">I&rsquo;ve made major contributions to the following code projects:</p>
 		<ul class="fixheight">
+			<li id="scalatron"><strong>Scalatron</strong> (repository forthcoming)
+				<ul>
+					<li>Rust library for analyzing musical scales</li>
+					<li>Input format: JSON table made up of scales, which must be named and must include either intervals, notes, or both
+						<ul>
+							<li>If interval count exceeds note count, fills in missing notes (rooted on C if none are specified)</li>
+							<li>If note count exceeds interval count, fills in missing intervals</li>
+						</ul>
+					</li>
+					<li>Features extensive error checking and unit tests verifying that notes and intervals match</li>
+					<li>Currently outputs only HTML tables, although more output formats are planned</li>
+					<li>Additional planned features:
+						<ul>
+							<li>Transpose scale to specified key or to all twelve notes of chromatic scale</li>
+							<li>List all possible modes of scale, rooted on:
+								<ul>
+									<li>Root note of scale</li>
+									<li>Scale degree</li>
+									<li>All twelve notes, in “scale order”</li>
+									<li>All twelve notes, in “circle of fifths order” (<a href="https://aaronfreed.github.io/musicalmodes.html">my detailed, technical explanation</a>)</li>
+								</ul>
+							</li>
+							<li>If possible, generate charts of n &times; 12 scale modes for all twelve notes of chromatic scale, where n is the number of modes the scale possesses.
+								<ul>
+									<li>n <em>may</em> be the number of notes. It will be smaller for scales that can be “simplified” into repeating patterns smaller than an octave. Some scales may not have any modes at all. Examples:
+										<ul>
+											<li>Since the whole-tone scale, consists of the same interval repeated six times (<strong class="accent">W</strong>-<strong class="accent">W</strong>-<strong class="accent">W</strong>-<strong class="accent">W</strong>-<strong class="accent">W</strong>-<strong class="accent">W</strong>), it has no modes and only two variants:
+												<ol class="midpara lowerroman">
+													<li>C-D-E-F&#9839;-G&#9839;-A&#9839;</li>
+													<li>C&#9839;-D&#9839;-F-G-A-B</li>
+												</ol>
+											</li>
+											<li><strong class="accent">W-H</strong>-<strong class="accent">W-H</strong>-<strong class="accent">W-H</strong>-<strong class="accent">W-H</strong> consists of a two-note pattern repeating every three half-steps. W-H rooted on C leads to the same notes as H-W rooted on A&#9839;; thus, this scale has only two modes which can only be made from three possible combinations of notes:
+												<ol class="midpara lowerroman">
+													<li>C-D-D&#9839;-F-F&#9839;-G&#9839;-A-B</li>
+													<li>C&#9839;-D&#9839;-E-F&#9839;-G-A-A&#9839;-C</li>
+													<li>D-E-F-G-G&#9839;-A&#9839;-B-C&#9839;</li>
+												</ol>
+												Making for six total permutations.
+											</li>
+											<li><strong class="accent">H-W-H</strong>-<strong class="accent">H-W-H</strong>-<strong class="accent">H-W-H</strong> consists of a three-note pattern repeated every four half-steps. Thus, it has only three modes made from four possible permutations of notes:
+												<ol class="midpara lowerroman">
+													<li>C-C&#9839;-D-E-F-F&#9839;-G&#9839;-A-A&#9839;</li>
+													<li>C-C&#9839;-D&#9839;-E-F&#9839;-G-A-A&#9839;</li>
+													<li>C-D-D&#9839;-E-F&#9839;-G-G&#9839;-A&#9839;-B</li>
+													<li>C&#9839;-D-D&#9839;-F-F&#9839;-G-A-A&#9839;-B</li>
+												</ol>
+											</li>
+											<li><strong class="accent">W-W-H-H</strong>-<strong class="accent">W-W-H-H</strong> consists of a four-note pattern repeated every six half-steps. Four modes, six possible permutations of notes, twenty-four possible combinations thereof.</li>
+										</ul>
+									</li>
+									<li>Contrast the above examples with the diatonic major scale, W-W-H-W-W-W-H, which contains an extra W between the W-W-H patterns that makes it impossible to simplify into a smaller pattern. It therefore has seven modes, which each have twelve variants.
+								</ul>
+						</ul>
+					</li>
+				</ul>
+			</li>
 			<li id="vaf"><strong><a href="https://github.com/aaronfreed/vaf/" class="noprintlink">VAF</a></strong><span class="linktext"> &#10216;github.<wbr />com/<wbr />aaronfreed<wbr />vaf&#10217;</span>
 				<ul>
 					<li>A Lua texturing utility for <strong><a href="https://alephone.lhowon.org/" target="_blank" rel="noreferrer noopener" class="noprintlink"><em>Marathon</em> Aleph One</a></strong><span class="linktext"> &#10216;alephone.<wbr />lhowon.<wbr />org&#10217;</span>, based on <strong><a href="https://github.com/Hopper262" class="noprintlink">@Hopper262</a></strong><span class="linktext"> &#10216;github.<wbr />com/<wbr />Hopper262&#10217;</span> and <strong>Ares Ex Machina</strong>&rsquo;s <strong><a href="https://simplici7y.com/items/vasara" target="_blank" rel="noreferrer noopener" class="noprintlink">Va&shy;sa&shy;ra</a></strong><span class="linktext"> &#10216;simplici7y.<wbr />com/<wbr />items/<wbr />vasara&#10217;</span>, which in turn is based on <strong><a href="https://github.com/jonirons" target="_blank" rel="noreferrer noopener" class="noprintlink">@jon&shy;ir&shy;ons</a></strong><span class="linktext"> &#10216;github.<wbr />com/<wbr />jonirons&#10217;</span> and <strong><a href="https://github.com/treellama" target="_blank" rel="noreferrer noopener" class="noprintlink">@tree&shy;lla&shy;ma</a></strong>&rsquo;s<span class="linktext"> &#10216;github.<wbr />com/<wbr />treellama&#10217;</span> <strong><a href="https://github.com/treellama/visualmode" target="_blank" rel="noreferrer noopener" class="noprintlink">Visual Mode.lua</a></strong><span class="linktext"> &#10216;github.<wbr />com/<wbr />treellama/<wbr />visualmode&#10217;</span>. (Visual Mode.lua is effectively the command line to Vasara&rsquo;s GUI.)</li>

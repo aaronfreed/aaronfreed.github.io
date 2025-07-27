@@ -104,36 +104,155 @@
 									<li>All twelve notes, in “circle of fifths order” (<a href="https://aaronfreed.github.io/musicalmodes.html">my detailed, technical explanation</a>)</li>
 								</ul>
 							</li>
-							<li>If possible, generate charts of n &times; 12 scale modes for all twelve notes of chromatic scale, where n is the number of modes the scale possesses.
+							<li>Generate all possible modes of scale for all possible notes of chromatic scale.
 								<ul>
-									<li>n <em>may</em> be the number of notes. It will be smaller for scales that can be “simplified” into repeating patterns smaller than an octave. Some scales may not have any modes at all. Examples:
+									<li>For scales that can’t be “reduced” into smaller repetitions within each octave, this is n &times; 12, where n is the number of notes in the scale. Examples of scales that <em>can</em> be reduced:
 										<ul>
-											<li>Since the whole-tone scale, consists of the same interval repeated six times (<strong class="accent">W</strong>-<strong class="accent">W</strong>-<strong class="accent">W</strong>-<strong class="accent">W</strong>-<strong class="accent">W</strong>-<strong class="accent">W</strong>), it has no modes and only two variants:
-												<ol class="midpara lowerroman">
+											<li>Since the chromatic scale repeats a single interval twelve times (<strong class="accent">H</strong>-<strong class="accent">H</strong>-<strong class="accent">H</strong>-<strong class="accent">H</strong>-<strong class="accent">H</strong>-<strong class="accent">H</strong>-<strong class="accent">H</strong>-<strong class="accent">H</strong>-<strong class="accent">H</strong>-<strong class="accent">H</strong>-<strong class="accent">H</strong>-<strong class="accent">H</strong>), it has only one mode that may only be made from one permutation of notes:
+												<ol class="midpara loweralpha">
+													<li>C-C&#9839;-D-D&#9839;-E-F-F&#9839;-G-G&#9839;-A-A&#9839;-B</li>
+												</ol>
+											For a total of twelve half-step clusters. Thus, the chromatic scale has twelve possible permutations across the entire, um, chromatic scale:
+												<table style="width: 100%; margin-top: 0px; margin-bottom: 0px;">
+													<tr>
+														<td>
+															<ol class="midpara lowergreek">
+																<li>C-C&#9839;-D-D&#9839;-E-F-F&#9839;-G-G&#9839;-A-A&#9839;-B</li>
+																<li>C&#9839;-D-D&#9839;-E-F-F&#9839;-G-G&#9839;-A-A&#9839;-B-C</li>
+																<li>D-D&#9839;-E-F-F&#9839;-G-G&#9839;-A-A&#9839;-B-C-C&#9839;</li>
+																<li>D&#9839;-E-F-F&#9839;-G-G&#9839;-A-A&#9839;-B-C-C&#9839;-D</li>
+																<li>E-F-F&#9839;-G-G&#9839;-A-A&#9839;-B-C-C&#9839;-D-D&#9839;</li>
+																<li>F-F&#9839;-G-G&#9839;-A-A&#9839;-B-C-C&#9839;-D-D&#9839;-E</li>
+															</ol>
+														</td>
+														<td>
+															<ol class="midpara lowergreek" start="7">
+																<li>F&#9839;-G-G&#9839;-A-A&#9839;-B-C-C&#9839;-D-D&#9839;-E-F</li>
+																<li>G-G&#9839;-A-A&#9839;-B-C-C&#9839;-D-D&#9839;-E-F-F&#9839;</li>
+																<li>G&#9839;-A-A&#9839;-B-C-C&#9839;-D-D&#9839;-E-F-F&#9839;-G</li>
+																<li>A-A&#9839;-B-C-C&#9839;-D-D&#9839;-E-F-F&#9839;-G-G&#9839;</li>
+																<li>A&#9839;-B-C-C&#9839;-D-D&#9839;-E-F-F&#9839;-G-G&#9839;-A</li>
+																<li>B-C-C&#9839;-D-D&#9839;-E-F-F&#9839;-G-G&#9839;-A-A&#9839;</li>
+															</ol>
+														</td>
+													</tr>
+												</table>
+
+											</li>
+											<li>Since the whole-tone scale repeats a single interval six times (<strong class="accent">W</strong>-<strong class="accent">W</strong>-<strong class="accent">W</strong>-<strong class="accent">W</strong>-<strong class="accent">W</strong>-<strong class="accent">W</strong>), it has only one mode that may only be made from two permutations of notes:
+												<ol class="midpara loweralpha">
 													<li>C-D-E-F&#9839;-G&#9839;-A&#9839;</li>
 													<li>C&#9839;-D&#9839;-F-G-A-B</li>
 												</ol>
+											This repetition occurs across a two-half-step cluster, or a sixth of an octave. Thus, in turn, there are only twelve possible versions of the scale:
+												<table style="width: 100%; margin-top: 0px; margin-bottom: 0px;">
+													<tr>
+														<td>
+															<ol class="midpara lowergreek">
+																<li>C-D-E-F&#9839;-G&#9839;-A&#9839;</li>
+																<li>C&#9839;-D&#9839;-F-G-A-B</li>
+																<li>D-E-F&#9839;-G&#9839;-A&#9839;-C</li>
+																<li>D&#9839;-F-G-A-B-C&#9839;</li>
+															</ol>
+														</td>
+														<td>
+															<ol class="midpara lowergreek" start="5">
+																<li>E-F&#9839;-G&#9839;-A&#9839;-C-D</li>
+																<li>F-G-A-B-C&#9839;-D&#9839;</li>
+																<li>F&#9839;-G&#9839;-A&#9839;-C-D-E</li>
+																<li>G-A-B-C&#9839;-D&#9839;-F</li>
+															</ol>
+														</td>
+														<td>
+															<ol class="midpara lowergreek" start="9">
+																<li>G&#9839;-A&#9839;-C-D-E-F&#9839;</li>
+																<li>A-B-C&#9839;-D&#9839;-F-G</li>
+																<li>A&#9839;-C-D-E-F&#9839;-G&#9839;</li>
+																<li>B-C&#9839;-D&#9839;-F-G-A</li>
+
+															</ol>
+														</td>
+													</tr>
+												</table>
 											</li>
-											<li><strong class="accent">W-H</strong>-<strong class="accent">W-H</strong>-<strong class="accent">W-H</strong>-<strong class="accent">W-H</strong> consists of a two-note pattern repeating every three half-steps. W-H rooted on C leads to the same notes as H-W rooted on A&#9839;; thus, this scale has only two modes which can only be made from three possible combinations of notes:
+											<li><strong class="accent">W-H</strong>-<strong class="accent">W-H</strong>-<strong class="accent">W-H</strong>-<strong class="accent">W-H</strong> consists of a two-note pattern repeating every three half-steps; thus, this scale has only two modes:
+												<ol class="midpara lowerlatin">
+													<li>
+														<strong class="accent">W-H</strong>-<strong class="accent">W-H</strong>-<strong class="accent">W-H</strong>-<strong class="accent">W-H</strong> (root form)
+													</li>
+													<li><strong class="accent">H</strong>-<strong class="accent">W-H</strong>-<strong class="accent">W-H</strong>-<strong class="accent">W-H</strong>-<strong class="accent">W</strong> (inversion)</li>
+												</ol>
+
+												Which in turn may only be made from three possible combinations of notes:
 												<ol class="midpara lowerroman">
 													<li>C-D-D&#9839;-F-F&#9839;-G&#9839;-A-B</li>
 													<li>C&#9839;-D&#9839;-E-F&#9839;-G-A-A&#9839;-C</li>
 													<li>D-E-F-G-G&#9839;-A&#9839;-B-C&#9839;</li>
 												</ol>
-												Making for six total permutations.
+												For a total of six possible permutations of notes within each three-half-step cluster. Four such clusters occur per octave, in turn giving us twenty-four possible permutations across the entire chromatic scale:
+												<table style="width: 100%; margin-top: 0px; margin-bottom: 0px;">
+													<tr>
+														<td>
+															<ol class="midpara lowergreek">
+																<li>C, C&#9839;, D&#9839;, E, F&#9839;, G, A, A&#9839;</li>
+																<li>C, D, D&#9839;, F, F&#9839;, G&#9839;, A, B</li>
+																<li>C&#9839;, D, E, F, G, G&#9839;, A&#9839;, B</li>
+																<li>C&#9839;, D&#9839;, E, F&#9839;, G, A, A&#9839;, C</li>
+																<li>D, D&#9839;, F, F&#9839;, G&#9839;, A, B, C</li>
+																<li>D, E, F, G, G&#9839;, A&#9839;, B, C&#9839;</li>
+																<li>D&#9839;, E, F&#9839;, G, A, A&#9839;, C, C&#9839;</li>
+																<li>D&#9839;, F, F&#9839;, G&#9839;, A, B, C, D</li>
+															</ol>
+														</td>
+														<td>
+															<ol class="midpara lowergreek" start="9">
+																<li>E, F, G, G&#9839;, A&#9839;, B, C&#9839;, D</li>
+																<li>E, F&#9839;, G, A, A&#9839;, C, C&#9839;, D&#9839;</li>
+																<li>F, F&#9839;, G&#9839;, A, B, C, D, D&#9839;</li>
+																<li>F, G, G&#9839;, A&#9839;, B, C&#9839;, D, E</li>
+																<li>F&#9839;, G, A, A&#9839;, C, C&#9839;, D&#9839;, E</li>
+																<li>F&#9839;, G&#9839;, A, B, C, D, D&#9839;, F</li>
+																<li>G, G&#9839;, A&#9839;, B, C&#9839;, D, E, F</li>
+																<li>G, A, A&#9839;, C, C&#9839;, D&#9839;, E, F&#9839;</li>
+															</ol>
+														</td>
+														<td>
+															<ol class="midpara lowergreek" start="17">
+																<li>G&#9839;, A, B, C, D, D&#9839;, F, F&#9839;</li>
+																<li>G&#9839;, A&#9839;, B, C&#9839;, D, E, F, G</li>
+																<li>A, A&#9839;, C, C&#9839;, D&#9839;, E, F&#9839;, G</li>
+																<li>A, B, C, D, D&#9839;, F, F&#9839;, G&#9839;</li>
+																<li>A&#9839;, B, C&#9839;, D, E, F, G, G&#9839;</li>
+																<li>A&#9839;, C, C&#9839;, D&#9839;, E, F&#9839;, G, A</li>
+																<li>B, C, D, D&#9839;, F, F&#9839;, G&#9839;, A</li>
+																<li>B, C&#9839;, D, E, F, G, G&#9839;, A&#9839;</li>
+															</ol>
+														</td>
+													</tr>
+												</table>
+
 											</li>
-											<li><strong class="accent">H-W-H</strong>-<strong class="accent">H-W-H</strong>-<strong class="accent">H-W-H</strong> consists of a three-note pattern repeated every four half-steps. Thus, it has only three modes made from four possible permutations of notes:
+											<li><span class="orange weight4"><span class="accent">H–W–H</span>–<span class="accent">H–W–H</span>–<span class="accent">H–W–H</span></span> consists of a three-note pattern repeated every four half-steps. Thus, it has only three modes:
+												
 												<ol class="midpara lowerroman">
-													<li>C-C&#9839;-D-E-F-F&#9839;-G&#9839;-A-A&#9839;</li>
-													<li>C-C&#9839;-D&#9839;-E-F&#9839;-G-A-A&#9839;</li>
-													<li>C-D-D&#9839;-E-F&#9839;-G-G&#9839;-A&#9839;-B</li>
-													<li>C&#9839;-D-D&#9839;-F-F&#9839;-G-A-A&#9839;-B</li>
+													<li><span class="orange weight4"><span class="accent">H–W–H</span>–<span class="accent">H–W–H</span>–<span class="accent">H–W–H</span></span></li>
+													<li><span class="orange weight4"><span class="accent">W–H</span>–<span class="accent">H–W–H</span>–<span class="accent">H–W–H</span>–<span class="accent">H</span></span></li>
+													<li><span class="orange weight4"><span class="accent">H</span>–<span class="accent">H–W–H</span>–<span class="accent">H–W–H</span>–<span class="accent">H–W</span></span></li>
 												</ol>
+											made from four possible combinations of notes:
+												<ol class="midpara lowerroman">
+													<li>C-C&#9839;-D&#9839;-E-F&#9839;-G-A-A&#9839;</li>
+													<li>C&#9839;-D-E-F-F&#9839;-G&#9839;-A-A&#9839;-C</li>
+													<li>D-D&#9839;-F-F&#9839;-G-A-A&#9839;-B-C&#9839;</li>
+													<li>D&#9839;-E-F&#9839;-G-G&#9839;-A&#9839;-B-C-D</li>
+												</ol>
+											For a total of twelve pemutations within each four-half-step cluster. Since there are three such clusters per octave, there are thirty-six permutations of modes and root notes across the entire chromatic scale. (I won’t list them all.)
 											</li>
-											<li><strong class="accent">W-W-H-H</strong>-<strong class="accent">W-W-H-H</strong> consists of a four-note pattern repeated every six half-steps. Four modes, six possible permutations of notes, twenty-four possible combinations thereof.</li>
+											<li><strong class="accent">W-W-H-H</strong>-<strong class="accent">W-W-H-H</strong> consists of a four-note pattern repeated every six half-steps. Four modes, six possible combinations of notes per mode, twenty-four unique permutations per cluster, two six-half-step clusters per octave, forty-eight possible scale permutations across the entire chromatic scale.</li>
 										</ul>
 									</li>
-									<li>Contrast the above examples with the diatonic major scale, W-W-H-W-W-W-H, which contains an extra W between the W-W-H patterns that makes it impossible to simplify into a smaller pattern. It therefore has seven modes, which each have twelve variants.
+									<li>Thus, we can infer that the formula for the total number of permutations of scales that can be reduced is: (number of modes) &times; (half-steps per cluster) &times; (clusters per octave). This formula never gives us fewer than twelve permutations, because even if a scale has no modes, it will be possible to transpose it to all twelve notes of the chromatic scale.</li>
+									<li>We can contrast the above examples with the diatonic major scale, W-W-H-W-W-W-H: the extra W between the W-W-H patterns makes it impossible to simplify into a smaller pattern. It therefore has seven modes, which each have twelve variants, for a total of eighty-four permutations.
 								</ul>
 						</ul>
 					</li>

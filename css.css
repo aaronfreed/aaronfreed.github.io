@@ -1618,6 +1618,19 @@ h3 .subtitle {
 	margin-top: 15px;
 }
 
+.marginleft16 {
+	margin-left: 16px;
+}
+.marginright16 {
+	margin-right: 16px;
+}
+.marginbottom16 {
+	margin-bottom: 16px;
+}
+.margintop16 {
+	margin-top: 16px;
+}
+
 .marginleft20 {
 	margin-left: 20px;
 }
@@ -1642,6 +1655,19 @@ h3 .subtitle {
 }
 .margintop30 {
 	margin-top: 30px;
+}
+
+.marginleft60 {
+	margin-left: 60px;
+}
+.marginright60 {
+	margin-right: 60px;
+}
+.marginbottom60 {
+	margin-bottom: 60px;
+}
+.margintop60 {
+	margin-top: 60px;
 }
 
 

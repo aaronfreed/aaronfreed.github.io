@@ -115,6 +115,7 @@ window.onload = function () {makeAllSortable();};*/
 								<li><a class="noprintlink" href="#harmonicminorvsaeolianscale">Harmonic Minor vs. Modes from Aeolian (rooted on scale, in ascending order)</a></li>
 								<li><a class="noprintlink" href="#harmonicminorvsaeoliancircleoffifths">Harmonic Minor vs. Modes from Aeolian (rooted on C, in “circle of fifths” order)</a></li>
 								<li><a class="noprintlink" href="#harmonicminorvsaeolianscalecircleoffifths">Harmonic Minor vs. Modes from Aeolian (rooted on scale, in “circle of fifths” order)</a></li>
+								<li><a class="noprintlink" href="#chordtonalities">Chord Tonalities by Scale Position and Mode (Harmonic Minor)</a></li>
 							</ol>
 						</li>
 						<li><a class="noprintlink" href="#harmonicminor">Ascending Melodic Minor’s Modes in Detail</a>
@@ -126,6 +127,7 @@ window.onload = function () {makeAllSortable();};*/
 								<li><a class="noprintlink" href="#melodicminorvsdorianscale">Ascending Melodic Minor vs. Modes from Dorian (rooted on scale, in ascending order)</a></li>
 								<li><a class="noprintlink" href="#melodicminorvsdoriancircleoffifths">Ascending Melodic Minor vs. Modes from Dorian (rooted on C, in “circle of fifths” order)</a></li>
 								<li><a class="noprintlink" href="#melodicminorvsdorianscalecircleoffifths">Ascending Melodic Minor vs. Modes from Dorian (rooted on scale, in “circle of fifths” order)</a></li>
+								<li><a class="noprintlink" href="#chordtonalities">Chord Tonalities by Scale Position and Mode (Ascending Melodic Minor)</a></li>
 							</ol>
 						</li>
 						<li><a class="noprintlink" href="#diatonicstability">The Diatonic Major Scale’s Stability</a>
@@ -1136,6 +1138,24 @@ i>
 				</thead>
 			</table>
 
+			<p class="light fixheight">Analysis of chord tonality by scale position:</p>
+
+			<table id="harmonicminortonalities" class="tabular-oldstyle">
+				<thead class="fixheight">
+					<tr><th colspan="10" class="accent">Chord Tonalities by Scale Position &amp; Mode (Harmonic Minor)</th></tr>
+					<tr><th class="rightborder" colspan="3">Mode</th><th>I</th><th>II</th><th>III</th><th>IV</th><th>V</th><th>VI</th><th>VII</th></tr>
+				</thead>
+				<tbody class="fixheight">
+					<tr><td>1</td><td class="right weight4">Aeolian ♯7</td>   <td class="rightborder weight4">Harmonic minor</td>   <td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="orange">dim</td><td class="green"> AUG</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               Maj</td><td class="orange light">dim</td></tr>
+					<tr><td>2</td><td class="right weight4">Locrian ♯6</td>   <td class="rightborder weight4">Maqam Tarznauyn</td>  <td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td class="green"> AUG</td><td class="accent">min</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="orange">dim</td><td class="accent light">min</td></tr>
+					<tr><td>3</td><td class="right weight4">Ionian ♯5</td>    <td class="rightborder weight4">Augmented major</td>  <td class="green"> <strong><strong><strong>AUG</strong></strong></strong></td><td class="accent">min</td><td>               Maj</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td class="accent">min</td><td class="orange light">dim</td></tr>
+					<tr><td>4</td><td class="right weight4">Dorian ♯4</td>    <td class="rightborder weight4">Lydian diminished</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td>               Maj</td><td>               Maj</td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="orange">dim</td><td class="green light"> AUG</td></tr>
+					<tr><td>5</td><td class="right weight4">Phrygian ♯3</td>  <td class="rightborder weight4">Phrygian dominant</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               Maj</td><td class="orange">dim</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td class="green"> AUG</td><td class="accent light">min</td></tr>
+					<tr><td>6</td><td class="right weight4">Lydian ♯2</td>    <td class="rightborder weight4">Aeolian harmonic</td> <td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="orange">dim</td><td class="accent">min</td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td class="green"> <strong><strong><strong>AUG</strong></strong></strong></td><td class="accent">min</td><td class="light">       Maj</td></tr>
+					<tr><td>7</td><td class="right weight4">Mixolydian ♯1</td><td class="rightborder weight4">Super-Locrian ♭7</td> <td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td class="accent">min</td><td class="orange">dim</td><td class="green"> <strong><strong><strong>AUG</strong></strong></strong></td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td>               Maj</td><td class="light">       Maj</td></tr>
+				</tbody>
+			</table>
+
 			<!--<p class="fixheight light">Finally, this table also clarifies why these charts have to use scare quotes for &ldquo;circle of fifths&rdquo;: once we abandon the diatonic major scale’s regularity, we’re not <em>actually</em> moving every note up or down by a fifth. A perfect fifth up from E♭ isn’t B; it’s B♭. A perfect fifth below F isn’t B; it’s B♭. This is very likely why the diatonic major scale uses the intervals it does: it possesses a borderline <em>fractal</em> level of regularity. Manifestations of the circle of fifths occur throughout it. Even bumping <em>one</em> of its notes a half-step up or down breaks the pattern in places. We can still <em>approximate</em> &ldquo;circle of fifths&rdquo; order, of course, but our approximations will have to carry asterisks.</p>
 
 			<p>…ok, actually, this table doesn’t actually clarify that, because the scales are actually moving backwards from the way they move in the “you were expecting modes” table (e.g., ). i’m confused about this as well, but i’m too tired to investigate how that works. soon™.</p>-->
@@ -1661,6 +1681,25 @@ i>
 				</tbody>
 			</table>
 		
+			<p class="light fixheight">Analysis of chord tonality by scale position:</p>
+
+
+			<table id="harmonicminortonalities" class="tabular-oldstyle sidepad10">
+				<thead class="fixheight">
+					<tr><th colspan="10" class="accent">Chord Tonalities by Scale Position &amp; Mode (Ascending Melodic Minor)</th></tr>
+					<tr><th class="rightborder" colspan="3">Mode</th><th>I</th><th>II</th><th>III</th><th>IV</th><th>V</th><th>VI</th><th>VII</th></tr>
+				</thead>
+				<tbody class="fixheight">
+					<tr><td>1</td><td class="weight4" style="display: flex; justify-content: space-between;"><span class="azure" style="position: relative; top: 0px; left: 0px; padding-right: 8px;">Ionian&nbsp;♭3</span> <span class="orange" style="position: relative; top: 0px; right: 0px; padding-left: 8px;">Dorian&nbsp;♯7</span></td>     <td class="rightborder weight4">Ascending melodic minor</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="accent">min</td><td class="green"> AUG</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="orange">dim</td><td class="orange light">dim</td></tr>
+					<tr><td>2</td><td class="weight4" style="display: flex; justify-content: space-between;"><span class="azure" style="position: relative; top: 0px; left: 0px; padding-right: 8px;">Dorian&nbsp;♭2</span> <span class="orange" style="position: relative; top: 0px; right: 0px; padding-left: 8px;">Phrygian&nbsp;♯6</span></td>   <td class="rightborder weight4">Jazz minor inverse</td>     <td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="green"> AUG</td><td>               Maj</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td class="orange">dim</td><td class="accent light">min</td></tr>
+					<tr><td>3</td><td class="weight4" style="display: flex; justify-content: space-between;"><span class="azure" style="position: relative; top: 0px; left: 0px; padding-right: 8px;">Phrygian&nbsp;♭1</span> <span class="orange" style="position: relative; top: 0px; right: 0px; padding-left: 8px;">Lydian&nbsp;♯5</span></td>   <td class="rightborder weight4">Lydian augmented</td>      <td class="green"> <strong><strong><strong>AUG</strong></strong></strong></td><td>               Maj</td><td>               Maj</td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td class="accent">min</td><td class="accent light">min</td></tr>
+					<tr><td>4</td><td class="weight4" style="display: flex; justify-content: space-between;"><span class="azure" style="position: relative; top: 0px; left: 0px; padding-right: 8px;">Lydian&nbsp;♭7</span> <span class="orange" style="position: relative; top: 0px; right: 0px; padding-left: 8px;">Mixolydian&nbsp;♯4</span></td> <td class="rightborder weight4">Lydian dominant</td>       <td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               Maj</td><td class="orange">dim</td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="accent">min</td><td class="green light"> AUG</td></tr>
+					<tr><td>5</td><td class="weight4" style="display: flex; justify-content: space-between;"><span class="azure" style="position: relative; top: 0px; left: 0px; padding-right: 8px;">Mixolydian&nbsp;♭6</span> <span class="orange" style="position: relative; top: 0px; right: 0px; padding-left: 8px;">Aeolian&nbsp;♯3</span></td><td class="rightborder weight4">Aeolian dominant</td>      <td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="orange">dim</td><td class="orange">dim</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="accent"><strong><strong><strong>dim</strong></strong></strong></td><td class="green"> AUG</td><td class="light">       Maj</td></tr>
+					<tr><td>6</td><td class="weight4" style="display: flex; justify-content: space-between;"><span class="azure" style="position: relative; top: 0px; left: 0px; padding-right: 8px;">Aeolian&nbsp;♭5</span> <span class="orange" style="position: relative; top: 0px; right: 0px; padding-left: 8px;">Locrian&nbsp;♯2</span></td>   <td class="rightborder weight4">Half-diminished</td>       <td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td class="orange">dim</td><td class="accent">min</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="green"> <strong><strong><strong>AUG</strong></strong></strong></td><td>               Maj</td><td class="light">       Maj</td></tr>
+					<tr><td>7</td><td class="weight4" style="display: flex; justify-content: space-between;"><span class="azure" style="position: relative; top: 0px; left: 0px; padding-right: 8px;">Locrian&nbsp;♭4</span> <span class="orange" style="position: relative; top: 0px; right: 0px; padding-left: 8px;">Ionian&nbsp;♯1</span></td>    <td class="rightborder weight4">Super-Locrian</td>         <td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td class="accent">min</td><td class="accent">min</td><td class="green"> <strong><strong><strong>AUG</strong></strong></strong></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               Maj</td><td class="accent light">min</td></tr>
+				</tbody>
+			</table>
+
 			<h2 id="diatonicstability" class="centred">The Diatonic Major Scale’s Stability</h2>
 
 			<p class="fixheight light">Let’s use a slightly more flexible root to show how ascending melodic minor’s modes relate to the diatonic major scale’s in both directions – modes of Ionian, modes of ascending melodic minor, and modes of Dorian. Note, particularly, how much stabler the diatonic major scale’s root is.</p>

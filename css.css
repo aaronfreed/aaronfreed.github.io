@@ -1411,16 +1411,16 @@ del {
 .hue330 del, del.hue330, s.hue330, .hue330 s {
 	text-decoration-color: var(--oklab330-translucent);
 }
-a:link, a:link u, a:link del {
+a:link, a:link u, a:link del, .azurelink :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-color: var(--link-translucent);
 }
-a:visited, a:visited u, a:visited del {
+a:visited, a:visited u, a:visited del, .magentalink :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-color: var(--link-visited-translucent);
 }
-a:hover, a:hover u, a:hover del {
+a:hover, a:hover u, a:hover del, .orangelink :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-color: var(--link-hover-translucent);
 }
-a:active, a:active u, a:active del {
+a:active, a:active u, a:active del, .greenlink :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-color: var(--link-active-translucent);
 }
 del.thick {
@@ -1540,7 +1540,7 @@ h3 .subtitle {
 .music :where( h1, h2, h3, h4) {
 	margin: 16px 0px 8px;
 }
-.accent, .accent td, .accent th {
+.accent, .accent td, .accent th, .accentlinks, .accentlinks td, .accentlinks th {
 	color: var(--heading-color);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
@@ -3273,7 +3273,7 @@ ul.notablemargin {
 	padding-left: 15px; line-height: 125%;
 }
 
-.orange {
+.orange, .orangelinks {
 	color: var(--link-hover);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
@@ -3281,7 +3281,7 @@ ul.notablemargin {
 	color: var(--link-hover-translucent);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
-.green {
+.green, .greenlinks {
 	color: var(--link-active);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
@@ -3289,7 +3289,7 @@ ul.notablemargin {
 	color: var(--link-active-translucent);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
-.azure {
+.azure, .azurelinks {
 	color: var(--link);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
@@ -3297,13 +3297,34 @@ ul.notablemargin {
 	color: var(--link-translucent);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
-.magenta {
+.magenta, .magentalinks {
 	color: var(--link-visited);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
 .magenta-translucent {
 	color: var(--link-visited-translucent);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
+}
+
+.magentalinks :is(a:link, a:visited) {
+	color: var(--link-visited);
+	text-decoration-color: var(--link-visited-translucent);
+}
+.azurelinks :is(a:link, a:visited) {
+	color: var(--link);
+	text-decoration-color: var(--link-translucent);
+}
+.accentlinks :is(a:link, a:visited) {
+	color: var(--heading-color);
+	text-decoration-color: var(--heading-color-translucent);
+}
+.orangelinks :is(a:link, a:visited), :is(.orangelinks, .magentalinks, .azurelinks, .accentlinks) A:hover {
+	color: var(--link-hover);
+	text-decoration-color: var(--link-hover-translucent);
+}
+.greenlinks :is(a:link, a:visited), :is(.orangelinks, .magentalinks, .azurelinks, .accentlinks) A:active {
+	color: var(--link-active);
+	text-decoration-color: var(--link-active-translucent);
 }
 
 .weight0,

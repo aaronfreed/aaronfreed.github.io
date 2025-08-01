@@ -1375,40 +1375,40 @@ del {
 .toc-counter del, del.toc-counter, s.toc-counter, .toc-counter s {
 	text-decoration-color: var(--toc-counter-translucent);
 }
-.hue0 del, del.hue0, s.hue0, .hue0 s {
+.hue0 del, del.hue0, s.hue0, .hue0 s, .hue0links :is(a:link, a:visited) {
 	text-decoration-color: var(--oklab0-translucent);
 }
-.hue30 del, del.hue30, s.hue30, .hue30 s {
+.hue30 del, del.hue30, s.hue30, .hue30 s, .hue30links :is(a:link, a:visited) {
 	text-decoration-color: var(--oklab30-translucent);
 }
-.hue60 del, del.hue60, s.hue60, .hue60 s {
+.hue60 del, del.hue60, s.hue60, .hue60 s, .hue60links :is(a:link, a:visited) {
 	text-decoration-color: var(--oklab60-translucent);
 }
-.hue90 del, del.hue90, s.hue90, .hue90 s {
+.hue90 del, del.hue90, s.hue90, .hue90 s, .hue90links :is(a:link, a:visited) {
 	text-decoration-color: var(--oklab90-translucent);
 }
-.hue120 del, del.hue120, s.hue120, .hue120 s {
+.hue120 del, del.hue120, s.hue120, .hue120 s, .hue120links :is(a:link, a:visited) {
 	text-decoration-color: var(--oklab120-translucent);
 }
-.hue150 del, del.hue150, s.hue150, .hue150 s {
+.hue150 del, del.hue150, s.hue150, .hue150 s, .hue150links :is(a:link, a:visited) {
 	text-decoration-color: var(--oklab150-translucent);
 }
-.hue180 del, del.hue180, s.hue180, .hue180 s {
+.hue180 del, del.hue180, s.hue180, .hue180 s, .hue180links :is(a:link, a:visited) {
 	text-decoration-color: var(--oklab180-translucent);
 }
-.hue210 del, del.hue210, s.hue210, .hue210 s {
+.hue210 del, del.hue210, s.hue210, .hue210 s, .hue210links :is(a:link, a:visited) {
 	text-decoration-color: var(--oklab210-translucent);
 }
-.hue240 del, del.hue240, s.hue240, .hue240 s {
+.hue240 del, del.hue240, s.hue240, .hue240 s, .hue240links :is(a:link, a:visited) {
 	text-decoration-color: var(--oklab240-translucent);
 }
-.hue270 del, del.hue270, s.hue270, .hue270 s {
+.hue270 del, del.hue270, s.hue270, .hue270 s, .hue270links :is(a:link, a:visited) {
 	text-decoration-color: var(--oklab270-translucent);
 }
-.hue300 del, del.hue300, s.hue300, .hue300 s {
+.hue300 del, del.hue300, s.hue300, .hue300 s, .hue300links :is(a:link, a:visited) {
 	text-decoration-color: var(--oklab300-translucent);
 }
-.hue330 del, del.hue330, s.hue330, .hue330 s {
+.hue330 del, del.hue330, s.hue330, .hue330 s, .hue330links :is(a:link, a:visited) {
 	text-decoration-color: var(--oklab330-translucent);
 }
 a:link, a:link u, a:link del, .azurelink :is(a:link, a:visited, a:hover, a:active) {
@@ -1417,10 +1417,10 @@ a:link, a:link u, a:link del, .azurelink :is(a:link, a:visited, a:hover, a:activ
 a:visited, a:visited u, a:visited del, .magentalink :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-color: var(--link-visited-translucent);
 }
-a:hover, a:hover u, a:hover del, .orangelink :is(a:link, a:visited, a:hover, a:active) {
+a:hover, a:hover u, a:hover del, .orangelink :is(a:link, a:visited, a:hover, a:active), :is(.hue0links, .hue30links, .hue60links, .hue90links, .hue120links, .hue150links, .hue180links, .hue210links, .hue240links, .hue270links, .hue300links, .hue330links) a:hover {
 	text-decoration-color: var(--link-hover-translucent);
 }
-a:active, a:active u, a:active del, .greenlink :is(a:link, a:visited, a:hover, a:active) {
+a:active, a:active u, a:active del, .greenlink :is(a:link, a:visited, a:hover, a:active), :is(.hue0links, .hue30links, .hue60links, .hue90links, .hue120links, .hue150links, .hue180links, .hue210links, .hue240links, .hue270links, .hue300links, .hue330links) a:active {
 	text-decoration-color: var(--link-active-translucent);
 }
 del.thick {
@@ -3029,40 +3029,40 @@ td.translation-romanized, th.translation-romanized
 	padding-right: 0px;
 }
 
-.hue0, .hue0 td, .hue0 th, td.hue0, th.hue0 {
+.hue0, .hue0 td, .hue0 th, td.hue0, th.hue0, .hue0links, .hue0links :is(a:link, a:visited) {
 	color: var(--oklab0);
 }
-.hue30, .hue30 td, .hue30 th, td.hue30, th.hue30 {
+.hue30, .hue30 td, .hue30 th, td.hue30, th.hue30, .hue30links, .hue30links :is(a:link, a:visited) {
 	color: var(--oklab30);
 }
-.hue60, .hue60 td, .hue60 th, td.hue60, th.hue60 {
+.hue60, .hue60 td, .hue60 th, td.hue60, th.hue60, .hue60links, .hue60links :is(a:link, a:visited) {
 	color: var(--oklab60);
 }
-.hue90, .hue90 td, .hue90 th, td.hue90, th.hue90 {
+.hue90, .hue90 td, .hue90 th, td.hue90, th.hue90, .hue90links, .hue90links :is(a:link, a:visited) {
 	color: var(--oklab90);
 }
-.hue120, .hue120 td, .hue120 th, td.hue120, th.hue120 {
+.hue120, .hue120 td, .hue120 th, td.hue120, th.hue120, .hue120links, .hue120links :is(a:link, a:visited) {
 	color: var(--oklab120);
 }
-.hue150, .hue150 td, .hue150 th, td.hue150, th.hue150 {
+.hue150, .hue150 td, .hue150 th, td.hue150, th.hue150, .hue150links, .hue150links :is(a:link, a:visited) {
 	color: var(--oklab150);
 }
 .hue180, .hue180 td, .hue180 th, td.hue180, th.hue180 {
 	color: var(--oklab180);
 }
-.hue210, .hue210 td, .hue210 th, td.hue210, th.hue210 {
+.hue210, .hue210 td, .hue210 th, td.hue210, th.hue210, .hue210links, .hue210links :is(a:link, a:visited) {
 	color: var(--oklab210);
 }
-.hue240, .hue240 td, .hue240 th, td.hue240, th.hue240 {
+.hue240, .hue240 td, .hue240 th, td.hue240, th.hue240, .hue240links, .hue240links :is(a:link, a:visited) {
 	color: var(--oklab240);
 }
-.hue270, .hue270 td, .hue270 th, td.hue270, th.hue270 {
+.hue270, .hue270 td, .hue270 th, td.hue270, th.hue270, .hue270links, .hue270links :is(a:link, a:visited) {
 	color: var(--oklab270);
 }
-.hue300, .hue300 td, .hue300 th, td.hue300, th.hue300 {
+.hue300, .hue300 td, .hue300 th, td.hue300, th.hue300, .hue300links, .hue300links :is(a:link, a:visited) {
 	color: var(--oklab300);
 }
-.hue330, .hue330 td, .hue330 th, td.hue330, th.hue330 {
+.hue330, .hue330 td, .hue330 th, td.hue330, th.hue330, .hue330links, .hue330links :is(a:link, a:visited) {
 	color: var(--oklab330);
 }
 

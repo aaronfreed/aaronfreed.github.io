@@ -3070,8 +3070,10 @@ td.translation-romanized, th.translation-romanized
 	margin-top: 6px;
 	margin-left: 16px;
 	font-size: 15px;
-	font-style: italic;
 	color: var(--heading-color) !important;
+}
+.hathortimeline .speaker {
+	font-style: italic;
 }
 
 p.songwriters {

@@ -3047,7 +3047,7 @@ td.translation-romanized, th.translation-romanized
 .hue150, .hue150 td, .hue150 th, td.hue150, th.hue150, .hue150links, .hue150links :is(a:link, a:visited) {
 	color: var(--oklab150);
 }
-.hue180, .hue180 td, .hue180 th, td.hue180, th.hue180 {
+.hue180, .hue180 td, .hue180 th, td.hue180, th.hue180, .hue180links, .hue180links :is(a:link, a:visited) {
 	color: var(--oklab180);
 }
 .hue210, .hue210 td, .hue210 th, td.hue210, th.hue210, .hue210links, .hue210links :is(a:link, a:visited) {
@@ -3318,11 +3318,11 @@ ul.notablemargin {
 	color: var(--heading-color);
 	text-decoration-color: var(--heading-color-translucent);
 }
-.orangelinks :is(a:link, a:visited), :is(.orangelinks, .magentalinks, .azurelinks, .accentlinks) A:hover {
+.orangelinks :is(a:link, a:visited), :is(.orangelinks, .magentalinks, .azurelinks, .accentlinks, .hue0links, .hue30links, .hue60links, .hue90links, .hue120links, .hue150links, .hue180links, .hue210links, .hue240links, .hue270links, .hue300links, .hue330links) A:hover {
 	color: var(--link-hover);
 	text-decoration-color: var(--link-hover-translucent);
 }
-.greenlinks :is(a:link, a:visited), :is(.orangelinks, .magentalinks, .azurelinks, .accentlinks) A:active {
+.greenlinks :is(a:link, a:visited), :is(.orangelinks, .magentalinks, .azurelinks, .accentlinks, .hue0links, .hue30links, .hue60links, .hue90links, .hue120links, .hue150links, .hue180links, .hue210links, .hue240links, .hue270links, .hue300links, .hue330links) A:active {
 	color: var(--link-active);
 	text-decoration-color: var(--link-active-translucent);
 }

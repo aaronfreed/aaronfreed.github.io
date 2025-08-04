@@ -253,6 +253,12 @@
 		.dark-invert {
 			filter:invert(100%) hue-rotate(180deg);
 		}
+		.fittoscreen {
+			width: 100%;
+		}
+		.screen800 {
+			width: 800px;
+		}
 	}
 }
 @media (prefers-color-scheme: light) {
@@ -516,6 +522,24 @@
 	}
 	.paladinoath h1 {
 		margin-top: 0px; margin-bottom: 0.25em;
+	}
+	.print10toleft {
+		margin-left: -10px !important;
+	}
+	.print20toleft {
+		margin-left: -20px !important;
+	}
+	.print30toleft {
+		margin-left: -30px !important;
+	}
+	.print40toleft {
+		margin-left: -40px !important;
+	}
+	.print50toleft {
+		margin-left: -50px !important;
+	}
+	.print60toleft {
+		margin-left: -60px !important;
 	}
 }
 @media screen {
@@ -1110,6 +1134,25 @@
 	.music-totals {
 		margin-top: 24px;
 		padding: 0px 20px;
+	}
+
+	.screen10toleft {
+		margin-left: -10px !important;
+	}
+	.screen20toleft {
+		margin-left: -20px !important;
+	}
+	.screen30toleft {
+		margin-left: -30px !important;
+	}
+	.screen40toleft {
+		margin-left: -40px !important;
+	}
+	.screen50toleft {
+		margin-left: -50px !important;
+	}
+	.screen60toleft {
+		margin-left: -60px !important;
 	}
 }
 
@@ -2456,7 +2499,8 @@ thead tr.freshprince th {
 .master > thead,
 .master > tfoot,
 .multi > tfoot,
-.unofficial > thead
+.unofficial > thead,
+.backgroundcolor
 {
 	background-color: var(--background);
 }

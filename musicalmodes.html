@@ -1098,9 +1098,9 @@ window.onload = function () {makeAllSortable();};*/
 			<h2 id="pentatonicoverview" class="centred">As complement of Ionian</h2>
 			<p class="light fixheight">Pentatonic (five-note, “5t” for short) scales are ubiquitous in rock, blues, and jazz, though they’re much older than that and exist in many cultures. The most common pentatonic scale is literally Ionian’s scale complement.</p>
 			
-			<p class="light fixheight">What exactly is a scale complement? It’s the equivalent of a binary XOR. That is, if we represent a scale as a set of twelve 1s (“this tone contains a note”) or 0s (“this tone does not contain a note”), then we flip all the bits. Tones that had notes no longer are part of the scale; tones that didn’t now are. That’s the complement.</p>
+			<p class="light fixheight">What exactly is a scale complement? It’s the equivalent of a binary XOR. Say we represent a scale as a set of twelve 1s (“this tone is part of the scale”) or 0s (“this tone is not part of the scale”). Now, flip all the bits. Tones that had notes are no longer part of the scale; tones that didn’t now are. That’s the complement.</p>
 			
-			<p class="light fixheight">This means we can play the pentatonic scale using all the piano keys we <em>didn’t</em> use to play Ionian. Whenever I write “the pentatonic scale” (i.e., preceded by the definite article), I mean <em>this</em> pentatonic scale. To wit:
+			<p class="light fixheight">This means we can play the pentatonic scale using all the piano keys we <em>didn’t</em> use to play Ionian. Whenever I write “the pentatonic scale”, preceded by the definite article, I mean <em>this</em> pentatonic scale. To wit:
 			
 			<ul class="light fixheight">
 				<li>C Ionian only uses the white keys on the piano: C, D, E, F, G, A, B, C.</li>
@@ -1131,7 +1131,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light fixheight">Since the pentatonic scale has two fewer notes than Ionian, our analysis must delete two modes. But <em>which</em> two? We can derive the pentatonic scale by deleting at least three discrete note pairs from Ionian.</p>
 			
-			<p class="light fixheight orange"><em><strong>A quick warning before we proceed further: we’re about to take a quick detour into “right for the wrong reasons” land. By the end of this section, you’ll understand how, why, and where the first two analyses go wrong.</strong></em></p>
+			<p class="light fixheight orange"><em><strong>A quick warning before we proceed further: we’re about to take a quick detour into “right for the wrong reasons” land. After the third table, I’ll explain how, why, and where the first two tables go wrong.</strong></em></p>
 
 			<p class="light fixheight">Let’s try disregarding Phrygian and Locrian, the lowest modes in the circle of fifths progression. In this analysis:</p>
 
@@ -1336,7 +1336,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light fixheight">Since the pentatonic modes have less well-established names than Ionian’s, my brain’s cutesy part wants to rename them Nianoi, Niadyloxim, Niarod, Nialoea, and Niagyrhp, but I’m afraid that might confuse people, even after the above explanation. However, that won’t stop me from using them as alternate names.</p>
 
-			<p class="light fixheight">It might not be immediately clear why the patterns for the interval spacing change between Ionian and pentatonic. Let’s see the above table again, this time with the deleted tones <span class="hue0">in red</span>, and the intervals that get combined <span class="hue270">in purple</span>:</p>
+			<p class="light fixheight">The reason pentatonic’s interval spacing patterns are out of sync with Ionian’s may not be obvious. Let’s revisit the above table, but this time, we’ll print deleted tones <span class="hue0">in red</span> and combined intervals <span class="hue270">in purple</span>:</p>
 
 			<table id="pentatonicinversionsintervals" class="centred tabular-oldstyle nowrappri/nt fixheight">
 				<thead>
@@ -1394,17 +1394,28 @@ window.onload = function () {makeAllSortable();};*/
 				</tbody>
 			</table>
 
-			<p class="light fixheight">In this particular case, the note we’ve deleted within the scale outweighs the importance of the intervals at that position. (Bear in mind, we aren’t really <em>deleting</em> intervals; we’re deleting <em>notes</em>, and therefore <em>combining</em> intervals.) Since Ionian has only semitones and whole tones, and we only delete semitones that precede whole tones or tones that precede semitones, every interval we’ve deleted gets folded into a new minor third mirroring the pattern of the notes we’ve deleted, thus overwriting the old intervals with the pattern of notes we’ve deleted. </p>
+			<p class="light fixheight">It may help to realize that we aren’t <em>deleting</em> intervals; we’re deleting <em>notes</em>, and therefore <em>combining</em> intervals. For instance, deleting a scale’s second note combines its first two intervals. Also, bear in mind that:
+				<ol class="light fixheight">
+					<li>Ionian has only semitones and whole tones</li>
+					<li>We only delete notes that:
+						<ol class="light fixheight loweralpha">
+							<li>follow semitones and precede whole tones</li>
+							<li>follow whole tones and precede semitones</li>
+						</ol>
+					</li>
+				</ol>
+					
+			<p class="light fixheight">Thus, the two intervals around every deleted note turn become a single minor third aligning exactly to the pattern of deletions. Since this pattern is out of phase with the original one, it changes, but if the deleted notes were surrounded by different intervals, the patterns wouldn’t map as precisely to each other.</p>
 
 			<h2 id="pentatoniccircle" class="centred">The Pentatonic Circle of Fourths, or, Contrary Motion Explained</h2>
 
-			<p class="light fixheight">One further point: The pentatonic circle of fifths order progresses in the exact opposite order from the Ionian circle of fifths. In fact, to emphasize this point, I’m not even going to keep calling it the pentatonic circle of fifths; I’m going to call it the pentatonic circle of fourths. I find this fitting for at least two reasons:
+			<p class="light fixheight">One further point: The pentatonic circle of fifths order progresses in the exact opposite direction from the Ionian circle of fifths order. In fact, to emphasize this point, I’m not even gonna call it the pentatonic circle of fifths anymore. I’ma call it <del>monkeydude</del> <del>Josh</del> the pentatonic circle of fourths. I find this fitting for at least two reasons:
 				<ol class="light fixheight">
-					<li>Scale analysis disregards octaves in such a way that moving up a perfect fifth equates to moving down a perfect fourth. The difference in nomenclature helps call attention to their contrary directions.</li>
-					<li>It also feels fitting to use the perfect fourth (five semitones) as the focus of my analysis of five-note scales, since the perfect fifth (seven semitones) has been the focus of my analysis of seven-note scales.
+					<li>Scale analysis disregards octaves in such a way that moving up a perfect fifth equates to moving down a perfect fourth. The different nomenclature helps call attention to their contrary directions.</li>
+					<li>Since the perfect fifth (seven semitones) has been the focus of my analysis of seven-note scales, the perfect fourth (five semitones) feels like the perfect focus for analysis of five-note scales.
 				</ol>
 			</p>
-			<p class="light fixheight">But why does this happen? It’s probably easiest to analyze in terms of interval spacing.</p>
+			<p class="light fixheight">But why do they move in opposite directions? It’s probably easiest to analyze in terms of interval spacing.</p>
 			
 			<p class="light fixheight">Pentatonic changes two of Ionian’s interval pairs from “tone, semitone” to “minor third”. It so happens that one of Ionian’s two semitones closes out the scale. Thus, compare what happens when we shift pentatonic major’s intervals to the left to what happens when we shift Ionian’s.</p>
 			
@@ -1449,7 +1460,7 @@ window.onload = function () {makeAllSortable();};*/
 			
 			<p class="light fixheight">Both scales contain a repeated interval set (called a tetrachord in Ionian and a trichord in pentatonic) and a spare whole step. I’ve marked one possible reading within the interval list. (Two such readings exist of pentatonic, and three of Ionian; in this example, I’ve avoided splitting tetrachords or trichords in the base scale.)</p>
 
-			<p class="light fixheight">They have similar structures and five of the same notes… but that’s almost where their similarities <em>stop</em>.</p>
+			<p class="light fixheight">Ionian and pentatonic have similar structures and share five notes… but for the purposes of this analysis, that’s almost where their similarities <em>stop</em>.</p>
 
 			<p class="light fixheight">I’ve analyzed Ionian’s tetrachord as whole tone, whole tone, semitone, placing the extra whole tone mid-scale. Shifting the extra semitone to the right shifts almost every other note of the scale down. Its only mode with a more front-loaded interval list is Lydian mode, which swaps the first semitone with the following whole tone; as a result, the fourth note is the only note that <em>isn’t</em> transposed down when we shift the intervals to the right.</li>
 
@@ -1504,7 +1515,63 @@ window.onload = function () {makeAllSortable();};*/
 				<li>As a result, the scales have effectively opposite directions of motion.</li>
 			</ul>
 
-			<p class="light fixheight">(The ancient Greeks analyzed their diatonic scale, whose interval spacing was almost identical to ours, using a different division that, inconveniently, splits their Ionian equivalent’s second tetrachord. I follow their example when discussing their scales, but I simplified here: this explanation is convoluted enough as it is.)
+			<p class="light fixheight">One final note: I highlighted the extra whole step, or <em>synaphe</em> (ancient Greek: <em class="toc-counter" lang="grc">σῠνᾰφή</em>, <em class="toc-counter">sŭnăphe&#772;&#769;</em>, literally <em class="toc-counter">connection, union, junction; point or line of junction; conjunction of two tetrachords</em>; pronounced roughly <em class="toc-counter">su-na-FE</em>), but its different position in each scale isn’t, in and of itself, why they move in different directions. In fact, since both scales are mostly made of whole steps, multiple intervals could be considered their <em>synaphai</em>; the choice depends entirely on the arbitrary choice of trichord or tetrachord pattern. Two such patterns can fit for the pentatonic scale and three for Ionian; each result in different <em>synaphai</em> and <em>n</em>-chord divisions. I used my divisions because the others split one of the base scale’s <em>n-</em>chords. (I’ve <span class="accent">highlighted</span> my approaches below.)</p>
+
+			<table class="tabular-oldstyle fixheight nowrapprint centred"> 
+				<thead>
+					<tr class="toc-counter weight4">
+						<th colspan="5">Alternate Analysis of Tetrachords &amp; Trichords</th>
+					</tr>
+					<tr class="petitecaps weight2 accent">
+						<th class="rightborder highlight">Scale</th>
+						<th class="lightrightborder">Pattern</th>
+						<th class="lightrightborder"><em>n</em>-chord 1</th>
+						<th class="lightrightborder"><em>n</em>-chord 2</th>
+						<th><em>Synaphe</em></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="accent">
+						<td class="rightborder highlight"><strong class="weight3">Major 5t</strong></td>
+						<td class="lightrightborder">1, 1½</td>
+						<td class="lightrightborder">2, 3</td>
+						<td class="lightrightborder">4, 5</td>
+						<td>1</td>
+					</tr>
+					<tr class="bottomborder">
+						<td class="rightborder highlight"><strong class="weight3">Major 5t</strong></td>
+						<td class="lightrightborder">1½, 1</td>
+						<td class="lightrightborder">3, 4</td>
+						<td class="lightrightborder">5, 1</td>
+						<td>2</td>
+					</tr>
+					<tr class="accent">
+						<td class="rightborder highlight"><strong class="weight3">Ionian</strong></td>
+						<td class="lightrightborder">1, 1, ½</td>
+						<td class="lightrightborder">5, 6, 7</td>
+						<td class="lightrightborder">1, 2, 3</td>
+						<td>4</td>
+					</tr>
+					<tr>
+						<td class="rightborder highlight"><strong class="weight3">Ionian</strong></td>
+						<td class="lightrightborder">1, ½, 1</td>
+						<td class="lightrightborder">6, 7, 1</td>
+						<td class="lightrightborder">2, 3, 4</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td class="rightborder highlight"><strong class="weight3">Ionian</strong></td>
+						<td class="lightrightborder">½, 1, 1</td>
+						<td class="lightrightborder">7, 1, 2</td>
+						<td class="lightrightborder">3, 4, 5</td>
+						<td>6</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p class="light fixheight">Note that the Ancient Greeks used the final analysis for their diatonic genus, which was nearly identical to our Ionian scale in all but name. When in Greece, I shall do as the Greeks did, but in this section, I figured it was better to defer the added complexity until this part of my explanation.</p>
+
+			<p class="light fixheight">In short, the extra whole step’s position <em>per se</em> doesn’t affect the scale’s direction; they move in different directions mostly because Ionian’s last interval is a semitone and major pentatonic’s is a minor third. However, as we’re about to see, the circle orders wouldn’t exist even without the pentatonic and Ionian scales’ atypically regular note spacing. Transforming one mode of most other scales into another requires far more work.</p> 
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 

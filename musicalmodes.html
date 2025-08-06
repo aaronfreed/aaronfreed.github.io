@@ -124,7 +124,17 @@ window.onload = function () {makeAllSortable();};*/
 						<li><a class="noprintlink" href="#pentatonicexplanation">We have to go deeper (Scaleception)</a>
 							<ol>
 								<li><a class="noprintlink" href="#pentatonicinversionstritone">The correct “tritone deletion” explanation</a></li>
-								<li><a class="noprintlink" href="#pentatonicinversionsintervals">Interval analysis</a></li>
+							</ol>
+						</li>
+						<li><a class="noprintlink" href="#pentatonicscaleorder">Analysis of modes in scale order</a>
+							<ol>
+								<li><a class="noprintlink" href="#pentatonicinversionsscaleorder">The correct “root note” explanation</a></li>
+							</ol>
+						</li>
+						<li><a class="noprintlink" href="#pentatonicintervalspacing">Comparison of interval spacing</a>
+							<ol>
+								<li><a class="noprintlink" href="#pentatonicinversionsintervals">Interval analysis (circle order)</a></li>
+								<li><a class="noprintlink" href="#pentatonicinversionsintervalsscale">Interval analysis (scale order)</a></li>
 							</ol>
 						</li>
 						<li><a class="noprintlink" href="#pentatoniccircle">The Pentatonic Circle of Fourths, or, Contrary Motion Explained</a>
@@ -1124,7 +1134,7 @@ window.onload = function () {makeAllSortable();};*/
 			
 			<h2 id="pentatonictransformation" class="centred">As truncation of Ionian</h2>
 
-			<p class="light">Conveniently, though, it’s not just a complement, though: it’s also a truncation. We can get the pentatonic scale simply by deleting two notes of Ionian – in fact, we can delete <em>several</em> discrete note pairs of Ionian and get the pentatonic scale or one of its modes. As a result, the two scales’ modes correspond in countless ways.</p>
+			<p class="light">Conveniently, though, it’s not just a complement, though: it’s also a truncation. We can get the pentatonic scale simply by deleting two notes of Ionian. As a result, the two scales’ modes correspond in countless ways.</p>
 
 <!-- 			
 			<p class="light">I’ve adopted the term “pentatonic circle of fourths order”. Why not fifths, as with the Ionian scale? A few reasons:</p>
@@ -1137,8 +1147,8 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light">I’ll also use “circle-order” or “circle order” to include both circle of fifths order and circle of fourths order.</p> -->
 
-			<p class="light">Since the pentatonic scale has two fewer notes than Ionian, our analysis must delete two modes. But <em>which</em> two? We can derive the pentatonic scale by deleting at least three discrete note pairs from Ionian.</p>
-			
+			<p class="light">Since the pentatonic scale has two fewer notes than Ionian, our analysis must delete two modes. But <em>which</em> two? We can derive the pentatonic scale from Ionian using at least three different methods.</p>
+
 			<p class="light fixheight orange"><em><strong>A quick warning before we proceed further: we’re about to take a quick detour into “right for the wrong reasons” land. After the third table, I’ll explain how, why, and where the first two tables go wrong.</strong></em></p>
 
 			<p class="light">Let’s try disregarding Phrygian and Locrian, the lowest modes in the circle of fifths progression. In this analysis:</p>
@@ -1332,23 +1342,118 @@ window.onload = function () {makeAllSortable();};*/
 						<li>Both circle-of-fifths-order interval comparisons should possess 180° rotational symmetry.</li>
 					</ol>
 				All of these are false in the first two tables and true in the third.</li>
-				<li><em><strong class="accent">Deleting Ionian’s fourth and seventh notes also deletes Lydian and Locrian.</strong></em> The first table keeps Lydian. The second keeps Locrian. The third deletes both.</li>
-				<li>Most importantly, <em><strong class="accent">since we didn’t delete the root, we should compare the base scales.</strong></em> Only the third table does this. Interval analysis of note deletions (that aren’t the root) shouldn’t move notes, only <em>remove</em> them.</li>
+				<li><em><strong class="accent">Since we didn’t delete the root, our analysis must compare the base scales.</strong></em> Only table three does so. Not comparing the base scales is a surefire recipe for confusion.</li>
+				<li><em><strong class="accent">Deleting the base scale’s fourth and seventh notes also deletes its fourth and seventh modes.</strong></em> The first table keeps Lydian. The second keeps Locrian. The third deletes both.</li>
+				<li><em><strong class="accent">Our analysis must compare the same notes within each scale.</strong></em> We didn’t move notes, only <em>remove</em> them, so our analysis can’t either. A closer look at the “downshift” table reveals the problem here: Mixolydian’s fourth degree, Dorian’s seventh, Aeolian’s third, Phrygian’s sixth, and Locrian’s second are <em>Ionian’s root</em>!</p>
+					
+				<p class="lowerpara">The problem isn’t as obvious in the “upshift” table, but it tells us to remove Ionian’s third degree. Major pentatonic still opens with two whole steps, just like Ionian, so we <em>haven’t removed</em> Ionian’s third degree! This is why our analysis should only shift notes if we delete the root. (And if you do, good luck – you’ll need it.)</p></li>
  			</ol>
-	
+
 			<p class="light">I struggled with whether to call the last table “Tritone Deletion”, “Tritone Substitution”, or “Tritone Shift”; all three are correct. The notes the last table removes correspond exactly to the Ionian scale’s sole tritone; the pentatonic scales are also exactly a tritone from where its two predecessors listed them. I ultimately went with “Tritone Deletion”, though, because all the properties above are direct consequences of removing the tritone.</p>
-			
+
 			<!--<p class="light">This table may also clarify an alternate explanation for why the pentatonic circle of fourths inverts Ionian’s circle of fifths: the interval spacing of the scales’ modes is actually out of sync. (This appears to be a direct consequence of deleting Ionian’s highest note; something similar would also have happened if we’d deleted its root.) I haven’t yet pieced together all the consequences of this.</p>-->
 
 			<p class="light">Things like this are one reason I self-identify as agnostic rather than atheist: part of my brain <em>refuses</em> to accept that these could be coincidences. (The other part of my brain replies that this is all mathematically inevitable, and I simply haven’t yet grokked all the implications of deleting Ionian’s fourth and seventh notes.)</p>
 
-			<p class="light">Since the pentatonic modes have less well-established names than Ionian’s, my brain’s cutesy part wants to rename them Nianoi, Niadyloxim, Niarod, Nialoea, and Niagyrhp, but I’m afraid that might confuse people, even after the above explanation. However, that won’t stop me from using them as alternate names.</p>
+			<p class="light">Since pentatonic’s mode nomenclature isn’t as well established as Ionian’s, my brain’s cutesy part wants to rename them Nianoi, Niadyloxim, Niarod, Nialoea, and Niagyrhp. I’m afraid that even after the above explanation, that might confuse people, but that won’t stop me from using them as alternate names.</p>
 
-			<p class="light">The reason pentatonic’s interval spacing patterns are out of sync with Ionian’s may not be obvious. Let’s revisit the above table, but this time, we’ll print deleted tones <span class="hue0">in red</span> and combined intervals <span class="hue270">in purple</span>:</p>
+			<h2 id="pentatonicscaleorder" class="centred">Analysis of modes in scale order</h2>
+
+			<p class="light">Rearranging the modes in scale order may help further clarify why the upshift and downshift tables are wrong:</p>
+	
+			<table id="pentatonicinversionsscaleorder" class="centred tabular-oldstyle nowrapprint fixheight">
+				<thead>
+					<tr class="accent weight4"><th colspan="7">How pentatonic transforms Ionian: The correct “root note” explanation</th></tr>
+					<tr class="petitecaps toc-counter weight2">
+						<th colspan="2"><span class="weight0 smol accent">[7t]</span> &nbsp; Mode &nbsp; <span class="weight0 smol accent">[5t]</span></th><th colspan="2" class="leftborder"><span class="weight0 smol accent">[7t]</span> &nbsp; Piano keys &nbsp; <span class="weight0 smol accent">[5t]</span><th colspan="2" class="leftborder"><span class="weight0 smol accent">[7t]</span> &nbsp; Intervals &nbsp; <span class="weight0 smol accent">[5t]</span></th><th class="leftborder">Del</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>
+						<td class="lightleftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/661" target="_blank" rel="noopener noreferrer">Major 5t.</a></td>
+						<td class="leftborder">C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span>F<span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span>B</td>
+						<td class="lightleftborder">C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span>G<span class="hidden">♮</span>A</td>
+						<td class="leftborder">W W <span class="azure">H</span> W W W <span class="azure">H</span></td>
+						<td class="lightleftborder">W W <span class="orange">M</span> W <span class="orange">M</span></td>
+						<td class="leftborder">4 7</td></tr>
+					</tr>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>
+						<td class="lightleftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1189" target="_blank" rel="noopener noreferrer">Neutral 5t.</a></td>
+						<td class="leftborder">D<span class="hidden">♮</span>E<span class="hidden">♮</span>F<span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span>B<span class="hidden">♮</span>C</td>
+						<td class="lightleftborder">D<span class="hidden">♮</span>E<span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span>C</td>
+						<td class="leftborder">W <span class="azure">H</span> W W W <span class="azure">H</span> W</td>
+						<td class="lightleftborder">W <span class="orange">M</span> W <span class="orange">M</span> W</td>
+						<td class="leftborder">3 6</td></tr>
+					</tr>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>
+						<td class="lightleftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1321" target="_blank" rel="noopener noreferrer">Blues Minor</a></td>
+						<td class="leftborder">E<span class="hidden">♮</span>F<span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span>B<span class="hidden">♮</span>C<span class="hidden">♮</span>D</td>
+						<td class="lightleftborder">E<span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span>C<span class="hidden">♮</span>D</td>
+						<td class="leftborder"><span class="azure">H</span> W W W <span class="azure">H</span> W W</td>
+						<td class="lightleftborder"><span class="orange">M</span> W <span class="orange">M</span> W W</td>
+						<td class="leftborder">2 5</td></tr>
+					</tr>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></a></td>
+						<td class="lightleftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/677" target="_blank" rel="noopener noreferrer">Scottish 5t.</a></td>
+						<td class="leftborder">G<span class="hidden">♮</span>A<span class="hidden">♮</span>B<span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span>F</td>
+						<td class="lightleftborder">G<span class="hidden">♮</span>A<span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E</td>
+						<td class="leftborder">W W <span class="azure">H</span> W W <span class="azure">H</span> W</td>
+						<td class="lightleftborder">W <span class="orange">M</span> W W <span class="orange">M</span></td>
+						<td class="leftborder">3 7</td></tr>
+					</tr>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></a></td>
+						<td class="lightleftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1193" target="_blank" rel="noopener noreferrer">Minor 5t.</a></td>
+						<td class="leftborder">A<span class="hidden">♮</span>B<span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span>F<span class="hidden">♮</span>G</td>
+						<td class="lightleftborder">A<span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span>G</td>
+						<td class="leftborder">W <span class="azure">H</span> W W <span class="azure">H</span> W W</td>
+						<td class="lightleftborder"><span class="orange">M</span> W W <span class="orange">M</span> W</td>
+						<td class="leftborder">2 6</td></tr>
+					</tr>
+				</tbody>
+			</table>
+			
+			<p class="light">Modes are inextricably linked to notes. We have to compare the same notes in each scale:</p>
+			
+			<ol class="light marginleft50 upperalpha" start="3">
+				<li>We didn’t delete this note, so we adapt its mode, <strong class="accent">Ionian</strong>, to our new scale as <strong class="toc-counter">major pentatonic</strong>.</li>
+				<li>We didn’t delete this note, so we adapt its mode, <strong class="accent">Dorian</strong>, to our new scale as <strong class="toc-counter">neutral pentatonic</strong>.</li>
+				<li>We didn’t delete this note, so we adapt its mode, <strong class="accent">Phrygian</strong>, to our new scale as <strong class="toc-counter">blues minor</strong>.</li>
+				<li>Deleting this note deletes its associated mode. <strong class="accent">Lydian</strong> has no pentatonic equivalent.</li>
+				<li>We didn’t delete this note, so we adapt its mode, <strong class="accent">Mixolydian</strong>, to our new scale as <strong class="toc-counter">Scottish pentatonic</strong>.</li>
+				<li value="1">We didn’t delete this note, so we adapt its mode, <strong class="accent">Aeolian</strong>, to our new scale as <strong class="toc-counter">minor pentatonic</strong>.</li>
+				<li value="2">Deleting this note deletes its associated mode. <strong class="accent">Locrian</strong> has no pentatonic equivalent.</li>
+			</ol>			
+
+			<p class="margintop15 light fixheight">Put another way, recall how <strong class="accent">Ionian</strong>’s modes got their numbering:</p>
+
+			<ol class="light marginleft50">
+				<li> <strong class="accent">Ionian</strong> starts on its first note.</li>
+				<li> <strong class="accent">Dorian</strong> starts on its second note.</li>
+				<li> <strong class="accent">Phrygian</strong> starts on its third note.</li>
+				<li value="5"> <strong class="accent">Mixolydian</strong> starts on its fifth note.</li>
+				<li> <strong class="accent">Aeolian</strong> starts on its sixth note.</li>
+			</ol>
+
+			<p class="margintop15 light fixheight">So, applying the same principle to the pentatonic scale:</p>
+			<ol class="light marginleft50">
+				<li><strong class="toc-counter">Major pentatonic</strong> starts on its first note.</li>
+				<li><strong class="toc-counter">Neutral pentatonic</strong> starts on its second note.</li>
+				<li><strong class="toc-counter">Blues minor</strong> starts on its third note.</li>
+				<li><strong class="toc-counter">Scottish pentatonic</strong> starts on its fourth note.</li>
+				<li><strong class="toc-counter">Minor pentatonic</strong> starts on its fifth note.</li>
+			</ol>
+			<h2 id="pentatonicintervalspacing" class="centred">Comparison of interval spacing</h2>
+
+			<p class="light">Why pentatonic’s interval spacing patterns are out of sync with Ionian’s may not be obvious. Let’s revisit the above table, but this time, we’ll print deleted tones <span class="hue0">in red</span> and combined intervals <span class="hue270">in purple</span>:</p>
 
 			<table id="pentatonicinversionsintervals" class="centred tabular-oldstyle nowrappri/nt fixheight">
 				<thead>
-					<tr class="accent weight4"><th colspan="7">How pentatonic transforms Ionian: Interval analysis</th></tr>
+					<tr class="accent weight4"><th colspan="7">How pentatonic transforms Ionian: Interval analysis (circle order)</th></tr>
 					<tr class="petitecaps toc-counter weight2">
 						<th colspan="2"><span class="weight0 smol accent">[7t]</span> &nbsp; Mode &nbsp; <span class="weight0 smol accent">[5t]</span></th><th colspan="2" class="leftborder"><span class="weight0 smol accent">[7t]</span> &nbsp; Piano keys &nbsp; <span class="weight0 smol accent">[5t]</span><th colspan="2" class="leftborder"><span class="weight0 smol accent">[7t]</span> &nbsp; Intervals &nbsp; <span class="weight0 smol accent">[5t]</span></th><th class="leftborder">Del</th>
 					</tr>
@@ -1414,6 +1519,64 @@ window.onload = function () {makeAllSortable();};*/
 				</ol>
 					
 			<p class="light">Thus, the two intervals around every deleted note turn become a single minor third aligning exactly to the pattern of deletions. Since this pattern is out of phase with the original one, it changes, but if the deleted notes were surrounded by different intervals, the patterns wouldn’t map as precisely to each other.</p>
+
+			<p class="light">Interestingly, the relationship between the patterns is a lot easier to discern in circle order than in scale order, even with the above highlighting:</p>
+
+			<table id="pentatonicinversionsintervalsscale" class="centred tabular-oldstyle nowrappri/nt fixheight">
+				<thead>
+					<tr class="accent weight4"><th colspan="7">How pentatonic transforms Ionian: Interval analysis (scale order)</th></tr>
+					<tr class="petitecaps toc-counter weight2">
+						<th colspan="2"><span class="weight0 smol accent">[7t]</span> &nbsp; Mode &nbsp; <span class="weight0 smol accent">[5t]</span></th><th colspan="2" class="leftborder"><span class="weight0 smol accent">[7t]</span> &nbsp; Piano keys &nbsp; <span class="weight0 smol accent">[5t]</span><th colspan="2" class="leftborder"><span class="weight0 smol accent">[7t]</span> &nbsp; Intervals &nbsp; <span class="weight0 smol accent">[5t]</span></th><th class="leftborder">Del</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>
+						<td class="lightleftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/661" target="_blank" rel="noopener noreferrer">Major 5t.</a></td>
+						<td class="leftborder">C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span><span class="hue0">F</span><span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span><span class="hue0">B</span></td>
+						<td class="lightleftborder">C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span>G<span class="hidden">♮</span>A</td>
+						<td class="leftborder">W W <span class="hue270">H</span> <span class="hue270">W</span> W <span class="hue270">W</span> <span class="hue270">H</span></td>
+						<td class="lightleftborder">W W <span class="hue270">M</span> W <span class="hue270">M</span></td>
+						<td class="leftborder">4 7</td></tr>
+					</tr>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>
+						<td class="lightleftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1189" target="_blank" rel="noopener noreferrer">Neutral 5t.</a></td>
+						<td class="leftborder">D<span class="hidden">♮</span>E<span class="hidden">♮</span><span class="hue0">F</span><span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span><span class="hue0">B</span><span class="hidden">♮</span>C</td>
+						<td class="lightleftborder">D<span class="hidden">♮</span>E<span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span>C</td>
+						<td class="leftborder">W <span class="hue270">H</span> <span class="hue270">W</span> W <span class="hue270">W</span> <span class="hue270">H</span> W</td>
+						<td class="lightleftborder">W <span class="hue270">M</span> W <span class="hue270">M</span> W</td>
+						<td class="leftborder">3 6</td></tr>
+					</tr>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>
+						<td class="lightleftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1321" target="_blank" rel="noopener noreferrer">Blues Minor</a></td>
+						<td class="leftborder">E<span class="hidden">♮</span><span class="hue0">F</span><span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span><span class="hue0">B</span><span class="hidden">♮</span>C<span class="hidden">♮</span>D</td>
+						<td class="lightleftborder">E<span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span>C<span class="hidden">♮</span>D</td>
+						<td class="leftborder"><span class="hue270">H</span> <span class="hue270">W</span> W <span class="hue270">W</span> <span class="hue270">H</span> W W</td>
+						<td class="lightleftborder"><span class="hue270">M</span> W <span class="hue270">M</span> W W</td>
+						<td class="leftborder">2 5</td></tr>
+					</tr>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></a></td>
+						<td class="lightleftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/677" target="_blank" rel="noopener noreferrer">Scottish 5t.</a></td>
+						<td class="leftborder">G<span class="hidden">♮</span>A<span class="hidden">♮</span><span class="hue0">B</span><span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span><span class="hue0">F</span></td>
+						<td class="lightleftborder">G<span class="hidden">♮</span>A<span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E</td>
+						<td class="leftborder">W <span class="hue270">W</span> <span class="hue270">H</span> W W <span class="hue270">H</span> <span class="hue270">W</span></td>
+						<td class="lightleftborder">W <span class="hue270">M</span> W W <span class="hue270">M</span></td>
+						<td class="leftborder">3 7</td></tr>
+					</tr>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></a></td>
+						<td class="lightleftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1193" target="_blank" rel="noopener noreferrer">Minor 5t.</a></td>
+						<td class="leftborder">A<span class="hidden">♮</span><span class="hue0">B</span><span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span><span class="hue0">F</span><span class="hidden">♮</span>G</td>
+						<td class="lightleftborder">A<span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span>G</td>
+						<td class="leftborder"><span class="hue270">W</span> <span class="hue270">H</span> W W <span class="hue270">H</span> <span class="hue270">W</span> W</td>
+						<td class="lightleftborder"><span class="hue270">M</span> W W <span class="hue270">M</span> W</td>
+						<td class="leftborder">2 6</td></tr>
+					</tr>
+				</tbody>
+			</table>
 
 			<h2 id="pentatoniccircle" class="centred">The Pentatonic Circle of Fourths, or, Contrary Motion Explained</h2>
 

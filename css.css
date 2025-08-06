@@ -60,22 +60,31 @@
 :root {
 	--background: #fff;
 	--background-translucent: #ffffffc6;
+	--background-translucenter: #ffffff8d;
 	--offset-level-1: #eff0ff;
 	--offset-level-1-translucent: #eff0ffc6;
+	--offset-level-1-translucenter: #eff0ff8d;
 	--offset-level-2: #e0e0ff;
 	--offset-level-2-translucent: #e0e0ffc6;
+	--offset-level-2-translucenter: #e0e0ff8d;
 	--offset-level-3: #d0d0ff;
 	--offset-level-3-translucent: #d0d0ffc6;
+	--offset-level-3-translucenter: #d0d0ff8d;
 	--offset-level-4: #a0a0ff;
 	--offset-level-4-translucent: #a0a0ffc6;
+	--offset-level-4-translucenter: #a0a0ff8d;
 	--link: #0099ff;
 	--link-translucent: #0099ffc6;
+	--link-translucenter: #0099ff8d;
 	--link-visited: #cc00cc;
 	--link-visited-translucent: #cc00ccc6;
+	--link-visited-translucenter: #cc00cc8d;
 	--link-active: #009900;
 	--link-active-translucent: #009900c6;
+	--link-active-translucenter: #0099008d;
 	--link-hover: #cc6600;
 	--link-hover-translucent: #cc6600c6;
+	--link-hover-translucenter: #cc66008d;
 	/* these are actually OKHSL 29/100/50, 59/100/50, etc., via Björn
 	Ottosson's color picker: https://bottosson.github.io/misc/colorpicker/
 	- 29° hue in OKHSV corresponds roughly to 0° hue in traditional HSV */
@@ -103,6 +112,18 @@
 	--oklab270-translucent: #942affc6;
 	--oklab300-translucent: #c200bfc6;
 	--oklab330-translucent: #d60074c6;
+	--oklab0-translucenter: #e000038d;
+	--oklab30-translucenter: #af60008d;
+	--oklab60-translucenter: #9372008d;
+	--oklab90-translucenter: #6f81008d;
+	--oklab120-translucenter: #008f3c8d;
+	--oklab150-translucenter: #008b788d;
+	--oklab180-translucenter: #0086968d;
+	--oklab210-translucenter: #007fba8d;
+	--oklab240-translucenter: #4260ff8d;
+	--oklab270-translucenter: #942aff8d;
+	--oklab300-translucenter: #c200bf8d;
+	--oklab330-translucenter: #d600748d;
 	--oklab0-bg: #ff9485;
 	--oklab30-bg: #ffb87f;
 	--oklab60-bg: #ffdc80;
@@ -127,14 +148,30 @@
 	--oklab270-bg-translucent: #bf9dffc6;
 	--oklab300-bg-translucent: #ff9ef9c6;
 	--oklab330-bg-translucent: #ff93b7c6; 
+	--oklab0-bg-translucenter: #ff94858d;
+	--oklab30-bg-translucenter: #ffb87f8d;
+	--oklab60-bg-translucenter: #ffdc808d;
+	--oklab90-bg-translucenter: #e6ff888d;
+	--oklab120-bg-translucenter: #96ffab8d;
+	--oklab150-bg-translucenter: #88ffe78d;
+	--oklab180-bg-translucenter: #84eeff8d;
+	--oklab210-bg-translucenter: #85ceff8d;
+	--oklab240-bg-translucenter: #84a3ff8d;
+	--oklab270-bg-translucenter: #bf9dff8d;
+	--oklab300-bg-translucenter: #ff9ef98d;
+	--oklab330-bg-translucenter: #ff93b78d; 
 	--heading-color: #2f5496;
 	--heading-color-translucent: #2f5496c6;
+	--heading-color-translucenter: #2f54968d;
 	--portfolio-heading: #2f5496;
 	--portfolio-heading-translucent: #2f5496c6;
+	--portfolio-heading-translucenter: #2f54968d;
 	--toc-counter: #004c80;
 	--toc-counter-translucent: #004c80c6;
+	--toc-counter-translucenter: #004c808d;
 	--main: #000;
 	--main-translucent: #000000c6;
+	--main-translucenter: #0000008d;
 	--weight0: 100;
 	--weight1: 200;
 	--weight2: 300;
@@ -150,30 +187,43 @@
 		:root {
 			--background: #000;
 			--background-translucent: #000000c6;
+			--background-translucenter: #0000008d;
 			--offset-level-1: #1c1e36;
 			--offset-level-1-translucent: #1c1e36c6;
+			--offset-level-1-translucenter: #1c1e368d;
 			--offset-level-2: #383c6c;
 			--offset-level-2-translucent: #383c6cc6;
+			--offset-level-2-translucenter: #383c6c8d;
 			--offset-level-3: #545aa2;
 			--offset-level-3-translucent: #545aa2c6;
+			--offset-level-3-translucenter: #545aa28d;
 			--offset-level-4: #7078d8;
 			--offset-level-4-translucent: #7078d8c6;
+			--offset-level-4-translucenter: #7078d88d;
 			--link: #73e8ff;
 			--link-translucent: #73e8ffc6;
+			--link-translucenter: #73e8ff8d;
 			--link-visited: #ff93ff;
 			--link-visited-translucent: #ff93ffc6;
+			--link-visited-translucenter: #ff93ff8d;
 			--link-active: #adffad;
 			--link-active-translucent: #adffadc6;
+			--link-active-translucenter: #adffad8d;
 			--link-hover: #ffb57b;
 			--link-hover-translucent: #ffb57bc6;
+			--link-hover-translucenter: #ffb57b8d;
 			--heading-color: #74d4ff;
 			--heading-color-translucent: #74d4ffc6;
+			--heading-color-translucenter: #74d4ff8d;
 			--portfolio-heading: #b8f0ff;
 			--portfolio-heading-translucent: #b8f0ffc6;
+			--portfolio-heading-translucenter: #b8f0ff8d;
 			--toc-counter: #a8f0ff;
 			--toc-counter-translucent: #a8f0ffc6;
+			--toc-counter-translucenter: #a8f0ff8d;
 			--main: #fff;
 			--main-translucent: #ffffffc6;
+			--main-translucenter: #ffffff8d;
 			/* these are OKHSV 29/50/100, 59/50/100, etc., via Björn Ottosson's
 			color picker: https://bottosson.github.io/misc/colorpicker/ - 29°
 			hue in OKHSV corresponds roughly to 0° hue in traditional HSV */
@@ -201,6 +251,18 @@
 			--oklab270-translucent: #bf9dffc6;
 			--oklab300-translucent: #ff9ef9c6;
 			--oklab330-translucent: #ff93b7c6; 
+			--oklab0-translucenter: #ff94858d;
+			--oklab30-translucenter: #ffb87f8d;
+			--oklab60-translucenter: #ffdc808d;
+			--oklab90-translucenter: #e6ff888d;
+			--oklab120-translucenter: #96ffab8d;
+			--oklab150-translucenter: #88ffe78d;
+			--oklab180-translucenter: #84eeff8d;
+			--oklab210-translucenter: #85ceff8d;
+			--oklab240-translucenter: #84a3ff8d;
+			--oklab270-translucenter: #bf9dff8d;
+			--oklab300-translucenter: #ff9ef98d;
+			--oklab330-translucenter: #ff93b78d; 
 			--oklab0-bg: #720001;
 			--oklab30-bg: #582d00;
 			--oklab60-bg: #493700;
@@ -225,6 +287,18 @@
 			--oklab270-bg-translucent: #4b008ac6;
 			--oklab300-bg-translucent: #620061c6;
 			--oklab330-bg-translucent: #6d0038c6;
+			--oklab0-bg-translucenter: #7200018d;
+			--oklab30-bg-translucenter: #582d008d;
+			--oklab60-bg-translucenter: #4937008d;
+			--oklab90-bg-translucenter: #363f008d;
+			--oklab120-bg-translucenter: #00471a8d;
+			--oklab150-bg-translucenter: #00443b8d;
+			--oklab180-bg-translucenter: #00424b8d;
+			--oklab210-bg-translucenter: #003e5e8d;
+			--oklab240-bg-translucenter: #1a01ae8d;
+			--oklab270-bg-translucenter: #4b008a8d;
+			--oklab300-bg-translucenter: #6200618d;
+			--oklab330-bg-translucenter: #6d00388d;
 		}
 		thead .darkkey {
 			background-color: var(--offset-level-1);
@@ -1468,6 +1542,9 @@ a:active, a:active u, a:active del, .greenlink :is(a:link, a:visited, a:hover, a
 }
 del.thick {
 	text-decoration-thickness: 3px;
+}
+del.translucent {
+	text-decoration: 1px var(--main-translucenter) line-through;
 }
 
 

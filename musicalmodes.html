@@ -133,6 +133,7 @@ window.onload = function () {makeAllSortable();};*/
 								<li><a class="noprintlink" href="#ionianintervalsscaleorder">Ionian interval spacing (root order)</a></li>
 								<li><a class="noprintlink" href="#ionianintervalscircleorder">Ionian interval spacing (circle of fifths order)</a></li>
 								<li><a class="noprintlink" href="#pentatonicintervalscircleorder">Pentatonic interval spacing (circle of fourths order)</a></li>
+								<li><a class="noprintlink" href="#tetrachordsandtrichordsandbearsohmy">Ionian tetrachords &amp; pentatonic trichords &amp; <em>synaphai</em>, oh my</a></li>
 							</ol>
 						</li>
 					</ol>
@@ -168,6 +169,7 @@ window.onload = function () {makeAllSortable();};*/
 								<li><a class="noprintlink" href="#oneweirdtrick">One weird trick to transform harmonic minor to melodic minor</a></li>
 							</ol>
 						</li>
+						<li><a class="noprintlink" href="#mathematicalproofofevenness" class="centred">Mathematical proof of even spacing</a></li>
 						<li><a class="noprintlink" href="#transformingdiatonicmajor">Other single-note transformations of Ionian</a>
 							<ol>
 								<li><a class="noprintlink" href="#thresholdoftransformation">Threshold of Transformation</a></li>
@@ -1515,56 +1517,56 @@ window.onload = function () {makeAllSortable();};*/
 				<li>As a result, the scales have effectively opposite directions of motion.</li>
 			</ul>
 
-			<p class="light fixheight">One final note: I highlighted the extra whole step, or <em>synaphe</em> (ancient Greek: <em class="toc-counter" lang="grc">σῠνᾰφή</em>, <em class="toc-counter">sŭnăphe&#772;&#769;</em>, literally <em class="toc-counter">connection, union, junction; point or line of junction; conjunction of two tetrachords</em>; pronounced roughly <em class="toc-counter">su-na-FE</em>), but its different position in each scale isn’t, in and of itself, why they move in different directions. In fact, since both scales are mostly made of whole steps, multiple intervals could be considered their <em>synaphai</em>; the choice depends entirely on the arbitrary choice of trichord or tetrachord pattern. Two such patterns can fit for the pentatonic scale and three for Ionian; each result in different <em>synaphai</em> and <em>n</em>-chord divisions. I used my divisions because the others split one of the base scale’s <em>n-</em>chords. (I’ve <span class="accent">highlighted</span> my approaches below.)</p>
+			<p class="light fixheight">One final note: I highlighted the extra whole step, or <em>synaphe</em> (ancient Greek: <em class="toc-counter" lang="grc">σῠνᾰφή</em>, <em class="toc-counter">sŭnăphe&#772;&#769;</em>, literally <em class="toc-counter">connection, union, junction; point or line of junction; conjunction of two tetrachords</em>; pronounced roughly <em class="toc-counter">su-na-FAY</em>), but its different position in each scale isn’t, in and of itself, why they move in different directions. In fact, since both scales are mostly made of whole steps, multiple intervals could be considered their <em>synaphai</em>; the choice depends entirely on the arbitrary choice of trichord or tetrachord pattern. Two such patterns can fit for the pentatonic scale and three for Ionian; each result in different <em>synaphai</em> and <em>n</em>-chord divisions. I used my divisions because the others split one of the base scale’s <em>n-</em>chords. (I’ve <span class="hue120">highlighted</span> my approaches below.)</p>
 
-			<table class="tabular-oldstyle fixheight nowrapprint centred"> 
+			<table id="tetrachordsandtrichordsandbearsohmy" class="tabular-oldstyle fixheight nowrapprint centred"> 
 				<thead>
 					<tr class="toc-counter weight4">
-						<th colspan="5">Alternate Analysis of Tetrachords &amp; Trichords</th>
+						<th colspan="14">Ionian tetrachords &amp; pentatonic trichords &amp; <em>synaphai</em>, oh my</th>
 					</tr>
-					<tr class="petitecaps weight2 accent">
+					<tr class="petitecaps weight2 accent sidepad12">
 						<th class="rightborder highlight">Scale</th>
-						<th class="lightrightborder">Pattern</th>
-						<th class="lightrightborder"><em>n</em>-chord 1</th>
-						<th class="lightrightborder"><em>n</em>-chord 2</th>
+						<th class="mediumrightborder" colspan="4">Pattern</th>
+						<th class="mediumrightborder" colspan="4"><em>n</em>-chord 1</th>
+						<th class="mediumrightborder" colspan="4"><em>n</em>-chord 2</th>
 						<th><em>Synaphe</em></th>
 					</tr>
 				</thead>
-				<tbody>
-					<tr class="accent">
-						<td class="rightborder highlight"><strong class="weight3">Major 5t</strong></td>
-						<td class="lightrightborder">1, 1½</td>
-						<td class="lightrightborder">2, 3</td>
-						<td class="lightrightborder">4, 5</td>
-						<td>1</td>
+				<tbody class="sidepad4 weight1">
+					<tr class="hue120">
+						<td class="rightborder highlight" style="padding: 0px 12px;"><strong class="weight3">Major 5t</strong></td>
+						<td class="leftpad8 weight4" colspan="2">1</td><td class="mediumrightborder rightpad8 weight6" colspan="2">1½</td>
+						<td class="leftpad8" colspan="2">2</td><td class="mediumrightborder rightpad8" colspan="2">3</td>
+						<td class="leftpad8" colspan="2">4</td><td class="mediumrightborder rightpad8" colspan="2">5</td>
+						<td class="leftpad8">1</td>
 					</tr>
 					<tr class="bottomborder">
-						<td class="rightborder highlight"><strong class="weight3">Major 5t</strong></td>
-						<td class="lightrightborder">1½, 1</td>
-						<td class="lightrightborder">3, 4</td>
-						<td class="lightrightborder">5, 1</td>
-						<td>2</td>
+						<td class="rightborder highlight" style="padding: 0px 12px;"><strong class="weight3">Major 5t</strong></td>
+						<td class="leftpad8 weight6" colspan="2">1½</td><td class="mediumrightborder rightpad8 weight4" colspan="2">1</td>
+						<td class="leftpad8" colspan="2">3</td><td class="mediumrightborder rightpad8" colspan="2">4</td>
+						<td class="leftpad8" colspan="2">5</td><td class="mediumrightborder rightpad8" colspan="2">1</td>
+						<td class="leftpad8">2</td>
 					</tr>
-					<tr class="accent">
-						<td class="rightborder highlight"><strong class="weight3">Ionian</strong></td>
-						<td class="lightrightborder">1, 1, ½</td>
-						<td class="lightrightborder">5, 6, 7</td>
-						<td class="lightrightborder">1, 2, 3</td>
-						<td>4</td>
-					</tr>
-					<tr>
-						<td class="rightborder highlight"><strong class="weight3">Ionian</strong></td>
-						<td class="lightrightborder">1, ½, 1</td>
-						<td class="lightrightborder">6, 7, 1</td>
-						<td class="lightrightborder">2, 3, 4</td>
-						<td>5</td>
+					<tr class="hue120">
+						<td class="rightborder highlight" style="padding: 0px 12px;"><strong class="weight3">Ionian</strong></td>
+						<td class="leftpad8 weight4">1</td><td class="weight4" colspan="2">1</td><td class="mediumrightborder rightpad8 weight0">½</td>
+						<td class="leftpad8">5</td><td colspan="2">6</td><td class="mediumrightborder rightpad8">7</td>
+						<td class="leftpad8">1</td><td colspan="2">2</td><td class="mediumrightborder rightpad8">3</td>
+						<td class="leftpad8">4</td>
 					</tr>
 					<tr>
-						<td class="rightborder highlight"><strong class="weight3">Ionian</strong></td>
-						<td class="lightrightborder">½, 1, 1</td>
-						<td class="lightrightborder">7, 1, 2</td>
-						<td class="lightrightborder">3, 4, 5</td>
-						<td>6</td>
+						<td class="rightborder highlight" style="padding: 0px 12px;"><strong class="weight3">Ionian</strong></td>
+						<td class="leftpad8 weight4">1</td><td class="weight0" colspan="2">½</td><td class="mediumrightborder rightpad8 weight4">1</td>
+						<td class="leftpad8">6</td><td colspan="2">7</td><td class="mediumrightborder rightpad8">1</td>
+						<td class="leftpad8">2</td><td colspan="2">3</td><td class="mediumrightborder rightpad8">4</td>
+						<td class="leftpad8">5</td>
+					</tr>
+					<tr>
+						<td class="rightborder highlight" style="padding: 0px 12px;"><strong class="weight3">Ionian</strong></td>
+						<td class="leftpad8 weight0">½</td><td class="weight4" colspan="2">1</td><td class="mediumrightborder rightpad8 weight4">1</td>
+						<td class="leftpad8">7</td><td colspan="2">1</td><td class="mediumrightborder rightpad8">2</td>
+						<td class="leftpad8">3</td><td colspan="2">4</td><td class="mediumrightborder rightpad8">5</td>
+						<td class="leftpad8">6</td>
 					</tr>
 				</tbody>
 			</table>
@@ -2121,7 +2123,7 @@ window.onload = function () {makeAllSortable();};*/
 				</tbody>
 			</table>
 
-			<p class="fixheight light">Of course, as the orange names in the “rooted on C” table suggest, we can also get melodic minor by raising a <em>different</em> set of notes on a <em>different</em> series of modes. I’ve changed the first set of scale names accordingly, and since this interpretation of melodic minor raises pitches from its parent modes instead of lowering them, I’ve printed it first in this table. Note also that the Ionian scale has a different key signature here (B♭ major instead of C major).</p>
+			<p class="fixheight light">Of course, as the orange names in the “rooted on C” table suggest, we can also get melodic minor by raising a <em>different</em> set of notes on a <em>different</em> series of modes. I’ve changed the first set of scale names accordingly, and since this interpretation of melodic minor raises pitches from its parent modes instead of lowering them, I’ve printed it first in this table. Note also the Ionian scale’s different base key here (B♭ major instead of C major).</p>
 
 			<table id="melodicminorvsdorianscale" class="normal tabular-oldstyle fixheight sidepad8 nowrapprint">
 				<thead class="fixheight">
@@ -2407,7 +2409,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<h2 id="diatonicstability" class="centred">The Ionian Scale’s Stability</h2>
 
-			<p class="fixheight light">Let’s use a slightly more flexible root to show how melodic minor’s modes relate to Ionian’s in both directions – Ionian’s modes, melodic minor’s modes, and Dorian’s modes. Note, particularly, how much stabler the Ionian scale’s root is.</p>
+			<p class="fixheight light">Let’s use a slightly more flexible root to compare melodic minor’s modes to Ionian’s in both directions – Ionian’s modes, melodic minor’s modes, and Dorian’s modes. Note especially how much stabler the Ionian scale’s root is.</p>
 
 			<table id="melodicminorvsdorianandioniancircleoffifths" class="normal tabular-oldstyle fixheight sidepad8 nowrapprint print90">
 				<thead class="fixheight">
@@ -2502,9 +2504,9 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<p class="fixheight light">The Ionian scale has a comparatively stable descent: its root only lowers once, in the transition from Locrian to Lydian. As far as I can ascertain, it is the only seven-note scale for which this is true. My hypothesis is that this occurs because it comes as close as any seven-note scale within twelve-tone equal temperament can come to having its notes evenly spaced.</p>
-
-			<p class="fixheight light">One further note: The Ionian scale’s descent through its modes’ circle of fifths order requires only a single note change. Other scales’ changes are far less straightforward. Both harmonic and melodic minor’s equivalent transformations require moving three notes:</p>
+			<p class="fixheight light">The Ionian scale has a comparatively stable descent: its root only lowers once, in the transition from Locrian to Lydian. As far as I can ascertain, it is the only seven-note scale for which this is true. My hypothesis is that this occurs because it comes as close as any seven-note scale within twelve-tone equal temperament can come to having its notes evenly spaced, without being <em>precisely</em> even. Two whole tones, a semitone, three whole tones, and a semitone.</p>
+			
+			<p class="fixheight light">The Ionian scale’s descent through its modes’ circle of fifths order requires only a single note change. Other scales’ changes are far less straightforward. Both harmonic and melodic minor’s equivalent transformations require moving three notes:</p>
 
 			<table id="harmonicandmelodicminordelta" class="normal tabular-oldstyle fixheight sidepad6 print90 nowrapprint">
 				<thead>
@@ -2979,7 +2981,7 @@ window.onload = function () {makeAllSortable();};*/
 				</li>
 
 				</li>
-				<li>The Ionian scale is the only seven-note scale in which only a single note pair makes a tritone. It’s also the only seven-note scale whose interval distribution is this close to uniform.</li>
+				<li>The Ionian scale is the only seven-note scale in which only a single note pair makes a tritone. It also has the most uniform note spacing possible for a seven-note scale in 12-TET, as I’ll prove mathematically below.</li>
 				<li>As a mathematical consequence of the following premises:
 					<ol>
 						<li>C Aeolian follows C Dorian in the Ionian scale’s circle of fifths order.</li>
@@ -3013,8 +3015,63 @@ window.onload = function () {makeAllSortable();};*/
 				</li>
 				<li>If you’re starting to suspect that absolutely none of this is coincidental, you’re right.</li>
 			</ul>
-
 			<p class="fixheight light">(At some point, I plan to make equivalents of §3’s charts for at least melodic minor and harmonic minor, and perhaps for some of the Greek scales I discuss below as well… but not until I’ve written programs to automate their generation, which could take anywhere from a few days to months.)</p>
+
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+			<h2 id="mathematicalproofofevenness" class="centred">Mathematical proof of even spacing</h2>
+
+			<p class="fixheight light">It’s impossible to distribute a seven-note scale’s intervals more evenly in 12-TET than Ionian distributes them, and I’ll prove it.</p>
+			<ol class="fixheight light">
+				<li><span class="toc-counter">In <em>n</em>-tone equal temperament, for a scale with <em>s</em> notes, divide <em>n</em> by <em>s</em> to determine the mean interval size, expressed in units of 1/<em>n</em> octave (i.e., the smallest possible interval; in 12-TET, a semitone).</span>
+					<blockquote class="norightmargin"> 12/7 is 1.714285714…. </blockquote>
+				</li>
+				<li><span class="toc-counter">If there is a remainder, discard it to get the scale’s lower interval size, and add one to it to get its larger interval size. If there is no remainder, skip the rest of this proof; you’re done (but, as Oliver Messiaen would’ve already told you, you won’t have any modes).</span>
+					<blockquote class="norightmargin"> That’s 1. So all intervals in the scale should be at least a semitone (and, in fact, must be). </blockquote>
+				</li>
+				<li><span class="toc-counter">Take the modulus of the temperament size and the scale size to determine how many intervals will get an extra 1/<em>n</em> octave added to them.</span>
+					<blockquote class="norightmargin"> 12 modulo 7 is 5. Thus, we have five leftover half-steps to add to five of the intervals. </blockquote>
+				</li>
+				<li><span class="toc-counter">Subtract the number of leftovers from the number of notes in the scale to determine how many intervals don’t get an extra 1/<em>n</em> octave.</span>
+					<blockquote class="norightmargin"> 7 - 5 is 2. Thus, five intervals have added semitones, two don’t. Five whole steps, two half steps. </blockquote>
+				</li>
+				<li><span class="toc-counter">To determine the most even interval distribution, first divide the number of occurrences of the more frequent interval by the number of occurrences of the less frequent one.</span>
+					<ul class="toc-counter">
+						<li>If the divisor is 0, you need to work on your reading comprehension: step 2 already told you to stop.</li>
+						<li>If the less frequent interval occurs multiple times and the quotient is an integer, the scale will repeat the same pattern multiple times per octave and is therefore a mode of limited transposition.</li>
+						<li>If the less frequent interval occurs nearly as often as the more frequent one, you may need to repeat some of these steps, replacing <em>n</em> with the count of the more frequent interval and <em>s</em> with the count of the less frequent one.</li>
+					</ul>
+					<blockquote class="norightmargin"> 5 / 2 = 2.5. There should be a median of 2.5 occurrences of the more frequent interval in a row.</blockquote>
+				</li>
+				<li><span class="toc-counter">The interval distribution should take roughly this form: small group of more frequent interval, less frequent interval, large group of more frequent interval, less frequent interval. If there are more than two groups of the less frequent interval, determining the optimal distribution may require repeating some of these steps, replacing with <em>n</em> the more frequent interval’s count and <em>s</em> with the less frequent one’s count.</span>
+					<blockquote class="norightmargin">Since we can’t have a whole step exactly 2.5 times in a row, we’ll have to have two in one group and three in another. That gives us two whole tones, a semitone, three whole tones, and a semitone. That’s Ionian. I literally just described the Ionian scale. Median number of whole tones in a row: 2.5. Therefore, its semitones are as evenly spread out as they possibly can be between its whole tones.</blockquote>
+				</li>
+			</ol>
+			<p class="fixheight light">Surely that also applies to its complement, right? Let’s look at the pentatonic scale.
+			<ol class="fixheight light">
+				<li><span class="toc-counter">In <em>n</em>-tone equal temperament, for a scale with <em>s</em> notes, divide <em>n</em> by <em>s</em> to determine the mean interval size, expressed in units of 1/<em>n</em> octave (i.e., the smallest possible interval; in 12-TET, a semitone).</span>
+					<blockquote class="norightmargin">12/5 is 2.4.</blockquote></li>
+				<li><span class="toc-counter">If there is a remainder, discard it to get the scale’s lower interval size, and add one to it to get its larger interval size. If there is no remainder, skip the rest of this proof; you’re done (but, as Oliver Messiaen would’ve already told you, you won’t have any modes).</span>
+					<blockquote class="norightmargin">That’s 2. So all intervals in the scale should be at least a whole tone.</blockquote>
+				</li>
+				<li><span class="toc-counter">Take the modulus of the temperament size and the scale size to determine how many intervals will get an extra 1/<em>n</em> octave added to them.</span>
+					<blockquote class="norightmargin">12 modulo 5 is 2. So we have two leftover half-steps to add to two of the intervals.</blockquote>
+				</li>
+				<li><span class="toc-counter">Subtract the number of leftovers from the number of notes in the scale to determine how many intervals don’t get an extra 1/<em>n</em> octave.</span>
+					<blockquote class="norightmargin">5 - 2 is 3. Thus, two intervals have extra semitones, three won’t. Three whole steps, two minor thirds.</blockquote>
+				</li>
+				<li><span class="toc-counter">To determine the most even interval distribution, first divide the number of occurrences of the more frequent interval by the number of occurrences of the less frequent one.</span>
+					<ul class="toc-counter">
+						<li>If the divisor is 0, you need to work on your reading comprehension: step 2 already told you to stop.</li>
+						<li>If the less frequent interval occurs multiple times and the quotient is an integer, the scale will repeat the same pattern multiple times per octave and is therefore a mode of limited transposition.</li>
+						<li>If the less frequent interval occurs nearly as often as the more frequent one, you may need to repeat some of these steps, replacing <em>n</em> with the count of the more frequent interval and <em>s</em> with the count of the less frequent one.</li>
+					</ul>
+					<blockquote>3 / 2 = 1.5. There should be a median of 1.5 occurrences of the more frequent interval in a row.</blockquote>
+				</li>
+				<li><span class="toc-counter">The interval distribution should take roughly this form: small group of more frequent interval, less frequent interval, large group of more frequent interval, less frequent interval. If there are more than two groups of the less frequent interval, determining the optimal distribution may require repeating some of these steps, replacing with <em>n</em> the more frequent interval’s count and <em>s</em> with the less frequent one’s count.</span>
+					<blockquote class="norightmargin">Since we can’t have exactly 1.5 whole steps in a row, we’ll have to have two in one group and one by itself. That gives us two whole tones, a minor third, a whole tone, and a minor third. Which, again, is the pentatonic scale.</blockquote>
+				</li>
+			<p class="light fixheight"> Of course, we already knew this. If the Ionian scale has the most even interval distribution a heptatonic scale can have in 12-TET, its complement must also have the most even interval distribution a pentatonic scale can have in 12-TET, by definition. Nonetheless, it’s nice to prove it mathematically.</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 

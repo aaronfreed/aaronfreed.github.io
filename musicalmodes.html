@@ -136,6 +136,12 @@ window.onload = function () {makeAllSortable();};*/
 								<li><a class="noprintlink" href="#tetrachordsandtrichordsandbearsohmy">Ionian tetrachords &amp; pentatonic trichords &amp; <em>synaphai</em>, oh my</a></li>
 							</ol>
 						</li>
+						<li><a class="noprintlink" href="#explainingrotation">An Analysis of Five-Semitone Scale Rotation</a>
+							<ol>
+								<li><a class="noprintlink" href="#buildingblocks">Ionian & Pentatonic Building Blocks</a></li>
+								<li><a class="noprintlink" href="#synapheswap">Outcome of swapping n-chord with synaphe</a></li>
+							</ol>
+						</li>
 					</ol>
 				</li>
 				<li><a class="noprintlink" href="#transformingionian">Transformations of the Ionian Scale</a>
@@ -1493,12 +1499,12 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light fixheight">Thus, while Ionian is second in its circle of fifths order, major pentatonic closes out its own circle of fourths. The next transposition in this sequence will yield C♭ blues minor (or B blues minor, whichever you prefer):</p>
 
-			<table id="pentatonicintervalscircleorder" class="normal tabular-oldstyle sidepad8">
-				<thead class="fixheight">
+			<table id="pentatonicintervalscircleorder" class="normal tabular-oldstyle sidepad8 fixheight">
+				<thead>
 					<tr class="accent weight4"><th colspan="13">Pentatonic interval spacing (circle of fourths order)</th></tr>
 					<tr class="toc-counter weight2 petitecaps"><th>#</th><th colspan="2">Mode</th><th class="leftborder">1</th>                              <th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="leftborder leftpad15" colspan="7">Intervals</tr>
 				</thead>
-				<tbody class="fixheight">
+				<tbody>
 					<tr class="mediumbottomborder"><td>3</td><td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1321" target="_blank" rel="noopener noreferrer">Naigyrhp</a></td>  <td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1321" target="_blank" rel="noopener noreferrer">Blues Minor</td>          <td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="orange weight5">D♯</td>                      <td class="orange weight5">F<span class="hidden">♮</span></td>                      <td class="orange weight5">G♯</td><td class="orange weight5">A♯</td>                      <td class="centred leftborder leftpad8 rightpad4 orange weight5 mediumrightborder">1½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight5 mediumrightborder">1½</td>	<td class="centred leftpad4 rightpad4 weight3 offset2 mediumrightborder">1</td><td class="centred leftpad4 rightpad4 weight3">1</td></tr>
 					<tr class="mediumbottomborder"><td>5</td><td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1193" target="_blank" rel="noopener noreferrer">Nailoea</td>       <td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1193" target="_blank" rel="noopener noreferrer">Minor 5t</td>      <td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="orange weight5">D♯</span></td><td class="orange weight5">F<span class="hidden">♮</span></td>                      <td class="weight5">G<span class="hidden">♮</span></td><td class="orange weight5">A♯</td>                      <td class="centred leftborder leftpad8 rightpad4 orange weight5 mediumrightborder">1½</td><td class="centred leftpad4 rightpad4 weight3 offset2 mediumrightborder">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight5 mediumrightborder">1½</td>	<td class="centred leftpad4 rightpad4 weight3">1</td></tr>
 					<tr class="mediumbottomborder"><td>2</td><td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1189" target="_blank" rel="noopener noreferrer">Nairod</a></td>    <td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1189" target="_blank" rel="noopener noreferrer">Neutral 5t</a></td>    <td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="weight5">D<span class="hidden">♮</span></td><td class="orange weight5">F<span class="hidden">♮</span></td>                      <td class="weight5">G<span class="hidden">♮</span></td><td class="orange weight5">A♯</td><td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight5 mediumrightborder">1½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight5 mediumrightborder">1½</td>	<td class="centred leftpad4 rightpad4 weight3 offset2">1</td></tr>
@@ -1573,10 +1579,77 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light fixheight">Note that the Ancient Greeks used the final analysis for their diatonic genus, which was nearly identical to our Ionian scale in all but name. When in Greece, I shall do as the Greeks did, but in this section, I figured it was better to defer the added complexity until this part of my explanation.</p>
 
-			<p class="light fixheight">In short, the extra whole step’s position <em>per se</em> doesn’t affect the scale’s direction; they move in different directions mostly because Ionian’s last interval is a semitone and major pentatonic’s is a minor third. However, as we’re about to see, the circle orders wouldn’t exist even without the pentatonic and Ionian scales’ atypically regular note spacing. Transforming one mode of most other scales into another requires far more work.</p> 
+			<p class="light fixheight">In short, the extra whole step’s position <em>per se</em> doesn’t affect the scale’s direction; they move in different directions mostly because Ionian’s last interval is a semitone and major pentatonic’s is a minor third. However, as we’re about to see, the circle orders wouldn’t exist even without the pentatonic and Ionian scales’ atypically regular note spacing. Transforming one mode of most other scales into another requires far more work.</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
+			<h2 class="centred" id="explainingrotation">An Analysis of Five-Semitone Scale Rotation</h2>
+
+			<p class="light fixheight">Ultimately, the pentatonic and Ionian scales are, respectively, the only pentatonic and heptatonic scales in 12-TET for which moving a single note by a semitone amounts to a scale rotation. There’s a relatively simple mathematical explanation for why, too:</p>
+			
+			<ul class="light fixheight">
+				<li>Both scales are primarily composed of two identical interval collections, summing to five semitones each.
+					<table id="buildingblocks" class="normal tabular-oldstyle sidepad8 fixheight centred">
+						<thead>
+							<tr class="toc-counter weight4"><th colspan="5">Ionian & Pentatonic Building Blocks</th></tr>
+							<tr class="accent petitecaps weight2"><th>Scale</th><th>n-chord</th><th>Notes</th><th>Intervals</th><th>Outlier</th></tr>
+						</thead>
+						<tbody>
+							<tr><td>Ionian</td><td>Tetrachord</td><td>4</td><td>3</td><td>Semitone</td></tr>
+							<tr><td>Pentatonic</td><td>Trichord</td><td>3</td><td>2</td><td>Minor third</td></tr>
+						</tbody>
+					</table>
+				<li>A synaphe (additional whole tone) separates the two n-chords.</li>
+				<li>All but one of the n-chord’s intervals are whole tones. The outlier differs in size by a semitone.</li>
+				<li>Rotating the scale by n degrees swaps the n-chord and the synaphe.</li>
+				<li>This has a single effect on the interval composition: a whole tone swaps positions with an outlier.</li>
+				<li>Since the outlier differs by merely a semitone, the sole result on the scale’s harmonic composition is to move a single note by a semitone:
+					<table id="synapheswap" class="normal tabular-oldstyle sidepad8 fixheight centred">
+						<thead>
+							<tr class="toc-counter weight4"><th colspan="3">Outcome of swapping n-chord with synaphe</th></tr>
+							<tr class="accent petitecaps weight2"><th>Outlier</th><th>Outlier moves</th><th>Note moves</th></tr>
+						</thead>
+						<tbody>
+							<tr><td>Minor third</td><td>Down</td><td>Up</td></tr>
+							<tr><td>Semitone</td><td>Down</td><td>Down</td></tr>
+							<tr><td>Minor third</td><td>Up</td><td>Down</td></tr>
+							<tr><td>Semitone</td><td>Up</td><td>Up</td></tr>
+						</tbody>
+					</table>
+				</li>
+				<li>This is why the pattern depends on the notes being almost, but not quite, completely evenly distributed: rotating a less even distribution moves more notes; rotating a completely even distribution moves none.</li>
+				<li>It’s also why the pattern is so closely linked to the circles of fourths and fifths: swapping the synaphe with the n-chord requires rotating the scale by either five or seven semitones.</li>
+				<li>Five and seven are the magic numbers because 12 modulo 7 = 5. In other words, after a note has moved seven semitones, five semitones of the octave remain.</li>
+				<li>For a concrete examination, let’s look again at Ionian (1, 1, ½, 1, 1, 1, ½) and Mixolydian (1, 1, ½, 1, 1, ½, 1).
+					<ul>
+						<li>Changing Ionian to Mixolydian causes a single change: intervals 6 and 7 swap places.</li>
+						<li>Ionian’s first three intervals are identical to its last three.</li>
+						<li>Mixolydian’s first three intervals are identical to its fourth through sixth.</li>
+						<li>Ionian’s first three intervals are identical to Mixolydian’s.</li>
+						<li>Ionian’s fifth through seventh intervals are identical to Mixolydian’s fourth through sixth.</li>
+						<li>Ionian’s fourth and fifth intervals are also identical to Mixolydian’s fourth and fifth.</li>
+						<li>Ionian’s fourth interval is identical to Mixolydian’s seventh.</li>
+						<li>Ionian’s sixth interval is a semitone larger than Mixolydian’s.</li>
+						<li>Mixolydian’s seventh interval is a semitone larger than Ionian’s.</li>
+					</ul>
+					If any of this weren’t true, swapping those two intervals wouldn’t rotate the scale by five semitones.
+				</li>
+				<li>Rotating a scale with less uniform interval spacing changes its interval composition substantially more.</li>
+				<li>Rotating a scale with completely uniform intervals does not change its interval composition at all – thus, a completely uniform scale has only a single mode.</li>
+			</ul>
+
+			<p class="light fixheight">In summary, for moving a single note of any scale in twelve-tone temperament by a semitone to qualify as a scale rotation, its intervals must be almost completely uniform, with only two identical outliers that:
+
+			<ol class="loweralpha light fixheight">
+				<li>Differ in size from the remainder by only a semitone</li>
+				<li>Are separated by five semitones</li>
+			</ol>
+
+			<p class="light fixheight">It is possible that some other scales in 12-TET may display similar patterns with scale rotations of various interval sizes. I haven’t yet uncovered any, but I’ve focused most of my analysis so far on pentatonic and heptatonic scales. Now that I better understand the mathematical principles explaining why this happens, I plan to expand my scope somewhat and see if I can uncover other examples.</p>
+			
+			<p class="light fixheight">Other equal temperaments will certainly have similar examples (for instance, in 24-TET, rotation by 11 or 13 quarter-tones should produce similar results for similar 11- and 13-note scales), but I haven’t finished developing tools for scale analysis outside 12-TET, so they will have to wait.</p>
+
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
 			<h1 class="centred" id="transformingionian">Transformations of the Ionian Scale</h1>
 			<h2 class="centred" id="harmonicminor">Harmonic Minor</h2>
@@ -1611,7 +1684,7 @@ window.onload = function () {makeAllSortable();};*/
 					<tr><td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td><td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="weight5">D<span class="hidden">♮</span></td><td class="weight5">E<span class="hidden">♮</span></td><td class="weight5">F<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="weight5">A<span class="hidden">♮</span></td><td class="azure weight3">B♭</td><td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 azure weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 azure weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td></tr>
 				</thead>
 			</table>
-					
+
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
 			<p class="fixheight light">Thus, as the first set of mode names suggests, harmonic minor’s modes respectively raise by a half-step:

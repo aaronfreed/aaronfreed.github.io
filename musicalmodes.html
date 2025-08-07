@@ -137,6 +137,7 @@ window.onload = function () {makeAllSortable();};*/
 								<li><a class="noprintlink" href="#pentatonicinversionsintervalsscale">Interval analysis (scale order)</a></li>
 							</ol>
 						</li>
+						<li><a class="noprintlink" href="#scalerotation">A Brief Explanation of Scale Rotation</a></li>
 						<li><a class="noprintlink" href="#pentatoniccircle">The Pentatonic Circle of Fourths, or, Contrary Motion Explained</a>
 							<ol>
 								<li><a class="noprintlink" href="#pentatonicintervalsscaleorder">Pentatonic interval spacing (root order)</a></li>
@@ -1334,7 +1335,7 @@ window.onload = function () {makeAllSortable();};*/
 				</tbody>
 			</table>
 
-			<p class="light">So, to reiterate: The first two tables I presented are <em>filthy half-truths</em>: their explanations only fit due to mathematical patterns they don’t account for. Only the third is entirely correct. Can you figure out why?</p>
+			<p class="light">So, to reiterate: The first two tables I presented are <em>filthy half-truths</em>: their explanations only fit due to mathematical patterns they don’t account for. Only the third is fully correct. Can you figure out why?</p>
 			
 			<ol class="light fixheight">
 				<li>If both scales have symmetrical modes (Dorian and neutral pentatonic), then:
@@ -1364,7 +1365,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<h2 id="pentatonicscaleorder" class="centred">Analysis of modes in scale order</h2>
 
-			<p class="light">Rearranging the modes in scale order may help further clarify why the upshift and downshift tables are wrong:</p>
+			<p class="light">The modes’ scale ordering may help further clarify why the upshift and downshift tables are wrong:</p>
 	
 			<table id="pentatonicinversionsscaleorder" class="centred tabular-oldstyle nowrapprint fixheight">
 				<thead>
@@ -1425,13 +1426,13 @@ window.onload = function () {makeAllSortable();};*/
 			<p class="light">Modes are inextricably linked to their roots. We must compare the same notes in each scale:</p>
 			
 			<ol class="light marginleft50 upperalpha" start="3">
-				<li>We didn’t delete this note, so we adapt its mode, <strong class="accent">Ionian</strong>, to our new scale as <strong class="toc-counter">major pentatonic</strong>.</li>
-				<li>We didn’t delete this note, so we adapt its mode, <strong class="accent">Dorian</strong>, to our new scale as <strong class="toc-counter">neutral pentatonic</strong>.</li>
-				<li>We didn’t delete this note, so we adapt its mode, <strong class="accent">Phrygian</strong>, to our new scale as <strong class="toc-counter">blues minor</strong>.</li>
-				<li>Deleting this note deletes its associated mode. <strong class="accent">Lydian</strong> has no pentatonic equivalent.</li>
-				<li>We didn’t delete this note, so we adapt its mode, <strong class="accent">Mixolydian</strong>, to our new scale as <strong class="toc-counter">Scottish pentatonic</strong>.</li>
-				<li value="1">We didn’t delete this note, so we adapt its mode, <strong class="accent">Aeolian</strong>, to our new scale as <strong class="toc-counter">minor pentatonic</strong>.</li>
-				<li value="2">Deleting this note deletes its associated mode. <strong class="accent">Locrian</strong> has no pentatonic equivalent.</li>
+				<li>We didn’t delete this note, so its mode, <strong class="accent">Ionian</strong>, becomes <strong class="toc-counter">major pentatonic</strong>.</li>
+				<li>We didn’t delete this note, so its mode, <strong class="accent">Dorian</strong>, becomes <strong class="toc-counter">neutral pentatonic</strong>.</li>
+				<li>We didn’t delete this note, so its mode, <strong class="accent">Phrygian</strong>, becomes <strong class="toc-counter">blues minor</strong>.</li>
+				<li>Deleting this note deletes its mode. <strong class="accent">Lydian</strong> has no pentatonic equivalent.</li>
+				<li>We didn’t delete this note, so its mode, <strong class="accent">Mixolydian</strong>, becomes <strong class="toc-counter">Scottish pentatonic</strong>.</li>
+				<li value="1">We didn’t delete this note, so its mode, <strong class="accent">Aeolian</strong>, becomes <strong class="toc-counter">minor pentatonic</strong>.</li>
+				<li value="2">Deleting this note deletes its mode. <strong class="accent">Locrian</strong> has no pentatonic equivalent.</li>
 			</ol>			
 
 			<p class="margintop15 light fixheight">Put another way, recall how <strong class="accent">Ionian</strong>’s modes got their numbering:</p>
@@ -1440,8 +1441,10 @@ window.onload = function () {makeAllSortable();};*/
 				<li> <strong class="accent">Ionian</strong> starts on its first note.</li>
 				<li> <strong class="accent">Dorian</strong> starts on its second note.</li>
 				<li> <strong class="accent">Phrygian</strong> starts on its third note.</li>
-				<li value="5"> <strong class="accent">Mixolydian</strong> starts on its fifth note.</li>
+				<li> <strong class="accent">Lydian</strong> starts on its fourth note.</li>
+				<li> <strong class="accent">Mixolydian</strong> starts on its fifth note.</li>
 				<li> <strong class="accent">Aeolian</strong> starts on its sixth note.</li>
+				<li> <strong class="accent">Locrian</strong> starts on its seventh note.</li>
 			</ol>
 
 			<p class="margintop15 light fixheight">So, applying the same principle to the pentatonic scale:</p>
@@ -1585,6 +1588,38 @@ window.onload = function () {makeAllSortable();};*/
 					</tr>
 				</tbody>
 			</table>
+
+			<p class="light">So, let’s correct our original analysis, shall we?</p>
+
+			<ul class="light">
+				<li><a class="noprintlink" href="https://ianring.com/musictheory/scales/661" target="_blank" rel="noopener noreferrer">Major pentatonic</a> deletes <a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a>’s fourth and seventh notes: C D E G A (1, 1, 1½, 1, 1½). It is the root form of the scale, and it is the lowest mode on the pentatonic circle of fourths.</li>
+				<li><a class="noprintlink" href="https://ianring.com/musictheory/scales/677" target="_blank" rel="noopener noreferrer">Scottish pentatonic</a> deletes <a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a>’s third and seventh notes: G A C D E (1, 1½, 1, 1, 1½). It is the second-lowest mode on the pentatonic circle of fourths.</li>
+				<li><a class="noprintlink" href="https://ianring.com/musictheory/scales/1189" target="_blank" rel="noopener noreferrer">Neutral pentatonic</a> deletes <a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a>’s third and sixth notes: D E G A C (1, 1½, 1, 1½, 1). Neutral pentatonic is comparable to Dorian mode in two additional ways: it is a symmetrical scale, and it’s the midpoint of the pentatonic circle of fourths order.</li>
+				<li><a class="noprintlink" href="https://ianring.com/musictheory/scales/1193" target="_blank" rel="noopener noreferrer">Minor pentatonic</a> deletes <a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a>’s second and sixth notes: A C D E G (1½, 1, 1, 1½, 1). It is the second-highest mode on the pentatonic circle of fourths.</li>
+				<li><a class="noprintlink" href="https://ianring.com/musictheory/scales/1321" target="_blank" rel="noopener noreferrer">Blues minor</a> deletes <a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Phrygian</a>’s second and fifth notes: E G A C D (1½, 1, 1½, 1, 1). It is the highest mode on the pentatonic circle of fourths.</li>
+			</ul>
+			
+			<p class="light">Oh, right. Time to explain “circle of fourths”. Though I should probably explain scale rotation even before that.</p>
+
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+			<h2 id="scalerotation" class="centred">A Brief Explanation of Scale Rotation</h2>
+
+			<p class="light">Scale rotation is the practice of forming a different mode by moving some of a scale’s intervals either from its start to its end or from its end to its start. When I refer to moving a scale’s intervals “left”, I’m referring both to the piano keyboard and to the scale interval tables I keep using. Rotating a scale left means moving most of its intervals to a lower point in the scale. Since a scale repeats every octave, the rest move to the top.</p>
+
+			<p class="light">“It might not <em>always</em> be ‘most’,” I hear you object. Well, true, you <em>could</em> rotate a seven-note scale six degrees to the right, but why would you, when that’s the same as rotating it one degree to the left?</p>
+			
+			<p class="light">…Oh, right. I need to explain rotation by degrees, too. No, we’re not talking angles here. Rotating a scale by a specific number of degrees moves that many intervals from the start of the scale to the end (or vice versa). Rotating Ionian one degree left gives you Dorian. Rotating Ionian three degrees left gives you Lydian. And so on.</p>
+			
+			<p class="light">I’ll also sometimes refer to rotation by semitones. If I rotate a scale by five semitones, that means the intervals moved from the start to the end (or from the end to the start) sum up to five semitones. Thus, rotating Ionian five semitones to the left also takes you to Lydian.</p>
+			
+			<p class="light">The size of a scale rotation, either in interval size or in degrees, has nothing to do with how far the notes within the scale move. Lydian may be a five-semitone leftward rotation from Ionian, but it only moves one note (the fourth degree of the scale), and that note only moves by a semitone (F to F♯).</p>
+			
+			<p class="light">I may also refer to scale rotations by the number of notes they move. A single-note rotation only changes the position of one note. This does <em>not</em> signify anything about the number of intervals moved to the front or the end of the scale, the size of those intervals, or even about the interval by which the note is moved.</p>
+			
+			<p class="light">So, to summarize: Ionian to Lydian is a single-note rotation; it moves <em>the note</em> by one semitone, but it rotates <em>the scale</em> by five semitones (and three degrees).</p>
+
+			<p class="light">I’ll try to keep this terminology from being ambiguous, but words are an imperfect medium for discussing music at the best of times, and when we throw mathematics, geometry, and set theory into the mix, forget it. If anything feels confusingly worded, please let me know, and I’ll try to clarify it.</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 

@@ -1866,7 +1866,14 @@ window.onload = function () {makeAllSortable();};*/
 				<li>Are separated by five semitones</li>
 			</ol>
 
-			<p class="light">One final question may remain for readers: why is the number of outliers so important? Actually, it isn’t; it’s just important that the outliers be identical. If a seven-note scale could be completely uniform apart from <em>one</em> outlier, moving that interval would also rotate the scale. However, it can’t: 12 modulo 7 is 5, and in turn, 7 modulo 5 is 2. That is, five extra semitones must be distributed across seven notes; thus, two intervals <em>must</em> be outliers.</p>
+			<p class="light">One final question may remain for readers: why is the number of outliers so important? Actually, it isn’t; it’s just important that the outliers be identical. If a seven-note scale could be completely uniform apart from <em>one</em> outlier, moving that interval would also rotate the scale. And, as it turns out, it can, but not, ironically, by making its note distribution <em>more</em> uniform.</p>
+			
+			<ol class="light">
+				<li><strong>Take the temperament modulo the scale size to get the number of extra semitones to distribute:</strong> 12 modulo 7 is 5. We have five extra semitones to distribute.</li>
+				<li><strong>Take the note count modulo the extra semitones to figure out the most uniform note distribution possible:</strong> 7 modulo 5 is 2.</li>			
+			</ol>
+
+			<p class="light">In short, two intervals <em>must</em> be outliers in the most uniform heptatonic note distribution possible. The way to get a <em>single</em> outlier, therefore, is to go in the <em>exact opposite direction</em> and make the note distribution as <em>non</em>-uniform as possible. Which brings us to our next point of analysis.</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 

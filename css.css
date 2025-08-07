@@ -548,6 +548,9 @@
 	.compositions2023-2024 .print60toleft {
 		margin-left: -60px;
 	}
+	.print95 th, .print95 td, .print95 li, .print95 {
+		font-size: 95%;
+	}
 	.print90 th, .print90 td, .print90 li, .print90 {
 		font-size: 90%;
 	}
@@ -1775,6 +1778,32 @@ h3 .subtitle {
 }
 .margintop30 {
 	margin-top: 30px;
+}
+
+.marginleft40 {
+	margin-left: 40px;
+}
+.marginright40 {
+	margin-right: 40px;
+}
+.marginbottom40 {
+	margin-bottom: 40px;
+}
+.margintop40 {
+	margin-top: 40px;
+}
+
+.marginleft50 {
+	margin-left: 50px;
+}
+.marginright50 {
+	margin-right: 50px;
+}
+.marginbottom50 {
+	margin-bottom: 50px;
+}
+.margintop50 {
+	margin-top: 50px;
 }
 
 .marginleft60 {

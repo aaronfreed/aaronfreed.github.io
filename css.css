@@ -61,6 +61,33 @@
 	--background: #fff;
 	--background-translucent: #ffffffc6;
 	--background-translucenter: #ffffff8d;
+	--background-1: #f7f8ff;
+	--background-1-translucent: #f7f8ffc6;
+	--background-1-translucenter: #f7f8ff8d;
+	--background-2: #eff0ff;
+	--background-2-translucent: #eff0ffc6;
+	--background-2-translucenter: #eff0ff8d;
+	--background-3: #f8f8ff;
+	--background-3-translucent: #f7f8ffc6;
+	--background-3-translucenter: #f7f8ff8d;
+	--background-4: #e0e0ff;
+	--background-4-translucent: #e0e0ffc6;
+	--background-4-translucenter: #e0e0ff8d;
+	--background-5: #d8d8ff;
+	--background-5-translucent: #d8d8ffc6;
+	--background-5-translucenter: #d8d8ff8d;
+	--background-6: #d0d0ff;
+	--background-6-translucent: #d0d0ffc6;
+	--background-6-translucenter: #d0d0ff8d;
+	--background-7: #c8c8ff;
+	--background-7-translucent: #c8c8ffc6;
+	--background-7-translucenter: #c8c8ff8d;
+	--background-8: #c0c0ff;
+	--background-8-translucent: #c0c0ffc6;
+	--background-8-translucenter: #c0c0ff8d;
+	--background-9: #b8b8ff;
+	--background-9-translucent: #b8b8ffc6;
+	--background-9-translucenter: #b8b8ff8d;
 	--offset-level-1: #eff0ff;
 	--offset-level-1-translucent: #eff0ffc6;
 	--offset-level-1-translucenter: #eff0ff8d;
@@ -70,9 +97,19 @@
 	--offset-level-3: #d0d0ff;
 	--offset-level-3-translucent: #d0d0ffc6;
 	--offset-level-3-translucenter: #d0d0ff8d;
+	--offset-level-4: #c0c0ff;
+	--offset-level-4-translucent: #c0c0ffc6;
+	--offset-level-4-translucenter: #c0c0ff8d;
+	/*
+	--offset-level-3d: #b0b0ff;
+	--offset-level-3d-translucent: #b0b0ffc6;
+	--offset-level-3d-translucenter: #b0b0ff8d;
+	--offset-level-3e: #a8a8ff;
+	--offset-level-3e-translucent: #a8a8ffc6;
+	--offset-level-3e-translucenter: #a8a8ff8d;
 	--offset-level-4: #a0a0ff;
 	--offset-level-4-translucent: #a0a0ffc6;
-	--offset-level-4-translucenter: #a0a0ff8d;
+	--offset-level-4-translucenter: #a0a0ff8d; */
 	--link: #0099ff;
 	--link-translucent: #0099ffc6;
 	--link-translucenter: #0099ff8d;
@@ -188,6 +225,33 @@
 			--background: #000;
 			--background-translucent: #000000c6;
 			--background-translucenter: #0000008d;
+			--background-1: #0e0f1b;
+			--background-1-translucent: #0e0f1bc6;
+			--background-1-translucenter: #0e0f1b8d;
+			--background-2: #1c1e36;
+			--background-2-translucent: #1c1e36c6;
+			--background-2-translucenter: #1c1e368d;
+			--background-3: #2a2d51;
+			--background-3-translucent: #2a2d51c6;
+			--background-3-translucenter: #2a2d518d;
+			--background-4: #383c6c;
+			--background-4-translucent: #383c6cc6;
+			--background-4-translucenter: #383c6c8d;
+			--background-5: #464b87;
+			--background-5-translucent: #464b87c6;
+			--background-5-translucenter: #464b878d;
+			--background-6: #545aa2;
+			--background-6-translucent: #545aa2c6;
+			--background-6-translucenter: #545aa28d;
+			--background-7: #6269bd;
+			--background-7-translucent: #6269bdc6;
+			--background-7-translucenter: #6269bd8d;
+			--background-8: #7078d8;
+			--background-8-translucent: #7078d8c6;
+			--background-8-translucenter: #7078d88d;
+			--background-9: #7e87f3;
+			--background-9-translucent: #7e87f3c6;
+			--background-9-translucenter: #7e87f38d;
 			--offset-level-1: #1c1e36;
 			--offset-level-1-translucent: #1c1e36c6;
 			--offset-level-1-translucenter: #1c1e368d;
@@ -365,9 +429,6 @@
 }
 @media print {
 	:root {
-		--page-width: 100vw;
-	}
-	:body {
 		--page-width: min(800px, calc(100vw - 16px)) !important;
 	}
 	.printpadding8 td, .printpadding8 th,
@@ -2164,96 +2225,135 @@ ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
 }*/
 
 /* a bunch of weird stuff for the Forge manual table of contents */
-.forgecontents ol.toc {
-	counter-set: i1 -1;
-}
-.forgecontents ol.toc li {
+.forgecontents ol.toc > li {
 	font-size: 20px;
 	line-height: 125%;
-	font-weight: var(--weight6);
+	font-weight: var(--weight8);
 	text-decoration-thickness: 2.25px;
 }
-.forgecontents ol.toc li::marker {
-	counter-increment: i1;
-	content: counter(i1, upper-roman) ". ";
-	font-weight: var(--weight6);
+.forgecontents ol.toc > li::marker {
+	font-weight: var(--weight8);
 }
 .forgecontents ol.toc ol,
 .forgecontents ol.toc ol li,
 .forgecontents ol.toc ol li a:is(:link, :visited)
 {
-	font-weight: var(--weight5);
+	font-weight: var(--weight6);
 	text-decoration-thickness: 2px;
 }
-.forgecontents ol.toc ol {
-	counter-reset: i2;
-}
-.forgecontents ol.toc ol :is(li, li a:link, li a:visited) {
-	font-weight: var(--weight5);
+.forgecontents ol.toc > li > ol :is(li, li a:link, li a:visited) {
+	font-weight: var(--weight6);
 	text-decoration-thickness: 2px;
 	font-size: 18px;
 	line-height: 125%;
 }
-.forgecontents ol.toc ol li::marker {
-	font-weight: var(--weight5);
+.forgecontents ol.toc > li > ol > li::marker {
+	font-weight: var(--weight6);
 	text-decoration-thickness: 2px;
-	counter-increment: i2;
-	content: "(" counter(i1, upper-roman) "." counter(i2, decimal) ") "
 }
-.forgecontents ol.toc ol ol {
+.forgecontents ol.toc > li > ol > li > ol {
 	counter-reset: i3;
 	font-weight: var(--weight4);
 	text-decoration-thickness: 1.5px;
 	line-height: 125%;
 }
-.forgecontents ol.toc ol ol :is(li a:link, li a:visited, li)
+.forgecontents ol.toc > li > ol > li > ol :is(li a:link, li a:visited, li)
 {
 	font-weight: var(--weight4);
 	text-decoration-thickness: 1.5px;
 	font-size: 16px;
 }
-.forgecontents ol.toc ol ol li::marker {
+.forgecontents ol.toc > li > ol > li > ol li::marker {
 	font-weight: var(--weight4);
+}
+.forgecontents ol.toc ol > li > ol > li > ol {
+	font-weight: var(--weight2);
+	text-decoration-thickness: 1.375px;
+}
+.forgecontents ol.toc > li > ol > li > ol > li > ol :is(li, li a:link, li a:visited) {
+	font-size: 16px;
+	font-weight: var(--weight2);
+	text-decoration-thickness: 1.375px;
+	font-style: inherit;
+}
+.forgecontents ol.toc > li > ol > li > ol > li > ol > li::marker {
+	font-weight: var(--weight2);
+	font-style: inherit;
+}
+.forgecontents ol.toc > li > ol > li > ol > li > ol > li > ol {
+	font-weight: var(--weight0);
+	text-decoration-thickness: 0.5px;
+}
+.forgecontents ol.toc > li > ol > li > ol > li > ol > li > ol :is(li, a:link, a:visited) {
+	font-weight: var(--weight0);
+	text-decoration-thickness: 0.5px;
+	font-size: 16px;
+}
+.forgecontents ol.toc > li > ol > li > ol > li > ol > li > ol > li::marker {
+	font-weight: var(--weight0);
+	text-decoration-thickness: 0.5px;
+	font-style: inherit;
+}
+.forgecontents ol.toc {
+	counter-reset: i1 -1;
+}
+.forgecontents ol.toc > li {
+	counter-increment: i1;
+}
+.forgecontents ol.toc > li::before {
+	content: counter(i1, upper-roman) ". ";
+}
+.forgecontents ol.toc > li > ol {
+	counter-set: i2 0;
+}
+.forgecontents ol.toc > li > ol > li {
+	counter-increment: i2;
+}
+.forgecontents ol.toc > li > ol > li::before {
+	content: "(" counter(i1, upper-roman) "." counter(i2) ") ";
+}
+.forgecontents ol.toc > li > ol > li > ol {
+	counter-reset: i3;
+}
+.forgecontents ol.toc > li > ol > li > ol > li {
 	counter-increment: i3;
-	content: "[" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "] "
 }
-.forgecontents ol.toc ol ol ol {
+.forgecontents ol.toc > li > ol > li > ol > li::before {
+	content: "[" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "] ";
+}
+.forgecontents ol.toc > li > ol > li > ol > li > ol {
 	counter-reset: i4;
-	font-weight: var(--weight3);
-	text-decoration-thickness: 1.375px;
 }
-.forgecontents ol.toc ol ol ol :is(li, li a:link, li a:visited) {
-	font-size: 16px;
-	font-weight: var(--weight3);
-	text-decoration-thickness: 1.375px;
-	font-style: inherit;
-}
-.forgecontents ol.toc ol ol ol li::marker {
-	font-weight: var(--weight3);
+.forgecontents ol.toc > li > ol > li > ol > li > ol > li {
 	counter-increment: i4;
-	font-style: inherit;
-	content: "{" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "." counter(i4, decimal) "} "
 }
-.forgecontents ol.toc ol ol ol ol {
+.forgecontents ol.toc > li > ol > li > ol > li > ol > li::before {
+	content: "{" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "." counter(i4, decimal) "} ";
+}
+.forgecontents ol.toc > li > ol > li > ol > li > ol > li > ol {
 	counter-reset: i5;
-	font-weight: var(--weight2);
-	text-decoration-thickness: 0.5px;
 }
-.forgecontents ol.toc ol ol ol ol :is(li, a:link, a:visited) {
-	font-weight: var(--weight2);
-	text-decoration-thickness: 0.5px;
-	font-size: 16px;
-}
-.forgecontents ol.toc ol ol ol ol li::marker {
-	font-weight: var(--weight2);
-	text-decoration-thickness: 0.5px;
+.forgecontents ol.toc > li > ol > li > ol > li > ol > li > ol > li {
 	counter-increment: i5;
-	content: "\0027E8" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "." counter(i4, decimal) "." counter(i4, decimal) "\0027E9\000020";
-	font-style: inherit;
+}
+.forgecontents ol.toc > li > ol > li > ol > li > ol > li > ol > li::before {
+	content: "\0027E8" counter(i1, upper-roman) "." counter(i2, decimal) "." counter(i3, decimal) "." counter(i4, decimal) "." counter(i5, decimal) "\0027E9\000020";
 }
 .forgemanual ol.toclite li.light :is(a:link, a:visited) {
 	font-weight: var(--weight2);
 	text-decoration-thickness: 0.5px;
+}
+.forgecontents ol.toc > li {
+	font-size: 1.25em;
+}
+.forgecontents ol.toc > li > ol {
+	font-size: 0.8em;
+}
+.forgecontents ol.toc > li > ol > li {
+	font-size: 1.125em;
+}
+.forgecontents ol.toc > li > ol > li > ol {
+	font-size: calc(8 / 9 * 1em);
 }
 
 .tempusiraeredux > ol.toclite > li::before {
@@ -2416,17 +2516,47 @@ tbody:nth-child(even) tr:nth-child(odd) {
 tbody:nth-child(even) tr:nth-child(odd) .highlight {
 	background-color: var(--offset-level-1);
 }
-.offset1 {
+.offset0, .offset0 > :is(tr, td, th) {
+	background-color: var(--background);
+}
+.offset1, .offset1 > :is(tr, td, th) {
 	background-color: var(--offset-level-1);
 }
-.offset2 {
+.offset2, .offset2 > :is(tr, td, th) {
 	background-color: var(--offset-level-2);
 }
-.offset3 {
+.offset3, .offset3 > :is(tr, td, th) {
 	background-color: var(--offset-level-3);
 }
-.offset4 {
+.offset4, .offset4 > :is(tr, td, th) {
 	background-color: var(--offset-level-4);
+}
+.background0, .background0 > :is(tr, td, th) {
+	background-color: var(--background);
+}
+.background1, .background1 > :is(tr, td, th) {
+	background-color: var(--background-1);
+}
+.background2, .background2 > :is(tr, td, th) {
+	background-color: var(--background-2);
+}
+.background3, .background3 > :is(tr, td, th) {
+	background-color: var(--background-3);
+}
+.background4, .background4 > :is(tr, td, th) {
+	background-color: var(--background-4);
+}
+.background5, .background5 > :is(tr, td, th) {
+	background-color: var(--background-5);
+}
+.background6, .background6 > :is(tr, td, th) {
+	background-color: var(--background-6);
+}
+.background7, .background7 > :is(tr, td, th) {
+	background-color: var(--background-7);
+}
+.background8, .background8 > :is(tr, td, th) {
+	background-color: var(--background-8);
 }
 .bghue0, .bghue0 :is(tr > td), .bghue0-tl ~ td.highlight {
 	background-color: var(--oklab0-bg) !important;

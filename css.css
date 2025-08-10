@@ -400,8 +400,11 @@
 	}
 }
 @media screen and (max-width: 600px) {
-	.fixmobilefontsize {
+	.fixmobilefontsize, .fixmobilefontsize td, .fixmobilefontsize th {
 		font-size: 1rem;
+	}
+	.mobilescroll {
+		overflow: auto;
 	}
 }
 @media (prefers-color-scheme: light) {

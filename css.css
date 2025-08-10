@@ -406,6 +406,21 @@
 	.mobilescroll {
 		overflow: auto;
 	}
+	.mobile50, .mobile50 td, .mobile50 th {
+		font-size: .5rem;
+	}
+	.mobile60, .mobile60 td, .mobile60 th {
+		font-size: .6rem;
+	}
+	.mobile70, .mobile70 td, .mobile70 th {
+		font-size: .7rem;
+	}
+	.mobile80, .mobile80 td, .mobile80 th {
+		font-size: .8rem;
+	}
+	.mobile90, .mobile90 td, .mobile90 th {
+		font-size: .9rem;
+	}
 }
 @media (prefers-color-scheme: light) {
 	@media screen {

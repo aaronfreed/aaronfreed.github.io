@@ -461,10 +461,45 @@
 	.discography .mobile90 .fixheight :is(td, th) {
 		line-height: 18.9px;
 	}
+	.nomobile {
+		visibility: collapse !important;
+		display: none !important;
+	}
+	.discography .mobile60 td, .discography .mobile60 th {
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+	.discography .mobile60 td.date, .discography .mobile60 th.date,
+	.discography .mobile60 td.dr, .discography .mobile60 th.dr,
+	.discography .mobile60 td.website, .discography .mobile60 th.website,
+	.discography .mobile60 td.albumname, .discography .mobile60 th.albumname,
+	.discography .mobile60 td.albumtype, .discography .mobile60 th.albumtype,
+	.discography .mobile60 td.albumartist, .discography .mobile60 th.albumartist,
+	.discography .mobile60 td.length, .discography .mobile60 th.length
+	{
+		font-size: .5rem;
+		line-height: 10.5px;
+	}
+
+	.discography .mobile70 td.date, .discography .mobile70 th.date,
+	.discography .mobile70 td.dr, .discography .mobile70 th.dr,
+	.discography .mobile70 td.website, .discography .mobile70 th.website,
+	.discography .mobile70 td.albumname, .discography .mobile70 th.albumname,
+	.discography .mobile70 td.albumtype, .discography .mobile70 th.albumtype,
+	.discography .mobile70 td.albumartist, .discography .mobile70 th.albumartist,
+	.discography .mobile70 td.length, .discography .mobile70 th.length
+	{
+		font-size: .6rem;
+		line-height: 12.6px;
+	}
 }
 @media screen and (min-width: 600px) {
 	.nowrapdesktop {
 		white-space: nowrap;
+	}
+	.mobileonly {
+		visibility: collapse !important;
+		display: none !important;
 	}
 }
 @media (prefers-color-scheme: light) {
@@ -749,6 +784,10 @@
 	}
 	.print60toleft {
 		margin-left: -60px !important;
+	}
+	.mobileonly {
+		visibility: collapse !important;
+		display: none !important;
 	}
 }
 @media screen {

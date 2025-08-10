@@ -406,25 +406,41 @@
 	.mobilescroll {
 		overflow: auto;
 	}
+	.mobile40, .mobile40 td, .mobile40 th {
+		font-size: .4rem;
+	}
 	.mobile50, .mobile50 td, .mobile50 th {
 		font-size: .5rem;
-		line-height: 50%;
 	}
 	.mobile60, .mobile60 td, .mobile60 th {
 		font-size: .6rem;
-		line-height: 60%;
 	}
 	.mobile70, .mobile70 td, .mobile70 th {
 		font-size: .7rem;
-		line-height: 70%;
 	}
 	.mobile80, .mobile80 td, .mobile80 th {
 		font-size: .8rem;
-		line-height: 80%;
 	}
 	.mobile90, .mobile90 td, .mobile90 th {
 		font-size: .9rem;
-		line-height: 90%;
+	}
+	.mobile40, .mobile40 td, .mobile40 th {
+		line-height: .5rem;
+	}
+	.mobile50, .mobile50 td, .mobile50 th {
+		line-height: .625rem;
+	}
+	.mobile60, .mobile60 td, .mobile60 th {
+		line-height: .75rem;
+	}
+	.mobile70, .mobile70 td, .mobile70 th {
+		line-height: .875rem;
+	}
+	.mobile80, .mobile80 td, .mobile80 th {
+		line-height: 1rem;
+	}
+	.mobile90, .mobile90 td, .mobile90 th {
+		line-height: 1.125rem;
 	}
 	.discography .mobile50 tfoot th {
 		font-size: .40625rem;

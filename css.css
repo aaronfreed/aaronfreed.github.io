@@ -408,18 +408,43 @@
 	}
 	.mobile50, .mobile50 td, .mobile50 th {
 		font-size: .5rem;
+		line-height: 50%;
 	}
 	.mobile60, .mobile60 td, .mobile60 th {
 		font-size: .6rem;
+		line-height: 60%;
 	}
 	.mobile70, .mobile70 td, .mobile70 th {
 		font-size: .7rem;
+		line-height: 70%;
 	}
 	.mobile80, .mobile80 td, .mobile80 th {
 		font-size: .8rem;
+		line-height: 80%;
 	}
 	.mobile90, .mobile90 td, .mobile90 th {
 		font-size: .9rem;
+		line-height: 90%;
+	}
+	.discography .mobile50 .fixheight,
+	.discography .mobile50 .fixheight :is(td, th) {
+		line-height: 10.5px;
+	}
+	.discography .mobile60 .fixheight,
+	.discography .mobile60 .fixheight :is(td, th) {
+		line-height: 12.6px;
+	}
+	.discography .mobile70 .fixheight,
+	.discography .mobile70 .fixheight :is(td, th) {
+		line-height: 14.7px;
+	}
+	.discography .mobile80 .fixheight,
+	.discography .mobile80 .fixheight :is(td, th) {
+		line-height: 16.8px;
+	}
+	.discography .mobile90 .fixheight,
+	.discography .mobile90 .fixheight :is(td, th) {
+		line-height: 18.9px;
 	}
 }
 @media (prefers-color-scheme: light) {

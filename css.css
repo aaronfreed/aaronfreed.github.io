@@ -2474,6 +2474,7 @@ table {
 	border-collapse: collapse;
 	margin: auto;
 	hyphens: none;
+	text-size-adjust: none;
 }
 table.hyphenate,
 td.hyphenate, 

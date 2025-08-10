@@ -2476,6 +2476,12 @@ table {
 	hyphens: none;
 	text-size-adjust: none;
 }
+tbody, thead, tfoot, tr, td, th {
+	text-size-adjust: none;
+}
+.textsizeadjust {
+	text-size-adjust: auto;
+}
 table.hyphenate,
 td.hyphenate, 
 table.hyphenate > :is(

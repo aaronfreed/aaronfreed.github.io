@@ -2472,9 +2472,15 @@ table {
 	margin: auto;
 	hyphens: none;
 	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
 }
 tbody, thead, tfoot, tr, td, th {
 	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
 }
 .textsizeadjust, .textsizeadjust :is(
 	tbody > tr > td,
@@ -2484,6 +2490,9 @@ tbody, thead, tfoot, tr, td, th {
 	tr > th
 ) {
 	text-size-adjust: auto;
+	-webkit-text-size-adjust: auto;
+	-moz-text-size-adjust: auto;
+	-ms-text-size-adjust: auto;
 }
 table.hyphenate,
 td.hyphenate, 

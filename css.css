@@ -507,16 +507,16 @@
 		break-after: avoid;
 	}
 	h1 {
-		font-size: 24px;
+		font-size: 1.5rem;
 	}
 	h2 {
-		font-size: 22px;
+		font-size: 1.375rem;
 	}
 	h3 {
-		font-size: 20px;
+		font-size: 1.25rem;
 	}
 	h4 {
-		font-size: 18px;
+		font-size: 1.125rem;
 	}
 	a:link,
 	a:visited,
@@ -531,7 +531,7 @@
 		text-decoration: none;
 	}
 	.istoria thead {
-		font-size: 16px;
+		font-size: 1rem;
 		display: table-row-group;
 	}
 	.istoria thead tr:first-child th,
@@ -568,7 +568,7 @@
 	}
 
 	.trigtables td {
-		font-size: 14px;
+		font-size: .875rem;
 	}
 	.trigtables tr:nth-child(15n+1) td,
 	.trigtables .fifteen {
@@ -622,7 +622,7 @@
 		font-size: 80%;
 	}
 	.print14px {
-		font-size: 14px;
+		font-size: .875rem;
 	}
 	img.print80, .print80 img {
 		transform: scale(0.8);
@@ -641,13 +641,13 @@
 		print-color-adjust: exact !important;
 	}
 	.metm ol.contents.comp2023-2024appendices > li::marker {
-		font-size: 14.5px;
+		font-size: 0.90625rem;
 	}
 	.metm ol.contents > li::marker {
-		font-size: 20px;
+		font-size: 1.25rem;
 	}
 	.metm ol.movements > li::marker {
-		font-size: 18px;
+		font-size: 1.125rem;
 	}
 	.notopmarginprint, .notopmarginprint :is(li, td, th) {
 		margin-top: 0px !important;
@@ -725,7 +725,7 @@
 		border-left: 1px solid var(--offset-level-4); border-top: 1px solid var(--offset-level-4);
 	}
 	.istoria thead tr:first-child {
-		font-size: 20px;
+		font-size: 1.25rem;
 	}
 	.istoria .body thead tr:is(:first-child, :last-child) {
 		position: sticky;
@@ -1255,12 +1255,12 @@
 	}
 
 	.metm ol.contents > li::marker {
-		font-size: 20px;
+		font-size: 1.25rem;
 		line-height: 125%;
 	}
 
 	.metm ol.movements > li::marker {
-		font-size: 18px;
+		font-size: 1.125rem;
 		line-height: 125%;
 	}
 
@@ -1476,6 +1476,9 @@ ol.comp2023-2024appendices {
 /*@import url('https://free.bboxtype.com/embedfonts/?family=FiraSans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|FiraSans+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|FiraSans+Compressed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');*/
 
 /* start main entry */
+html {
+	font-size: 100%;
+}
 body {
 	font-family: "FiraGO", "Noto Music", sans-serif;
 	text-align: justify;
@@ -1488,10 +1491,10 @@ body {
 	text-decoration-color: color-mix(in sRGB, currentColor 69%, transparent);
 }
 .smol {
-	font-size: 13px;
+	font-size: .8125rem;
 }
 .tiny {
-	font-size: 11px;
+	font-size: .6875rem;
 }
 .maincolor {
 	color: var(--main);
@@ -1710,16 +1713,16 @@ h3 .subtitle {
 	font-style: italic;
 }
 .music h1 {
-	font-size: 30px;
+	font-size: 1.875rem;
 }
 .music h2 {
-	font-size: 24px;
+	font-size: 1.5rem;
 }
 .music h3 {
-	font-size: 18px;
+	font-size: 1.125rem;
 }
 .music h4 {
-	font-size: 16px;
+	font-size: 1rem;
 }
 .music :where( h1, h2, h3, h4) {
 	margin: 16px 0px 8px;
@@ -1882,19 +1885,19 @@ h3 .subtitle {
 
 
 :where(.portfolio, .forgemanual) h1 {
-	font-size: 36px;
+	font-size: 2.25rem;
 }
 :where(.portfolio, .forgemanual) h2 {
-	font-size: 30px;
+	font-size: 1.875rem;
 }
 :where(.portfolio, .forgemanual) h3 {
-	font-size: 24px;
+	font-size: 1.5rem;
 }
 :where(.portfolio, .forgemanual) h4 {
-	font-size: 18px;
+	font-size: 1.125rem;
 }
 :where(.portfolio, .forgemanual) h5 {
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 .forgemanual :where(h1, h2, h3, h4, h5) {
@@ -2226,7 +2229,7 @@ ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
 
 /* a bunch of weird stuff for the Forge manual table of contents */
 .forgecontents ol.toc > li {
-	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 125%;
 	font-weight: var(--weight8);
 	text-decoration-thickness: 2.25px;
@@ -2244,7 +2247,7 @@ ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
 .forgecontents ol.toc > li > ol :is(li, li a:link, li a:visited) {
 	font-weight: var(--weight6);
 	text-decoration-thickness: 2px;
-	font-size: 18px;
+	font-size: 1.125rem;
 	line-height: 125%;
 }
 .forgecontents ol.toc > li > ol > li::marker {
@@ -2261,7 +2264,7 @@ ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
 {
 	font-weight: var(--weight4);
 	text-decoration-thickness: 1.5px;
-	font-size: 16px;
+	font-size: 1rem;
 }
 .forgecontents ol.toc > li > ol > li > ol li::marker {
 	font-weight: var(--weight4);
@@ -2271,7 +2274,7 @@ ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
 	text-decoration-thickness: 1.375px;
 }
 .forgecontents ol.toc > li > ol > li > ol > li > ol :is(li, li a:link, li a:visited) {
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: var(--weight2);
 	text-decoration-thickness: 1.375px;
 	font-style: inherit;
@@ -2287,7 +2290,7 @@ ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
 .forgecontents ol.toc > li > ol > li > ol > li > ol > li > ol :is(li, a:link, a:visited) {
 	font-weight: var(--weight0);
 	text-decoration-thickness: 0.5px;
-	font-size: 16px;
+	font-size: 1rem;
 }
 .forgecontents ol.toc > li > ol > li > ol > li > ol > li > ol > li::marker {
 	font-weight: var(--weight0);
@@ -2344,16 +2347,10 @@ ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
 	text-decoration-thickness: 0.5px;
 }
 .forgecontents ol.toc > li {
-	font-size: 1.25em;
-}
-.forgecontents ol.toc > li > ol {
-	font-size: 0.8em;
+	font-size: 1.25rem;
 }
 .forgecontents ol.toc > li > ol > li {
-	font-size: 1.125em;
-}
-.forgecontents ol.toc > li > ol > li > ol {
-	font-size: calc(8 / 9 * 1em);
+	font-size: 1.125rem;
 }
 
 .tempusiraeredux > ol.toclite > li::before {
@@ -2453,7 +2450,7 @@ ol.upperroman {
 /* section breaks */
 .sectionbreak {
 	margin: 16px 0px;
-	font-size: 13px;
+	font-size: .8125rem;
 	text-align: center;
 }
 
@@ -2479,7 +2476,13 @@ table {
 tbody, thead, tfoot, tr, td, th {
 	text-size-adjust: none;
 }
-.textsizeadjust {
+.textsizeadjust, .textsizeadjust :is(
+	tbody > tr > td,
+	thead > tr > th,
+	tfoot > tr > th,
+	tr > td,
+	tr > th
+) {
 	text-size-adjust: auto;
 }
 table.hyphenate,
@@ -2669,7 +2672,7 @@ textarea, button {
 	color: var(--main);
 }
 button, .custom-file-upload {
-	border: 2px outset var(--offset-level-4); border-radius: 12px; font-size: 16px;
+	border: 2px outset var(--offset-level-4); border-radius: 12px; font-size: 1rem;
 }
 textarea {
 	border: 2px inset var(--offset-level-4); border-radius: 4px;
@@ -2772,7 +2775,7 @@ thead tr.freshprince th {
 .discography tfoot th {
 	font-weight: var(--weight5);
 	text-decoration-thickness: 2px;
-	font-size: 13px;
+	font-size: .8125rem;
 }
 
 .discography tr.singleline td {
@@ -2808,7 +2811,7 @@ thead tr.freshprince th {
 }
 .istoria tfoot {
 	background-color: var(--offset-level-3);
-	font-size: 13px;
+	font-size: .8125rem;
 }
 .istoria :where(td, th).topic {
 	font-family: "FiraGO", sans-serif;
@@ -3356,7 +3359,7 @@ td.translation-romanized, th.translation-romanized
 .speaker {
 	margin-top: 6px;
 	margin-left: 16px;
-	font-size: 15px;
+	font-size: .9375rem;
 	color: var(--heading-color) !important;
 }
 .hathortimeline .speaker {
@@ -3488,12 +3491,12 @@ p.interpolation.songwriter, p.interpolation-songwriters {
 }
 
 .metm ol.contents .trackheader {
-	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 125%;
 }
 
 .metm ol.movements .movementheader {
-	font-size: 18px;
+	font-size: 1.125rem;
 	line-height: 125%;
 }
 
@@ -3880,7 +3883,7 @@ li.weight8,
 }
 
 .timesignature {
-	font-size: 12px;
+	font-size: .75rem;
 	line-height: .9;
 	text-align: center;
 }
@@ -3908,7 +3911,7 @@ td.timesignature {
 
 .musictheory .timesignature {
 	color: var(--heading-color);
-	font-size: 15px;
+	font-size: .9375rem;
 	line-height: .9;
 	text-align: center;
 }
@@ -3934,7 +3937,7 @@ td.timesignature {
 	vertical-align: middle;
 }
 .musictheory .musicsymbol {
-	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 /* a very stupid way of doing this, but it works? sort of? */
@@ -4015,16 +4018,16 @@ td.timesignature {
 	margin-top: 0px;
 	margin-bottom: 8px;
 	page-break-after: avoid;
-	font-size: 21px;
+	font-size: 1.3125rem;
 }
 .compositions2023-2024 .movementtitle {
 	margin-top: 0px;
 	margin-bottom: 8px;
 	page-break-after: avoid;
-	font-size: 18px;
+	font-size: 1.125rem;
 }
 .compositions2023-2024 ol.contents p.sectionbreak {
-	font-size: 13px;
+	font-size: .8125em;
 }
 .compositions2023-2024 ol.contents p.sectionbreak :is(a:link, a:visited) {
 	font-weight: var(--weight3);

@@ -426,6 +426,21 @@
 		font-size: .9rem;
 		line-height: 90%;
 	}
+	.discography .mobile50 tfoot th {
+		font-size: .40625rem;
+	}
+	.discography .mobile60 tfoot th {
+		font-size: .4375rem;
+	}
+	.discography .mobile70 tfoot th {
+		font-size: .56875rem;
+	}
+	.mobile80, .mobile80 td, .mobile80 th {
+		font-size: .65rem;
+	}
+	.mobile90, .mobile90 td, .mobile90 th {
+		font-size: .73125rem;
+	}
 	.discography .mobile50 .fixheight,
 	.discography .mobile50 .fixheight :is(td, th) {
 		line-height: 10.5px;
@@ -445,6 +460,11 @@
 	.discography .mobile90 .fixheight,
 	.discography .mobile90 .fixheight :is(td, th) {
 		line-height: 18.9px;
+	}
+}
+@media screen and (min-width: 600px) {
+	.nowrapdesktop {
+		white-space: nowrap;
 	}
 }
 @media (prefers-color-scheme: light) {
@@ -525,6 +545,9 @@
 		display: none !important;
 	}
 	.nowrapprint {
+		white-space: nowrap;
+	}
+	.nowrapdesktop {
 		white-space: nowrap;
 	}
 	.nopagebreak {

@@ -3438,17 +3438,35 @@ th.nosidepad,
 	padding-left: 0px; 
 	padding-right: 0px;
 }
+td.sidepad1,
+th.sidepad1,
+.sidepad1 :is(td, th) {
+	padding-left: 1px; 
+	padding-right: 1px;
+}
 td.sidepad2,
 th.sidepad2,
 .sidepad2 :is(td, th) {
 	padding-left: 2px; 
 	padding-right: 2px;
 }
+td.sidepad3,
+th.sidepad3,
+.sidepad3 :is(td, th) {
+	padding-left: 3px; 
+	padding-right: 3px;
+}
 td.sidepad4,
 th.sidepad4,
 .sidepad4 :is(td, th) {
 	padding-left: 4px; 
 	padding-right: 4px;
+}
+td.sidepad5,
+th.sidepad5,
+.sidepad5 :is(td, th) {
+	padding-left: 5px; 
+	padding-right: 5px;
 }
 td.sidepad6,
 th.sidepad6,
@@ -3468,65 +3486,165 @@ th.sidepad10,
 	padding-left: 10px; 
 	padding-right: 10px;
 }
-td.sidepad15,
-th.sidepad15,
-.sidepad15 :is(td, th) {
-	padding-left: 15px; 
-	padding-right: 15px;
-}
 td.sidepad12,
 th.sidepad12,
 .sidepad12 :is(td, th) {
 	padding-left: 12px; 
 	padding-right: 12px;
 }
-td:first-child.sidepad2, td:first-child.sidepad4, td:first-child.sidepad6, td:first-child.sidepad8, td:first-child.sidepad10, td:first-child.sidepad12, td:first-child.sidepad15 {padding-left: 0px;}
-td:last-child.sidepad2, td:last-child.sidepad4, td:last-child.sidepad6, td:last-child.sidepad8, td:last-child.sidepad10, td:last-child.sidepad12, td:last-child.sidepad15 {padding-right: 0px;}
-td.rightpad10,
-th.rightpad10,
-:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad8, table.sidepad10, table.sidepad12, table.sidepad15) :is(td.rightpad10, th.rightpad10)
- {
+td.sidepad15,
+th.sidepad15,
+.sidepad15 :is(td, th) {
+	padding-left: 15px; 
+	padding-right: 15px;
+}
+td:first-child.sidepad2, td:first-child.sidepad4, td:first-child.sidepad5, 
+td:first-child.sidepad6, td:first-child.sidepad8, td:first-child.sidepad10,
+td:first-child.sidepad12, td:first-child.sidepad15, td:first-child.sidepad20,
+td:first-child.sidepad25, td:first-child.sidepad30 {
+	padding-left: 0px;
+}
+td:last-child.sidepad2, td:last-child.sidepad4, td:last-child.sidepad5, 
+td:last-child.sidepad6, td:last-child.sidepad8, td:last-child.sidepad10,
+td:last-child.sidepad12, td:last-child.sidepad15, td:last-child.sidepad20,
+td:last-child.sidepad25, td:last-child.sidepad30 {
+	padding-right: 0px;
+}
+td.rightpad15,
+th.rightpad15,
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.rightpad15, th.rightpad15) {
 	padding-right: 15px;
 }
 td.leftpad15,
 th.leftpad15,
-:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad8, table.sidepad10, table.sidepad12, table.sidepad15) :is(td.leftpad15, th.leftpad15) {
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.leftpad15, th.leftpad15) {
 	padding-left: 15px;
+}
+td.rightpad12,
+th.rightpad12,
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.rightpad12, th.rightpad12) {
+	padding-right: 12px;
+}
+td.leftpad12,
+th.leftpad12,
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.leftpad12, th.leftpad12) {
+	padding-left: 12px;
 }
 td.rightpad10,
 th.rightpad10,
-:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad8, table.sidepad10, table.sidepad12, table.sidepad15) :is(td.rightpad10, th.rightpad10)
- {
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.rightpad10, th.rightpad10) {
 	padding-right: 10px;
 }
 td.leftpad10,
 th.leftpad10,
-:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad8, table.sidepad10, table.sidepad12, table.sidepad15) :is(td.leftpad10, th.leftpad10) {
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.leftpad10, th.leftpad10) {
 	padding-left: 10px;
-}
-td.leftpad12,
-th.leftpad12,
-:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad8, table.sidepad10, table.sidepad12, table.sidepad15) :is(td.leftpad10, th.leftpad10) {
-	padding-left: 12px;
 }
 td.rightpad8,
 th.rightpad8,
-:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad10, table.sidepad15) :is(td.rightpad8, th.rightpad8)
- {
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.leftpad8, th.leftpad8)
+{
 	padding-right: 8px;
 }
 td.leftpad8,
 th.leftpad8,
-:is(table.sidepad2, table.sidepad4, table.sidepad6, table.sidepad10, table.sidepad15) :is(td.leftpad8, th.leftpad8) {
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.rightpad8, th.rightpad8) {
 	padding-left: 8px;
 }
 td.rightpad6,
-th.rightpad6 {
+th.rightpad6,
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.rightpad6, th.rightpad6) {
 	padding-right: 6px;
 }
 td.leftpad6,
-th.leftpad6 {
+th.leftpad6,
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.leftpad6, th.leftpad6) {
 	padding-left: 6px;
+}
+td.leftpad5,
+th.leftpad5,
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.leftpad5, th.leftpad5) {
+	padding-left: 5px;
+}
+td.leftpad4,
+th.leftpad4,
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.leftpad4, th.leftpad4) {
+	padding-left: 4px;
+}
+td.leftpad3,
+th.leftpad3,
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.leftpad3, th.leftpad3) {
+	padding-left: 3px;
+}
+td.leftpad2,
+th.leftpad2,
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.leftpad2, th.leftpad2) {
+	padding-left: 2px;
+}
+td.leftpad1,
+th.leftpad1,
+:is(table.sidepad1, table.sidepad2, table.sidepad3, table.sidepad4,
+	table.sidepad5, table.sidepad6, table.sidepad8, table.sidepad10,
+	table.sidepad12, table.sidepad15, table.sidepad20, table.sidepad25,
+	table.sidepad30)
+:is(td.leftpad1, th.leftpad1) {
+	padding-left: 1px;
 }
 td.rightpad4,
 th.rightpad4 {

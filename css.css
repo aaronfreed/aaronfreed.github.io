@@ -508,6 +508,9 @@
 	.mobile90, .mobile90 td, .mobile90 th {
 		font-size: .9rem;
 	}
+	.mobile100, .mobile100 td, .mobile100 th {
+		font-size: 1rem;
+	}
 	.mobile40, .mobile40 td, .mobile40 th {
 		line-height: .5rem;
 	}

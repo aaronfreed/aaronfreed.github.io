@@ -300,7 +300,8 @@ window.onload = function () {makeAllSortable();};*/
 							<ol>
 								<li><a class="noprintlink" href="#modediscombobulation">A Great Mode Discombobulation</a></li>
 								<li><a class="noprintlink" href="#diatonicmajorinversions">Inverting the Ionian Scale</a></li>
-								<li><a class="noprintlink" href="#modediscombobulation">A Medieval Off-by-One Error</a></li>
+								<li><a class="noprintlink" href="#diatonictetrachordinversions">Inverting the Greek Diatonic Tetrachord</a></li>
+								<li><a class="noprintlink" href="#offbyoneerror">A Medieval Off-by-One Error</a></li>
 							</ol>
 						</li>
 						<li><a class="noprintlink" href="#appliedgreekharmony">Applied Greek Harmony: Tetrachords in Modern Scales</a></li>
@@ -1231,7 +1232,7 @@ window.onload = function () {makeAllSortable();};*/
 			</ol>
 						<p class="light">Got all that? Let’s recap. (Note: “H” = half-tone, ”W” = whole tone, “M” = minor third)</p>
 
-			<table id="pentatonicinversions" class="centred tabular-oldstyle nowrapprint fixheight">
+			<div class="mobilescroll"><table id="pentatonicinversions" class="centred tabular-oldstyle nowrap fixheight">
 				<thead>
 					<tr class="accent weight4"><th colspan="7">The incorrect “upshift” hypothesis</th></tr>
 					<tr class="petitecaps toc-counter weight2">
@@ -1280,13 +1281,13 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="lightleftborder"><span class="orange">M</span> W <span class="orange">M</span> W W</td>
 						<td class="leftborder">2 5</td></tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p class="light">I probably don’t even need to point out how many patterns recur in both scales.</p>
 
 			<p class="light">We just analyzed the pentatonic modes based on notes a half-step above them, but we could just as easily have used the notes a half-step above. This means instead disregarding Lydian and Ionian. Oddly enough, we delete the same scale degrees either way:</p>
 
-			<table id="pentatonicinversionsdown" class="centred tabular-oldstyle nowrapprint fixheight">
+			<div class="mobilescroll"><table id="pentatonicinversionsdown" class="centred tabular-oldstyle nowrap fixheight">
 				<thead>
 					<tr class="accent weight4"><th colspan="7">The incorrect “downshift” hypothesis</th></tr>
 					<tr class="petitecaps toc-counter weight2">
@@ -1335,7 +1336,7 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="lightleftborder"><span class="orange">M</span> W <span class="orange">M</span> W W</td>
 						<td class="leftborder">2 5</td></tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p class="orange light fixheight"><em><strong>(End warning.)</strong></em></p>
 
@@ -1343,7 +1344,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light">But wait, there’s more! Consulting the heptatonic circle of fifths progression enables us to “average” the above two tables. Eerily, averaging them doesn’t invalidate their results in any way except a trivial one: this is the first analysis that’s <em>actually</em> correct. But, as the famed philosopher Nigel Tufnel put it, that’s nitpicking, innit?</p>
 
-			<table id="pentatonicinversionstritone" class="centred tabular-oldstyle nowrapprint fixheight">
+			<div class="mobilescroll"><table id="pentatonicinversionstritone" class="centred tabular-oldstyle nowrap fixheight">
 				<thead>
 					<tr class="accent weight4"><th colspan="7">How pentatonic transforms Ionian: The correct “tritone deletion” explanation</th></tr>
 					<tr class="petitecaps toc-counter weight2">
@@ -1397,7 +1398,7 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="leftborder">2 5</td></tr>
 					</tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p class="light">So, to reiterate: The first two tables I presented are <em>filthy half-truths</em>: their explanations only fit due to mathematical patterns they don’t account for. Only the third is fully correct. Can you figure out why?</p>
 						<ol class="light">
@@ -1427,8 +1428,9 @@ window.onload = function () {makeAllSortable();};*/
 
 			<h2 id="pentatonicscaleorder" class="centred">Analysis of modes in scale order</h2>
 
-			<p class="light">The modes’ scale ordering may help further clarify why the upshift and downshift tables are wrong:</p>
-				<table id="pentatonicinversionsscaleorder" class="centred tabular-oldstyle nowrapprint fixheight">
+			<p class="light">Viewing the modes in scale order, with the Ionian scale’s missing modes included, may help further clarify why the “upshift” and “downshift” tables are wrong:</p>
+
+			<div class="mobilescroll"><table id="pentatonicinversionsscaleorder" class="centred tabular-oldstyle nowrap fixheight">
 				<thead>
 					<tr class="accent weight4"><th colspan="7">How pentatonic transforms Ionian: The correct “root note” explanation</th></tr>
 					<tr class="petitecaps toc-counter weight2">
@@ -1443,7 +1445,7 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="lightleftborder">C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span>G<span class="hidden">♮</span>A</td>
 						<td class="leftborder">W W <span class="azure">H</span> W W W <span class="azure">H</span></td>
 						<td class="lightleftborder">W W <span class="orange">M</span> W <span class="orange">M</span></td>
-						<td class="leftborder">4 7</td></tr>
+						<td class="leftborder">7 4</td></tr>
 					</tr>
 					<tr>
 						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>
@@ -1452,7 +1454,7 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="lightleftborder">D<span class="hidden">♮</span>E<span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span>C</td>
 						<td class="leftborder">W <span class="azure">H</span> W W W <span class="azure">H</span> W</td>
 						<td class="lightleftborder">W <span class="orange">M</span> W <span class="orange">M</span> W</td>
-						<td class="leftborder">3 6</td></tr>
+						<td class="leftborder">6 3</td></tr>
 					</tr>
 					<tr>
 						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>
@@ -1461,7 +1463,16 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="lightleftborder">E<span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span>C<span class="hidden">♮</span>D</td>
 						<td class="leftborder"><span class="azure">H</span> W W W <span class="azure">H</span> W W</td>
 						<td class="lightleftborder"><span class="orange">M</span> W <span class="orange">M</span> W W</td>
-						<td class="leftborder">2 5</td></tr>
+						<td class="leftborder">5 2</td></tr>
+					</tr>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder">F<span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span>B<span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E</td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder">W W W <span class="azure">H</span> W W <span class="azure">H</span></td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder">4 1</td></tr>
 					</tr>
 					<tr>
 						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></a></td>
@@ -1481,17 +1492,30 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="lightleftborder"><span class="orange">M</span> W W <span class="orange">M</span> W</td>
 						<td class="leftborder">2 6</td></tr>
 					</tr>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></a></td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder">B<span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span>F<span class="hidden">♮</span>G<span class="hidden">♮</span>A</td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder"><span class="azure">H</span> W W <span class="azure">H</span> W W W</td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder">1 5</td></tr>
+					</tr>
 				</tbody>
-			</table>
-						<p class="light">Modes are inextricably linked to their roots. We must compare the same notes in each scale:</p>
-						<ol class="light marginleft50 upperalpha" start="3">
-				<li>We didn’t delete this note, so its mode, <a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a>, becomes <a class="noprintlink" href="https://ianring.com/musictheory/scales/661" target="_blank" rel="noopener noreferrer">major pentatonic</a>.</li>
-				<li>We didn’t delete this note, so its mode, <a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a>, becomes <a class="noprintlink" href="https://ianring.com/musictheory/scales/1189" target="_blank" rel="noopener noreferrer">neutral pentatonic</a>.</li>
-				<li>We didn’t delete this note, so its mode, <a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a>, becomes <a class="noprintlink" href="https://ianring.com/musictheory/scales/1321" target="_blank" rel="noopener noreferrer">blues minor</a>.</li>
-				<li>Deleting this note deletes its mode. <a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a> has no pentatonic equivalent.</li>
-				<li>We didn’t delete this note, so its mode, <a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a>, becomes <a class="noprintlink" href="https://ianring.com/musictheory/scales/677" target="_blank" rel="noopener noreferrer">Scottish pentatonic</a>.</li>
-				<li value="1">We didn’t delete this note, so its mode, <a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a>, becomes <a class="noprintlink" href="https://ianring.com/musictheory/scales/1193" target="_blank" rel="noopener noreferrer">minor pentatonic</a>.</li>
-				<li value="2">Deleting this note deletes its mode. <a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a> has no pentatonic equivalent.</li>
+			</table></div>
+
+			<p class="light">(Note: I swapped the order of a few “deleted notes” entries in this table to clarify its pattern.)
+
+			<p class="light">Modes are inextricably linked to their roots. We must compare the same notes in each scale:</p>
+
+			<ol class="light marginleft50 upperalpha" start="3">
+				<li>We didn’t delete this note; its mode, <a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a>, becomes <a class="noprintlink" href="https://ianring.com/musictheory/scales/661" target="_blank" rel="noopener noreferrer">major pentatonic</a>.</li>
+				<li>We didn’t delete this note; its mode, <a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a>, becomes <a class="noprintlink" href="https://ianring.com/musictheory/scales/1189" target="_blank" rel="noopener noreferrer">neutral pentatonic</a>.</li>
+				<li>We didn’t delete this note; its mode, <a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a>, becomes <a class="noprintlink" href="https://ianring.com/musictheory/scales/1321" target="_blank" rel="noopener noreferrer">blues minor</a>.</li>
+				<li>Deleting this note deletes its mode; <a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a> has no pentatonic equivalent.</li>
+				<li>We didn’t delete this note; its mode, <a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a>, becomes <a class="noprintlink" href="https://ianring.com/musictheory/scales/677" target="_blank" rel="noopener noreferrer">Scottish pentatonic</a>.</li>
+				<li value="1">We didn’t delete this note; its mode, <a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a>, becomes <a class="noprintlink" href="https://ianring.com/musictheory/scales/1193" target="_blank" rel="noopener noreferrer">minor pentatonic</a>.</li>
+				<li value="2">Deleting this note deletes its mode; <a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a> has no pentatonic equivalent.</li>
 			</ol>
 			<p class="margintop15 light fixheight">Put another way, recall how <strong class="accent">Ionian</strong>’s modes got their numbering:</p>
 
@@ -1521,7 +1545,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light">Why pentatonic and Ionian’s intervals are out of sync may not be obvious. Let’s revisit the above table, this time with deleted tones <span class="hue0">in red</span> and combined intervals <span class="hue270">in purple</span>:</p>
 
-			<table id="pentatonicinversionsintervals" class="centred tabular-oldstyle nowrappri/nt fixheight">
+			<div class="mobilescroll"><table id="pentatonicinversionsintervals" class="centred tabular-oldstyle nowrapprint fixheight">
 				<thead>
 					<tr class="accent weight4"><th colspan="7">How pentatonic transforms Ionian: Interval analysis (circle order)</th></tr>
 					<tr class="petitecaps toc-counter weight2">
@@ -1529,6 +1553,15 @@ window.onload = function () {makeAllSortable();};*/
 					</tr>
 				</thead>
 				<tbody>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder"><span class="hue0">F</span><span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span><span class="hue0">B</span><span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E</td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder"><span class="hue270">W</span> W <span class="hue270">W H</span> W W <span class="hue270">H</span></td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder">4 1</td></tr>
+					</tr>
 					<tr>
 						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>
 						<td class="lightleftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/661" target="_blank" rel="noopener noreferrer">Major 5t.</a></td>
@@ -1574,8 +1607,17 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="lightleftborder"><span class="hue270">M</span> W <span class="hue270">M</span> W W</td>
 						<td class="leftborder">2 5</td></tr>
 					</tr>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></a></td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder"><span class="hue0">B</span><span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span><span class="hue0">F</span><span class="hidden">♮</span>G<span class="hidden">♮</span>A</td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder"><span class="hue270">H</span> W W <span class="hue270">H W</span> W <span class="hue270">W</span></td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder">1 5</td></tr>
+					</tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p class="light">It may help to emphasize that we aren’t deleting intervals; we’re deleting <em>notes</em> and <em>combining</em> intervals. For instance, deleting a scale’s second note combines its first two intervals. Also, bear in mind that:</p>
 
@@ -1588,11 +1630,12 @@ window.onload = function () {makeAllSortable();};*/
 					</ol>
 				</li>
 			</ol>
-							<p class="light">Thus, the two intervals around every deleted note turn become a single minor third aligning exactly to the pattern of deletions. Since this pattern is out of phase with the original one, it changes, but if the deleted notes were surrounded by different intervals, the new interval pattern wouldn’t map so precisely to the deletions.</p>
+
+			<p class="light">Thus, the two intervals around every deleted note turn become a single minor third aligning exactly to the pattern of deletions. Since this pattern is out of phase with the original one, it changes, but if the deleted notes were surrounded by different intervals, the new interval pattern wouldn’t map so precisely to the deletions.</p>
 
 			<p class="light">Interestingly, that relationship is vastly less obvious in scale order, even with the above highlighting:</p>
 
-			<table id="pentatonicinversionsintervalsscale" class="centred tabular-oldstyle nowrappri/nt fixheight">
+			<div class="mobilescroll"><table id="pentatonicinversionsintervalsscale" class="centred tabular-oldstyle nowrap fixheight">
 				<thead>
 					<tr class="accent weight4"><th colspan="7">How pentatonic transforms Ionian: Interval analysis (scale order)</th></tr>
 					<tr class="petitecaps toc-counter weight2">
@@ -1607,7 +1650,7 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="lightleftborder">C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span>G<span class="hidden">♮</span>A</td>
 						<td class="leftborder">W W <span class="hue270">H</span> <span class="hue270">W</span> W <span class="hue270">W</span> <span class="hue270">H</span></td>
 						<td class="lightleftborder">W W <span class="hue270">M</span> W <span class="hue270">M</span></td>
-						<td class="leftborder">4 7</td></tr>
+						<td class="leftborder">7 4</td></tr>
 					</tr>
 					<tr>
 						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>
@@ -1616,7 +1659,7 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="lightleftborder">D<span class="hidden">♮</span>E<span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span>C</td>
 						<td class="leftborder">W <span class="hue270">H</span> <span class="hue270">W</span> W <span class="hue270">W</span> <span class="hue270">H</span> W</td>
 						<td class="lightleftborder">W <span class="hue270">M</span> W <span class="hue270">M</span> W</td>
-						<td class="leftborder">3 6</td></tr>
+						<td class="leftborder">6 3</td></tr>
 					</tr>
 					<tr>
 						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>
@@ -1625,7 +1668,16 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="lightleftborder">E<span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span>C<span class="hidden">♮</span>D</td>
 						<td class="leftborder"><span class="hue270">H</span> <span class="hue270">W</span> W <span class="hue270">W</span> <span class="hue270">H</span> W W</td>
 						<td class="lightleftborder"><span class="hue270">M</span> W <span class="hue270">M</span> W W</td>
-						<td class="leftborder">2 5</td></tr>
+						<td class="leftborder">5 2</td></tr>
+					</tr>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder"><span class="hue0">F</span><span class="hidden">♮</span>G<span class="hidden">♮</span>A<span class="hidden">♮</span><span class="hue0">B</span><span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E</td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder"><span class="hue270">W</span> W <span class="hue270">W H</span> W W <span class="hue270">H</span></td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder">4 1</td></tr>
 					</tr>
 					<tr>
 						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></a></td>
@@ -1645,8 +1697,17 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="lightleftborder"><span class="hue270">M</span> W W <span class="hue270">M</span> W</td>
 						<td class="leftborder">2 6</td></tr>
 					</tr>
+					<tr>
+						<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></a></td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder"><span class="hue0">B</span><span class="hidden">♮</span>C<span class="hidden">♮</span>D<span class="hidden">♮</span>E<span class="hidden">♮</span><span class="hue0">F</span><span class="hidden">♮</span>G<span class="hidden">♮</span>A</td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder"><span class="hue270">H</span> W W <span class="hue270">H W</span> W <span class="hue270">W</span></td>
+						<td class="lightleftborder"></td>
+						<td class="leftborder">1 5</td></tr>
+					</tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p class="light">So, let’s correct our original analysis, shall we?</p>
 
@@ -1666,11 +1727,16 @@ window.onload = function () {makeAllSortable();};*/
 			<p class="light">Scale rotation is the practice of forming a different mode by moving some of a scale’s intervals either from its start to its end or from its end to its start. When I refer to moving a scale’s intervals “left”, I’m referring both to the piano keyboard and to the scale interval tables I keep using. Rotating a scale left means moving most of its intervals to a lower point in the scale. Since a scale repeats every octave, the rest move to the top.</p>
 
 			<p class="light">“It might not <em>always</em> be ‘most’,” I hear you object. Well, true, you <em>could</em> rotate a seven-note scale six degrees to the right, but why would you, when that’s the same as rotating it one degree to the left?</p>
-						<p class="light">…Oh, right. I need to explain rotation by degrees, too. No, we’re not talking angles here. Rotating a scale by a specific number of degrees moves that many intervals from the start of the scale to the end (or vice versa). Rotating Ionian one degree left gives you Dorian. Rotating Ionian three degrees left gives you Lydian. And so on.</p>
-						<p class="light">I’ll also sometimes refer to rotation by semitones. If I rotate a scale by five semitones, that means the intervals moved from the start to the end (or from the end to the start) sum up to five semitones. Thus, rotating Ionian five semitones to the left also takes you to Lydian.</p>
-						<p class="light">The size of a scale rotation, either in interval size or in degrees, has nothing to do with how far the notes within the scale move. Lydian may be a five-semitone leftward rotation from Ionian, but it only moves one note (the fourth degree of the scale), and that note only moves by a semitone (F to F♯).</p>
-						<p class="light">I may also refer to scale rotations by the number of notes they move. A single-note rotation only changes the position of one note. This does <em>not</em> signify anything about the number of intervals moved to the front or the end of the scale, the size of those intervals, or even about the interval by which the note is moved.</p>
-						<p class="light">So, to summarize: Ionian to Lydian is a single-note rotation; it moves <em>the note</em> by one semitone, but it rotates <em>the scale</em> by five semitones (and three degrees).</p>
+
+			<p class="light">…Oh, right. I need to explain rotation by degrees, too. No, we’re not talking angles here. Rotating a scale by a specific number of degrees moves that many intervals from the start of the scale to the end (or vice versa). Rotating Ionian one degree left gives you Dorian. Rotating Ionian three degrees left gives you Lydian. And so on.</p>
+
+			<p class="light">I’ll also sometimes refer to rotation by semitones. If I rotate a scale by five semitones, that means the intervals moved from the start to the end (or from the end to the start) sum up to five semitones. Thus, rotating Ionian five semitones to the left also takes you to Lydian.</p>
+
+			<p class="light">The size of a scale rotation, either in interval size or in degrees, has nothing to do with how far the notes within the scale move. Lydian may be a five-semitone leftward rotation from Ionian, but it only moves one note (the fourth degree of the scale), and that note only moves by a semitone (F to F♯).</p>
+
+			<p class="light">I may also refer to scale rotations by the number of notes they move. A single-note rotation only changes the position of one note. This does <em>not</em> signify anything about the number of intervals moved to the front or the end of the scale, the size of those intervals, or even about the interval by which the note is moved.</p>
+
+			<p class="light">So, to summarize: Ionian to Lydian is a single-note rotation; it moves <em>the note</em> by one semitone, but it rotates <em>the scale</em> by five semitones (and three degrees).</p>
 
 			<p class="light">I’ll try to keep this terminology from being ambiguous, but words are an imperfect medium for discussing music at the best of times, and when we throw mathematics, geometry, and set theory into the mix, forget it. If anything feels confusingly worded, please let me know, and I’ll try to clarify.</p>
 
@@ -1686,8 +1752,10 @@ window.onload = function () {makeAllSortable();};*/
 			</ol>
 
 			<p class="light">But why do they move in opposite directions? It’s probably easiest to analyze in terms of interval spacing.</p>
-						<p class="light">Pentatonic changes two of Ionian’s interval pairs from “tone, semitone” to “minor third”. It so happens that one of Ionian’s two semitones closes out the scale. Thus, compare what happens when we shift pentatonic major’s intervals to the left to what happens when we shift Ionian’s.</p>
-						<table id="pentatonicintervalsscaleorder" class="normal tabular-oldstyle sidepad8">
+
+			<p class="light">Pentatonic changes two of Ionian’s interval pairs from “tone, semitone” to “minor third”. It so happens that one of Ionian’s two semitones closes out the scale. Thus, compare what happens when we shift pentatonic major’s intervals to the left to what happens when we shift Ionian’s.</p>
+
+			<div class="mobilescroll"><table id="pentatonicintervalsscaleorder" class="normal tabular-oldstyle nowrap sidepad8">
 				<thead class="fixheight">
 					<tr class="accent weight4"><th colspan="13">Pentatonic interval spacing (root order)</th></tr>
 					<tr class="toc-counter weight2 petitecaps"><th>#</th><th colspan="2">Mode</th><th class="leftborder">1</th>                              <th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="leftborder leftpad15" colspan="7">Intervals</tr>
@@ -1699,9 +1767,9 @@ window.onload = function () {makeAllSortable();};*/
 					<tr class="mediumbottomborder"><td>4</td><td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/677" target="_blank" rel="noopener noreferrer">Naidyloxim</a></td><td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/677" target="_blank" rel="noopener noreferrer">Scottish 5t</a></td><td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="weight5">D<span class="hidden">♮</span></td><td class="orange weight5">F<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="weight5">A<span class="hidden">♮</span></td><td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight5 mediumrightborder">1½</td><td class="centred leftpad4 rightpad4 weight3 offset2 mediumrightborder">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight5">1½</td></tr>
 					<tr class="mediumbottomborder"><td>5</td><td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1193" target="_blank" rel="noopener noreferrer">Nailoea</td>       <td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1193" target="_blank" rel="noopener noreferrer">Minor 5t</td>      <td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="orange weight5">D♯</span></td><td class="orange weight5">F<span class="hidden">♮</span></td>                      <td class="weight5">G<span class="hidden">♮</span></td><td class="orange weight5">A♯</td>                      <td class="centred leftborder leftpad8 rightpad4 orange weight5 mediumrightborder">1½</td><td class="centred leftpad4 rightpad4 weight3 offset2 mediumrightborder">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight5 mediumrightborder">1½</td>	<td class="centred leftpad4 rightpad4 weight3">1</td></tr>
 				</tbody>
-			</table>
+			</table></div>
 
-			<table id="ionianintervalsscaleorder" class="normal tabular-oldstyle sidepad8">
+			<div class="mobilescroll"><table id="ionianintervalsscaleorder" class="normal tabular-oldstyle nowrap sidepad8">
 				<thead class="fixheight">
 					<tr class="accent weight4"><th colspan="16">Ionian interval spacing (root order)</th></tr>
 					<tr class="toc-counter weight2 petitecaps"><th>#</th><th>Mode</th><th class="leftborder">1</th>                              <th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left rightpad15">7</th><th class="leftborder leftpad15" colspan="7">Intervals</tr>
@@ -1722,16 +1790,17 @@ window.onload = function () {makeAllSortable();};*/
 					<tr>                           <td class="weight4 centred">7</td><td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>   <td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="azure weight3">D♭</td>                      <td class="azure weight3">E♭</td>                      <td class="weight5">F<span class="hidden">♮</span></td><td class="azure weight3">G♭</td>                      <td class="azure weight3">A♭</td>                      <td class="azure weight3">B♭</td>
 						<td class="centred leftborder leftpad8 rightpad4 azure weight1 mediumrightborder">½</td>                    <td class="centred leftpad4 rightpad4 weight3">1</td>        <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1 mediumrightborder mediumrightborder">½</td>                    <td class="centred leftpad4 rightpad4 offset2 weight3 mediumrightborder">1</td>        <td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>        </tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p class="light">There’s a lot to unpack there. Some analysis:</p>
-						<p class="light">Both scales contain a repeated interval set (called a tetrachord in Ionian and a trichord in pentatonic) and a spare whole step, or <em><strong class="toc-counter weight3">synaphe</strong></em>. I’ve marked one possible reading within the interval list. (Two such readings exist of pentatonic, and three of Ionian; in this example, I avoided splitting tetrachords or trichords in the base scale.)</p>
+
+			<p class="light">Both scales contain a repeated interval set (called a tetrachord in Ionian and a trichord in pentatonic) and a spare whole step, or <em><strong class="toc-counter weight3">synaphe</strong></em>. I’ve marked one possible reading within the interval list. (Two such readings exist of pentatonic, and three of Ionian; in this example, I avoided splitting tetrachords or trichords in the base scale.)</p>
 
 			<p class="light"><em>Synaphe</em> (plural <em>synaphai</em> or <em>synaphes</em>) comes from the Attic Greek <em class="toc-counter" lang="grc">σῠνᾰφή</em> (<em class="toc-counter">sŭnăphe&#772;&#769;</em>, literally <em class="toc-counter">connection, union, junction; point or line of junction; conjunction of two tetrachords</em>). Its Attic pronunciation is roughly <em class="toc-counter">suh-nuh-FAY</em> (so, basically how a drunk person would say <em>Santa Fe</em>), but I think English speakers, mistakenly assuming it to be French, might say <em class="toc-counter">sy-NAFF</em>. (Pro tip: If a word contains <em>ph</em> and <em>doesn’t</em> split it across two syllables, you can almost wager money that it came from Greek. Also, pronouncing a foreign word using the wrong language’s orthography is a great way to make a linguistics nerd’s blood boil. And just to prove that I’m a linguistics nerd, <em class="toc-counter">orthography</em> is derived from <em class="toc-counter">ορθο-</em> (<em class="toc-counter">ortho-</em>, <em class="toc-counter">correct</em>) and <em class="toc-counter">-γραφίᾱ</em> (<em class="toc-counter">-graphíā</em>, <em class="toc-counter">writing</em>).)</p>
 
 			<p class="light">Ionian and pentatonic have similar structures and share five notes… but for the purposes of this analysis, that’s almost where their similarities <em>stop</em>.</p>
 
-			<table id="ionianintervalscircleorder" class="normal tabular-oldstyle sidepad8">
+			<div class="mobilescroll"><table id="ionianintervalscircleorder" class="normal tabular-oldstyle nowrap sidepad8">
 				<thead class="fixheight">
 					<tr class="accent weight4"><th colspan="16">Ionian interval spacing (circle of fifths order)</th></tr>
 					<tr class="toc-counter weight2 petitecaps"><th>#</th><th>Mode</th><th class="leftborder">1</th>                              <th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left rightpad15">7</th><th class="leftborder leftpad15" colspan="7">Intervals</tr>
@@ -1752,7 +1821,7 @@ window.onload = function () {makeAllSortable();};*/
 					<tr>                           <td class="weight4 centred">7</td><td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>   <td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="azure weight3">D♭</td>                      <td class="azure weight3">E♭</td>                      <td class="weight5">F<span class="hidden">♮</span></td><td class="azure weight3">G♭</td>                      <td class="azure weight3">A♭</td>                      <td class="azure weight3">B♭</td>
 						<td class="centred leftborder leftpad8 rightpad4 azure weight1 mediumrightborder">½</td>                    <td class="centred leftpad4 rightpad4 weight3">1</td>        <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1 mediumrightborder mediumrightborder">½</td>                    <td class="centred leftpad4 rightpad4 offset2 weight3 mediumrightborder">1</td>        <td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>        </tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p class="light">I’ve analyzed Ionian’s tetrachord as whole tone, whole tone, semitone, placing the synaphe mid-scale. Swapping the synaphe with the tetrachord above it shifts the scale down, note by note. (Remember, a scale is a repeating note pattern, so in Mixolydian, “the tetrachord above it” is intervals 1-3, and it’s split across the start and end of the scale in Aeolian and Locrian.) Only Lydian’s interval list is more front-loaded than Ionian’s – it swaps Ionian’s first semitone with the following whole tone, with the following results:</p>
 
@@ -1768,7 +1837,7 @@ window.onload = function () {makeAllSortable();};*/
 				<li>Its sole tritone consists of the note it lowers and the note its successor lowers.</li>
 			</ul>
 
-			<table id="pentatonicintervalscircleorder" class="normal tabular-oldstyle sidepad8 fixheight">
+			<div class="mobilescroll"><table id="pentatonicintervalscircleorder" class="normal tabular-oldstyle sidepad8 nowrap fixheight">
 				<thead>
 					<tr class="accent weight4"><th colspan="13">Pentatonic interval spacing (circle of fourths order)</th></tr>
 					<tr class="toc-counter weight2 petitecaps"><th>#</th><th colspan="2">Mode</th><th class="leftborder">1</th>                              <th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="leftborder leftpad15" colspan="7">Intervals</tr>
@@ -1780,7 +1849,7 @@ window.onload = function () {makeAllSortable();};*/
 					<tr class="mediumbottomborder"><td>4</td><td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/677" target="_blank" rel="noopener noreferrer">Naidyloxim</a></td><td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/677" target="_blank" rel="noopener noreferrer">Scottish 5t</a></td><td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="weight5">D<span class="hidden">♮</span></td><td class="orange weight5">F<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="weight5">A<span class="hidden">♮</span></td><td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight5 mediumrightborder">1½</td><td class="centred leftpad4 rightpad4 weight3 offset2 mediumrightborder">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight5">1½</td></tr>
 					<tr class="mediumbottomborder"><td>1</td><td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/661" target="_blank" rel="noopener noreferrer">Nainoi</a></td>    <td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/661" target="_blank" rel="noopener noreferrer">Major 5t</a></td>      <td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="weight5">D<span class="hidden">♮</span></td><td class="weight5">E<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="weight5">A<span class="hidden">♮</span></td><td class="centred leftborder leftpad8 rightpad4 weight3 offset2 mediumrightborder">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight5 mediumrightborder">1½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight5">1½</td></tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p class="light">I’ve analyzed pentatonic’s trichord as whole tone, minor third, placing the synaphe at the start of the scale. As it happens, pentatonic major’s intervals are as back-loaded as possible: that is, every other C-rooted mode of the pentatonic scale moves at least one note up a semitone. If we want to lower any notes besides the root, we have to lower the root before them.</li>
 
@@ -1790,22 +1859,21 @@ window.onload = function () {makeAllSortable();};*/
 
 			<ul class="light">
 				<li>Note the notes in common to multiple modes of each scale:
-					<table id="landofconfusion" class="fixheight tabular-oldstyle">
+
+					<div class="mobilescroll"><table id="landofconfusion" class="fixheight tabular-oldstyle nowrap">
 						<thead>
 							<tr class="toc-counter weight4"><th colspan="14">Land of Confusion</th></tr>
-							<tr class="petitecaps accent weight2"><th>Pentatonic mode</th><th colspan="5" class="mediumleftborder">Notes</th><th colspan="3" class="leftborder">Ionian modes</th><th colspan="5" class="mediumleftborder">Notes</th></tr>
+							<tr class="petitecaps accent weight2"><th>Pentatonic mode</th><th colspan="5" class="mediumleftborder">Notes</th><th class="leftborder">Ionian modes</th><th colspan="5" class="mediumleftborder">Notes</th></tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td class="weight3 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1321" target="_blank" rel="noopener noreferrer">C blues minor</a></td>
+								<td class="weight3 centred"><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1321" target="_blank" rel="noopener noreferrer">Blues minor</a></td>
 								<td class="mediumleftborder rightpad4">C<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">D♯</td>
 								<td class="leftpad2 rightpad4">F<span class="hidden">♮</span></td>
 								<td class="sidepad2">G♯</td>
 								<td class="leftpad4">A♯</td>
-								<td class="centred leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">C Aeolian</a></td>
-								<td class="weight3 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">C Phrygian</a></td>
-								<td class="centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">C Locrian</a></td>
+								<td class="centred leftborder"><a class="noprintlink weight3" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer"><span class="weight0">Aeolian</span></a>, <a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a>, <a class="noprintlink weight3" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer"><span class="weight0">Locrian</span></a></td>
 								<td class="mediumleftborder rightpad4">C<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">E♭</td>
 								<td class="leftpad2 rightpad4">F<span class="hidden">♮</span></td>
@@ -1813,15 +1881,13 @@ window.onload = function () {makeAllSortable();};*/
 								<td class="leftpad4">B♭</td>
 							</tr>
 							<tr>
-								<td class="weight3 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1193" target="_blank" rel="noopener noreferrer">C minor pentatonic</a></td>
+								<td class="weight3 centred"><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1193" target="_blank" rel="noopener noreferrer">Minor 5t.</a></td>
 								<td class="mediumleftborder rightpad4">C<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">D♯</td>
 								<td class="leftpad2 rightpad4">F<span class="hidden">♮</span></td>
 								<td class="sidepad2">G<span class="hidden">♮</span></td>
 								<td class="leftpad4">A♯</td>
-								<td class="centred leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">C Dorian</a></td>
-								<td class="weight3 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">C Aeolian</a></td>
-								<td class="centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">C Phrygian</a></td>
+								<td class="centred leftborder"><a class="noprintlink weight3" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer"><span class="weight0">Dorian</span></a>, <a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a>, <a class="noprintlink weight3" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer"><span class="weight0">Phrygian</span></a></td>
 								<td class="mediumleftborder rightpad4">C<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">E♭</td>
 								<td class="leftpad2 rightpad4">F<span class="hidden">♮</span></td>
@@ -1829,15 +1895,13 @@ window.onload = function () {makeAllSortable();};*/
 								<td class="leftpad4">B♭</td>
 							</tr>
 							<tr>
-								<td class="weight3 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1189" target="_blank" rel="noopener noreferrer">C neutral pentatonic</a></td>
+								<td class="weight3 centred"><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1189" target="_blank" rel="noopener noreferrer">Neutral 5t.</a></td>
 								<td class="mediumleftborder rightpad4">C<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">D<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">F<span class="hidden">♮</span></td>
 								<td class="sidepad2">G<span class="hidden">♮</span></td>
 								<td class="leftpad4">A♯</td>
-								<td class="centred leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">C Mixolydian</a></td>
-								<td class="weight3 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">C Dorian</a></td>
-								<td class="centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">C Aeolian</a></td>
+								<td class="centred leftborder"><a class="noprintlink weight3" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer"><span class="weight0">Mixolydian</span></a>, <a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a>, <a class="noprintlink weight3" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer"><span class="weight0">Aeolian</span></a></td>
 								<td class="mediumleftborder rightpad4">C<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">D<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">F<span class="hidden">♮</span></td>
@@ -1845,15 +1909,13 @@ window.onload = function () {makeAllSortable();};*/
 								<td class="leftpad4">B♭</td>
 							</tr>
 							<tr>
-								<td class="weight3 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/677" target="_blank" rel="noopener noreferrer">C Scottish pentatonic</a></td>
+								<td class="weight3 centred"><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/677" target="_blank" rel="noopener noreferrer">Scottish 5t.</a></td>
 								<td class="mediumleftborder rightpad4">C<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">D<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">F<span class="hidden">♮</span></td>
 								<td class="sidepad2">G<span class="hidden">♮</span></td>
 								<td class="leftpad4">A<span class="hidden">♮</span></td>
-								<td class="centred leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">C Ionian</a></td>
-								<td class="weight3 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">C Mixolydian</a></td>
-								<td class="centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">C Dorian</a></td>
+								<td class="centred leftborder"><a class="noprintlink weight3" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer"><span class="weight0">Ionian</span></a>, <a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a>, <a class="noprintlink weight3" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer"><span class="weight0">Dorian</span></a></td>
 								<td class="mediumleftborder rightpad4">C<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">D<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">F<span class="hidden">♮</span></td>
@@ -1861,15 +1923,13 @@ window.onload = function () {makeAllSortable();};*/
 								<td class="leftpad4">A<span class="hidden">♮</span></td>
 							</tr>
 							<tr>
-								<td class="weight3 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/661" target="_blank" rel="noopener noreferrer">C major pentatonic</a></td>
+								<td class="weight3 centred"><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/661" target="_blank" rel="noopener noreferrer">Major 5t.</a></td>
 								<td class="mediumleftborder rightpad4">C<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">D<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">E<span class="hidden">♮</span></td>
 								<td class="sidepad2">G<span class="hidden">♮</span></td>
 								<td class="leftpad4">A<span class="hidden">♮</span></td>
-								<td class="centred leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">C Lydian</a></td>
-								<td class="weight3 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">C Ionian</a></td>
-								<td class="centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">C Mixolydian</a></td>
+								<td class="centred leftborder"><a class="noprintlink weight3" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer"><span class="weight0">Lydian</span></a>, <a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a>, <a class="noprintlink weight3" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer"><span class="weight0">Mixolydian</span></a></td>
 								<td class="mediumleftborder rightpad4">C<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">D<span class="hidden">♮</span></td>
 								<td class="leftpad2 rightpad4">E<span class="hidden">♮</span></td>
@@ -1877,7 +1937,7 @@ window.onload = function () {makeAllSortable();};*/
 								<td class="leftpad4">A<span class="hidden">♮</span></td>
 							</tr>
 						</tbody>
-					</table>
+					</table></div>
 					This may help explain a possible source of confusion about the modes’ correspondence.
 				</li>
 				<li>Ionian’s final semitone is why C Locrian and C Phrygian use D♭. That semitone <em>doesn’t exist</em> in pentatonic.</li>
@@ -1887,7 +1947,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light">One final note: I highlighted the extra whole step, but its different position in each scale isn’t, in and of itself, why they move in different directions. In fact, since both scales are mostly made of whole steps, multiple intervals could be considered their <em>synaphai</em>; the choice depends entirely on the arbitrary choice of trichord or tetrachord pattern. Two such patterns can fit for the pentatonic scale and three for Ionian; each result in different <em>synaphai</em> and <em>n</em>-chord divisions. I used my divisions because the others split one of the base scale’s <em>n-</em>chords. (I’ve <span class="hue120">highlighted</span> my approaches below.)</p>
 
-			<table id="tetrachordsandtrichordsandbearsohmy" class="tabular-oldstyle fixheight nowrapprint centred">
+			<div class="mobilescroll"><table id="tetrachordsandtrichordsandbearsohmy" class="tabular-oldstyle fixheight nowrap centred">
 				<thead>
 					<tr class="toc-counter weight4">
 						<th colspan="14">Ionian tetrachords &amp; pentatonic trichords &amp; <em>synaphai</em>, oh my</th>
@@ -1937,7 +1997,7 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="leftpad8">6</td>
 					</tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p class="light">Note that the Ancient Greeks used the final analysis for their diatonic genus, which was nearly identical to our Ionian scale in all but name. When in Greece, I shall do as the Greeks did, but in this section, I figured it was better to defer the added complexity until this part of my explanation.</p>
 
@@ -1948,9 +2008,10 @@ window.onload = function () {makeAllSortable();};*/
 			<h2 class="centred" id="explainingrotation">An Analysis of Five-Semitone Scale Rotation</h2>
 
 			<p class="light">Ultimately, the pentatonic and Ionian scales are, respectively, the only pentatonic and heptatonic scales in 12-TET for which moving a single note by a semitone amounts to a scale rotation. There’s a relatively simple mathematical explanation for why, too:</p>
-						<ul class="light">
+
+			<ul class="light">
 				<li>Both scales are primarily composed of two identical interval collections, summing to five semitones each.
-					<table id="buildingblocks" class="normal tabular-oldstyle sidepad8 fixheight centred">
+					<div class="mobilescroll"><table id="buildingblocks" class="normal tabular-oldstyle sidepad8 fixheight nowrap centred">
 						<thead>
 							<tr class="toc-counter weight4"><th colspan="5">Ionian & Pentatonic Building Blocks</th></tr>
 							<tr class="accent petitecaps weight2"><th>Scale</th><th>n-chord</th><th>Notes</th><th>Intervals</th><th>Outlier</th></tr>
@@ -1959,13 +2020,13 @@ window.onload = function () {makeAllSortable();};*/
 							<tr><td>Ionian</td><td>Tetrachord</td><td>4</td><td>3</td><td>Semitone</td></tr>
 							<tr><td>Pentatonic</td><td>Trichord</td><td>3</td><td>2</td><td>Minor third</td></tr>
 						</tbody>
-					</table>
+					</table></div>
 				<li>A synaphe (additional whole tone) separates the two n-chords.</li>
 				<li>All but one of the n-chord’s intervals are whole tones. The outlier differs in size by a semitone.</li>
 				<li>Rotating the scale by n degrees swaps the n-chord and the synaphe.</li>
 				<li>This has a single effect on the interval composition: a whole tone swaps positions with an outlier.</li>
 				<li>Since the outlier differs by merely a semitone, the sole result on the scale’s harmonic composition is to move a single note by a semitone:
-					<table id="synapheswap" class="normal tabular-oldstyle sidepad8 fixheight centred">
+					<div class="mobilescroll"><table id="synapheswap" class="normal tabular-oldstyle sidepad8 fixheight nowrap centred">
 						<thead>
 							<tr class="toc-counter weight4"><th colspan="3">Outcome of swapping n-chord with synaphe</th></tr>
 							<tr class="accent petitecaps weight2"><th>Outlier</th><th>Outlier moves</th><th>Note moves</th></tr>
@@ -1976,7 +2037,7 @@ window.onload = function () {makeAllSortable();};*/
 							<tr><td>Minor third</td><td>Up</td><td>Down</td></tr>
 							<tr><td>Semitone</td><td>Up</td><td>Up</td></tr>
 						</tbody>
-					</table>
+					</table></div>
 				</li>
 				<li>This is why the pattern depends on the notes being almost, but not quite, completely evenly distributed: rotating a less even distribution moves more notes; rotating a completely even distribution moves none.</li>
 				<li>It’s also why the pattern is so closely linked to the circles of fourths and fifths: swapping the synaphe with the n-chord requires rotating the scale by either five or seven semitones.</li>
@@ -6301,12 +6362,12 @@ window.onload = function () {makeAllSortable();};*/
 				</tbody>
 			</table>
 
-			<p class="light">Visualizing the mistake they made becomes easier. In short, their misconception that Greek harmony went in ascending order led them to reverse the mode order. Since Ionian has an odd number of notes, it also has an odd number of modes. Its inversion is also one of its own modes – which, to be clear, is not a given (for instance, it’s <em>not</em> true of the Greeks’ chromatic <em>tonoi</em>, which is why I listed their inversions separately above). For this to hold, one of the scale’s modes must be symmetrical – in this case, our Dorian mode:</p>
+			<p class="light">Visualizing the kind of mistake they made becomes easier. In short, their misconception that Greek harmony went in ascending order led them to reverse the mode order. Since Ionian has an odd number of notes, it also has an odd number of modes. Its inversion is also one of its own modes – which, to be clear, is not a given (for instance, it’s <em>not</em> true of the Greeks’ chromatic <em>tonoi</em>, which is why I listed their inversions separately above). For this to hold, one of the scale’s modes must be symmetrical – in this case, our Dorian mode:</p>
 
 			<table id="diatonicmajorinversions" class="tabular-oldstyle">
 				<thead class="fixheight centred">
 					<tr><th colspan="6" class="accent weight4">Inverting the Ionian Scale</th></tr>
-					<tr class="toc-counter weight2 petitecaps"><th>Modern</th><th>Ancient</th><th>Mode</th><th class="leftborder">Modern</th><th>Ancient</th><th>Inversion</th></tr>
+					<tr class="toc-counter weight2 petitecaps"><th>Modern</th><th>Ancient</th><th>Original</th><th class="leftborder">Modern</th><th>Ancient</th><th>Inversion</th></tr>
 				</thead>
 				<tbody class="fixheight centred print90">
 					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>   <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Hypodorian</a></td>  <td>W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W</td><td class="leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Hypophrygian</a></td><td>W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W</td></tr>
@@ -6318,21 +6379,83 @@ window.onload = function () {makeAllSortable();};*/
 					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Hypophrygian</a></td><td>W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W</td><td class="leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>   <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Hypodorian</a></td>  <td>W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W</td></tr>
 				</tbody>
 			</table>
-							<p class="light">Thus, by necessity, they were still going to get one right; it just happened to be our Aeolian mode. Why wasn’t it our Dorian mode? Apparently, they made an off-by-one error in assuming the Greeks listed the <em>tonoi themselves</em> in ascending order as well. Let’s move the <em>tonoi</em> on the right down by one and plug in their medieval names:</p>
+							
+			<p class="light">Thus, by necessity, they were still going to get one right; it just happened to be our Aeolian mode. Why wasn’t it our Dorian mode? Apparently, their mistake was a bit more complicated than a simple inversion. What if we were to <del>purchase fast food and disguise it as our own cooking</del> leave the tetrachords where the Greeks had them, but invert their interval order?</p>
 
-			<table id="modediscombobulation" class="sidepad10 tabular-oldstyle">
+			<table id="diatonictetrachordinversions" class="normal tabular-oldstyle sidepad8">
+				<thead class="fixheight">
+					<tr class="accent weight4"><th colspan="17">Inverting the Greek Diatonic Tetrachord</th></tr>
+					<tr class="toc-counter weight2 petitecaps"><th>Ancient</th><th>Medieval</th><th>Modern</th><th class="leftborder">1</th>                              <th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left rightpad15">7</th><th class="leftborder leftpad15" colspan="7">Intervals</tr>
+				</thead>
+				<tbody class="fixheight">
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Mixolydian</a></td>  
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td>
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td>
+						<td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="weight5">D<span class="hidden">♮</span></td><td class="weight5">E<span class="hidden">♮</span></td><td class="weight5">F<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="weight5">A<span class="hidden">♮</span></td><td class="azure weight3">B♭</td>                      
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1 mediumrightborder">½</td>  <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1 mediumrightborder">½</td>  <td class="centred leftpad4 rightpad4 weight3 offset2">1</td>
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Lydian</a></td>      
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Hypodorian</a></td>  
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>  
+						<td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="weight5">D<span class="hidden">♮</span></td><td class="azure weight3">E♭</td>                      <td class="weight5">F<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="azure weight3">A♭</td>                      <td class="azure weight3">B♭</td>                      
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1 mediumrightborder">½</td>  <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1 mediumrightborder">½</td>  <td class="centred leftpad4 rightpad4 weight3 offset2 mediumrightborder">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>        
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Phrygian</a></td>    
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Hypophrygian</a></td>
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>
+						<td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="azure weight3">D♭</td>                      <td class="azure weight3">E♭</td>                      <td class="weight5">F<span class="hidden">♮</span></td><td class="azure weight3">G♭</td>                      <td class="azure weight3">A♭</td>                      <td class="azure weight3">B♭</td>                      
+						<td class="centred leftborder leftpad8 rightpad4 azure weight1 mediumrightborder">½</td>  <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1 mediumrightborder">½</td>  <td class="centred leftpad4 rightpad4 weight3 offset2 mediumrightborder">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 weight3">1</td>        
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Dorian</td>          
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Hypolydian</a></td>  
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>  
+						<td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="weight5">D<span class="hidden">♮</span></td><td class="weight5">E<span class="hidden">♮</span></td><td class="weight5">F<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="weight5">A<span class="hidden">♮</span></td><td class="weight5">B<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1 mediumrightborder">½</td>  <td class="centred leftpad4 rightpad4 weight3 offset2 mediumrightborder">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1">½</td>  
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Hypolydian</a></td>  
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Phrygian</a></td>    
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Phrygian</a></td>    
+						<td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="weight5">D<span class="hidden">♮</span></td><td class="azure weight3">E♭</td>                      <td class="weight5">F<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="weight5">A<span class="hidden">♮</span></td><td class="azure weight3">B♭</td>                      
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1 mediumrightborder">½</td>  <td class="centred leftpad4 rightpad4 weight3 offset2 mediumrightborder">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1 mediumrightborder">½</td>  <td class="centred leftpad4 rightpad4 weight3">1</td>        
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Hypophrygian</a></td>
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Dorian</a></td>      
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Dorian</a></td>      
+						<td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="azure weight3">D♭</td>                      <td class="azure weight3">E♭</td>                      <td class="weight5">F<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="azure weight3">A♭</td>                      <td class="azure weight3">B♭</td>                      
+						<td class="centred leftborder leftpad8 rightpad4 azure weight1 mediumrightborder">½</td>  <td class="centred leftpad4 rightpad4 weight3 offset2 mediumrightborder">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1 mediumrightborder">½</td>  <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 weight3">1</td>        
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Hypodorian</td>      
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</td>          
+						<td class="weight4 centred"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</td>          
+						<td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="weight5">D<span class="hidden">♮</span></td><td class="weight5">E<span class="hidden">♮</span></td><td class="orange weight7">F♯</td>                     <td class="weight5">G<span class="hidden">♮</span></td><td class="weight5">A<span class="hidden">♮</span></td><td class="weight5">B<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3 offset2 mediumrightborder">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1 mediumrightborder">½</td>  <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 weight3">1</td>                          <td class="centred leftpad4 rightpad4 azure weight1">½</td>  
+					</tr>
+
+				</tbody>
+			</table>	
+
+			<p class="light">So, in short, medieval Europeans put the wrong tetrachords in the right places. We can derive the same results by plugging the medieval names into “Inverting the Ionian Scale”, then rotating the right columns up by one row:</p>
+
+			<table id="offbyoneerror" class="sidepad10 tabular-oldstyle">
 				<thead class="fixheight centred">
 					<tr><th colspan="6" class="accent weight4">A Medieval Off-by-One Error</th></tr>
-					<tr class="toc-counter weight2 petitecaps"><th>Medieval</th><th>Ancient</th><th>Mode</th><th class="leftborder">Medieval</th><th>Ancient</th><th>Inversion − 1</th></tr>
+					<tr class="toc-counter weight2 petitecaps"><th>Medieval</th><th class="weight5">Ancient</th><th>Original</th><th class="leftborder weight5">Medieval</th><th>Ancient</th><th>Inversion − 1</th></tr>
 				</thead>
 				<tbody class="fixheight centred print90">
-					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Hypodorian</a></td>  <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Hypodorian</a></td>  <td class="nowrap">W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W</td><td class="leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Hypodorian</a></td>  <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Hypodorian</a></td>  <td class="nowrap">W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W</td></tr>
-					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Hypophrygian</a></td><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Mixolydian</a></td>  <td class="nowrap"><span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W</td><td class="leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td>  <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Hypophrygian</a></td><td class="nowrap">W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W</td></tr>
-					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Hypolydian</a></td>  <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Lydian</a></td>      <td class="nowrap">W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span></td><td class="leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>      <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Hypolydian</a></td>  <td class="nowrap">W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span></td></tr>
-					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>      <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Phrygian</a></td>    <td class="nowrap">W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W</td><td class="leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>    <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Dorian</a></td>      <td class="nowrap"><span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W</td></tr>
-					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>    <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Dorian</a></td>      <td class="nowrap"><span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W</td><td class="leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>      <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Phrygian</a></td>    <td class="nowrap">W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W</td></tr>
-					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>      <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Hypolydian</a></td>  <td class="nowrap">W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span></td><td class="leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Hypolydian</a></td>  <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Lydian</a></td>      <td class="nowrap">W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span></td></tr>
-					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td>  <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Hypophrygian</a></td><td class="nowrap">W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W</td><td class="leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Hypophrygian</a></td><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Mixolydian</a></td>  <td class="nowrap"><span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W</td></tr>
+					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Hypodorian</a></td>  <td><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Hypodorian</a></td>  <td class="nowrap">W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W</td><td class="leftborder"><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Hypodorian</a></td>  <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Hypodorian</a></td>  <td class="nowrap">W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W</td></tr>
+					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Hypophrygian</a></td><td><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Mixolydian</a></td>  <td class="nowrap"><span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W</td><td class="leftborder"><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td>  <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Hypophrygian</a></td><td class="nowrap">W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W</td></tr>
+					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Hypolydian</a></td>  <td><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Lydian</a></td>      <td class="nowrap">W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span></td><td class="leftborder"><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>      <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Hypolydian</a></td>  <td class="nowrap">W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span></td></tr>
+					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>      <td><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Phrygian</a></td>    <td class="nowrap">W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W</td><td class="leftborder"><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>    <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Dorian</a></td>      <td class="nowrap"><span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W</td></tr>
+					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>    <td><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Dorian</a></td>      <td class="nowrap"><span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W</td><td class="leftborder"><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>      <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Phrygian</a></td>    <td class="nowrap">W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W</td></tr>
+					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>      <td><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Hypolydian</a></td>  <td class="nowrap">W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span></td><td class="leftborder"><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Hypolydian</a></td>  <td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Lydian</a></td>      <td class="nowrap">W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span></td></tr>
+					<tr><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td>  <td><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Hypophrygian</a></td><td class="nowrap">W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W</td><td class="leftborder"><a class="noprintlink weight4" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Hypophrygian</a></td><td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Mixolydian</a></td>  <td class="nowrap"><span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;<span class="azure">H</span>&nbsp;W&nbsp;W&nbsp;W</td></tr>
 				</tbody>
 			</table>
 

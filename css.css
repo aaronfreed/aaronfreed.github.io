@@ -406,6 +406,90 @@
 	.mobilescroll {
 		overflow: auto;
 	}
+	.mobileleftpad1 {
+		padding-left: 1px;
+	}
+	.mobilerightpad1 {
+		padding-right: 1px;
+	}
+	.mobileleftpad2 {
+		padding-left: 2px;
+	}
+	.mobilerightpad2 {
+		padding-right: 2px;
+	}
+	.mobileleftpad3 {
+		padding-left: 3px;
+	}
+	.mobilerightpad3 {
+		padding-right: 3px;
+	}
+	.mobileleftpad4 {
+		padding-left: 4px;
+	}
+	.mobilerightpad4 {
+		padding-right: 4px;
+	}
+	.mobileleftpad5 {
+		padding-left: 5px;
+	}
+	.mobilerightpad5 {
+		padding-right: 5px;
+	}
+	.mobileleftpad6 {
+		padding-left: 6px;
+	}
+	.mobilerightpad6 {
+		padding-right: 6px;
+	}
+	.mobilepad20 td, .mobilepad20 th {
+		padding-top: .2em;
+		padding-right: .2em;
+		padding-bottom: .2em;
+		padding-left: .2em;
+	}
+	.mobilepad30 td, .mobilepad30 th {
+		padding-top: .3em;
+		padding-right: .3em;
+		padding-bottom: .3em;
+		padding-left: .3em;
+	}
+	.mobilepad40 td, .mobilepad40 th {
+		padding-top: .4em;
+		padding-right: .4em;
+		padding-bottom: .4em;
+		padding-left: .4em;
+	}
+	.mobilepad50 td, .mobilepad50 th {
+		padding-top: .5em;
+		padding-right: .5em;
+		padding-bottom: .5em;
+		padding-left: .5em;
+	}
+	.mobilepad60 td, .mobilepad60 th {
+		padding-top: .6em;
+		padding-right: .6em;
+		padding-bottom: .6em;
+		padding-left: .6em;
+	}
+	.mobilepad70 td, .mobilepad70 th {
+		padding-top: .7em;
+		padding-right: .7em;
+		padding-bottom: .7em;
+		padding-left: .7em;
+	}
+	.mobilepad80 td, .mobilepad80 th {
+		padding-top: .8em;
+		padding-right: .8em;
+		padding-bottom: .8em;
+		padding-left: .8em;
+	}
+	.mobilepad90 td, .mobilepad90 th {
+		padding-top: .9em;
+		padding-right: .9em;
+		padding-bottom: .9em;
+		padding-left: .9em;
+	}
 	.mobile40, .mobile40 td, .mobile40 th {
 		font-size: .4rem;
 	}
@@ -516,6 +600,42 @@
 	.mobileonly {
 		visibility: collapse !important;
 		display: none !important;
+	}
+	.nonmobileleftpad2 {
+		padding-left: 2px;
+	}
+	.nonmobilerightpad2 {
+		padding-right: 2px;
+	}
+	.nonmobileleftpad3 {
+		padding-left: 3px;
+	}
+	.nonmobilerightpad3 {
+		padding-right: 3px;
+	}
+	.nonmobileleftpad4 {
+		padding-left: 4px;
+	}
+	.nonmobilerightpad4 {
+		padding-right: 4px;
+	}
+	.nonmobileleftpad5 {
+		padding-left: 5px;
+	}
+	.nonmobilerightpad5 {
+		padding-right: 5px;
+	}
+	.nonmobileleftpad6 {
+		padding-left: 6px;
+	}
+	.nonmobilerightpad6 {
+		padding-right: 6px;
+	}
+	.nonmobileleftpad8 {
+		padding-left: 8px;
+	}
+	.nonmobilerightpad8 {
+		padding-right: 8px;
 	}
 }
 @media (prefers-color-scheme: light) {
@@ -804,6 +924,42 @@
 	.mobileonly {
 		visibility: collapse !important;
 		display: none !important;
+	}
+	.nonmobileleftpad2 {
+		padding-left: 2px;
+	}
+	.nonmobilerightpad2 {
+		padding-right: 2px;
+	}
+	.nonmobileleftpad3 {
+		padding-left: 3px;
+	}
+	.nonmobilerightpad3 {
+		padding-right: 3px;
+	}
+	.nonmobileleftpad4 {
+		padding-left: 4px;
+	}
+	.nonmobilerightpad4 {
+		padding-right: 4px;
+	}
+	.nonmobileleftpad5 {
+		padding-left: 5px;
+	}
+	.nonmobilerightpad5 {
+		padding-right: 5px;
+	}
+	.nonmobileleftpad6 {
+		padding-left: 6px;
+	}
+	.nonmobilerightpad6 {
+		padding-right: 6px;
+	}
+	.nonmobileleftpad8 {
+		padding-left: 8px;
+	}
+	.nonmobilerightpad8 {
+		padding-right: 8px;
 	}
 }
 @media screen {

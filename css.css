@@ -484,6 +484,12 @@
 	.mobilerightmargin30 {
 		margin-right: 30px;
 	}
+	.mobileleftpad0 {
+		padding-left: 0px;
+	}
+	.mobilerightpad0 {
+		padding-right: 0px;
+	}
 	.mobileleftpad1 {
 		padding-left: 1px;
 	}
@@ -545,51 +551,35 @@
 		padding-right: 10px;
 	}
 	.mobilepad20 td, .mobilepad20 th {
-		padding-top: .2em;
 		padding-right: .2em;
-		padding-bottom: .2em;
 		padding-left: .2em;
 	}
 	.mobilepad30 td, .mobilepad30 th {
-		padding-top: .3em;
 		padding-right: .3em;
-		padding-bottom: .3em;
 		padding-left: .3em;
 	}
 	.mobilepad40 td, .mobilepad40 th {
-		padding-top: .4em;
 		padding-right: .4em;
-		padding-bottom: .4em;
 		padding-left: .4em;
 	}
 	.mobilepad50 td, .mobilepad50 th {
-		padding-top: .5em;
 		padding-right: .5em;
-		padding-bottom: .5em;
 		padding-left: .5em;
 	}
 	.mobilepad60 td, .mobilepad60 th {
 		padding-top: .6em;
-		padding-right: .6em;
 		padding-bottom: .6em;
-		padding-left: .6em;
 	}
 	.mobilepad70 td, .mobilepad70 th {
-		padding-top: .7em;
 		padding-right: .7em;
-		padding-bottom: .7em;
 		padding-left: .7em;
 	}
 	.mobilepad80 td, .mobilepad80 th {
-		padding-top: .8em;
 		padding-right: .8em;
-		padding-bottom: .8em;
 		padding-left: .8em;
 	}
 	.mobilepad90 td, .mobilepad90 th {
-		padding-top: .9em;
 		padding-right: .9em;
-		padding-bottom: .9em;
 		padding-left: .9em;
 	}
 	.mobile40, .mobile40 td, .mobile40 th {

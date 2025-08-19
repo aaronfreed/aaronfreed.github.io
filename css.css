@@ -4558,7 +4558,7 @@ td.timesignature {
 	font-size: 1.125rem;
 }
 .compositions2023-2024 ol.contents p.sectionbreak {
-	font-size: .8125em;
+	font-size: .8125rem;
 }
 .compositions2023-2024 ol.contents p.sectionbreak :is(a:link, a:visited) {
 	font-weight: var(--weight3);

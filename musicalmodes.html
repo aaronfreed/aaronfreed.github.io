@@ -50,11 +50,17 @@ window.onload = function () {makeAllSortable();};*/
 				<li><a class="noprintlink" href="#top">Contents</a></li>
 				<li><a class="noprintlink" href="intro">Introduction</a>
 					<ol>
-						<li><a class="noprintlink" href="#cmajormodes">The seven modes of the C major scale</a></li>
+						<li><a class="noprintlink" href="#modes101">Modes 101</a>
+							<ol>
+								<li><a class="noprintlink" href="#cmajormodes">The seven modes of the C major scale</a></li>
+								<li><a class="noprintlink" href="#modetransformations">Mode transformations</a></li>
+							</ol>
+						</li>
 						<li><a class="noprintlink" href="#examples">These are just examples; it could also be something much better</a></li>
 						<li><a class="noprintlink" href="#circleoffifthsorder">The modes in circle of fifths order</a>
 							<ol>
 								<li><a class="noprintlink" href="#modesfromlydian">Modes descending from Lydian</a></li>
+								<li><a class="noprintlink" href="#modetransformationsrevisited">Mode transformations revisited</a></li>
 							</ol>
 						</li>
 						<li><a class="noprintlink" href="#inverseoperations">The principles of inverse operations</a></li>
@@ -339,6 +345,7 @@ window.onload = function () {makeAllSortable();};*/
 			</ol>
 
 			<h1 class="centred">Introduction</h1>
+			<h2 class="centred" id="modes101">Modes 101</h2>
 
 			<p class="light">Be warned: This is a dense technical analysis of scales and modes. If you don’t have a solid grasp of music theory, the charts may look pretty, but much of my analysis may fly straight over your head. If you want to learn music theory, I have introductions to <a href="whatistime.html" class="locallink">rhythm</a> and <a href="basicmusicalharmony.html" class="locallink">harmony</a> that provide <em>much</em> better starting points.</p>
 
@@ -359,119 +366,148 @@ window.onload = function () {makeAllSortable();};*/
 				</li>
 				<li>Scale links go to <a href="https://ianring.com/musictheory/scales/finder/" target="_blank" rel="noopener noreferrer">Ian Ring’s Scale Finder</a>, an absolutely invaluable resource for scale analysis. I’m probably duplicating a lot of its analysis, although I suspect I’m coming at it from a slightly different angle.</li>
 			</ul>
+			<span id="cmajormodes">
+				<table class="nopagebreak tabular-oldstyle fixheight weight5thickness nomobile">
+					<thead class="fixheight">
+						<tr class="weight4"><th colspan="13" class="accent">The seven modes of the C major scale</th></tr>
+						<tr class="toc-counter weight2 petitecaps"><th class="rightpad6">#</th>   <th class="leftpad6">Mode</th>              <th class="leftborder">1</th><th>2</th>                      <th>3</th>                      <th>4</th>                                     <th>5</th>                      <th>6</th>                      <th>7</th>                      <th class="leftborder">Comment</th></tr>
+					</thead>
+					<tbody class="fixheight">
+						<tr>    <td class="nowrap weight2 rightpad6">1</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>    <td class="leftborder">C</td><td class="weight3">      D</td><td class="weight3">      E</td><td class="weight3">       F</td><td class="weight3">      G</td><td class="weight3">      A</td><td class="weight3">      B</td><td class="leftborder justify"><span class="weight0">The traditional major scale.                                                                                                                                                 </span></td></tr>
+						<tr>    <td class="nowrap weight2 rightpad6">2</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>    <td class="leftborder">D</td><td class="weight3">      E</td><td class="azure weight1">f</td><td class="weight3">       G</td><td class="weight3">      A</td><td class="weight3">      B</td><td class="azure weight1">c</td><td class="leftborder justify"><span class="weight0">                                                                                                                                                                             </span></td></tr>
+						<tr>    <td class="nowrap weight2 rightpad6">3</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>  <td class="leftborder">E</td><td class="azure weight1">f</td><td class="azure weight1">g</td><td class="weight3">       A</td><td class="weight3">      B</td><td class="azure weight1">c</td><td class="azure weight1">d</td><td class="leftborder justify"><span class="weight0">                                                                                                                                                                             </span></td></tr>
+						<tr>    <td class="nowrap weight2 rightpad6">4</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>    <td class="leftborder">F</td><td class="weight3">      G</td><td class="weight3">      A</td><td class="orange weight5">B</td><td class="weight3">      C</td><td class="weight3">      D</td><td class="weight3">      E</td><td class="leftborder justify"><span class="weight0">The only mode that <em>raises</em> a note from Ionian.                                                                                                                      </span></td></tr>
+						<tr>    <td class="nowrap weight2 rightpad6">5</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td><td class="leftborder">G</td><td class="weight3">      A</td><td class="weight3">      B</td><td class="weight3">       C</td><td class="weight3">      D</td><td class="weight3">      E</td><td class="azure weight1">f</td><td class="leftborder justify"><span class="weight0">                                                                                                                                                                             </span></td></tr>
+						<tr>    <td class="nowrap weight2 rightpad6">6</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>   <td class="leftborder">A</td><td class="weight3">      B</td><td class="azure weight1">c</td><td class="weight3">       D</td><td class="weight3">      E</td><td class="azure weight1">f</td><td class="azure weight1">g</td><td class="leftborder justify"><span class="weight0">The natural minor scale.                                                                                                                                                     </span></td></tr>
+						<tr>    <td class="nowrap weight2 rightpad6">7</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>   <td class="leftborder">B</td><td class="azure weight1">c</td><td class="azure weight1">d</td><td class="weight3">       E</td><td class="azure weight1">f</td><td class="azure weight1">g</td><td class="azure weight1">a</td><td class="leftborder justify"><span class="weight0">Rare due to its diminished root chord; many pieces that use it modulate out of it at times, creating a sense that we’re rarely truly ‘home’. It’s more eerie or mysterious than unsettling, though; the Ionian scale is too melodic for the latter, diminished root or not.</span></td></tr>
+					</tbody>
+				</table>
 
-			<table id="cmajormodes" class="nopagebreak tabular-oldstyle fixheight weight5thickness nomobile">
+				<table class="nopagebreak tabular-oldstyle fixheight weight5thickness mobileonly sidepad4">
+					<thead class="fixheight">
+						<tr class="weight4"><th colspan="10" class="accent">The seven modes of the C major scale</th></tr>
+						<tr class="toc-counter weight2 petitecaps"><th class="rightpad2">#</th>   <th class="leftpad2">Mode</th>              <th class="leftborder">1</th><th>2</th>                      <th>3</th>                      <th>4</th>                                     <th>5</th>                      <th>6</th>                      <th>7</th>                      </tr>
+					</thead>
+					<tbody class="fixheight">
+						<tr>
+							<td rowspan="2" class="nowrap weight2 rightpad2 mediumbottomborder">1</td>
+							<td rowspan="2" class="weight4 leftpad2 mediumbottomborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>    
+							<td class="leftborder centred">C</td>
+							<td class="weight3 centred">      D</td>
+							<td class="weight3 centred">      E</td>
+							<td class="weight3 centred">       F</td>
+							<td class="weight3 centred">      G</td>
+							<td class="weight3 centred">      A</td>
+							<td class="weight3 centred">      B</td>
+						</tr>
+						<tr class="background0 mediumbottomborder">
+							<td colspan="7" class="leftborder weight0 justify leftpad6 rightpad6 mobile90 hyphenate">The traditional major scale.                                                                                                                                                 </span></td>
+						</tr>
+						<tr class="background2 mediumbottomborder">    
+							<td class="nowrap weight2 rightpad2">2</td>
+							<td class="weight4 leftpad2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>    
+							<td class="leftborder centred">D</td>
+							<td class="weight3 centred">      E</td>
+							<td class="azure weight1 centred">f</td>
+							<td class="weight3 centred">       G</td>
+							<td class="weight3 centred">      A</td>
+							<td class="weight3 centred">      B</td>
+							<td class="azure weight1 centred">c</td>
+						</tr>
+						<tr class="background0 mediumbottomborder">    
+							<td class="nowrap weight2 rightpad2">3</td>
+							<td class="weight4 leftpad2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>  
+							<td class="leftborder centred">E</td>
+							<td class="azure weight1 centred">f</td>
+							<td class="azure weight1 centred">g</td>
+							<td class="weight3 centred">       A</td>
+							<td class="weight3 centred">      B</td>
+							<td class="azure weight1 centred">c</td>
+							<td class="azure weight1 centred">d</td>
+						</tr>
+						<tr class="background2">    
+							<td rowspan="2" class="nowrap weight2 rightpad2 mediumbottomborder">4</td>
+							<td rowspan="2" class="weight4 leftpad2 mediumbottomborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>    
+							<td class="leftborder centred">F</td>
+							<td class="weight3 centred">      G</td>
+							<td class="weight3 centred">      A</td>
+							<td class="orange weight5 centred">B</td>
+							<td class="weight3 centred">      C</td>
+							<td class="weight3 centred">      D</td>
+							<td class="weight3 centred">      E</td>
+						</tr>
+						<tr class="background2 mediumbottomborder">
+							<td colspan="7" class="leftborder weight0 justify leftpad6 rightpad6 mobile90 hyphenate">The only mode that <em>raises</em> a note from Ionian.                                                                                                                      </span></td>
+						</tr>
+						<tr class="mediumbottomborder">    
+							<td class="nowrap weight2 rightpad2">5</td>
+							<td class="weight4 leftpad2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td>
+							<td class="leftborder centred">G</td>
+							<td class="weight3 centred">      A</td>
+							<td class="weight3 centred">      B</td>
+							<td class="weight3 centred">       C</td>
+							<td class="weight3 centred">      D</td>
+							<td class="weight3 centred">      E</td>
+							<td class="azure weight1 centred">f</td>
+						</tr>
+						<tr>    
+							<td rowspan="2" class="nowrap weight2 rightpad2 mediumbottomborder">6</td>
+							<td rowspan="2" class="weight4 leftpad2 mediumbottomborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>   
+							<td class="leftborder centred">A</td>
+							<td class="weight3 centred">      B</td>
+							<td class="azure weight1 centred">c</td>
+							<td class="weight3 centred">       D</td>
+							<td class="weight3 centred">      E</td>
+							<td class="azure weight1 centred">f</td>
+							<td class="azure weight1 centred">g</td>
+						</tr>
+						<tr class="mediumbottomborder background2">
+							<td colspan="7" class="leftborder weight0 justify leftpad6 rightpad6 mobile90 hyphenate">The natural minor scale.                                                                                                                                                     </span></td></tr>
+						<tr class="background0">    
+							<td rowspan="2" class="nowrap weight2 rightpad2">7</td>
+							<td rowspan="2" class="weight4 leftpad2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>   
+							<td class="leftborder centred">B</td>
+							<td class="azure weight1 centred">c</td>
+							<td class="azure weight1 centred">d</td>
+							<td class="weight3 centred">       E</td>
+							<td class="azure weight1 centred">f</td>
+							<td class="azure weight1 centred">g</td>
+							<td class="azure weight1 centred">a</td>
+						</tr>
+						<tr>
+							<td colspan="7" class="leftborder weight0 justify leftpad6 rightpad6 mobile90 hyphenate" style="border-bottom-left-radius: 0px;">Rare due to its diminished root chord; many pieces that use it modulate out of it at times, creating a sense that we’re rarely truly ‘home’. It’s more eerie or mysterious than unsettling, though; the Ionian scale is too melodic for the latter, diminished root or not.</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</span>
+
+			<p class="light">Thus, the modes each make the following changes to the major scale. (In this context, “♭” signifies “lower the respective scale degree of the major scale by a semitone”, and “♯” means “raise the respective scale degree of the major scale by a semitone”.)</p>
+
+			<table id="modetransformations" class="nopagebreak tabular-oldstyle fixheight weight5thickness sidepad6">
 				<thead class="fixheight">
-					<tr class="weight4"><th colspan="13" class="accent">The seven modes of the C major scale</th></tr>
-					<tr class="toc-counter weight2 petitecaps"><th class="rightpad6">#</th>   <th class="leftpad6">Mode</th>              <th class="leftborder">1</th><th>2</th>                      <th>3</th>                      <th>4</th>                                     <th>5</th>                      <th>6</th>                      <th>7</th>                      <th class="leftborder">Comment</th></tr>
+					<tr class="weight4"><th colspan="13" class="accent">Mode transformations</th></tr>
+					<tr class="toc-counter weight2 petitecaps"><th class="rightpad6 leftpad10 nomobile">#</th>   <th class="leftpad6 rightpad12 nomobile">Mode</th><th class="leftpad10 rightpad12 mobileonly">Mode</th>              <th class="leftborder leftpad10">1</th><th>2</th>                      <th>3</th>                      <th>4</th>                                     <th>5</th>                      <th>6</th>                      <th>7</th></tr>
 				</thead>
-				<tbody class="fixheight">
-					<tr>    <td class="nowrap weight2 rightpad6">1</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>    <td class="leftborder">C</td><td class="weight3">      D</td><td class="weight3">      E</td><td class="weight3">       F</td><td class="weight3">      G</td><td class="weight3">      A</td><td class="weight3">      B</td><td class="leftborder justify"><span class="weight0">The traditional major scale.                                                                                                                                                 </span></td></tr>
-					<tr>    <td class="nowrap weight2 rightpad6">2</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>    <td class="leftborder">D</td><td class="weight3">      E</td><td class="azure weight1">f</td><td class="weight3">       G</td><td class="weight3">      A</td><td class="weight3">      B</td><td class="azure weight1">c</td><td class="leftborder justify"><span class="weight0">                                                                                                                                                                             </span></td></tr>
-					<tr>    <td class="nowrap weight2 rightpad6">3</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>  <td class="leftborder">E</td><td class="azure weight1">f</td><td class="azure weight1">g</td><td class="weight3">       A</td><td class="weight3">      B</td><td class="azure weight1">c</td><td class="azure weight1">d</td><td class="leftborder justify"><span class="weight0">                                                                                                                                                                             </span></td></tr>
-					<tr>    <td class="nowrap weight2 rightpad6">4</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>    <td class="leftborder">F</td><td class="weight3">      G</td><td class="weight3">      A</td><td class="orange weight5">B</td><td class="weight3">      C</td><td class="weight3">      D</td><td class="weight3">      E</td><td class="leftborder justify"><span class="weight0">The only mode that <em>raises</em> a note from Ionian.                                                                                                                      </span></td></tr>
-					<tr>    <td class="nowrap weight2 rightpad6">5</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td><td class="leftborder">G</td><td class="weight3">      A</td><td class="weight3">      B</td><td class="weight3">       C</td><td class="weight3">      D</td><td class="weight3">      E</td><td class="azure weight1">f</td><td class="leftborder justify"><span class="weight0">                                                                                                                                                                             </span></td></tr>
-					<tr>    <td class="nowrap weight2 rightpad6">6</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>   <td class="leftborder">A</td><td class="weight3">      B</td><td class="azure weight1">c</td><td class="weight3">       D</td><td class="weight3">      E</td><td class="azure weight1">f</td><td class="azure weight1">g</td><td class="leftborder justify"><span class="weight0">The natural minor scale.                                                                                                                                                     </span></td></tr>
-					<tr>    <td class="nowrap weight2 rightpad6">7</td><td class="weight4 leftpad6"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>   <td class="leftborder">B</td><td class="azure weight1">c</td><td class="azure weight1">d</td><td class="weight3">       E</td><td class="azure weight1">f</td><td class="azure weight1">g</td><td class="azure weight1">a</td><td class="leftborder justify"><span class="weight0">Rare due to its diminished root chord; many pieces that use it modulate out of it at times, creating a sense that we’re rarely truly ‘home’. It’s more eerie or mysterious than unsettling, though; the Ionian scale is too melodic for the latter, diminished root or not.</span></td></tr>
+				<tbody>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">1</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>    <td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>    <td class="leftborder"> </td><td>  </td><td>  <td>  </td><td>  </td><td>  </td><td class="rightpad10">  </td></tr>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">2</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>    <td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>    <td class="leftborder"> </td><td>  </td><td>♭3<td>  </td><td>  </td><td>  </td><td class="rightpad10">♭7</td></tr>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">3</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>  <td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>  <td class="leftborder"> </td><td>♭2</td><td>♭3<td>  </td><td>  </td><td>♭6</td><td class="rightpad10">♭7</td></tr>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">4</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>    <td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>    <td class="leftborder"> </td><td>  </td><td>  <td>♯4</td><td>  </td><td>  </td><td class="rightpad10">  </td></tr>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">5</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td><td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td><td class="leftborder"> </td><td>  </td><td>  <td>  </td><td>  </td><td>  </td><td class="rightpad10">♭7</td></tr>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">6</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>   <td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>   <td class="leftborder"> </td><td>  </td><td>♭3<td>  </td><td>  </td><td>♭6</td><td class="rightpad10">♭7</td></tr>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">7</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>   <td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>   <td class="leftborder"> </td><td>♭2</td><td>♭3<td>  </td><td>♭5</td><td>♭6</td><td class="rightpad10">♭7</td></tr>
 				</tbody>
 			</table>
 
-			<table id="cmajormodes" class="nopagebreak tabular-oldstyle fixheight weight5thickness mobileonly sidepad4">
-				<thead class="fixheight">
-					<tr class="weight4"><th colspan="10" class="accent">The seven modes of the C major scale</th></tr>
-					<tr class="toc-counter weight2 petitecaps"><th class="rightpad2">#</th>   <th class="leftpad2">Mode</th>              <th class="leftborder">1</th><th>2</th>                      <th>3</th>                      <th>4</th>                                     <th>5</th>                      <th>6</th>                      <th>7</th>                      </tr>
-				</thead>
-				<tbody class="fixheight">
-					<tr>
-						<td rowspan="2" class="nowrap weight2 rightpad2 mediumbottomborder">1</td>
-						<td rowspan="2" class="weight4 leftpad2 mediumbottomborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>    
-						<td class="leftborder centred">C</td>
-						<td class="weight3 centred">      D</td>
-						<td class="weight3 centred">      E</td>
-						<td class="weight3 centred">       F</td>
-						<td class="weight3 centred">      G</td>
-						<td class="weight3 centred">      A</td>
-						<td class="weight3 centred">      B</td>
-					</tr>
-					<tr class="background0 mediumbottomborder">
-						<td colspan="7" class="leftborder weight0 justify leftpad6 rightpad6 mobile90 hyphenate">The traditional major scale.                                                                                                                                                 </span></td>
-					</tr>
-					<tr class="background2 mediumbottomborder">    
-						<td class="nowrap weight2 rightpad2">2</td>
-						<td class="weight4 leftpad2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>    
-						<td class="leftborder centred">D</td>
-						<td class="weight3 centred">      E</td>
-						<td class="azure weight1 centred">f</td>
-						<td class="weight3 centred">       G</td>
-						<td class="weight3 centred">      A</td>
-						<td class="weight3 centred">      B</td>
-						<td class="azure weight1 centred">c</td>
-					</tr>
-					<tr class="background0 mediumbottomborder">    
-						<td class="nowrap weight2 rightpad2">3</td>
-						<td class="weight4 leftpad2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>  
-						<td class="leftborder centred">E</td>
-						<td class="azure weight1 centred">f</td>
-						<td class="azure weight1 centred">g</td>
-						<td class="weight3 centred">       A</td>
-						<td class="weight3 centred">      B</td>
-						<td class="azure weight1 centred">c</td>
-						<td class="azure weight1 centred">d</td>
-					</tr>
-					<tr class="background2">    
-						<td rowspan="2" class="nowrap weight2 rightpad2 mediumbottomborder">4</td>
-						<td rowspan="2" class="weight4 leftpad2 mediumbottomborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>    
-						<td class="leftborder centred">F</td>
-						<td class="weight3 centred">      G</td>
-						<td class="weight3 centred">      A</td>
-						<td class="orange weight5 centred">B</td>
-						<td class="weight3 centred">      C</td>
-						<td class="weight3 centred">      D</td>
-						<td class="weight3 centred">      E</td>
-					</tr>
-					<tr class="background2 mediumbottomborder">
-						<td colspan="7" class="leftborder weight0 justify leftpad6 rightpad6 mobile90 hyphenate">The only mode that <em>raises</em> a note from Ionian.                                                                                                                      </span></td>
-					</tr>
-					<tr class="mediumbottomborder">    
-						<td class="nowrap weight2 rightpad2">5</td>
-						<td class="weight4 leftpad2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td>
-						<td class="leftborder centred">G</td>
-						<td class="weight3 centred">      A</td>
-						<td class="weight3 centred">      B</td>
-						<td class="weight3 centred">       C</td>
-						<td class="weight3 centred">      D</td>
-						<td class="weight3 centred">      E</td>
-						<td class="azure weight1 centred">f</td>
-					</tr>
-					<tr>    
-						<td rowspan="2" class="nowrap weight2 rightpad2 mediumbottomborder">6</td>
-						<td rowspan="2" class="weight4 leftpad2 mediumbottomborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>   
-						<td class="leftborder centred">A</td>
-						<td class="weight3 centred">      B</td>
-						<td class="azure weight1 centred">c</td>
-						<td class="weight3 centred">       D</td>
-						<td class="weight3 centred">      E</td>
-						<td class="azure weight1 centred">f</td>
-						<td class="azure weight1 centred">g</td>
-					</tr>
-					<tr class="mediumbottomborder background2">
-						<td colspan="7" class="leftborder weight0 justify leftpad6 rightpad6 mobile90 hyphenate">The natural minor scale.                                                                                                                                                     </span></td></tr>
-					<tr class="background0">    
-						<td rowspan="2" class="nowrap weight2 rightpad2">7</td>
-						<td rowspan="2" class="weight4 leftpad2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>   
-						<td class="leftborder centred">B</td>
-						<td class="azure weight1 centred">c</td>
-						<td class="azure weight1 centred">d</td>
-						<td class="weight3 centred">       E</td>
-						<td class="azure weight1 centred">f</td>
-						<td class="azure weight1 centred">g</td>
-						<td class="azure weight1 centred">a</td>
-					</tr>
-					<tr>
-						<td colspan="7" class="leftborder weight0 justify leftpad6 rightpad6 mobile90 hyphenate" style="border-bottom-left-radius: 0px;">Rare due to its diminished root chord; many pieces that use it modulate out of it at times, creating a sense that we’re rarely truly ‘home’. It’s more eerie or mysterious than unsettling, though; the Ionian scale is too melodic for the latter, diminished root or not.</span></td>
-					</tr>
-				</tbody>
-			</table>
+			<p class="light">There are a few mnemonics for these. Three of my favorites are:</p>
+
+			<ul class="light">
+				<li><strong class="toc-counter weight4">I</strong> <strong class="toc-counter weight4">D</strong>on’t <strong class="toc-counter weight4">P</strong>unch <strong class="toc-counter weight4">L</strong>ike <strong class="toc-counter weight4">M</strong>uhammad <strong class="toc-counter weight4">A</strong><strong class="toc-counter weight4">l</strong>i</li>
+				<li><strong class="toc-counter weight4">I</strong> <strong class="toc-counter weight4">D</strong>on’t <strong class="toc-counter weight4">P</strong>articularly <strong class="toc-counter weight4">L</strong>ike <strong class="toc-counter weight4">M</strong>odes <strong class="toc-counter weight4">a</strong> <strong class="toc-counter weight4">L</strong>ot</li>
+				<li><strong class="toc-counter weight4"><strong>I</strong></strong> used to <strong class="accent">own</strong> the <strong class="toc-counter weight4">d</strong><strong class="accent">oor</strong> to the <strong class="toc-counter weight4">f</strong><strong class="accent">ridge</strong>, but <strong class="toc-counter weight4">L</strong><strong class="accent">ydia</strong> <strong class="toc-counter weight4">m</strong><strong class="accent">ixed</strong> up <strong class="toc-counter weight4">a</strong><strong class="accent">ll</strong> the <strong class="toc-counter weight4">l</strong><strong class="accent">ocks</strong></li>
+			</ul>
+
+			<p class="light">Of course, the last of these requires you to recall that <em>ph</em> is pronounced <em>f</em>. This is because <em>Phrygian</em> is an anglicized version of <em>Φρῠ́γῐος</em> (romanization: <em>Phru&#774;&#769;gĭos</em>). The letters <em>ph</em> are usually a romanization of the Greek letter phi (Φ, φ). A pronunciation shift appears to be responsible for it not being romanized as <em>f</em>: it seems to have originally represented the aspirated voiceless bilabial plosive (International Phonetic Alphabet: /pʰ/), but changed at some point to represent the voiceless labiodental fricative (IPA: /f/). Thus, <em>Φρῠ́γῐος</em> used to be roughly <em>PUH-ROO-jee-ose</em> in English phonetics, but is now roughly <em>FROO-jee-ose</em>.</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
@@ -548,13 +584,13 @@ window.onload = function () {makeAllSortable();};*/
 		<main>
 			<h2 id="circleoffifthsorder" class="centred">The modes in circle of fifths order</h2>
 
-			<p class="light">I mostly won’t be analyzing the modes in their traditional order, since I’m analyzing how lowering a regular pattern of notes by a half-step each walks us through every mode on every key. A few notes (pun intended):</p>
+			<p class="light">I mostly won’t be analyzing the modes in their traditional order, since I’m analyzing how lowering a regular pattern of notes by a half-step each walks us through every mode on every key. I call this the circle of fifths order for reasons that will become readily apparent. A few notes (pun intended):</p>
 
 			<ul class="light mobileleftmargin15">
 				<li>Most of this analysis focuses on twelve-tone equal temperament (12-TET for short), the tuning system the vast majority of Western music has used for hundreds of years. I’ll try to note exceptions in other temperaments where they exist, but given my at-best spotty understanding of other tuning systems, I can’t promise to have gotten them all.</li>
 				<li>For the most part, I’ll attempt to avoid bogging this analysis down in heavy mathematics, but I must begin this analysis by noting that in 12-TET, <em>every</em> note on the chromatic scale vibrates at exactly 2<sup>&sup1;&frasl;&#8321;&#8322;</sup> its lower neighbor’s frequency &ndash; i.e., the note spacing is <em>exactly</em> even. This is an important precondition for the analysis I’ve conducted here: much of it wouldn’t apply otherwise.</li>
-				<li>In 12-TET, <strong class="toc-counter">A♯</strong> and <strong class="toc-counter">B♭</strong> are enharmonically equivalent: they signify the same pitch. Likewise <strong class="toc-counter">B</strong> and <strong class="toc-counter">C♭</strong>, <strong class="toc-counter">C♯</strong> and <strong class="toc-counter">D♭</strong>, and so on. However, in <em>music theory</em> and <em>notational</em> terms, <strong class="toc-counter">A♯</strong> and <strong class="toc-counter">B♭</strong> are semantically quite different – be careful.</li>
-				<li>Key signatures with seven sharps or flats exist, but I’ve mostly omitted them from my analysis. (There are even monstrosities with double-sharps [𝄪] and double-flats [𝄫] … which I mostly ignore. I can at least <em>tolerate</em> the double-flat symbol, but the double-sharp is a monstrosity that doesn’t resemble even slightly the thing it’s supposed to double.) I feel using both six-flat and six-sharp key signatures was extravagant enough as it was.</li>
+				<li>In 12-TET, <strong class="toc-counter">A♯</strong> and <strong class="toc-counter">B♭</strong> are enharmonically equivalent: they signify the same pitch. Likewise <strong class="toc-counter">B</strong> and <strong class="toc-counter">C♭</strong>, <strong class="toc-counter">C♯</strong> and <strong class="toc-counter">D♭</strong>, and so on. However, in <em>music theory</em> and <em>notational</em> terms, <strong class="toc-counter">A♯</strong> and <strong class="toc-counter">B♭</strong> are semantically quite different – be careful. (And in tunings with more than 12 notes per octave, they often <em>won’t</em> be the same pitch.)</li>
+				<li>Key signatures with seven sharps or flats exist, but I’ve mostly omitted them from my analysis. (There are even monstrosities with double-sharps [𝄪] and double-flats [𝄫] … which I mostly ignore. I can at least <em>tolerate</em> the double-flat symbol, but the double-sharp is a monstrosity that doesn’t even slightly resemble what it’s meant to double.) I feel using both six-flat and six-sharp key signatures was extravagant enough as it was.</li>
 				<li id="modesfromlydian">If we start from <strong class="accent">Lydian mode</strong>, lowering the correct pitches one at a time by a half-step each gives us the next mode in the cycle. I’ll use <strong class="accent">C Lydian</strong> as an example to demonstrate the principle:</li>
 			</ul>
 
@@ -594,7 +630,23 @@ window.onload = function () {makeAllSortable();};*/
 					</ul>
 				</li>
 				<li>This sequence repeats for every note on the chromatic scale: <span style="white-space: pre-wrap;"> <strong class="toc-counter">C</strong>,  <strong class="toc-counter">C♭</strong>/<strong class="toc-counter">B</strong>,  <strong class="toc-counter">B♭</strong>/<strong class="toc-counter">A♯</strong>,  <strong class="toc-counter">A</strong>,  <strong class="toc-counter">A♭</strong>/<strong class="toc-counter">G♯</strong>,  <strong class="toc-counter">G</strong>,  <strong class="toc-counter">G♭</strong>/<strong class="toc-counter">F♯</strong>,  <strong class="toc-counter">F,  <strong class="toc-counter">F♭</strong>/<strong class="toc-counter">E</strong>,  <strong class="toc-counter">E♭</strong>/<strong class="toc-counter">D♯</strong>,  <strong class="toc-counter">D</strong>,  D♭</strong>/<strong class="toc-counter">C♯</strong>,  </span>and back to <strong class="toc-counter">C</strong>.</li>
+				<li>Here’s the “mode transformations” table in circle of fifths order:</li>
 			</ul>
+			<table id="modetransformationsrevisited" class="nopagebreak tabular-oldstyle fixheight weight5thickness sidepad6">
+				<thead class="fixheight">
+					<tr class="weight4"><th colspan="13" class="accent">Mode transformations revisited</th></tr>
+					<tr class="toc-counter weight2 petitecaps"><th class="rightpad6 leftpad10 nomobile">#</th>   <th class="leftpad6 rightpad12 nomobile">Mode</th><th class="leftpad10 rightpad12 mobileonly">Mode</th>              <th class="leftborder leftpad10">1</th><th>2</th>                      <th>3</th>                      <th>4</th>                                     <th>5</th>                      <th>6</th>                      <th>7</th></tr>
+				</thead>
+				<tbody>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">4</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>    <td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>    <td class="leftborder"> </td><td>  </td><td>  <td>♯4</td><td>  </td><td>  </td><td class="rightpad10">  </td></tr>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">1</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>    <td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>    <td class="leftborder"> </td><td>  </td><td>  <td>  </td><td>  </td><td>  </td><td class="rightpad10">  </td></tr>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">5</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td><td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td><td class="leftborder"> </td><td>  </td><td>  <td>  </td><td>  </td><td>  </td><td class="rightpad10">♭7</td></tr>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">2</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>    <td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>    <td class="leftborder"> </td><td>  </td><td>♭3<td>  </td><td>  </td><td>  </td><td class="rightpad10">♭7</td></tr>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">6</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>   <td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>   <td class="leftborder"> </td><td>  </td><td>♭3<td>  </td><td>  </td><td>♭6</td><td class="rightpad10">♭7</td></tr>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">3</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>  <td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>  <td class="leftborder"> </td><td>♭2</td><td>♭3<td>  </td><td>  </td><td>♭6</td><td class="rightpad10">♭7</td></tr>
+					<tr>    <td class="nowrap weight2 leftpad10 rightpad6 nomobile">7</td><td class="weight4 mobileonly leftpad10 rightpad12"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>   <td class="weight4 leftpad6 rightpad12 nomobile"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>   <td class="leftborder"> </td><td>♭2</td><td>♭3<td>  </td><td>♭5</td><td>♭6</td><td class="rightpad10">♭7</td></tr>
+				</tbody>
+			</table>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
@@ -1904,7 +1956,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light">Both scales contain a repeated interval set (called a tetrachord in Ionian and a trichord in pentatonic) and a spare whole step, or <em><strong class="toc-counter weight3">synaphe</strong></em>. I’ve marked one possible reading within the interval list. (Two such readings exist of pentatonic, and three of Ionian; in this example, I avoided splitting tetrachords or trichords in the base scale.)</p>
 
-			<p class="light"><em>Synaphe</em> (plural: <em>synaphai</em> or <em>synaphes</em>) comes from the Attic Greek word <em class="toc-counter" lang="grc">σῠνᾰφή</em> (<em class="toc-counter">sŭnăphe&#772;&#769;</em>, literally <em class="toc-counter">connection, union, junction; point or line of junction; conjunction of two tetrachords</em>). Its Attic pronunciation is roughly <em class="toc-counter">suh-nuh-FAY</em> (so, basically how a drunk person would say <em>Santa Fe</em>), but I think English speakers, mistakenly assuming it to be French, might say <em class="toc-counter">sy-NAFF</em>.</p>
+			<p class="light"><em>Synaphe</em> (plural: <em>synaphai</em> or <em>synaphes</em>) comes from the Attic Greek word <em class="toc-counter" lang="grc">σῠνᾰφή</em> (<em class="toc-counter">sŭnăphe&#772;&#769;</em>, literally <em class="toc-counter">connection, union, junction; point or line of junction; conjunction of two tetrachords</em>). Its Attic pronunciation was roughly <em class="toc-counter">suh-nup-HEY</em> pre-<em>φ</em> shift and <em class="toc-counter">suh-nuh-FAY</em> (so, basically how a drunk person would say <em>Santa Fe</em>) afterward, but I think English speakers, mistakenly assuming it to be French, might say <em class="toc-counter">sy-NAFF</em>.</p>
 			
 			<p class="light">(Pro tip: If a word contains <em>ph</em> and <em>doesn’t</em> split it across two syllables, it’s almost always transliterated Greek. Also, pronouncing foreign words using the wrong orthography is a great way to make a linguistics nerd’s blood boil. Speaking of which, <em class="toc-counter">orthography</em> descends from <em class="toc-counter">ορθο-</em> (<em class="toc-counter">ortho-</em>, <em class="toc-counter">correct</em>) and <em class="toc-counter">-γραφίᾱ</em> (<em class="toc-counter">-graphíā</em>, <em class="toc-counter">writing</em>).)</p>
 
@@ -6783,7 +6835,7 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="mediumleftborder">enharmonic Lydian tonos</td>
 					</tr>
 					<tr>
-						<td class="mediumrightborder">ἐναρμόνιος Φρύγιος τόνος</td>
+						<td class="mediumrightborder">ἐναρμόνιος Φρῠ́γῐος τόνος</td>
 						<td class="italic">enarmónios Phrŭ́gios tónos</td>
 						<td class="mediumleftborder">enharmonic Phrygian tonos</td>
 					</tr>
@@ -6798,7 +6850,7 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="mediumleftborder">enharmonic Hypolydian tonos</td>
 					</tr>
 					<tr>
-						<td class="mediumrightborder">ἐναρμόνιος ὑποφρύγιος τόνος</td>
+						<td class="mediumrightborder">ἐναρμόνιος ὑποφρῠ́γῐος τόνος</td>
 						<td class="italic">enarmónios hŭpophrŭ́gios tónos</td>
 						<td class="mediumleftborder">enharmonic Hypophrygian tonos</td>
 					</tr>
@@ -6818,7 +6870,7 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="mediumleftborder">chromatic Lydian tonos</td>
 					</tr>
 					<tr>
-						<td class="mediumrightborder">χρωμᾰτῐκός Φρύγιος τόνος</td>
+						<td class="mediumrightborder">χρωμᾰτῐκός Φρῠ́γῐος τόνος</td>
 						<td class="italic">khrōmătĭkós Phrŭ́gios tónos</td>
 						<td class="mediumleftborder">chromatic Phrygian tonos</td>
 					</tr>
@@ -6833,7 +6885,7 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="mediumleftborder">chromatic Hypolydian tonos</td>
 					</tr>
 					<tr>
-						<td class="mediumrightborder">χρωμᾰτῐκός ὑποφρύγιος τόνος</td>
+						<td class="mediumrightborder">χρωμᾰτῐκός ὑποφρῠ́γῐος τόνος</td>
 						<td class="italic">khrōmătĭkós hŭpophrŭ́gios tónos</td>
 						<td class="mediumleftborder">chromatic Hypophrygian tonos</td>
 					</tr>
@@ -6853,7 +6905,7 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="mediumleftborder">diatonic Lydian tonos</td>
 					</tr>
 					<tr>
-						<td class="mediumrightborder">διατονικός Φρύγιος τόνος</td>
+						<td class="mediumrightborder">διατονικός Φρῠ́γῐος τόνος</td>
 						<td class="italic">diatonikós Phrŭ́gios tónos</td>
 						<td class="mediumleftborder">diatonic Phrygian tonos</td>
 					</tr>
@@ -6868,7 +6920,7 @@ window.onload = function () {makeAllSortable();};*/
 						<td class="mediumleftborder">diatonic Hypolydian tonos</td>
 					</tr>
 					<tr>
-						<td class="mediumrightborder">διατονικός ὑποφρύγιος τόνος</td>
+						<td class="mediumrightborder">διατονικός ὑποφρῠ́γῐος τόνος</td>
 						<td class="italic">diatonikós hŭpophrŭ́gios tónos</td>
 						<td class="mediumleftborder">diatonic Hypophrygian tonos</td>
 					</tr>
@@ -7256,9 +7308,9 @@ window.onload = function () {makeAllSortable();};*/
 					</tr>
 					<tr>
 						<td class="right weight5thickness"><a href="#ftnt_ref09" id="ftnt09" class="noprintlink bold">9.</a></td>
-						<td><p class="upperpara">My brain wants Chromatic Phrygian inverse to follow Chromatic Mixolydian. Instead of listing symptoms of obsessive-compulsive disorder (which you can thank, alongside autism, for <em>this entire page</em>), it’s probably simpler to just tell readers to look at the following table’s interval columns.</p>
+						<td><p class="upperpara">My brain wants Chromatic Phrygian inverse to follow Chromatic Mi&shy;xo&shy;ly&shy;di&shy;an. I’d list symptoms of obsessive-compulsive disorder (which you can thank, alongside autism, for <em>this entire page</em>), but it’s probably simpler to just tell readers to look at the following table’s interval columns.</p>
 
-						<div class="mobilescroll"><table id="chromatictonoiocd1" class="normal tabular-oldstyle sidepad8 weight5thickness nowrap">
+						<div class="mobilescroll" style="max-width: calc(var(--page-width) - 40px);"><table id="chromatictonoiocd1" class="normal tabular-oldstyle sidepad8 weight5thickness nowrap">
 							<thead class="fixheight">
 								<tr class="accent weight6"><th colspan="16">Greek chromatic <em>tonoi</em> & their inversions (mode-based roots, OCD order 1)</th></tr>
 								<tr class="weight6"><th colspan="2">Chromatic <em>Tonos</em></th>                                                                        <th class="leftborder">1</th>                              <th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left rightpad15">7</th><th class="leftborder leftpad15" colspan="7">Intervals</tr>
@@ -7340,7 +7392,7 @@ window.onload = function () {makeAllSortable();};*/
 
 						<p class="light">Now my brain is screaming at me about the notes; it wants Chromatic Dorian inverse to follow Chromatic Mixolydian, again to preserve a pattern. OK, fine, brain, make up your mind.</p>
 
-						<div class="mobilescroll"><table id="chromatictonoiocd2" class="normal tabular-oldstyle sidepad8 weight5thickness nowrap">
+						<div class="mobilescroll" style="max-width: calc(var(--page-width) - 40px);"><table id="chromatictonoiocd2" class="normal tabular-oldstyle sidepad8 weight5thickness nowrap">
 							<thead class="fixheight">
 								<tr class="accent weight6"><th colspan="16">Greek chromatic <em>tonoi</em> & their inversions (mode-based roots, OCD order 2)</th></tr>
 								<tr class="weight6"><th colspan="2">Chromatic <em>Tonos</em></th>                                                                        <th class="leftborder">1</th>                              <th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left rightpad15">7</th><th class="leftborder leftpad15" colspan="7">Intervals</tr>

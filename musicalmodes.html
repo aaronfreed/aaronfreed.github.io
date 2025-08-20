@@ -347,7 +347,7 @@ window.onload = function () {makeAllSortable();};*/
 			<h1 class="centred">Introduction</h1>
 			<h2 class="centred" id="modes101">Modes 101</h2>
 
-			<p class="light">Be warned: This is a dense technical analysis of scales and modes. If you don’t have a solid grasp of music theory, the charts may look pretty, but much of my analysis may fly straight over your head. If you want to learn music theory, I have introductions to <a href="whatistime.html" class="locallink">rhythm</a> and <a href="basicmusicalharmony.html" class="locallink">harmony</a> that provide <em>much</em> better starting points.</p>
+			<p class="light">Be warned: This is a dense technical analysis of scales and modes. If you don’t have a solid grasp of music theory, the charts may look pretty, but much of my analysis may fly straight over your head. If you want to learn music theory, I have intro<span class="noprint">duction</span>s to <a href="whatistime.html" class="noprintlink">rhythm</a><span class="linktext"> &#10216;aaronfreed<wbr />.<wbr />github<wbr />.<wbr />io<wbr />/<wbr />whatistime<wbr />.<wbr />html&#10217;</span> and <a href="basicmusicalharmony.html" class="noprintlink">harmony</a><span class="linktext"> &#10216;aaronfreed<wbr />.<wbr />github<wbr />.<wbr />io<wbr />/<wbr />basicmusicalharmony<wbr />.<wbr />html&#10217;</span> that provide <em>far</em> better starting points.</p>
 
 			<p class="normal fixheight toc-counter">(Before we proceed: As always, please <a href="contactme.html" class="noprintlink"><strong>contact me</strong></a><span class="noscreen linktext nohyphens"> &#10216;aaronfreed<wbr />.github<wbr />.io<wbr />/aboutme<wbr />.html&#10217;</span> if you notice any errors or omissions.)</p>
 
@@ -361,7 +361,7 @@ window.onload = function () {makeAllSortable();};*/
 				<li>I use <span class="azure weight0">thin, blue, lowercase letters</span> for minor or diminished intervals a semitone below Ionian.</li>
 				<li>I use a <strong class="accent orange weight4">bold, orange, uppercase letter</strong> for the augmented interval a semitone above Ionian.
 					<ul>
-						<li>Augmented fourths and diminished fifths are both tritones; they just use different notations.</li>
+						<li>Augmented fourths and diminished fifths are each tritones, just using different notation.</li>
 					</ul>
 				</li>
 				<li>Scale links go to <a href="https://ianring.com/musictheory/scales/finder/" target="_blank" rel="noopener noreferrer">Ian Ring’s Scale Finder</a>, an absolutely invaluable resource for scale analysis. I’m probably duplicating a lot of its analysis, although I suspect I’m coming at it from a slightly different angle.</li>
@@ -590,14 +590,14 @@ window.onload = function () {makeAllSortable();};*/
 		<main>
 			<h2 id="circleoffifthsorder" class="centred">The modes in circle of fifths order</h2>
 
-			<p class="light">I mostly won’t be analyzing the modes in their traditional order, since I’m analyzing how lowering a regular pattern of notes by a half-step each walks us through every mode on every key. I call this the circle of fifths order for reasons that will become readily apparent. A few notes (pun intended):</p>
+			<p class="light">I mostly won’t be analyzing the modes in their traditional order, since I’m analyzing how lowering a regular pattern of notes by a semitone each walks us through every mode on every key. I call this the circle of fifths order for reasons that will become readily apparent. A few notes (pun intended):</p>
 
 			<ul class="light mobileleftmargin15">
 				<li>Most of this analysis focuses on twelve-tone equal temperament (12-TET for short), the tuning system the vast majority of Western music has used for hundreds of years. I’ll try to note exceptions in other temperaments where they exist, but given my at-best spotty understanding of other tuning systems, I can’t promise to have gotten them all.</li>
 				<li>For the most part, I’ll attempt to avoid bogging this analysis down in heavy mathematics, but I must begin this analysis by noting that in 12-TET, <em>every</em> note on the chromatic scale vibrates at exactly 2<sup>&sup1;&frasl;&#8321;&#8322;</sup> its lower neighbor’s frequency &ndash; i.e., the note spacing is <em>exactly</em> even. This is an important precondition for the analysis I’ve conducted here: much of it wouldn’t apply otherwise.</li>
 				<li>In 12-TET, <strong class="toc-counter">A♯</strong> and <strong class="toc-counter">B♭</strong> are enharmonically equivalent: they signify the same pitch. Likewise <strong class="toc-counter">B</strong> and <strong class="toc-counter">C♭</strong>, <strong class="toc-counter">C♯</strong> and <strong class="toc-counter">D♭</strong>, and so on. However, in <em>music theory</em> and <em>notational</em> terms, <strong class="toc-counter">A♯</strong> and <strong class="toc-counter">B♭</strong> are semantically quite different – be careful. (And in tunings with more than 12 notes per octave, they often <em>won’t</em> be the same pitch.)</li>
 				<li>Key signatures with seven sharps or flats exist, but I’ve mostly omitted them from my analysis. (There are even monstrosities with double-sharps [𝄪] and double-flats [𝄫] … which I mostly ignore. I can at least <em>tolerate</em> the double-flat symbol, but the double-sharp is a monstrosity that doesn’t even slightly resemble what it’s meant to double.) I feel using both six-flat and six-sharp key signatures was extravagant enough as it was.</li>
-				<li id="modesfromlydian">If we start from <strong class="accent">Lydian mode</strong>, lowering the correct pitches one at a time by a half-step each gives us the next mode in the cycle. I’ll use <strong class="accent">C Lydian</strong> as an example to demonstrate the principle:</li>
+				<li id="modesfromlydian">If we begin at <strong class="accent">Lydian mode</strong>, lowering the correct note sequence by a semitone each gives us the next mode in the cycle. I’ll use <strong class="accent">C Lydian</strong> as an example to demonstrate the principle:</li>
 			</ul>
 
 			<div class="mobilescroll"><table class="nopagebreak tabular-oldstyle fixheight nowrap weight5thickness">
@@ -659,12 +659,12 @@ window.onload = function () {makeAllSortable();};*/
 			<h2 class="centred" id="inverseoperations">The principles of inverse operations</h2>
 
 			<ul class="light mobileleftmargin15">
-				<li>Now, note that we’ve effectively been subtracting 1 from a regular pattern of values in a sequence:
+				<li>Now, note that we’ve effectively been subtracting 1 from a repeating sequence of notes:
 					<ul class="mobileleftmargin15">
 						<li>4, 7, 3, 6, 2, 5, 1, 4, 7, 3, 6, 2, 5, 1…</li>
 					</ul>
 				</li>
-				<li>As a result, if we consult the mathematical properties of inverse operations, we can infer that converse of everything we’ve just done will apply if we add 1 to the same notes in the reverse order:
+				<li>As a result, the mathematical properties of inverse operations tells us that the converse of everything we’ve just done will apply if we add 1 to the same notes in the reverse order:
 					<ul class="mobileleftmargin15">
 						<li>1, 5, 2, 6, 3, 7, 4, 1, 5, 2, 6, 3, 7, 4…</li>
 					</ul>
@@ -746,7 +746,7 @@ window.onload = function () {makeAllSortable();};*/
 			<h1 id="modes" class="centred">The major scale’s modes &amp; the circle of fifths</h1>
 			<h2 id="modetables" class="centred">12 major scales &times; 7 modes = 84 permutations</h2>
 			<ul class="light">
-				<li>I’ve printed the <strong class="accent">C major</strong> scale’s modes in <strong class="accent"><strong>bold, blue type</strong></strong> to make them stand out. These are the only scales played using only the white keys of the piano (this is also why music notation can express these specific keys without accidentals, either in the key signature or after it). The differences between their numbers are always multiples of twelve; this is also not a coincidence.</li>
+				<li>I’ve printed the <strong class="accent">C major</strong> scale’s modes in <strong class="accent"><strong>bold, blue type</strong></strong> to make them stand out. These are the only scales played using only the white keys of the piano (this is also why music notation can express these specific keys without accidentals, either in the key signature or after it). Their numbers always differ by multiples of twelve; this is also not a coincidence.</li>
 				<li>Halfway between <strong class="accent">C major</strong>’s modes, I always print a mode twice, in <span class="orange">orange</span>, with its key signature first using six flats (<strong class="orange">G♭ major</strong>), then six sharps (<strong class="orange">F♯ major</strong>). I don’t really <em>like</em> either option (<strong class="toc-counter">E♯</strong> is <strong class="toc-counter">F♮</strong>! <strong class="toc-counter">C♭</strong> is <strong class="toc-counter">B♮</strong>!), but both avoid a repeated letter in a scale, and thus a rash of accidentals in the notation of any piece that uses them. <strong class="orange">G♭</strong>/<strong class="orange">F♯ major</strong>’s modes are also always separated by multiples of twelve, for the same reason: this progression separates all seven modes of each scale from each other by multiples of twelve.</li>
 				<li>I’ve listed these descending by pitch so higher pitches will be, well, higher, which may confuse some people since we read from top to bottom and are used to thinking of harmony in ascending order. Someday, I plan to write a JavaScript add-on to give readers an option to reverse the order – and eventually, to give them then option to create similar tables for different scales (at the bare minimum, melodic minor, harmonic minor, and chromatic Hypolydian; possibly others as well).</li>
 				<li>“RM” is an initialism for “Relative Major”, and “KS” is for “Key Signature”. A cheat sheet for what modes use what key signatures can be found in the section immediately following this one.</li>
@@ -1010,22 +1010,22 @@ window.onload = function () {makeAllSortable();};*/
 			<ul class="light mobileleftmargin15">
 				<li>Legend for the above:
 					<ul class="mobileleftmargin15">
-						<li>Lyd = Lydian</li>
-						<li>Maj = major (Ionian)</li>
-						<li>Mix = Mixolydian</li>
-						<li>Dor = Dorian (if you’re not sure why it’s <span class="translucent">grey</span>, ask your English teacher about the picture)</li>
-						<li>Min = natural minor (Aeolian)</li>
-						<li>Phr = Phrygian</li>
-						<li>Loc = Locrian</li>
-						<li>KS = key signature (highlighted because it’s the key to the table – pun coincidental, though I definitely didn’t even try to avoid it)</li>
+						<li class="nobottommarginprint">Lyd = Lydian</li>
+						<li class="nobottommarginprint notopmarginprint">Maj = major (Ionian)</li>
+						<li class="nobottommarginprint notopmarginprint">Mix = Mixolydian</li>
+						<li class="nobottommarginprint notopmarginprint">Dor = Dorian (if you’re not sure why it’s <span class="translucent">grey</span>, ask your English teacher about the picture)</li>
+						<li class="nobottommarginprint notopmarginprint">Min = natural minor (Aeolian)</li>
+						<li class="nobottommarginprint notopmarginprint">Phr = Phrygian</li>
+						<li class="nobottommarginprint notopmarginprint">Loc = Locrian</li>
+						<li class="notopmarginprint">KS = key signature (highlighted because it’s the key to the table – pun coincidental, though I definitely didn’t even try to avoid it)</li>
 					</ul>
 				</li>
 				<li>Additional notes:
 					<ul class="mobileleftmargin15">
-						<li><span class="number">5</span>♯ is enharmonically equivalent to <span class="number">7</span>♭.</li>
-						<li><span class="number">6</span>♯ is enharmonically equivalent to <span class="number">6</span>♭.</li>
-						<li><span class="number">7</span>♯ is enharmonically equivalent to <span class="number">5</span>♭.</li>
-						<li>I’ve again printed <strong class="accent">C major</strong>’s modes in <span class="accent">blue</span> and <strong class="orange">F♯</strong>/<strong class="orange">G♭ major</strong>’s modes in <span class="orange">orange</span>.</li>
+						<li class="nobottommarginprint"><span class="number">5</span>♯ is enharmonically equivalent to <span class="number">7</span>♭.</li>
+						<li class="nobottommarginprint notopmarginprint"><span class="number">6</span>♯ is enharmonically equivalent to <span class="number">6</span>♭.</li>
+						<li class="nobottommarginprint notopmarginprint"><span class="number">7</span>♯ is enharmonically equivalent to <span class="number">5</span>♭.</li>
+						<li class="notopmarginprint">I’ve again printed <strong class="accent">C major</strong>’s modes in <span class="accent">blue</span> and <strong class="orange">F♯</strong>/<strong class="orange">G♭ major</strong>’s modes in <span class="orange">orange</span>.</li>
 					</ul>
 				</li>
 				<li>Accidentals also fall onto the circle of fifths (e.g., <strong class="toc-counter">B♭</strong> to <strong class="toc-counter">E♭</strong> and <strong class="toc-counter">E♭</strong> to <strong class="toc-counter">A♭</strong> are both perfect fifths).</li>
@@ -1135,7 +1135,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<ul class="light mobileleftmargin15">
 				<li>Hundreds of possible heptatonic (seven-note) scales <em>aren’t</em> modes of Ionian. I’ve rooted the following examples (many of which are common in jazz) in C to clarify their differences:
-					<div class="mobilescroll"><table id="sevennotescales" class="normal tabular-oldstyle sidepad6 weight5thickness fixheight nowrapprint screen800 nowrap nonmobileleftmargin-30">
+					<div class="mobilescroll"><table id="sevennotescales" class="normal tabular-oldstyle sidepad6 weight5thickness fixheight screen800 nowrap nonmobileleftmargin-30 print60toleft">
 						<thead class="fixheight">
 							<tr class="accent weight6"><th colspan="16">Other heptatonic scales</th></tr>
 							<tr class="toc-counter weight2 petitecaps"><th colspan="2">Scale</th>                                                                        <th class="leftborder">1</th>                              <th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left rightpad15">7</th><th class="leftborder leftpad15" colspan="7">Intervals</tr>
@@ -1178,7 +1178,7 @@ window.onload = function () {makeAllSortable();};*/
 				<li>
 					<p>Note that several sets of the above scales are modes of each other. In particular:</p>
 
-					<div class="mobilescroll"><table id="minormodes" class="normal tabular-oldstyle sidepad6 fixheight nowrap">
+					<div class="mobilescroll"><table id="minormodes" class="normal tabular-oldstyle sidepad6 fixheight nowrap print30toleft">
 						<thead class="fixheight">
 							<tr class="accent weight4"><th colspan="16">Harmonic minor &amp; melodic minor’s modes at a glance</th></tr>
 							<tr class="toc-counter weight2 petitecaps"><th colspan="2">Scale</th>                                                                        <th class="leftborder">1</th>                              <th class="left">2</th><th class="left">3</th><th class="left">4</th><th class="left">5</th><th class="left">6</th><th class="left rightpad15">7</th><th class="leftborder leftpad15" colspan="7">Intervals</tr>
@@ -1381,9 +1381,9 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light">I’ll also use “circle-order” or “circle order” to include both circle of fifths order and circle of fourths order.</p> -->
 
-			<p class="light">Since the pentatonic scale has two fewer notes than Ionian, our analysis must delete two modes. But <em>which</em> two? We can derive the pentatonic scale from Ionian using at least three different methods.</p>
+			<p class="light">Since the pentatonic scale has two fewer notes than Ionian, our analysis must delete two modes. But <em>which</em> two? We can derive the pentatonic scale from Ionian in at least three different ways.</p>
 
-			<p class="light fixheight orange"><em><strong>A quick warning before we proceed further: we’re about to take a quick detour into “right for the wrong reasons” land. After the third table, I’ll explain how, why, and where the first two tables go wrong.</strong></em></p>
+			<p class="light fixheight orange"><em><strong>Quick warning before we proceed further: we’re taking a quick detour into “right for the wrong reasons” land. After the third table, I’ll explain how, why, and where the first two tables go wrong.</strong></em></p>
 
 			<p class="light">Let’s try disregarding Phrygian and Locrian, the lowest modes in the circle of fifths progression. In this analysis:</p>
 
@@ -1564,7 +1564,7 @@ window.onload = function () {makeAllSortable();};*/
 				</tbody>
 			</table></div>
 
-			<p class="light">So, to reiterate: The first two tables I presented are <em>filthy half-truths</em>: their explanations only fit due to mathematical patterns they don’t account for. Only the third is fully correct. Can you figure out why?</p>
+			<p class="light">So, to reiterate: Only the tritone deletion table is completely accurate; its two predecessors are <em>filthy half-truths</em>, owing to a mathematical pattern they don’t account for. Can you figure out why?</p>
 
 			<ol class="light mobileleftmargin15">
 				<li>If both scales have symmetrical modes (Dorian and neutral pentatonic), then:

@@ -3463,10 +3463,10 @@ code {
 :is(.monstermash table.curved) td {
 	border-bottom: 1px solid var(--offset-level-3);
 }
-:is(.musicalmodes, table.curved) tr:last-child > th {
+:is(.musicalmodes, table.curved) tr:last-child > th:not(.lightbottomborder, .mediumbottomborder) {
 	border-bottom: 2px solid var(--offset-level-3);
 }
-:is(.musicalmodes, table.curved) tr:last-child:not(:only-of-type) > th {
+:is(.musicalmodes, table.curved) tr:last-child:not(:only-of-type) > th:not(.lighttopborder, .mediumtopborder) {
 	border-top: 2px solid var(--offset-level-3);
 }
 table.curved thead > tr:first-child > th {
@@ -3517,10 +3517,34 @@ table.curved thead > tr:first-child > th {
 .mediumbottomborder {
 	border-bottom: 1px solid var(--offset-level-3);
 }
+.leftborder {
+	border-left: 2px solid var(--offset-level-3);
+}
+.rightborder {
+	border-right: 2px solid var(--offset-level-3);
+}
+.topborder {
+	border-top: 2px solid var(--offset-level-3);
+}
+.bottomborder {
+	border-bottom: 2px solid var(--offset-level-3);
+}
 :is(.musicalmodes, table.curved) tr.mediumbottomborder :is(td, th),
-:is(.musicalmodes, table.curved) :is(td.mediumbottomborder, tr.mediumbottomborder),
+:is(.musicalmodes, table.curved) :is(th.mediumbottomborder, td.mediumbottomborder, tr.mediumbottomborder),
 :is(.musicalmodes, table.curved) :is(td.highlight, th.highlight) {
 	border-bottom: 1px solid var(--offset-level-3);
+}
+:is(.musicalmodes, table.curved) tr.mediumtopborder :is(td, th),
+:is(.musicalmodes, table.curved) :is(th.mediumtopborder, td.mediumtopborder, tr.mediumtopborder) {
+	border-top: 1px solid var(--offset-level-3);
+}
+:is(.musicalmodes, table.curved) tr.lightbottomborder :is(td, th),
+:is(.musicalmodes, table.curved) :is(th.lightbottomborder, td.lightbottomborder, tr.lightmbottomborder) {
+	border-bottom: 1px solid var(--offset-level-2);
+}
+:is(.musicalmodes, table.curved) tr.lighttopborder :is(td, th),
+:is(.musicalmodes, table.curved) :is(th.lighttopborder, td.lighttopborder, tr.lighttopborder) {
+	border-top: 1px solid var(--offset-level-2);
 }
 :is(.musicalmodes, table.curved) .leftborder {
 	border-left: 2px solid var(--offset-level-3);

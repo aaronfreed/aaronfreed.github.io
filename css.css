@@ -714,8 +714,8 @@
 	.mobilealignright {
 		text-align: right;
 	}
-	.mobileleftpad-15 {
-		padding-left: -15px;
+	.mobileleftmargin-15 {
+		margin-left: -15px !important;
 	}
 }
 @media screen and (min-width: 600px) {
@@ -2337,6 +2337,12 @@ p,
 li {
 	margin: 8px 0px;
 }
+:is(td, th, li) p:first-of-type {
+	margin-top: 0px;
+}
+:is(td, th, li) p:last-of-type {
+	margin-bottom: 0px;
+} 
 .upperpara {
 	margin-top: 0px;
 	margin-bottom: 8px;

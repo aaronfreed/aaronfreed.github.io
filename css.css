@@ -700,7 +700,10 @@
 		margin: 8px 0px 8px 15px;
 	}
 	blockquote {
-		margin: 15px; 
+		margin: 16px 15px;
+	}
+	blockquote.wide {
+		margin: 16px 0px 16px 15px;
 	}
 	.mobilealignleft {
 		text-align: left;
@@ -715,6 +718,20 @@
 @media screen and (min-width: 600px) {
 	.nowrapdesktop {
 		white-space: nowrap;
+	}
+	.portfolio :is(ul, ol) {
+		margin: 16px 0px 4px 30px;
+	}
+	.portfolio :is(ol.midpara, ul.midpara) {
+		margin: 8px 0px 8px 30px;
+	}
+}
+@media screen and (width > 600px), print {
+	blockquote {
+		margin: 16px 30px;
+	}
+	blockquote.wide {
+		margin: 16px 0px 16px 30px;
 	}
 	.mobileonly {
 		visibility: collapse !important;
@@ -761,12 +778,6 @@
 	}
 	.nonmobileleftmargin50 {
 		margin-left: 50px;
-	}
-	.portfolio :is(ul, ol) {
-		margin: 16px 0px 4px 30px;
-	}
-	.portfolio :is(ol.midpara, ul.midpara) {
-		margin: 8px 0px 8px 30px;
 	}
 }
 @media (prefers-color-scheme: light) {
@@ -1051,52 +1062,6 @@
 	}
 	.print60toleft {
 		margin-left: -60px !important;
-	}
-	.mobileonly {
-		visibility: collapse !important;
-		display: none !important;
-	}
-	.nonmobileleftpad2 {
-		padding-left: 2px;
-	}
-	.nonmobilerightpad2 {
-		padding-right: 2px;
-	}
-	.nonmobileleftpad3 {
-		padding-left: 3px;
-	}
-	.nonmobilerightpad3 {
-		padding-right: 3px;
-	}
-	.nonmobileleftpad4 {
-		padding-left: 4px;
-	}
-	.nonmobilerightpad4 {
-		padding-right: 4px;
-	}
-	.nonmobileleftpad5 {
-		padding-left: 5px;
-	}
-	.nonmobilerightpad5 {
-		padding-right: 5px;
-	}
-	.nonmobileleftpad6 {
-		padding-left: 6px;
-	}
-	.nonmobilerightpad6 {
-		padding-right: 6px;
-	}
-	.nonmobileleftpad8 {
-		padding-left: 8px;
-	}
-	.nonmobilerightpad8 {
-		padding-right: 8px;
-	}
-	.nonmobileleftmargin-30 {
-		margin-left: -30px;
-	}
-	.nonmobileleftmargin50 {
-		margin-left: 50px;
 	}
 	.portfolio :is(ul, ol) {
 		margin: 16px 0px 4px 30px;
@@ -2398,12 +2363,6 @@ li {
 }
 .soundtracks div {
 	margin: 4px 0px;
-}
-blockquote {
-	margin: 16px 30px;
-}
-blockquote.wide {
-	margin: 16px 0px 16px 30px;
 }
 .portfolio blockquote {
 	margin: 12px 30px 6px;

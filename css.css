@@ -2133,146 +2133,231 @@ h3 .subtitle {
 	margin: 8px 0px;
 }
 
-.margintop2
+
+/* paragraph, div, and list stuff */
+div:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60),
+p:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60),
+li:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60) {
+	margin-top: 8px;
+}
+div:not(.noleftmargin, .marginleft2, .marginleft3, .marginleft4, .marginleft6, .marginleft8, .marginleft10, .marginleft12, .marginleft15, .marginleft16, .marginleft20, .marginleft30, .marginleft40, .marginleft50, .marginleft60),
+p:not(.noleftmargin, .marginleft2, .marginleft3, .marginleft4, .marginleft6, .marginleft8, .marginleft10, .marginleft12, .marginleft15, .marginleft16, .marginleft20, .marginleft30, .marginleft40, .marginleft50, .marginleft60),
+li:not(.noleftmargin, .marginleft2, .marginleft3, .marginleft4, .marginleft6, .marginleft8, .marginleft10, .marginleft12, .marginleft15, .marginleft16, .marginleft20, .marginleft30, .marginleft40, .marginleft50, .marginleft60) {
+	margin-left: 0px;
+}
+div:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60),
+p:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60),
+li:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60) {
+	margin-bottom: 8px;
+}
+div:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright6, .marginright8, .marginright10, .marginright12, .marginright15, .marginright16, .marginright20, .marginright30, .marginright40, .marginright50, .marginright60),
+p:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright6, .marginright8, .marginright10, .marginright12, .marginright15, .marginright16, .marginright20, .marginright30, .marginright40, .marginright50, .marginright60),
+li:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright6, .marginright8, .marginright10, .marginright12, .marginright15, .marginright16, .marginright20, .marginright30, .marginright40, .marginright50, .marginright60) {
+	margin-right: 0px;
+}
+:is(td, th, li) p:not(.margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60):first-of-type {
+	margin-top: 0px;
+}
+:is(td, th, li) p:not(.marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60):last-of-type {
+	margin-bottom: 0px;
+} 
+.upperpara {
+	margin-top: 0px;
+	margin-bottom: 8px;
+}
+.lowerpara {
+	margin-top: 8px;
+	margin-bottom: 0px;
+}
+.midpara, .compositions2023-2024 ol.contents :is(ul, ul li) {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+:where(.discography, .soundtracks, .portfolio) p {
+	margin: 12px 0px 6px;
+}
+.discography p.upperpara {
+	margin-top: 0px;
+	margin-bottom: 6px;
+}
+.discography p.midpara {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+.discography p.lowerpara {
+	margin-top: 12px;
+	margin-bottom: 0px;
+}
+.soundtracks div {
+	margin: 4px 0px;
+}
+.portfolio blockquote {
+	margin: 12px 30px 6px;
+}
+.hathortimeline blockquote {
+	color: var(--toc-counter);
+	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
+}
+
+.marginbottom2, p.marginbottom2, div.marginbottom2, li.marginbottom2
+{
+	margin-bottom: 2px;
+}
+.margintop2, p.margintop2, div.margintop2, li.margintop2
 {
 	margin-top: 2px;
 }
 
-.margintop3
+.marginbottom3, p.marginbottom3, div.marginbottom3, li.marginbottom3
+{
+	margin-bottom: 3px;
+}
+.margintop3, p.margintop3, div.margintop3, li.margintop3
 {
 	margin-top: 3px;
 }
 
-:is(h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h2 + h2, h2 + h3, h2 + h4,
-	h2 + h5, h3 + h3, h3 + h4, h3 + h5, h4 + h4, h4 + h5, h5 + h5, .margintop4)
-{
+:is(
+	h1 + :is(h5, h4, h3, h2, h1),
+	h2 + :is(h5, h4, h3, h2),
+	h3 + :is(h5, h4, h3),
+	h4 + :is(h5, h4),
+	h5 + :is(h5),
+	.margintop4,
+	p.margintop4,
+	div.margintop4,
+	li.margintop4
+) {
 	margin-top: 4px;
 }
 :is(
-	h1:has(+ h1, + h2, + h3, + h4, + h5),
-	h2:has(+ h2, + h3, + h4, + h5),
-	h3:has(+ h3, + h4, + h5),
-	h4:has(+ h4, + h5),
+	h1:has(+ h5, + h4, + h3, + h2, + h1),
+	h2:has(+ h5, + h4, + h3, + h2),
+	h3:has(+ h5, + h4, + h3),
+	h4:has(+ h5, + h4),
 	h5:has(+ h5),
-	.marginbottom4)
-{
+	.marginbottom4,
+	p.marginbottom4,
+	div.marginbottom4,
+	li.marginbottom4
+) {
 	margin-bottom: 4px;
 }
 
-.marginleft8 {
+.marginleft8, p.marginleft8, div.marginleft8, li.marginleft8 {
 	margin-left: 8px;
 }
-.marginright8 {
+.marginright8, p.marginright8, div.marginright8, li.marginright8 {
 	margin-right: 8px;
 }
-.marginbottom8 {
+.marginbottom8, p.marginbottom8, div.marginbottom8, li.marginbottom8 {
 	margin-bottom: 8px;
 }
-.margintop8 {
+.margintop8, p.margintop8, div.margintop8, li.margintop8 {
 	margin-top: 8px;
 }
 
-.marginleft12 {
+.marginleft12, p.marginleft12, div.marginleft12, li.marginleft12 {
 	margin-left: 12px;
 }
-.marginright12 {
+.marginright12, p.marginright12, div.marginright12, li.marginright12 {
 	margin-right: 12px;
 }
-.marginbottom12 {
+.marginbottom12, p.marginbottom12, div.marginbottom12, li.marginbottom12 {
 	margin-bottom: 12px;
 }
-.margintop12 {
+.margintop12, p.margintop12, div.margintop12, li.margintop12 {
 	margin-top: 12px;
 }
 
-.marginleft15 {
+.marginleft15, p.marginleft15, div.marginleft15, li.marginleft15 {
 	margin-left: 15px;
 }
-.marginright15 {
+.marginright15, p.marginright15, div.marginright15, li.marginright15 {
 	margin-right: 15px;
 }
-.marginbottom15 {
+.marginbottom15, p.marginbottom15, div.marginbottom15, li.marginbottom15 {
 	margin-bottom: 15px;
 }
-.margintop15 {
+.margintop15, p.margintop15, div.margintop15, li.margintop15 {
 	margin-top: 15px;
 }
 
-.marginleft16 {
+.marginleft16, p.marginleft16, div.marginleft16, li.marginleft16 {
 	margin-left: 16px;
 }
-.marginright16 {
+.marginright16, p.marginright16, div.marginright16, li.marginright16 {
 	margin-right: 16px;
 }
-.marginbottom16 {
+.marginbottom16, p.marginbottom16, div.marginbottom16, li.marginbottom16 {
 	margin-bottom: 16px;
 }
-.margintop16 {
+.margintop16, p.margintop16, div.margintop16, li.margintop16 {
 	margin-top: 16px;
 }
 
-.marginleft20 {
+.marginleft20, p.marginleft20, div.marginleft20, li.marginleft20 {
 	margin-left: 20px;
 }
-.marginright20 {
+.marginright20, p.marginright20, div.marginright20, li.marginright20 {
 	margin-right: 20px;
 }
-.marginbottom20 {
+.marginbottom20, p.marginbottom20, div.marginbottom20, li.marginbottom20 {
 	margin-bottom: 20px;
 }
-.margintop20 {
+.margintop20, p.margintop20, div.margintop20, li.margintop20 {
 	margin-top: 20px;
 }
 
-.marginleft30 {
+.marginleft30, p.marginleft30, div.marginleft30, li.marginleft30 {
 	margin-left: 30px;
 }
-.marginright30 {
+.marginright30, p.marginright30, div.marginright30, li.marginright30 {
 	margin-right: 30px;
 }
-.marginbottom30 {
+.marginbottom30, p.marginbottom30, div.marginbottom30, li.marginbottom30 {
 	margin-bottom: 30px;
 }
-.margintop30 {
+.margintop30, p.margintop30, div.margintop30, li.margintop30 {
 	margin-top: 30px;
 }
 
-.marginleft40 {
+.marginleft40, p.marginleft40, div.marginleft40, li.marginleft40 {
 	margin-left: 40px;
 }
-.marginright40 {
+.marginright40, p.marginright40, div.marginright40, li.marginright40 {
 	margin-right: 40px;
 }
-.marginbottom40 {
+.marginbottom40, p.marginbottom40, div.marginbottom40, li.marginbottom40 {
 	margin-bottom: 40px;
 }
-.margintop40 {
+.margintop40, p.margintop40, div.margintop40, li.margintop40 {
 	margin-top: 40px;
 }
 
-.marginleft50 {
+.marginleft50, p.marginleft50, div.marginleft50, li.marginleft50 {
 	margin-left: 50px;
 }
-.marginright50 {
+.marginright50, p.marginright50, div.marginright50, li.marginright50 {
 	margin-right: 50px;
 }
-.marginbottom50 {
+.marginbottom50, p.marginbottom50, div.marginbottom50, li.marginbottom50 {
 	margin-bottom: 50px;
 }
-.margintop50 {
+.margintop50, p.margintop50, div.margintop50, li.margintop50 {
 	margin-top: 50px;
 }
 
-.marginleft60 {
+.marginleft60, p.marginleft60, div.marginleft60, li.marginleft60 {
 	margin-left: 60px;
 }
-.marginright60 {
+.marginright60, p.marginright60, div.marginright60, li.marginright60 {
 	margin-right: 60px;
 }
-.marginbottom60 {
+.marginbottom60, p.marginbottom60, div.marginbottom60, li.marginbottom60 {
 	margin-bottom: 60px;
 }
-.margintop60 {
+.margintop60, p.margintop60, div.margintop60, li.margintop60 {
 	margin-top: 60px;
 }
 
@@ -2329,56 +2414,6 @@ h3 .subtitle {
 }
 .portfolio h5 .normal {
 	font-weight: var(--weight0);
-}
-
-/* paragraph, div, and list stuff */
-div,
-p,
-li {
-	margin: 8px 0px;
-}
-:is(td, th, li) p:first-of-type {
-	margin-top: 0px;
-}
-:is(td, th, li) p:last-of-type {
-	margin-bottom: 0px;
-} 
-.upperpara {
-	margin-top: 0px;
-	margin-bottom: 8px;
-}
-.lowerpara {
-	margin-top: 8px;
-	margin-bottom: 0px;
-}
-.midpara, .compositions2023-2024 ol.contents :is(ul, ul li) {
-	margin-top: 8px;
-	margin-bottom: 8px;
-}
-:where(.discography, .soundtracks, .portfolio) p {
-	margin: 12px 0px 6px;
-}
-.discography p.upperpara {
-	margin-top: 0px;
-	margin-bottom: 6px;
-}
-.discography p.midpara {
-	margin-top: 12px;
-	margin-bottom: 12px;
-}
-.discography p.lowerpara {
-	margin-top: 12px;
-	margin-bottom: 0px;
-}
-.soundtracks div {
-	margin: 4px 0px;
-}
-.portfolio blockquote {
-	margin: 12px 30px 6px;
-}
-.hathortimeline blockquote {
-	color: var(--toc-counter);
-	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
 
 ul,

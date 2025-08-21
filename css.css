@@ -406,6 +406,12 @@
 	.mobilescroll {
 		overflow: auto;
 	}
+	.mobileleftmargin0 {
+		margin-left: 0px;
+	}
+	.mobilerightmargin0 {
+		margin-right: 0px;
+	}
 	.mobileleftmargin1 {
 		margin-left: 1px;
 	}
@@ -484,70 +490,70 @@
 	.mobilerightmargin30 {
 		margin-right: 30px;
 	}
-	.mobileleftpad0 {
+	.mobileleftpad0, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobileleftpad0 {
 		padding-left: 0px;
 	}
-	.mobilerightpad0 {
+	.mobilerightpad0, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobilerightpad0 {
 		padding-right: 0px;
 	}
-	.mobileleftpad1 {
+	.mobileleftpad1, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobileleftpad1 {
 		padding-left: 1px;
 	}
-	.mobilerightpad1 {
+	.mobilerightpad1, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobilerightpad1 {
 		padding-right: 1px;
 	}
-	.mobileleftpad2 {
+	.mobileleftpad2, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobileleftpad2 {
 		padding-left: 2px;
 	}
-	.mobilerightpad2 {
+	.mobilerightpad2, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobilerightpad2 {
 		padding-right: 2px;
 	}
-	.mobileleftpad3 {
+	.mobileleftpad3, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobileleftpad3 {
 		padding-left: 3px;
 	}
-	.mobilerightpad3 {
+	.mobilerightpad3, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobilerightpad3 {
 		padding-right: 3px;
 	}
-	.mobileleftpad4 {
+	.mobileleftpad4, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobileleftpad4 {
 		padding-left: 4px;
 	}
-	.mobilerightpad4 {
+	.mobilerightpad4, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobilerightpad4 {
 		padding-right: 4px;
 	}
-	.mobileleftpad5 {
+	.mobileleftpad5, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobileleftpad5 {
 		padding-left: 5px;
 	}
-	.mobilerightpad5 {
+	.mobilerightpad5, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobilerightpad5 {
 		padding-right: 5px;
 	}
-	.mobileleftpad6 {
+	.mobileleftpad6, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobileleftpad6 {
 		padding-left: 6px;
 	}
-	.mobilerightpad6 {
+	.mobilerightpad6, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobilerightpad6 {
 		padding-right: 6px;
 	}
-	.mobileleftpad7 {
+	.mobileleftpad7, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobileleftpad7 {
 		padding-left: 7px;
 	}
-	.mobilerightpad7 {
+	.mobilerightpad7, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobilerightpad7 {
 		padding-right: 7px;
 	}
-	.mobileleftpad8 {
+	.mobileleftpad8, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobileleftpad8 {
 		padding-left: 8px;
 	}
-	.mobilerightpad8 {
+	.mobilerightpad8, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobilerightpad8 {
 		padding-right: 8px;
 	}
-	.mobileleftpad9 {
+	.mobileleftpad9, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobileleftpad9 {
 		padding-left: 9px;
 	}
-	.mobilerightpad9 {
+	.mobilerightpad9, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobilerightpad9 {
 		padding-right: 9px;
 	}
-	.mobileleftpad10 {
+	.mobileleftpad10, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobileleftpad10 {
 		padding-left: 10px;
 	}
-	.mobilerightpad10 {
+	.mobilerightpad10, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30) .mobilerightpad10 {
 		padding-right: 10px;
 	}
 	.mobilepad20 td, .mobilepad20 th {

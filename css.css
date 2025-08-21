@@ -2916,6 +2916,7 @@ tbody, thead, tfoot, tr, td, th {
 	-moz-text-size-adjust: auto;
 	-ms-text-size-adjust: auto;
 }
+hyphenate,
 table.hyphenate,
 td.hyphenate, 
 table.hyphenate > :is(

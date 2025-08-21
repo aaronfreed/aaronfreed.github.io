@@ -714,6 +714,9 @@
 	.mobilealignright {
 		text-align: right;
 	}
+	.mobileleftpad-15 {
+		padding-left: -15px;
+	}
 }
 @media screen and (min-width: 600px) {
 	.nowrapdesktop {

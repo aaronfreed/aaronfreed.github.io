@@ -702,6 +702,15 @@
 	blockquote {
 		margin: 15px; 
 	}
+	.mobilealignleft {
+		text-align: left;
+	}
+	.mobilealigncenter {
+		text-align: center;
+	}
+	.mobilealignright {
+		text-align: right;
+	}
 }
 @media screen and (min-width: 600px) {
 	.nowrapdesktop {

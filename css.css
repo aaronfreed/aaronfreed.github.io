@@ -398,6 +398,149 @@
 			width: 800px;
 		}
 	}
+
+	.marginleft4, p.marginleft4, div.marginleft4, li.marginleft4, td.marginleft4, th.marginleft4, blockquote.marginleft4, h1.marginleft4, h2.marginleft4, h3.marginleft4, h4.marginleft4, h5.marginleft4 {
+		margin-left: 4px;
+	}
+	.marginright4, p.marginright4, div.marginright4, li.marginright4, td.marginright4, th.marginright4, blockquote.marginright4, h1.marginright4, h2.marginright4, h3.marginright4, h4.marginright4, h5.marginright4 {
+		margin-right: 4px;
+	}
+	.margintop4, p.margintop4, div.margintop4, li.margintop4, td.margintop4, th.margintop4, blockquote.margintop4, h1.margintop4, h2.margintop4, h3.margintop4, h4.margintop4, h5.margintop4 {
+		margin-top: 4px;
+	}
+	.marginbottom4, p.marginbottom4, div.marginbottom4, li.marginbottom4, td.marginbottom4, th.marginbottom4, blockquote.marginbottom4, h1.marginbottom4, h2.marginbottom4, h3.marginbottom4, h4.marginbottom4, h5.marginbottom4 {
+		margin-bottom: 4px;
+	}
+
+	.marginleft8, p.marginleft8, div.marginleft8, li.marginleft8, td.marginleft8, th.marginleft8, blockquote.marginleft8, h1.marginleft8, h2.marginleft8, h3.marginleft8, h4.marginleft8, h5.marginleft8 {
+		margin-left: 8px;
+	}
+	.marginright8, p.marginright8, div.marginright8, li.marginright8, td.marginright8, th.marginright8, blockquote.marginright8, h1.marginright8, h2.marginright8, h3.marginright8, h4.marginright8, h5.marginright8 {
+		margin-right: 8px;
+	}
+	.marginbottom8, p.marginbottom8, div.marginbottom8, li.marginbottom8, td.marginbottom8, th.marginbottom8, blockquote.marginbottom8, h1.marginbottom8, h2.marginbottom8, h3.marginbottom8, h4.marginbottom8, h5.marginbottom8 {
+		margin-bottom: 8px;
+	}
+	.margintop8, p.margintop8, div.margintop8, li.margintop8, td.margintop8, th.margintop8, blockquote.margintop8, h1.margintop8, h2.margintop8, h3.margintop8, h4.margintop8, h5.margintop8 {
+		margin-top: 8px;
+	}
+
+	.marginleft10, p.marginleft10, div.marginleft10, li.marginleft10, td.marginleft10, th.marginleft10, blockquote.marginleft10, h1.marginleft10, h2.marginleft10, h3.marginleft10, h4.marginleft10, h5.marginleft10 {
+		margin-left: 10px;
+	}
+	.marginright10, p.marginright10, div.marginright10, li.marginright10, td.marginright10, th.marginright10, blockquote.marginright10, h1.marginright10, h2.marginright10, h3.marginright10, h4.marginright10, h5.marginright10 {
+		margin-right: 10px;
+	}
+	.marginbottom10, p.marginbottom10, div.marginbottom10, li.marginbottom10, td.marginbottom10, th.marginbottom10, blockquote.marginbottom10, h1.marginbottom10, h2.marginbottom10, h3.marginbottom10, h4.marginbottom10, h5.marginbottom10 {
+		margin-bottom: 10px;
+	}
+	.margintop10, p.margintop10, div.margintop10, li.margintop10, td.margintop10, th.margintop10, blockquote.margintop10, h1.margintop10, h2.margintop10, h3.margintop10, h4.margintop10, h5.margintop10 {
+		margin-top: 10px;
+	}
+
+	.marginleft12, p.marginleft12, div.marginleft12, li.marginleft12, td.marginleft12, th.marginleft12, blockquote.marginleft12, h1.marginleft12, h2.marginleft12, h3.marginleft12, h4.marginleft12, h5.marginleft12 {
+		margin-left: 12px;
+	}
+	.marginright12, p.marginright12, div.marginright12, li.marginright12, td.marginright12, th.marginright12, blockquote.marginright12, h1.marginright12, h2.marginright12, h3.marginright12, h4.marginright12, h5.marginright12 {
+		margin-right: 12px;
+	}
+	.marginbottom12, p.marginbottom12, div.marginbottom12, li.marginbottom12, td.marginbottom12, th.marginbottom12, blockquote.marginbottom12, h1.marginbottom12, h2.marginbottom12, h3.marginbottom12, h4.marginbottom12, h5.marginbottom12 {
+		margin-bottom: 12px;
+	}
+	.margintop12, p.margintop12, div.margintop12, li.margintop12, td.margintop12, th.margintop12, blockquote.margintop12, h1.margintop12, h2.margintop12, h3.margintop12, h4.margintop12, h5.margintop12 {
+		margin-top: 12px;
+	}
+
+	.marginleft15, p.marginleft15, div.marginleft15, li.marginleft15, td.marginleft15, th.marginleft15, blockquote.marginleft15, h1.marginleft15, h2.marginleft15, h3.marginleft15, h4.marginleft15, h5.marginleft15 {
+		margin-left: 15px;
+	}
+	.marginright15, p.marginright15, div.marginright15, li.marginright15, td.marginright15, th.marginright15, blockquote.marginright15, h1.marginright15, h2.marginright15, h3.marginright15, h4.marginright15, h5.marginright15 {
+		margin-right: 15px;
+	}
+	.marginbottom15, p.marginbottom15, div.marginbottom15, li.marginbottom15, td.marginbottom15, th.marginbottom15, blockquote.marginbottom15, h1.marginbottom15, h2.marginbottom15, h3.marginbottom15, h4.marginbottom15, h5.marginbottom15 {
+		margin-bottom: 15px;
+	}
+	.margintop15, p.margintop15, div.margintop15, li.margintop15, td.margintop15, th.margintop15, blockquote.margintop15, h1.margintop15, h2.margintop15, h3.margintop15, h4.margintop15, h5.margintop15 {
+		margin-top: 15px;
+	}
+
+	.marginleft16, p.marginleft16, div.marginleft16, li.marginleft16, td.marginleft16, th.marginleft16, blockquote.marginleft16, h1.marginleft16, h2.marginleft16, h3.marginleft16, h4.marginleft16, h5.marginleft16 {
+		margin-left: 16px;
+	}
+	.marginright16, p.marginright16, div.marginright16, li.marginright16, td.marginright16, th.marginright16, blockquote.marginright16, h1.marginright16, h2.marginright16, h3.marginright16, h4.marginright16, h5.marginright16 {
+		margin-right: 16px;
+	}
+	.marginbottom16, p.marginbottom16, div.marginbottom16, li.marginbottom16, td.marginbottom16, th.marginbottom16, blockquote.marginbottom16, h1.marginbottom16, h2.marginbottom16, h3.marginbottom16, h4.marginbottom16, h5.marginbottom16 {
+		margin-bottom: 16px;
+	}
+	.margintop16, p.margintop16, div.margintop16, li.margintop16, td.margintop16, th.margintop16, blockquote.margintop16, h1.margintop16, h2.margintop16, h3.margintop16, h4.margintop16, h5.margintop16 {
+		margin-top: 16px;
+	}
+
+	.marginleft20, p.marginleft20, div.marginleft20, li.marginleft20, td.marginleft20, th.marginleft20, blockquote.marginleft20, h1.marginleft20, h2.marginleft20, h3.marginleft20, h4.marginleft20, h5.marginleft20 {
+		margin-left: 20px;
+	}
+	.marginright20, p.marginright20, div.marginright20, li.marginright20, td.marginright20, th.marginright20, blockquote.marginright20, h1.marginright20, h2.marginright20, h3.marginright20, h4.marginright20, h5.marginright20 {
+		margin-right: 20px;
+	}
+	.marginbottom20, p.marginbottom20, div.marginbottom20, li.marginbottom20, td.marginbottom20, th.marginbottom20, blockquote.marginbottom20, h1.marginbottom20, h2.marginbottom20, h3.marginbottom20, h4.marginbottom20, h5.marginbottom20 {
+		margin-bottom: 20px;
+	}
+	.margintop20, p.margintop20, div.margintop20, li.margintop20, td.margintop20, th.margintop20, blockquote.margintop20, h1.margintop20, h2.margintop20, h3.margintop20, h4.margintop20, h5.margintop20 {
+		margin-top: 20px;
+	}
+
+	.marginleft30, p.marginleft30, div.marginleft30, li.marginleft30, td.marginleft30, th.marginleft30, blockquote.marginleft30, h1.marginleft30, h2.marginleft30, h3.marginleft30, h4.marginleft30, h5.marginleft30 {
+		margin-left: 30px;
+	}
+	.marginright30, p.marginright30, div.marginright30, li.marginright30, td.marginright30, th.marginright30, blockquote.marginright30, h1.marginright30, h2.marginright30, h3.marginright30, h4.marginright30, h5.marginright30 {
+		margin-right: 30px;
+	}
+	.marginbottom30, p.marginbottom30, div.marginbottom30, li.marginbottom30, td.marginbottom30, th.marginbottom30, blockquote.marginbottom30, h1.marginbottom30, h2.marginbottom30, h3.marginbottom30, h4.marginbottom30, h5.marginbottom30 {
+		margin-bottom: 30px;
+	}
+	.margintop30, p.margintop30, div.margintop30, li.margintop30, td.margintop30, th.margintop30, blockquote.margintop30, h1.margintop30, h2.margintop30, h3.margintop30, h4.margintop30, h5.margintop30 {
+		margin-top: 30px;
+	}
+
+	.marginleft40, p.marginleft40, div.marginleft40, li.marginleft40, td.marginleft40, th.marginleft40, blockquote.marginleft40, h1.marginleft40, h2.marginleft40, h3.marginleft40, h4.marginleft40, h5.marginleft40 {
+		margin-left: 40px;
+	}
+	.marginright40, p.marginright40, div.marginright40, li.marginright40, td.marginright40, th.marginright40, blockquote.marginright40, h1.marginright40, h2.marginright40, h3.marginright40, h4.marginright40, h5.marginright40 {
+		margin-right: 40px;
+	}
+	.marginbottom40, p.marginbottom40, div.marginbottom40, li.marginbottom40, td.marginbottom40, th.marginbottom40, blockquote.marginbottom40, h1.marginbottom40, h2.marginbottom40, h3.marginbottom40, h4.marginbottom40, h5.marginbottom40 {
+		margin-bottom: 40px;
+	}
+	.margintop40, p.margintop40, div.margintop40, li.margintop40, td.margintop40, th.margintop40, blockquote.margintop40, h1.margintop40, h2.margintop40, h3.margintop40, h4.margintop40, h5.margintop40 {
+		margin-top: 40px;
+	}
+
+	.marginleft50, p.marginleft50, div.marginleft50, li.marginleft50, td.marginleft50, th.marginleft50, blockquote.marginleft50, h1.marginleft50, h2.marginleft50, h3.marginleft50, h4.marginleft50, h5.marginleft50 {
+		margin-left: 50px;
+	}
+	.marginright50, p.marginright50, div.marginright50, li.marginright50, td.marginright50, th.marginright50, blockquote.marginright50, h1.marginright50, h2.marginright50, h3.marginright50, h4.marginright50, h5.marginright50 {
+		margin-right: 50px;
+	}
+	.marginbottom50, p.marginbottom50, div.marginbottom50, li.marginbottom50, td.marginbottom50, th.marginbottom50, blockquote.marginbottom50, h1.marginbottom50, h2.marginbottom50, h3.marginbottom50, h4.marginbottom50, h5.marginbottom50 {
+		margin-bottom: 50px;
+	}
+	.margintop50, p.margintop50, div.margintop50, li.margintop50, td.margintop50, th.margintop50, blockquote.margintop50, h1.margintop50, h2.margintop50, h3.margintop50, h4.margintop50, h5.margintop50 {
+		margin-top: 50px;
+	}
+
+	.marginleft60, p.marginleft60, div.marginleft60, li.marginleft60, td.marginleft60, th.marginleft60, blockquote.marginleft60, h1.marginleft60, h2.marginleft60, h3.marginleft60, h4.marginleft60, h5.marginleft60 {
+		margin-left: 60px;
+	}
+	.marginright60, p.marginright60, div.marginright60, li.marginright60, td.marginright60, th.marginright60, blockquote.marginright60, h1.marginright60, h2.marginright60, h3.marginright60, h4.marginright60, h5.marginright60 {
+		margin-right: 60px;
+	}
+	.marginbottom60, p.marginbottom60, div.marginbottom60, li.marginbottom60, td.marginbottom60, th.marginbottom60, blockquote.marginbottom60, h1.marginbottom60, h2.marginbottom60, h3.marginbottom60, h4.marginbottom60, h5.marginbottom60 {
+		margin-bottom: 60px;
+	}
+	.margintop60, p.margintop60, div.margintop60, li.margintop60, td.margintop60, th.margintop60, blockquote.margintop60, h1.margintop60, h2.margintop60, h3.margintop60, h4.margintop60, h5.margintop60 {
+		margin-top: 60px;
+	}
 }
 @media screen and (max-width: 600px) {
 	.fixmobilefontsize, .fixmobilefontsize td, .fixmobilefontsize th {
@@ -699,8 +842,17 @@
 	.portfolio :is(ol.midpara, ul.midpara) {
 		margin: 8px 0px 8px 15px;
 	}
-	blockquote {
-		margin: 16px 15px;
+	blockquote:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60) {
+		margin-top: 16px;
+	}
+	blockquote:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright6, .marginright8, .marginright10, .marginright12, .marginright15, .marginright16, .marginright20, .marginright30, .marginright40, .marginright50, .marginright60, .wide) {
+		margin-right: 15px;
+	}
+	blockquote:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60) {
+		margin-bottom: 16px;
+	}
+	blockquote:not(.noleftmargin, .marginleft2, .marginleft3, .marginleft4, .marginleft6, .marginleft8, .marginleft10, .marginleft12, .marginleft15, .marginleft16, .marginleft20, .marginleft30, .marginleft40, .marginleft50, .marginleft60) {
+		margin-left: 15px;
 	}
 	blockquote.wide {
 		margin: 16px 0px 16px 15px;
@@ -717,6 +869,149 @@
 	.mobileleftmargin-15 {
 		margin-left: -15px !important;
 	}
+
+	.marginleft4, p.marginleft4, div.marginleft4, li.marginleft4, td.marginleft4, th.marginleft4, blockquote.marginleft4, h1.marginleft4, h2.marginleft4, h3.marginleft4, h4.marginleft4, h5.marginleft4 {
+		margin-left: 4px;
+	}
+	.marginright4, p.marginright4, div.marginright4, li.marginright4, td.marginright4, th.marginright4, blockquote.marginright4, h1.marginright4, h2.marginright4, h3.marginright4, h4.marginright4, h5.marginright4 {
+		margin-right: 4px;
+	}
+	.margintop4, p.margintop4, div.margintop4, li.margintop4, td.margintop4, th.margintop4, blockquote.margintop4, h1.margintop4, h2.margintop4, h3.margintop4, h4.margintop4, h5.margintop4 {
+		margin-top: 4px;
+	}
+	.marginbottom4, p.marginbottom4, div.marginbottom4, li.marginbottom4, td.marginbottom4, th.marginbottom4, blockquote.marginbottom4, h1.marginbottom4, h2.marginbottom4, h3.marginbottom4, h4.marginbottom4, h5.marginbottom4 {
+		margin-bottom: 4px;
+	}
+
+	.marginleft8, p.marginleft8, div.marginleft8, li.marginleft8, td.marginleft8, th.marginleft8, blockquote.marginleft8, h1.marginleft8, h2.marginleft8, h3.marginleft8, h4.marginleft8, h5.marginleft8 {
+		margin-left: 8px;
+	}
+	.marginright8, p.marginright8, div.marginright8, li.marginright8, td.marginright8, th.marginright8, blockquote.marginright8, h1.marginright8, h2.marginright8, h3.marginright8, h4.marginright8, h5.marginright8 {
+		margin-right: 8px;
+	}
+	.marginbottom8, p.marginbottom8, div.marginbottom8, li.marginbottom8, td.marginbottom8, th.marginbottom8, blockquote.marginbottom8, h1.marginbottom8, h2.marginbottom8, h3.marginbottom8, h4.marginbottom8, h5.marginbottom8 {
+		margin-bottom: 8px;
+	}
+	.margintop8, p.margintop8, div.margintop8, li.margintop8, td.margintop8, th.margintop8, blockquote.margintop8, h1.margintop8, h2.margintop8, h3.margintop8, h4.margintop8, h5.margintop8 {
+		margin-top: 8px;
+	}
+
+	.marginleft10, p.marginleft10, div.marginleft10, li.marginleft10, td.marginleft10, th.marginleft10, blockquote.marginleft10, h1.marginleft10, h2.marginleft10, h3.marginleft10, h4.marginleft10, h5.marginleft10 {
+		margin-left: 10px;
+	}
+	.marginright10, p.marginright10, div.marginright10, li.marginright10, td.marginright10, th.marginright10, blockquote.marginright10, h1.marginright10, h2.marginright10, h3.marginright10, h4.marginright10, h5.marginright10 {
+		margin-right: 10px;
+	}
+	.marginbottom10, p.marginbottom10, div.marginbottom10, li.marginbottom10, td.marginbottom10, th.marginbottom10, blockquote.marginbottom10, h1.marginbottom10, h2.marginbottom10, h3.marginbottom10, h4.marginbottom10, h5.marginbottom10 {
+		margin-bottom: 10px;
+	}
+	.margintop10, p.margintop10, div.margintop10, li.margintop10, td.margintop10, th.margintop10, blockquote.margintop10, h1.margintop10, h2.margintop10, h3.margintop10, h4.margintop10, h5.margintop10 {
+		margin-top: 10px;
+	}
+
+	.marginleft12, p.marginleft12, div.marginleft12, li.marginleft12, td.marginleft12, th.marginleft12, blockquote.marginleft12, h1.marginleft12, h2.marginleft12, h3.marginleft12, h4.marginleft12, h5.marginleft12 {
+		margin-left: 12px;
+	}
+	.marginright12, p.marginright12, div.marginright12, li.marginright12, td.marginright12, th.marginright12, blockquote.marginright12, h1.marginright12, h2.marginright12, h3.marginright12, h4.marginright12, h5.marginright12 {
+		margin-right: 12px;
+	}
+	.marginbottom12, p.marginbottom12, div.marginbottom12, li.marginbottom12, td.marginbottom12, th.marginbottom12, blockquote.marginbottom12, h1.marginbottom12, h2.marginbottom12, h3.marginbottom12, h4.marginbottom12, h5.marginbottom12 {
+		margin-bottom: 12px;
+	}
+	.margintop12, p.margintop12, div.margintop12, li.margintop12, td.margintop12, th.margintop12, blockquote.margintop12, h1.margintop12, h2.margintop12, h3.margintop12, h4.margintop12, h5.margintop12 {
+		margin-top: 12px;
+	}
+
+	.marginleft15, p.marginleft15, div.marginleft15, li.marginleft15, td.marginleft15, th.marginleft15, blockquote.marginleft15, h1.marginleft15, h2.marginleft15, h3.marginleft15, h4.marginleft15, h5.marginleft15 {
+		margin-left: 15px;
+	}
+	.marginright15, p.marginright15, div.marginright15, li.marginright15, td.marginright15, th.marginright15, blockquote.marginright15, h1.marginright15, h2.marginright15, h3.marginright15, h4.marginright15, h5.marginright15 {
+		margin-right: 15px;
+	}
+	.marginbottom15, p.marginbottom15, div.marginbottom15, li.marginbottom15, td.marginbottom15, th.marginbottom15, blockquote.marginbottom15, h1.marginbottom15, h2.marginbottom15, h3.marginbottom15, h4.marginbottom15, h5.marginbottom15 {
+		margin-bottom: 15px;
+	}
+	.margintop15, p.margintop15, div.margintop15, li.margintop15, td.margintop15, th.margintop15, blockquote.margintop15, h1.margintop15, h2.margintop15, h3.margintop15, h4.margintop15, h5.margintop15 {
+		margin-top: 15px;
+	}
+
+	.marginleft16, p.marginleft16, div.marginleft16, li.marginleft16, td.marginleft16, th.marginleft16, blockquote.marginleft16, h1.marginleft16, h2.marginleft16, h3.marginleft16, h4.marginleft16, h5.marginleft16 {
+		margin-left: 16px;
+	}
+	.marginright16, p.marginright16, div.marginright16, li.marginright16, td.marginright16, th.marginright16, blockquote.marginright16, h1.marginright16, h2.marginright16, h3.marginright16, h4.marginright16, h5.marginright16 {
+		margin-right: 16px;
+	}
+	.marginbottom16, p.marginbottom16, div.marginbottom16, li.marginbottom16, td.marginbottom16, th.marginbottom16, blockquote.marginbottom16, h1.marginbottom16, h2.marginbottom16, h3.marginbottom16, h4.marginbottom16, h5.marginbottom16 {
+		margin-bottom: 16px;
+	}
+	.margintop16, p.margintop16, div.margintop16, li.margintop16, td.margintop16, th.margintop16, blockquote.margintop16, h1.margintop16, h2.margintop16, h3.margintop16, h4.margintop16, h5.margintop16 {
+		margin-top: 16px;
+	}
+
+	.marginleft20, p.marginleft20, div.marginleft20, li.marginleft20, td.marginleft20, th.marginleft20, blockquote.marginleft20, h1.marginleft20, h2.marginleft20, h3.marginleft20, h4.marginleft20, h5.marginleft20 {
+		margin-left: 20px;
+	}
+	.marginright20, p.marginright20, div.marginright20, li.marginright20, td.marginright20, th.marginright20, blockquote.marginright20, h1.marginright20, h2.marginright20, h3.marginright20, h4.marginright20, h5.marginright20 {
+		margin-right: 20px;
+	}
+	.marginbottom20, p.marginbottom20, div.marginbottom20, li.marginbottom20, td.marginbottom20, th.marginbottom20, blockquote.marginbottom20, h1.marginbottom20, h2.marginbottom20, h3.marginbottom20, h4.marginbottom20, h5.marginbottom20 {
+		margin-bottom: 20px;
+	}
+	.margintop20, p.margintop20, div.margintop20, li.margintop20, td.margintop20, th.margintop20, blockquote.margintop20, h1.margintop20, h2.margintop20, h3.margintop20, h4.margintop20, h5.margintop20 {
+		margin-top: 20px;
+	}
+
+	.marginleft30, p.marginleft30, div.marginleft30, li.marginleft30, td.marginleft30, th.marginleft30, blockquote.marginleft30, h1.marginleft30, h2.marginleft30, h3.marginleft30, h4.marginleft30, h5.marginleft30 {
+		margin-left: 30px;
+	}
+	.marginright30, p.marginright30, div.marginright30, li.marginright30, td.marginright30, th.marginright30, blockquote.marginright30, h1.marginright30, h2.marginright30, h3.marginright30, h4.marginright30, h5.marginright30 {
+		margin-right: 30px;
+	}
+	.marginbottom30, p.marginbottom30, div.marginbottom30, li.marginbottom30, td.marginbottom30, th.marginbottom30, blockquote.marginbottom30, h1.marginbottom30, h2.marginbottom30, h3.marginbottom30, h4.marginbottom30, h5.marginbottom30 {
+		margin-bottom: 30px;
+	}
+	.margintop30, p.margintop30, div.margintop30, li.margintop30, td.margintop30, th.margintop30, blockquote.margintop30, h1.margintop30, h2.margintop30, h3.margintop30, h4.margintop30, h5.margintop30 {
+		margin-top: 30px;
+	}
+
+	.marginleft40, p.marginleft40, div.marginleft40, li.marginleft40, td.marginleft40, th.marginleft40, blockquote.marginleft40, h1.marginleft40, h2.marginleft40, h3.marginleft40, h4.marginleft40, h5.marginleft40 {
+		margin-left: 40px;
+	}
+	.marginright40, p.marginright40, div.marginright40, li.marginright40, td.marginright40, th.marginright40, blockquote.marginright40, h1.marginright40, h2.marginright40, h3.marginright40, h4.marginright40, h5.marginright40 {
+		margin-right: 40px;
+	}
+	.marginbottom40, p.marginbottom40, div.marginbottom40, li.marginbottom40, td.marginbottom40, th.marginbottom40, blockquote.marginbottom40, h1.marginbottom40, h2.marginbottom40, h3.marginbottom40, h4.marginbottom40, h5.marginbottom40 {
+		margin-bottom: 40px;
+	}
+	.margintop40, p.margintop40, div.margintop40, li.margintop40, td.margintop40, th.margintop40, blockquote.margintop40, h1.margintop40, h2.margintop40, h3.margintop40, h4.margintop40, h5.margintop40 {
+		margin-top: 40px;
+	}
+
+	.marginleft50, p.marginleft50, div.marginleft50, li.marginleft50, td.marginleft50, th.marginleft50, blockquote.marginleft50, h1.marginleft50, h2.marginleft50, h3.marginleft50, h4.marginleft50, h5.marginleft50 {
+		margin-left: 50px;
+	}
+	.marginright50, p.marginright50, div.marginright50, li.marginright50, td.marginright50, th.marginright50, blockquote.marginright50, h1.marginright50, h2.marginright50, h3.marginright50, h4.marginright50, h5.marginright50 {
+		margin-right: 50px;
+	}
+	.marginbottom50, p.marginbottom50, div.marginbottom50, li.marginbottom50, td.marginbottom50, th.marginbottom50, blockquote.marginbottom50, h1.marginbottom50, h2.marginbottom50, h3.marginbottom50, h4.marginbottom50, h5.marginbottom50 {
+		margin-bottom: 50px;
+	}
+	.margintop50, p.margintop50, div.margintop50, li.margintop50, td.margintop50, th.margintop50, blockquote.margintop50, h1.margintop50, h2.margintop50, h3.margintop50, h4.margintop50, h5.margintop50 {
+		margin-top: 50px;
+	}
+
+	.marginleft60, p.marginleft60, div.marginleft60, li.marginleft60, td.marginleft60, th.marginleft60, blockquote.marginleft60, h1.marginleft60, h2.marginleft60, h3.marginleft60, h4.marginleft60, h5.marginleft60 {
+		margin-left: 60px;
+	}
+	.marginright60, p.marginright60, div.marginright60, li.marginright60, td.marginright60, th.marginright60, blockquote.marginright60, h1.marginright60, h2.marginright60, h3.marginright60, h4.marginright60, h5.marginright60 {
+		margin-right: 60px;
+	}
+	.marginbottom60, p.marginbottom60, div.marginbottom60, li.marginbottom60, td.marginbottom60, th.marginbottom60, blockquote.marginbottom60, h1.marginbottom60, h2.marginbottom60, h3.marginbottom60, h4.marginbottom60, h5.marginbottom60 {
+		margin-bottom: 60px;
+	}
+	.margintop60, p.margintop60, div.margintop60, li.margintop60, td.margintop60, th.margintop60, blockquote.margintop60, h1.margintop60, h2.margintop60, h3.margintop60, h4.margintop60, h5.margintop60 {
+		margin-top: 60px;
+	}
 }
 @media screen and (min-width: 600px) {
 	.nowrapdesktop {
@@ -730,11 +1025,20 @@
 	}
 }
 @media screen and (width > 600px), print {
-	blockquote {
-		margin: 16px 30px;
+	blockquote:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60) {
+		margin-top: 16px;
+	}
+	blockquote:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright6, .marginright8, .marginright10, .marginright12, .marginright15, .marginright16, .marginright20, .marginright30, .marginright40, .marginright50, .marginright60) {
+		margin-right: 30px;
+	}
+	blockquote:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60) {
+		margin-bottom: 16px;
+	}
+	blockquote:not(.noleftmargin, .marginleft2, .marginleft3, .marginleft4, .marginleft6, .marginleft8, .marginleft10, .marginleft12, .marginleft15, .marginleft16, .marginleft20, .marginleft30, .marginleft40, .marginleft50, .marginleft60) {
+		margin-left: 30px;
 	}
 	blockquote.wide {
-		margin: 16px 0px 16px 30px;
+		margin-right: 0px;
 	}
 	.mobileonly {
 		visibility: collapse !important;
@@ -2215,6 +2519,45 @@ li:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright
 .margintop3, p.margintop3, div.margintop3, li.margintop3, td.margintop3, th.margintop3, blockquote.margintop3, h1.margintop3, h2.margintop3, h3.margintop3, h4.margintop3, h5.margintop3
 {
 	margin-top: 3px;
+}
+
+p.ml4i, div.ml4i, li.ml4i, td.ml4i, th.ml4i, blockquote.ml4i, h1.ml4i, h2.ml4i, h3.ml4i, h4.ml4i, h5.ml4i {
+	margin-left: 4px !important;
+}
+p.mr4i, div.mr4i, li.mr4i, td.mr4i, th.mr4i, blockquote.mr4i, h1.mr4i, h2.mr4i, h3.mr4i, h4.mr4i, h5.mr4i {
+	margin-right: 4px !important;
+}
+p.mb4i, div.mb4i, li.mb4i, td.mb4i, th.mb4i, blockquote.mb4i, h1.mb4i, h2.mb4i, h3.mb4i, h4.mb4i, h5.mb4i {
+	margin-bottom: 4px !important;
+}
+p.mt4i, div.mt4i, li.mt4i, td.mt4i, th.mt4i, blockquote.mt4i, h1.mt4i, h2.mt4i, h3.mt4i, h4.mt4i, h5.mt4i {
+	margin-top: 4px !important;
+}
+
+p.ml6i, div.ml6i, li.ml6i, td.ml6i, th.ml6i, blockquote.ml6i, h1.ml6i, h2.ml6i, h3.ml6i, h4.ml6i, h5.ml6i {
+	margin-left: 6px !important;
+}
+p.mr6i, div.mr6i, li.mr6i, td.mr6i, th.mr6i, blockquote.mr6i, h1.mr6i, h2.mr6i, h3.mr6i, h4.mr6i, h5.mr6i {
+	margin-right: 6px !important;
+}
+p.mb6i, div.mb6i, li.mb6i, td.mb6i, th.mb6i, blockquote.mb6i, h1.mb6i, h2.mb6i, h3.mb6i, h4.mb6i, h5.mb6i {
+	margin-bottom: 6px !important;
+}
+p.mt6i, div.mt6i, li.mt6i, td.mt6i, th.mt6i, blockquote.mt6i, h1.mt6i, h2.mt6i, h3.mt6i, h4.mt6i, h5.mt6i {
+	margin-top: 6px !important;
+}
+
+p.ml8i, div.ml8i, li.ml8i, td.ml8i, th.ml8i, blockquote.ml8i, h1.ml8i, h2.ml8i, h3.ml8i, h4.ml8i, h5.ml8i {
+	margin-left: 8px !important;
+}
+p.mr8i, div.mr8i, li.mr8i, td.mr8i, th.mr8i, blockquote.mr8i, h1.mr8i, h2.mr8i, h3.mr8i, h4.mr8i, h5.mr8i {
+	margin-right: 8px !important;
+}
+p.mb8i, div.mb8i, li.mb8i, td.mb8i, th.mb8i, blockquote.mb8i, h1.mb8i, h2.mb8i, h3.mb8i, h4.mb8i, h5.mb8i {
+	margin-bottom: 8px !important;
+}
+p.mt8i, div.mt8i, li.mt8i, td.mt8i, th.mt8i, blockquote.mt8i, h1.mt8i, h2.mt8i, h3.mt8i, h4.mt8i, h5.mt8i {
+	margin-top: 8px !important;
 }
 
 :is(

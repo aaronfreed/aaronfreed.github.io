@@ -3215,6 +3215,9 @@ ol.upperlatin {
 ol.upperroman {
 	list-style-type: upper-roman !important;
 }
+ol.arabic {
+	list-style-type: decimal !important;
+}
 
 .smallcaps {
 	font-variant-caps: small-caps;

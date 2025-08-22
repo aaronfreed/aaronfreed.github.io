@@ -2145,9 +2145,9 @@ p:not(.noleftmargin, .marginleft2, .marginleft3, .marginleft4, .marginleft6, .ma
 li:not(.noleftmargin, .marginleft2, .marginleft3, .marginleft4, .marginleft6, .marginleft8, .marginleft10, .marginleft12, .marginleft15, .marginleft16, .marginleft20, .marginleft30, .marginleft40, .marginleft50, .marginleft60) {
 	margin-left: 0px;
 }
-div:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60),
-p:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60),
-li:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60) {
+div:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60, :last-of-type),
+p:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60, :last-of-type),
+li:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60, :last-of-type) {
 	margin-bottom: 8px;
 }
 div:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright6, .marginright8, .marginright10, .marginright12, .marginright15, .marginright16, .marginright20, .marginright30, .marginright40, .marginright50, .marginright60),
@@ -2155,10 +2155,10 @@ p:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright6
 li:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright6, .marginright8, .marginright10, .marginright12, .marginright15, .marginright16, .marginright20, .marginright30, .marginright40, .marginright50, .marginright60) {
 	margin-right: 0px;
 }
-:is(td, th, li) p:not(.margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60):first-of-type {
+:is(td, th, li) p:not(.margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60, .sectionbreak):first-of-type {
 	margin-top: 0px;
 }
-:is(td, th, li) p:not(.marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60):last-of-type {
+:is(td, th, li) p:not(.marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60, .sectionbreak):last-of-type {
 	margin-bottom: 0px;
 } 
 .upperpara {
@@ -2199,20 +2199,20 @@ li:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
 
-.marginbottom2, p.marginbottom2, div.marginbottom2, li.marginbottom2
+.marginbottom2, p.marginbottom2, div.marginbottom2, li.marginbottom2, td.marginbottom2, th.marginbottom2, blockquote.marginbottom2
 {
 	margin-bottom: 2px;
 }
-.margintop2, p.margintop2, div.margintop2, li.margintop2
+.margintop2, p.margintop2, div.margintop2, li.margintop2, td.margintop2, th.margintop2, blockquote.margintop2
 {
 	margin-top: 2px;
 }
 
-.marginbottom3, p.marginbottom3, div.marginbottom3, li.marginbottom3
+.marginbottom3, p.marginbottom3, div.marginbottom3, li.marginbottom3, td.marginbottom3, th.marginbottom3, blockquote.marginbottom3
 {
 	margin-bottom: 3px;
 }
-.margintop3, p.margintop3, div.margintop3, li.margintop3
+.margintop3, p.margintop3, div.margintop3, li.margintop3, td.margintop3, th.margintop3, blockquote.margintop3
 {
 	margin-top: 3px;
 }
@@ -2226,7 +2226,10 @@ li:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright
 	.margintop4,
 	p.margintop4,
 	div.margintop4,
-	li.margintop4
+	li.margintop4,
+	td.margintop4,
+	th.margintop4,
+	blockquote.margintop4
 ) {
 	margin-top: 4px;
 }
@@ -2239,34 +2242,50 @@ li:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright
 	.marginbottom4,
 	p.marginbottom4,
 	div.marginbottom4,
-	li.marginbottom4
+	li.marginbottom4,
+	td.marginbottom4,
+	th.marginbottom4,
+	blockquote.marginbottom4
 ) {
 	margin-bottom: 4px;
 }
 
-.marginleft8, p.marginleft8, div.marginleft8, li.marginleft8 {
+.marginleft8, p.marginleft8, div.marginleft8, li.marginleft8, td.marginleft8, th.marginleft8, blockquote.marginleft8 {
 	margin-left: 8px;
 }
-.marginright8, p.marginright8, div.marginright8, li.marginright8 {
+.marginright8, p.marginright8, div.marginright8, li.marginright8, td.marginright8, th.marginright8, blockquote.marginright8 {
 	margin-right: 8px;
 }
-.marginbottom8, p.marginbottom8, div.marginbottom8, li.marginbottom8 {
+.marginbottom8, p.marginbottom8, div.marginbottom8, li.marginbottom8, td.marginbottom8, th.marginbottom8, blockquote.marginbottom8 {
 	margin-bottom: 8px;
 }
-.margintop8, p.margintop8, div.margintop8, li.margintop8 {
+.margintop8, p.margintop8, div.margintop8, li.margintop8, td.margintop8, th.margintop8, blockquote.margintop8 {
 	margin-top: 8px;
 }
 
-.marginleft12, p.marginleft12, div.marginleft12, li.marginleft12 {
+.marginleft10, p.marginleft10, div.marginleft10, li.marginleft10, td.marginleft10, th.marginleft10, blockquote.marginleft10 {
+	margin-left: 10px;
+}
+.marginright10, p.marginright10, div.marginright10, li.marginright10, td.marginright10, th.marginright10, blockquote.marginright10 {
+	margin-right: 10px;
+}
+.marginbottom10, p.marginbottom10, div.marginbottom10, li.marginbottom10, td.marginbottom10, th.marginbottom10, blockquote.marginbottom10 {
+	margin-bottom: 10px;
+}
+.margintop10, p.margintop10, div.margintop10, li.margintop10, td.margintop10, th.margintop10, blockquote.margintop10 {
+	margin-top: 10px;
+}
+
+.marginleft12, p.marginleft12, div.marginleft12, li.marginleft12, td.marginleft12, th.marginleft12, blockquote.marginleft12 {
 	margin-left: 12px;
 }
-.marginright12, p.marginright12, div.marginright12, li.marginright12 {
+.marginright12, p.marginright12, div.marginright12, li.marginright12, td.marginright12, th.marginright12, blockquote.marginright12 {
 	margin-right: 12px;
 }
-.marginbottom12, p.marginbottom12, div.marginbottom12, li.marginbottom12 {
+.marginbottom12, p.marginbottom12, div.marginbottom12, li.marginbottom12, td.marginbottom12, th.marginbottom12, blockquote.marginbottom12 {
 	margin-bottom: 12px;
 }
-.margintop12, p.margintop12, div.margintop12, li.margintop12 {
+.margintop12, p.margintop12, div.margintop12, li.margintop12, td.margintop12, th.margintop12, blockquote.margintop12 {
 	margin-top: 12px;
 }
 
@@ -2870,7 +2889,7 @@ ol.upperroman {
 }
 
 /* section breaks */
-.sectionbreak {
+.sectionbreak, p.sectionbreak, div.sectionbreak {
 	margin: 16px 0px;
 	font-size: .8125rem;
 	text-align: center;

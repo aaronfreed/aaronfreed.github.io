@@ -2800,11 +2800,13 @@ ol {
 	padding: 0px;
 }
 
-:is(.music, .soundtracks) li {
+:is(.music, .soundtracks) li:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60) {
 	margin-top: 6px;
+}
+:is(.music, .soundtracks) li:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60) {
 	margin-bottom: 6px;
 }
-:is(.music, .soundtracks) :is(.midpara ul, .midpara ol, ul.midpara, ol.midpara) {
+:is(.music, .soundtracks) :is(.midpara ul:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60), .midpara ol:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60), ul.midpara, ol.midpara) {
 	margin-top: 6px;
 }
 

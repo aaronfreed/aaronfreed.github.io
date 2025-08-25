@@ -885,7 +885,7 @@
 	}
 	blockquote:not(
 		.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60,
-		.mobiletopmargin0, .mobiletopmargin2, .mobiletopmargin3, .mobiletopmargin4, .mobiletopmargin6, .mobiletopmargin8, .mobiletopmargin10, .mobiletopmargin12, .mobiletopmargin15, .mobiletopmargin16, .mobiletopmargin20, .mobiletopmargin30, .mobiletopmargin40, .mobiletopmargin50, .mobiletopmargin60
+		.mobiletopmargin0, .mobiletopmargin2, .mobiletopmargin3, .mobiletopmargin4, .mobiletopmargin6, .mobiletopmargin8, .mobiletopmargin10, .mobiletopmargin12, .mobiletopmargin15, .mobiletopmargin16, .mobiletopmargin20, .mobiletopmargin30, .mobiletopmargin40, .mobiletopmargin50, .mobiletopmargin60, .speaker
 	) {
 		margin-top: 16px;
 	}
@@ -903,7 +903,7 @@
 	}
 	blockquote:not(
 		.noleftmargin, .marginleft2, .marginleft3, .marginleft4, .marginleft6, .marginleft8, .marginleft10, .marginleft12, .marginleft15, .marginleft16, .marginleft20, .marginleft30, .marginleft40, .marginleft50, .marginleft60,
-		.mobileleftmargin0, .mobileleftmargin2, .mobileleftmargin3, .mobileleftmargin4, .mobileleftmargin6, .mobileleftmargin8, .mobileleftmargin10, .mobileleftmargin12, .mobileleftmargin15, .mobileleftmargin16, .mobileleftmargin20, .mobileleftmargin30, .mobileleftmargin40, .mobileleftmargin50, .mobileleftmargin60
+		.mobileleftmargin0, .mobileleftmargin2, .mobileleftmargin3, .mobileleftmargin4, .mobileleftmargin6, .mobileleftmargin8, .mobileleftmargin10, .mobileleftmargin12, .mobileleftmargin15, .mobileleftmargin16, .mobileleftmargin20, .mobileleftmargin30, .mobileleftmargin40, .mobileleftmargin50, .mobileleftmargin60, .speaker
 	) {
 		margin-left: 15px;
 	}
@@ -1082,7 +1082,7 @@
 	}
 }
 @media screen and (width > 600px), print {
-	blockquote:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60) {
+	blockquote:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60, .speaker) {
 		margin-top: 16px;
 	}
 	blockquote:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright6, .marginright8, .marginright10, .marginright12, .marginright15, .marginright16, .marginright20, .marginright30, .marginright40, .marginright50, .marginright60) {
@@ -1091,7 +1091,7 @@
 	blockquote:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60) {
 		margin-bottom: 16px;
 	}
-	blockquote:not(.noleftmargin, .marginleft2, .marginleft3, .marginleft4, .marginleft6, .marginleft8, .marginleft10, .marginleft12, .marginleft15, .marginleft16, .marginleft20, .marginleft30, .marginleft40, .marginleft50, .marginleft60) {
+	blockquote:not(.noleftmargin, .marginleft2, .marginleft3, .marginleft4, .marginleft6, .marginleft8, .marginleft10, .marginleft12, .marginleft15, .marginleft16, .marginleft20, .marginleft30, .marginleft40, .marginleft50, .marginleft60, .speaker) {
 		margin-left: 30px;
 	}
 	blockquote.wide {
@@ -3287,8 +3287,14 @@ ol.arabic {
 .petitecaps, td.petitecaps, th.petitecaps, li.petitecaps {
 	font-variant-caps: petite-caps;
 }
+.normalcaps {
+	font-variant-caps: normal;
+}
 .allcaps {
 	text-transform: uppercase;
+}
+.lowercase {
+	text-transform: lowercase;
 }
 
 /* right-align Istoria's TOC numbers */
@@ -4416,6 +4422,9 @@ td.translation-romanized, th.translation-romanized
 	font-size: .9375rem;
 	color: var(--heading-color) !important;
 }
+blockquote.speaker {
+	margin-top: 6px;
+}
 .hathortimeline .speaker {
 	font-style: italic;
 }
@@ -4505,6 +4514,9 @@ p.interpolation.songwriter, p.interpolation-songwriters {
 }
 .fraction {
 	font-variant-numeric: tabular-nums oldstyle-nums diagonal-fractions;
+}
+.standardnums {
+	font-variant-numeric: initial;
 }
 
 :is(.selectedworks, .metm) .game {

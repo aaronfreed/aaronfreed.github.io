@@ -4539,6 +4539,11 @@ p.interpolation.songwriter, p.interpolation-songwriters {
 	margin-left: 30px;
 	margin-right: 0px;
 }
+:is(.selectedworks, .metm) :is(p.translation.interpolation, blockquote.translation.interpolation) {
+	margin-top: 4px;
+	margin-left: 45px;
+	margin-right: 0px;
+}
 :is(.selectedworks, .metm) span.translation {
 	color: var(--heading-color);
 	font-weight: var(--weight0);
@@ -4550,6 +4555,23 @@ p.interpolation.songwriter, p.interpolation-songwriters {
 	margin-right: 0px;
 	margin-top: 4px;
 	margin-left: 15px;
+}
+:is(.selectedworks, .metm) p.interpolation:has( ~ p.songwriters) {
+	margin-bottom: 0px;
+}
+:is(.selectedworks, .metm) p.interpolation ~ p.songwriters {
+	margin-top: 0px;
+	margin-left: 30px;
+}
+p.interpolation.margintop8 {
+	margin-top: 8px;
+}
+p.interpolation.marginbottom8 {
+	margin-bottom: 8px;
+}
+.compositions2023-2024 ol.contents ul.interpolation {
+	margin-right: 0px;
+	margin-left: 45px;
 }
 :is(.selectedworks, .metm) :is(ul.albumlist, .albumlist li) {
 	color: var(--heading-color);

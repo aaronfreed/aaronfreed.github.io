@@ -397,6 +397,10 @@
 		.screen800 {
 			width: 800px;
 		}
+		td,
+		th {
+			padding: 4px 12px;
+		}
 	}
 
 	.marginleft4, p.marginleft4, div.marginleft4, li.marginleft4, td.marginleft4, th.marginleft4, blockquote.marginleft4, h1.marginleft4, h2.marginleft4, h3.marginleft4, h4.marginleft4, h5.marginleft4 {
@@ -1179,8 +1183,13 @@
 	:root {
 		--page-width: min(800px, calc(100vw - 16px)) !important;
 	}
-	.printpadding8 td, .printpadding8 th,
-	.printpadding8.curved :is(
+	table:not(.printpadding2, .printpadding4, .printpadding6, .printpadding8, .sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad16, .sidepad20, .sidepad30, .sidepad40, .sidepad50, .sidepad60) 
+	:is(td, th):not(.printpadding2, .printpadding4, .printpadding6, .printpadding8, .sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad16, .sidepad20, .sidepad30, .sidepad40, .sidepad50, .sidepad60)
+	{
+		padding: 4px 12px;
+	}
+	table.printpadding8 td, table.printpadding8 th,
+	table.printpadding8.curved :is(
 		td:first-child, th:first-child,
 		td:last-child, th:last-child
 	) {
@@ -1219,6 +1228,7 @@
 	:is(td:last-child, th:last-child) {
 		padding-right: 0px;
 	}
+	.forceprintpadding8 :is(td, th), td.forceprintpadding8, th.forceprintpadding8 {padding-left: 8px !important; padding-right: 8px !important;}
 	.noprint
 	{
 		visibility: collapse !important;
@@ -3376,10 +3386,6 @@ table.hyphenate > :is(
 	tr > th
 ) {
 	hyphens: auto;
-}
-td,
-th {
-	padding: 4px 12px;
 }
 .music :where(td, th) {
 	vertical-align: top;

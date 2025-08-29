@@ -336,15 +336,17 @@ window.onload = function () {makeAllSortable();};*/
 				</li>
 				<li><a class="noprintlink" href="#carnaticnumberedmelakarta">The carnatic numbered mēḷakartā</a>
 					<ol class="mobileleftmargin15">
-						<li><a class="noprintlink" href="#melakartatable">Table: The carnatic numbered mēḷakartā</a></li>
+						<li><a class="noprintlink" href="#melakartatable">The carnatic numbered mēḷakartā</a></li>
 					</ol>
 				</li>
 				<li><a class="noprintlink" href="#scalecountsbysize">Scale counts in 12-TET by scale size</a>
 					<ol class="mobileleftmargin15">
 						<li><a class="noprintlink" href="#12tetscaledistribution">12-TET mode counts</a></li>
+						<li><a class="noprintlink" href="#tableoflimitedtransposition">Modes of limited transposition</a></li>
+						<li><a class="noprintlink" href="#discretescalecounts">12-TET discrete scales</a></li>
+						<li><a class="noprintlink" href="#allmodes">All 2,048 modes of all 205 scales in 12-TET</a></li>
 					</ol>
 				</li>
-
 				<li><a class="noprintlink" href="#hewhofightsmonsters">Yes, but, why?</a></li>
 				<li><a class="noprintlink" href="#endnotes">Endnotes</a>
 					<ol class="mobileleftmargin15">
@@ -6411,7 +6413,7 @@ window.onload = function () {makeAllSortable();};*/
 						<li>Let <em class="accent weight3">f</em> be an integer factor of <em class="accent weight3">t</em>.</li>
 						<li>Therefore, <strong><em class="accent weight3">t</em> / <em class="accent weight3">f</em></strong> <em>must</em> yield an integer <em class="accent weight3">n</em>.</li>
 						<li>As a result, a scale <em>must</em> exist in <em class="accent weight3">t</em>-TET with:
-							<ol class="loweralpha mobileleftmargin15>
+							<ol class="loweralpha mobileleftmargin15">
 								<li>intervals uniformly spaced <em class="accent weight3">n</em> notes apart</li>
 								<li><em class="accent weight3">f</em> repetitions per octave</li>
 								<li><em class="accent weight3">n</em> discrete transpositions</li>
@@ -7789,9 +7791,63 @@ window.onload = function () {makeAllSortable();};*/
 						<tr><td>6</td><td>7</td><td class="leftborder">462</td></tr>
 					</tbody>
 					<tfoot class="centred weight2 toc-counter petitecaps">
-						<tr><td colspan="2" class="topborder">Total</td><td class="right leftborder topborder">2,048</td></tr>
+						<tr><th colspan="2" class="topborder" style="border-radius: 0px; border-bottom: none;">Total</th><th class="right leftborder topborder" style="border-radius: 0px; border-bottom: none;">2,048</th></tr>
 					</tfoot>
 				</table>
+
+				<p class="light">We can’t simply divide each of those scale counts by the number of notes in the scale, because the following scales are modes of limited transposition. (The &ldquo;&minus;&rdquo; column denotes the number of missing modes.)</p>
+
+				<table id="tableoflimitedtransposition" class="tabular-oldstyle fixheight">
+					<thead>
+						<tr><th colspan="3" class="weight5 toc-counter">Modes of limited transposition</th></tr>
+						<tr class="accent weight2 petitecaps"><th>#</th><th>Intervals</th><th>&minus;</th></tr>
+					</thead>
+					<tbody class="right light">
+						<tr><td class="lightrightborder">12</td><td class="centred lightrightborder">111111111111</td><td>11</td></tr>
+						<tr><td class="lightrightborder">10</td><td class="centred lightrightborder">1111211112<br />1112111121<br />1121111211<br />1211112111<br />2111121111</td><td>5</td></tr>
+						<tr><td class="lightrightborder">9</td><td class="centred lightrightborder">112112112<br />121121121<br />211211211</td><td>6</td></tr>
+
+						<tr><td rowspan="3" class="lightrightborder">8</td><td class="centred lightrightborder">12121212<br />21212121</td><td>6</td></tr>
+						<tr><td class="centred lightrightborder">11131113<br />11311131<br />13111311<br />31113111</td><td>4</td></tr>
+						<tr><td class="centred lightrightborder">11221122<br />12211221<br />22112211<br />21122112</td><td>4</td></tr>
+
+						<tr><td rowspan="5" class="lightrightborder">6</td><td class="centred lightrightborder">222222</td><td>5</td></tr>
+						<tr><td class="centred lightrightborder">131313<br />313131</td><td>4</td></tr>
+						<tr><td class="centred lightrightborder">114114<br />141141<br />411411</td><td>3</td></tr>
+						<tr><td class="centred lightrightborder">123123<br />231231<br />312312</td><td>3</td></tr>
+						<tr><td class="centred lightrightborder">132132<br />213213<br />321321</td><td>3</td></tr>
+
+						<tr><td class="lightrightborder" rowspan="3">4</td><td class="centred lightrightborder">3333</td><td>3</td></tr>
+						<tr><td class="centred lightrightborder">1515<br />5151</td><td>2</td></tr>
+						<tr><td class="centred lightrightborder">2424<br />4242</td><td>2</td></tr>
+
+						<tr><td class="lightrightborder">3</td><td class="centred lightrightborder">444</td><td>2</td></tr>
+
+						<tr><td class="lightrightborder">2</td><td class="centred lightrightborder">66</td><td>1</td></tr>
+					</tbody>
+				</table>
+
+				<p class="light">Thus, with modes excluded, the discrete scales in 12-tone equal temperament break down as follows:</p>
+
+				<table id="discretescalecounts" class="tabular-oldstyle fixheight">
+					<thead>
+						<tr><th class="weight5 toc-counter" colspan="5">12-TET discrete scales</th></tr>
+						<tr class="weight2 accent petitecaps"><th colspan="4">Notes</th><th class="leftborder">Scales</th></tr>
+					</thead>
+					<tbody class="centred">
+						<tr><td>1</td><td colspan="2">11</td><td>12</td><td class="leftborder">1</td></tr>
+						<tr><td colspan="2">2</td><td colspan="2">10</td><td class="leftborder">6</td></tr>
+						<tr><td colspan="2">3</td><td colspan="2">9</td><td class="leftborder">19</td></tr>
+						<tr><td colspan="2">4</td><td colspan="2">8</td><td class="leftborder">43</td></tr>
+						<tr><td colspan="2">5</td><td colspan="2">7</td><td class="leftborder">66</td></tr>
+						<tr><td colspan="4">6</td><td class="leftborder">80</td></tr>
+					</tbody>
+					<tfoot class="centred weight2 toc-counter petitecaps">
+						<tr><th colspan="4" class="topborder" style="border-radius: 0px; border-bottom: none;">Total</th><th class="topborder leftborder" style="border-radius: 0px; border-bottom: none;">205</th></tr>
+					</tfoot>
+				</table>
+
+				
 
 				<!-- <table id="462scales" class="curved centred normal tabular-oldstyle sidepad6 fixheight nowrap">
 					<thead class="fixheight">
@@ -8262,8 +8318,14 @@ window.onload = function () {makeAllSortable();};*/
 						<tr><td class="weight4 right rightborder">462</td></td><td class="weight4"><a href="https://ianring.com/musictheory/scales/4033" target="_blank" rel="noopener noreferrer" class="noprintlink">6111111</a></td><td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="orange weight8">D𝄪𝄪</td>                    <td class="orange weight7">E𝄪♯</td>                    <td class="orange weight7">F𝄪♯</td>                    <td class="orange weight6">G𝄪</td>                     <td class="orange weight5">A♯</td>                     <td class="weight4">B<span class="hidden">♮</span></td><td class="centred leftborder leftpad8 rightpad4 orange weight7">3</td> <td class="centred leftpad4 rightpad4 azure weight1">½</td>  <td class="centred leftpad4 rightpad4 azure weight1">½</td>  <td class="centred leftpad4 rightpad4 azure weight1">½</td>  <td class="centred leftpad4 rightpad4 azure weight1">½</td>  <td class="centred leftpad4 rightpad4 azure weight1">½</td>  <td class="centred leftpad4 rightpad4 azure weight1">½</td>  </tr>
 					</tbody>
 				</table> -->
+				
+				<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+				
+				<h2 class="centred" id="allmodes">All 2,048 modes of all 205 scales in 12-TET</h2>
+				
+				<p class="light">I’ve listed all 2,048 modes of all 205 scales in 12-tone equal temperament. Due to the sheer quantity of data, I’ve put this on <a href="https://aaronfreed.github.io/12tetscales.html" target="_blank" rel="noopener noreferrer">its own page</a>. (As of 2025-08-29, the scale list is approximately 2,200 lines, 34,000 words, and 135,000 characters; this book is approximately 3,250 lines, 46,000 words, and 245,000 characters. This adds up to approximately 5,450 lines, 80,000 words, and 380,000 characters between both.)</p>
 
-			<p class="light">I have catalogued every scale in 12-tone equal temperament on a <a href="https://aaronfreed.github.io/12tetscales.html" target="_blank" rel="noopener noreferrer">separate page</a>.</p>
+				<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 			</main>
 
 			<footer>

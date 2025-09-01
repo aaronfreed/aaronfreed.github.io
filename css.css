@@ -1323,9 +1323,15 @@
 
 	spoiler.chronicles::before {
 		content: "(Chronicles spoiler:";
+		font-variant-caps: petite-caps;
 	}
 	spoiler.rubicon::before {
 		content: "(Rubicon spoiler:";
+		font-variant-caps: petite-caps;
+	}
+	spoiler.doctorwho::before {
+		content: "(Doctor Who spoiler:"; 
+		font-variant-caps: petite-caps;
 	}
 	spoiler::after {
 		content: ")"
@@ -1877,15 +1883,17 @@
 	spoiler,
 	spoiler .toc-counter,
 	spoiler .accent,
+	spoiler .workcredit,
 	spoiler .toc-counter-faint,
-	spoiler .accent-faint {
+	spoiler .accent-faint,
+	spoiler .artistcredit {
 		color: transparent;
 	}
 	spoiler:hover,
 	spoiler:focus {
 		color: inherit;
 	}
-	spoiler:hover .toc-counter {
+	spoiler:hover .toc-counter, spoiler:hover .workcredit, spoiler:hover .artistcredit {
 		color: var(--toc-counter);
 	}
 	spoiler:hover .toc-counter-faint {
@@ -1902,6 +1910,9 @@
 	}
 	spoiler.rubicon::before {
 		content: "Rubicon spoiler; hover/select to view";
+	}
+	spoiler.doctorwho::before {
+		content: "Doctor Who spoiler; hover/select to view";
 	}
 	spoiler::before {
 		color: var(--link);
@@ -3160,6 +3171,9 @@ li:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright
 .hathortimeline blockquote {
 	color: var(--toc-counter);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
+}
+.hathortimeline .episodecredit strong, .hathortimeline .episodecredit :is(a:link, a:visited, a:hover, a:active) {
+	font-weight: var(--weight3);
 }
 
 .marginbottom2, p.marginbottom2, div.marginbottom2, li.marginbottom2, td.marginbottom2, th.marginbottom2, blockquote.marginbottom2, h1.marginbottom2, h2.marginbottom2, h3.marginbottom2, h4.marginbottom2, h5.marginbottom2
@@ -4774,11 +4788,11 @@ p.interpolation.songwriter, p.interpolation-songwriters {
 	color: var(--toc-counter);
 	font-variant-caps: petite-caps;
 }
-.songcredit {
+.songcredit, .episodecredit, .movementcredit {
 	font-weight: var(--weight0);
 	color: var(--heading-color);
 }
-.albumcredit {
+.albumcredit, .workcredit {
 	font-weight: var(--weight2);
 	color: var(--toc-counter);
 }
@@ -4807,14 +4821,20 @@ p.interpolation.songwriter, p.interpolation-songwriters {
 	color: var(--heading-color);
 }
 .songcredit strong,
+.episodecredit strong,
 .weight0 .songcredit strong,
-.compositions2023-2024 span.songcredit strong
+.weight0 .episodecredit strong,
+.compositions2023-2024 span.songcredit strong,
+.compositions2023-2024 span.episodecredit strong,
 .contents .song strong,
 .selectedworks .compositions2023-2024 .song strong,
-.songcredit :is(a:link, a:visited, a:hover, a:active) {
+.songcredit :is(a:link, a:visited, a:hover, a:active),
+.episodecredit :is(a:link, a:visited, a:hover, a:active) {
 	font-weight: var(--weight4);
 }
 .contents .movement strong,
+.movementcredit strong,
+.movementcredit :is(a:link, a:visited, a:hover, a:active),
 .selectedworks .compositions2023-2024 .movement > strong {
 	font-weight: var(--weight3);
 }

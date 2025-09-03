@@ -1084,6 +1084,11 @@
 	.portfolio :is(ol.midpara, ul.midpara) {
 		margin: 8px 0px 8px 30px;
 	}
+	.mobileprintonly
+	{
+		visibility: collapse !important;
+		display: none !important;
+	}
 }
 @media screen and (width > 600px), print {
 	blockquote:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60, .speaker) {

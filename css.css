@@ -577,6 +577,7 @@
 	}
 	.mobilescroll {
 		overflow: auto;
+		contain: inline-size;
 	}
 	.mobileleftmargin0 {
 		margin-left: 0px;
@@ -3134,10 +3135,10 @@ p:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright6
 li:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright6, .marginright8, .marginright10, .marginright12, .marginright15, .marginright16, .marginright20, .marginright30, .marginright40, .marginright50, .marginright60) {
 	margin-right: 0px;
 }
-:is(td, th, li) p:not(.margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60, .sectionbreak):first-of-type {
+:is(td, th, li) p:first-of-type:not(.margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60, .sectionbreak) {
 	margin-top: 0px;
 }
-:is(td, th, li) p:not(.marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60, .sectionbreak):last-of-type {
+:is(td, th, li) p:last-of-type:not(.marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60, .sectionbreak) {
 	margin-bottom: 0px;
 } 
 .upperpara {
@@ -3994,6 +3995,7 @@ table.hyphenate > :is(
 	tr > th
 ) {
 	hyphens: auto;
+	hyphenate-limit-chars: 5 2 2;
 }
 .music :where(td, th) {
 	vertical-align: top;
@@ -5442,8 +5444,8 @@ td.timesignature {
 .compositions2023-2024 ol.tracklist ol li:not(:last-child) {
 	margin-bottom: 4px;
 }
-.compositions2023-2024 ol.contents p:not(.sectionbreak),
-.compositions2023-2024 ol.contents blockquote:not(.sectionbreak) {
+.compositions2023-2024 ol.contents p:not(.sectionbreak, .songentry, .movemententry),
+.compositions2023-2024 ol.contents blockquote:not(.sectionbreak, .songentry, .movemententry) {
 	font-size: initial;
 }
 .compositions2023-2024 .songtitle {
@@ -5494,7 +5496,7 @@ td.timesignature {
 	text-decoration-thickness: 1.5px;
 }
 .compositions2023-2024 :is(.fixheight, p.fixheight, li.fixheight, td.fixheight) {
-	line-height: 21px !important;
+	line-height: 1.3125rem !important;
 }
 
 .translucent-decoration {
@@ -5515,6 +5517,9 @@ a.songlink.weight3:hover
 	text-decoration-color: color-mix(in sRGB, currentcolor 77.77777%, transparent);
 	text-decoration-skip-ink: all;
 }
+li.songentry::before, li.songentry > p, .songentry { font-size: 1.25rem; }
+li.movemententry::before, li.movemententry > p, .movemententry { font-size: 1.125rem; }
+
 
 ol.toc4 li :is(a.weight0:link, a.weight0:visited)
 {

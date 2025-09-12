@@ -179,6 +179,8 @@ window.onload = function () {makeAllSortable();};*/
 								<li><a class="noprintlink" href="#alternatingheptamode">Alternating heptamode &amp; alternating heptamode inverse</a></li>
 								<li><a class="noprintlink" href="#alternatingheptamodesharps">Alternating heptamode &amp; alternating heptamode inverse (revisited)</a></li>
 								<li><a class="noprintlink" href="#alternatingheptamodedetailed">Alternating heptamode: A closer examination</a></li>
+								<li><a class="noprintlink" href="#neapolitanmajor">Analyzing the Neapolitan “major” scale</a></li>
+								<li><a class="noprintlink" href="#neapolitanmajortransformations">Transforming the Neapolitan “major” scale</a></li>
 								<li><a class="noprintlink" href="#notedistributions">Note distributions across modes</a></li>
 							</ol>
 						</li>
@@ -284,9 +286,14 @@ window.onload = function () {makeAllSortable();};*/
 								<li><a class="noprintlink" href="#chromaticscalepermutations">Permuatations of the chromatic scale</a></li>
 							</ol>
 						</li>
-						<li><a class="noprintlink" href="12tetmodesoflimitedtransposition">All modes of limited transposition in 12-TET</a>
+						<li><a class="noprintlink" href="#12tetmodesoflimitedtransposition">All modes of limited transposition in 12-TET</a>
 							<ol class="mobileleftmargin15">
 								<li><a class="noprintlink" href="#moltsataglance">MoLTs at a glance</a></li>
+							</ol>
+						</li>
+						<li><a class="noprintlink" href="#limitedtransformations">Single-note transformations of modes of limited transposition</a>
+							<ol class="mobileleftmargin15">
+								<li><a class="noprintlink" href="#notedistributionsagain">Note distributions across modes (…again‽ But that trick never works!)</a></li>
 							</ol>
 						</li>
 						<li><a class="noprintlink" href="#microtonalcorollaries">Microtonal corollaries</a>
@@ -2814,7 +2821,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light">Why do most rows list two interval sizes? Moving a note up by seven semitones equates to moving it down by five. Thus, in 12-TET, the only truncations of the chromatic scale for which this method of scale rotation will work contain 1, 5, 7, and 11 notes, and their rotations will respectively move single notes by a semitone, a perfect fourth, a perfect fourth, and a semitone.
 
-			<p class="light">Thus, the Ionian and heptatonic chromatic scales are the only heptatonic scales in 12-TET with single-note rotations that cycle through the entire chromatic scale. I’ve only found two other heptatonic scales in 12-TET that have single-note rotations of any sort. They respectively have the following interval spacing:</p>
+			<p class="light">Thus, the Ionian and heptatonic chromatic scales are the only heptatonic scales in 12-TET with single-note rotations that cycle through the entire chromatic scale. I’ve only found three other heptatonic scales in 12-TET that have single-note rotations of any sort. Two respectively have the following interval spacing:</p>
 
 			<blockquote class="light norightmargin"><a class="noprintlink" href="https://ianring.com/musictheory/scales/731" target="_blank" rel="noopener noreferrer">Alternating heptamode</a>: <span class="orange weight1">semitone</span>, <span class="weight2">whole tone</span>, <span class="orange weight1">semitone</span>, <span class="weight2">whole tone</span>, <span class="orange weight1">semitone</span>, <span class="weight2">whole tone</span>, <span class="accent weight5">minor third</span></blockquote>
 
@@ -2945,6 +2952,283 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light">I will leave discerning why as an exercise for the reader.</p>
 
+			<p class="light">One other scale has a similar transformation, and it’s just as confusing to track. It has the misleading name “Neapolitan major”, despite not being a major scale. And to make matters worse, “Lydian minor” isn’t a minor scale! I think the people that named these scales were trolling us. (The reasoning behind “Neapolitan major” is that a Neapolitan chord starts on a scale’s flat second degree, so its Neapolitan chord is major. But it’s still a terrible scale name.) The scale transformation is as follows:</p>
+
+			<div class="mobilescroll"><table id="neapolitanmajor" class="normal tabular-oldstyle sidepad6 fixheight nowrap">
+				<thead>
+					<tr class="accent weight4"><th colspan="16">Analyzing the Neapolitan “major” scale</th></tr>
+					<tr class="toc-counter weight2 petitecaps"><th colspan="2">Scale</th>
+						<th class="leftborder leftpad15">1</th>                              <th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th class="rightpad15">7</th>
+						<th class="leftborder leftpad15" colspan="7">Intervals</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1397" target="_blank" rel="noopener noreferrer">Locrian major</a></td>
+						<td class="leftborder leftpad15 accent weight7">C♯</td><td class="accent weight7">D♯</td><td class="accent weight7">E♯</td><td class="accent weight7">F♯</td><td class="weight5">G<span class="hidden">♮</span></td><td class="weight5">A<span class="hidden">♮</span></td><td class="weight5">B<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1373" target="_blank" rel="noopener noreferrer">Super-Locrian ♭2</a></td>
+						<td class="leftborder leftpad15 accent weight7">C♯</td><td class="accent weight7">D♯</td><td class="weight5">E<span class="hidden">♮</span></td><td class="weight5">F<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="weight5">A<span class="hidden">♮</span></td><td class="weight5">B<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1367" target="_blank" rel="noopener noreferrer">Leading whole-tone inverse</a></td>
+						<td class="leftborder leftpad15 accent weight7">C♯</td><td class="weight5">D<span class="hidden">♮</span></td><td class="orange weight3">E♭</td><td class="weight5">F<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="weight5">A<span class="hidden">♮</span></td><td class="weight5">B<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2731" target="_blank" rel="noopener noreferrer">Neapolitan major</a></td>
+						<td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="orange weight3">D♭</td><td class="orange weight3">E♭</td><td class="weight5">F<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="weight5">A<span class="hidden">♮</span></td><td class="weight5">B<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/3413" target="_blank" rel="noopener noreferrer">Leading whole-tone</a></td>
+						<td class="leftborder leftpad15 orange weight3">C♭</td><td class="orange weight3">D♭</td><td class="orange weight3">E♭</td><td class="weight5">F<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="weight5">A<span class="hidden">♮</span></td><td class="orange weight3">B♭</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1877" target="_blank" rel="noopener noreferrer">Lydian dominant augmented</a></td>
+						<td class="leftborder leftpad15 orange weight3">C♭</td><td class="orange weight3">D♭</td><td class="orange weight3">E♭</td><td class="weight5">F<span class="hidden">♮</span></td><td class="weight5">G<span class="hidden">♮</span></td><td class="orange weight3">A♭</td><td class="orange weight3">B♭</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1493" target="_blank" rel="noopener noreferrer">Lydian minor</a></td>
+						<td class="leftborder leftpad15 orange weight3">C♭</td><td class="orange weight3">D♭</td><td class="orange weight3">E♭</td><td class="weight5">F<span class="hidden">♮</span></td><td class="orange weight3">G♭</td><td class="orange weight3">A♭</td><td class="orange weight3">B♭</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+				</tbody>
+			</table></div>
+
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+			<p class="light">Once again, trying to keep the same note names paints a misleading picture. It looks like more than one note is moving per scale transformation until we rename the notes. In the following table, I’ve renamed E♯ to F♮, C♭ to B♮, E♭ to D♯, G♭ to F♯, A♭ to G♯, and B♭ to A♯. I’ve also reshuffled the modes so that Neapolitan major is at the bottom, intensified the border each time we move the root note, and highlighted the note we move in each scale transformation. Since we move the note by a whole step each time, we skip half the possible transpositions. This set gives us Neapolitan major on A♯, G♯, F♯, E, D, and C; and its other modes on B, A, G, F, D♯, and C♯.</p>
+
+			<div class="mobilescroll"><table id="neapolitanmajortransformations" class="normal tabular-oldstyle sidepad6 fixheight nowrap">
+				<thead>
+					<tr class="accent weight4"><th colspan="16">Transforming the Neapolitan “major” scale</th></tr>
+					<tr class="toc-counter weight2 petitecaps"><th colspan="2">Scale</th>
+						<th class="leftborder leftpad15">1</th>                              <th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th class="rightpad15">7</th>
+						<th class="leftborder leftpad15" colspan="7">Intervals</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/3413" target="_blank" rel="noopener noreferrer">Leading whole-tone</a></td>
+						<td class="leftborder leftpad15">B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td class="accent weight5">A♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1877" target="_blank" rel="noopener noreferrer">Lydian dominant augmented</a></td>
+						<td class="leftborder leftpad15">B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td class="accent weight5">G♯</td><td>A<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1493" target="_blank" rel="noopener noreferrer">Lydian minor</a></td>
+						<td class="leftborder leftpad15">B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td class="accent weight5">F♯</td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1397" target="_blank" rel="noopener noreferrer">Locrian major</a></td>
+						<td class="leftborder leftpad15">B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td class="accent weight5">E<span class="hidden">♮</span></td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1373" target="_blank" rel="noopener noreferrer">Super-Locrian ♭2</a></td>
+						<td class="leftborder leftpad15">B<span class="hidden">♮</span></td><td>C♯</td><td class="accent weight5">D<span class="hidden">♮</span></td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1367" target="_blank" rel="noopener noreferrer">Leading whole-tone inverse</a></td>
+						<td class="leftborder leftpad15">B<span class="hidden">♮</span></td><td class="accent weight5">C<span class="hidden">♮</span><td>C♯</td></td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2731" target="_blank" rel="noopener noreferrer">Neapolitan major</a></td>
+						<td class="leftborder leftpad15 accent weight5">A♯</td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/3413" target="_blank" rel="noopener noreferrer">Leading whole-tone</a></td>
+						<td class="leftborder leftpad15">A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td class="accent weight5">G♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1877" target="_blank" rel="noopener noreferrer">Lydian dominant augmented</a></td>
+						<td class="leftborder leftpad15">A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td class="accent weight5">F♯</td><td>G<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1493" target="_blank" rel="noopener noreferrer">Lydian minor</a></td>
+						<td class="leftborder leftpad15">A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td class="accent weight5">E<span class="hidden">♮</span></td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1397" target="_blank" rel="noopener noreferrer">Locrian major</a></td>
+						<td class="leftborder leftpad15">A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td class="accent weight5">D<span class="hidden">♮</span></td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1373" target="_blank" rel="noopener noreferrer">Super-Locrian ♭2</a></td>
+						<td class="leftborder leftpad15">A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td class="accent weight5">C<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1367" target="_blank" rel="noopener noreferrer">Leading whole-tone inverse</a></td>
+						<td class="leftborder leftpad15">A<span class="hidden">♮</span></td><td class="accent weight5">A♯</td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2731" target="_blank" rel="noopener noreferrer">Neapolitan major</a></td>
+						<td class="leftborder leftpad15 accent weight5">G♯</td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/3413" target="_blank" rel="noopener noreferrer">Leading whole-tone</a></td>
+						<td class="leftborder leftpad15">G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td class="accent weight5">F♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1877" target="_blank" rel="noopener noreferrer">Lydian dominant augmented</a></td>
+						<td class="leftborder leftpad15">G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td class="accent weight5">E<span class="hidden">♮</span></td><td>F<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1493" target="_blank" rel="noopener noreferrer">Lydian minor</a></td>
+						<td class="leftborder leftpad15">G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td class="accent weight5">D<span class="hidden">♮</span></td><td>D♯</td><td>F<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1397" target="_blank" rel="noopener noreferrer">Locrian major</a></td>
+						<td class="leftborder leftpad15">G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td class="accent weight5">C<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1373" target="_blank" rel="noopener noreferrer">Super-Locrian ♭2</a></td>
+						<td class="leftborder leftpad15">G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td class="accent weight5">A♯</td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1367" target="_blank" rel="noopener noreferrer">Leading whole-tone inverse</a></td>
+						<td class="leftborder leftpad15">G<span class="hidden">♮</span></td><td class="accent weight5">G♯</td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2731" target="_blank" rel="noopener noreferrer">Neapolitan major</a></td>
+						<td class="leftborder leftpad15 accent weight5">F♯</td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/3413" target="_blank" rel="noopener noreferrer">Leading whole-tone</a></td>
+						<td class="leftborder leftpad15">F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td class="accent weight5">E<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1877" target="_blank" rel="noopener noreferrer">Lydian dominant augmented</a></td>
+						<td class="leftborder leftpad15">F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td class="accent weight5">D<span class="hidden">♮</span></td><td>D♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1493" target="_blank" rel="noopener noreferrer">Lydian minor</a></td>
+						<td class="leftborder leftpad15">F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td class="accent weight5">C<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1397" target="_blank" rel="noopener noreferrer">Locrian major</a></td>
+						<td class="leftborder leftpad15">F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td class="accent weight5">A♯</td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1373" target="_blank" rel="noopener noreferrer">Super-Locrian ♭2</a></td>
+						<td class="leftborder leftpad15">F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td class="accent weight5">G♯</td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1367" target="_blank" rel="noopener noreferrer">Leading whole-tone inverse</a></td>
+						<td class="leftborder leftpad15">F<span class="hidden">♮</span></td><td class="accent weight5">F♯</td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2731" target="_blank" rel="noopener noreferrer">Neapolitan major</a></td>
+						<td class="leftborder leftpad15 accent weight5">E<span class="hidden">♮</span></td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/3413" target="_blank" rel="noopener noreferrer">Leading whole-tone</a></td>
+						<td class="leftborder leftpad15">D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td><td class="accent weight5">D<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1877" target="_blank" rel="noopener noreferrer">Lydian dominant augmented</a></td>
+						<td class="leftborder leftpad15">D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td class="accent weight5">C<span class="hidden">♮</span></td><td>C♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1493" target="_blank" rel="noopener noreferrer">Lydian minor</a></td>
+						<td class="leftborder leftpad15">D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td class="accent weight5">A♯</td><td>B<span class="hidden">♮</span></td><td>C♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1397" target="_blank" rel="noopener noreferrer">Locrian major</a></td>
+						<td class="leftborder leftpad15">D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td class="accent weight5">G♯</td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1373" target="_blank" rel="noopener noreferrer">Super-Locrian ♭2</a></td>
+						<td class="leftborder leftpad15">D♯</td><td>F<span class="hidden">♮</span></td><td class="accent weight5">F♯</td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1367" target="_blank" rel="noopener noreferrer">Leading whole-tone inverse</a></td>
+						<td class="leftborder leftpad15">D♯</td><td class="accent weight5">E<span class="hidden">♮</span></td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2731" target="_blank" rel="noopener noreferrer">Neapolitan major</a></td>
+						<td class="leftborder leftpad15 accent weight5">D<span class="hidden">♮</span></td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td>C♯</td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/3413" target="_blank" rel="noopener noreferrer">Leading whole-tone</a></td>
+						<td class="leftborder leftpad15">C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td><td class="accent weight5">C<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1877" target="_blank" rel="noopener noreferrer">Lydian dominant augmented</a></td>
+						<td class="leftborder leftpad15">C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td class="accent weight5">A♯</td><td>B<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1493" target="_blank" rel="noopener noreferrer">Lydian minor</a></td>
+						<td class="leftborder leftpad15">C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td class="accent weight5">G♯</td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1397" target="_blank" rel="noopener noreferrer">Locrian major</a></td>
+						<td class="leftborder leftpad15">C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td class="accent weight5">F♯</td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr>
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1373" target="_blank" rel="noopener noreferrer">Super-Locrian ♭2</a></td>
+						<td class="leftborder leftpad15">C♯</td><td>D♯</td><td class="accent weight5">E<span class="hidden">♮</span></td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1367" target="_blank" rel="noopener noreferrer">Leading whole-tone inverse</a></td>
+						<td class="leftborder leftpad15">C♯</td><td class="accent weight5">D<span class="hidden">♮</span></td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
+					</tr>
+					<tr class="mediumbottomborder">
+						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2731" target="_blank" rel="noopener noreferrer">Neapolitan major</a></td>
+						<td class="leftborder leftpad15 accent weight5">C<span class="hidden">♮</span></td><td>C♯</td><td>D♯</td><td>F<span class="hidden">♮</span></td><td>G<span class="hidden">♮</span></td><td>A<span class="hidden">♮</span></td><td>B<span class="hidden">♮</span></td>
+						<td class="centred leftborder leftpad8 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td>
+					</tr>
+				</tbody>
+			</table></div>
+
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
 			<p class="light">It may also be instructive to compare how many times each note appears on each mode of each scale on C. (Alternating heptamode and its enantiomorph both have the same note distributions.)</p>
 
 			<div class="mobilescroll">
@@ -2999,10 +3283,26 @@ window.onload = function () {makeAllSortable();};*/
 							<td class="weight3 hue150">3</td>
 							<td class="weight3 hue150">3</td>
 						</tr>
+						<tr>
+							<td class="centred rightborder">Neapolitan major</td>
+							<td class="weight7 hue30">7</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
 
+			<p class="light">Note that all these scales’ interval distributions are reflectively symmetrical about F♯ and C. Also, decrementing alternating heptamode and Neapolitan major’s root counts by 1 would cause them to repeat the same pattern four and six times, respectively. This makes them very nearly <em>rotationally</em> as well as reflectively symmetrical. I can’t yet fully explain the significance of this, so we’ll return to these scales when we discuss modes of limited transposition (which, to be clear, these scales aren’t; however, they’re single-note transformations thereof).</p>
 
 <!--
 						<p class="light">A final note: Let’s return to root order for a moment. This time, I’m going to analyze the Ionian scale using the ancient Greeks’ synaphai, simply because doing so will synchonize both scales’ synaphai and n-chords at the start of the analysis.</p>
@@ -5957,7 +6257,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<p class="light">One obvious symmetrical scale isn’t possible to produce with a single note transformation from the Ionian scale (although it <em>is</em> possible to produce by swapping two intervals; it’s also equivalent to the whole-tone scale with a note added). Its interval distribution is quite far from uniform, and it’s also all but impossible to relate to any sort of circle of fifths order. (Also, “Neapolitan major” and “Lydian minor” are both misnomers. I didn’t invent them and disclaim all responsibility.)</p>
+			<p class="light">One obvious symmetrical scale can’t be produced with a single-note transformation to the Ionian scale (though we <em>can</em> produce it by swapping two intervals; it’s also equivalent to the whole-tone scale with a note added). Its interval distribution is quite far from uniform, and it’s also all but impossible to relate to any sort of circle of fifths order. We’ve already studied it at length, but I haven’t shown it with every mode rooted on C, so here it is.</p>
 
 			<div class="mobilescroll"><table id="nonuniformsymmetry" class="normal tabular-oldstyle sidepad6 fixheight nowrap">
 				<thead>
@@ -5975,7 +6275,7 @@ window.onload = function () {makeAllSortable();};*/
 					</tr>
 					<tr>
 						<td class="weight4 centred" colspan="2"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1373" target="_blank" rel="noopener noreferrer">Super-Locrian ♭2</a></td>
-						<td class="leftborder leftpad15 weight5">C<span class="hidden">♮</span></td><td class="weight5">D<span class="hidden">♮</span></td><td class="orange weight3">E♭</td><td class="orange weight3">F♭</td><td class="orange weight3">G♭</td><td class="orange weight3">A♭</td><td class="orange weight3">B♭</td>
+						<td class="leftborder leftpad15 weight7">C<span class="hidden">♮</span></td><td class="weight5">D<span class="hidden">♮</span></td><td class="orange weight3">E♭</td><td class="orange weight3">F♭</td><td class="orange weight3">G♭</td><td class="orange weight3">A♭</td><td class="orange weight3">B♭</td>
 						<td class="centred leftborder leftpad8 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 orange weight1">½</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td><td class="centred leftpad4 rightpad4 weight3">1</td>
 					</tr>
 					<tr>
@@ -6007,6 +6307,8 @@ window.onload = function () {makeAllSortable();};*/
 			</table></div>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+
 
 			<p class="light">I’m also bizarrely partial to the Major Phyrgian scale, which has its own fearful symmetry, to coin a phrase. It’s more closely related to the Ancient Greek chromatic genus, which I cover below in the section on Ancient Greek harmony, than it is to the Ionian scale. We’ll therefore revisit it later.</p>
 
@@ -7729,36 +8031,134 @@ window.onload = function () {makeAllSortable();};*/
 							<td class="leftpad8 centred lightrightborder"><a href="https://ianring.com/musictheory/scales/65"   target="_blank" rel="noopener noreferrer" class="noprintlink weight0">66</a></td>
 							<td>1</td>
 						</tr>
-						<tr>
-						</tr>
-						<tr>
-						</tr>
+					</tbody>
+				</table>
 
-						<tr>
-						</tr>
-						<tr>
-						</tr>
-						<tr>
-						</tr>
-						<tr>
-						</tr>
-						<tr>
-						</tr>
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-						<tr>
-						</tr>
-						<tr>
-						</tr>
-						<tr>
-						</tr>
+			<h2 id="limitedtransformations" class="centred">Single-note transformations of modes of limited transposition</h2>
 
-						<tr>
-						</tr>
+			<p class="light">I mentioned that I’d return to Neapolitan major, alternating heptamode, and alternating heptamode inverse after we’d covered modes of limited transposition. 12-TET cannot contain heptatonic modes of limited transposition, but Neapolitan major, alternating heptamode, and alternating heptamode inverse are single-note transformations of modes of limited transposition. For instance:</p>
+			
+			<ul class="light">
+				<li>C Neapolitan major is C♯ whole-tone with an added C.</li>
+				<li>C alternating heptamode is C octatonic with a deleted B♭.</li>
+				<li>C alternating heptamode inverse is C octatonic inverse with a deleted D.</li>
+			</ul>
+			<p class="light">The scale transformations we apply to each of these scales to produce their modes consist solely of moving the added or deleted note by the interval at which their parent modes of limited transposition repeat, which is why they don’t take us through the entire chromatic scale. Here’s a note distribution comparison, adjusted for <del>inflation</del> limited transposition (i.e., the whole-tone scale is short 5 modes and the octatonic scale is short 3, so to facilitate 1:1 comparisons, I’ve multiplied the whole-tone scale’s values by 6 and the octatonic scale’s values by 4).</p>
 
+			<div class="mobilescroll">
+				<table id="notedistributionsagain" class="curved centred normal tabular-oldstyle sidepad6 fixheight nowrap">
+					<thead>
+						<tr><th colspan="13" class="toc-counter weight4">Note distributions across modes (…again‽ But that trick never works!)</th></tr>
+						<tr class="accent weight2 petitecaps"><th class="rightborder">Scale</th><th>C<span style="visibility: hidden;">♮</span></th><th>C♯</th><th>D<span style="visibility: hidden;">♮</span></th><th>D♯</th><th>E<span style="visibility: hidden;">♮</span></th><th>F<span style="visibility: hidden;">♮</span></th><th>F♯</th><th>G<span style="visibility: hidden;">♮</span></th><th>G♯</th><th>A<span style="visibility: hidden;">♮</span></th><th>A♯</th><th>B<span style="visibility: hidden;">♮</span></th></td>
+					</thead>
+					<tbody>
 						<tr>
+							<td class="centred rightborder">Ionian</td>
+							<td class="weight7 hue30">7</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight5 hue90">5</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight3 hue150">3</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight3 hue150">3</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight5 hue90">5</td>
+							<td class="weight2 hue180">2</td>
+						</tr>
+						<tr>
+							<td class="centred rightborder">Chromatic heptatonic</td>
+							<td class="weight7 hue30">7</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight5 hue90">5</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight3 hue150">3</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight3 hue150">3</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight5 hue90">5</td>
+							<td class="weight6 hue60">6</td>
+						</tr>
+						<tr>
+							<td class="centred rightborder">Alternating heptamode</td>
+							<td class="weight7 hue30">7</td>
+							<td class="weight3 hue150">3</td>
+							<td class="weight3 hue150">3</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight3 hue150">3</td>
+							<td class="weight3 hue150">3</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight3 hue150">3</td>
+							<td class="weight3 hue150">3</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight3 hue150">3</td>
+							<td class="weight3 hue150">3</td>
+						</tr>
+						<tr>
+							<td class="centred rightborder">Octatonic</td>
+							<td class="weight8 hue0">8</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight8 hue0">8</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight8 hue0">8</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight8 hue0">8</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight4 hue120">4</td>
+						</tr>
+						<tr>
+							<td class="centred rightborder">Neapolitan major</td>
+							<td class="weight7 hue30">7</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+						</tr>
+						<tr>
+							<td class="centred rightborder">Whole-tone</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight0 hue240">0</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight0 hue240">0</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight0 hue240">0</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight0 hue240">0</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight0 hue240">0</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight0 hue240">0</td>
 						</tr>
 					</tbody>
 				</table>
+			</div>
+
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+			<p class="light">Again, all these distributions are reflectively symmetrical about F♯ and C. Note also that the octatonic scale is <em>rotationally</em> symmetrical by three semitones, and the whole-tone scale is <em>rotationally</em> symmetrical by two semitones. That is, the octatonic scale’s distribution repeats every three semitones, and the whole-tone scale’s repeats every two semitones. This is axiomatically equivalent to their being modes of limited transposition.</p>
+			
+			<p class="light">Now, note how close alternating heptamode and Neapolitan major come to duplicating those distributions: in fact, disregarding the root note, alternating heptamode has <em>exactly</em> (octatonic’s adjusted distributions &times; &frac34;), and Neapolitan major has <em>exactly</em> ((whole-tone’s adjusted distributions &times; &frac23;) + 2). The root note is the outlier here because, by definition, it must always occur in every mode of any scale.</p>
+
+			<p class="light">Note, by contrast, that chromatic heptatonic and Ionian have nothing even <em>approaching</em> rotational symmetry in their note distributions: they <em>only</em> have reflective symmetry. I suspect this to be related to why these scales’ single-note transformations cycle through the entire chromatic scale, and the others’ don’t; however, I haven’t yet worked out all the logical and mathematical implications thereof.</p>
+
+			<p class="light">It should be fairly obvious why Neapolitan major and its modes are 12-TET’s only heptatonic single-note transformations of the whole-tone scale: it only has six gaps into which we may add notes, and since they’re all whole steps, all possible single-note transformations change one whole step into two half-steps.</p>
+			
+			<p class="light">12-TET contains three different octatonic modes of limited transposition, namely Messiaen’s modes 2, 4, and 6. Can we derive other similar heptatonic scales in similar ways? That is, can deleting a single note of the octatonic, double chromatic, or whole-tone chromatic scales create other scales whose modes can in turn all be derived through single-note transformations to themselves? This question isn’t rhetorical: I’m still investigating it.</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 

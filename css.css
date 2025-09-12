@@ -1196,8 +1196,8 @@ th {
 	:root {
 		--page-width: min(800px, calc(100vw - 16px)) !important;
 	}
-	table:not(.printpadding1, .printpadding2, .printpadding3, .printpadding4, .printpadding5, .printpadding6, .printpadding7, .printpadding8, .printpadding9, .printpadding10, .sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad16, .sidepad20, .sidepad30, .sidepad40, .sidepad50, .sidepad60, .noleftpad, .norightpad, .nosidepad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10) 
-	:is(td, th):not(.printpadding1, .printpadding2, .printpadding3, .printpadding4, .printpadding5, .printpadding6, .printpadding7, .printpadding8, .printpadding9, .printpadding10, .sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad16, .sidepad20, .sidepad30, .sidepad40, .sidepad50, .sidepad60, .noleftpad, .norightpad, .nosidepad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10)
+	table:not(.printpadding1, .printpadding2, .printpadding3, .printpadding4, .printpadding5, .printpadding6, .printpadding7, .printpadding8, .printpadding9, .printpadding10, .sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad16, .sidepad20, .sidepad30, .sidepad40, .sidepad50, .sidepad60, .noleftpad, .norightpad, .nosidepad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .gatefoldsplit) 
+	:is(td, th):not(.printpadding1, .printpadding2, .printpadding3, .printpadding4, .printpadding5, .printpadding6, .printpadding7, .printpadding8, .printpadding9, .printpadding10, .sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad16, .sidepad20, .sidepad30, .sidepad40, .sidepad50, .sidepad60, .noleftpad, .norightpad, .nosidepad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .gatefoldsplit)
 	{
 		padding-left: 12px;
 		padding-right: 12px;
@@ -5640,3 +5640,35 @@ em.xor em, em em.xor, em.xor em.xor {
 	font-style: normal;
 }
 :is(em.xor, em) :is(em.xor, em) :is(em.xor, em) {font-style: italic;}
+
+table.gatefoldsplit {
+	padding: 0px;
+	margin: 0px auto;
+	width: min(800px, calc(100vw - 16px));
+}
+table.gatefoldsplit > tbody {
+	padding: 0px;
+	margin: 0px;
+}
+table.gatefoldsplit > tbody > tr {
+	padding: 0px;
+	margin: 0px;
+}
+table.gatefoldsplit > tbody > tr > td {
+	width: min(400px, calc(50vw - 8px));
+	padding: 0px;
+	margin: 0px;
+}
+table.gatefoldsplit > tbody > tr > td > img {
+	width: min(400px, calc(50vw - 8px));
+	height: min(400px, calc(50vw - 8px));
+}
+
+img.gatefoldthumbnail {
+	height: min(400px, calc(50vw - 8px));
+	width: min(800px, calc(100vw - 16px));
+}
+img.albumthumbnail {
+	height: min(600px, calc(100vw - 16px));
+	width: min(600px, calc(100vw - 16px));
+}

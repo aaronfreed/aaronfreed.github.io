@@ -5682,7 +5682,15 @@ table.gatefoldsplit > tbody > tr > td > img {
 	width: min(400px, calc(50vw - 8px));
 	height: min(400px, calc(50vw - 8px));
 }
+div.gatefoldsplit img {
+	width: min(400px, calc(50vw - 8px));
+	height: min(400px, calc(50vw - 8px));
+}
 
+img.gatefoldsplit {
+	width: min(400px, calc(50vw - 8px));
+	height: min(400px, calc(50vw - 8px));
+}
 img.gatefoldthumbnail {
 	height: min(400px, calc(50vw - 8px));
 	width: min(800px, calc(100vw - 16px));
@@ -5691,10 +5699,18 @@ img.albumthumbnail {
 	height: min(600px, calc(100vw - 16px));
 	width: min(600px, calc(100vw - 16px));
 }
+img.traylinerthumbnail {
+	height: calc(var(--page-width) * 159 / 200);
+	width: var(--page-width);
+}
 
 table.fittowidth {
 	width: min(800px, calc(100vw - 16px));
 }
 img.fittowidth {
 	width: 100%;
+}
+.hangindent30, p.hangindent30, .hangindent30 p {
+	text-indent: -30px;
+	margin-left: 30px;
 }

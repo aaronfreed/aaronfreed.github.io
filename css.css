@@ -561,9 +561,13 @@ th {
 	}
 }
 @media screen and (max-width: 600px) {
-	.fixmobilefontsize, .fixmobilefontsize td, .fixmobilefontsize th, tr.fixmobilefontsize td, tr.fixmobilefontsize th {
+	.fixmobilefontsize, .fixmobilefontsize > td, .fixmobilefontsize > th {
 		font-size: 1rem;
 		text-size-adjust: none;
+	}
+	tr.fixmobilefontsize > td, tr.fixmobilefontsize > th, td.fixmobilefontsize, th.fixmobilefontsize {
+		font-size: 1rem !important;
+		text-size-adjust: none !important;
 	}
 	.nomobilepad td:not(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad20, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30),
 	.nomobilepad th:not(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad20, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30),

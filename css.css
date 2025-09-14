@@ -4888,6 +4888,9 @@ p.songwriters {
 	margin-top: 4px;
 	margin-left: 15px;
 }
+.compositions2023-2024 p.interpolation {
+	margin-left: 15px;
+}
 p.interpolation.songwriter, p.interpolation-songwriters {
 	margin-top: 4px;
 	margin-left: 30px;

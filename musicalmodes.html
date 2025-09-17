@@ -110,7 +110,10 @@ window.onload = function () {makeAllSortable();};*/
 						</li>
 						<li><a class="noprintlink" href="#chordanalysis">Chord analysis by mode</a>
 							<ol class="mobileleftmargin15">
-								<li><a class="noprintlink" href="#chordtonalities">Chord tonalities by scale position &amp; mode</a></li>
+								<li><a class="noprintlink" href="#chordtonalities">Chord tonalities by scale position &amp; mode (linear order)</a></li>
+								<li><a class="noprintlink" href="#chordtonalitiescircle">Chord tonalities by scale position &amp; mode (circle of fifths order)</a></li>
+								<li><a class="noprintlink" href="#chordtonalitiesonc">Chords for scales rooted on C (linear order)</a></li>
+								<li><a class="noprintlink" href="#chordtonalitiesonccircle">Chords for scales rooted on C (circle of fifths order)</a></li>
 							</ol>
 						</li>
 					</ol>
@@ -674,14 +677,15 @@ window.onload = function () {makeAllSortable();};*/
 			<ul class="fixheight light weight5thickness mobileleftmargin15">
 				<li><strong class="accent petitecaps weight4">Ionian:</strong> Due to the major scale’s ubiquity, naming examples would almost insult readers’ intelligence, but one merits special mention for its historical importance as a pedagogical tool:
 					<ul class="mobileleftmargin15">
-						<li><span class="artistcredit">Richard Rodgers</span><span class="toc-counter"> & </span><span class="artistcredit">Oscar Hammer&shy;stein II</span> – <span class="songcredit">“<a href="https://youtu.be/drnBMAEA3AM" target="_blank" rel="noopener noreferrer" class="noprintlink">Do-Re-Mi</a>”</span><span class="noscreen linktext nohyphens"> &#10216;youtu<wbr />.be<wbr />/drnBMAEA3AM&#10217;</span> (<em class="albumcredit">The Sound of Music</em>, 1959) is in <strong class="accent">B♭ Ionian</strong>. If this isn’t how you learned solf&egrave;ge, I’ll eat my hat. (Note: I am not currently wearing a hat.) In fact, you can probably recall this song’s melody to give yourself a vague idea how the first four modes sound:
+						<li>
+							<p><span class="artistcredit">Richard Rodgers</span><span class="toc-counter"> & </span><span class="artistcredit">Oscar Hammer&shy;stein II</span> – <span class="songcredit">“<a href="https://youtu.be/drnBMAEA3AM" target="_blank" rel="noopener noreferrer" class="noprintlink">Do-Re-Mi</a>”</span><span class="noscreen linktext nohyphens"> &#10216;youtu<wbr />.be<wbr />/drnBMAEA3AM&#10217;</span> (<em class="albumcredit">The Sound of Music</em>, 1959) is in <strong class="accent">B♭ Ionian</strong>. If this isn’t how you learned solf&egrave;ge, I’ll eat my hat. (Note: I am not currently wearing a hat.) In fact, you can probably recall this song’s melody to give yourself a vague idea how the first four modes sound:</p>
 							<ul class="mobileleftmargin15">
 								<li>Do = Ionian</li>
 								<li>Re = Dorian</li>
 								<li>Mi = Phrygian</li>
 								<li>Fa = Lydian</li>
 							</ul>
-						(The lines for “So”, “La”, and “Ti” reuse Ionian, Dorian, and Phrygian respectively.)
+						<p>(The lines for “So”, “La”, and “Ti” reuse Ionian, Dorian, and Phrygian respectively.)</p>
 						</li>
 					</ul>
 				</li>
@@ -1016,7 +1020,8 @@ window.onload = function () {makeAllSortable();};*/
 			<h2 class="centred" id="audio">An audio demonstration</h2>
 
 			<ul class="fixheight light weight5thickness">
-				<li>None of this will mean much to readers in isolation, so I put together a <a class="noprintlink" href="c_lydian_to_b_lydian.flac" target="_blank">crude demonstration of the above principle</a><span class="noscreen linktext nohyphens"> &#10216;aaronfreed<wbr />.github<wbr />.io<wbr />/c_<wbr />lydian_<wbr />to_<wbr />b_<wbr />lydian<wbr />.flac&#10217;</span> in Logic Pro. For the following modes, in order:
+				<li>
+					<p>None of this will mean much to readers in isolation, so I put together a <a class="noprintlink" href="c_lydian_to_b_lydian.flac" target="_blank">crude demonstration of the above principle</a><span class="noscreen linktext nohyphens"> &#10216;aaronfreed<wbr />.github<wbr />.io<wbr />/c_<wbr />lydian_<wbr />to_<wbr />b_<wbr />lydian<wbr />.flac&#10217;</span> in Logic Pro. For the following modes, in order:</p>
 					<ol class="leftpad15">
 						<li>C Lydian</li>
 						<li>C Ionian</li>
@@ -1027,19 +1032,34 @@ window.onload = function () {makeAllSortable();};*/
 						<li>C Locrian</li>
 						<li>C♭/B Lydian</li>
 					</ol>
-					you’ll hear the following, in order:
+					<p>you’ll hear, in order:</p>
 					<ol class="loweralpha leftpad15">
-						<li>the scale in ascending order</li>
-						<li>arpeggiated and block versions of:
-							<ol class="lowerroman leftpad15">
-								<li>the root (I) chord</li>
-								<li>the subdominant (IV) chord</li>
-								<li>the dominant (V) chord</li>
-								<li>the root (I) chord</li>
-							</ol>
-						</li>
+						<li>the scale, in ascending order</li>
+						<li>the root or tonic (I, i, or iᵒ) chord, in arpeggiated and block forms</li>
+						<li>the subdominant (IV, iv, or ivᵒ) chord, in arpeggiated and block forms</li>
+						<li>the dominant (V, v, or vᵒ) chord, in arpeggiated and block forms</li>
+						<li>the root (I, i, or iᵒ) chord, in arpeggiated and block forms</li>
 					</ol>
-					(I could make a version going down the entire chromatic scale, but the entire thing would take thirteen and a half minutes to play through. Even I think that’s overkill, and I submit <em>this exact page</em> as exhibit A for what my definition of “overkill” must entail.)
+					<p>In case any of the above terminology confuses you:</p>
+					<ul class="leftpad15">
+						<li>An arpeggiated chord is played one note at a time; a block chord’s notes are all played simultaneously.</li>
+						<li>Roman numerals refer to the chord based on its root note’s position in the scale.</li>
+						<li><p>Major chords are uppercase, minor chords are lowercase, and diminished chords are lowercase followed by a superscript “o”. Thus, on C:</p>
+							<ul class="leftpad15">
+								<li>Lydian, Ionian, and Mixolydian have I root chords (C major).</li>
+								<li>Dorian, Aeolian, and Phrygian have i root chords (C minor).</li>
+								<li>Locrian has a iᵒ root chord (C diminished).</li>
+								<li>Ionian, Dorian, and Mixolydian have IV subdominant chords (F major).</li>
+								<li>Phrygian, Aeolian, and Locrian have iv subdominant chords (F minor).</li>
+								<li>Lydian has a ivᵒ subdominant chord (F&#9839; diminished).</li>
+								<li>Ionian, Lydian, and Locrian have V dominant chords (respectively, G major, G major, and G&#9839; major).</li>
+								<li>Dorian, Mixolydian, and Aeolian have v dominant chords (G minor).</li>
+								<li>Phrygian has a vᵒ dominant chord (G diminished).</li>
+							</ul>
+						</li>
+						<li>“<a href="#chordanalysis">Chord analysis by mode</a>” below lists all seven chords for each mode.</li>
+					</ul>
+					<p>(I considered going down the entire chromatic scale, but that would take thirteen and a half minutes. Even I think that’s overkill, and for context on my definition of “overkill”, I submit <em>this exact book</em> as Exhibit A.)</p>
 				</li>
 			</ul>
 
@@ -1457,21 +1477,38 @@ window.onload = function () {makeAllSortable();};*/
 
 			<h2 id="chordanalysis" class="centred">Chord analysis by mode</h2>
 
-			<div class="mobilescroll"><table id="chordtonalities" class="nopagebreak tabular-oldstyle nowrap fixheight">
-				<thead class="fixheight">
-					<tr><th colspan="9" class="accent weight4 fixmobilefontsize">Chord tonalities by scale position &amp; mode</th></tr>
-					<tr class="toc-counter weight2 petitecaps"><th class="rightborder" colspan="2">Mode</th><th>I</th><th>II</th><th>III</th><th>IV</th><th>V</th><th>VI</th><th>VII</th></tr>
-				</thead>
-				<tbody class="fixheight">
-					<tr><td>1</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>    <td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent">min</td><td class="accent">min</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent">min</td><td class="orange light">dim</td></tr>
-					<tr><td>2</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>    <td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="accent">min</td><td>               Maj</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="orange">dim</td><td class="light">       Maj</td></tr>
-					<tr><td>3</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>  <td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td>               Maj</td><td>               Maj</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td>               Maj</td><td class="accent light">min</td></tr>
-					<tr><td>4</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>    <td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               Maj</td><td class="accent">min</td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent">min</td><td class="accent light">min</td></tr>
-					<tr><td>5</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent">min</td><td class="orange">dim</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="accent">min</td><td class="light">       Maj</td></tr>
-					<tr><td>6</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>   <td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="orange">dim</td><td>               Maj</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td>               Maj</td><td class="light">       Maj</td></tr>
-					<tr><td>7</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>   <td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td>               Maj</td><td class="accent">min</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               Maj</td><td class="accent light">min</td></tr>
-				</tbody>
-			</table></div>
+			<div class="mobilescroll">
+				<table id="chordtonalities" class="nopagebreak tabular-oldstyle nowrap fixheight">
+					<thead class="fixheight">
+						<tr><th colspan="9" class="accent weight4 fixmobilefontsize">Chord tonalities by scale position &amp; mode (linear order)</th></tr>
+						<tr class="toc-counter weight2 petitecaps"><th class="rightborder" colspan="2">Mode</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr>
+					</thead>
+					<tbody class="fixheight">
+						<tr><td>1</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>    <td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent">min</td><td class="accent">min</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent">min</td><td class="orange light">dim</td></tr>
+						<tr><td>2</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>    <td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="accent">min</td><td>               Maj</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="orange">dim</td><td class="light">       Maj</td></tr>
+						<tr><td>3</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>  <td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td>               Maj</td><td>               Maj</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td>               Maj</td><td class="accent light">min</td></tr>
+						<tr><td>4</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>    <td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               Maj</td><td class="accent">min</td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent">min</td><td class="accent light">min</td></tr>
+						<tr><td>5</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent">min</td><td class="orange">dim</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="accent">min</td><td class="light">       Maj</td></tr>
+						<tr><td>6</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>   <td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="orange">dim</td><td>               Maj</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td>               Maj</td><td class="light">       Maj</td></tr>
+						<tr><td>7</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>   <td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td>               Maj</td><td class="accent">min</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               Maj</td><td class="accent light">min</td></tr>
+					</tbody>
+				</table>
+				<table id="chordtonalitiescircle" class="nopagebreak tabular-oldstyle nowrap fixheight">
+					<thead class="fixheight">
+						<tr><th colspan="9" class="accent weight4 fixmobilefontsize">Chord tonalities by scale position &amp; mode (circle of fifths order)</th></tr>
+						<tr class="toc-counter weight2 petitecaps"><th class="rightborder" colspan="2">Mode</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr>
+					</thead>
+					<tbody class="fixheight">
+						<tr><td>4</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">Lydian</a></td>    <td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               Maj</td><td class="accent">min</td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent">min</td><td class="accent light">min</td></tr>
+						<tr><td>1</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">Ionian</a></td>    <td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent">min</td><td class="accent">min</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent">min</td><td class="orange light">dim</td></tr>
+						<tr><td>5</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">Mixolydian</a></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent">min</td><td class="orange">dim</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="accent">min</td><td class="light">       Maj</td></tr>
+						<tr><td>2</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">Dorian</a></td>    <td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="accent">min</td><td>               Maj</td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="orange">dim</td><td class="light">       Maj</td></tr>
+						<tr><td>6</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">Aeolian</a></td>   <td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="orange">dim</td><td>               Maj</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td>               Maj</td><td class="light">       Maj</td></tr>
+						<tr><td>3</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">Phrygian</a></td>  <td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td>               Maj</td><td>               Maj</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td>               Maj</td><td class="accent light">min</td></tr>
+						<tr><td>7</td><td class="rightborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">Locrian</a></td>   <td class="orange"><strong><strong><strong>dim</strong></strong></strong></td><td>               Maj</td><td class="accent">min</td><td class="accent"><strong><strong><strong>min</strong></strong></strong></td><td>               <strong><strong><strong>Maj</strong></strong></strong></td><td>               Maj</td><td class="accent light">min</td></tr>
+					</tbody>
+				</table>
+			</div>
 
 			<ul class="light mobileleftmargin15">
 				<li>I’ve printed each mode’s root (I) subdominant (IV), and dominant (V) chords in <strong><strong class="bold">bold</strong></strong> – they’re especially important to establishing its tonality.</li>
@@ -1479,7 +1516,42 @@ window.onload = function () {makeAllSortable();};*/
 				<li>Minor chords are <span class="accent">blue</span>; diminished chords are <span class="orange">orange</span>.</li>
 				<li>This analysis clarifies why Ionian became the standard major scale and Aeolian became the natural minor scale: Ionian’s root, subdominant, and dominant are all major; Aeolian’s are all minor. This makes them feel, respectively, <em>especially</em> major and <em>especially</em> minor.</li>
 				<li>Since their root chords are major, Lydian and Mixolydian still sound more “major” than the other modes (except Ionian), and Dorian and Phrygian still sound more “minor” than the others (except Aeolian). Locrian, as mentioned, is the oddball because it’s the only mode of the scale whose root chord is diminished.</li>
+				<li><p>When each mode is rooted on C, its chords are as follows:</p>
+					<div class="mobilescroll">
+						<table id="chordtonalitiesonc" class="nopagebreak tabular-oldstyle nowrap fixheight">
+							<thead class="fixheight">
+								<tr><th colspan="9" class="accent weight4 fixmobilefontsize">Chords for scales rooted on C (linear order)</th></tr>
+								<tr class="toc-counter weight2 petitecaps"><th class="rightborder" colspan="2">Mode</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr>
+							</thead>
+							<tbody class="fixheight right">
+								<tr><td>1</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">C Ionian</a></td>    <td>               <strong><strong><strong>C maj</strong></strong></strong></td><td class="accent">D  min</td><td class="accent">E  min</td><td>               <strong><strong><strong>F  maj</strong></strong></strong></td><td>               <strong><strong><strong>G  Maj</strong></strong></strong></td><td class="accent">A  min</td><td class="orange light">B  dim</td></tr>
+								<tr><td>2</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">C Dorian</a></td>    <td class="accent"><strong><strong><strong>C min</strong></strong></strong></td><td class="accent">D  min</td><td>               E♭ maj</td><td>               <strong><strong><strong>F  maj</strong></strong></strong></td><td class="accent"><strong><strong><strong>G  min</strong></strong></strong></td><td class="orange">A  dim</td><td class="light">       B♭ Maj</td></tr>
+								<tr><td>3</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">C Phrygian</a></td>  <td class="accent"><strong><strong><strong>C min</strong></strong></strong></td><td>               D♭ maj</td><td>               E♭ maj</td><td class="accent"><strong><strong><strong>F  min</strong></strong></strong></td><td class="orange"><strong><strong><strong>G  dim</strong></strong></strong></td><td>               A♭ maj</td><td class="accent light">B♭ min</td></tr>
+								<tr><td>4</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">C Lydian</a></td>    <td>               <strong><strong><strong>C maj</strong></strong></strong></td><td>               D  maj</td><td class="accent">E  min</td><td class="orange"><strong><strong><strong>F♯ dim</strong></strong></strong></td><td>               <strong><strong><strong>G  Maj</strong></strong></strong></td><td class="accent">A  min</td><td class="accent light">B  min</td></tr>
+								<tr><td>5</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">C Mixolydian</a></td><td>               <strong><strong><strong>C maj</strong></strong></strong></td><td class="accent">D  min</td><td class="orange">E  dim</td><td>               <strong><strong><strong>F  maj</strong></strong></strong></td><td class="accent"><strong><strong><strong>G  min</strong></strong></strong></td><td class="accent">A  min</td><td class="light">       B♭ Maj</td></tr>
+								<tr><td>6</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">C Aeolian</a></td>   <td class="accent"><strong><strong><strong>C min</strong></strong></strong></td><td class="orange">D  dim</td><td>               E♭ maj</td><td class="accent"><strong><strong><strong>F  min</strong></strong></strong></td><td class="accent"><strong><strong><strong>G  min</strong></strong></strong></td><td>               A♭ maj</td><td class="light">       B♭ Maj</td></tr>
+								<tr><td>7</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">C Locrian</a></td>   <td class="orange"><strong><strong><strong>C dim</strong></strong></strong></td><td>               D♭ maj</td><td class="accent">E♭ min</td><td class="accent"><strong><strong><strong>F  min</strong></strong></strong></td><td>               <strong><strong><strong>G♭ maj</strong></strong></strong></td><td>               A♭ maj</td><td class="accent light">B♭ min</td></tr>
+							</tbody>
+						</table>
+						<table id="chordtonalitiesonccircle" class="nopagebreak tabular-oldstyle nowrap fixheight">
+							<thead class="fixheight">
+								<tr><th colspan="9" class="accent weight4 fixmobilefontsize">Chords for scales rooted on C (circle of fifths order)</th></tr>
+								<tr class="toc-counter weight2 petitecaps"><th class="rightborder" colspan="2">Mode</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr>
+							</thead>
+							<tbody class="fixheight right">
+								<tr><td>4</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2773" target="_blank" rel="noopener noreferrer">C Lydian</a></td>    <td>               <strong><strong><strong>C maj</strong></strong></strong></td><td>               D  maj</td><td class="accent">E  min</td><td class="orange"><strong><strong><strong>F♯ dim</strong></strong></strong></td><td>               <strong><strong><strong>G  Maj</strong></strong></strong></td><td class="accent">A  min</td><td class="accent light">B  min</td></tr>
+								<tr><td>1</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/2741" target="_blank" rel="noopener noreferrer">C Ionian</a></td>    <td>               <strong><strong><strong>C maj</strong></strong></strong></td><td class="accent">D  min</td><td class="accent">E  min</td><td>               <strong><strong><strong>F  maj</strong></strong></strong></td><td>               <strong><strong><strong>G  Maj</strong></strong></strong></td><td class="accent">A  min</td><td class="orange light">B  dim</td></tr>
+								<tr><td>5</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1717" target="_blank" rel="noopener noreferrer">C Mixolydian</a></td><td>               <strong><strong><strong>C maj</strong></strong></strong></td><td class="accent">D  min</td><td class="orange">E  dim</td><td>               <strong><strong><strong>F  maj</strong></strong></strong></td><td class="accent"><strong><strong><strong>G  min</strong></strong></strong></td><td class="accent">A  min</td><td class="light">       B♭ Maj</td></tr>
+								<tr><td>2</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1709" target="_blank" rel="noopener noreferrer">C Dorian</a></td>    <td class="accent"><strong><strong><strong>C min</strong></strong></strong></td><td class="accent">D  min</td><td>               E♭ maj</td><td>               <strong><strong><strong>F  maj</strong></strong></strong></td><td class="accent"><strong><strong><strong>G  min</strong></strong></strong></td><td class="orange">A  dim</td><td class="light">       B♭ Maj</td></tr>
+								<tr><td>6</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1453" target="_blank" rel="noopener noreferrer">C Aeolian</a></td>   <td class="accent"><strong><strong><strong>C min</strong></strong></strong></td><td class="orange">D  dim</td><td>               E♭ maj</td><td class="accent"><strong><strong><strong>F  min</strong></strong></strong></td><td class="accent"><strong><strong><strong>G  min</strong></strong></strong></td><td>               A♭ maj</td><td class="light">       B♭ Maj</td></tr>
+								<tr><td>3</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1451" target="_blank" rel="noopener noreferrer">C Phrygian</a></td>  <td class="accent"><strong><strong><strong>C min</strong></strong></strong></td><td>               D♭ maj</td><td>               E♭ maj</td><td class="accent"><strong><strong><strong>F  min</strong></strong></strong></td><td class="orange"><strong><strong><strong>G  dim</strong></strong></strong></td><td>               A♭ maj</td><td class="accent light">B♭ min</td></tr>
+								<tr><td>7</td><td class="rightborder left"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">C Locrian</a></td>   <td class="orange"><strong><strong><strong>C dim</strong></strong></strong></td><td>               D♭ maj</td><td class="accent">E♭ min</td><td class="accent"><strong><strong><strong>F  min</strong></strong></strong></td><td>               <strong><strong><strong>G♭ maj</strong></strong></strong></td><td>               A♭ maj</td><td class="accent light">B♭ min</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
 			</ul>
+
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 

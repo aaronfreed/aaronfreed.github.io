@@ -1105,6 +1105,10 @@ th {
 		margin-left: 15px;
 		margin-right: 0px;
 	}
+	.hyphenatemobile, .hyphenatemobile td, .hyphenatemobile th {
+		hyphens: auto;
+		hyphenate-limit-chars: 5 2 2;
+	}
 }
 @media screen and (width > 600px) {
 	.nowrapdesktop {

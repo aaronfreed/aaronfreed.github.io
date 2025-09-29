@@ -8749,7 +8749,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<h2 id="truncations" class="centred">Truncations &amp; implications</h2>
 
-			<p class="light">As an example of MoLT truncation, stripping every other note of the first two MoLTs creates two familiar chords:</p>
+			<p class="light">To illustrate MoLT truncation, let’s strip every other note of the first two MoLTs. The results may look familiar:</p>
 
 			<ol class="light mobileleftmargin15">
 				<li>
@@ -8949,13 +8949,37 @@ window.onload = function () {makeAllSortable();};*/
 			<ul class="fixheight light mobileleftmargin15">
 				<li>Since both chords truncate their parent modes in ways that maintain their symmetry, they both have only twelve transpositions. Put another way, each inversion of a diminished seventh chord or an augmented chord contains the same notes and interval sequence as its parent; it just starts on a different note. We can contrast this with major and minor chords, which each have first and second inversions and thus have thirty-six discrete transpositions in 12-TET.</li>
 				<li>
+					<p>In most cases, scale truncation refers merely to removing at least one note from a scale. However, most references to truncations of MoLTs specifically refer to truncations that maintain at least some of their parent scales’ rotational symmetry. Thus, if the parent scale has tritone rotational symmetry, we must remove notes in pairs from the following scale degrees:</p>
+					<div class="nomobile" style="columns: 3;">
+						<ol class="mobileleftmargin15" style="margin-top: 0px; margin-bottom: 0px;">
+							<li style="margin-top: 0px;">1 and 7</li>
+							<li style="margin-bottom: 0px;">2 and 8</li>
+							<li style="margin-top: 0px;">3 and 9</li>
+							<li style="margin-bottom: 0px;">4 and 10</li>
+							<li style="margin-top: 0px;">5 and 11</li>
+							<li style="margin-bottom: 0px;">6 and 12</li>
+						</ol>
+					</div>
+					<div class="mobileonly" style="columns: 2;">
+						<ol style="margin-top: 0px; margin-bottom: 0px;">
+							<li style="margin-top: 0px;">1 and 7</li>
+							<li>2 and 8</li>
+							<li style="margin-bottom: 0px;">3 and 9</li>
+							<li style="margin-top: 0px;">4 and 10</li>
+							<li>5 and 11</li>
+							<li style="margin-bottom: 0px;">6 and 12</li>
+						</ol>
+					</div>
+					<p>A parent scale with rotational symmetry across minor thirds can be truncated in ways that preserve only rotational symmetry across trintones, and the whole-tone scale can be truncated in ways that preserve rotational symmetry only across major thirds <em>or</em> only across tritones, but at least some of the rotational symmetry must be preserved. (By contrast, scales with rotational symmetry only across major thirds or only across tritones must be truncated in ways that preserve that symmetry, since it cannot be reduced to less frequent symmetry.)</p>
+				</li>
+				<li>
 					<p>Messaien omitted several scales on the grounds that they just truncated scales he’d already listed, but he arguably applied this principle rather arbitrarily:</p>
 					<ul class="mobileleftmargin15">
 						<li>Every scale in his list except mode 3 truncates mode 7.</li>
 						<li>Mode 1 also truncates modes 3 and 6.</li>
 						<li>Mode 5 also truncates modes 4 and 6.</li>
 					</ul>
-					<p>Modes 1 &amp; 2 repeat more often than their parents, so there’s a reasonable argument for treating them differently, but modes 4&ndash;6 don’t. As we’ll see below, sixteen total scales in 12-TET fit the criteria of a MoLT.</p>
+					<p>Modes 1 &amp; 2 repeat more than their parents, so there’s a reasonable case for treating them differently, but modes 4&ndash;6 don’t. As we’ll see below, sixteen total scales in 12-TET fit the criteria of a MoLT.</p>
 				</li>
 				<li>Although Messiaen didn’t classify the chromatic scale as a MoLT, it fits all the criteria for one. Every other MoLT is thus by definition a truncation of the chromatic scale.</li>
 				<li>The Ionian scale, W-W-H-W-W-W-H, is a nice contrast with MoLTs: the extra W between its W-W-H patterns makes it impossible to simplify into a smaller pattern. It therefore has seven modes, which each have twelve variants, for a total of eighty-four permutations.</li>
@@ -8971,7 +8995,7 @@ window.onload = function () {makeAllSortable();};*/
 						<li>The <a class="noprintlink" href="https://ianring.com/musictheory/scales/65" target="_blank" rel="noopener noreferrer">tritone</a></li>
 						<li>The <a class="noprintlink" href="https://ianring.com/musictheory/scales/1" target="_blank" rel="noopener noreferrer">octave</a></li>
 					</ul>
-					<p>It’s no coincidence that every single one of these intervals, expressed in semitones, divides evenly into 12.</p>
+					<p>It’s no coincidence that every last one of these intervals, expressed in semitones, divides evenly into 12.</p>
 				</li>
 			</ul>
 
@@ -9244,6 +9268,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<ul class="light">
 				<li>C melodic Phrygian is C♯ whole-tone with an added C.</li>
+				<li>C melodic Phrygian is also C whole-tone chromatic’s fourth mode with a deleted F♯.</li>
 				<li>C alternating heptamode is C octatonic with a deleted B♭.</li>
 				<li>C alternating heptamode inverse is C octatonic inverse with a deleted D.</li>
 				<li>C apathetic minor is C double chromatic with a deleted G♯.</li>
@@ -9327,6 +9352,51 @@ window.onload = function () {makeAllSortable();};*/
 							<td class="weight0 hue240">0</td>
 							<td class="weight2 hue180">2</td>
 							<td class="weight0 hue240">0</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight0 hue240">0</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight0 hue240">0</td>
+							<td class="weight2 hue180">2</td>
+						</tr>
+						<tr>
+							<td class="centred rightborder">Whole-tone chromatic</td>
+							<td class="weight8 hue0">8</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight8 hue0">8</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight4 hue120">4</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight4 hue120">4</td>
+						</tr>
+						<tr>
+							<td class="centred rightborder">Melodic Phrygian</td>
+							<td class="weight7 hue30">7</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight6 hue60">6</td>
+							<td class="weight2 hue180">2</td>
+						</tr>
+						<tr class="bottomborder">
+							<td class="centred rightborder">(Difference)</td>
+							<td class="weight1 hue210">1</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight0 hue240">0</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight0 hue240">0</td>
+							<td class="weight2 hue180">2</td>
+							<td class="weight2 hue180">2</td>
 							<td class="weight2 hue180">2</td>
 							<td class="weight0 hue240">0</td>
 							<td class="weight2 hue180">2</td>
@@ -9429,13 +9499,11 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<p class="light">Again, all these distributions are reflectively symmetrical about F♯ and C. Note also that the octatonic scale is <em>rotationally</em> symmetrical by three semitones, the whole-tone scale is <em>rotationally</em> symmetrical by two semitones, and the double chromatic scale is <em>rotationally</em> symmetrical by six semitones. That is, the octatonic scale’s distribution repeats every three semitones, the whole-tone scale’s every two semitones, and the double chromatic scale’s every six semitones. This is axiomatically equivalent to their being modes of limited transposition.</p>
+			<p class="light">Note also that the whole-tone scale is <em>rotationally</em> symmetrical by two semitones, the octatonic scale is <em>rotationally</em> symmetrical by three semitones, and the double chromatic and whole-tone chromatic scales are <em>rotationally</em> symmetrical by six semitones. That is, the whole-tone scale’s distribution repeats every two semitones, the octatonic scale’s every three semitones, and the double chromatic and whole-tone chromatic scales’ every six semitones. This is axiomatically equivalent to their being modes of limited transposition.</p>
 
-			<p class="light">Now, note how close alternating heptamode and melodic Phrygian come to duplicating those distributions: in fact, disregarding the root note, alternating heptamode has <em>exactly</em> (octatonic’s adjusted distributions &times; &frac34;), and melodic Phrygian has <em>exactly</em> ((whole-tone’s adjusted distributions &times; &frac23;) + 2). The root note is the outlier here because, by definition, it must always occur in every mode of any scale.</p>
+			<p class="light">Now, note how melodic Phrygian, alternating heptamode, and apathetic minor come to duplicating those distributions: in fact, disregarding the root note, alternating heptamode has <em>exactly</em> (octatonic’s adjusted distributions &times; &frac34;), and melodic Phrygian has <em>exactly</em> ((whole-tone’s adjusted distributions &times; &frac23;) + 2). The root note is the outlier here because, by definition, it must always occur in every mode of any scale.</p>
 
-			<p class="light">Note, by contrast, that chromatic heptatonic and Ionian have nothing even <em>approaching</em> rotational symmetry in their note distributions: they <em>only</em> have reflective symmetry. I suspect this to be related to why these scales’ single-note transformations cycle through the entire chromatic scale, and the others’ don’t; however, I haven’t yet worked out all the logical and mathematical implications thereof.</p>
-
-			<p class="light">It should be fairly obvious why melodic Phrygian and its modes are 12-TET’s only heptatonic single-note transformations of the whole-tone scale: it only has six gaps into which we may add notes, and since they’re all whole steps, all possible single-note transformations change one whole step into two half-steps.</p>
+			<p class="light">It should be fairly obvious why melodic Phrygian and its modes are 12-TET’s only heptatonic single-note transformations of the whole-tone scale: we may only add notes into six gaps, which are all whole steps; thus, all such transformations <em>must</em> change one whole step into two half-steps.</p>
 
 			<p class="light">12-TET contains three different octatonic modes of limited transposition, namely Messiaen’s modes 2, 4, and 6. Can we derive other similar heptatonic scales in similar ways? That is, can deleting a single note of the octatonic, double chromatic, or whole-tone chromatic scales create other scales whose modes can in turn all be derived through single-note transformations to themselves? I believe I’ve exhausted all the possibilities, but I haven’t mathematically proved that yet.</p>
 

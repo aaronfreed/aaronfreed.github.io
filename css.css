@@ -604,6 +604,9 @@ th {
 		overflow: auto;
 		contain: inline-size;
 	}
+	.mobilenowrap {
+		white-space: nowrap;
+	}
 	.mobileleftmargin0 {
 		margin-left: 0px;
 	}
@@ -1194,8 +1197,16 @@ th {
 	.nonmobileleftmargin-30 {
 		margin-left: -30px;
 	}
+	.nonmobileleftmargin40 {
+		margin-left: 40px;
+	}
 	.nonmobileleftmargin50 {
 		margin-left: 50px;
+	}
+	.nonmobilebalancedwrap,
+	.nonmobilebalancedwrap :is(td, th, li) {
+		white-space: balance;
+		text-wrap: balance;
 	}
 }
 @media (prefers-color-scheme: light) {

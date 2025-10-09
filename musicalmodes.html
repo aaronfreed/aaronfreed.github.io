@@ -405,6 +405,7 @@ window.onload = function () {makeAllSortable();};*/
 						<li><a class="noprintlink" href="#pythagoreanintervals">Pythagoras with the looking glass: Comparing interval ratios</a>
 							<ol class="mobileleftmargin15">
 								<li><a class="noprintlink" href="#pythagoreanvsmodern">A comparison of Pythagorean tuning &amp; twelve-tone equal temperament</a></li>
+								<li><a class="noprintlink" href="#pythagoreanintervaldivision">Pythagorean interval division</a></li>
 							</ol>
 						</li>
 						<li><a class="noprintlink" href="#tonoichart">Ancient Greek <em>tonoi</em> &amp; modern modes</a>
@@ -10188,7 +10189,7 @@ window.onload = function () {makeAllSortable();};*/
 							<td class="rightborder toc-counter weight2 centred">Major second</td><td class="centred">9:8</td><td class="lightleftborder">1.125</td><td class="leftborder">2<sup>&sup1;&frasl;&#8326;</sup></td><td class="lightleftborder">&asymp;1.12246204831</td><td class="leftborder">&asymp;&minus;0.00253795169</td>
 						</tr>
 						<tr valign="bottom">
-							<td class="rightborder toc-counter weight2 centred">Minor second</td><td class="centred">256:243</td><td class="lightleftborder">1.0534979…</td><td class="leftborder">2<sup>&sup1;&frasl;&#8321;&#8322;</sup></td><td class="lightleftborder">&asymp;1.12246204831</td><td class="leftborder">&asymp;<span style="visibility: hidden;">+</span>0.00596515197</td>
+							<td class="rightborder toc-counter weight2 centred">Minor second</td><td class="centred">256:243</td><td class="lightleftborder">1.0534979…</td><td class="leftborder">2<sup>&sup1;&frasl;&#8321;&#8322;</sup></td><td class="lightleftborder">&asymp;1.05946309436</td><td class="leftborder">&asymp;<span style="visibility: hidden;">+</span>0.00596515197</td>
 						</tr>
 					</tbody>
 				</table>
@@ -10196,26 +10197,57 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p>So 12-TET is within about 0.0015 of the Pythagorean ratios for perfect fourths and fifths; its major second is off by about 0.0025; its minor third is off by about 0.004; and its major third and minor second are off by about 0.006. Only an incredibly well-trained ear could discern any of these differences.</p>
 			
-			<p>12-TET &ndash; and it also doesn’t exist in 12-TET. It’s the result of subtracting two Pythagorean minor thirds from an octave. Since Pythagorean notes weren’t spaced evenly, an octave minus two minor thirds gave you a different interval. In 12-TET, it’s just gives you a major third.</p>
-			
-			<p>Furthermore, both the modern and Pythagorean major third and minor third closely approximate 5:4 (1.25) and 6:5 (1.2) ratios. This may be part of why our ears find them so harmonically pleasing.</p>
+			<p>The only interval where 12-TET is off by more than 0.01 is the diminished fourth &ndash; which doesn’t really exist in 12-TET. It’s the result of subtracting two Pythagorean minor thirds from an octave. Since Pythagorean note spacing wasn’t even, an octave minus two minor thirds produced a different interval than a major third. In 12-TET, it’s just a major third. Unlike many diminished intervals, the Pythagorean diminished fourth is quite consonant – in fact it’s actually closer to a 5:4 ratio than the major third is, so this may not be surprising. In any case, both the modern and Pythagorean major third and minor third closely approximate 5:4 (1.25) and 6:5 (1.2) ratios, which may be part of why our ears find them so harmonically pleasing.</p>
 
 			<p>Incidentally, it’s worth noting that all the Pythagorean ratios are based on powers of two and three, and all of the ratios past the perfect fifth are results of ratio division:</p>
 			
-			<ul>
+			<div class="mobilescroll">
+				<table class="curved tabular-oldstyle nowrap" id="pythagoreanintervaldivision">
+					<thead>
+						<tr>
+							<td colspan="7" class="centred accent weight4">Pythagorean interval division</td>
+						</tr>
+						<tr class="petitecaps toc-counter weight2">
+							<th colspan="2">Dividend</th><th colspan="2" class="leftborder">Divisor</th><th colspan="3" class="leftborder">Quotient</th>
+						</tr>
+					</thead>
+					<tbody class="centred">
+						<tr>
+							<td>Octave</td><td>2:1</td><td class="leftborder">Perfect fifth</td><td>3:2</td><td class="leftborder">Perfect fourth</td><td class="right">2&sup2;:3&sup1;</td><td>4:3</td>
+						</tr>
+						<tr>
+							<td>Perfect fifth</td><td>3:2</td><td class="leftborder">Perfect fourth</td><td>4:3</td><td class="leftborder">Major second</td><td class="right">3&sup2;:2&sup3;</td><td>9:8</td>
+						</tr>
+						<tr>
+							<td>Perfect fourth</td><td>4:3</td><td class="leftborder">Major second</td><td>9:8</td><td class="leftborder">Minor third</td><td class="right">2&#8309;:3&sup3;</td><td>32:27</td>
+						</tr>
+						<tr>
+							<td>Minor third</td><td>32:27</td><td class="leftborder">Major second</td><td>9:8</td><td class="leftborder">Minor second</td><td class="right">2&#8312;:3&#8309;</td><td>256:243</td>
+						</tr>
+						<tr>
+							<td>Minor third</td><td>32:27</td><td class="leftborder">Minor second</td><td>256:243</td><td class="leftborder">Diminished fourth</td><td class="right">2&sup1;&sup3;:3&#8312;</td><td>8192:6561</td>
+						</tr>
+						<tr>
+							<td>Perfect fourth</td><td>4:3</td><td class="leftborder">Minor second</td><td>256:243</td><td class="leftborder">Major third</td><td class="right">3&#8308;:2&#8310;</td><td>81:64</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- <ul>
 				<li><strong class="toc-counter">2:1</strong> <span class="accent">(octave)</span> divided by <strong class="toc-counter">3:2</strong> (<span class="accent">perfect fifth)</span> is <span class="toc-counter weight1">2&sup2;:3&sup1;</span>, or <strong class="toc-counter">4:3</strong> <span class="accent">(perfect fourth)</span>.</li>
 				<li><strong class="toc-counter">3:2</strong> <span class="accent">(perfect fifth)</span> divided by <strong class="toc-counter">4:3</strong> <span class="accent">(perfect fourth)</span> is <span class="toc-counter weight1">3&sup2;:2&sup3;</span>, or <strong class="toc-counter">9:8</strong> <span class="accent">(major second)</span>.</li>
 				<li><strong class="toc-counter">4:3</strong> <span class="accent">(perfect fourth)</span> divided by <strong class="toc-counter">9:8</strong> <span class="accent">(major second)</span> is <span class="toc-counter weight1">2&#8309;:3&sup3;</span>, or <strong class="toc-counter">32:27</strong> <span class="accent">(minor third)</span>.</li>
 				<li><strong class="toc-counter">32:27</strong> <span class="accent">(minor third)</span> divided by <strong class="toc-counter">9:8</strong> <span class="accent">(major second)</span> is <span class="toc-counter weight1">2&#8312;:3&#8309;</span>, or <strong class="toc-counter">256:243</strong> <span class="accent">(minor second)</span>.</li>
-				<li><strong class="toc-counter">4:3</strong> <span class="accent">(perfect fourth)</span> divided by <strong class="toc-counter">256:243</strong> <span class="accent">(minor second)</span> is <span class="toc-counter weight1">3&#8308;:2&#8310;</span>, or <strong class="toc-counter">81:64</strong> <span class="accent">(major third)</span>.</li>
 				<li><strong class="toc-counter">256:243</strong> <span class="accent">(minor second)</span> divided by <strong class="toc-counter">32:27</strong> <span class="accent">(minor third)</span> is <span class="toc-counter weight1">2&sup1;&sup3;:3&#8312;</span>, or <strong class="toc-counter">8192:6561</strong> <span class="accent">(diminished fourth)</span>.</li>
-			</ul>
+				<li><strong class="toc-counter">4:3</strong> <span class="accent">(perfect fourth)</span> divided by <strong class="toc-counter">256:243</strong> <span class="accent">(minor second)</span> is <span class="toc-counter weight1">3&#8308;:2&#8310;</span>, or <strong class="toc-counter">81:64</strong> <span class="accent">(major third)</span>.</li>
+			</ul> -->
 
-			<p>One interesting footnote to this: Remember the Fibonacci sequence? Start with 1 and 1, and repeatedly add the previous two numbers together. 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, etc.</p>
+			<p>One interesting footnote to this: Remember the Fibonacci sequence? Start with 0 and 1, and repeatedly add the previous two numbers together. 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, etc.</p>
 			
-			<p>Now, look again at the ratios above. 1, 2, 3, 5, 8, and 13 &ndash; the Fibonacci sequence’s first six numbers – appear both as exponents and, in the cases of 2 and 3, as bases. The Fibonacci spiral truly is everwhere.</p>
+			<p>Now, look again at the ratios above. 1, 2, 3, 5, 8, and 13 &ndash; the Fibonacci sequence’s first six nonzero numbers – appear both as exponents and, in the cases of 2 and 3, as bases. The major third is, in fact, the only interval in the above table that <em>doesn’t</em> use Fibonacci numbers as exponents &ndash; the octave can be expressed as 2&sup1;:3&#8304;, and the perfect fifth is 3&sup1;:2&sup1;. The Fibonacci spiral truly is everwhere.</p>
 
-			<p>The Pythagorean diminished fourth, 8192:6561 or 2&sup1;&sup3;:3&#8312; (≈1.24859015394), is the result of subtracting two minor thirds from the octave… and it continues the Fibonacci pattern from the minor second&rsquo;s 2&#8312;:3&#8309;. Unlike many diminished intervals, though, the Pythagorean diminished fourth is quite consonant – in fact it’s actually closer to a 5:4 ratio than the major third is, so this may not be surprising.</p>
+			<p>The Pythagorean diminished fourth, 8192:6561 or 2&sup1;&sup3;:3&#8312; (≈1.24859015394), is the result of subtracting two minor thirds from the octave… and it continues the Fibonacci pattern from the minor second&rsquo;s 2&#8312;:3&#8309;.</p>
 			
 			<p>The next interval in the sequence would be 2,097,152:1,594,323, or 2&sup2;&sup1;:3&sup1;&sup3; (≈1.31538715806). As far as I know, this was not a Pythagorean interval, which probably won’t surprise anyone. Nor is it likely to surprise anyone that Fibonacci had his own tuning system, which I’ll undoubtedly write about soon™.</p>
 

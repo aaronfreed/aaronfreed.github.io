@@ -4900,6 +4900,67 @@ td.translation-romanized, th.translation-romanized
 	color: var(--oklab330);
 }
 
+.translucent :is(.hue0, .hue0 td, .hue0 th, td.hue0, th.hue0, .hue0links, .hue0links :is(a:link, a:visited)),
+:is(.hue0, .hue0 td, .hue0 th, td.hue0, th.hue0, .hue0links, .hue0links :is(a:link, a:visited)) .translucent,
+.hue0-tl, .hue0 t-tld, .hue0 th-tl, td.hue0-tl, th-tl.hue0,-tl .hue0links, .hue0links :is(a:link, a:visited) {
+	color: var(--oklab0-translucent);
+}
+.translucent :is(.hue30, .hue30 td, .hue30 th, td.hue30, th.hue30, .hue30links, .hue30links :is(a:link, a:visited)),
+:is(.hue30, .hue30 td, .hue30 th, td.hue30, th.hue30, .hue30links, .hue30links :is(a:link, a:visited)) .translucent,
+.hue30-tl, .hue30 t-tld, .hue30 th-tl, td.hue30-tl, th-tl.hue30,-tl .hue30links, .hue30links :is(a:link, a:visited) {
+	color: var(--oklab30-translucent);
+}
+.translucent :is(.hue60, .hue60 td, .hue60 th, td.hue60, th.hue60, .hue60links, .hue60links :is(a:link, a:visited)),
+:is(.hue60, .hue60 td, .hue60 th, td.hue60, th.hue60, .hue60links, .hue60links :is(a:link, a:visited)) .translucent,
+.hue60-tl, .hue60 t-tld, .hue60 th-tl, td.hue60-tl, th-tl.hue60,-tl .hue60links, .hue60links :is(a:link, a:visited) {
+	color: var(--oklab60-translucent);
+}
+.translucent :is(.hue90, .hue90 td, .hue90 th, td.hue90, th.hue90, .hue90links, .hue90links :is(a:link, a:visited)),
+:is(.hue90, .hue90 td, .hue90 th, td.hue90, th.hue90, .hue90links, .hue90links :is(a:link, a:visited)) .translucent,
+.hue90-tl, .hue90 t-tld, .hue90 th-tl, td.hue90-tl, th-tl.hue90,-tl .hue90links, .hue90links :is(a:link, a:visited) {
+	color: var(--oklab90-translucent);
+}
+.translucent :is(.hue120, .hue120 td, .hue120 th, td.hue120, th.hue120, .hue120links, .hue120links :is(a:link, a:visited)),
+:is(.hue120, .hue120 td, .hue120 th, td.hue120, th.hue120, .hue120links, .hue120links :is(a:link, a:visited)) .translucent,
+.hue120-tl td, .hue120-tl th, td.hue120-tl, th.hue120-tl, .hue120links-tl, .hue120links-tl :is(a:link, a:visited) {
+	color: var(--oklab120-translucent);
+}
+.translucent :is(.hue150, .hue150 td, .hue150 th, td.hue150, th.hue150, .hue150links, .hue150links :is(a:link, a:visited)),
+:is(.hue150, .hue150 td, .hue150 th, td.hue150, th.hue150, .hue150links, .hue150links :is(a:link, a:visited)) .translucent,
+.hue150-tl td, .hue150-tl th, td.hue150-tl, th.hue150-tl, .hue150links-tl, .hue150links-tl :is(a:link, a:visited) {
+	color: var(--oklab150-translucent);
+}
+.translucent :is(.hue180, .hue180 td, .hue180 th, td.hue180, th.hue180, .hue180links, .hue180links :is(a:link, a:visited)),
+:is(.hue180, .hue180 td, .hue180 th, td.hue180, th.hue180, .hue180links, .hue180links :is(a:link, a:visited)) .translucent,
+.hue180-tl td, .hue180-tl th, td.hue180-tl, th.hue180-tl, .hue180links-tl, .hue180links-tl :is(a:link, a:visited) {
+	color: var(--oklab180-translucent);
+}
+.translucent :is(.hue210, .hue210 td, .hue210 th, td.hue210, th.hue210, .hue210links, .hue210links :is(a:link, a:visited)),
+:is(.hue210, .hue210 td, .hue210 th, td.hue210, th.hue210, .hue210links, .hue210links :is(a:link, a:visited)) .translucent,
+.hue210-tl td, .hue210-tl th, td.hue210-tl, th.hue210-tl, .hue210links-tl, .hue210links-tl :is(a:link, a:visited) {
+	color: var(--oklab210-translucent);
+}
+.translucent :is(.hue240, .hue240 td, .hue240 th, td.hue240, th.hue240, .hue240links, .hue240links :is(a:link, a:visited)),
+:is(.hue240, .hue240 td, .hue240 th, td.hue240, th.hue240, .hue240links, .hue240links :is(a:link, a:visited)) .translucent,
+.hue240-tl td, .hue240-tl th, td.hue240-tl, th.hue240-tl, .hue240links-tl, .hue240links-tl :is(a:link, a:visited) {
+	color: var(--oklab240-translucent);
+}
+.translucent :is(.hue270, .hue270 td, .hue270 th, td.hue270, th.hue270, .hue270links, .hue270links :is(a:link, a:visited)),
+:is(.hue270, .hue270 td, .hue270 th, td.hue270, th.hue270, .hue270links, .hue270links :is(a:link, a:visited)) .translucent,
+.hue270-tl td, .hue270-tl th, td.hue270-tl, th.hue270-tl, .hue270links-tl, .hue270links-tl :is(a:link, a:visited) {
+	color: var(--oklab270-translucent);
+}
+.translucent :is(.hue300, .hue300 td, .hue300 th, td.hue300, th.hue300, .hue300links, .hue300links :is(a:link, a:visited)),
+:is(.hue300, .hue300 td, .hue300 th, td.hue300, th.hue300, .hue300links, .hue300links :is(a:link, a:visited)) .translucent,
+.hue300-tl td, .hue300-tl th, td.hue300-tl, th.hue300-tl, .hue300links-tl, .hue300links-tl :is(a:link, a:visited) {
+	color: var(--oklab300-translucent);
+}
+.translucent :is(.hue330, .hue330 td, .hue330 th, td.hue330, th.hue330, .hue330links, .hue330links :is(a:link, a:visited)),
+:is(.hue330, .hue330 td, .hue330 th, td.hue330, th.hue330, .hue330links, .hue330links :is(a:link, a:visited)) .translucent,
+.hue330-tl td, .hue330-tl th, td.hue330-tl, th.hue330-tl, .hue330links-tl, .hue330links-tl :is(a:link, a:visited) {
+	color: var(--oklab330-translucent);
+}
+
 .speaker {
 	margin-top: 6px;
 	margin-left: 16px;

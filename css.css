@@ -5478,7 +5478,7 @@ li.weight8,
 	line-height: 133.33333%;
 }
 .musictheory :is(p, td, th, .fixheight, li) {
-	line-height: 28px;
+	line-height: 1.75rem;
 }
 .discography .fixheight,
 .discography .fixheight :is(td, th) {

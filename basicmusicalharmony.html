@@ -3,7 +3,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="css.css">
-		<link rel="stylesheet" type="text/css" href="https://aaronfreed.github.io/css.css">
+		<!-- <link rel="stylesheet" type="text/css" href="https://aaronfreed.github.io/css.css"> -->
 		<title>Basic Musical Harmony</title>
 	</head><!--𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗𝟎-->
 	<body class="light musictheory tabular-oldstyle">
@@ -16,7 +16,7 @@
 
 			<p class="fixheight">This page assumes you&rsquo;ve familiarized yourself with part one&rsquo;s Basic Rhythmic Concepts and have at least a basic grasp of time signatures (though you needn&rsquo;t be able to identify them by ear). It introduces the treble and bass clefs and their pitches; diatonic major and natural minor scales; major, minor, diminished, and augmented chords; a key&rsquo;s tonic, subdominant, and dominant chords; sharps, flats, and naturals; and key signatures. It&rsquo;s also a work in progress; I&rsquo;ve uploaded it to make it easier to solicit feedback from people on its comprehensibility. Expect the final version to be substantially different; it may in fact be multiple pages.</p>
 
-			<p class="fixheight">Readers who want to dive headfirst into music theory after finishing this page may be interested in <em><a href="musicalmodes.html">Aequilibrium harmoniae</a></em> (Latin for both <em><strong class="toc-counter">The Balance of Harmony</strong></em> and <em><strong class="toc-counter">The Harmony of Balance</strong></em>), my book-length, obsessively detailed mathematical analysis of scales, modes, & the circle of fifths. Topics include how the circle of fifths underpins all modern musical harmony, how the Pythagoreans invented the diatonic major scale we still use today, why it’s the most evenly spaced seven-note scale possible in our tuning system, why its evenness in turn makes it harmonically pleasing, and many of the ways that music is ultimately applied mathematics.</p>
+			<p class="fixheight">Readers who want to dive headfirst into music theory after finishing this page may be interested in <em><a href="musicalmodes.html" target="_blank" rel="noopener noreferrer">Aequilibrium harmoniae</a></em> (Latin for both <em><strong class="toc-counter">The Balance of Harmony</strong></em> and <em><strong class="toc-counter">The Harmony of Balance</strong></em>), my book-length, obsessively detailed mathematical analysis of scales, modes, & the circle of fifths. Topics include how the circle of fifths underpins all modern musical harmony, how the Pythagoreans invented the diatonic major scale we still use today, why it’s the most evenly spaced seven-note scale possible in our tuning system, why its evenness in turn makes it harmonically pleasing, and many of the ways that music is ultimately applied mathematics.</p>
 
 		</header>
 
@@ -770,7 +770,7 @@
 
 		<p>It may be helpful to understand, first, that the <span class="toc-counter weight4 petitecaps">octave</span> (from Latin <em>octavus</em>, or <em>eighth</em>; so named because it’s the distance between the diatonic major scale’s first and eighth notes) is based on the fundamental ratio of 2:1. That is, Western music defines <span class="weight4 hue270">A4</span>’s pitch as 440 Hz. <span class="weight4 hue270">A3</span>, found an octave below <span class="weight4 hue270">A4</span>, is 220 Hz, or 440 / 2. <span class="weight4 hue270">A5</span>, found an octave above <span class="weight4 hue270">A4</span>, is 880 Hz, or 440 * 2. Three other foundational intervals (the perfect fifth, the perfect fourth, and the major second) approximate other <span class="toc-counter weight4 petitecaps">superparticular</span> (i.e., <strong><span style="letter-spacing: 1;"><span class="toc-counter"><em>n</em>+1</span>:</span><em class="toc-counter">n</em></strong>) ratios; these were first specified by the Pythagoreans approximately <em>25 centuries ago</em>.</p>
 		
-		<p>In the following table, &ldquo;WS&rdquo; stands for how many whole steps the top note is above the bottom note, &ldquo;P&rdquo; stands for &ldquo;Pythagorean&rdquo; (i.e., the &ldquo;ideal&rdquo; ratios), &ldquo;M&rdquo; for &ldquo;Modern&rdquo; (i.e., the twelve-tone equal temperament employed by modern tuning), &ldquo;R&rdquo; for &ldquo;Ratio&rdquo;, and &ldquo;Q&rdquo; for &ldquo;Quotient&rdquo;.</p>
+		<p>In the following table, &ldquo;WS&rdquo; stands for how many whole steps the top note is above the bottom note, &ldquo;P&rdquo; stands for &ldquo;Pythagorean&rdquo; (i.e., the &ldquo;ideal&rdquo; ratios), &ldquo;M&rdquo; for &ldquo;Modern&rdquo; (i.e., the twelve-tone equal temperament employed by modern tuning), &ldquo;R&rdquo; for &ldquo;Ratio&rdquo;, and &ldquo;Q&rdquo; for &ldquo;Quotient&rdquo;. Note that for all the fundamental intervals of the octave, the difference between the modern and Pythagorean ratios never exceeds 0.006 in either direction, suggesting that it would take an incredibly trained ear to tell the difference. (My book <em class="workcredit">Aequilibrium harmoniae</em> contains a much deeper dive into <a href="musicalmodes.html#ancientgreekharmony" target="_blank" rel="noopener noreferrer">ancient Greek harmony</a>, including but by no means limited to <a href="musicalmodes.html#pythagoreanintervals" target="_blank" rel="noopener noreferrer">Pythagorean tuning</a>.)</p>
 
 		<div class="mobilescroll">
 			<table class="curved tabular-oldstyle nowrap">
@@ -784,31 +784,29 @@
 				</thead>
 				<tbody>
 					<tr valign="bottom">
-						<td class="rightborder weight3">Octave</td><td>6</td><td class="centred">2:1</td><td>2</td><td>2<span style="visibility: hidden;"><sup>&sup1;&frasl;&#8321;</sup></span></td><td><span style="visibility: hidden;">=</span>2</td><td><span style="visibility: hidden;">=+</span>0</td>
+						<td class="rightborder weight3 centred">Octave</td><td>6</td><td class="centred">2:1</td><td>2</td><td>2<span style="visibility: hidden;"><sup>&sup1;&frasl;&#8321;</sup></span></td><td><span style="visibility: hidden;">=</span>2</td><td><span style="visibility: hidden;">=+</span>0</td>
 					</tr>
 					<tr valign="bottom">
-						<td class="rightborder weight3">Perfect fifth</td><td>3&frac12;</td><td class="centred">3:2</td><td>1.5</td><td>2<sup>&#8311;&frasl;&#8321;&#8322;</sup></td><td>&asymp;1.49830707688</td><td>&asymp;&minus;0.00169292312</td>
+						<td class="rightborder weight3 centred">Perfect fifth</td><td>3&frac12;</td><td class="centred">3:2</td><td>1.5</td><td>2<sup>&#8311;&frasl;&#8321;&#8322;</sup></td><td>&asymp;1.49830707688</td><td>&asymp;&minus;0.00169292312</td>
 					</tr>
 					<tr valign="bottom">
-						<td class="rightborder weight3">Perfect fourth</td><td>2&frac12;</td><td class="centred">4:3</td><td>1.3333333&hellip;</td><td>2<sup>&#8309;&frasl;&#8321;&#8322;</sup></td><td>&asymp;1.33483985417</td><td>&asymp;<span style="visibility: hidden;">+</span>0.00150652083</td>
+						<td class="rightborder weight3 centred">Perfect fourth</td><td>2&frac12;</td><td class="centred">4:3</td><td>1.3333333&hellip;</td><td>2<sup>&#8309;&frasl;&#8321;&#8322;</sup></td><td>&asymp;1.33483985417</td><td>&asymp;<span style="visibility: hidden;">+</span>0.00150652083</td>
 					</tr>
 					<tr valign="bottom">
-						<td class="rightborder weight3">Major third</td><td>2</td><td class="centred">81:64</td><td>1.265625</td><td>2<sup>&sup1;&frasl;&#8323;</sup></td><td>&asymp;1.25992104989</td><td>&asymp;&minus;0.00570395011</td>
+						<td class="rightborder weight3 centred">Major third</td><td>2</td><td class="centred">81:64</td><td>1.265625</td><td>2<sup>&sup1;&frasl;&#8323;</sup></td><td>&asymp;1.25992104989</td><td>&asymp;&minus;0.00570395011</td>
 					</tr>
 					<tr valign="bottom">
-						<td class="rightborder weight3">Minor third</td><td>1&frac12;</td><td class="centred">32:27</td><td>1.1851851…</td><td>2<sup>&sup1;&frasl;&#8324;</sup></td><td>&asymp;1.18920711500</td><td>&asymp;<span style="visibility: hidden;">+</span>0.00402192982</td>
+						<td class="rightborder weight3 centred">Minor third</td><td>1&frac12;</td><td class="centred">32:27</td><td>1.1851851…</td><td>2<sup>&sup1;&frasl;&#8324;</sup></td><td>&asymp;1.18920711500</td><td>&asymp;<span style="visibility: hidden;">+</span>0.00402192982</td>
 					</tr>
 					<tr valign="bottom">
-						<td class="rightborder weight3">Major second</td><td>1</td><td class="centred">9:8</td><td>1.125</td><td>2<sup>&sup1;&frasl;&#8326;</sup></td><td>&asymp;1.12246204831</td><td>&asymp;&minus;0.00253795169</td>
+						<td class="rightborder weight3 centred">Major second</td><td>1</td><td class="centred">9:8</td><td>1.125</td><td>2<sup>&sup1;&frasl;&#8326;</sup></td><td>&asymp;1.12246204831</td><td>&asymp;&minus;0.00253795169</td>
 					</tr>
 					<tr valign="bottom">
-						<td class="rightborder weight3">Minor second</td><td>&frac12;</td><td class="centred">256:243</td><td>1.0534979…</td><td>2<sup>&sup1;&frasl;&#8321;&#8322;</sup></td><td>&asymp;1.05946309436</td><td>&asymp;<span style="visibility: hidden;">+</span>0.00596515197</td>
+						<td class="rightborder weight3 centred">Minor second</td><td>&frac12;</td><td class="centred">256:243</td><td>1.0534979…</td><td>2<sup>&sup1;&frasl;&#8321;&#8322;</sup></td><td>&asymp;1.05946309436</td><td>&asymp;<span style="visibility: hidden;">+</span>0.00596515197</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
-
-		<p>Mathematics nerds may find it interesting that our modern twelve-tone equal temperament is within about 0.0015 of the Pythagorean ratios for perfect fourths and fifths; its ratios for the major third and minor second are off by approximately 0.006; its ratio for the minor third is off by approximately 0.004; and its ratio for the major second is off by approximately 0.0025. In short, it would take an incredibly well-trained ear to discern any of the differences. In both Pythagorean and modern tunings, moreover, the major third and minor third closely approximate 5:4 (1.25) and 6:5 (1.2) ratios. (<em><a href="musicalmodes.html#pythagoreanintervals" target="_blank" rel="noopener noreferrer">Aequilibrium harmoniae</a></em> contains a much deeper dive into ancient Greek harmony, including but by no means limited to Pythagorean tuning.)</p>
 
 		<!-- <p>Some of the Pythagorean ratios may seem arbitrary, but they’re all based on powers of two and three, and they’re results of ratio division:</p>
 		
@@ -821,7 +819,7 @@
 
 		<p>Math nerds may also find it interesting that the ratios of the perfect fifth, perfect fourth, and major second also include the third, fourth, fifth, and sixth numbers of the Fibonacci sequence (1, 1, 2, 3, 5, 8) in their exponents.</p> -->
 
-		<p>The ear finds the superparticular ratios between small integers <span class="toc-counter weight4 petitecaps">consonant</span>, or harmonically pleasing. However, drifting too far from these fundamental ratios (or direct multiples thereof) creates <span class="toc-counter weight4 petitecaps">dissonance</span>, or pitch combinations that unsettle most listeners. The <span class="toc-counter weight4 petitecaps">tritone</span>, a √2:1 ratio, is so dissonant that the Latin phrase <em class="toc-counter weight4 petitecaps">diabolus in m&umacr;sic&amacr;</em> (<em>the devil in music</em>) is often used as a synonym (although <em>diabolus in musica</em> may also refer to dissonance more generally). Contrary to popular belief, however, tritones were never banned, nor could composers be excommunicated just for using them. Jazz bassist and music theorist <a href="https://en.wikipedia.org/wiki/Adam_Neely" target="_blank" class="underline songlink" rel="noopener noreferrer">Adam Neely</a> calls the minor ninth, a 2<sup>&sup1;&sup3;&frasl;&#8321;&#8322;</sup>:1 (&asymp;2.11892618872) ratio, <a href="https://www.youtube.com/watch?v=QwSfQM_ES24" target="_blank" class="underline songlink" rel="noopener noreferrer">the most dissonant interval</a>.</p>
+		<p>In both Pythagorean and modern tunings, moreover, the major third and minor third closely approximate 5:4 (1.25) and 6:5 (1.2) ratios, suggesting that the ear finds the superparticular ratios between small integers <span class="toc-counter weight4 petitecaps">consonant</span>, or harmonically pleasing. However, drifting too far from these fundamental ratios (or direct multiples thereof) creates <span class="toc-counter weight4 petitecaps">dissonance</span>, or pitch combinations that unsettle most listeners. The <span class="toc-counter weight4 petitecaps">tritone</span>, a √2:1 ratio, is so dissonant that the Latin phrase <em class="toc-counter weight4 petitecaps">diabolus in m&umacr;sic&amacr;</em> (<em>the devil in music</em>) is often used as a synonym (although <em>diabolus in musica</em> may also refer to dissonance more generally). Contrary to popular belief, however, tritones were never banned, nor could composers be excommunicated just for using them. Jazz bassist and music theorist <a href="https://en.wikipedia.org/wiki/Adam_Neely" target="_blank" class="underline songlink" rel="noopener noreferrer">Adam Neely</a> calls the minor ninth, a 2<sup>&sup1;&sup3;&frasl;&#8321;&#8322;</sup>:1 (&asymp;2.11892618872) ratio, <a href="https://www.youtube.com/watch?v=QwSfQM_ES24" target="_blank" class="underline songlink" rel="noopener noreferrer">the most dissonant interval</a>.</p>
 
 		<p>Also, note that large intervals’ names become increasingly disconnected from their whole step counts (as seen above) because two contiguous pairs of white keys on the piano (<span class="weight4 hue330">B</span> to <span class="weight4 hue0">C</span> and <span class="weight4 hue120">E</span> to <span class="weight4 hue150">F</span>) are a half-step apart, and the intervals are (with the obvious exception of the tritone) named for their degrees on the <span class="weight4 hue0">C major</span> scale: e.g., since <span class="weight4 hue150">F</span> is its fourth degree, <span class="weight4 hue0">C</span> to <span class="weight4 hue150">F</span> is a perfect fourth. Thus, a minor sixth contains four whole steps.</p>
 		
@@ -972,7 +970,7 @@
 		<p>Let&rsquo;s return to the above table on key signatures and expand it. The following table is adapated from my <a href="musicalmodes.html#keysignatures" target="_blank" class="underline songlink">page on modes</a>. In order, its column headers stand for &ldquo;Lydian&rdquo;, &ldquo;Ionian&rdquo; (Major), &ldquo;Mixolydian&rdquo;, &ldquo;Dorian&rdquo;, &ldquo;Aeolian&rdquo; (Minor), &ldquo;Phrygian&rdquo;, &ldquo;Locrian&rdquo;, and &ldquo;Key Signature&rdquo;. (The gray &ldquo;Dorian&rdquo; column is a pun on <a href="https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray" target="_blank" class="underline songlink">a classic Oscar Wilde novel</a>.) Don&rsquo;t panic about its information density: not all of it will yet be meaningful to you. However, you may note that I presented the modes in a different order from the one seen above, and also that following them from left to right results in another passage up the circle of fiths. If you&rsquo;re wondering whether these facts are related, the answer is an unequivocal &ldquo;yes&rdquo;.</p>
 
 		<div class="mobilescroll">
-			<table id="keysignaturetable" class="curved tabular-oldstyle nowrap">
+			<table id="keysignaturetable" class="curved tabular-oldstyle nowrap sidepad8">
 				<thead class="fixheight">
 					<tr><th colspan="15" class="accent weight4">Key Signatures of the Seven Modes for the Twelve-Note Chromatic Scale</th></tr>
 					<tr class="toc-counter weight2">
@@ -989,153 +987,153 @@
 				<tbody class="fixheight">
 					<tr>                
 						<td class="right weight4 hue180">F<span class="musicsymbol">♯</span>       </td><td class="right weight4 hue30">C<span class="musicsymbol">♯</span>        </td><td class="right weight4 hue240">G<span class="musicsymbol">♯</span>       </td><td class="right weight4 hue90">D<span class="musicsymbol">♯</span>        </td><td class="right weight4 hue300">A<span class="musicsymbol">♯</span>       </td><td class="right weight4 hue150">E<span class="musicsymbol">♯</span>       </td><td class="right weight4 hue0">B<span class="musicsymbol">♯</span>         </td><td class="centred leftborder rightborder highlight mediumbottomborder">7<span class="musicsymbol">♯</span></td>
-						<td><span class="musicsymbol">♯</span></td><!--F-->
-						<td><span class="musicsymbol">♯</span></td><!--C-->
-						<td><span class="musicsymbol">♯</span></td><!--G-->
-						<td><span class="musicsymbol">♯</span></td><!--D-->
-						<td><span class="musicsymbol">♯</span></td><!--A-->
-						<td><span class="musicsymbol">♯</span></td><!--E-->
-						<td><span class="musicsymbol">♯</span></td><!--B-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--F-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--C-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--G-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--D-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--A-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--E-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--B-->
 					</tr>
 					<tr class="orange">
 						<td class="right weight4 hue330">B<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue180">F<span class="musicsymbol">♯</span>       </td><td class="right weight4 hue30">C<span class="musicsymbol">♯</span>        </td><td class="right weight4 hue240">G<span class="musicsymbol">♯</span>       </td><td class="right weight4 hue90">D<span class="musicsymbol">♯</span>        </td><td class="right weight4 hue300">A<span class="musicsymbol">♯</span>       </td><td class="right weight4 hue150">E<span class="musicsymbol">♯</span>       </td><td class="centred leftborder rightborder highlight mediumbottomborder">6<span class="musicsymbol">♯</span></td>
-						<td><span class="musicsymbol">♯</span></td><!--F-->
-						<td><span class="musicsymbol">♯</span></td><!--C-->
-						<td><span class="musicsymbol">♯</span></td><!--G-->
-						<td><span class="musicsymbol">♯</span></td><!--D-->
-						<td><span class="musicsymbol">♯</span></td><!--A-->
-						<td><span class="musicsymbol">♯</span></td><!--E-->
-						<td>                                  </td><!--B-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--F-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--C-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--G-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--D-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--A-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--E-->
+						<td>                                              </td><!--B-->
 					</tr>
 					<tr>                
 						<td class="right weight4 hue120">E<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue330">B<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue180">F<span class="musicsymbol">♯</span>         </td><td class="right weight4 hue30">C<span class="musicsymbol">♯</span>                            </td><td class="right weight4 hue240">G<span class="musicsymbol">♯</span>              </td><td class="right weight4 hue90">D<span class="musicsymbol">♯</span>       </td><td class="right weight4 hue300">A<span class="musicsymbol">♯</span>      </td><td class="centred leftborder rightborder highlight mediumbottomborder">5<span class="musicsymbol">♯</span></td>
-						<td><span class="musicsymbol">♯</span></td><!--F-->
-						<td><span class="musicsymbol">♯</span></td><!--C-->
-						<td><span class="musicsymbol">♯</span></td><!--G-->
-						<td><span class="musicsymbol">♯</span></td><!--D-->
-						<td><span class="musicsymbol">♯</span></td><!--A-->
-						<td>                                  </td><!--E-->
-						<td>                                  </td><!--B-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--F-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--C-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--G-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--D-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--A-->
+						<td>                                              </td><!--E-->
+						<td>                                              </td><!--B-->
 					</tr>
 					<tr>                
 						<td class="right weight4 hue270">A<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue120">E<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue330">B<span class="musicsymbol hidden">♮</span>    </td><td class="right weight4 hue180">F<span class="musicsymbol">♯</span>                            </td><td class="right weight4 hue30">C<span class="musicsymbol">♯</span>              </td><td class="right weight4 hue240">G<span class="musicsymbol">♯</span>       </td><td class="right weight4 hue90">D<span class="musicsymbol">♯</span>      </td><td class="centred leftborder rightborder highlight mediumbottomborder">4<span class="musicsymbol">♯</span></td>
-						<td><span class="musicsymbol">♯</span></td><!--F-->
-						<td><span class="musicsymbol">♯</span></td><!--C-->
-						<td><span class="musicsymbol">♯</span></td><!--G-->
-						<td><span class="musicsymbol">♯</span></td><!--D-->
-						<td>                                  </td><!--A-->
-						<td>                                  </td><!--E-->
-						<td>                                  </td><!--B-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--F-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--C-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--G-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--D-->
+						<td>                                              </td><!--A-->
+						<td>                                              </td><!--E-->
+						<td>                                              </td><!--B-->
 					</tr>
 					<tr>                
 						<td class="right weight4 hue60">D<span class="musicsymbol hidden">♮</span> </td><td class="right weight4 hue270">A<span class="musicsymbol hidden">♮</span>        </td><td class="right weight4 hue120">E<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue330">B<span class="musicsymbol hidden">♮</span>                       </td><td class="right weight4 hue180">F<span class="musicsymbol">♯</span>              </td><td class="right weight4 hue30">C<span class="musicsymbol">♯</span>       </td><td class="right weight4 hue240">G<span class="musicsymbol">♯</span>      </td><td class="centred leftborder rightborder highlight mediumbottomborder">3<span class="musicsymbol">♯</span></td>
-						<td><span class="musicsymbol">♯</span></td><!--F-->
-						<td><span class="musicsymbol">♯</span></td><!--C-->
-						<td><span class="musicsymbol">♯</span></td><!--G-->
-						<td>                                  </td><!--D-->
-						<td>                                  </td><!--A-->
-						<td>                                  </td><!--E-->
-						<td>                                  </td><!--B-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--F-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--C-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--G-->
+						<td>                                              </td><!--D-->
+						<td>                                              </td><!--A-->
+						<td>                                              </td><!--E-->
+						<td>                                              </td><!--B-->
 					</tr>
 					<tr>                
 						<td class="right weight4 hue210">G<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue60">D<span class="musicsymbol hidden">♮</span> </td><td class="right weight4 hue270">A<span class="musicsymbol hidden">♮</span>    </td><td class="right weight4 hue120">E<span class="musicsymbol hidden">♮</span>              </td><td class="right weight4 hue330">B<span class="musicsymbol hidden">♮</span>         </td><td class="right weight4 hue180">F<span class="musicsymbol">♯</span>       </td><td class="right weight4 hue30">C<span class="musicsymbol">♯</span>      </td><td class="centred leftborder rightborder highlight mediumbottomborder">2<span class="musicsymbol">♯</span></td>
-						<td><span class="musicsymbol">♯</span></td><!--F-->
-						<td><span class="musicsymbol">♯</span></td><!--C-->
-						<td>                                  </td><!--G-->
-						<td>                                  </td><!--D-->
-						<td>                                  </td><!--A-->
-						<td>                                  </td><!--E-->
-						<td>                                  </td><!--B-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--F-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--C-->
+						<td>                                              </td><!--G-->
+						<td>                                              </td><!--D-->
+						<td>                                              </td><!--A-->
+						<td>                                              </td><!--E-->
+						<td>                                              </td><!--B-->
 					</tr>
 					<tr>                
 						<td class="right weight4 hue0">C<span class="musicsymbol hidden">♮</span>  </td><td class="right weight4 hue210">G<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue60">D<span class="musicsymbol hidden">♮</span> </td><td class="right weight4 hue270">A<span class="musicsymbol hidden">♮</span>                       </td><td class="right weight4 hue120">E<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue330">B<span class="musicsymbol hidden">♮</span>  </td><td class="right weight4 hue180">F<span class="musicsymbol">♯</span>      </td><td class="centred leftborder rightborder highlight mediumbottomborder">1<span class="musicsymbol">♯</span></td>
-						<td><span class="musicsymbol">♯</span></td><!--F-->
-						<td>                                  </td><!--C-->
-						<td>                                  </td><!--G-->
-						<td>                                  </td><!--D-->
-						<td>                                  </td><!--A-->
-						<td>                                  </td><!--E-->
-						<td>                                  </td><!--B-->
+						<td>&nbsp;<span class="musicsymbol">♯</span>&nbsp;</td><!--F-->
+						<td>                                              </td><!--C-->
+						<td>                                              </td><!--G-->
+						<td>                                              </td><!--D-->
+						<td>                                              </td><!--A-->
+						<td>                                              </td><!--E-->
+						<td>                                              </td><!--B-->
 					</tr>
 					<tr class="azure">
 						<td class="right weight4 hue150">F<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue0">C<span class="musicsymbol hidden">♮</span>  </td><td class="right weight4 hue210">G<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue60">D<span class="musicsymbol hidden">♮</span> </td><td class="right weight4 hue270">A<span class="musicsymbol hidden">♮</span>         </td><td class="right weight4 hue120">E<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue330">B<span class="musicsymbol hidden">♮</span> </td><td class="centred leftborder rightborder highlight mediumbottomborder">&nbsp;<span class="musicsymbol">♮</span>&nbsp;</td>
-						<td>                                  </td><!--F-->
-						<td>                                  </td><!--C-->
-						<td>                                  </td><!--G-->
-						<td>                                  </td><!--D-->
-						<td>                                  </td><!--A-->
-						<td>                                  </td><!--E-->
-						<td>                                  </td><!--B-->
+						<td>                                              </td><!--F-->
+						<td>                                              </td><!--C-->
+						<td>                                              </td><!--G-->
+						<td>                                              </td><!--D-->
+						<td>                                              </td><!--A-->
+						<td>                                              </td><!--E-->
+						<td>                                              </td><!--B-->
 					</tr>
 					<tr>                
 						<td class="right weight4 hue300">B<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue150">F<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue0">C<span class="musicsymbol hidden">♮</span>  </td><td class="right weight4 hue210">G<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue60">D<span class="musicsymbol hidden">♮</span> </td><td class="right weight4 hue270">A<span class="musicsymbol hidden">♮</span>  </td><td class="right weight4 hue120">E<span class="musicsymbol hidden">♮</span></td><td class="centred leftborder rightborder highlight mediumbottomborder">1<span class="musicsymbol">♭</span></td>
-						<td>                                  </td><!--F-->
-						<td>                                  </td><!--C-->
-						<td>                                  </td><!--G-->
-						<td>                                  </td><!--D-->
-						<td>                                  </td><!--A-->
-						<td>                                  </td><!--E-->
-						<td><span class="musicsymbol">♭</span></td><!--B-->
+						<td>                                              </td><!--F-->
+						<td>                                              </td><!--C-->
+						<td>                                              </td><!--G-->
+						<td>                                              </td><!--D-->
+						<td>                                              </td><!--A-->
+						<td>                                              </td><!--E-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--B-->
 					</tr>
 					<tr>                
 						<td class="right weight4 hue90">E<span class="musicsymbol">♭</span>        </td><td class="right weight4 hue300">B<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue150">F<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue0">C<span class="musicsymbol hidden">♮</span>  </td><td class="right weight4 hue210">G<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue60">D<span class="musicsymbol hidden">♮</span> </td><td class="right weight4 hue270">A<span class="musicsymbol hidden">♮</span> </td><td class="centred leftborder rightborder highlight mediumbottomborder">2<span class="musicsymbol">♭</span></td>
-						<td>                                  </td><!--F-->
-						<td>                                  </td><!--C-->
-						<td>                                  </td><!--G-->
-						<td>                                  </td><!--D-->
-						<td>                                  </td><!--A-->
-						<td><span class="musicsymbol">♭</span></td><!--E-->
-						<td><span class="musicsymbol">♭</span></td><!--B-->
+						<td>                                              </td><!--F-->
+						<td>                                              </td><!--C-->
+						<td>                                              </td><!--G-->
+						<td>                                              </td><!--D-->
+						<td>                                              </td><!--A-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--E-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--B-->
 					</tr>
 					<tr>                
 						<td class="right weight4 hue240">A<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue90">E<span class="musicsymbol">♭</span>        </td><td class="right weight4 hue300">B<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue150">F<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue0">C<span class="musicsymbol hidden">♮</span>  </td><td class="right weight4 hue210">G<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue60">D<span class="musicsymbol hidden">♮</span> </td><td class="centred leftborder rightborder highlight mediumbottomborder">3<span class="musicsymbol">♭</span></td>
-						<td>                                  </td><!--F-->
-						<td>                                  </td><!--C-->
-						<td>                                  </td><!--G-->
-						<td>                                  </td><!--D-->
-						<td><span class="musicsymbol">♭</span></td><!--A-->
-						<td><span class="musicsymbol">♭</span></td><!--E-->
-						<td><span class="musicsymbol">♭</span></td><!--B-->
+						<td>                                              </td><!--F-->
+						<td>                                              </td><!--C-->
+						<td>                                              </td><!--G-->
+						<td>                                              </td><!--D-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--A-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--E-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--B-->
 					</tr>
 					<tr>                
 						<td class="right weight4 hue30">D<span class="musicsymbol">♭</span>        </td><td class="right weight4 hue240">A<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue90">E<span class="musicsymbol">♭</span>        </td><td class="right weight4 hue300">B<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue150">F<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue0">C<span class="musicsymbol hidden">♮</span>  </td><td class="right weight4 hue210">G<span class="musicsymbol hidden">♮</span></td><td class="centred leftborder rightborder highlight mediumbottomborder">4<span class="musicsymbol">♭</span></td>
-						<td>                                  </td><!--F-->
-						<td>                                  </td><!--C-->
-						<td>                                  </td><!--G-->
-						<td><span class="musicsymbol">♭</span></td><!--D-->
-						<td><span class="musicsymbol">♭</span></td><!--A-->
-						<td><span class="musicsymbol">♭</span></td><!--E-->
-						<td><span class="musicsymbol">♭</span></td><!--B-->
+						<td>                                              </td><!--F-->
+						<td>                                              </td><!--C-->
+						<td>                                              </td><!--G-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--D-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--A-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--E-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--B-->
 					</tr>
 					<tr>                
 						<td class="right weight4 hue180">G<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue30">D<span class="musicsymbol">♭</span>        </td><td class="right weight4 hue240">A<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue90">E<span class="musicsymbol">♭</span>        </td><td class="right weight4 hue300">B<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue150">F<span class="musicsymbol hidden">♮</span></td><td class="right weight4 hue0">C<span class="musicsymbol hidden">♮</span>  </td><td class="centred leftborder rightborder highlight mediumbottomborder">5<span class="musicsymbol">♭</span></td>
-						<td>                                  </td><!--F-->
-						<td>                                  </td><!--C-->
-						<td><span class="musicsymbol">♭</span></td><!--G-->
-						<td><span class="musicsymbol">♭</span></td><!--D-->
-						<td><span class="musicsymbol">♭</span></td><!--A-->
-						<td><span class="musicsymbol">♭</span></td><!--E-->
-						<td><span class="musicsymbol">♭</span></td><!--B-->
+						<td>                                              </td><!--F-->
+						<td>                                              </td><!--C-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--G-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--D-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--A-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--E-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--B-->
 					</tr>
 					<tr class="orange">
 						<td class="right weight4 hue330">C<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue180">G<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue30">D<span class="musicsymbol">♭</span>        </td><td class="right weight4 hue240">A<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue90">E<span class="musicsymbol">♭</span>                 </td><td class="right weight4 hue300">B<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue150">F<span class="musicsymbol hidden">♮</span></td><td class="centred leftborder rightborder highlight mediumbottomborder">6<span class="musicsymbol">♭</span></td>
-						<td>                                  </td><!--F-->
-						<td><span class="musicsymbol">♭</span></td><!--C-->
-						<td><span class="musicsymbol">♭</span></td><!--G-->
-						<td><span class="musicsymbol">♭</span></td><!--D-->
-						<td><span class="musicsymbol">♭</span></td><!--A-->
-						<td><span class="musicsymbol">♭</span></td><!--E-->
-						<td><span class="musicsymbol">♭</span></td><!--B-->
+						<td>                                              </td><!--F-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--C-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--G-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--D-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--A-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--E-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--B-->
 					</tr>
 					<tr>                
 						<td class="right weight4 hue120">F<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue330">C<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue180">G<span class="musicsymbol">♭</span>       </td><td class="right weight4 hue30">D<span class="musicsymbol">♭</span>        </td><td class="right weight4 hue240">A<span class="musicsymbol">♭</span>                </td><td class="right weight4 hue90">E<span class="musicsymbol">♭</span>          </td><td class="right weight4 hue300">B<span class="musicsymbol">♭</span>       </td><td class="centred leftborder rightborder highlight mediumbottomborder">7<span class="musicsymbol">♭</span></td>
-						<td><span class="musicsymbol">♭</span></td><!--F-->
-						<td><span class="musicsymbol">♭</span></td><!--C-->
-						<td><span class="musicsymbol">♭</span></td><!--G-->
-						<td><span class="musicsymbol">♭</span></td><!--D-->
-						<td><span class="musicsymbol">♭</span></td><!--A-->
-						<td><span class="musicsymbol">♭</span></td><!--E-->
-						<td><span class="musicsymbol">♭</span></td><!--B-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--F-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--C-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--G-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--D-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--A-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--E-->
+						<td>&nbsp;<span class="musicsymbol">♭</span>&nbsp;</td><!--B-->
 					</tr>
 				</tbody>
 			</table>
@@ -1167,7 +1165,7 @@
 
 		<p class="petitecaps toc-counter centred">(<span class="accent weight4">To be continued.</span>)</p>
 
-		<p class="marginleft30"><span class="subheading">Further reading:</span> <em><a href="musicalmodes.html" class="underline songlink">Aequilibrium harmoniae: a mathematical analysis of scales, modes, & the circle of fifths</a></em></p>
+		<p class="marginleft30"><span class="subheading">Further reading:</span> <em><a href="musicalmodes.html" class="underline songlink" target="_blank" rel="noopener noreferrer">Aequilibrium harmoniae: a mathematical analysis of scales, modes, & the circle of fifths</a></em></p>
 
 		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 

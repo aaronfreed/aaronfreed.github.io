@@ -107,10 +107,25 @@ window.onload = function () {makeAllSortable();};*/
 							</ol>
 						</li>
 						<li><a class="noprintlink" href="#circleoffifths">Why is this happening?</a>
+							
 							<ol class="mobileleftmargin15">
-								<li><a class="noprintlink" href="#c2">C++</a></li>
-								<li><a class="noprintlink" href="#itwasmedio">You were expecting modes, but it was me, <del>Dio</del> the circle of fifths!</a></li>
-								<li><a class="noprintlink" href="#ionianintervals">Ionian interval spacing</a></li>
+								<li><a class="noprintlink" href="#traversingthecircle">Traversing the circle of fifths</a>
+									
+									<ol class="mobileleftmargin15">
+										<li><a class="noprintlink" href="#c2">C++</a></li>
+										<li><a class="noprintlink" href="#itwasmedio">You were expecting modes, but it was me, <del>Dio</del> the circle of fifths!</a></li>
+									</ol>
+								</li>
+								<li><a class="noprintlink" href="#scalegenerators">Scale generators: A brief introduction</a>
+									<ol class="mobileleftmargin15">
+										<li><a class="noprintlink" href="#scalegeneratortable">All scale generators in twelve-tone equal temperament</a></li>
+									</ol>
+								</li>
+								<li><a class="noprintlink" href="#intervaldistributionanalysis">Interval distribution analysis</a>
+									<ol class="mobileleftmargin15">
+										<li><a class="noprintlink" href="#ionianintervals">Ionian interval spacing</a></li>
+									</ol>
+								</li>
 							</ol>
 						</li>
 						<li><a class="noprintlink" href="#chordanalysis">Chord analysis by mode</a>
@@ -1505,14 +1520,16 @@ window.onload = function () {makeAllSortable();};*/
 						<li class="nobottommarginprint notopmarginprint"><span class="number">6</span>♯ is enharmonically equivalent to <span class="number">6</span>♭.</li>
 						<li class="nobottommarginprint notopmarginprint"><span class="number">7</span>♯ is enharmonically equivalent to <span class="number">5</span>♭.</li>
 						<li class="notopmarginprint">I’ve again printed <strong class="accent">C major</strong>’s modes in <span class="accent">blue</span> and <strong class="orange">F♯</strong>/<strong class="orange">G♭ major</strong>’s modes in <span class="orange">orange</span>.</li>
+						<li>Accidentals also fall onto the circle of fifths (e.g., <strong class="toc-counter">B♭</strong> to <strong class="toc-counter">E♭</strong> and <strong class="toc-counter">E♭</strong> to <strong class="toc-counter">A♭</strong> are both perfect fifths).</li>
 					</ul>
 				</li>
-				<li>Accidentals also fall onto the circle of fifths (e.g., <strong class="toc-counter">B♭</strong> to <strong class="toc-counter">E♭</strong> and <strong class="toc-counter">E♭</strong> to <strong class="toc-counter">A♭</strong> are both perfect fifths).</li>
 			</ul>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
 			<h2 id="circleoffifths" class="centred">Why is this happening?</h2>
+
+			<h3 id="traversingthecircle" class="centred">Traversing the circle of fifths</h3>
 
 			<p class="light">Whether we realized it or not, we’ve been traversing the circle of fifths this entire time. My introduction notes that traveling from <strong class="toc-counter">C Lydian</strong> to <strong class="accent">C Ionian</strong> is, in a sense, traveling from <strong class="toc-counter">G major</strong> to <strong class="accent">C major</strong>. Here’s the <strong class="toc-counter">C</strong> table again. Note Relative Major’s traversal down the circle of fifths:</p>
 
@@ -1556,6 +1573,10 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light"><em>Every</em> note of <em>every</em> scale in this table is, in fact, a perfect fifth below its counterpart in its predecessor. That’s the first part of the explanation.</p>
 
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+			<h3 id="scalegenerators" class="centred">Scale generators: A brief introduction</h3>
+
 			<p class="light">The second part of the explanation explains why the modes’ circle of fifths order is what it is. Reminder: octave numbering starts at C, so the note above B0 is C1, which in turn is <em>eleven semitones below B1</em>. (I’m sure this must’ve been done purely to annoy people on the obsessive-compulsive spectrum. Other obsessive-compulsive programmers will understand what an atrocity this is without my having to explain it, and for everyone else, I don’t believe the English language possesses adequate expressiveness to explain.)</p>
 
 			<p class="light">Anyhow, let’s go to F1 near the bottom of the piano keyboard. (The grand piano spans from A0 to C8.) What’s a perfect fifth above that? C2. What’s a perfect fifth above C2? G2. Move up another perfect fifth. We’re at D3. Up another perfect fifth. A3. Up another perfect fifth. E4. Another perfect fifth. B4. So, to recap, we have the notes:</p>
@@ -1573,19 +1594,139 @@ window.onload = function () {makeAllSortable();};*/
 			<p class="light">F, C, G, D, A, E, B: the fourth, first, fifth, second, sixth, third, and seventh degrees of the C major scale. There’s our circle of fifths order. The <em>entire scale</em> is literally just <span class="fraction">7/12</span> of the circle of fifths, rearranged into linear order. The mode depends merely on which note in the sequence you use as the base. In our example, this would be:</p>
 
 			<ol class="light upperalpha mobileleftmargin15">
-				<li value="6">Lydian</li>
-				<li value="3">Ionian</li>
-				<li value="7">Mixolydian</li>
-				<li value="4">Dorian</li>
-				<li value="1">Aeolian</li>
-				<li value="5">Phrygian</li>
-				<li value="2">Locrian</li>
+				<li value="6">Lydian (F)</li>
+				<li value="3">Ionian (C)</li>
+				<li value="7">Mixolydian (G)</li>
+				<li value="4">Dorian (D)</li>
+				<li value="1">Aeolian (A)</li>
+				<li value="5">Phrygian (E)</li>
+				<li value="2">Locrian (B)</li>
 			</ol>
-			<p class="light">So, start on the desired mode’s note, flatten the other six notes into linear order, and voilà, there’s your scale.</p>
+			<p class="light">So, start on the desired mode’s note, rearrange the other six notes into linear order, and voilà, there’s your scale.</p>
 
-			<p class="light">It’s worth noting that we can also construct the major scale by starting on B0 and moving up a perfect fourth six times. In scale theory, a perfect fifth is the same pitch class as a perfect fourth, because we disregard octaves. In short, the diatonic major scale consists of seven stacked and flattened perfect fifths. This is known as a scale generator. Only a small fraction of scales have these.</p>
+			<p class="light">The notes are deterministic: the lowest note in the sequence of perfect fifths determines the other six. The note selected as scale root, meanwhile, determines the mode. Not coincidentally, these correspond exactly to the key signature table: if we start our perfect fifths on F, then a root of F yields Lydian, a root of C yields Ionian, a root of G yields Mixolydian, and so on. This is also why the accidentals follow the circle of fifths, why B is the first flat to appear, and why F is the first sharp to appear.</p>
+							
+			<p class="light">It’s worth noting that we can also construct the major scale by starting on B0 and moving up a perfect fourth six times. In scale theory, a perfect fifth is the same pitch class as a perfect fourth, because we disregard octaves. (However, this reverses the modes’ order, putting Locrian’s root on the bottom and Lydian’s on top. This holds true for the same reason that making the notes into a scale rearranges them to occur within the same octave: in a scale theory, a perfect fourth up and a perfect fifth down are the same note.)</p>
 
-			<p class="light margintop16">The last part of the explanation has to do with interval distributions:</p>
+			<p class="light">In short, the diatonic major scale consists of seven stacked and flattened perfect fifths. This is known as a scale generator. Only a small fraction of scales have these, and of those scales, olnly two can be mutated in exactly the same way as diatonic major. One is the pentatonic scale, which consists of four stacked perfect fifths or perfect fourths; the other is the hendecatonic scale, which can be expressed as ten stacked perfect fourths or perfect fiths (or minor seconds or major sevenths, for that matter).</p>
+
+			<!-- <p>Every mode of the major scale conists of six stacked perfect fifths (or perfect fourths). Due to how scales work, they are subsequently rearranged to appear in the same octave, in either ascending or descending order within that octave.</p> -->
+
+			<!-- <p>The sequence of perfect fifths goes in the modes’ circle of fifths order from Lydian’s root (the stack’s lowest note) to Locrian’s (its highest). This is, in fact, exactly why it’s the circle of fifths order. (Stacking perfect fourths )</p> -->
+	
+			<p class="light">Scales of other sizes cannot mutate in the same way: the one-note scale has no modes to mutate into, and no other numbers are coprime with 12 (12 being the parent tonality, and 1, 5, 7, and 11 respectively being the number of semitones in a minor second, perfect fourth, perfect fifth, and major seventh). That said, the heptatonic chromatic scale, consisting of six stacked minor seconds (or major sevenths), exhibits similar behavior to diatonic major in several important ways, which we will explore below.</p>
+								
+			<p class="light">Only minor seconds, perfect fourths, perfect fifths, and major sevenths work as heptatonic scale generators. This is a consequence of two factors: the scale’s length, and (again) only 1, 5, 7, and 11 being coprime with 12. For instance, stacking six major thirds (a four-semitone interval) gives us three copies of the first note and two of the other two; thus, we get not a heptatonic scale but a three-note scale consisting solely of an augmented chord. Scale generators work for the following numbers of notes:</p>
+
+			<div class="mobilescroll">
+				<table id="scalegeneratortable" class="nopagebreak tabular-oldstyle fixheight nowrap weight5thickness sidepad10 centred">
+					<thead class="fixheight">
+						<tr><th colspan="14" class="accent weight4 fixmobilefontsize">All scale generators in twelve-tone equal temperament</th></tr>
+						<tr class="toc-counter weight2 petitecaps">                    <th colspan="2">Interval(s)</th>              <th colspan="12" class="leftborder"># Notes</th></tr>
+					</thead>
+					<tbody class="light">
+						<tr>
+							<td class="weight2 petitecaps toc-counter">Minor second</td>
+							<td class="weight2 petitecaps toc-counter">Major seventh</td>
+							<td class="leftborder"></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/3"    target="_blank" rel="noopener noreferrer">2</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/7"    target="_blank" rel="noopener noreferrer">3</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/15"   target="_blank" rel="noopener noreferrer">4</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/31"   target="_blank" rel="noopener noreferrer">5</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/63"   target="_blank" rel="noopener noreferrer">6</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/127"  target="_blank" rel="noopener noreferrer">7</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/255"  target="_blank" rel="noopener noreferrer">8</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/511"  target="_blank" rel="noopener noreferrer">9</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1023" target="_blank" rel="noopener noreferrer">10</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2047" target="_blank" rel="noopener noreferrer">11</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/4095" target="_blank" rel="noopener noreferrer">12</a></td>
+						</tr>
+						<tr>
+							<td class="weight2 petitecaps toc-counter">Perfect fourth</td>
+							<td class="weight2 petitecaps toc-counter">Perfect fifth</td>
+							<td class="leftborder"></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/33"   target="_blank" rel="noopener noreferrer">2</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/133"  target="_blank" rel="noopener noreferrer">3</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/165"  target="_blank" rel="noopener noreferrer">4</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/661"  target="_blank" rel="noopener noreferrer">5</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/693"  target="_blank" rel="noopener noreferrer">6</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">7</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1455" target="_blank" rel="noopener noreferrer">8</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1519" target="_blank" rel="noopener noreferrer">9</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1983" target="_blank" rel="noopener noreferrer">10</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2047" target="_blank" rel="noopener noreferrer">11</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/4095" target="_blank" rel="noopener noreferrer">12</a></td>
+						</tr>
+						<tr>
+							<td class="weight2 petitecaps toc-counter">Major second</td>
+							<td class="weight2 petitecaps toc-counter">Minor seventh</td>
+							<td class="leftborder"></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/5"    target="_blank" rel="noopener noreferrer">2</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/21"   target="_blank" rel="noopener noreferrer">3</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/85"   target="_blank" rel="noopener noreferrer">4</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/341"  target="_blank" rel="noopener noreferrer">5</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1365" target="_blank" rel="noopener noreferrer">6</a></td>
+							<td colspan="6"></td>
+						</tr>
+						<tr>
+							<td class="weight2 petitecaps toc-counter">Minor third</td>
+							<td class="weight2 petitecaps toc-counter">Major sixth</td>
+							<td class="leftborder"></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/9"    target="_blank" rel="noopener noreferrer">2</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/73"   target="_blank" rel="noopener noreferrer">3</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/585"  target="_blank" rel="noopener noreferrer">4</a></td>
+							<td colspan="8"></td>
+						</tr>
+						<tr>
+							<td class="weight2 petitecaps toc-counter">Major third</td>
+							<td class="weight2 petitecaps toc-counter">Minor sixth</td>
+							<td class="leftborder"></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/17"   target="_blank" rel="noopener noreferrer">2</a></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/273"  target="_blank" rel="noopener noreferrer">3</a></td>
+							<td colspan="9"></td>
+						</tr>
+						<tr>
+							<td class="weight2 petitecaps toc-counter" colspan="2">Tritone</td>
+							<td class="leftborder"></td>
+							<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/65"   target="_blank" rel="noopener noreferrer">2</a></td>
+							<td colspan="10"></td>
+						</tr>
+						<tr>
+							<td class="weight2 petitecaps toc-counter" colspan="2">Octave</td>
+							<td class="leftborder"><a class="noprintlink" href="https://ianring.com/musictheory/scales/1"    target="_blank" rel="noopener noreferrer">1</a></td>
+							<td colspan="11"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="light">A few additional notes:</p>
+
+			<ul class="light">
+				<li>Intervals on the same line are reflections that create identical scales.</li>
+				<li>The perfect fourth generator and minor second generators create the same hendecatonic and dodecatonic scales for a simple reason: twelve-tone equal temperament contains only one scale of each size.</li>
+				<li>The first two generators are the only ones that create twelve-note scales because they’re the only ones whose intervals are coprime with 12.</li>
+			</ul>
+
+			<!-- generators of 5 on 0:
+				<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/33"   target="_blank" rel="noopener noreferrer">2</a></td>
+				<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1057"  target="_blank" rel="noopener noreferrer">3</a></td>
+				<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1065"  target="_blank" rel="noopener noreferrer">4</a></td>
+				<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1321"  target="_blank" rel="noopener noreferrer">5</a></td>
+				<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1323"  target="_blank" rel="noopener noreferrer">6</a></td>
+				<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/1387" target="_blank" rel="noopener noreferrer">7</a></td>
+				<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/3435" target="_blank" rel="noopener noreferrer">8</a></td>
+				<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/3451" target="_blank" rel="noopener noreferrer">9</a></td>
+				<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/3963" target="_blank" rel="noopener noreferrer">10</a></td>
+				<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/2047" target="_blank" rel="noopener noreferrer">11</a></td>
+				<td><a class="noprintlink" href="https://ianring.com/musictheory/scales/4095" target="_blank" rel="noopener noreferrer">12</a></td>
+				TODO: finish figuring these out and add it when i’m not so tired
+			-->
+
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+			<h3 id="intervaldistributionanalysis" class="centred">Interval distribution analysis</h3>
+
+			<p class="light">The last part of the explanation has to do with interval distributions:</p>
 
 			<div class="mobilescroll">
 				<table id="ionianintervals" class="normal tabular-oldstyle nowrap sidepad8">

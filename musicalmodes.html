@@ -409,6 +409,10 @@ window.onload = function () {makeAllSortable();};*/
 								<li><a class="noprintlink" href="#translationalsymmetry6">Hexatonic translational symmetry (fourteen additional scales)</a></li>
 								<li><a class="noprintlink" href="#translationalsymmetry8">Octatonic translational symmetry (ten additional scales)</a></li>
 								<li><a class="noprintlink" href="#translationalsymmetrycount">Achiral scales by size</a></li>
+							</ol>
+						</li>
+						<li><a class="noprintlink" href="#selfcomplements">Self-complementary scales, symmetry, and scale generators</a>
+							<ol class="mobileleftmargin15">
 								<li><a class="noprintlink" href="#selfcomplements">Self-complementing scales</a></li>
 							</ol>
 						</li>
@@ -1610,28 +1614,28 @@ window.onload = function () {makeAllSortable();};*/
 			<p class="light">F, C, G, D, A, E, B: the fourth, first, fifth, second, sixth, third, and seventh degrees of the C major scale. There’s our circle of fifths order. The <em>entire scale</em> is literally just <span class="fraction">7/12</span> of the circle of fifths, rearranged into linear order. The mode depends merely on which note in the sequence you use as the base. In our example, this would be:</p>
 
 			<ol class="light upperalpha mobileleftmargin15">
-				<li value="6">Lydian (F)</li>
-				<li value="3">Ionian (C)</li>
-				<li value="7">Mixolydian (G)</li>
-				<li value="4">Dorian (D)</li>
-				<li value="1">Aeolian (A)</li>
-				<li value="5">Phrygian (E)</li>
-				<li value="2">Locrian (B)</li>
+				<li value="6">Lydian</li>
+				<li value="3">Ionian </li>
+				<li value="7">Mixolydian</li>
+				<li value="4">Dorian</li>
+				<li value="1">Aeolian</li>
+				<li value="5">Phrygian</li>
+				<li value="2">Locrian</li>
 			</ol>
 			<p class="light">So, start on the desired mode’s note, rearrange the other six notes into linear order, and voilà, there’s your scale.</p>
 
-			<p class="light">The notes are deterministic: the lowest note in the sequence of perfect fifths determines the other six. The note selected as scale root, meanwhile, determines the mode. Not coincidentally, these correspond exactly to the key signature table: if we start our perfect fifths on F, then a root of F yields Lydian, a root of C yields Ionian, a root of G yields Mixolydian, and so on. This is also why the accidentals follow the circle of fifths, why B is the first flat to appear, and why F is the first sharp to appear.</p>
+			<p class="light">The notes are deterministic: the lowest note in the sequence of perfect fifths determines the other six. The note selected as scale root, meanwhile, determines the mode. Not coincidentally, these correspond exactly to the key signature table: if we start our perfect fifths on C, then a root of C yields Lydian, a root of G yields Ionian, a root of D yields Mixolydian, and so on. This is also why the accidentals follow the circle of fifths, why B is the first flat to appear, and why F is the first sharp to appear.</p>
 							
-			<p class="light">It’s worth noting that we can also construct the major scale by starting on B0 and moving up a perfect fourth six times. In scale theory, a perfect fifth is the same pitch class as a perfect fourth, because we disregard octaves. (However, this reverses the modes’ order, putting Locrian’s root on the bottom and Lydian’s on top. This holds true for the same reason that making the notes into a scale rearranges them to occur within the same octave: in a scale theory, a perfect fourth up and a perfect fifth down are the same note.)</p>
+			<p class="light">It’s worth noting that we can also construct the major scale by starting on B0 and moving up a perfect fourth six times. In scale theory, a perfect fifth is the same pitch class as a perfect fourth, because a perfect fourth up and a perfect fifth down are the same note when we disregard octaves. (However, swapping the intervals will reverse the order of the modes’ correspondence to the interval stack, thus putting Locrian’s root on the bottom and Lydian’s on top. This holds true for the same reason that making the notes into a scale rearranges them to occur within the same octave: a perfect fourth <em>up</em> equates to a perfect fifth <em>down</em>.)</p>
 
-			<p class="light">In short, the diatonic major scale consists of seven stacked and flattened perfect fifths. This is known as a scale generator. Only a small fraction of scales have these, and of those scales, olnly two can be mutated in exactly the same way as diatonic major. One is the pentatonic scale, which consists of four stacked perfect fifths or perfect fourths; the other is the hendecatonic scale, which can be expressed as ten stacked perfect fourths or perfect fiths (or minor seconds or major sevenths, for that matter).</p>
+			<p class="light">In short, the diatonic major scale consists of seven stacked and flattened perfect fifths. This is known as a scale generator. Only a small fraction of scales have these, and of those scales, only two can be mutated in exactly the same way as diatonic major. One is the pentatonic scale (as we will see in §5.1-8), which consists of four stacked perfect fifths or perfect fourths; the other is the hendecatonic scale (§5.9.1), which can be expressed as ten stacked perfect fourths or perfect fiths (or minor seconds or major sevenths, for that matter).</p>
 
 			<!-- <p>Every mode of the major scale conists of six stacked perfect fifths (or perfect fourths). Due to how scales work, they are subsequently rearranged to appear in the same octave, in either ascending or descending order within that octave.</p> -->
 
 			<!-- <p>The sequence of perfect fifths goes in the modes’ circle of fifths order from Lydian’s root (the stack’s lowest note) to Locrian’s (its highest). This is, in fact, exactly why it’s the circle of fifths order. (Stacking perfect fourths )</p> -->
 	
-			<p class="light">Scales of other sizes cannot mutate in the same way: the one-note scale has no modes to mutate into, and no other numbers are coprime with 12 (12 being the parent tonality, and 1, 5, 7, and 11 respectively being the number of semitones in a minor second, perfect fourth, perfect fifth, and major seventh). That said, the heptatonic chromatic scale, consisting of six stacked minor seconds (or major sevenths), exhibits similar behavior to diatonic major in several important ways, which we will explore below.</p>
-								
+			<p class="light">Scales of other sizes cannot mutate in the same way: the one-note scale has no modes to mutate into, and no other numbers are coprime with 12 (12 being the parent tonality, and 1, 5, 7, and 11 respectively being the number of semitones in a minor second, perfect fourth, perfect fifth, and major seventh). We will examine why the scale length being coprime with 12 is important below (§5.9.8). That said, the heptatonic chromatic scale, consisting of six stacked minor seconds (or major sevenths), exhibits similar behavior to diatonic major in several important ways, which we will also explore below (§5.9.2).</p>
+
 			<p class="light">Only minor seconds, perfect fourths, perfect fifths, and major sevenths work as heptatonic scale generators. This is a consequence of two factors: the scale’s length, and (again) only 1, 5, 7, and 11 being coprime with 12. For instance, stacking six major thirds (a four-semitone interval) gives us three copies of the first note and two of the other two; thus, we get not a heptatonic scale but a three-note scale consisting solely of an augmented chord. Scale generators work for the following numbers of notes:</p>
 
 			<div class="mobilescroll">
@@ -10764,6 +10768,8 @@ window.onload = function () {makeAllSortable();};*/
 				</table>
 			</div>
 
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
 			<div class="mobilescroll">
 				<table id="translationalsymmetry6" class="normal tabular-oldstyle sidepad6 fixheight nowrap">
 					<thead>
@@ -10871,7 +10877,9 @@ window.onload = function () {makeAllSortable();};*/
 					</tbody>
 				</table>
 			</div>
-			
+
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
 			<div class="mobilescroll">
 				<table id="translationalsymmetry8" class="normal tabular-oldstyle sidepad6 fixheight nowrap">
 					<thead>
@@ -10966,6 +10974,8 @@ window.onload = function () {makeAllSortable();};*/
 				</table>
 			</div>
 
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
 			<p class="light">As I mentioned, all achiral scales have achiral scale complements. Counting the null set as a scale (which I’m willing to do in the context of scale complements), the achiral scales break down as follows:</p>
 
 			<table id="translationalsymmetrycount" class="normal tabular-oldstyle sidepad6 fixheight nowrap centred">
@@ -11003,10 +11013,14 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light">Forte grouped pitch classes into 224 discrete sets. 128 of these are the 256 chiral scales; the other 96 are the achiral scales (counting the null set).</p>
 
-			<p class="light">Incidentally, only six scales in 12-TET are their own complements:</p>
+			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+			<h2 id="selfcomplements" class="centred">Self-complementary scales, symmetry, and scale generators</h2>
+
+			<p class="light">Only six scales in 12-TET are their own complements:</p>
 			
 			<div class="mobilescroll">
-				<table id="selfcomplements" class="normal tabular-oldstyle sidepad6 fixheight nowrap centred">
+				<table id="selfcomplementstable" class="normal tabular-oldstyle sidepad6 fixheight nowrap centred">
 					<thead>
 						<tr class="toc-counter weight5"><th colspan="15">Self-complementing scales</th></tr>
 						<tr class="petitecaps accent weight2">
@@ -11067,16 +11081,23 @@ window.onload = function () {makeAllSortable();};*/
 			<p class="light">Several of these scales also share a few other interesting commonalities:</p>
 			
 			<ul class="light">
-				<li>Three (F47, F76, and F80) are modes of limited transposition.</li>
+				<li>Four (F01, F47, F76, F80) subdivide the octave into sections of equal length (respectively, six notes, three notes, two notes, and one note), then place notes on every tone of the odd-numbered subdivisions and no tones of the even-numbered ones.</li>
+				<li>Three of those four (F47, F76, and F80) are also modes of limited transposition.</li>
 				<li><p>Three also have scale generators:</p>
 					<ol>
-						<li>F01 consists of five stacked minor seconds (or major sevenths).</li>
-						<li>F80 consists of five stacked major seconds (or minor sevenths).</li>
-						<li>F71 consists of five stacked perfect fourths (or perfect fifths).</li>
+						<li>F01 consists of five stacked minor seconds (or major sevenths). Generator step size: one semitone.</li>
+						<li>F80 consists of five stacked major seconds (or minor sevenths). Generator step size: two semitones.</li>
+						<li>F71 consists of five stacked perfect fourths (or perfect fifths). Generator step size: five semitones.</li>
 					</ol>
 					<p>This means that every generator that produces a hexatonic scale also produces a self-complementing scale.</p>
 				</li>
-				<li>Scale F11 is the oddball here: I haven’t identified any unique mathematical properties that make it stand out from the others, apart from its close resemblance to two other scales on this list: it equates to moving F01’s C♯ to G or F71’s A to D♯. (Both these mutations also move notes by a tritone.)</li>
+				<li><p>Scale F11 is the oddball here: the only property I’ve identified that makes it stand out from the non-self-complementary scales is that it moves a single note of two other self-complements by a tritone:</p>
+					<ol class="mobileleftmargin15">
+						<li>It moves F01’s C♯ to G.</li>
+						<li>It moves F71’s A to D♯.</li>
+					</ol>
+				<p>This is the only such transformation I’ve found that produces an achiral scale (for instance, <a href="https://ianring.com/musictheory/scales/315" target="_blank" rel="noopener noreferrer" class="noprintlink">moving F01’s D♯ to A (or F71’s G to C♯)</a> produces a chiral scale), although I haven’t exhausted all the possibilities yet.</p>
+				</li>
 			</ul>
 
 			<p class="light">As long as we’re returning to the subject of generators, let’s also observe that F71 truncates Ionian by a single note. We’ve already analyzed how the pentatonic scale both truncates and complements Ionian, so this should surprise no one. In fact, I hypothesize that, in any <em>t</em>-tone equal temperament, for a given note count of <em>c</em>:</p>

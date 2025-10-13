@@ -425,7 +425,7 @@ window.onload = function () {makeAllSortable();};*/
 								<li><a class="noprintlink" href="#etymologytable">Αἱ ἐτῠμολογῐ́αι τῶν ἑπτᾰ́ τόνων &nbsp; <em>(The seven modes’ etymologies)</em></a></li>
 							</ol>
 						</li>
-						<li><a class="noprintlink" href="#tonoi">Ancient Greek <em>tonoi</em> &amp; modern modes</a>
+						<li><a class="noprintlink" href="#tonoi">Ancient Greek harmony: The Cliffs Notes</a>
 							<ol class="mobileleftmargin15">
 								<li><a class="noprintlink" href="#intervalkey">Interval key</a></li>
 								<li><a class="noprintlink" href="#diatonictetrachord">Interval ratios of a diatonic tetrachord</a></li>
@@ -436,6 +436,7 @@ window.onload = function () {makeAllSortable();};*/
 							<ol class="mobileleftmargin15">
 								<li><a class="noprintlink" href="#pythagoreanvsmodern">A comparison of Pythagorean tuning &amp; twelve-tone equal temperament</a></li>
 								<li><a class="noprintlink" href="#pythagoreanintervaldivision">Pythagorean interval division (or is it subtraction?)</a></li>
+								<li><a class="noprintlink" href="#pythagoreanfibonaccisequence">The Fibonacci sequence in Pythagorean tuning</a></li>
 							</ol>
 						</li>
 						<li><a class="noprintlink" href="#tonoichart">Ancient Greek <em>tonoi</em> &amp; modern modes</a>
@@ -11266,7 +11267,7 @@ window.onload = function () {makeAllSortable();};*/
 			<p class="light">(The name “Pythagorean” is a misnomer – their eponymous tuning system is actually much older. The oldest known description of it appears on a Mesopotamian clay tablet from the 19th century BCE.)
 
 			<div class="mobilescroll">
-				<table class="curved tabular-oldstyle nowrap" id="pythagoreanvsmodern">
+				<table class="curved tabular-oldstyle nowrap printpadding8" id="pythagoreanvsmodern">
 					<thead>
 						<tr>
 							<th colspan="7" class="accent weight4">A comparison of Pythagorean tuning &amp; twelve-tone equal temperament</th>
@@ -11311,7 +11312,7 @@ window.onload = function () {makeAllSortable();};*/
 			<p class="light">Incidentally, all Pythagorean interval ratios are based on powers of two and three, and Pythagorean intervals smaller than perfect fifths can be derived through a sequence of ratio division. To wit:</p>
 			
 			<div class="mobilescroll">
-				<table class="curved tabular-oldstyle nowrap sidepad8" id="pythagoreanintervaldivision">
+				<table class="curved tabular-oldstyle nowrap sidepad8 printpadding4" id="pythagoreanintervaldivision">
 					<thead>
 						<tr>
 							<td colspan="9" class="centred accent weight4">Pythagorean interval division (or is it subtraction?)</td>
@@ -11376,15 +11377,24 @@ window.onload = function () {makeAllSortable();};*/
 			<p class="light">Now, look again at the ratios above. 0, 1, 2, 3, 5, 8, and 13 &ndash; the sequence’s first eight numbers – appear both as exponents and, in 2 and 3’s cases, as bases. The major third is, in fact, the only interval in the above table that <em>doesn’t</em> use Fibonacci numbers as exponents. The Fibonacci spiral truly is everywhere &ndash; although the Indian mathematician Acharya Pingala (Sanskrit: आचार्य पिङ्गल) is the first writer known to have explicitly <em>described</em> the sequence (ca. 200 BCE), there it is in Pythagorean tuning. (In fact, it’s even older than that: the system dates back to the Mesopotamians.)</p>
 
 			<p class="light">It may seem rather haphazard as to whether the ratio starts with a power of 3 or a power of 2; it may also seem rather haphazard as to whether we’re dividing the most recent interval by the second-most recent interval or vice versa. In both these cases, the answer simply depends on which is larger: the larger number appears first in the ratio, and the larger ratio serves as the dividend. Either way, the power of 2 is always one Fibonacci number ahead of the power of 3. Another way to think of the sequence is as follows:</p>
-				<ul class="light">
-					<li><span class="toc-counter weight1"><span style="visibility: hidden;">&#8304;</span><strong class="weight3">2</strong>&sup1;:<strong class="weight3">3</strong>&#8304;</span>: an octave higher</li>
-					<li><span class="toc-counter weight1"><span style="visibility: hidden;">&#8304;</span><strong class="weight3">2</strong>&sup1;:<strong class="weight3">3</strong>&sup1;</span>: a perfect fifth lower</li>
-					<li><span class="toc-counter weight1"><span style="visibility: hidden;">&#8304;</span><strong class="weight3">2</strong>&sup2;:<strong class="weight3">3</strong>&sup1;</span>: a perfect fourth higher</li>
-					<li><span class="toc-counter weight1"><span style="visibility: hidden;">&#8304;</span><strong class="weight3">2</strong>&sup3;:<strong class="weight3">3</strong>&sup2;</span>: a major second lower</li>
-					<li><span class="toc-counter weight1"><span style="visibility: hidden;">&#8304;</span><strong class="weight3">2</strong>&#8309;:<strong class="weight3">3</strong>&sup3;</span>: a minor third higher</li>
-					<li><span class="toc-counter weight1"><span style="visibility: hidden;">&#8304;</span><strong class="weight3">2</strong>&#8312;:<strong class="weight3">3</strong>&#8309;</span>: a minor second higher</li>
-					<li><span class="toc-counter weight1"><strong class="weight3">2</strong>&sup1;&sup3;:<strong class="weight3">3</strong>&#8312;</span>: a diminshed fourth higher</li>
-				</ul>
+
+			<div class="mobilescroll">
+				<table class="curved tabular-oldstyle nowrap sidepad8 printpadding4 fixheight" id="pythagoreanfibonaccisequence">
+					<thead>
+						<tr class="toc-counter weight5"><th colspan="5">The Fibonacci sequence in Pythagorean tuning</th></tr>
+						<tr class="accent weight2 petitecaps"><th>Ratio</th><th>Interval jump</th><th colspan="3">Example</th></tr>
+					</thead>
+					<tbody class="light">
+						<tr><td class="right toc-counter"><strong>2</strong>&sup1;:<strong>3</strong>&#8304;<span class="hidden">♭</span></td><td class="centred"><span class="hidden">♭</span>an octave higher<span class="hidden">♭</span></td><td class="right norightpad"><span class="hidden">♭</span>C3</td><td class="norightpad noleftpad"><span class="hidden">♭</span>to<span class="hidden">♭</span></td><td class="noleftpad left">C4<span class="hidden">♭</span></td></tr>
+						<tr><td class="right toc-counter"><strong>2</strong>&sup1;:<strong>3</strong>&sup1;<span class="hidden">♭</span></td><td class="centred"><span class="hidden">♭</span>a perfect fifth lower<span class="hidden">♭</span></td><td class="right norightpad"><span class="hidden">♭</span>C4</td><td class="norightpad noleftpad"><span class="hidden">♭</span>to<span class="hidden">♭</span></td><td class="noleftpad left">F3<span class="hidden">♭</span></td></tr>
+						<tr><td class="right toc-counter"><strong>2</strong>&sup2;:<strong>3</strong>&sup1;<span class="hidden">♭</span></td><td class="centred"><span class="hidden">♭</span>a perfect fourth higher<span class="hidden">♭</span></td><td class="right norightpad"><span class="hidden">♭</span>F3</td><td class="norightpad noleftpad"><span class="hidden">♭</span>to<span class="hidden">♭</span></td><td class="noleftpad left">B♭3</td></tr>
+						<tr><td class="right toc-counter"><strong>2</strong>&sup3;:<strong>3</strong>&sup2;<span class="hidden">♭</span></td><td class="centred"><span class="hidden">♭</span>a major second lower<span class="hidden">♭</span></td><td class="right norightpad">B♭3</td><td class="norightpad noleftpad"><span class="hidden">♭</span>to<span class="hidden">♭</span></td><td class="noleftpad left">A♭3</td></tr>
+						<tr><td class="right toc-counter"><strong>2</strong>&#8309;:<strong>3</strong>&sup3;<span class="hidden">♭</span></td><td class="centred"><span class="hidden">♭</span>a minor third higher<span class="hidden">♭</span></td><td class="right norightpad">A♭3</td><td class="norightpad noleftpad"><span class="hidden">♭</span>to<span class="hidden">♭</span></td><td class="noleftpad left">B3<span class="hidden">♭</span></td></tr>
+						<tr><td class="right toc-counter"><strong>2</strong>&#8312;:<strong>3</strong>&#8309;<span class="hidden">♭</span></td><td class="centred"><span class="hidden">♭</span>a minor second higher<span class="hidden">♭</span></td><td class="right norightpad"><span class="hidden">♭</span>B3</td><td class="norightpad noleftpad"><span class="hidden">♭</span>to<span class="hidden">♭</span></td><td class="noleftpad left">C4<span class="hidden">♭</span></td></tr>
+						<tr><td class="right toc-counter"><strong>2</strong>&sup1;&sup3;:<strong>3</strong>&#8312;<span class="hidden">♭</span></td><td class="centred"><span class="hidden">♭</span>a diminshed fourth higher<span class="hidden">♭</span></td><td class="right norightpad"><span class="hidden">♭</span>C4</td><td class="norightpad noleftpad"><span class="hidden">♭</span>to<span class="hidden">♭</span></td><td class="noleftpad left">E4<span class="hidden">♭</span></td></tr>
+					</tbody>
+				</table>
+			</div>
 
 			<p class="light">If the sequence continued, the next interval would be 2&sup2;&sup1;:3&sup1;&sup3;, or 2,097,152:1,594,323 (≈1.31538715806). As far as I know, this was not a Pythagorean interval, which probably won’t surprise anyone. Nor is it likely to surprise anyone that Fibonacci had his own tuning system, which I’ll undoubtedly write about soon™.</p>
 

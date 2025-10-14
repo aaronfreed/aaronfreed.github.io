@@ -48,7 +48,7 @@ window.onload = function () {makeAllSortable();};*/
 				<em>Aequilībrium harmoniae</em></h1>
 				<h1 class="centred petitecaps"><span style="font-size: 1.75rem;">(<em>The Harmony of Balance</em>, or <em>The Balance of Harmony</em>)</span></h1>
 				<h2 class="centred petitecaps">a mathematical analysis of scales, modes, &amp; the circle of fifths</h2>
-				<h2 class="centred petitecaps">by <a href="index.html" class="weight5">Aaron Freed</a>, composer and programmer</h2>
+				<h2 class="centred petitecaps">by <a href="index.html" class="weight5 noprintlink">Aaron Freed</a><span class="linktext"> &#10216;aaronfreed.github.io&#10217;</span>, composer and programmer</h2>
 			</h1>
 			<ol class="toclite mobileleftmargin15">
 				<li><a class="noprintlink" href="#top">Contents</a></li>
@@ -884,7 +884,7 @@ window.onload = function () {makeAllSortable();};*/
 		<main>
 			<h2 id="circleoffifthsorder" class="centred">The modes in circle of fifths order</h2>
 
-			<p class="light">I mostly won’t be analyzing the modes in their traditional order, since I’m analyzing how lowering a regular pattern of notes by a semitone each walks us through every mode on every key. I call this the <span class="toc-counter petitecaps weight4">circle of fifths order</span> for reasons that will become readily apparent. A few notes (pun intended):</p>
+			<p class="light">I mostly won’t be analyzing the modes in their traditional order: I’m analyzing how lowering a regular pattern of notes by a semitone each walks us through every mode on every key. I call this the <span class="toc-counter petitecaps weight4">circle of fifths order</span> for reasons that will soon become clear. A few notes (pun intended):</p>
 
 			<ul class="light mobileleftmargin15">
 				<li>Most of this analysis focuses on twelve-tone equal temperament (12-TET for short), the tuning system the vast majority of Western music has used for hundreds of years. I’ll try to note exceptions in other temperaments where they exist, but given my at-best spotty understanding of other tuning systems, I can’t promise to have gotten them all.</li>
@@ -1470,7 +1470,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light">The second part of the explanation explains why the modes’ circle of fifths order is what it is. Reminder: octave numbering starts at C, so the note above B0 is C1, which in turn is <em>eleven semitones below B1</em>. (I’m sure this must’ve been done purely to annoy people on the obsessive-compulsive spectrum. Other obsessive-compulsive programmers will understand what an atrocity this is without my having to explain it, and for everyone else, I don’t believe the English language possesses adequate expressiveness to explain.)</p>
 
-			<p class="light">Anyhow, let’s go to F1 near the bottom of the piano keyboard. (The grand piano spans from A0 to C8.) What’s a perfect fifth above that? C2. What’s a perfect fifth above C2? G2. Move up another perfect fifth. We’re at D3. Up another perfect fifth. A3. Up another perfect fifth. E4. Another perfect fifth. B4. So, to recap, we have the notes:</p>
+			<p class="light">Anyhow, let’s go to F1 near the bottom of the piano. (The grand piano spans A0 to C8.) What’s a perfect fifth above that? C2. A perfect fifth above C2? G2. Move up another perfect fifth. We’re at D3. Up another perfect fifth. A3. Another perfect fifth. E4. Another. B4. So, to recap, we have the notes:</p>
 
 			<ol class="light mobileleftmargin15">
 				<li>F1</li>
@@ -1482,24 +1482,24 @@ window.onload = function () {makeAllSortable();};*/
 				<li>B4</li>
 			</ol>
 			
-			<p class="light">F, C, G, D, A, E, B: the fourth, first, fifth, second, sixth, third, and seventh degrees of the C major scale. There’s our circle of fifths order. The <em>entire scale</em> is literally just <span class="fraction">7/12</span> of the circle of fifths, rearranged into linear order. The mode depends merely on which note in the sequence you use as the base. In our example, this would be:</p>
+			<p class="light">F, C, G, D, A, E, B: the fourth, first, fifth, second, sixth, third, and seventh degrees of the C major scale. There’s our circle of fifths order. The <em>entire scale</em> is literally just <span class="fraction">7/12</span> of the circle of fifths, rearranged into linear order. The mode depends merely on which note in the sequence you use as the base:</p>
 
-			<ol class="light upperalpha mobileleftmargin15">
-				<li value="6">Lydian</li>
-				<li value="3">Ionian </li>
-				<li value="7">Mixolydian</li>
-				<li value="4">Dorian</li>
-				<li value="1">Aeolian</li>
-				<li value="5">Phrygian</li>
-				<li value="2">Locrian</li>
+			<ol class="light mobileleftmargin15">
+				<li><strong class="toc-counter">Lydian</strong> (in our example, F)</li>
+				<li><strong class="toc-counter">Ionian</strong> (in our example, C)</li>
+				<li><strong class="toc-counter">Mixolydian</strong> (in our example, G)</li>
+				<li><strong class="toc-counter">Dorian</strong> (in our example, D)</li>
+				<li><strong class="toc-counter">Aeolian</strong> (in our example, A)</li>
+				<li><strong class="toc-counter">Phrygian</strong> (in our example, E)</li>
+				<li><strong class="toc-counter">Locrian</strong> (in our example, B)</li>
 			</ol>
-			<p class="light">So, start on the desired mode’s note, rearrange the other six notes into linear order, and voilà, there’s your scale.</p>
+			<p class="light">So, start on the desired mode’s note, put the other six in linear order, and voilà, there’s your scale.</p>
 
 			<p class="light">The notes are deterministic: the lowest note in the sequence of perfect fifths determines the other six. The note selected as scale root, meanwhile, determines the mode. Not coincidentally, these correspond exactly to the key signature table: if we start our perfect fifths on C, then a root of C yields Lydian, a root of G yields Ionian, a root of D yields Mixolydian, and so on. This is also why flats are ordered B<span class="musicsymbol">♭</span>, E<span class="musicsymbol">♭</span>, A<span class="musicsymbol">♭</span>, D<span class="musicsymbol">♭</span>, G<span class="musicsymbol">♭</span>, C<span class="musicsymbol">♭</span>, F<span class="musicsymbol">♭</span>, and sharps are ordered F<span class="musicsymbol">♯</span>, C<span class="musicsymbol">♯</span>, G<span class="musicsymbol">♯</span>, D<span class="musicsymbol">♯</span>, A<span class="musicsymbol">♯</span>, E<span class="musicsymbol">♯</span>, B<span class="musicsymbol">♯</span>.</p>
 							
 			<p class="light">It’s worth noting that we can also construct the major scale by starting on B0 and moving up a perfect fourth six times. In scale theory, a perfect fifth is the same pitch class as a perfect fourth, because a perfect fourth up and a perfect fifth down are the same note when we disregard octaves. (However, swapping the intervals will reverse the order of the modes’ correspondence to the interval stack, thus putting Locrian’s root on the bottom and Lydian’s on top. This holds true for the same reason that making the notes into a scale rearranges them to occur within the same octave: a perfect fourth <em>up</em> equates to a perfect fifth <em>down</em>.)</p>
 
-			<p class="light">In short, the diatonic major scale consists of seven stacked and flattened perfect fifths. This is known as a <span class="toc-counter petitecaps weight4">scale generator</span>. Only a small fraction of scales have these, and of those scales, only two can be mutated in exactly the same way as diatonic major. One is the pentatonic scale (as we will see in §5.1-8), which consists of four stacked perfect fifths or perfect fourths; the other is the hendecatonic scale (§5.9.1), which can be expressed as ten stacked perfect fourths or perfect fiths (or minor seconds or major sevenths, for that matter).</p>
+			<p class="light">In short, the diatonic major scale consists of seven stacked and flattened perfect fifths. This is known as a <span class="toc-counter petitecaps weight4">scale generator</span>. Only a small fraction of scales have these, and only two mutate in exactly the same way as diatonic major. One is the pentatonic scale (as we will see in §5.1-8), which consists of four stacked perfect fifths or perfect fourths; the other is the hendecatonic scale (§5.9.1), which can be expressed as ten stacked perfect fourths or perfect fiths (or minor seconds or major sevenths, for that matter).</p>
 
 			<!-- <p>Every mode of the major scale conists of six stacked perfect fifths (or perfect fourths). Due to how scales work, they are subsequently rearranged to appear in the same octave, in either ascending or descending order within that octave.</p> -->
 
@@ -1507,7 +1507,7 @@ window.onload = function () {makeAllSortable();};*/
 	
 			<p class="light">Scales of other sizes cannot mutate in the same way: the one-note scale has no modes to mutate into, and no other numbers are coprime with 12 (12 being the parent tonality, and 1, 5, 7, and 11 respectively being the number of semitones in a minor second, perfect fourth, perfect fifth, and major seventh). We will examine why the scale length being coprime with 12 is important below (§5.9.8). That said, the heptatonic chromatic scale, consisting of six stacked minor seconds (or major sevenths), exhibits similar behavior to diatonic major in several important ways, which we will also explore below (§5.9.2).</p>
 
-			<p class="light">Only minor seconds, perfect fourths, perfect fifths, and major sevenths work as heptatonic scale generators. This is a consequence of two factors: the scale’s length, and (again) only 1, 5, 7, and 11 being coprime with 12. For instance, stacking six major thirds (a four-semitone interval) gives us three copies of the first note and two of the other two; thus, we get not a heptatonic scale but a three-note scale consisting solely of an augmented chord. Scale generators work for the following numbers of notes:</p>
+			<p class="light">Only minor seconds, perfect fourths, perfect fifths, and major sevenths work as heptatonic scale generators. This is a consequence of two factors: the scale’s length, and (again) only 1, 5, 7, and 11 being coprime with 12. For instance, a stack of six major thirds (a four-semitone interval) duplicates the first note twice and the others once, giving us not a heptatonic scale but a three-note scale consisting solely of an augmented chord. Scale generators work for the following scale sizes:</p>
 
 			<div class="mobilescroll">
 				<table id="scalegeneratortable" class="nopagebreak tabular-oldstyle fixheight nowrap weight5thickness sidepad10 centred">
@@ -1594,8 +1594,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<ul class="light">
 				<li>Intervals on the same line are reflections that create identical scales.</li>
-				<li>The perfect fourth generator and minor second generators create the same hendecatonic and dodecatonic scales for a simple reason: twelve-tone equal temperament contains only one scale of each size.</li>
-				<li>The first two generators are the only ones that create twelve-note scales because they’re the only ones whose intervals are coprime with 12.</li>
+				<li>The perfect fourth generator and minor second generators create the same hendecatonic and dodecatonic scales for a simple reason: only one scale of each size exists in our tuning system.</li>
 			</ul>
 
 			<!-- generators of 5 on 0:
@@ -1767,7 +1766,7 @@ window.onload = function () {makeAllSortable();};*/
 			<ul class="light mobileleftmargin15">
 				<li>Hundreds of possible heptatonic (seven-note) scales <em>aren’t</em> modes of Ionian. I’ve rooted the following examples (many of which are common in jazz) in C to clarify their differences:
 					<div class="mobilescroll">
-						<table id="sevennotescales" class="normal tabular-oldstyle sidepad6 weight5thickness fixheight screen800 nowrap nonmobileleftmargin-30 print60toleft">
+						<table id="sevennotescales" class="normal tabular-oldstyle sidepad6 printpadding5 weight5thickness fixheight screen800 nowrap nonmobileleftmargin-30 print30toleft">
 							<thead class="fixheight">
 								<tr class="accent weight6 fixmobilefontsize"><th colspan="16">Other heptatonic scales</th></tr>
 								<tr class="toc-counter weight2 petitecaps"><th colspan="2">Scale</th>                                                                        <th class="leftborder leftpad15">1</th>                              <th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th class="rightpad15">7</th><th class="leftborder leftpad15" colspan="7">Intervals</tr>

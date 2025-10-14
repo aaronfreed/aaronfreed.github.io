@@ -10130,7 +10130,7 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light">Every symmetrical heptatonic scale in twelve-tone equal temperament is a complement of a symmetrical pentatonic scale. The following table shows the interval distributions of symmetrical pentatonic scales and their complements side-by-side, first using my order for the heptatonics, then my order for the pentatonics. You may have noticed that I ordered the scales above so that their interval distributions would form aesthetic patterns. An interesting consequence of this is that their complements’ symmetrical modes form their own aesthetic patterns, which are quite dissimilar from the originals, but quite similar to each other.</p>
 
-			<p class="light">(I should clarify that, while these tables list these scales’ symmetrical modes side-by-side, scale complements apply on a <em>scale-wide basis</em>, not a modal basis, simply because the process of forming a scale complement requires rotating the scale, and the rotation is not necessarily by a constant amount. Moreover, in 12-TET, only hexatonic scales have complements of the same size; thus 1:1 modal relationships between complements cannot always exist.)</p>
+			<p class="light">(I should clarify that, while these tables list these scales’ symmetrical modes side-by-side, scale complements apply on a <em>scale-wide basis</em>, not a modal basis, simply because the process of forming a scale complement requires rotating the scale, and not necessarily by a constant amount. Moreover, in 12-TET, only hexatonic scales have complements of the same size; thus, 1:1 modal relationships between complements cannot always exist.)</p>
 
 			<!-- <div class="mobilescroll">
 				<table id="symmetricalcomplements" class="normal tabular-oldstyle fixheight nowrap">
@@ -10601,11 +10601,11 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="light">The scale complement pattern I noted above is only so straightforward with odd-numbered scales &ndash; even-numbered scales are more complicated. The reason is that reflective symmetry is a subset of a broader type of symmetry called <span class="toc-counter petitecaps weight4">translational symmetry</span>. The 44 remaining scales are translationally symmetrical (and thus achiral), but do not have any reflectively symmetrical modes.</p>
 			
-			<p class="light">A scale possesses translational symmetry if it can be transformed into its inverse by rotation. Reflective symmetry occurs <em>on</em> notes (like Dorian’s symmetry); however, another form of translational symmetry occurs <em>between</em> notes. This can only exist in scales with even numbers of notes.</p>
+			<p class="light">A scale possesses translational symmetry if it can be transformed into its inverse by rotation. Reflective symmetry occurs <em>on</em> notes (like Dorian’s symmetry); however, another form of translational symmetry occurs <em>between</em> notes. This can only exist if a scale’s note count is a multiple of 2. I will henceforth call such scales <span class="toc-counter petitecaps weight4">even scales</span> (antonym: <span class="toc-counter petitecaps weight4">odd scales</span>) for the sake of reducing verbosity.</p>
 			
-			<p class="light">If a scale is achiral, its complement is also achiral, but it does not hold that if a scale has a reflectively symmetrical mode, its complement also has a reflectively symmetrical mode.</p>
+			<p class="light">In 12-TET, all achiral scales have achiral complements (caveat: the chromatic scale’s complement is… um… er… what‽), but not all reflectively symmetrical scales have reflectively symmetrical complements. However, for the same reason that translational symmetry <em>between</em> notes can only occur in even scales, all reflectively symmetrical <em>odd</em> scales have reflectively symmetrical complements.</p>
 
-			<p class="light">Among scales with translational but not reflective symmetry, five have two notes, twelve are tetratonic, fourteen are hexatonic, ten are octatonic, and three are decatonic. Since literally all two-note and decatonic scales are translationally symmetrical, I don’t see much point in printing them here, but here are the tetratonics, hexatonics, and octatonics:</p>
+			<p class="light">Among scales with translational but not reflective symmetry, five have two notes, twelve are tetratonic, fourteen hexatonic, ten octatonic, and three decatonic. Since literally all two-note and decatonic scales are translationally symmetrical, I see little point in printing them here, but the tetratonics, hexatonics, and octatonics are:</p>
 
 			<div class="mobilescroll">
 				<table id="translationalsymmetry4" class="normal tabular-oldstyle sidepad6 fixheight nowrap">
@@ -10884,7 +10884,9 @@ window.onload = function () {makeAllSortable();};*/
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-			<p class="light">As I mentioned, all achiral scales have achiral complements. Counting the null set as a scale (since otherwise, the chromatic scale has no complement), the achiral scales break down as follows:</p>
+			<h2 class="centred" id="achiralscalecounts">Counting achiral scales</h2>
+
+			<p class="light">As I mentioned, all achiral scales have achiral complements. I also mentioned a caveat: the chromatic scale’s complement, the null set, shares some characteristics of a divide by zero error. In the context of scale complements, however, I’m willing to count it as one. Perhaps more importantly, Forte counts it as a pitch class. Bearing that in mind, the achiral scales break down as follows:</p>
 
 			<table id="translationalsymmetrycount" class="normal tabular-oldstyle sidepad8 fixheight nowrap centred">
 				<thead>
@@ -10919,7 +10921,7 @@ window.onload = function () {makeAllSortable();};*/
 				<li>1</li>
 			</ol> -->
 
-			<p class="light">Forte grouped pitch classes into 224 discrete sets. 128 of these are the 256 chiral scales; the other 96 are the achiral scales (counting the null set).</p>
+			<p class="light">Forte grouped pitch classes into 224 discrete sets. 128 of these are the 256 chiral scales; the other 96 are the achiral scales, for a total 352 scales (or 351, if we exclude the null set).</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
@@ -11046,7 +11048,7 @@ window.onload = function () {makeAllSortable();};*/
 				<li>Finally, if the generator has an interval size <em>s</em> (in units of 1/<em>t</em> octave) such that <em>c</em>, (<em>t</em> &minus; <em>c</em>), <em>s</em>, and (<em>t</em> &minus; <em>s</em>) are all coprime with <em>t</em>, then both the scale and its complement will have single-note mode transformations that progress through every mode on every root.</li>
 			</ul>
 
-			<p class="light">I’ll need to write better tools for analysis in other tonalities before I can ascertain whether I’m correct.</p>
+			<p class="light">Since 12-TET contains a very obvious dearth of test cases, I’ll need to write better tools for analysis in other equal temperaments to ascertain whether I’m correct.</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 

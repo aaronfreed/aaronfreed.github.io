@@ -1197,6 +1197,9 @@ th {
 	.nonmobileleftmargin-30 {
 		margin-left: -30px;
 	}
+	.nonmobileleftmargin-60 {
+		margin-left: -30px;
+	}
 	.nonmobileleftmargin30 {
 		margin-left: 30px;
 	}
@@ -1263,6 +1266,8 @@ th {
 	}
 
 	.forceprintpadding8 :is(td, th), td.forceprintpadding8, th.forceprintpadding8 {padding-left: 8px !important; padding-right: 8px !important;}
+	.forceprintpadleft0 :is(td, th), td.forceprintpadleft0, th.forceprintpadleft0 {padding-left: 0px !important;}
+	.forceprintpadright0 :is(td, th), td.forceprintpadright0, th.forceprintpadright0 {padding-right: 0px !important;}
 	.noprint
 	{
 		visibility: collapse !important;
@@ -1884,6 +1889,14 @@ th {
 	) {
 		padding-left: 1px;
 		padding-right: 1px;
+	}
+
+	:is(.printpadding1, .printpadding2, .printpadding3, .printpadding4, .printpadding5, .printpadding6, .printpadding7, .printpadding8, .printpadding9) :is(td.noleftpad, th.noleftpad) {
+		padding-left: 0px;
+	}
+
+	:is(.printpadding1, .printpadding2, .printpadding3, .printpadding4, .printpadding5, .printpadding6, .printpadding7, .printpadding8, .printpadding9) :is(td.noleftpad, th.norightpad) {
+		padding-right: 0px;
 	}
 
 	/* :is(.printpadding1, .printpadding2, .printpadding3, .printpadding4, .printpadding5, .printpadding6, .printpadding7, .printpadding8, .printpadding9, .printpadding10)
@@ -5581,7 +5594,7 @@ td.timesignature {
 .musictheory .musicsymbol {
 	font-size: 1.5rem;
 }
-.musicalmodes span.musicsymbol {
+.musicalmodes span.musicsymbol, .musicalmodes :is(.weight1, .weight2, .weight3, .weight4, .weight5, .weight6, .weight7, .weight8, .normal) .musicsymbol {
 	font-size: 1.5rem;
 	font-weight: var(--weight0);
 	line-height: 0.75rem;

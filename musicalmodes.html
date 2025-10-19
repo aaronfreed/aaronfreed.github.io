@@ -11049,9 +11049,7 @@ window.onload = function () {makeAllSortable();};*/
 				</table>
 			</div>
 
-			<p class="light">For presumably obvious reasons, such scales must be hexatonic, so it’s little surprise that so few of them exist. For less obvious reasons, all six are also achiral, which I suspect to be an equally necessary part of the equation. If so, only twenty scales in 12-TET could be self-complements.</p>
-			
-			<p class="light">Several of these scales also share a few other interesting commonalities:</p>
+			<p class="light">For presumably obvious reasons, such scales must be hexatonic, and for less obvious reasons, they must also be achiral. With only twenty achiral hexatonic scales, it’s little surprise that so few self-complementing scales exist. We’ll explore why self-complements must be achiral once we’ve examined some other interesting commonalities between the self-complements:</p>
 			
 			<ul class="light">
 				<li>Four (F01, F47, F76, F80) subdivide the octave into sections of equal length (respectively, six notes, three notes, two notes, and one note), then place notes on every tone of the odd-numbered subdivisions and no tones of the even-numbered ones.
@@ -11105,6 +11103,40 @@ window.onload = function () {makeAllSortable();};*/
 			</ul>
 
 			<p class="light">Since 12-TET contains a very obvious dearth of test cases, I’ll need to write better tools for analysis in other equal temperaments to ascertain whether I’m correct.</p>
+
+
+			<p class="light">Now, why do self-complementing scales need to be achiral? Let’s take <a href="https://ianring.com/musictheory/scales/461"  target="_blank" rel="noopener noreferrer">Rāga Syamalam</a> as an example. (I’ll produce more detailed representations of this data soon™.)</p>
+			<ul class="light">
+				<li>Notes: C, D, E<span class="musicsymbol">♭</span>, F<span class="musicsymbol">♯</span>, G, A<span class="musicsymbol">♭</span></li>
+				<li>Intervals: <span class="weight3">1</span>, <span class="orange">&frac12;</span>, <span class="accent weight5">1&frac12;</span>, <span class="orange">&frac12;</span>, <span class="orange">&frac12;</span>, <span class="accent weight7">2</span></li>
+				<li>Binary representation: <span class="weight3">1</span><span class="translucent">0</span><span class="weight3">11</span><span class="translucent">00</span><span class="weight3">111</span><span class="translucent">000</span><span class="weight3" style="border-left: 2px solid var(--main-translucent);">1</span><span class="translucent">0</span><span class="weight3">11</span><span class="translucent">00</span><span class="weight3">111</span><span class="translucent">000</span></li>
+			</ul>
+			<p class="light">If we flip its bits, we get <span class="translucent">0</span><span class="weight3">1</span><span class="translucent">00</span><span class="weight3">11</span><span class="translucent">000</span><span class="weight3">111</span>. Arbitrarily, I’m going to rotate that five semitones to the left, producing <a href="https://ianring.com/musictheory/scales/2417" target="_blank" rel="noopener noreferrer">Rāga Gangatarangini</a>.</p>
+
+			<!-- and we have <a href="https://ianring.com/musictheory/scales/1817" target="_blank" rel="noopener noreferrer">the following scale</a>:
+			<ul class="light">
+				<li>Notes: C, D<span class="musicsymbol">♯</span>, E, G<span class="musicsymbol">♯</span>, A, B<span class="musicsymbol">♭</span></li>
+				<li>Intervals: <span class="accent weight5">1&frac12;</span>, <span class="orange">&frac12;</span>, <span class="accent weight7">2</span>, <span class="orange">&frac12;</span>, <span class="orange">&frac12;</span>, <span class="weight3">1</span></li>
+				<li>Binary representation: <span class="weight3">1</span><span class="translucent">00</span><span class="weight3">11</span><span class="translucent">000</span><span class="weight3">111</span><span class="translucent">0</span></li>
+			</ul> -->
+
+			<ul class="light">
+					
+				<li>Notes: C, E, F, G<span class="musicsymbol">♭</span>, A<span class="musicsymbol">♭</span>, B</li>
+				<li>Intervals: <span class="accent weight7">2</span>, <span class="orange">&frac12;</span>, <span class="orange">&frac12;</span>, <span class="weight3">1</span>, <span class="orange">&frac12;</span>, <span class="accent weight5">1&frac12;</span></li>
+				<li>Binary representation: <span class="weight3">1</span><span class="translucent">000</span><span class="weight3">111</span><span class="translucent">0</span><span class="weight3">1</span><span class="translucent">00</span><span class="weight3">1</span><span class="weight3" style="border-left: 2px solid var(--main-translucent);">1</span><span class="translucent">000</span><span class="weight3">111</span><span class="translucent">0</span><span class="weight3">1</span><span class="translucent">00</span><span class="weight3">1</span></li>
+			</ul>
+
+			<p class="light">Clearly, not the same scale. This is an inevitable result of XORing an asymmetrical sequence of ones and zeroes.</p>
+			
+			<p class="light">Perhaps confusingly, we haven’t wound up with Rāga Syamalam’s <a href="https://ianring.com/musictheory/scales/1649" target="_blank" rel="noopener noreferrer">enantiomorph</a>, although it is quite similar:</p>
+			<ul class="light">
+				<li>Notes: C, E, F, G<span class="musicsymbol">♭</span>, A, B<span class="musicsymbol">♭</span></li>
+				<li>Intervals: <span class="accent weight7">2</span>, <span class="orange">&frac12;</span>, <span class="orange">&frac12;</span>, <span class="accent weight5">1&frac12;</span>, <span class="orange">&frac12;</span>, <span class="weight3">1</span></li>
+				<li>Binary representation: <span class="weight3">1</span><span class="translucent">000</span><span class="weight3">111</span><span class="translucent">00</span><span class="weight3">11</span><span class="translucent">0</span><span class="weight3" style="border-left: 2px solid var(--main-translucent);">1</span><span class="translucent">000</span><span class="weight3">111</span><span class="translucent">00</span><span class="weight3">11</span><span class="translucent">0</span></li>
+			</ul>
+			
+			<p class="light">Effectively, the <span class="translucent">00</span><span class="weight3">11</span> and the <span class="translucent">0</span><span class="weight3">1</span> swap positions between the two scales. For what it’s worth, Forte considers these scales’ set classes to be “zygotic”, or twinned: their interval distribution is so similar that they share a large number of characteristics. Forte assigned Rāga Gangatarangini the number 6-Z17 and Rāga Syamalam (and its enantiomorph) the number 6-Z43, where Z stands for “zygotic”.</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="12tetscales.html">Complete 12-TET scale list</a> &middot; <a href="discography.html">My discography</a> &middot; <a href="soundtracks.html"><em>Marathon</em> soundtracks</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 

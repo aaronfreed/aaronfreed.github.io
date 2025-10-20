@@ -3669,9 +3669,13 @@ ol {
 :is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0) li {
 	display: block;
 }
-:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li {
+:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li:not(.notopmargin, .margintop2, .margintop3, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop18, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60) {
 	margin-top: 4px;
+}
+:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom18, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60) {
 	margin-bottom: 4px;
+}
+:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li {
 	line-height: 125%;
 }
 /*:is(.toc, .toclite) li::before {
@@ -5465,31 +5469,31 @@ li.weight8,
 	text-decoration-thickness: 2.75px;
 
 }
-.weight0thickness, :is(ol.toc li .weight0thickness, ol.toclite li .weight0thickness, ol.tocliter li .weight0thickness, .weight0thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight0thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight0thickness, .weight0thickness) :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-thickness: 0.25px;
 }
-.weight1thickness, :is(ol.toc li .weight1thickness, ol.toclite li .weight1thickness, ol.tocliter li .weight1thickness, .weight1thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight1thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight1thickness, .weight1thickness) :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-thickness: 0.375px;
 }
-.weight2thickness, :is(ol.toc li .weight2thickness, ol.toclite li .weight2thickness, ol.tocliter li .weight2thickness, .weight2thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight2thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight2thickness, .weight2thickness) :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-thickness: 0.5px;
 }
-.weight3thickness, :is(ol.toc li .weight3thickness, ol.toclite li .weight3thickness, ol.tocliter li .weight3thickness, .weight3thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight3thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight3thickness, .weight3thickness) :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-thickness: 1.375px;
 }
-.weight4thickness, :is(ol.toc li .weight4thickness, ol.toclite li .weight4thickness, ol.tocliter li .weight4thickness, .weight4thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight4thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight4thickness, .weight4thickness) :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-thickness: 1.5px;
 }
-.weight5thickness, :is(ol.toc li .weight5thickness, ol.toclite li .weight5thickness, ol.tocliter li .weight5thickness, .weight5thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight5thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight5thickness, .weight5thickness) :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-thickness: 2px;
 }
-.weight6thickness, :is(ol.toc li .weight6thickness, ol.toclite li .weight6thickness, ol.tocliter li .weight6thickness, .weight6thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight6thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight6thickness, .weight6thickness) :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-thickness: 2.25px;
 }
-.weight7thickness, :is(ol.toc li .weight7thickness, ol.toclite li .weight7thickness, ol.tocliter li .weight7thickness, .weight7thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight7thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight7thickness, .weight7thickness) :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-thickness: 2.5px;
 }
-.weight8thickness, :is(ol.toc li .weight8thickness, ol.toclite li .weight8thickness, ol.tocliter li .weight8thickness, .weight8thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight8thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight8thickness, .weight8thickness) :is(a:link, a:visited, a:hover, a:active) {
 	text-decoration-thickness: 2.75px;
 }
 

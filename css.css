@@ -3669,10 +3669,10 @@ ol {
 :is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0) li {
 	display: block;
 }
-:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li:not(.notopmargin, .margintop2, .margintop3, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop18, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60) {
+:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li:not(.notopmargin, .margintop2, .margintop3, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop18, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60, .overridetopmargin) {
 	margin-top: 4px;
 }
-:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom18, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60) {
+:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom18, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60, .overridebottommargin) {
 	margin-bottom: 4px;
 }
 :is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li {

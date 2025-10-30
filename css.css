@@ -1125,6 +1125,9 @@ th {
 	.mobileleftmargin-15 {
 		margin-left: -15px !important;
 	}
+	.mobileleftmargin-30 {
+		margin-left: -30px !important;
+	}
 
 	.marginleft4, p.marginleft4, div.marginleft4, li.marginleft4, td.marginleft4, th.marginleft4, blockquote.marginleft4, h1.marginleft4, h2.marginleft4, h3.marginleft4, h4.marginleft4, h5.marginleft4 {
 		margin-left: 4px;

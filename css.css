@@ -1,5 +1,5 @@
 ﻿/* fonts */
-@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|FiraMono:400,500,700');
+/* @import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|FiraMono:400,500,700'); */
 
 /* @font-face {
 	font-display: swap; 
@@ -8,6 +8,173 @@
 	size-adjust: 2;
 	src: local("Noto Music", "NotoMusic"), url('/fonts/NotoAccidentals.woff2') format('woff2');
 } */
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO UltraLight'),
+         url('fonts/FiraGO-UltraLight.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO UltraLight Italic'),
+         url('fonts/FiraGO-UltraLightItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO ExtraLight'),
+         url('fonts/FiraGO-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO ExtraLight Italic'),
+         url('fonts/FiraGO-ExtraLightItalic.woff2') format('woff2');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO Light'),
+         url('fonts/FiraGO-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO Light Italic'),
+         url('fonts/FiraGO-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO Regular'),
+         url('fonts/FiraGO-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO Regular Italic'),
+         url('fonts/FiraGO-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO Medium'),
+         url('fonts/FiraGO-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO Medium Italic'),
+         url('fonts/FiraGO-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO SemiBold'),
+         url('fonts/FiraGO-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO SemiBold Italic'),
+         url('fonts/FiraGO-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO Bold'),
+         url('fonts/FiraGO-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO Bold Italic'),
+         url('fonts/FiraGO-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO ExtraBold'),
+         url('fonts/FiraGO-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO ExtraBold Italic'),
+         url('fonts/FiraGO-ExtraBoldItalic.woff2') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO Heavy'),
+         url('fonts/FiraGO-Heavy.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO Heavy Italic'),
+         url('fonts/FiraGO-HeavyItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+@font-face{
+    font-family: 'Fira Mono';
+    src: url('eot/FiraMono-Regular.eot');
+    src: local('Fira Mono'),
+         url('eot/FiraMono-Regular.eot') format('embedded-opentype'),
+         url('woff/FiraMono-Regular.woff') format('woff'),
+         url('ttf/FiraMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Fira Mono';
+    src: url('eot/FiraMono-Bold.eot');
+    src: local('Fira Mono Bold'),
+         url('eot/FiraMono-Bold.eot') format('embedded-opentype'),
+         url('woff/FiraMono-Bold.woff') format('woff'),
+         url('ttf/FiraMono-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
 
 @font-face {
 	font-display: swap; 
@@ -225,6 +392,9 @@
 	--weight6: 700;
 	--weight7: 800;
 	--weight8: 900;
+
+	--page-width: min(800px, calc(100vw - 16px));
+	--gatefold-width: min(400px, calc(50vw - 8px));
 }
 td,
 th {
@@ -3252,6 +3422,18 @@ h3 .subtitle {
 
 
 /* paragraph, div, and list stuff */
+.forcemargintop8 {
+	margin-top: 8px !important;
+}
+.forcemargintop0 {
+	margin-top: 0px !important;
+}
+.forcemarginbottom8 {
+	margin-bottom: 8px !important;
+}
+.forcemarginbottom0 {
+	margin-bottom: 0px !important;
+}
 div:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop18, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60, .overridetopmargin, .music-totals),
 p:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop18, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60, .overridetopmargin, .music-totals),
 li:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop18, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60, .overridetopmargin, .music-totals)
@@ -4298,6 +4480,9 @@ tbody:nth-child(even) tr:nth-child(even) .hidden {
 }
 tbody:nth-child(even) tr:nth-child(odd) .hidden {
 	/*color: var(--background);*/ visibility: hidden !important;
+}
+span.hidden {
+	visibility: hidden !important;
 }
 /* now this is a story all about how / my life got flipped, turned upside-down */
 tbody tr.freshprince:nth-child(even) {
@@ -5838,4 +6023,8 @@ img.fittowidth {
 .hangindent30, p.hangindent30, .hangindent30 p {
 	text-indent: -30px;
 	margin-left: 30px;
+}
+.hangindent15, p.hangindent15, .hangindent15 p {
+	text-indent: -15px;
+	margin-left: 15px;
 }

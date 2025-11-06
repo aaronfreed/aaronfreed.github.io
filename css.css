@@ -381,6 +381,7 @@
 	--toc-counter-translucent: #004c80c6;
 	--toc-counter-translucenter: #004c808d;
 	--main: #000;
+	--main-semitranslucent: #000000e3;
 	--main-translucent: #000000c6;
 	--main-translucenter: #0000008d;
 	--weight0: 100;
@@ -623,6 +624,7 @@ th {
 			--toc-counter-translucent: #a8f0ffc6;
 			--toc-counter-translucenter: #a8f0ff8d;
 			--main: #fff;
+			--main-semitranslucent: #ffffffe3;
 			--main-translucent: #ffffffc6;
 			--main-translucenter: #ffffff8d;
 			/* these are OKHSV 29/50/100, 59/50/100, etc., via Björn Ottosson's
@@ -4958,6 +4960,12 @@ table.curved thead > tr:first-child > th {
 .bottomborder {
 	border-bottom: 2px solid var(--offset-level-3);
 }
+.nobottomborder, tr.nobottomborder :is(td, th), table.curved tr.nobottomborder :is(td, th) {
+	border-bottom: 0px;
+}
+.notopborder, tr.notopborder :is(td, th), table.curved tr.notopborder :is(td, th) {
+	border-top: 0px;
+}
 :is(.musicalmodes, table.curved) tr.bottomborder :is(td, th),
 :is(.musicalmodes, table.curved) :is(th.bottomborder, td.bottomborder, tr.bottomborder) {
 	border-bottom: 2px solid var(--offset-level-3);
@@ -5717,8 +5725,11 @@ li.weight8,
 {
 	color: var(--heading-color-translucent);
 }
-.translucent, .maincolor .translucent, .toc-counter .maincolor .translucent {
+.translucent, .maincolor .translucent, :is(.toc-counter, .accent, .hue0, .hue30, .hue60, .hue90, .hue120, .hue150, .hue180, .hue210, .hue240, .hue270, .hue300, .hue330) .maincolor :is(.translucent, span.translucent, div.translucent) {
 	color: var(--main-translucent);
+}
+.semitranslucent, .maincolor .semitranslucent, :is(.toc-counter, .accent, .hue0, .hue30, .hue60, .hue90, .hue120, .hue150, .hue180, .hue210, .hue240, .hue270, .hue300, .hue330) .maincolor :is(.semitranslucent, span.semitranslucent, div.semitranslucent) {
+	color: var(--main-semitranslucent);
 }
 .translucent a:link {
 	color: var(--link-translucent);

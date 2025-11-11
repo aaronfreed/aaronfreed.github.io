@@ -3761,6 +3761,22 @@ p.mt8i, div.mt8i, li.mt8i, td.mt8i, th.mt8i, blockquote.mt8i, h1.mt8i, h2.mt8i, 
 	font-size: 1rem;
 }
 
+:where(.moonlight) h1 {
+	font-size: 2rem;
+}
+:where(.moonlight) h2 {
+	font-size: 1.5rem;
+}
+:where(.moonlight) h3 {
+	font-size: 1.375rem;
+}
+:where(.moonlight) h4 {
+	font-size: 1.25rem;
+}
+:where(.moonlight) h5 {
+	font-size: 1.125rem;
+}
+
 .forgemanual :where(h1, h2, h3, h4, h5) {
 	margin: 16px 0px 4px;
 }

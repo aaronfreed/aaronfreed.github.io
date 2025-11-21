@@ -4857,6 +4857,9 @@ code {
 :not(.compositions2023-2024) .dotted {
 	border-bottom: 1px dotted;
 }
+.thickdotted {
+	text-decoration: 2px dotted underline; text-underline-offset: 4px;
+}
 
 .soundtracks hr {
 	margin: 24px 0px;

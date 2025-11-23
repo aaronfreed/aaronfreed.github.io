@@ -3104,6 +3104,10 @@ ol.dso-lps {
 	         'XII' 'XIII' 'XIV' 'XV' 'XVI' 'XVII' 'XVIII' 'XIX' 'XX' 'XXI'
 	         'XXII' 'XXIII' 'XXIV' 'XXV' 'XXVI' 'XXVII' 'XXVIII' 'XXIX' 'XXX'
 }
+@counter-style baseball-eras {
+	system: fixed;
+	symbols: '1' '2' '3' '3½' '4'
+}
 ol.comp2023-2024 {
 	list-style: comp2023-2024;
 }
@@ -3112,6 +3116,9 @@ ol.comp2023-2024movements {
 }
 ol.comp2023-2024appendices {
 	list-style: comp2023-2024appendices;
+}
+ol.baseball-eras {
+	list-style: baseball-eras;
 }
 .texttop td, .texttop th, td.texttop, th.texttop, .texttop {
 	vertical-align: text-top;

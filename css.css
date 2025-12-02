@@ -1287,6 +1287,9 @@ th {
 		hyphens: auto;
 		hyphenate-limit-chars: 5 2 2;
 	}
+	.nonmobile2col {
+		columns: 1;
+	}
 }
 @media screen and (width > 600px) {
 	.nowrapdesktop {
@@ -1388,6 +1391,9 @@ th {
 	.nonmobilebalancedwrap :is(td, th, li) {
 		white-space: balance;
 		text-wrap: balance;
+	}
+	.nonmobile2col {
+		columns: 2;
 	}
 }
 @media (prefers-color-scheme: light) {
@@ -5900,6 +5906,10 @@ td.timesignature {
 .compositions2023-2024 :is(ol.contents ol, ol.tracklist ol, blockquote ol) ::marker {
 	color: var(--toc-counter);
 	text-decoration-color: var(--toc-counter-translucent);
+}
+.compositions2023-2024 :is(ol.contents, ol.tracklist, ol.interpolations, blockquote) :is(ol.maincolor, ul.maincolor) ::marker {
+	color: var(--main);
+	text-decoration-color: var(--main-translucent);
 }
 .compositions2023-2024 ol.tracklist ol li {
 	margin-top: 4px;

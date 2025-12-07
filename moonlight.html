@@ -220,9 +220,16 @@
 			<li><a href="#baseball">On baseball</a>
 				<ol>
 					<li><a href="#congenitalbias">On my congenital bias against the Toronto Blue Jays</a></li>
-					<li><a href="#baseballstats">A brief introduction to baseball statistics</a>
+					<li><a href="#baseballstats">Introduction to baseball statistics</a>
 						<ol>
-							<li><a href="#pitchingstats">Pitching stats</a></li>
+							<li><a href="#pitchingstats">Pitching stats</a>
+								<ol>
+									<li><a href="#pitchingreliabilitystats">Reliability</a></li>
+									<li><a href="#pitchingrunrstats">Run prevention</a></li>
+									<li><a href="#hitsandwalks">Hit and walk ratios</a></li>
+									<li><a href="#singlegamefeats">Feats of Strength</a></li>
+								</ol>
+							</li>
 						</ol>
 					</li>
 					<li><a href="#ohtani">Why Shōhei Ohtani may be the best baseball player of all time</a>
@@ -288,6 +295,17 @@
 								<ol>
 									<li><a href="#ichiro">Ichiro Suzuki</a></li>
 									<li><a href="#godzilla">Godzilla</a></li>
+								</ol>
+							</li>
+							<li><a href="#jackiespredecessors">Jackie Robinson’s forgotten predecessors</a>
+								<ol>
+									<li><a href="#williamedwardwhite">William Edward White</a></li>
+									<li><a href="#fleetwalker">Moses Fleetwood “Fleet” Walker</a></li>
+									<li><a href="#weldywalker">Weldy Wilberforce Walker, and the racial abuse the brothers received</a></li>
+									<li><a href="#georgewashingtonstovey">George Washington Stovey</a></li>
+									<li><a href="#thecolorlineisdrawn">The color line is drawn</a></li>
+									<li><a href="#lifeafterbaseball">Life after baseball</a></li>
+									<li><a href="#walkerslegacy">Fleet Walker’s legacy</a></li>
 								</ol>
 							</li>
 							<li><a href="#theworstbaseballcommissioner">The worst baseball commissioner in history</a>
@@ -2929,26 +2947,103 @@ Admittedly, a successful sports career is quite unlikely – but then, my extend
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
-<h3 class="centred" id="baseballstats">A brief introduction to baseball statistics</h3>
+<h3 class="centred" id="baseballstats">Introduction to baseball statistics</h3>
 
-<p>I’ll refer to a lot of baseball stats throughout this section, as one does. Here’s a brief rundown of several of the most important.</p>
+<p>I’ll refer to a lot of baseball stats throughout this section, as one does. Here’s a brief rundown of several of the most common or historically important. Not every historically important stat is considered important.</p>
 
+
+<h4 class="centred" id="whatisitgoodfor">Wins Above Replacement: What is it good for?</h4>
+
+<p>Wins Above Replacement is a statistic tracking a player’s effectiveness over that of a replacement player. I won’t bore readers with a description of the exact formula, especially since formulae vary. I will use the stats from <a href="https://baseball-reference.com/" target="_blank" rel="noopener noreferrer">Baseball Reference</a>, to which I also routinely link throughout this section.</p>
+
+<p>There are actually two main forms of WAR, offensive WAR (OWAR) and pitching WAR (PWAR). Because WAR is cumulative, it’s also often helpful to evaluate WAR over specific lengths of time to compare the overall consistency of players with different career lengths. I’ve chosen to use metrics of 162 games, or a full modern season, for OWAR, and 200 innings pitched, a fairly typical workload for a starting pitcher, for PWAR. I abbreviate these ratios as OWFS (Offensive WAR per Full Season) and PWSS (Pitching WAR per Starter’s Season), respectively.
+</p>
 
 <h4 class="centred" id="pitchingstats">Pitching stats</h4>
+
+<h5 class="centred" id="pitchingreliabilitystats">Reliability</h5>
 <ul>
 	<li><p>Win–loss records and win% are one of the oldest metrics of pitcher efficacy. They’re also one of the worst.</p>
 		
 		<p><a href="https://www.baseball-reference.com/players/h/hendlbo01.shtml" target="_blank" rel="noopener noreferrer">Bob Hendley</a> gave up only one hit, one walk, and one unearned run on <a href="https://www.baseball-reference.com/boxes/LAN/LAN196509090.shtml" target="_blank" rel="noopener noreferrer">1965-09-09</a>. He lost. Why? Opposing pitcher <a href="https://www.baseball-reference.com/players/k/koufasa01.shtml" target="_blank" rel="noopener noreferrer">Sandy Koufax</a> threw a perfect game: he allowed no runs, no hits, and no walks. Was Hendley’s outing bad? No, of course not. The Cubs just couldn’t hit Koufax. That wasn’t their fault: Hall of Famer <a href="https://www.baseball-reference.com/players/s/stargwi01.shtml" target="_blank" rel="noopener noreferrer">Willie Stargell</a> famously said hitting against Koufax was <span class="toc-counter">“like eating soup with a fork”</span>.</p>
 		
-		<p>This is an extreme example, but it goes to show win/loss and win%’s limitations as metrics. They’re basically statistical noise for relievers, who rarely enter games with blank slates, but analyzing them with other pitching stats can provide surprising insights on starting pitchers’ teammates and opponents. We can safely conclude two things about a starter with a losing record, a low WHIP, and a high ERA+: (a) their pitching is actually incredible, and (b) their team’s batters couldn’t hit the broad side of a barn.</li>
+		<p>This is an extreme example, but it goes to show these metrics’ limitations. Decisions (individual wins and losses) are almost useless for relievers, who rarely enter games with blank slates. If I enter a game my team is winning, I’m only credited with a win if I give up at least enough runs to tie the game, then my teammates regain it. Likewise, if I enter one we’re losing, I can only get a loss if my teammates score at least enough to tie the game, then I give up enough runs to set us behind. Effectively, our situation when I enter greatly affects my odds of earning wins or losses, and our manager controls when I enter; I don’t. This is why other stats exist for relievers. Arguably, a high decision count being a red flag for a reliever is the only thing that keeps reliever decisions from being trivia.</p>
+		
+		<p>Comparing starters’ record and win% to their other stats can provide perhaps surprising insights not on the starters, but on their teammates and opponents. We can conclude that a pitcher with a losing record, a low WHIP, and a high ERA+ is actually an incredible pitcher who likely suffers from either:</p>
+		<ol class="loweralpha">
+			<li>being on a team whose batters couldn’t hit the broad side of a barn, or</li>
+			<li>not finishing games and being on <del>the 2025 Los Angeles Dodgers</del> a team with a terrible bullpen.</li>
+		</ol>
+	</li>
 
+	<li><p>Holds, saves, blown saves, and save percentage are similar statistics meant to track relievers’ effectiveness. Since 1975, MLB rules have credited a save as occurring when a pitcher:</p>
+		<ol>
+			<li>is still pitching when their team wins;</li>
+			<li>is not credited with the victory;</li>
+			<li>is credited with at least &frac13; IP; and either:</li>
+			<li>
+				<ol class="loweralpha">
+					<li>enters with a lead of three runs or fewer and throws at least one inning;</li>
+					<li>enters with the potential tying run either on base, at bat, or on deck; or </li>
+					<li>throws at least three innings.</li>
+				</ol>
+			</li>
+		</ol>
+		<p>This statistic has come in for some criticism; Hall of Fame relievers <a href="https://www.baseball-reference.com/players/g/gossari01.shtml">Rich “Goose” Gossage</a> and <a href="https://www.baseball-reference.com/players/f/fingero01.shtml" target="_blank" rel="noopener noreferrer">Rollie Fingers</a> each blew over 100 saves but were still extraordinarily effective overall. It’s arguably better to use one’s best relievers strategically in close games than to uniformly use them for every game’s final inning. Sabermetric analysis has clearly demonstrated, however, that the most effective reliever is the previous game’s javelin-throwing starter; no such pitcher has ever lost a World Series game.</p>
+	</li>
+	<li>
+		Baseball sabermetrician and FiveThirtyEight founder Nate Silver has <a href="https://fivethirtyeight.com/features/goose-egg-new-save-stat-relief-pitchers/" target="_blank" rel="noopener noreferrer">proposed</a> a replacement statistic, the goose egg, named <span class="toc-counter">“to honor (or troll) Gossage”</span>, its all-time leader despite currently being only 27th in career saves. A reliever gets a goose egg each time:</p>
+		<ol>
+			<li>the inning is the seventh or later;</li>
+			<li>at the time of the first batter the pitcher faced that inning, either:
+				<ol class="loweralpha">
+					<li>the game was tied,</li>
+					<li>their team led by two runs or fewer, or</li>
+					<li>the opposing team had the potential tying run on base or at the plate;</li>
+				</ol>
+			</li>
+			<li>in the course of the inning, both:
+				<ol class="loweralpha">
+					<li>no earned or unearned runs are charged to the pitcher, and</li>
+					<li>no inherited runners score while the pitcher is in the game; and</li>
+				</ol>
+			</li>
+			<li>the pitcher either:
+				<ol class="loweralpha">
+					<li>records three outs (one inning pitched), or</li>
+					<li>records at least one out, and the sum of outs plus inherited baserunners when the pitcher entered was greater than two.</li>
+				</ol>
+			</li>
+		</ol>
+		<p>Relievers are saddled with “broken eggs” when:</p>
+
+		<ol>
+			<li>At least one <em>earned</em> run is charged to the reliever;</li>
+			<li>The reliever could’ve gotten a goose egg by recording enough outs;</li>
+			<li>The reliever does not close out the win for his team.</li>
+		</ol>
+		<p>And they’re credited with “mehs” if a run charged to another pitcher or an unearned run scores while they’re on the mound. Silver argues that:</p>
+		<blockquote class="toc-counter">“[M]anagers are trying to maximize the number of saves for their closer, as opposed to the number of wins for their team. They’re managing to a stat and playing worse baseball as a result. … <span class="maincolor">[A save]</span> doesn’t give a pitcher any additional reward for pitching multiple innings — even though two clutch innings pitched in relief are roughly twice as valuable as one. And a pitcher doesn’t get a save for pitching in a tie game, even though it’s one of the highest-leverage situations.”</blockquote>
+		<p>He also argues that goose eggs and broken eggs correlate much more closely (0.78) to the much more complex statistic Win Probability Added than saves and blown saves do (0.50).</p>
+
+		<p>A related statistic, Goose Wins Above Replacement, is to goose eggs as pitching WAR is to wins. (Unfortunately, Dave Brockie [RIP] is not MLB’s leader in GWAR.) <a href="https://www.baseball-reference.com/players/m/millest01.shtml" target="_blank" rel="noopener noreferrer">Stu Miller</a> had the best single-season GWAR in 1965, with 79 goose eggs to 7 broken eggs for 7.5 GWAR. His traditional stats looked good enough at 14–7, 1.89 ERA, 24 saves, 119&frac13; IP, and 4.2 PWAR, but he was almost unhittable in high-leverage situations. Lifetime save leader <a href="https://www.baseball-reference.com/players/r/riverma01.shtml">Mariano Rivera</a> also leads in lifetime GWAR with 54.6, but his best season according to GWAR was not 2004 (53 saves, 47 goose eggs, 4 broken eggs, 2.09 ERA, and 232 ERA+ in 78&frac23;, 4.2 PWAR, 5.4 GWAR) IP, but 1996 (5 saves, 54 goose eggs, 6 broken eggs, 1.94 ERA, 240 ERA+, 107&frac13; IP, 5.0 PWAR, 6.6 GWAR).</p>
+
+		<p>Yoshinobu Yamamoto would receive three goose eggs out of three opportunities in World Series Game 7 this year. I feel like that, in and of itself, should be sufficient proof of the value of this statistic.</p>
+	</li>
+</ul>
+
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+<h5 class="centred" id="pitchingrunrstats">Run prevention</h5>
+<ul>
 	<li>
 		<p>ERA, or Earned Run Average, is a traditional metric of how often a pitcher gives up earned runs, or runs that aren’t the result of fielding errors. A lower number is better. The formula for calculating it is simple: <code>Earned Runs &times; 9 &div; Innings Pitched</code>. It has several limitations, but it’s still widely used, partly because it’s easy to understand and calculate. Also, unlike ERA+, it’s possible to calculate for postseason games.</p>
 		
 		<p><a href="https://www.baseball-reference.com/players/w/walshed01.shtml" target="_blank" rel="noopener noreferrer">Ed Walsh</a>, the all-time career leader, has a 1.816 career ERA. He also pitched exclusively in what’s called the “dead-ball era” because it was extremely hitter-unfriendly. The dead-ball era ended after 1919, coincidentally <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml" target="_blank" rel="noopener noreferrer">Babe Ruth</a>’s last season with the Boston Red Sox.</p>
 		
 		<p>The modern leader, <a href="https://www.baseball-reference.com/players/r/riverma01.shtml">Mariano Rivera</a>, retired in 2013 with a 2.209 career ERA. Rivera was primarily a reliever, meaning that he worked in smaller spans. Relievers tend to have lower ERAs. <a href="https://www.baseball-reference.com/players/k/kershcl01.shtml" target="_blank" rel="noopener noreferrer">Clayton Kershaw</a>, who just retired, has the lowest career ERA among modern starters, with 2.534. The increase in ERA over the years is less due to a decline in pitching quality and more due to rule changes and an increase in hitting quality.
-		</p></li>
+		</p>
+	</li>
 	
 	<li>
 		<p>ERA+ has overtaken ERA as one of the most important indicators of a pitcher’s effectiveness in recent years, though it has a few weaknesses (most notably, it isn’t calculated for postseason games, and it’s also more complicated to explain). Unlike ERA, it’s adjusted to factors such as the overall league average ERA and how hitter-friendly the ballpark is – thus, runs allowed at the Colorado Rockies’ Coors Field, which is notoriously hitter-friendly due to being over a mile above sea level, will count less against a pitcher’s ERA+ than runs allowed at the Miami Marlins’ LoanDepot Park, which is, unsurprisingly, at sea level. Perhaps the most important difference from ERA, though, is that a higher ERA+ number is better. This stat’s career leaders are:</p>
@@ -2966,6 +3061,12 @@ Admittedly, a successful sports career is quite unlikely – but then, my extend
 	</li>
 	
 	<li>FIP stands for Fielding Independent Pitching; it’s another adjusted version of ERA that measures a pitcher’s effectiveness at striking out batters and preventing home runs and walks, set in such a way that the league average FIP and league average ERA are the same. Unlike ERA+, FIP is still calculated for the postseason. The FIP records look pretty similar to the ERA records; <a href="https://www.baseball-reference.com/players/w/walshed01.shtml" target="_blank" rel="noopener noreferrer">Ed Walsh</a> tops it with 2.018.</li>
+</ul>
+
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+<h5 class="centred" id="hitsandwalks">Hit and walk ratios</h5>
+<ul>
 
 	<li>WHIP stands for Walks plus Hits per Inning Pitched. Again, a lower number is better. This has overtaken ERA as of the most important measures of pitching effectiveness in recent years. A single-season WHIP of below 1 is generally considered elite. The all-time career leader, <a href="https://www.baseball-reference.com/players/j/jossad01.shtml" target="_blank" rel="noopener noreferrer">Addie Joss</a>, had 0.9678 WHIP over 2327 IP and pitched exclusively in the dead-ball era, but second-place <a href="https://www.baseball-reference.com/players/d/degroja01.shtml" target="_blank" rel="noopener noreferrer">Jacob deGrom</a> is the modern-era leader with 0.9859 WHIP over 1539&frac23; IP. This is another stat where you can pick any of the top ten all-time leaders and find a phenomenal pitcher.</li>
 
@@ -2978,7 +3079,26 @@ Admittedly, a successful sports career is quite unlikely – but then, my extend
 	<li>SO/BB stands for Strikeouts per Base on Balls. Again, higher numbers are better. deGrom is unsurprisingly the all-time leader in this stat, with an absolutely filthy 5.3652, though shouts-out to Chris Sale for being not far behind with 5.2957.</li>
 </ul>
 
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+<h5 class="centred" id="singlegamefeats">Feats of Strength</h5>
+<ul>
+	<li>A complete game means a pitcher started the game and threw every pitch to every opposing batter. This is only somewhat dependent on the pitcher’s effectiveness, since reliever use occurs at a manager’s discretion, and other factors also affect whether a pitcher receives a complete game credit. A rain-shortened game or a seven-inning game that is part of a double-header still counts as a complete game; an extra-inning game that a pitcher leaves after nine innings does not.</p>
+		
+		<p>Complete games have become extraordinarily rare. In 1904, 87.6% of games were complete games; in 2024, 0.6% were. This is largely due to increasingly strict adherence to pitch counts, to the extent that it was considered extraordinarily unusual when Yoshinobu Yamamoto threw 96 pitches in Game 6 of this year’s World Series, then another 34 in Game 7. (This is nothing for Yoshi, who had thrown up to 140 pitches in an NPB game, and who throws javelins for practice.)</p>
+	</li>
+	<li>A shutout is a complete game in which a pitcher does not allow a single run, earned or otherwise. A game in which multiple pitchers combine to throw a shutout is not officially credited as a shutout, although it is often informally called a combined shutout.</li>
+	<li>A no-hitter is a game of at least nine innings in which a pitcher does not allow a single hit. The Venn diagram between shutouts and no-hitters is a large circle mostly overlapping with a smaller circle: no-hitters can allow runs if batters reach on errors or pitchers walk too many batters. No-hitters are most often complete games, although the most recent no-hitter in MLB was a combined no-hitter thrown on <a href="https://www.baseball-reference.com/boxes/CHN/CHN202409040.shtml" target="_blank" rel="noopener noreferrer">2024-09-04</a> by <a href="https://www.baseball-reference.com/players/i/imanash01.shtml" target="_blank" rel="noopener noreferrer">Shōta Imanaga</a>, <a href="https://www.baseball-reference.com/players/p/pearsna01.shtml" target="_blank" rel="noopener noreferrer">Nate Pearson</a>, and <a href="https://www.baseball-reference.com/players/h/hodgepo01.shtml" target="_blank" rel="noopener noreferrer">Porter Hodge</a>.</li>
+	<li>
+		<p>A perfect game is a game of nine innings or more in which no opposing batter safely reaches base. Thus, no walk, hit, hit batsman, catcher’s interference, fielder’s obstruction, fielding error, or uncaught third strike may allow any batter to reach base. A previously perfect game spoiled in extra innings does not count. Only twenty-four perfect games have ever been pitched in Major League Baseball history. No pitcher has ever pitched more than one, and <a href="https://www.baseball-reference.com/players/l/larsedo01.shtml" target="_blank">Don Larsen</a>’s <a href="https://baseball-reference.com/boxes/NYA/NYA195610080.shtml" target="_blank" rel="noopener noreferrer">perfect game</a> in the 1956 World Series is the only one in postseason history. <a href="https://www.baseball-reference.com/players/g/germado01.shtml" target="_blank" rel="noopener noreferrer">Domingo Germán</a> threw the most recent perfect game on <a href="https://www.baseball-reference.com/boxes/OAK/OAK202306280.shtml" target="_blank" rel="noopener noreferrer">2023-06-28</a>.</p>
+		
+		<p>A perfect game, by definition, is a no-hitter, but not necessarily a shutout, although every one to date has been. The “ghost runner” in extra-inning regular-season games does not spoil a perfect game, even if he advances due to such occurrences as sacrifice flies or fielding errors, so a pitcher could at least theoretically pitch a perfect game he still loses. However, no extra-inning perfect game has ever been completed (a few have been spoiled in extra innings, such as a <a href="https://www.baseball-reference.com/boxes/SDN/SDN199506030.shtml">1995-06-03</a> game by <a href="https://www.baseball-reference.com/boxes/SDN/SDN199506030.shtml">Pedro Martínez</a>), so this has never happened. (I can almost guarantee that it will if any Los Angeles Angels pitcher ever manages to carry a perfect game into extra innings. If any team can find a way to lose a game in which their players do something incredible and historically unprecedented, it’s the Angels.)</p>
+	</li>
+</ul>
+
 <p>(Intro to hitting stats TK)</p>
+
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
 
 <h3 class="centred" id="ohtani">Why Shōhei Ohtani may be the best baseball player of all time</h3>
@@ -3175,7 +3295,7 @@ Admittedly, a successful sports career is quite unlikely – but then, my extend
 
 <p>Most people seem to think Shōhei Ohtani and Babe Ruth are the only two-way players in major-league history. Most people are wrong. In over 150 years of American professional baseball, several other players have ever achieved major-league success as both hitters and pitchers. Before we meet some of them, a few notes:</p>
 <ul>
-	<li>“PG” means “Pitcher Games”, and “PWS” means “Pitching WAR per adjusted Season” (200 innings pitched).</li>
+	<li>“PG” means “Pitcher Games”, and “PWS” means “Pitching WAR per pitcher’s Season” (200 innings pitched).</li>
 	<li>“OG” means “Other Games”, and “OWS” means “Offensive WAR per full Season” (162 games).</li>
 	<li>I required at least 50 games as a pitcher, 50 games in another position, 0.8 PWS, and 0.8 OWS. Unfortunately, this excluded a few interesting historical footnotes (e.g., Hall of Famer <a href="https://www.baseball-reference.com/players/f/foxxji01.shtml">Jimmie Foxx</a>, who initially wanted to be a pitcher, threw 23&frac23; innings in 10 MLB games with a 1.52 ERA, 261 ERA+, and 1.141 WHIP).</li>
 	<li>I’ve italicized players who achieved at least 1.6 OWS and 1.6 PWS and written their names in small caps.</li>
@@ -3680,7 +3800,7 @@ Admittedly, a successful sports career is quite unlikely – but then, my extend
 						</ol>
 						<p> Vladimir Guerrero Jr., asked what Yamamoto’s best pitch was after the game, replied, <span class="toc-counter">“All of them. All of his pitches are good. I can’t tell you which one is better.”</span></p>
 					</li>
-					<li>In <a href="https://baseball-reference.com/boxes/LAN/LAN202510270.shtml" target="_blank" rel="noopener noreferrer">Game 3</a>, he was warming up in the bullpen when Freeman hit his walkoff home run. Had he already entered, he’d almost certainly have become the first pitcher to acquire a 4–0 record in a World Series. Rumor has it that he’s still warming up in the bullpen as you read this.</li>
+					<li>In <a href="https://baseball-reference.com/boxes/LAN/LAN202510270.shtml" target="_blank" rel="noopener noreferrer">Game 3</a>, he was warming up in the bullpen when Freeman hit his walkoff home run. Had he already entered, he’d almost certainly have become the first pitcher to acquire a 4–0 record in a World Series. According to Freeman, he was firing 97-mph darts with pinpoint accuracy, and it’s being reported that he’s still warming up in the bullpen as you read this.</li>
 					<li>He also became the first pitcher ever to start and win <a href="https://baseball-reference.com/boxes/TOR/TOR202510310.shtml" target="_blank" rel="noopener noreferrer">Game 6</a>, then record more outs in <a href="https://baseball-reference.com/boxes/TOR/TOR202511010.shtml" target="_blank" rel="noopener noreferrer">Game 7</a> than any other pitcher on their team. He did this despite being on zero days’ rest after throwing 96 pitches in Game 6. His 34 pitches in Game 7 etched him into World Series lore forever.</li>
 					<li>Overall, he had a 1.02 ERA and 0.679 WHIP with 15 strikeouts across 17&frac23; innings pitched. In today’s era, those statistics would be superb even devoid of context; the context of what the Jays’ offense did in the rest of the Series puts it in contention for the greatest World Series pitching performance of all time. In this World Series, the only pitchers on <em>either</em> team with lower ERAs had fewer than 6 IP; only Kershaw, with &frac13; IP, had a lower WHIP (0.00); and only Yesavage had more strikeouts. It’s difficult to argue that any pitcher had a better postseason this year; to the extent that Ohtani’s accomplishments rival Yamamoto’s, his pitching is only part of the reason.</li>
 					<li><p>MLB’s 2025 schedule lasted nine months. Yamamoto won games in all nine (<a href="https://www.baseball-reference.com/players/gl.fcgi?id=yamamyo01&t=p&year=2025" target="_blank" rel="noopener noreferrer">seven regular-season</a>, <a href="https://www.baseball-reference.com/players/gl.fcgi?id=yamamyo01&t=p&post=1" target="_blank" rel="noopener noreferrer">two postseason</a>): March (1–0), April (2–2), May (3–1), June (1–3), July (2–1), August (2–1), September (1–0), October (4–1), and November (1–0). I suspect this is a record by at least a month, but I can’t find it tracked anywhere. The nearest runners-up I’ve found won games in seven months:</p>
@@ -3700,9 +3820,24 @@ Admittedly, a successful sports career is quite unlikely – but then, my extend
 
 						<blockquote class="toc-counter">“I don’t think you’ll ever see somebody do what Yama did tonight. That was probably the most gutsy, ballsy thing any guy has ever done.”</blockquote>
 
+						<p>Third baseman Max Muncy said:</p>
+						
+						<blockquote class="toc-counter">“The guy’s a psychopath. How do you come back out a day after you’ve thrown 96 pitches? He went out and put himself on the line for us and still dominated. It was absolutely incredible.”</blockquote>
+
+						<p>Dodgers president of baseball operations Andrew Friedman said:</p>
+
+						<blockquote class="toc-counter">“For him to have as good stuff tonight as he had last night is maybe the most incredible thing I’ve ever seen on a baseball field.”</blockquote>
+
 						<p>And Roberts said:</p>
 
-						<blockquote class="toc-counter">“It’s unheard of, and I think that there’s a mind component, there’s a delivery, which is a flawless delivery, and there’s just an unwavering will. I just haven’t seen it. I really haven’t.”</blockquote>
+						<blockquote class="toc-counter">
+							<p>“What Yoshi did tonight is unprecedented in modern-day baseball. We needed a next-level performance from Yamamoto, and we got it.</p>
+							
+							<p>“I wanted to give Yamamoto an opportunity to keep the game at bay. Once did he that, he felt confident that he could stay in his delivery, it wasn’t going to compromise health, and then at that point in time, even for that third up, he said,<wbr /><span class="hue150">「大丈夫」<wbr />[daijōbu]</span>. It means, <span class="hue150">‘I’m okay’</span>. And so for me, I just trusted him, and he came up big again. It’s unheard of, and I think that there’s a mind component, there’s … a flawless delivery, and there’s just an unwavering will. I just haven’t seen it. I really haven’t. You know, all that combined.…</p>
+							
+							<p>“And there’s certain players that want moments, and there’s certain players that want it for the right reasons, but Yoshi is a guy that I just completely implicitly trust. He just uses his body very efficiently. It’s the whole engine that works, and not just the arm, so he’s just very efficient with his delivery. You know, throwing a hundred pitches and come back after one day off and going three innings, it’s pretty crazy. I'm kind of crazy for sending him back out there, but I just felt he was the best option. And, again, it’s something that I just never imagined, but you’ve got to trust players, and I believed in him, we all believed in him.</span>
+								
+							<p>“Yoshinobu is one of the top pitchers in all of baseball. I think he’s shown that this postseason and this year.”</blockquote>
 
 						<p>Personally, I suspect Yamomoto is from the same planet as Yesavage, Schlittler, and Misiorowski.</p>
 					</li>
@@ -4015,7 +4150,7 @@ And I’ve alluded to how great Bumgarner was, but unless you’ve watched him c
 
 		<h5 id="cwpa" class="centred">10b. cWPA (Championship Win Probability Added)</h5>
 
-		<p><a href="https://baseball-reference.com/" target="_blank" rel="noopener noreferrer">Baseball-Reference.com</a> has a statistic called Championship Win Probability Added (cWPA), which calculates the probability a given play adds to a team’s chance of winning the World Series. The all-time leader of this stat is Hal Smith’s three-run blast in the bottom of the eighth in 1960’s World Series finale, which changed the score from NYY 7&ndash;PIT 6 to PIT 9&ndash;NYY 7 and gave the Pirates +63.6% cWPA. (That’s right: Mazeroski’s legendary walk-off home run <em>wasn’t</em> the game’s most consequential play. He hit his in a tie game, with cWP already around 50%; Smith hit his when the Pirates were a run behind, with four outs to close the gap.)</p>
+		<p><a href="https://baseball-reference.com/" target="_blank" rel="noopener noreferrer">Baseball Reference</a> has a statistic called Championship Win Probability Added (cWPA), which calculates the probability a given play adds to a team’s chance of winning the World Series. The all-time leader of this stat is Hal Smith’s three-run blast in the bottom of the eighth in 1960’s World Series finale, which changed the score from NYY 7&ndash;PIT 6 to PIT 9&ndash;NYY 7 and gave the Pirates +63.6% cWPA. (That’s right: Mazeroski’s legendary walk-off home run <em>wasn’t</em> the game’s most consequential play. He hit his in a tie game, with cWP already around 50%; Smith hit his when the Pirates were a run behind, with four outs to close the gap.)</p>
 
 		<p>How is this relevant? Well, <a href="https://twitter.com/FoolishBB/status/1985019757838622935">three of the top twelve and two of the top five plays</a> were in 2025’s finale:</p>
 
@@ -4113,13 +4248,29 @@ And I’ve alluded to how great Bumgarner was, but unless you’ve watched him c
 
 <h5 class="centred" id="jackie">Jackie Robinson &amp; Hank Aaron’s civil rights impact</h5>
 
-<p>Many athletes have also been instrumental civil rights activists. In particular, people often overlook the historical impact of Jackie Robinson breaking baseball’s color barrier. On <em>1947</em>-04-15, MLB arguably became the U.S.’ biggest institution to have begun to work towards desegregating.</p>
+<p>Many athletes have also been instrumental civil rights activists. In particular, people often overlook the historical impact of Jackie Robinson re-breaking baseball’s color barrier. (Contrary to popular belief, Robinson was not the first or even the second Black player to play in Major League Baseball; brothers Moses Fleetwood “Fleet” Walker and Weldy Wilberforce Walker preceded him in <em>1884</em>. However, no Black players would play in MLB between 1885 and 1946. I will have an entire section on them later.) On 1947-04-15, MLB arguably became the U.S.’ biggest institution to have begun to work towards desegregating. The National Football League had already desegregated in 1920, but it was far from being the cultural juggernaut it is today.</p>
+
+<!-- <p>Contrary to common belief, Robinson was not the first Black MLB player; William Edward White (<a href="https://www.baseball-reference.com/players/w/whitebi01.shtml" target="_blank" rel="noopener noreferrer">BR</a>, <a href="https://en.wikipedia.org/wiki/William_Edward_White" target="_blank">WP</a>) played as a substitute in one 1879 game, although he passed as white. Moses Fleetwood Walker (<a href="https://www.baseball-reference.com/players/w/walkefl01.shtml" target="_blank" rel="noopener noreferrer">BR</a>, <a href="https://en.wikipedia.org/wiki/Moses_Fleetwood_Walker" target="_blank" rel="noopener noreferrer">WP</a>) didn’t conceal his ethnicity and played in 42 games in 1884 before injuries forced his release. (As far as I know, the number of games Walker played is unrelated to Jackie Robinson’s uniform number with the Dodgers.) Walker hit .263 and scored 23 runs. His brother Weldy Wilberforce Walker (also spelled Weldy; <a href="https://www.baseball-reference.com/players/w/walkewe01.shtml" target="_blank" rel="noopener noreferrer">BR</a>, <a href="https://en.wikipedia.org/wiki/Weldy_Walker" target="_blank" rel="noopener noreferrer">WP</a>) also briefly joined him.</p>
+
+<p>However, neither Walker brother played in Major League Baseball after the 1884 season, and no Black player would play in the majors again for 63 years, owing to what began as a vile “gentleman’s agreement” between owners. The villains responsible include popular  With the growing popularity of Negro League players such as Josh Gibson and Satchel Paige, however, this shifted from “agreement” to “dicatorial policy enforced from above by the first (and worst) baseball commissioner”.</p> -->
 
 <p>(Admittedly, not all ball clubs were on board yet: the Boston Red Sox didn’t integrate until 1959 because owner Tom Yawkey was, in Robinson’s words, <span class="toc-counter">“one of the most bigoted guys in baseball”</span>; a discrimination lawsuit forced his hand. The Red Sox’ second Black player, Earl Wilson, became the first African-American pitcher to throw a no-hitter in the AL or NL on 1962-06-26. More impressively, he did something only Wes Ferrell and Jim Tobin had managed while throwing a no-hitter: hit a home run. Of course, Rick Wise one-upped them all on 1971-06-23 – see the section on 2025 NCLS Game Four above.)</p>
 
 <p>Bear in mind, Rosa Parks’ Montgomery bus boycott, generally accepted as the moment the civil rights movement truly got off the ground, began on 1955-12-01; <em>Brown v. Board of Education</em>, another watershed, was decided on 1954-05-17. In short, baseball was decades ahead of the public on racial integration. And it’s difficult to overstate how important that was; on 2010-04-19, Barack Obama himself said, <span class="toc-counter">“I would not be here if it were not for Jackie and it were not for Don Newcombe.”</span></p>
 
 <p>(Newcombe, who spent most of his MLB career with the Brooklyn/Los Angeles Dodgers, went 149–90 as a pitcher with 1,129 strikeouts, a 3.56 ERA, 136 complete games, 24 shutouts, and 2,154&frac23; innings pitched. He also hit .271 with 15 HR, 108 RBI, and 94 runs scored; unusually for a pitcher, he was occasionally used as a pinch hitter. Newcombe was the only person to win Rookie of the Year, Cy Young, and MVP Awards until Justin Verlander [2011] and likely would’ve been inducted into the Hall of Fame had alcoholism not derailed his career. He described himself as having been <span class="toc-counter">“a stupefied, wife-abusing, child-frightening, falling-down drunk”</span> until he cleaned up his act in 1966; he later helped other people, including teammate Maury Wills, do the same. Fun bit of trivia: In 1962, he played for Nippon Professional Baseball’s Chunichi Dragons. You won’t guess how many of his 82 appearances were as a pitcher… because the answer is 1. He played 55 games as an outfielder and 27 as a first baseman, posting a respectable .261 batting average, .789 OPS, and 12 home runs in 279 at-bats. Unfortunately, that was his final season playing professional baseball in any country &ndash; again, we can blame alcoholism.)</p>
+
+<p>Robinson received commendable amounts of support from Dodgers owner Branch Rickey, manager Leo Durocher, National League president Ford Frick, and baseball commissioner Happy Chandler. Frick reportedly told players who were threatening to strike:</p>
+
+<blockquote class="toc-counter">“You will find that the friends that you think you have in the press box will not support you, that you will be outcasts. I do not care if half the league strikes. Those who do it will encounter quick retribution. All will be suspended and I don't care if it wrecks the National League for five years. This is the United States of America and one citizen has as much right to play as another.”</blockquote>
+	
+<p>And Durocher told players who were threatening to sit out games:</p>
+
+<blockquote class="toc-counter">“I do not care if the guy is yellow or black, or if he has stripes like a fuckin’ zebra. I’m the manager of this team, and I say he plays. What’s more, I say he can make us all rich. And if any of you cannot use the money, I will see that you are all traded.”</blockquote>
+
+<p>Durocher was right, incidentally: Robinson’s effect on attendance at Dodgers games was roughly like Shōhei Ohtani’s today. At any game where he played, attendance spiked.</p>
+
+<p>Although Robinson received his share of racial abuse, other players came to his defense. He credited the Phillies’ Lee “Jeep” Hendley as the first opposing player to wish him well, and Dodgers teammate Pee Wee Reese once came to Robinson’s defense by saying, <span class="toc-counter">“You can hate a man for many reasons. Color is not one of them.”</span> Jewish baseball star Hank Greenberg also came to Robinson’s defense, having had to endure similar ethnic epithets during his career, and he  and the Cleveland Indians’ Larry Doby, the first Black player in the American League, often talked via telephone.</p>
 
 <p>It’s also difficult to overstate the cultural impact of Hank Aaron shattering baseball’s home run record in 1974. Unfortunately, Aaron received a deluge of death threats, but in response, he also received an outpouring of public support. <em>Peanuts</em> cartoonist Charles Schulz drew an arc where Snoopy attempts to break Babe Ruth’s home run record, only to be inundated with hate mail. In an August 11, 1973, strip, Lucy tells Snoopy, <span class="toc-counter">“Hank Aaron is a great player… but you! If you break Babe Ruth’s record, it’ll be a disgrace!”</span> Ruth’s widow, Claire, denounced the racists, stating that her husband would have enthusiastically encouraged Aaron’s attempt to break the record. Legendary Dodgers broadcaster Vin Scully, calling Aaron’s record-breaking 715th home run, said:</p>
 
@@ -4180,7 +4331,7 @@ And I’ve alluded to how great Bumgarner was, but unless you’ve watched him c
 	
 	<p>Koufax may well have retired before he even peaked: he’d just had two of the strongest seasons in his career. In 1965, his penultimate season, he led MLB in wins (26), win percentage (76.5%), complete games (27), shutouts (7), ERA (2.04), and strikeouts (382, a live-ball-era record until Nolan Ryan broke it eight years later with…383. Ryan is, by a massive margin, MLB’s career strikeout leader [5,714]. Second-place Randy Johnson has 4,875 &ndash; a margin of 839. Justin Verlander, age 42, leads currently active pitchers with 3,553; Max Scherzer, age 40, has 3,489; Clayton Kershaw, age 37, retires with 3,052; Chris Sale, age 36, has 2,579… basically, what I’m saying is that, like Mathewson’s three World Series shutouts, Ryan’s strikeout records will stand for the rest of my life).</p>
 
-	<p>But the capstone to Koufax’s 1965 was his 1965-09-09 perfect game (<a href="https://en.wikipedia.org/wiki/Sandy_Koufax's_perfect_game" target="_blank" rel="noopener noreferrer">Wikipedia</a>, <a href="https://baseball-reference.com/boxes/LAN/LAN196509090.shtml" target="_blank" rel="noopener noreferrer">Baseball-Reference</a>), which is <a href="https://www.si.com/mlb/dodgers/onsi/news/greatest-game-ever-pitched-turns-55-revisiting-sandy-koufax-perfection" target="_blank" class="noopener noreferrer">legendary in MLB history</a> for opposing pitcher Bob Hendley, in only his fifth major-league decision, being almost as good. Hendley allowed only one hit (by Lou Johnson), one walk, two baserunners (Lou Johnson and… Lou Johnson), and no earned runs in an eight-inning complete game. (Since the Dodgers led at home, Hendley did not pitch the ninth inning.) That game still holds records for fewest hits and fewest baserunners by either team. Johnson reached base once on a walk and once on a bloop double. After the walk, he reached second on a sacrifice bunt, then stole third; Cubs catcher Chris Krug threw into left field trying to throw him out at third, so he went home, too. Koufax ended the game with six consecutive strikeouts. A 1995 poll of Society for American Baseball Research members voted this as the greatest game ever pitched, and Vin Scully’s call of the ninth inning has frequently been called one of the greatest in baseball history. (Hendley and Koufax faced off again five days later, but despite giving up four hits and three bases on balls, Hendley won that one 2–1.)</p>
+	<p>But the capstone to Koufax’s 1965 was his 1965-09-09 perfect game (<a href="https://en.wikipedia.org/wiki/Sandy_Koufax's_perfect_game" target="_blank" rel="noopener noreferrer">Wikipedia</a>, <a href="https://baseball-reference.com/boxes/LAN/LAN196509090.shtml" target="_blank" rel="noopener noreferrer">Baseball Reference</a>), which is <a href="https://www.si.com/mlb/dodgers/onsi/news/greatest-game-ever-pitched-turns-55-revisiting-sandy-koufax-perfection" target="_blank" class="noopener noreferrer">legendary in MLB history</a> for opposing pitcher Bob Hendley, in only his fifth major-league decision, being almost as good. Hendley allowed only one hit (by Lou Johnson), one walk, two baserunners (Lou Johnson and… Lou Johnson), and no earned runs in an eight-inning complete game. (Since the Dodgers led at home, Hendley did not pitch the ninth inning.) That game still holds records for fewest hits and fewest baserunners by either team. Johnson reached base once on a walk and once on a bloop double. After the walk, he reached second on a sacrifice bunt, then stole third; Cubs catcher Chris Krug threw into left field trying to throw him out at third, so he went home, too. Koufax ended the game with six consecutive strikeouts. A 1995 poll of Society for American Baseball Research members voted this as the greatest game ever pitched, and Vin Scully’s call of the ninth inning has frequently been called one of the greatest in baseball history. (Hendley and Koufax faced off again five days later, but despite giving up four hits and three bases on balls, Hendley won that one 2–1.)</p>
 
 	<p>Koufax’s entire span from 1962 to 1966 is one of the greatest five-year runs any pitcher has ever had. He went 111–34 with a minuscule 1.95 ERA and 0.926 WHIP, led the National League in ERA all five years in a row and MLB in three of them, led all of MLB in WHIP from 1962–65, had its best SO/9IP ratios in 1962 and 1964–66, had its best H/9IP ratios in 1962–65, and that’s just a smattering of his stats in those years. It’s entirely possible he’d have gotten even better had surgeries been good enough in that era to help him recover from his injuries. As it was, rather than burn out or fade away, he just went out on top of his game, on his own terms, which made him even more of a legend. Any list of greatest pitchers that doesn’t include Koufax’s name cannot be taken seriously.</p>
 	
@@ -4283,6 +4434,177 @@ And I’ve alluded to how great Bumgarner was, but unless you’ve watched him c
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
+<h4 class="centred" id="jackiespredecessors">Jackie Robinson’s forgotten predecessors</h4>
+<h5 class="centred" id="williamedwardwhite">William Edward White</h5>
+
+<p>Contrary to common belief, Robinson was not the first Black player to play in Major League Baseball, nor the second, nor possibly even the third. So who was? The answer is more complex than the question makes it sound.</p>
+
+<p>The first candidate, William Edward White (<a href="https://www.baseball-reference.com/players/w/whitebi01.shtml" target="_blank" rel="noopener noreferrer">BR</a>, <a href="https://en.wikipedia.org/wiki/William_Edward_White" target="_blank" rel="noopener noreferrer">WP</a>, <a href="https://sabr.org/bioproj/person/William-E-White" target="_blank" rel="noopener noreferrer">SABR</a>), is the only MLB player known to have been a former slave. White played as a substitute in an 1879 game after the Providence Grays’ first baseman Joe Start broke his finger. The <em>New York Clipper</em> wrote that White <span class="toc-counter">“played first base in fine style”</span>, and the <em>Providence Morning Star</em> wrote that his teammates from Brown University <span class="toc-counter">“lustily cheered their favorite at times, and howled with delight when he got a safe hit in the ninth inning, as they also did his magnificent steals of second in that and the fifth inning.”</span> The <em>Providence Journal</em> wrote:</p>
+	
+<blockquote class="toc-counter">“White, first baseman of the University Nine, occupied that position for Providence, and it is needless to state that he was as expert and effective as ever, catching some widely thrown balls with great ease. He was apparently cool and collected throughout and will be a valuable substitute for the unfortunate Start.”</blockquote>
+
+<p> In four at-bats, he singled, stole two bases, scored a run, and recorded twelve put-outs with no errors. However, for reasons unclear, the Grays’ usual right-fielder Jim O’Rourke replaced him for the remainder of Start’s absence, and White returned to his college studies. The Grays went on to win the pennant that year.</p>
+
+<p>Would he have been a successful player? His Society for American Baseball Research biographer Bruce Allardice thinks so, and he provides compelling statistical evidence as to why:</p>
+
+<blockquote class="toc-counter">“How good was White as a player? The 1880 <em>Spalding Guide</em> listed the statistics for non-major league players (the top college and amateur teams) in 1879, and White had the highest batting average (.488) of any player listed. The 1881 Guide ranked White the 18th best college hitter. The guides listed White ahead of several players who ended up in the major leagues. At a minimum, if White had pursued baseball, major-league teams would have given him a try-out.”</blockquote>
+
+<p>The reason we can’t simply call White the first Black player in Major League Baseball and move on is that he passed as white. (I spent a long time trying to find a non-awkward way to phrase that thought. I don’t think one exists.) Federal census data confirms that White’s mother was half-Black, but in later census reports, he identified himself as a 19-year-old white student born in Georgia and living in Providence, then later Chicago. He subsequently identified his birthplace as Rhode Island, no doubt hoping to conceal his background further.</p>
+
+<p>White’s assertion that he was white evidently went unchallenged in his time. Should a former slave who passed as white be counted as Black? I don’t feel qualified to answer that question. It doesn’t help that we know so much less about him than we do about MLB’s next two Black players – we don’t even know when he was learned to play baseball – nor does it help that his professional baseball career lasted only one game. He later worked as a draftsman, clerk, bookkeeper, and freighting agent in Boston and Chicago, married, and had three daughters. His descendants were apparently unaware that he was a quarter Black, nor were they aware of his baseball connection. Indeed, his biographers seem to have uncovered more information about him than his descendants themselves knew; all they seemed to know about him was that he was “artistic”.</p>
+
+<p>So, was William White the first Black Major League Baseball player? He was born a slave, which was true of no other Major League Baseball player in history. And since he was one-quarter African-American by blood, he would have been considered Black under applicable laws at the time. But he passed as white, meaning that he was spared abuse that other Black players suffered.</p>
+
+<p>As I said, I don’t feel fully qualified to provide a definitive answer as to whether White was Black. But ultimately, I suspect the answer to whether White was the first Black player is yes. And no. Because it’s a much more complicated question than it originally seems.</p>
+
+<p>But I’ll leave the last word on White to official Major League Baseball historian John Thorn: <span class="toc-counter">“For me, there is no getting around the fact that White was born a slave, a credential for Blackness that is impeccable and, among MLB players, unique.”</span></p>
+
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+<h5 class="centred" id="fleetwalker">Moses Fleetwood “Fleet” Walker</h5>
+
+<p>Moses Fleetwood “Fleet” Walker (<a href="https://www.baseball-reference.com/players/w/walkefl01.shtml" target="_blank" rel="noopener noreferrer">BR</a>, <a href="https://en.wikipedia.org/wiki/Moses_Fleetwood_Walker" target="_blank" rel="noopener noreferrer">WP</a>, <a href="https://sabr.org/bioproj/person/Fleet-Walker/" target="_blank" rel="noopener noreferrer">SABR Bio</a>), who didn’t conceal his ethnicity, was the first Black player to play in the American Association, a professional major league that existed from 1882 to 1891. He had attracted quite a lot of attention in the minor leagues; the New Castle, Pennsylvania, press called him <span class="toc-counter">“…one of the best catchers in the country”</span> and <span class="toc-counter">“a gentleman in every sense of the word both on the ball field and off.”</span></p>
+
+<p>He had already faced racism by that point; in 1882, while he was playing for the semi-pro Cleveland Whites, the <em>Louisville Courier-Journal</em> reported that <span class="toc-counter">“players of the Eclipse Club objected to Walker playing on account of his color.”</span> Cleveland responded by holding him out of the game until their replacement catcher injured his hand. At that point, to the crowd’s apparent approval, Walker took to the field and made what the <em>Courier-Journal</em> described as <span class="toc-counter">“several brilliant throws and fine catches while the game waited.”</span> However, two Eclipse players, Johnnie Reccius and Fritz Pfeffer, refused to take the field until the Whites’ third baseman volunteered to go behind the plate. Ultimately, Cleveland lost the game 6–3.</p>
+
+<p>In 1883, William Voltz, manager of the Toledo Blue Stockings, hired Morton to play for his team, who had just formed that year as a member of the minor-league Northeastern League. Walker’s involvement in professional baseball almost ended before it even began, as the <em>Toledo Daily Blade</em> reported:</p>
+
+<blockquote class="toc-counter">A motion was made by a representative from Peoria that no colored player be allowed in the league. This created quite a discussion. It is well known that the catcher of the Toledo club is a colored man. Besides being a good player he is intelligent and has many friends. The motion which would have expelled him was fought bitterly and finally laid on the table.</blockquote>
+
+<p>However, at the time, the motion was defeated. Later that season, the <em>Blade</em> said, <span class="toc-counter">“Walker has played more games and has been of greater value behind the bat than any catcher in the league,”</span> while <em>Sporting Life</em> said he <span class="toc-counter">“is looming up as a great man behind the bat”</span> and called his pairing with pitcher Hank O’Day (<a href="https://www.baseball-reference.com/players/o/o'dayha01.shtml" target="_blank" rel="noopener noreferrer">BR</a>, <a href="https://en.wikipedia.org/wiki/Hank_O%27Day" target="_blank" rel="noopener noreferrer">WP</a>, <a href="https://sabr.org/bioproj/person/Hank-ODay/" target="_blank" rel="noopener noreferrer">SABR</a>) <span class="toc-counter">“one of the most remarkable batteries in the country.”</span></p>
+
+<p>Player/manager Charlie Morton (<a href="https://www.baseball-reference.com/players/m/mortoch01.shtml" target="_blank" rel="noopener noreferrer">BR Player</a>, <a href="https://www.baseball-reference.com/managers/mortoch01.shtml" target="_blank" rel="noopener noreferrer">BR Manager</a>) later stuck up for him when notorious racist Cap Anson refused to take the field against Fleet. The <em>Blade</em> did not have kind words for Anson or his team, running a scathing piece titled “Baby Anson and the Color Line”:</p>
+
+<blockquote class="toc-counter">
+	<p>“Walker, the colored catcher of the Toledo Club…was a source of contention between the home club and…the Chicago Club. Shortly after their arrival in the city…the Toledo Club was…informed that there was objection in the Chicago Club to Toledo’s playing Walker, the colored catcher.</p>
+
+	<p>“Walker has a very sore hand, and it had not been intended to play him in yesterday’s game, and this was stated to the bearer of the announcement for the Chicagos…. Not content with this, the visitors…declared with the swagger for which they are noted, that they would play ball <span class="hue150">‘with no damned ni<span class="maincolor">[CLANG]</span>.’</span> … [T]he order was given, then and there, to play Walker and the beefy bluffer was informed that he could play or go, just as he blank pleased.”</p>
+</blockquote>
+
+<p>Effectively, Morton called Anson’s bluff by noting that Anson wouldn’t get gate receipts if he refused to take the field. Nonetheless:</p>
+
+<blockquote class="toc-counter">“Anson hauled in his horns somewhat and ‘consented’ to play, remarking, <span class="hue150">‘We’ll play this here game, but won’t play never no more with the ni<span class="maincolor">[CLANG]</span> in.’</span>”</blockquote>
+
+<p>The <em>Brooklyn Eagle</em> later supplemented the account:</p>
+
+<blockquote class="toc-counter">“Anson, who is very particular about playing against respectable players who happen to be colored and who does not hesitate to play against the dirtiest ballplayer and rough in the fraternity, had to play against catcher Walker in 1883 at Toledo, because the Toledo management had the pluck to withstand the bluff. Anson then threatened to withdraw his men in case Walker played…but the Toledo management told him to withdraw and – well, he concluded to play with Walker after all. The joke of it was that Walker was not in condition to play, but Anson did not know it until Walker retired in the first inning.”</blockquote>
+
+<p>Toledo scored two moral victories here. The management and team took the high road by supporting Walker. Also, Chicago, which had been together for several years and included two future Hall of Famers (Anson and Mike “King” Kelly), had been favored to win the game, and although Toledo lost, they forced the game to extra innings and lost by only a single run, so they were considered to have far outperformed their expectations. (The Toledo Blue Stockings had been founded that year.)</p>
+
+<p>Anson is not solely to blame for the establishment of baseball’s color barrier, but he is one of its primary villains. (I haven’t located any information on Kelly’s stances.) Unfortunately, his attitudes were far from unusual at the time; the country was moving toward segregationism at that time, and it would get worse before it got better.</p>
+
+<p>Nonetheless, the Blue Stockings won the Northwestern League championship in 1883; in 1884, they joined the major-league American Association. Walker played in 42 games for them that year; he took 152 at-bats, hit .263/.325/.316 with two triples and three doubles, and scored 23 runs. (Statistics for runs batted in were only sporadically kept during that era; I don’t believe it is known how many he batted in. Also, as far as I can ascertain, it’s coincidental that Jackie Robinson’s uniform number was the number of games Walker played in 1884.) Walker’s hitting statistics seem relatively unimpressive until one bears in mind the context:</p>
+<ul>
+	<li>The 1884 American Association average was .240/.278/.326.</li>
+	<li>The Toledo Blue Stockings as a whole hit .231/.268/.305.</li>
+	<li>In 1884, American Association catchers hit .226/.262/.304<!-- (960 hits, 1290 total bases, and 206 walks in 4,248 at-bats and 4,454 plate appearances). He handily exceeded all three-->. (Most worked bare-handed, so they took a beating from pitched balls and often hit worse than pitchers at the time. And, as we will see, there are reasons that Walker would have a more severe handicap than most others.)</li>
+	<li>He handily outhit Toledo’s other catchers, Deacon McGuire (.185/.217/.252) and Tug Arundel (.085/.140/.085), and in fact all but two of his teammates.</li>
+	<li>Only one team hit better than Walker that year: the Philadelphia Athletics (.267/.301/.379).</li>
+	<li>The New York Metropolitans won that year’s pennant with Bill Holbert (.208/.235/.227) as their primary catcher, and Charlie Reipschlager (.240/.250/.313), as their back-up.</li>
+</ul>
+
+<p>In short, he was one of the best players on the team and one of the best catchers in the sport, and his fellow players recognized it.</p>
+
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+<h5 class="centred" id="weldywalker">Weldy Wilberforce Walker, and the racial abuse the brothers received</h5>
+
+<p>Fleet’s brother, Weldy Wilberforce Walker (<a href="https://www.baseball-reference.com/players/w/walkewe01.shtml" target="_blank" rel="noopener noreferrer">BR</a>, <a href="https://en.wikipedia.org/wiki/Weldy_Walker" target="_blank" rel="noopener noreferrer">WP</a>), would also join the team for five games. (Some sources spell his first name Welday; it’s not clear which is correct.) The newspaper <em>The Sporting Life</em> noted that Weldy <span class="toc-counter">“played well”</span>; he served as an outfielder in five games, batting .222/.222/.278 with two RBI, one double, and one run scored in 18 at-bats.</p>
+
+<p>The Blue Stockings only belonged to the American Association in 1884. They finished in eighth place with a 46–58 record and returned to the minors for the 1885 season before disbanding. (Baseball clubs tended to be much shorter-lived in the early days of the sport.)</p>
+
+<p>Fleet suffered unimaginable racial abuse from both opponents and teammates during his time with the Blue Stockings. Two of his teammates, pitcher Tony Mullane and outfielder Curt Welch, were open racists. The <em>New York Age</em> wrote much later (1919-01-11) that Mullane, <span class="toc-counter">“than whom no pitcher ever had more speed … did not like to be the battery partner of a Negro.”</span> Despite calling Fleet <span class="toc-counter">“the best catcher I ever worked with”</span>, Mullane made an admission to the <em>Age</em> that you may want to avoid reading if you want to avoid losing faith in humanity:</p>
+
+<blockquote class="toc-counter">“I disliked a Negro, and whenever I had to pitch to him, I used to pitch anything I wanted without looking at his signals. One day he signaled me for a curve and I shot a fast ball at him. He caught it and came down to me. … He said, <span class="hue150">‘I’ll catch you without signals, but I won’t catch you if you are going to cross me when I give you signals.’</span> And all the rest of that season, he caught me and caught anything I pitched without knowing what was coming.”</blockquote>
+
+<p>I can’t overemphasize enough how scummy that kind of behavior is. This year, Houston Astros pitcher Framber Valdez made himself the most hated pitcher in Major League Baseball for <em>one</em> outburst in which he disregarded a signal from from catcher César Salazar, gave up a grand slam on that <em>exact</em> pitch, then, two pitches later, threw a pitch <em>at</em> Salazar. Valdez claims it was accidental. Bullshit. His body language makes it extraordinarily obvious that it was intentional, and he should have been immediately ejected from the game, fired from the team, even banned from baseball over it. (<em>Of course</em> he plays for the Astros. What other team would turn a blind eye to behavior like this? …Well, maybe the Angels.) But if nothing else, he’s almost certainly ensured no other team will want to hire him in the future. Salazar, by contrast, came across as a class act for how he handled it, even though I’m sure that, since he’d just been called up from the minors, he probably felt he had very little choice.</p>
+
+<p>Fleet dealt with that kind of abuse <em>every day</em>. The man must’ve had the patience of Job for not beaning Mullane in the head in response. Fleet subsequently suffered an injury that ended his tenure with the Blue Stockings, while Mullane led Major League Baseball in wild pitches that year with 63. It hardly takes a genius to ascertain that the two are connected. (Although Mullane is also Major League Baseball’s all-time career leader in wild pitches, 1884 is nonetheless a fairly large outlier from his usual number; he had 53 in 1886, but his third-largest number was 33 in 1882.)</p>
+
+<p>Mullane’s abuse undoubtedly damaged the team’s standards of play: they made <span class="toc-counter">“the best catcher I ever worked with”</span> far less effective than he should have been and prevented him from playing as much as he should have been able to. It also speaks volumes about Fleet’s efficacy as a catcher that Mullane, despite his open racism and abuse of Fleet, still had such high praise for the latter’s skill. I’m amazed Mullane’s head didn’t explode from the cognitive dissonance. </p>
+
+<p>That wasn’t the only sort of abuse the Walker brothers and other Black players of the time (in minor leagues) received, either. An anonymous player also reported to <em>The Sporting News</em>:</p>
+
+<blockquote class="toc-counter">“<span class="maincolor">[Black players Bud]</span> Fowler <span class="maincolor">[and Frank Grant]</span> used to play second base with the lower part of his legs encased in wooden guards. He knew that about every player that came down to second base on a steal had it in for him and would, if possible, throw the spikes into him. <span class="maincolor">[… Also,]</span> about half the pitchers try their best to hit these colored players when <span class="maincolor">[they’re]</span> at the bat.”</blockquote>
+
+<p>Umpire Billy Hoover also admitted to calling close plays against clubs that fielded Black players. One other, albeit disputed, report comes via respected baseball historian Lee Allen:
+	
+<blockquote class="toc-counter">“Neither <span class="maincolor">[pitcher Hank]</span> O’Day nor Mullane liked Walker, and each did his best to throw the ball so hard the catcher would be injured, but they never succeeded in forcing him off the job.”</blockquote>
+
+<p>If true, this is a huge stain on O’Day’s legacy. O’Day, who enjoyed a reasonably successful career as a two-way player, subsequently became a Hall of Fame umpire, one of the greatest in National League history; he umpired almost 4,000 games (the third-highest of all time) and did perhaps more to reduce the game’s excessive violence at the time than anyone else in the history of the sport.</p>
+
+<p>Allen is a highly respected baseball historian who earned enough credibility that we cannot simply dismiss his assertions as we can, say, Al Stump’s baseless libels of Ty Cobb. On the other hand, no one else has located any other source that backs up Allen’s assertion, and indeed, those who’ve looked have contradicted it. David Nemec, one of today’s foremost nineteenth-century baseball historians, <span class="toc-counter">“found nothing negative about <span class="maincolor">[O’Day’s]</span> relationship with Walker”</span>, nor <span class="toc-counter">“any reported derogatory incidents”</span>, while David Zang, author of the comprehensive biography <em>Fleet Walker’s Divided Heart: The Life of Baseball’s First Black Major Leaguer</em>, found Walker and O’Day to have had a successful, cordial partnership.</p>
+
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+<h5 class="centred" id="georgewashingtonstovey">George Washington Stovey</h5>
+
+<p>Fleet subsequently played with a few minor-league clubs. In 1887, he would form a highly successful all-black battery with George Washington Stovey (written Stover in some sources; <a href="https://en.wikipedia.org/wiki/George_Stovey" target="_blank" rel="noopener noreferrer">WP</a>, <a href="https://www.baseball-reference.com/register/player.fcgi?id=stovey001geo">BR</a>, <a href="http://sabr.org/bioproj/person/8ff10f5c" target="_blank" rel="noopener noreferrer">SABR</a>), the greatest Black pitcher of the 19th century.</p>
+	
+<p>In 1886, the <em>Trenton Times</em> had written of Stovey that Stovey <span class="toc-counter">“is all that has been said of him. He succeeded in striking out eleven of the visitors, and those reaching first base found it difficult to proceed farther, on account of his watchfulness and accurate throwing.”</span> The <em>New York Times</em> wrote, <span class="toc-counter">“The home nine, for the first time, played Stovey, formerly pitcher for the Cuban Giants of Trenton. He is a colored player. He pitched with great effect.”</span> In 1886, he amassed a 1.13 ERA, 270 IP, three shutouts, 203 strikeouts, only 43 walks, held opponents to a .167 batting average, and fanned an astonishing 22 batters in a single game. However, he finished with only a 16–15 record owing to lack of run support from his teammates. <em>The Sporting News</em> believed this was intentional, writing, <span class="toc-counter">“If the team would support him they would make a far better showing. His manner in covering first from the box is wonderful.”</span> The <em>St. Louis Globe-Democrat</em> called him <span class="toc-counter">“one of the best twirlers in the Eastern League.”</span></p> 
+
+<p>Stovey got even better when paired with Walker. The <em>New York Freeman</em> wrote, <span class="toc-counter">“Newark’s colored battery, Stovey and Walker, when upon their mettle, can be excelled by no battery in this country.”</span> Stovey won his first ten decisions of the season and finished the season with a 2.46 ERA and either a 33–14, 34–14, or 35–15 record (reports are contradictory). Although he only struck out 107 and walked 119, the results are still impressive (and his much worse strikeout and walk ratios are likely explained by umpire Billy Hoover’s admission to calling close plays against teams that employed Black players – undoubtedly, he wasn’t the only one). Stovey also batted .255 in 54 games.</p>
+
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+<h5 class="centred" id="thecolorlineisdrawn">The color line is drawn</h5>
+
+<p>Unfortunately, Stovey never had the chance to play in Major League Baseball: a plurality of the teams’ owners shared Anson’s attitude and ultimately voted 6–4 to bar the hiring of future Black players. This also included the International League, although Stovey, Walker, and their fellow Black players Frank Grant and Bob Higgins were allowed to continue playing the remainder of the season, and Walker would remain in the league until 1889. The vote had been sparked by a revolt in the Binghamton, N.Y., club against Black players Bud Fowler and William Renfro. Fowler, fed up with abuse, had asked for his release, and it was granted to him. Renfro would also later be released.</p>
+
+<p>Anson also made good on his threat never to take the field again against Black players, as the <em>Newark Sunday Call</em> reported: 
+
+<blockquote class="toc-counter">“Stovey was expected to pitch in the Chicago game. It was announced on the ground[s] that he was sulking, but it has since been given out that Anson objected to a colored man playing. If this be true, and the crowd had known it, Mr. Anson would have received hisses instead of the applause that was given him when he first stepped to the bat.”</span></blockquote>
+
+<p>Newark at least got their revenge on Anson in that game, defeating Chicago 9–4.</p>
+
+<p>Stovey would continue pitching in integrated minor-league clubs until 1890 before subsequently working for several Black-only clubs. Fleet continued playing in the International Association in 1888, where he helped the Syracuse Stars to the pennant. He was released on August 23, 1889, after a slump. He was the last Black man to play in the league until Jackie Robinson joined Montreal in 1946. He would never play for an all-Black team.</p>
+
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+<h5 class="centred" id="lifeafterbaseball">Life after baseball</h5>
+
+<p>Stovey umpired through at least 1913 to overwhelmingly favorable reception, and helped organize youth teams in Williamsport, the future birthplace of Little League Baseball. He supplemented his income working for the city and for a local sawmill by bootlegging liquor during Prohibition, for which he occasionally got into mild legal trouble, but Williamsport mayor Archibald Hoagland remarked, <span class="toc-counter">“George Stovey has more friends in Williamsport than any other colored man,”</span> so it was rarely serious.</p>
+
+<p>Neither Stovey nor Weldy Walker never married. Fleet Walker married twice and was predeceased by both his wives. He had two sons and a daughter, but his only grandchild did not survive infancy. His life was certainly not boring: he killed a man in an argument, for which he was tried and found not guilty of second-degree murder by an all-white jury; he was convicted of mail robbery and spent a year in prison for it; he managed an opera house; he edited a newspaper with his brother; he wrote a book that his biographer David Zang called <span class="toc-counter">“certainly the most learned book a professional athlete ever wrote”</span>; he patented several inventions; and he earned a reputation as a <span class="toc-counter">“knowledgeable and respectable businessman”</span>.</p>
+
+<p>Embittered by their experiences in baseball, Weldy and Fleet Walker began advocating for Black nationalism and for Black people to return to Africa. Weldy also penned a scathing response on discrimination in the Tri-State League, published as an open letter to <em>Sporting Life</em>:</p>
+
+<blockquote class="toc-counter">
+
+<p>I take the liberty of addressing you because noticing in THE SPORTING LIFE that the “law permitting colored men to sign was repealed, etc.” at the special meeting held at Columbus, Feb. 22, of the above-named League of which you are the president. I concluded to drop you a few lines for the purpose of ascertaining the reason of such an action.
+
+<p>I have grievances, and it is a question with me whether individual loss subserves the public good in this case. This is the only question to be considered – both morally and financially – in this, as it is, or ought to be, in all cases that depend upon the public for success – as base ball. I am convinced beyond doubt that you all, as a body of men, have not been impartial and unprejudiced in your consideration of the great and important question – the success of the “National game.”</p>
+
+<p>The reason I say this is because you have shown partiality by making an exception with a member of the Zanesville Club; and from this one would infer that he is the only one of the three colored players – Dick Johnson, alias Dick Male, alias Dick Noyle, as THE SPORTING LIFE correspondent from Columbus has it; Sol White, of the Wheelings, whom I must compliment by saying was one, if not the surest hitter in the Ohio League last year, and your humble servant who was unfortunate enough to join the Akrons just ten days before they “busted.”</p>
+
+<p>It is not because I was reserved and have been denied making my bread and butter with some club that I speak; but it is in hopes that the action taken at your last meeting will be called up for reconsideration at your next.</p>
+
+<p>The law is a disgrace to the present age, and reflects very much upon the intelligence of your last meeting, and casts derision at the laws of Ohio – the voice of the people – that say all men are equal. I would suggest that your honorable body, in case that black law is not repealed, pass one making it criminal for a colored man or woman to be found in a ball ground.</p>
+
+<p>There is now the same accommodation made for the colored patron of the game as the white, and the same provision and dispensation is made of the money of them both that finds its way into the coffers of the various clubs.</p>
+
+<p>There should be some broader cause – such as want of ability, behavior, and intelligence – for barring a player other than his color. It is for these reasons and because I think that ability and intelligence should be recognized first and last – at all times and by everyone – I ask the question again, why was the ‘law permitting colored men to sign repealed, etc.?’</p>
+
+<p>Yours truly,</p>
+
+<p>Weldy W. Walker</p></blockquote>
+
+<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+<h5 class="centred" id="walkerslegacy">Fleet Walker’s legacy</h5>
+
+<p>Jackie Robinson was not the first Black man in Major League Baseball. It remains to be seen why the myth persists that he was. It could be that he remains in people’s living memory, while Walker was so long ago that he no longer seems relevant. It could be that the league Walker was in no longer survives. However, I think that because the game became segregated after Walker played, most people would prefer to forget it.</p>
+
+<p>I somewhat understand. We don’t like facing uncomfortable truths about ourselves. Jackie Robinson’s story has a happy ending. Fleet Walker’s doesn’t.</p>
+
+<p>But I think we also owe it to ourselves to face hard truths about the society we live in. Fleet Walker and Jackie Robinson lived in very different times, and therefore their stories have very different endings. But they also went through very similar experiences, even if separated by 63 years. They both faced racial bigotry without flinching, and they both demonstrated unspeakable amounts of courage and grace under pressure.</p>
+
+<p>We owe it to Fleet Walker and the other Black players of the 19th century to stop misleading ourselves about history. And we owe it to ourselves to be honest about it. If we don’t first acknowledge our flaws, how can we hope to improve them?</p>
+
+<p>I will give Zang the final word on Walker: <span class="toc-counter">“Moses Fleetwood Walker was no ordinary man, and in the 1880s, he was no ordinary baseball player.”</span></p>
+
+<p>In any case, the vile “gentleman’s agreement” between owners was now fully underfoot, and remained in full force until the growing popularity of Negro League players such as Josh Gibson and Satchel Paige caused it to shift from “agreement” to “dictatorial policy enforced on owners by the first (and worst) baseball commissioner”. Speaking of whom…</p>
+
 <h4 class="centred" id="theworstbaseballcommissioner">The worst baseball commissioner in history</h4>
 <h5 class="centred" id="landisbackground">Background</h5>
 
@@ -4339,9 +4661,9 @@ And I’ve alluded to how great Bumgarner was, but unless you’ve watched him c
 	
 	<p>Unfortunately, poor record-keeping in the Negro Leagues means that we only have records of a small fraction of Gibson’s career. We only have confirmation of 171 home runs across 2,237 at-bats, an average of one home run every 13.08 at-bats. This places him fifth among players with at least 2,000 plate appearances, just ahead of Shōhei Ohtani (13.32) and Kyle Schwarber (13.36); only Mark McGwire (10.61), Aaron Judge (11.15), Ruth (11.76), and Bonds (12.92) have better ratios. (Ruth gets extra credit for a lot of those occurring in the dead-ball era.)</p>
 	
-	<p>Gibson was the second and last player ever to win two consecutive batting Triple Crowns (leading his league in home runs, runs batted in, and batting average); the other, Oscar Charleston, was a fellow Negro League player and sometime teammate, active 1915–1941. Gibson’s .371 career batting average is the highest in history and, as I’ll explain below, will never be surpassed. (That’s not a prediction; it’s a fact.) Gibson’s <a href="https://baseball-reference.com/players/g/gibsojo99.shtml" target="_blank" rel="noopener noreferrer">Baseball-Reference page</a> is a blur of black ink: in several seasons, he leads more stats than he doesn’t. Runs? Hits? Doubles? Triples? HR? RBI? BA? OBP? SLG? OPS? He led them all, many of them three times or more. His career slugging% (.717) and OPS (1.175) also remain MLB records.</p>
+	<p>Gibson was the second and last player ever to win two consecutive batting Triple Crowns (leading his league in home runs, runs batted in, and batting average); the other, Oscar Charleston, was a fellow Negro League player and sometime teammate, active 1915–1941. Gibson’s .371 career batting average is the highest in history and, as I’ll explain below, will never be surpassed. (That’s not a prediction; it’s a fact.) Gibson’s <a href="https://baseball-reference.com/players/g/gibsojo99.shtml" target="_blank" rel="noopener noreferrer">Baseball Reference page</a> is a blur of black ink: in several seasons, he leads more stats than he doesn’t. Runs? Hits? Doubles? Triples? HR? RBI? BA? OBP? SLG? OPS? He led them all, many of them three times or more. His career slugging% (.717) and OPS (1.175) also remain MLB records.</p>
 
-	<p>Arguably one of the greatest tragedies in baseball history is that this absolute legend never played in either the American or the National Leagues. He died before either league was integrated, and to this day, he <em>still</em> isn’t a household name. Rarely can we blame such an occurrence on a single person. In this case, we can, because at least one current franchise owner and at least one prospective owner had expressed interest in integrating their franchises. Landis blocked both. If not for Landis, we wouldn’t be talking about Jackie Robinson breaking the color barrier in 1947, because Gibson would’ve broken it first, maybe as early as 1938.</p>
+	<p>Arguably one of the greatest tragedies in baseball history is that this absolute legend never played in either the American or the National Leagues. He died before either league was integrated, and to this day, he <em>still</em> isn’t a household name. Rarely can we blame such an occurrence on a single person. In this case, we can, because at least two contemporary franchise owners and at least one prospective owner had expressed interest in integrating their franchises. If not for Landis blocking all three, we wouldn’t be talking about Jackie Robinson breaking the color barrier in 1947, because Gibson would’ve broken it first, maybe as early as 1938.</p>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
@@ -4444,7 +4766,7 @@ And I’ve alluded to how great Bumgarner was, but unless you’ve watched him c
 
 <p>Cobb’s reputation as a violent hothead isn’t entirely undeserved, but biographers have inflated it over the years; for instance, contrary to common belief, he never sharpened the spikes on his shoes. (Indeed, he got so sick of this charge that in 1910, he wrote to the president of the American League asking to have players forced to <em>dull</em> their spikes so he could be free of it once and for all, for all the good that did.) Cobb did once get into fights with two black men, but given how many fights he got into with white men, it’s hardly fair to assume this was racially motivated, especially given his other behavior.</p>
 
-<p>Most damningly, at a New York Highlanders game on May 15, 1912, he attacked a heckler, Claude Lueker (spelled in some sources as Lucker; it’s not clear which is correct), whom baseball historian Frank Russo calls <span class="toc-counter">“a Tammany Hall lackey and two-bit punk”</span>. The situation climaxed when Lueker, who’d been heckling Cobb for a year, called him a “half-[N-word]”. (Cobb later summarized this as <span class="toc-counter">“reflecting on my mother’s character and morals”</span>.) Lueker had lost a hand and three fingers in an industrial accident; Cobb didn’t realize this at first, but it didn’t much calm him down when he found out: according to one account, after an onlooker objected that Lucker had no hands, Cobb retorted, <span class="toc-counter">“I don’t care if he’s got no feet!”</span> (According to Russo, most of the crowd cheered Cobb on in the fight.) While it’s extremely rare nowadays, it was fairly common for early baseball players to assault hecklers: Babe Ruth, Cy Young, Rube Waddell, Kid Gleason, Sherry Magee, and Fred Clarke are amongst the others to do so during their careers, and in Cobb’s defense, he’d asked the police and at least attempted to ask the Highlanders’ manager and owner to have Lueker ejected before his teammates Jim Delahanty and Sam Crawford encouraged him to do something about it.</p>
+<p>Most damningly, at a New York Highlanders game on May 15, 1912, he attacked a heckler, Claude Lueker (spelled in some sources as Lucker; it’s not clear which is correct), whom baseball historian Frank Russo calls <span class="toc-counter">“a Tammany Hall lackey and two-bit punk”</span>. The situation climaxed when Lueker, who’d been heckling Cobb for a year, called him a “half-ni[CLANG]”. (Cobb later summarized this as <span class="toc-counter">“reflecting on my mother’s character and morals”</span>.) Lueker had lost a hand and three fingers in an industrial accident; Cobb didn’t realize this at first, but it didn’t much calm him down when he found out: according to one account, after an onlooker objected that Lueker had no hands, Cobb retorted, <span class="toc-counter">“I don’t care if he’s got no feet!”</span> (According to Russo, most of the crowd cheered Cobb on in the fight.) While it’s extremely rare nowadays, it was fairly common for early baseball players to assault hecklers: Babe Ruth, Cy Young, Rube Waddell, Kid Gleason, Sherry Magee, and Fred Clarke are amongst the others to do so during their careers, and in Cobb’s defense, he’d asked the police and at least attempted to ask the Highlanders’ manager and owner to have Lueker ejected before his teammates Jim Delahanty and Sam Crawford encouraged him to do something about it.</p>
 
 <p>Cobb was temporarily suspended after the game; his teammates performed the first collective action in MLB history by going on strike in protest, and on May 18, the scabs that Detroit’s management hastily recruited put up some of Major League Baseball’s negative records from the twentieth century and beyond, ultimately losing 24–2. Allan Travers pitched a complete game – and gave up 26 hits, <span class="dotted" id="ftnt_ref96" title="The Cleveland Blues’ Dave Rowe, usually an outfielder, holds the nineteenth-century record for most hits and runs given up in a single game: on 1882-07-24, Rowe gave up 35 runs on 29 hits. To be fair to Rowe, he got better: in 1884, he pitched nine innings and, despite giving up ten hits across that time, restricted his opponents to two runs and struck out two batters. He got the victory, going 1–0 that season.
 
@@ -5124,9 +5446,9 @@ A much closer comparison would be Geraldo Perdomo’s offensive contribution to 
 
 <p>And it doesn’t even stop there. The Dodgers weren’t the only team offering Ohtani a 10-year, $700 million contract. The San Francisco Giants did too, and the Blue Jays weren’t far behind either of them. Clearly, money wasn’t the only factor in his decision. Can you really blame a guy for taking the best available deal that <em>doesn’t even require him to move to a new city and find a new hibachi joint</em>? Plus, he’s deferred nearly all his salary until later years, and it’s not for tax reasons – he just makes so much in endorsements that his salary is an afterthought, so he’d rather leave it available to the Dodgers so they can keep building their team.</p>
 
-<p>It’s not just the big stars, either. The Oakland Athletics released <a href="https://www.baseball-reference.com/players/m/muncyma01.shtml" target="_blank" rel="noopener noreferrer">Max Muncy</a> after 2017. The Dodgers saw a good player who clearly wasn’t past his sell-by date and took a chance on him for… $575,000. (He makes more now, of course.) Ever since, he’s consistently delivered for them: he’s only posted a WAR below 2.9 or a home run count below 15 in 2020 (for a reason that rhymes with <a href="https://en.wikipedia.org/wiki/Ovid" target="_blank" rel="noopener noreferrer">Ovid</a>), he’s never posted an OBP lower than .329, and he’s averaged 4.80 WAR per 162-game season (WAR/FS). And his regular-season stats <span class="dotted" title="I was extraordinarily disappointed to learn that Frieza never actually said “This isn’t even my final form.” I have a crackpot theory that this is because we’re in the Berenstain Bears universe (I’d have sworn up and down it was Bernstein Bears, with no a and a later second e). David Bowie was the last force holding reality together, and once he ascended back to the stars whence he came, entropy struck and people ceased to live in their original timelines. That’s why all the evidence now contradicts countless people’s memories of Ocarina of Time’s Navi saying “Hey! Listen!” in the same breath, and of Rocky responding, “Again‽ But that trick never works!” in the same Rocky and Bullwinkle bumper. I didn’t watch Dragon Ball Z until long after 2016, but I hypothesize that Frieza must’ve said “This isn’t even my final form” in the Bernstein Bears universe, and that’s why so many people insist it was a real Frieza quote.
+<p>It’s not just the big stars, either. The Oakland Athletics released <a href="https://www.baseball-reference.com/players/m/muncyma01.shtml" target="_blank" rel="noopener noreferrer">Max Muncy</a> after 2017. The Dodgers saw a good player who clearly wasn’t past his sell-by date and took a chance on him for… $575,000. (He makes more now, of course.) Ever since, he’s consistently delivered for them: he’s only posted a WAR below 2.9 or a home run count below 15 in 2020 (for a reason that rhymes with <a href="https://en.wikipedia.org/wiki/Ovid" target="_blank" rel="noopener noreferrer">Ovid</a>), he’s never posted an OBP lower than .329, and he’s averaged 4.80 WAR per 162-game season (WAR/FS). And his regular-season stats <span class="dotted" title="I was extraordinarily disappointed to learn that Frieza never actually said “This isn’t even my final form.” I have a crackpot theory that this is because we’re in the Berenstain Bears universe (I’d have sworn up and down it was Bernstein Bears, with no a and a later second e). David Bowie was the last force holding reality together; once he ascended back to the stars whence he came, entropy struck and people ceased to live in their original timelines. That’s why all the evidence now contradicts countless people’s memories of Ocarina of Time’s Navi saying “Hey! Listen!” in one breath, and of Rocky responding, “Again‽ But that trick never works!” in the same Rocky and Bullwinkle bumper. I didn’t watch Dragon Ball Z until long after 2016, but I hypothesize that Frieza said “This isn’t even my final form” in the Bernstein Bears universe, and that’s why so many people insist it was a real Frieza quote.
 
-Or it could just be that the human memory is fallible and unreliable. But I like my first explanation better.
+Or it could just be that the human memory is fallible and suggestible. But I like my first explanation better.
 
 One of Frieza’s lines in the manga may be the origin of the quote: “My power increases dramatically with each transformation… and I still have two more transformations remaining… Do you understand what that means?” (「このフリーザは変身をするたびにパワーがはるかに増す…その変身をあと２回もオレは残している…その意味がわかるかな？」, Kono Furīza wa henshin o suri tabi ni pawā ga haruka ni masu… Sono henshin o ato nikai mo ore wa nokoshite iru… sono imi ga wakaru ka na?)." id="ftnt_ref101">aren’t even his final form<a aria-describedby="footnote-label" href="#ftnt101" class="normal weight3 noprintlink">&#8317;&sup1;&#8304;&sup1;&#8318;</a></span></span>: he’s the Dodgers’ all-time postseason home run leader. In the eighth inning of <a href="https://www.baseball-reference.com/boxes/TOR/TOR202511010.shtml" target="_blank" rel="noopener noreferrer">Game 7</a> this year, he hit the homer that put them within a run of a tie. <a href="https://baseball-reference.com/players/gl.fcgi?id=rojasmi02&t=p&year=2025" target="_blank" rel="noopener noreferrer">Miguel Rojas</a> tied it in the ninth; Hollywood’s most beloved <a href="https://www.baseball-reference.com/players/s/smithwi05.shtml" target="_blank" rel="noopener noreferrer">Will Smith</a> put them up in the eleventh. In short, they don’t win this year’s World Series without Muncy.</p>
 
@@ -5163,27 +5485,27 @@ One of Frieza’s lines in the manga may be the origin of the quote: “My power
 		</ul>
 		<p>This isn’t <em>really</em> a fair comparison because he spent most of 2024’s playoffs nursing a horrible ankle injury, and he <em>still</em> hit a walkoff grand slam in the 2024 World Series (the only one in World Series history). The next year, he hit the home run that helped Klein earn his win, in the process setting the MLB record for World Series walkoff home runs (no one else has ever hit more than one).</p>
 	</li>
-	<li><p>Even <a href="https://www.baseball-reference.com/players/o/ohtansh01.shtml" target="_blank" rel="noopener noreferrer">Shōhei Ohtani</a>? <em>Especially</em> Shōhei Ohtani. In the regular season, as a hitter (using the metric of OWAR/FS, or offensive WAR per full 162-game season):</p>
+	<li><p>Even <a href="https://www.baseball-reference.com/players/o/ohtansh01.shtml" target="_blank" rel="noopener noreferrer">Shōhei Ohtani</a>? <em>Especially</em> Shōhei Ohtani. In the regular season, as a hitter (OWFS stands for offensive WAR per full season of 162 games):</p>
 		<ul>
-			<li>In 701 Angels games, he hit .274/.366/.556 (19.6 OWAR, 4.530 OWAR/FS).</li>
-			<li>In 317 Dodgers games, he’s hit .296/.391/.634 (15.8 OWAR, 8.074 OWAR/FS).</li>
+			<li>In 701 Angels games, he hit .274/.366/.556 (19.6 OWAR, 4.530 OWFS).</li>
+			<li>In 317 Dodgers games, he’s hit .296/.391/.634 (15.8 OWAR, 8.074 OWFS).</li>
 		</ul>
-		<p>And as a pitcher (using the metric of PWAR/AS, or pitching WAR per adjusted season of 200 innings pitched, on the grounds of that being a roughly typical workload for an elite starter):</p>
+		<p>And as a pitcher (PWSS stands for pitching WAR per starter’s season; I define a starter’s season as 200 IP, a roughly typical workload for a full-time starter):</p>
 		<ul>
-			<li>In 86 Angels games, he had 481&frac23; IP, a 3.01 ERA, 1.082 WHIP, 11.4 SO/9IP, 15 PWAR, and 6.228 PWAR/AS.</li>
-			<li>In 14 Dodgers games, he’s had 47 IP, a 2.87 ERA, 1.043 WHIP, 11.9 SO/9IP, 1.1 PWAR, and 4.681 PWAR/AS.</li>
+			<li>In 86 Angels games, he had 481&frac23; IP, a 3.01 ERA, 1.082 WHIP, 11.4 SO/9IP, 15 PWAR, and 6.228 PWSS.</li>
+			<li>In 14 Dodgers games, he’s had 47 IP, a 2.87 ERA, 1.043 WHIP, 11.9 SO/9IP, 1.1 PWAR, and 4.681 PWSS.</li>
 		</ul>
 		<p>Apples-to-apples comparisons aren’t really possible because he’s pitched literally 10% as many innings with the Dodgers as he did with the Angels. This is mostly because he was recovering from an injury in 2024 (and still posted <em>those numbers</em>) and suffered another injury in 2024’s World Series (to his shoulder). This means his stats will probably improve next year.</p>
-		<p>Using a relatively traditional formula for WAR per full season (WAR/FS) of <code>([OWAR + PWAR] &times; 162 &div; G)</code>:</p>
+		<p>Using a relatively traditional formula for WAR per full season (WFS) of <code>([OWAR + PWAR] &times; 162 &div; G)</code>:</p>
 		<ul>
-			<li>As an Angel, he had 7.996 WAR/FS.</li>
-			<li>As a Dodger, he has 8.637 WAR/FS.</li>
+			<li>As an Angel, he had 7.996 WFS.</li>
+			<li>As a Dodger, he has 8.637 WFS.</li>
 		</ul>
-		<p>But I consider that a flawed predictor of Ohtani’s potential ceiling, though, since it doesn’t account for how much less he’s pitched as a Dodger so far. I propose instead a new metric, which I’ll call Combined WAR per Full Ohtani Season (or CWAR/OS), which we can derive by simply adding OWAR/FS and PWAR/AS. In total, it’s <code>(OWAR &times; 162 &div; G) + (PWAR &times; 200 &div; IP)</code>. Thus:</p>
+		<p>But I consider that a flawed predictor of Ohtani’s potential ceiling, since it doesn’t account for how much less he’s pitched as a Dodger so far. I propose instead a new metric, which I’ll call Combined WAR per Ohtani Season (or CWOS), which we can derive by simply adding OWFS and PWSS. In total, it’s <code>(OWAR &times; 162 &div; G) + (PWAR &times; 200 &div; IP)</code>. Thus:</p>
 		
 		<ul>
-			<li>As an Angel, he had 9.751 CWAR/OS.</li>
-			<li>As a Dodger, he has 12.755 CWAR/OS.</li>
+			<li>As an Angel, he had 9.751 CWOS.</li>
+			<li>As a Dodger, he has 12.755 CWOS.</li>
 		</ul> 
 		
 		<p>That’s <em>bonkers</em>. And I wouldn’t even bet on it being an accurate predictive model of Ohtani’s potential ceiling: throughout his career, he’s consistently found ways to surprise everyone.</p>
@@ -5270,6 +5592,8 @@ One of Frieza’s lines in the manga may be the origin of the quote: “My power
 
 <p>The level of division and vitriol in our society is alarming. But no small part of it is because we’ve <em>chosen</em> to become that way.</p>
 
+<p>Baseball, more often than not, brings people together in a way we desperately need right now. I strongly disagree with several players I’ve mentioned about at least some important issues that have little to nothing to do with baseball – e.g., Goose Gossage, Mariano Rivera, John Smoltz, Sid Bream. On the other hand, I partly or strongly agree with others on at least some of the same issues – Tom Seaver, Sandy Koufax, Larry Doby, and so on.</p>
+
 <p>2025’s baseball season, and especially its postseason, routinely demonstrated levels of sportsmanship, professionalism, and mutual respect I’d grown afraid I’d never see again. The skill of so many of the Dodgers’ players was what caught my eye, but their <em>character</em> is what has turned me into a fan.</p>
 
 <p>I’ve already mentioned Yoshinobu Yamamoto’s tireless work ethic. What I held off mentioning until now is that he’s also a class act of the highest caliber. After his complete game in Game 2, he stayed behind to help clean up the Dodgers’ dugout in Toronto’s Rogers Stadium. How many living people would even consider doing that in such a state of exhaustion? And in Game 7, in the bottom of the eleventh inning, he tipped his hat to the Blue Jays’ Vladimir Guerrero Jr. before pitching to him – a gesture of respect that fans noticed and appreciated.</p>
@@ -5329,6 +5653,10 @@ This baffles me, incidentally. I met Lucas days before The Phantom Menace was re
 </blockquote>
 
 <p>And that, to me, gets <em>exactly</em> at the crux of the most important point here. Role models are important, especially in times like ours. While I’m sure it’s possible to imagine better role models than Ohtani and Yamamoto, I doubt any exist – in fact, for a long time, I doubted role models <em>that good</em> still existed. That’s one of many reasons I was glad to see them repeat as champions. Sometimes nice guys do, in fact, finish first. It’s nice to be reminded of that once in a while.</p>
+
+<p>But I’ll give Dave Roberts the last word on this series, because he’s most certainly earned it:</p>
+
+<blockquote class="toc-counter">“What a great series, what a great game, and I think we’re going to be talking about this game for a long time. That’s what it’s about. <span class="maincolor">[The Blue Jays]</span>, I’ve got so much respect for what John <span class="maincolor">[Schneider]</span> does with his team and his staff and organization. They gave us everything they had. It was just a brawl, both teams fighting and punching back and responding. Yeah, I mean, I’m just speechless. I really am. It’s going to go down as one for the ages.”</blockquote>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 

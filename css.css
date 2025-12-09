@@ -11,6 +11,22 @@
 
 @font-face{
     font-family: 'FiraGO';
+    src: local('FiraGO Thin'),
+         url('fonts/FiraGO-Thin.woff2') format('woff2');
+    font-weight: 50;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'FiraGO';
+    src: local('FiraGO Thin Italic'),
+         url('fonts/FiraGO-ThinItalic.woff2') format('woff2');
+    font-weight: 50;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'FiraGO';
     src: local('FiraGO UltraLight'),
          url('fonts/FiraGO-UltraLight.woff2') format('woff2');
     font-weight: 100;

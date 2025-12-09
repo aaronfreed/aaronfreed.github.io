@@ -527,9 +527,14 @@ window.onload = function () {makeAllSortable();};*/
 				</li>
 				<li><a class="noprintlink" href="#scalecountsbysize">Scale counts in 12-TET by scale size</a>
 					<ol class="mobileleftmargin15">
-						<li><a class="noprintlink" href="#12tetscaledistribution">12-TET mode counts</a></li>
-						<li><a class="noprintlink" href="#tableoflimitedtransposition"><span class="nomobile">All m</span><span class="mobileonly">M</span>odes of limited transposition</a></li>
-						<li><a class="noprintlink" href="#discretescalecounts">12-TET discrete scales</a></li>
+						<li><a class="noprintlink" href="#howtocountscales">How to count scales</a>
+							<ol class="mobileleftmargin15">
+								<li><a class="noprintlink" href="#12tetscalecountcalculation">Counting pentatonic &amp; heptatonic scales &amp; modes</a></li>
+								<li><a class="noprintlink" href="#12tetscaledistribution">12-TET mode counts</a></li>
+								<li><a class="noprintlink" href="#tableoflimitedtransposition"><span class="nomobile">All m</span><span class="mobileonly">M</span>odes of limited transposition</a></li>
+								<li><a class="noprintlink" href="#discretescalecounts">12-TET discrete scales</a></li>
+							</ol>
+						</li>
 						<li><a class="noprintlink" href="#allmodes">Appendix: All 2,048 modes of all 351 scales in 12-TET</a></li>
 					</ol>
 				</li>
@@ -13199,10 +13204,26 @@ window.onload = function () {makeAllSortable();};*/
 			<h2 id="howtocountscales" class="centred">How to count scales</h2>
 
 			<p class="light">In twelve-tone equal temperament, by definition, heptatonic scales contain the root and six of the eleven other pitches. Above, we proved that 12-TET cannot contain heptatonic or pentatonic modes of limited transposition, enabling us to make the following calculations:</p>
-			<ul class="light">
-				<li style="line-height: 1.5rem;">(<span class="timesignature" style="line-height: calc(1rem * 6 / 7); font-size: calc(1rem * 2 / 3); transform: translateY(-4px);">11<br />6</span>) = <span class="timesignature" style="line-height: calc(1rem * 6 / 7); font-size: calc(1rem * 2 / 3); text-decoration-color: var(--main-translucent); transform: translateY(-4px);">11!<br /><span style="border-top: 1px solid var(--main-translucent);">6!5!</span></span> = <span class="timesignature" style="line-height: calc(1rem * 6 / 7); font-size: calc(1rem * 2 / 3); text-decoration-color: var(--main-translucent); transform: translateY(-4px);"><span style="border-bottom: 1px solid var(--main-translucent);">11·10·9·8·7</span><br />5·4·3·2</span> = 11·7·3·2 = 462 heptatonic modes and <span class="timesignature" style="line-height: calc(1rem * 6 / 7); font-size: calc(1rem * 2 / 3); text-decoration-color: var(--main-translucent); transform: translateY(-4px);"><span style="border-bottom: 1px solid var(--main-translucent);">462</span><br />7</span> = 66 discrete heptatonic scales</li>
-				<li style="line-height: 1.5rem;">(<span class="timesignature" style="line-height: calc(1rem * 6 / 7); font-size: calc(1rem * 2 / 3); transform: translateY(-4px);">11<br />4</span>) = <span class="timesignature" style="line-height: calc(1rem * 6 / 7); font-size: calc(1rem * 2 / 3); text-decoration-color: var(--main-translucent); transform: translateY(-4px);">11!<br /><span style="border-top: 1px solid var(--main-translucent);">4!7!</span></span> = <span class="timesignature" style="line-height: calc(1rem * 6 / 7); font-size: calc(1rem * 2 / 3); text-decoration-color: var(--main-translucent); transform: translateY(-4px);"><span style="border-bottom: 1px solid var(--main-translucent);">11·10·9·8</span><br />4·3·2</span> = 11·5·3·2 = 330 pentatonic modes and <span class="timesignature" style="line-height: calc(1rem * 6 / 7); font-size: calc(1rem * 2 / 3); text-decoration-color: var(--main-translucent); transform: translateY(-4px);"><span style="border-bottom: 1px solid var(--main-translucent);">330</span><br />5</span> = 66 discrete pentatonic scales</li>
-			</ul>
+			<div class="mobilescroll">
+				<table id="12tetscalecountcalculation" class="curved centred normal tabular-oldstyle fixheight nowrap">
+					<thead>
+					<tr class="weight5 toc-counter fixmobilefontsize"><th colspan="3">Counting pentatonic &amp; heptatonic scales &amp; modes</th></tr>
+					<tr class="accent weight2 petitecaps"><th>Scale type</th><th>Modes</th><th>Scales</th></tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="petitecaps weight2 accent">Pentatonic</td>
+						<td style="line-height: 1.8rem;"><span class="timesignature" style="font-size: 1.5rem; transform: translateY(calc(2rem / 30)); font-weight: 50;">(</span><span class="timesignature" style="transform: translateY(-0.4rem); line-height: 1rem;">11<br />4</span><span class="timesignature" style="font-size: 1.5rem; transform: translateY(calc(2rem / 30)); font-weight: 50;">)</span> = <span class="timesignature" style="transform: translateY(-0.4rem); line-height: 1rem; text-decoration-color: var(--main-translucent);">11!<br /><span style="border-top: 1px solid var(--main-translucent);">4!7!</span></span> = <span class="timesignature" style="transform: translateY(-0.4rem); line-height: 1rem; text-decoration-color: var(--main-translucent);">11·10·9·8<br /><span style="border-top: calc(2rem / 30) solid var(--main-translucent); padding: 0px calc(2rem / 3);">4·3·2</span></span> = 11·5·3·2 = 330</td>
+						<td style="line-height: 1.8rem;"><span class="timesignature" style="transform: translateY(-0.4rem); line-height: 1rem; text-decoration-color: var(--main-translucent);">330<br /><span style="border-top: calc(2rem / 30) solid var(--main-translucent); padding: 0px .4rem;">5</span></span> = 66</td>
+					</tr>
+					<tr>
+						<td class="petitecaps weight2 accent">Heptatonic</td>
+						<td style="line-height: 1.8rem;"><span class="timesignature" style="font-size: 1.5rem; transform: translateY(calc(2rem / 30)); font-weight: 50;">(</span><span class="timesignature" style="transform: translateY(-0.4rem); line-height: 1rem;">11<br />6</span><span class="timesignature" style="font-size: 1.5rem; transform: translateY(calc(2rem / 30)); font-weight: 50;">)</span> = <span class="timesignature" style="transform: translateY(-0.4rem); line-height: 1rem; text-decoration-color: var(--main-translucent);">11!<br /><span style="border-top: calc(2rem / 30) solid var(--main-translucent);">6!5!</span></span> = <span class="timesignature" style="transform: translateY(-0.4rem); line-height: 1rem; text-decoration-color: var(--main-translucent);"><span>11·10·9·8·7</span><br /><span style="border-top: calc(2rem / 30) solid var(--main-translucent); padding: 0px calc(2rem / 3);">5·4·3·2</span></span> = 11·7·3·2 = 462</td>
+						<td style="line-height: 1.8rem;"><span class="timesignature" style="transform: translateY(-0.4rem); line-height: 1rem; text-decoration-color: var(--main-translucent);">462<br /><span style="border-top: calc(2rem / 30) solid var(--main-translucent); padding: 0px .4rem;">7</span></span> = 66</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 			<p class="light">It’s no coincidence that the scale counts are identical: since 12-TET cannot contain heptatonic or pentatonic modes of limited transposition, all its pentatonic scales have five modes, all its heptatonic scales have seven modes, and every pentatonic scale in 12-TET is, by definition, the scale complement of a heptatonic scale.</p>
 
 			<p class="light">As it turns out, 12-TET contains the following numbers of modes of each scale size:</p>

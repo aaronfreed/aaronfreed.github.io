@@ -1306,6 +1306,12 @@ th {
 	.nonmobile2col {
 		columns: 1;
 	}
+	.nonmobile3col {
+		columns: 1;
+	}
+	.nonmobile4col {
+		columns: 1;
+	}
 }
 @media screen and (width > 600px) {
 	.nowrapdesktop {
@@ -1410,6 +1416,12 @@ th {
 	}
 	.nonmobile2col {
 		columns: 2;
+	}
+	.nonmobile3col {
+		columns: 3;
+	}
+	.nonmobile4col {
+		columns: 4;
 	}
 }
 @media (prefers-color-scheme: light) {

@@ -879,6 +879,10 @@ th {
 	.mobilerightmargin30 {
 		margin-right: 30px;
 	}
+	.hangindent15.mobileleftmargin15 {
+		margin-left: 30px;
+		text-indent: -15px;
+	}
 	.mobileleftpad0, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .noleftpad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .leftpad12, .leftpad15, .leftpad16, .leftpad20, .leftpad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad20, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobileleftpad, .mobileleftpad2, .mobileleftpad4, .mobileleftpad6, .mobileleftpad8, .mobileleftpad10, .mobileleftpad12, .mobileleftpad15, .mobileleftpad16, .mobileleftpad20, .mobileleftpad30, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30) .mobileleftpad0 {
 		padding-left: 0px;
 	}
@@ -1624,19 +1628,19 @@ th {
 	.compositions2023-2024 .print60toleft {
 		margin-left: -60px;
 	}
-	.print95 th, .print95 td, .print95 li, .print95 {
+	.print95 th, .print95 td, .print95 li, .print95, p.print95, .compositions2023-2024 ol.contents p:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle) :is(.print95 th, .print95 td, .print95 li, .print95, .print95 p, p.print95) {
 		font-size: 95%;
 	}
-	.print90 th, .print90 td, .print90 li, .print90 {
+	.print90 th, .print90 td, .print90 li, .print90, p.print90, .compositions2023-2024 ol.contents p:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle) :is(.print90 th, .print90 td, .print90 li, .print90, .print90 p, p.print90) {
 		font-size: 90%;
 	}
-	.print85 th, .print85 td, .print85 li, .print85 {
+	.print85 th, .print85 td, .print85 li, .print85, p.print85, .compositions2023-2024 ol.contents p:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle) :is(.print85 th, .print85 td, .print85 li, .print85, .print85 p, p.print85) {
 		font-size: 85%;
 	}
-	.print80 th, .print80 td, .print80 li, .print80 {
+	.print80 th, .print80 td, .print80 li, .print80, p.print80, .compositions2023-2024 ol.contents p:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle) :is(.print80 th, .print80 td, .print80 li, .print80, .print80 p, p.print80) {
 		font-size: 80%;
 	}
-	.print14px {
+	.print14px, .compositions2023-2024 ol.contents p:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle) :is(.print14px) {
 		font-size: .875rem;
 	}
 	img.print80, .print80 img {
@@ -3009,6 +3013,12 @@ th {
 	td.noleftpad,
 	th.noleftpad {
 		padding-left: 0px;
+	}
+
+
+	.compositions2023-2024 ol.contents p:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle),
+	.compositions2023-2024 ol.contents blockquote:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle) {
+		font-size: initial;
 	}
 
 }
@@ -5945,8 +5955,8 @@ td.timesignature {
 .compositions2023-2024 ol.tracklist ol li:not(:last-child) {
 	margin-bottom: 4px;
 }
-.compositions2023-2024 ol.contents p:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle),
-.compositions2023-2024 ol.contents blockquote:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle) {
+.compositions2023-2024 ol.contents p:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle, .print95, .print90, .print85, .print80, .print14px, .print95 p, .print90 p, .print85 p, .print80 p, .print14px p),
+.compositions2023-2024 ol.contents blockquote:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle, .print95, .print90, .print85, .print80, .print14px, .print95 p, .print90 p, .print85 p, .print80 p, .print14px p) {
 	font-size: initial;
 }
 .compositions2023-2024 :is(p.songtitle, div.songtitle, .songtitle) {

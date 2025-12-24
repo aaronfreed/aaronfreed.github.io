@@ -6116,3 +6116,7 @@ img.fittowidth {
 	text-indent: -15px;
 	margin-left: 15px;
 }
+
+.mainsize {
+	font-size: 1rem;
+}

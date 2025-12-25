@@ -1640,6 +1640,18 @@ th {
 	.print80 th, .print80 td, .print80 li, .print80, p.print80, .compositions2023-2024 ol.contents p:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle) :is(.print80 th, .print80 td, .print80 li, .print80, .print80 p, p.print80) {
 		font-size: 80%;
 	}
+	.print95 .smol {
+		font-size: .771875rem;
+	}
+	.print90 .smol {
+		font-size: .73125rem;
+	}
+	.print85 .smol {
+		font-size: .069025rem;
+	}
+	.print80 .smol {
+		font-size: .65rem;
+	}
 	.print14px, .compositions2023-2024 ol.contents p:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle) :is(.print14px) {
 		font-size: .875rem;
 	}

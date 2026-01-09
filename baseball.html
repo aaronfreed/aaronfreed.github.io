@@ -310,9 +310,17 @@ Admittedly, a successful sports career is quite unlikely – but then, my extend
 <h2 class="centred" id="baseballstats">Introduction to baseball statistics</h2>
 <h3 class="centred" id="whatisitgoodfor">Wins Above Replacement: What is it good for?</h3>
 
-<p><span class="toc-counter weight4 petitecaps">Wins Above Replacement</span> (<span class="toc-counter weight4 petitecaps">WAR</span>) is a statistic tracking a player’s effectiveness over that of a <span class="toc-counter weight4 petitecaps">replacement player</span>, i.e., a player just brought up from the minor leagues. I won’t bore readers with a description of the exact formula, especially since formulae vary. I’ll use the stats from <a class="noprintlink" href="https://baseball-reference.com/" target="_blank" rel="noopener noreferrer">Baseball Reference</a>, to which I also routinely link.</p>
+<p><span class="toc-counter weight4 petitecaps">Wins Above Replacement</span> (<span class="toc-counter weight4 petitecaps">WAR</span>) is a statistic tracking a player’s effectiveness over that of a <span class="toc-counter weight4 petitecaps">replacement player</span>, i.e., a player just brought up from the minor leagues. I won’t bore readers with a description of the exact formulae, especially since there are multiple calculations. The most important ones are:</p> 
+<ul>
+	<li>I mostly use the stats from <a class="noprintlink" href="https://baseball-reference.com/" target="_blank" rel="noopener noreferrer">Baseball Reference</a> (BRef), to which I also routinely link. This is the most widely used formulation, and I tend to use it throughout this work. I’ll refer to it as bWAR when I mean to distinguish it from other calculations. I do not presume to speak for BRef, so here’s its <a href="https://baseball-reference.com/about/war_explained.shtml" target="_blank" rel="noopener noreferrer">WAR explainer</a>.</li>	
+	<li><a href="https://fangraphs.com/" target="_blank" rel="noopener noreferrer">Fangraphs</a> has its own WAR formula, logically called fWAR. One of fWAR’s major differences from bWAR is its employment of Fielding Independent Pitching (explained below) for its calculations of pitcher efficacy; bWAR uses runs allowed and attempts to compensate for team defense. There are also significant differences with how the two calculations handle catcher defensive metrics. Here is <a href="https://library.fangraphs.com/misc/war/" target="_blank" rel="noopener noreferrer">Fangraphs’ WAR explainer</a>.</li>
+	<li><a href="https://baseballprospectus.com/" target="_blank" rel="noopener noreferrer">Baseball Prospectus</a> has a third variant it refers to as WARP, but it’s not calculated before 1950. Their site has been unreliable for me lately, so I haven’t employed their statistics as much as BRef and Fangraphs’.</li>
+	 <li>Finally, <a href="https://www.seamheads.com/NegroLgs/" target="_blank" rel="noopener noreferrer">Seamheads</a> has its own WAR statistics for its database of Negro league players (and NL and AL players in barnstorming games with Negro league players). I will refer to this as sWAR.</li>
+</ul>
 
-<p>There are actually three main forms of WAR, although most players not named “Shōhei Ohtani” have had at most two since the National League adopted the designated hitter:</p>
+<p>It must be emphasized that WAR is not an exact science. <a href="https://www.baseball-reference.com/players/r/ruthba01.shtml">Babe Ruth</a> had 12.6 bWAR in 1927, while his teammate <a href="https://www.baseball-reference.com/players/g/gehrilo01.shtml">Lou Gehrig</a> had 11.9. Was Ruth more effective than Gehrig that year? Trick question: those numbers are too close for us to be sure that he was. On the other hand, Ruth had 14.1 bWAR in 1923; runner-up <a href="https://www.baseball-reference.com/players/l/luquedo01.shtml">Dolf Luque</a> had 10.9, which is a significant enough margin that we can be reasonably certain that Ruth had a better season. Generally, margins below 1 WAR should be considered within the margin of error, and even a 1-WAR margin is sketchy. A differential of at least 2 WAR is where we can start to be certain that a player has been more effective.</p>
+
+<p>A further wrinkle arises from the fact that WAR is cumulative. That is, an entire season played slightly better than a replacement player can net the same WAR as a few games played far better than a replacement player. I’ve thus created additional metrics attempting to extricate the degree of a player’s efficacy from the duration. This requires some further details, since there are actually three main forms of WAR (although most players not named “Shōhei Ohtani” have had at most two since the National League adopted the designated hitter):</p>
 
 <div class="mobilescroll">
 	<table class="curved tabular-oldstyle centred sidepad8 mobilenowrap" id="typesofwar">
@@ -338,6 +346,34 @@ Admittedly, a successful sports career is quite unlikely – but then, my extend
 <ul>
 	<li><span class="toc-counter weight4 petitecaps">NWFS</span>, or <span class="toc-counter weight4 petitecaps">nWAR per full season</span> of 162 games. (Not to be confused with NSFW.)</li>
 	<li><span class="toc-counter weight4 petitecaps">PWSS</span>, or <span class="toc-counter weight4 petitecaps">pWAR per starter’s season</span> of 200 innings pitched. Why 200? I was born in Atlanta in 1983, which I believe legally qualifies as a genetic predisposition to view <a href="https://baseball-reference.com/players/m/maddugr01.shtml" target="_blank" rel="noopener noreferrer" class="noprintlink">Greg Maddux</a>’s 1994–95 campaigns as the platonic ideal of pitching; he threw just over 200 innings in each. (Other seasons – e.g., <a href="https://baseball-reference.com/players/k/koufasa01.shtml" target="_blank" rel="noopener noreferrer" class="noprintlink">Sandy Koufax</a>’s 1961–66, <a href="https://baseball-reference.com/players/g/gibsobo01.shtml" target="_blank" rel="noopener noreferrer" class="noprintlink">Bob Gibson</a>’s 1968–70, <a href="https://baseball-reference.com/players/m/martipe02.shtml" target="_blank" rel="noopener noreferrer" class="noprintlink">Pedro Martinez</a>’ 1997–2003, <a href="https://baseball-reference.com/players/j/johnsra05.shtml" target="_blank" rel="noopener noreferrer" class="noprintlink">Randy Johnson</a>’s 1999–2002 – now rival them, but my formative memories of Maddux’ ’94–’95 dominance will never be supplanted.)</li>
+	<li><span class="toc-counter weight4 petitecaps">OWHS</span>, or <span class="toc-counter weight4 petitecaps">oWAR per hitter’s season</span> of 600 plate appearances (a natural counterpart to 200 IP, which requires retiring 600 batters).</li>
+	<li><p><span class="toc-counter weight4 petitecaps">DWFS</span>, or <span class="toc-counter weight4 petitecaps">defensive WAR per fielder’s season</span> of 600 fielding opportunities (i.e., the sum of putouts, assists, and errors a fielder is involved in). In truth, this varies widely by position. On average:</p>
+		<ul>
+			<li>Shortstops’ fielding opportunities tend to amount to roughly &frac23; of their innings played. (Hall of Famer <a href="https://www.baseball-reference.com/players/t/tinkejo01.shtml" target="_blank" rel="noopener noreferrer" class="noprintlink">Joe Tinker</a>’s 10,259 fielding opportunities as a shortstop amounted to almost exactly 67% of his 15,311 innings at the position.)</li>
+			<li>Second basemen tend to get roughly 60% of their innings in fielding opportunities. (Hall of Famer <a href="https://www.baseball-reference.com/players/e/eversjo01.shtml" target="_blank" rel="noopener noreferrer" class="noprintlink">Johnny Evers</a> got 9,305 fielding opportunities in 15,019 innings at second base, a roughly 61.95% ratio.)</li>
+			<li>First basemen and catchers tend to be involved in more than one play per inning. (Hall of Famer <a href="https://www.baseball-reference.com/players/c/chancfr01.shtml" target="_blank" rel="noopener noreferrer">Frank Chance</a>’s 10,635 fielding opportunities at first base amounted to 122.85% of his innings at the position.)</li>
+			<li>Outfielders, third basemen, and pitchers only tend to be involved in roughly one play per four innings. (Hall of Famer <a href="https://www.baseball-reference.com/players/s/suzukic01.shtml" target="_blank" rel="noopener noreferrer">Ichiro Suzuki</a>, one of the greatest outfielders of all time, racked up a fielding opportunity count of roughly 25.86% of his innings played.)</li>
+		</ul>
+		<p>I’ve simply gone with 600 again for continuity. I don’t really focus much on dWFS, largely for two reasons:</p>
+		
+		<ol>
+			<li>We have at best rudimentary data on players’ defensive effectiveness until quite recently.</li>
+			<li>dWAR calculation methods vary across eras, resulting in apples-to-oranges comparisons between them.</li>
+		</ol>
+		
+		<p>As for why I chose Tinker, Evers, and Chance for my first three examples, I refer you to Franklin Pierce Adams’ classic poem “<a href="https://en.wikipedia.org/wiki/Baseball%27s_Sad_Lexicon" target="_blank" rel="noopener noreferrer">Baseball’s Sad Lexicon</a>”:</p>
+
+		<blockquote class="toc-counter">
+			“These are the saddest of possible words:<br />
+			‘Tinker to Evers to Chance.’<br />
+			Trio of bear cubs, and fleeter than birds,<br />
+			Tinker and Evers and Chance.<br />
+			Ruthlessly pricking our gonfalon bubble,<br />
+			Making a Giant hit into a double –<br />
+			Words that are heavy with nothing but trouble:<br />
+			‘Tinker to Evers to Chance.’”
+		</blockquote>
+	</li>
 </ul>
 
 <p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#contents">Table of contents</a> &middot; <a href="portfolio.html">My portfolio</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>

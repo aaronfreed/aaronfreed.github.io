@@ -792,6 +792,9 @@ th {
 		overflow: auto;
 		contain: inline-size;
 	}
+	.mobilemin800 {
+		min-width: 800px;
+	}
 	.mobilenowrap {
 		white-space: nowrap;
 	}

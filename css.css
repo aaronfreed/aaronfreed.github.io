@@ -795,6 +795,9 @@ th {
 	.mobilemin800 {
 		min-width: 800px;
 	}
+	.mobilemin600 {
+		min-width: 800px;
+	}
 	.mobilenowrap {
 		white-space: nowrap;
 	}
@@ -1405,10 +1408,10 @@ th {
 		padding-right: 8px;
 	}
 	.nonmobileleftmargin-30 {
-		margin-left: -30px;
+		margin-left: -30px !important;
 	}
 	.nonmobileleftmargin-60 {
-		margin-left: -30px;
+		margin-left: -60px !important;
 	}
 	.nonmobileleftmargin30 {
 		margin-left: 30px;
@@ -3040,6 +3043,19 @@ th {
 	.compositions2023-2024 ol.contents p:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle),
 	.compositions2023-2024 ol.contents blockquote:not(.sectionbreak, .songentry, .movemententry, .songtitle, .movementtitle) {
 		font-size: initial;
+	}
+
+	.screenleft {
+		text-align: left;
+	}
+	.screencenter {
+		text-align: center;
+	}
+	.screenright {
+		text-align: right;
+	}
+	.screenjustify {
+		text-align: justify;
 	}
 
 }
@@ -6138,6 +6154,6 @@ img.fittowidth {
 	margin-left: 15px;
 }
 
-.mainsize {
+.mainsize, .mainsize td {
 	font-size: 1rem;
 }

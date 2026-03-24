@@ -19,15 +19,15 @@
 
 			<h1 class="centred" id="toc">Table of Contents</h1>
 
-			<ol class="toclite">
+			<ol class="toclite mobileleftmargin15 mobilealignleft">
 				<li><a href="#top">Introduction</a></li>
 				<li><a href="#notesymbols">Basic Symbols for Notes &amp; Rests</a>
-					<ol>
+					<ol class="mobileleftmargin15">
 						<li><span class="toc-counter weight0">Table:</span> <a href="#notesymboltable">Durations of Notes and Rests</a></li>
 					</ol>
 				</li>
 				<li><a href="#basicrhythm">Basic Rhythmic Concepts</a>
-					<ol>
+					<ol class="mobileleftmargin15">
 						<li><a href="#timesignaturebasics">Time Signatures: The Basics</a></li>
 						<li><a href="#tempo">Tempo and Beats Per Minute</a></li>
 						<li><a href="#dots">Modifier Dots &amp; <em>Staccato</em></a></li>
@@ -36,20 +36,20 @@
 					</ol>
 				</li>
 				<li><a href="#timesignatures">Time Signatures in Depth</a>
-					<ol>
+					<ol class="mobileleftmargin15">
 						<li><a href="#commontime">Common Time &amp; <em>Alla breve</em></em></a></li>
 						<li><a href="#34vs68"><span class="timesignature">&#x1D7D1;<br />&#x1D7D2;</span> vs. <span class="timesignature">&#x1D7D4;<br />&#x1D7D6;</span>: Simple &amp; Compound Time Signatures</a>
-							<ol>
+							<ol class="mobileleftmargin15">
 								<li><span class="toc-counter">Table:</span> <a href="#countingouttime">Counting Out Time</a></li>
 							</ol>
 						</li>
 						<li><a href="#complextimesignatures">Complex Time Signatures</a>
-							<ol>
+							<ol class="mobileleftmargin15">
 								<li><span class="toc-counter">List:</span> <a href="#complexexamples">Famous Works in Complex Time Signatures</a></li>
 							</ol>
 						</li>
 						<li><a href="#decodingtimesignatures">Decoding Time Signatures</a>
-							<ol>
+							<ol class="mobileleftmargin15">
 								<li><span class="toc-counter">Table:</span> <a href="#missionimpossible">Rhythmic Analysis of the <em>Mission: Impossible</em> Theme</a></li>
 								<li><span class="toc-counter">Table:</span> <a href="#yyz">Rhythmic Analysis of Rush&rsquo;s &ldquo;YYZ&rdquo;</a></li>
 							</ol>
@@ -57,9 +57,9 @@
 					</ol>
 				</li>
 				<li><a href="#advancedrhythm">Advanced Rhythmic Concepts</a>
-					<ol>
+					<ol class="mobileleftmargin15">
 						<li><a href="#polyrhythms">Polyrhythms</a>
-							<ol>
+							<ol class="mobileleftmargin15">
 								<li><span class="toc-counter">Table:</span> <a href="#3to2polyrhythm">3:2 Polyrhythms: <span style="font-size: 125%;">&sup3;&#x1D160;</span> against <span style="font-size: 125%;">&#x1D160;</span></a></li>
 								<li><span class="toc-counter">Table:</span> <a href="#4to3polyrhythm">4:3 Polyrhythms: <span style="font-size: 125%;">&sup3;&#x1D160;</span> against <span style="font-size: 125%;">&#x1D161;</span></a></li>
 								<li><span class="toc-counter">Audio File:</span> <a href="#polyrhythmexample">&ldquo;Polyrhythm Demonstration&rdquo;</a></li>
@@ -68,7 +68,7 @@
 						</li>
 						<li><a href="#irrationaltimesignatures">Irrational Time Signatures</a></li>
 						<li><a href="#timesignaturemodulation">Time Signature Modulation</a>
-							<ol>
+							<ol class="mobileleftmargin15">
 								<li><span class="toc-counter">Audio File:</span> <a href="#modulationexample">&ldquo;Sympathy for the Time Signature&rdquo;</a></li>
 								<li><span class="toc-counter">Table:</span> <a href="#sympathykey">Structure of &ldquo;Sympathy for the Time Signature&rdquo;</a></li>
 							</ol>
@@ -83,8 +83,8 @@
 			<h2 class="centred" id="notesymbols">Basic Symbols for Notes &amp; Rests</h2>
 
 			<p>A note&rsquo;s height signifies its pitch; the type of note signifies its duration. A related symbol called a rest signifies the absence of any note at a given time. The most common notes and rests in modern music notation are:</p>
-
-			<table class="curved fixheight centred tabular-oldstyle" id="notesymboltable">
+			<div class="mobilescroll">
+			<table class="curved fixheight centred tabular-oldstyle mobilenowrap" id="notesymboltable">
 				<thead>
 					<tr>
 						<th colspan="7" class="weight5 accent">Durations of Notes and Rests</th>
@@ -172,7 +172,7 @@
 						<td class="noleftpad rightpad6">Hemidemisemiquaver rest</td>
 					</tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p>I&rsquo;ll be using the American names for notes throughout this document &ndash; to be honest, until I began researching it, I didn&rsquo;t even know the British names differed. Additionally, the above &ldquo;length&rdquo; field assumes common time (or some other time signature with a denominator of 4), which I will explain in a moment.</p>
 
@@ -229,7 +229,7 @@
 
 			<p>Well, in theory they should, but they don&rsquo;t in practice. <span class="timesignature">&#x1D7D4;<br />&#x1D7D6;</span> is typically a compound meter, which subdivides its beats into threes: thus, six eighth notes in <span class="timesignature">&#x1D7D4;<br />&#x1D7D6;</span> would contain two groupings of three, whereas in <span class="timesignature">&#x1D7D1;<br />&#x1D7D2;</span>, they&rsquo;d contain three groupings of two. Put another way, <span class="timesignature">&#x1D7D4;<br />&#x1D7D6;</span> typically has two accented beats per measure, whereas <span class="timesignature">&#x1D7D1;<br />&#x1D7D2;</span> typically has three (or just one). Thus, over the same duration, you&rsquo;d count six eighth notes in <span class="timesignature">&#x1D7D1;<br />&#x1D7D2;</span> and <span class="timesignature">&#x1D7D4;<br />&#x1D7D6;</span> as:</p>
 
-			<table class="curved fixheight centred tabular-oldstyle" id="countingouttime">
+			<div class="mobilescroll"><table class="curved fixheight centred tabular-oldstyle mobilenowrap" id="countingouttime">
 				<thead>
 					<tr>
 						<th colspan="7" class="accent weight5">Counting Out Time</th>
@@ -264,7 +264,7 @@
 						<td>six</td>
 					</tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p>Most music uses either a simple time signature (numerators of 2, 3, or 4) or a compound time signature (if a time signature&rsquo;s numerator is a multiple of 3, it usually, though not always, qualifies as compound). A piece in <span class="timesignature">&#x1D7D1;<br />&#x1D7D2;</span> can easily be rewritten in <span class="timesignature">&#x1D7D1;<br />&#x1D7D6;</span> simply by halving the duration of every note in the song. Likewise, a piece in <span class="timesignature">&#x1D7CF;&#x1D7D0;<br />&#x1D7D6;</span> can be rewritten in <span class="timesignature">&#x1D7D2;<br />&#x1D7D2;</span> by using triplets. Ultimately, how to notate a piece is very much a matter of discretion.</p>
 
@@ -322,7 +322,7 @@
 
 			<p>An important caveat here is that the division of time must be steady &ndash; &ldquo;Theme from <em>Mission: Impossible</em>&rdquo; has four accents per measure, but they occur at syncopated (irregular) intervals. The division is actually as follows:</p>
 
-			<table class="curved fixheight centred tabular-oldstyle" id="missionimpossible">
+			<div class="mobilescroll"><table class="curved fixheight centred tabular-oldstyle mobilenowrap" id="missionimpossible">
 				<thead>
 					<tr>
 						<th colspan="10" class="accent weight5">Rhythmic Analysis of the <em>Mission: Impossible</em> Theme</th>
@@ -354,11 +354,11 @@
 						<td></td>
 					</tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			Similarly, the intro to Rush&rsquo;s &ldquo;YYZ&rdquo; goes as follows:
 
-			<table class="curved fixheight centred tabular-oldstyle" id="yyz">
+			<div class="mobilescroll"><table class="curved fixheight centred tabular-oldstyle mobilenowrap" id="yyz">
 				<thead>
 					<tr>
 						<th colspan="11" class="accent weight5">Rhythmic Analysis of Rush&rsquo;s &ldquo;YYZ&rdquo;</th>
@@ -405,7 +405,7 @@
 						<td>&#x1D160;</td>
 					</tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p>It is no coincidence that this spells out <span class="weight5" style="letter-spacing: 1px;">&ndash;&middot;&ndash;&ndash; &ndash;&middot;&ndash;&ndash; &ndash;&ndash;&middot;&middot;</span>, the Morse code for &ldquo;YYZ&rdquo; (Toronto International Airport&rsquo;s IATA identification code). This intro has lived rent-free in my head for over 20 years. (Also, since Rush are Canadian, Z is pronounced <em>zed</em>, and while I&rsquo;m at it, their drummer&rsquo;s name is pronounced <em>Piert</em>, not <em>Pert</em>.)</p>
 
@@ -419,7 +419,7 @@
 
 			<p>A polyrhythm occurs when two simultaneous rhythms suggest different time signatures. Most commonly, you&rsquo;ll see 3:2 polyrhythms, expressed in forms like <span class="accent" style="font-size: 20px;"><span class="timesignature" style="width: 4px; transform: translateY(-5px);">&#x1D7D1;</span>&#x1D160;</span> against <span class="accent" style="font-size: 20px;">&#x1D160;</span>. This would result in the following rhythm across the duration of a beat of <span class="accent" style="font-size: 15px; display: inline-block; transform:translateY(4px); line-height: 12px;">&#x1D7D2;<br />&#x1D7D2;</span>:</p>
 
-			<table class="curved fixheight centred tabular-oldstyle" id="3to2polyrhythm">
+			<div class="mobilescroll"><table class="curved fixheight centred tabular-oldstyle mobilenowrap" id="3to2polyrhythm">
 				<thead>
 					<tr>
 						<th colspan="7" class="accent weight5">3:2 Polyrhythms: <span class="timesignature" style="width: 4px; transform: translateY(-5px);">&#x1D7D1;</span><span style="font-size: 125%;">&#x1D160;</span> against <span style="font-size: 125%;">&#x1D160;</span></th>
@@ -454,11 +454,11 @@
 						<td></td>
 					</tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p>The next most common is 4:3, seen in forms like <span class="accent" style="font-size: 20px;"><span style="font-size: 24px;">&sup3;</span>&#x1D160;</span> against <span class="accent" style="font-size: 20px;">&#x1D161;</span>, which would result in the following rhythm:</p>
 
-			<table class="curved fixheight centred tabular-oldstyle" id="4to3polyrhythm">
+			<div class="mobilescroll"><table class="curved fixheight centred tabular-oldstyle mobilenowrap" id="4to3polyrhythm">
 				<thead>
 					<tr>
 						<th colspan="13" class="accent weight5">4:3 Polyrhythms: <span class="timesignature" style="width: 4px; transform: translateY(-5px);">&#x1D7D1;</span><span style="font-size: 125%;">&#x1D160;</span> against <span style="font-size: 125%;">&#x1D161;</span></th>
@@ -511,11 +511,11 @@
 						<td></td>
 					</tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p style="line-height: 24px;" id="polyrhythmexample">Because just seeing this printed out may not clarify how these actually sound, I&rsquo;ve put together a <a href="polyrhythm_demonstration.flac" class="underline songlink weight3" target="_blank" rel="nofollow">demonstration of several polyrhythms</a>. In order:</p>
 
-			<table class="curved fixheight centred tabular-oldstyle" id="polyrhythmdemonstration">
+			<div class="mobilescroll"><table class="curved fixheight centred tabular-oldstyle mobilenowrap" id="polyrhythmdemonstration">
 				<thead>
 					<tr><th colspan="8" class="accent weight5">Key to Polyrhythm Demonstration</th></tr>
 					<tr class="accent weight4">
@@ -651,7 +651,7 @@
 						<td>2</td>
 					</tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p>In all except the last demonstration, the kick drum and snare represent a particular polyrhythm (e.g., 0:00-0:16 demonstrate a 3:2 polyrhythm), with the hi-hat serving as a metronome of sorts. Math-savvy individuals will note that, until the last demonstration, the hi-hat&rsquo;s number is always the multiple of snare and the kick drum&rsquo;s numbers. This is not coincidental. The final demonstration demonstrates a 7:6:5:4:3:2 polyrhythm.</p>
 
@@ -669,7 +669,7 @@
 
 			<p id="modulationexample">I&rsquo;ve put together a demonstration of this as well. <a href="sympathy_for_the_time_signature.flac" class="weight3 underline songlink" target="_blank" rel="nofollow">This piece</a>, which I&rsquo;ve somewhat cheekily entitled &ldquo;Sympathy for the Time Signature&rdquo;, contains the following structure:</p>
 
-			<table class="curved fixheight centred tabular-oldstyle" id="sympathykey">
+			<div class="mobilescroll"><table class="curved fixheight centred tabular-oldstyle mobilenowrap" id="sympathykey">
 				<thead>
 					<tr><th colspan="7" class="accent weight5">Structure of &ldquo;Sympathy for the Time Signature&rdquo;</th></tr>
 					<tr class="accent weight4">
@@ -744,7 +744,7 @@
 						<!--But what's puzzling you is just the nature of my game-->
 					</tr>
 				</tbody>
-			</table>
+			</table></div>
 
 			<p>Observant readers may have noticed that in every row, dividing the tempo by the time signature&rsquo;s numerator yields 24. This means that despite this piece&rsquo;s frequently changing tempi, its measures have a constant length of 2.5 seconds. Observant listeners, meanwhile, may have recognized that this piece has a familiar chord progression: I borrowed it outright from the Rolling Stones&rsquo; &ldquo;Sympathy for the Devil&rdquo;.</p>
 

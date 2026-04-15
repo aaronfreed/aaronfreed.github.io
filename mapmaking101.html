@@ -54,13 +54,13 @@ window.onload = function () {makeAllSortable();};
 
 			<h1 id="toc" class="centred">Table of Contents</h1>
 
-			<ol class="toc">
+			<ol class="toc mobileleftmargin15">
 				<li><a href="#top">Introduction</a></li>
 				<li><a href="#toc">Table of Contents</a> (you&rsquo;re looking at it?)</li>
 				<li><a href="#editors">Aleph One Content Editors</a>
-					<ol>
+					<ol class="mobileleftmargin15">
 						<li><a href="#editorsm2i"><em>Marathon 2</em>/<em>Infinity</em> Format</a>
-							<ol>
+							<ol class="mobileleftmargin15">
 								<li><a href="#visualmodecomparisons">Comparisons of Texturing Utilities</a></li>
 							</ol>
 						</li>
@@ -68,11 +68,11 @@ window.onload = function () {makeAllSortable();};
 					</ol>
 				</li>
 				<li><a href="#welandsetup">Weland Setup</a>
-					<ol>
+					<ol class="mobileleftmargin15">
 						<li><a href="#welandsetupfirststeps">First Steps</a></li>
 						<li><a href="#welandpreferences">Configuring Weland&rsquo;s Preferences</a></li>
 						<li><a href="#visualmodesetup">Visual Mode Setup</a>
-							<ol>
+							<ol class="mobileleftmargin15">
 								<li><a href="#visualmodemac">Installing Visual Mode.lua, Vasara, or VAF (MacOS)</a></li>
 								<li><a href="#visualmodewin">Installing Visual Mode.lua, Vasara, or VAF (Windows)</a></li>
 							</ol>
@@ -81,25 +81,25 @@ window.onload = function () {makeAllSortable();};
 					</ol>
 				</li>
 				<li><a href="#basics">Mapmaking Basics</a>
-					<ol>
+					<ol class="mobileleftmargin15">
 						<li><a href="#startertutorials">Tutorials & Resources for Beginning Mapmakers</a></li>
 						<li><a href="#forgeerrata">Forge Manual Errata & Omissions</a></li>
 						<li><a href="#welandissues">Mapping Issues in Weland</a></li>
 						<li><a href="#texturingissues">Texturing Issues in Visual Mode.lua, Vasara, and VAF</a>
-							<ol>
+							<ol class="mobileleftmargin15">
 								<li><a href="#vasaratexturing">Further Texturing Issues in Vasara and VAF</a></li>
 							</ol>
 						</li>
 					</ol>
 				</li>
 				<li><a href="#furtherreading">Further Reading</a>
-					<ol>
+					<ol class="mobileleftmargin15">
 						<li><a href="#advancedtutorials">Advanced Tutorials & Resources</a></li>
 						<li><a href="#resourcescommunity">Marathon Communities & Resources</a>
-							<ol>
+							<ol class="mobileleftmargin15">
 								<li><a href="#resourcesfiles">Game Files</a></li>
 								<li><a href="#resourceshd">Hi-Res Graphics</a>
-									<ol>
+									<ol class="mobileleftmargin15">
 										<li><a href="#resourceshdbespoke">Bespoke Graphics</a></li>
 										<li><a href="#resourceshdupscales">Upscaled Game Assets</a></li>
 									</ol>
@@ -124,9 +124,9 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">Bungie&rsquo;s two official editors were Forge (mapmaking) and Anvil (physics, shapes, sounds). I won&rsquo;t address how to run these in this guide, because they don&rsquo;t run on any operating system past MacOS 9.2.2, and there are vastly better replacements for both programs that actually run on modern operating systems. The next section, &ldquo;Comparison of Texturing Utilities&rdquo;, may help you decide which visual mode replacement you want.</p>
 
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><strong><a href="https://github.com/treellama/weland/releases" target="_blank">Weland</a></strong> (most aspects of mapmaking, replaces Forge&rsquo;s overhead view)</a>
-				<div style="padding-left: 20px;"><strong><em>Make sure to grab the right dependency for your platform &ndash; the download page is confusingly laid out. I&rsquo;ve written a detailed setup guide; you can find it in &lsquo;Weland Setup&rsquo; under &lsquo;Mapmaking Basics&rsquo;.</em></strong></div></li>
+				<blockquote class="wide margintop8 marginbottom8"><strong><em>Make sure to grab the right dependency for your platform &ndash; the download page is confusingly laid out. I&rsquo;ve written a detailed setup guide; you can find it in &lsquo;Weland Setup&rsquo; under &lsquo;Mapmaking Basics&rsquo;.</em></strong></blockquote></li>
 				<li><a href="https://simplici7y.com/items/vasara" target="_blank"><strong>Vasara</strong></a> (texturing, more like Windows/MacOS&rsquo; graphical user interfaces; Forge visual mode replacement #1)</li>
 				<li><a href="https://github.com/aaronfreed/vaf" target="_blank"><strong>VAF</strong> (WIP)</a> (texturing, more like Windows/MacOS&rsquo; graphical user interfaces; Forge visual mode replacement #2; <em>requires Aleph One 1.7 or later; <strong>full disclosure:</strong> this update is largely my work)</em><br /></li>
 				<li><a href="https://simplici7y.com/items/visual-mode-lua" target="_blank"><strong>Visual Mode.lua</strong></a> (texturing, more like DOS&rsquo; command prompt; Forge visual mode replacement #3)</li>
@@ -150,29 +150,30 @@ window.onload = function () {makeAllSortable();};
 
 			<ul class="fixheight">
 				<li><strong>Vasara 1.1</strong>
-					<blockquote style="margin: 8px 30px 8px 108px; text-indent: -48px;" class="toc-counter"><em><strong>NOTE:</strong> I&rsquo;ve been burnt out on </em>Marathon<em> development since Vasara 1.1 was released, so I haven&rsquo;t evaluted it properly yet. Expect further revisions to this section once I&rsquo;ve done so.</em></blockquote>
-					<ul>
+					<p style="margin: 8px 30px 8px 108px; text-indent: -48px;" class="toc-counter nomobile"><em><strong>NOTE:</strong> Since early 2025, I’ve been burnt out on <em>Marathon</em> development, so I haven’t yet properly evaluated Vasara 1.1. Once I finally do, I’ll revise this section.</em></p>
+					<p style="margin: 8px 15px 8px 52px; text-indent: -32px;" class="toc-counter mobileonly"><em><strong>NB:</strong> Since early 2025, I’ve been burnt out on <em>Marathon</em> development, so I haven’t yet properly evaluated Vasara 1.1. Once I finally do, I’ll revise this section.</em></p>
+					<ul class="mobileleftmargin15">
 						<li>Seems to aim to be accessible to all mappers.</li>
 						<li><strong>Pros:</strong> Has the most straightforward interface; likely to be the least intimidating for new mapmakers.</li>
 						<li><strong>Cons:</strong> Vasara 1.0.3 included several bugs that weren&rsquo;t present in VAF and/or Visual Mode.lua. I suspect Vasara 1.1.x fixes many of them, but I don&rsquo;t know if it gets them all; I&rsquo;ll report back later once I&rsquo;ve properly evaluated this. Its updates are frequently sporadic (some eight years elapsed between version 1.0.3 and version 1.1, though I believe it&rsquo;s now on 1.1.2). It also has fewer features than VAF (though for new mappers, this is probably not actually a negative).</li>
 					</ul>
 				</li>
 				<li><strong>VAF</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li>Aimed primarily at experienced mappers who want more control over texturing.</li>
 						<li><strong>Pros:</strong> Fixes several of Vasara&rsquo;s bugs and adds several new features that make several aspects of texturing either easier or more powerful (though a few are still works in progress). Visual Mode.lua and Vasara do not (and may never) have some of this functionlity.</li>
 						<li><strong>Cons:</strong> Its interface may be more intimidating for beginning mapmakers than Vasara 1.0.3&rsquo;s, and they probably won&rsquo;t need many of its added features. It also isn&rsquo;t up to date with Vasara 1.1 yet, and it may be a long time before I feel inclined to update it again.</li>
 					</ul>
 				</li>
 				<li><strong>Visual Mode.lua</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li>Seems to be aimed at experienced mappers who want a minimalist texturing interface.</li>
 						<li><strong>Pros:</strong> It&rsquo;s apparently extremely powerful and fast once you&rsquo;ve learned its interface.</li>
 						<li><strong>Cons:</strong> It will probably intimidate new mapmakers due to its bare-bones interface; it&rsquo;s missing (and will probably never have) several of VAF&rsquo;s features.</li>
 					</ul>
 				</li>
 				<li><strong>Forge+</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li>This was meant to be a full-featured map editor, but it never got past the &ldquo;texturing maps&rdquo; stage.</li>
 						<li><strong>Pros:</strong> Since it runs in Unity, it can view maps from negative space, which would cause Aleph One to crash; this provides a much more holistic view of the shape of a level.</li>
 						<li><strong>Cons:</strong> Unlike the other three options, Forge+ can&rsquo;t be linked to Weland, so you&rsquo;ll have to continually close and reopen the two apps, which is a pain. It also can&rsquo;t view maps using hi-res textures, and it hasn&rsquo;t been updated since 2022, so it&rsquo;s missing features like Aleph One 1.7&rsquo;s new transfer modes.</li>
@@ -194,27 +195,27 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">The &lsquo;Classic OS&rsquo; resources below require a Mac or emulator running Classic Mac OS (i.e., System 7 through 9). Setting one up is also well beyond this document&rsquo;s scope.</p>
 
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><strong>Maps:</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><a href="http://archives2.bungie.org/m1.tools/pfhorte1.0d26.hqx" target="_blank"><strong>Pfhorte</strong></a> (classic OS)</li>
 					</ul>
 				</li>
 				<li><strong>Physics:</strong> 
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><strong>Web-based <a href="m1-phys-to-json.html">M1 .phys to JSON</a> and <a href="json-to-m1-phys.html">JSON to M1 .phys</a> converters</strong> by <strong>@magical_beetle_40501</strong></li>
 						<li><strong><a href="https://github.com/SolraBizna/physics-eater" target="_blank">Physics Eater</a></strong> by <strong>Solra Bizna</strong></li>
 						<li><a href="http://archives2.bungie.org/m1.tools/MaraModelEdit1.1.sit.hqx" target="_blank"><strong>Marathon Physics Model Editor</strong></a> (classic OS)</li>
 					</ul>
 				</li>
 				<li><strong>Shapes:</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><a href="https://github.com/Hopper262/marathon-utils" target="_blank"><strong>Perl utilities</strong></a> by <strong>@Hopper262</strong></li>
 						<li><a href="http://archives2.bungie.org/m1.tools/pfhred.131.hqx" target="_blank"><strong>Pfhred</strong></a> (classic OS)</li>
 					</ul>
 				</li>
 				<li><strong>Sounds and Terminals:</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><a href="https://macintoshgarden.org/apps/resedit" target="_blank"><strong>ResEdit</strong></a> (classic OS). Terminals are TEXT resources in the Marathon application. Explaining the terminal format is beyond the current scope of this guide, though I may cover it eventually.</li>
 					</ul>
 				</li>
@@ -227,7 +228,7 @@ window.onload = function () {makeAllSortable();};
 			<h1 id="welandsetup" class="centred">Weland Setup</h1>
 			<h2 id="welandsetupfirststeps" class="centred">First Steps</h2>
 
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li>Setting up Weland can be confusing; this doesn&rsquo;t aim to be an exhaustive list of the issues you may face in doing so. I can&rsquo;t possibly hope to provide that here; you&rsquo;ll find people who can help on the <a href="https://discord.gg/c7rEVgY">Discord</a>.</li>
 				<li>You&rsquo;ll need either <strong>Gtk#</strong> or <strong>Mono</strong>, depending on your OS; the readme tells you which to get. (You&rsquo;ll also need <strong>.NET</strong> on Windows, but all Windows 10 and 11 computers should already have this installed, and if you&rsquo;re running an older version, you really should upgrade &ndash; running operating systems that are no longer being supported is a major security risk.) Installing the wrong one sometimes seems to make Weland not work, and they&rsquo;re on the same webpage, so users can get one thinking they&rsquo;ve gotten the other. Read carefully!</li>
 				<li>I should perhaps note that several Windows users have reported only being able to get Weland to run correctly by using <a href="https://treellama.org/tmp/gtk-sharp-2.12.26.msi" target="_blank">Gtk# 2.12.26</a> &ndash; a completely ancient release. No one has been able to produce a satisfactory hypothesis for why this is the case, but enough people have experienced it that it&rsquo;s ceased to look coincidental. (For the record, I didn&rsquo;t have to do this to get Weland to work on Windows; in fact, the setup process was quite painless for me.)</li>
@@ -236,18 +237,22 @@ window.onload = function () {makeAllSortable();};
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
 			<h2 id="welandpreferences" class="centred">Configuring Weland&rsquo;s Preferences</h2>
-			<ul class="fixheight">
-				<li>After getting Weland to start, you&rsquo;ll next want to set up visual mode to function from within Weland. Go to <strong>Edit &gt; Preferences</strong>. You&rsquo;ll want the <strong>Shapes</strong> and <strong>Visual Mode</strong> segments to resemble these settings:
+			<ul class="fixheight mobileleftmargin15">
+				<li>
+					<p>After getting Weland to start, you&rsquo;ll next want to set up visual mode to function from within Weland. Go to <strong>Edit &gt; Preferences</strong>. You&rsquo;ll want the <strong>Shapes</strong> and <strong>Visual Mode</strong> segments to resemble these settings:</p>
 
-					<div class="image"><img src="welandprefs.png" alt="Weland preferences" title="Weland preferences" height="184" width="316" /></div>
+					<div class="image mobilescroll"><img src="welandprefs.png" alt="Weland preferences" title="Weland preferences" height="184" width="316" /></div>
 
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><strong>Shapes File:</strong> valid <em>Marathon 2</em>/<em>Infinity</em>-format shapes. <em>Marathon 1</em> shapes probably won&rsquo;t work, but I haven&rsquo;t tested this. This affects what Weland uses in visual mode and the overhead texture view.</li>
-						<li><strong>Aleph One:</strong> the Aleph One app. EZ. My Windows examples use:
-							<blockquote><code>C:/Games/Marathon Infinity/Marathon Infinity.exe</code></blockquote>
-						For Macs, I use two examples:
-							<blockquote><code>Macintosh HD/Games/Marathon Infinity/Marathon Infinity.app</code></blockquote>
-							<blockquote><code>Macintosh HD/Games/Aleph One/Aleph One.app</code></blockquote>
+						<li>
+							<p><strong>Aleph One:</strong> the Aleph One app. EZ. My Windows examples use:</p>
+
+							<blockquote class="mobilenowrap mobilescroll marginbottom8"><code>C:/Games/Marathon Infinity/Marathon Infinity.exe</code></blockquote>
+						<p class="mobileonly marginbottom15 smol"><em>(Drag left/right to scroll)</em></p>
+						<p>For Macs, I use two examples:</p>
+							<blockquote class="mobilenowrap mobilescroll"><code>Macintosh HD/Games/Marathon Infinity/Marathon Infinity.app</code></blockquote>
+							<blockquote class="mobilenowrap mobilescroll"><code>Macintosh HD/Games/Aleph One/Aleph One.app</code></blockquote>
 						The reason for this will become apparent below.</li>
 						<li><strong>Scenario:</strong> the folder you use within Aleph One to run the scenario you&rsquo;re editing, which is <em>usually</em> the folder containing the <strong>Map</strong>, <strong>Shapes</strong>, <strong>Images</strong>, and <strong>Sounds</strong> files. (<em>Rubicon X</em> is an annoying exception; use the containing <strong>Rubicon X</strong> folder, <em>not</em> <strong>Rubicon Data</strong>.)</li>
 					</ul>
@@ -264,34 +269,34 @@ window.onload = function () {makeAllSortable();};
 
 			<h3 id="visualmodemac" class="centred">Installing Visual Mode.lua, Vasara, or VAF (MacOS)</h3>
 
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li>Owing to how the Mac version of Aleph One is built, setting up Visual Mode on Macs may be confusing. Effectively, there are two ways to get Aleph One versions of the <em>Marathon</em> trilogy on MacOS:
-					<ol>
+					<ol class="mobileleftmargin15">
 						<li>If you download the trilogy from the <a href="https://alephone.lhowon.org/">front page of Aleph One&rsquo;s website</a>, you get &lsquo;all-in-one&rsquo; apps in which <em>all game data</em> are packaged within each game&rsquo;s application.</li>
 						<li>You can also <a href="https://alephone.lhowon.org/scenario.html">download the game data by themselves</a> and use the <a href="https://alephone.lhowon.org/download.html">general Aleph One app</a> to run them. (This is my recommended method.)</li>
 					</ol>
 				</li>
 				<li>This difference is <em>really important</em> on Macs, as it affects where to place Visual Mode.lua, Vasara, and/or VAF:
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><strong>Visual Mode.lua:</strong> It&rsquo;s best to put this in the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data folder</a>. <em>Which</em> user data folder, though?
-							<ul>
+							<ul class="mobileleftmargin15">
 								<li><strong><em>Infinity</em> all-in-one app:</strong> 
-									<blockquote class="wide"><pre>~/Library/Application Support/Marathon Infinity/Visual Mode.lua</pre></blockquote>
+									<blockquote class="wide"><pre class="mobilenowrap mobilescroll">~/Library/Application Support/Marathon Infinity/Visual Mode.lua</pre></blockquote>
 								</li>
 								<li><strong>Standalone Aleph One app:</strong>
-									<blockquote class="wide"><pre>~/Library/Application Support/AlephOne/Visual Mode.lua</pre></blockquote>
+									<blockquote class="wide"><pre class="mobilenowrap mobilescroll">~/Library/Application Support/AlephOne/Visual Mode.lua</pre></blockquote>
 								</li>
 								<li>Aleph One <em>only</em> makes this distinction on Macs, a design choice I&rsquo;m not fully on board with.</li>
 								<li>Note also that <strong>~/Library</strong> is normally hidden in the Finder, so to place Visual Mode.lua in one of its subfolders, use <strong>&lsquo;Go to Folder&rsquo;</strong>. Weland should be able to see it with no problem, though.</li>
 							</ul>
 						</li>
 						<li><strong>Vasara</strong> or <strong>VAF:</strong> You have multiple choices here.
-							<ol>
+							<ol class="mobileleftmargin15">
 								<li>My recommended option is to ditch the all-in-one apps, grab the <a href="https://alephone.lhowon.org/scenarios.html">scenario files</a>, and run them with the <a href="https://alephone.lhowon.org/download.html">standalone Aleph One app</a> in the scenario folder, allowing you to keep Vasara or VAF within said folder, as Yrro intended. If you&rsquo;re in the middle of playing the trilogy and don&rsquo;t want to move your files over (itself a complicated process that is beyond the current scope of this guide), you can always keep a copy of the all-in-one apps to play the games, and just use the data and the stand-alone app for Vasara or VAF.</li>
 								<li>For the all-in-one apps, use the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data</a> <strong>plugins folder</strong>. The all-in-one <em>Infinity</em> app uses:
-									<blockquote class="wide"><pre>~/Library/Application Support/Marathon Infinity/Plugins/Vasara.zip</pre></blockquote>
+									<blockquote class="wide"><pre class="mobilenowrap mobilescroll">~/Library/Application Support/Marathon Infinity/Plugins/Vasara.zip</pre></blockquote>
 									The stand-alone Aleph One app uses:
-									<blockquote class="wide"><pre>~/Library/Application Support/AlephOne/Plugins/Vasara.zip</pre></blockquote>
+									<blockquote class="wide"><pre class="mobilenowrap mobilescroll">~/Library/Application Support/AlephOne/Plugins/Vasara.zip</pre></blockquote>
 									I note both locations because the Mac is the only platform that separates the trilogy&rsquo;s user data folders from Aleph One&rsquo;s (a design choice I&rsquo;m not fully on board with). Again, <strong>~/Library</strong> is also invisible by default (you must navigate to it with <strong>&lsquo;Go to Folder&rsquo;</strong>), hence my preference for option 1.</li>
 								</li>
 								<!-- messing with app packages isn't worth recommending even in an advanced guide, so I've deleted this section entirely -->
@@ -305,19 +310,19 @@ window.onload = function () {makeAllSortable();};
 
 			<h3 id="visualmodewin" class="centred">Installing Visual Mode.lua, Vasara, or VAF (Windows)</h3>
 
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><strong>Visual Mode.lua</strong> is a solo Lua script, so it should go in the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data folder</a>. My Windows 10 path for it is:
 
-					<blockquote class="wide"><pre>C:/Users/Aaron/Documents/AlephOne/Visual Mode.lua</pre></blockquote>
+					<blockquote class="wide"><pre class="mobilenowrap mobilescroll">C:/Users/Aaron/Documents/AlephOne/Visual Mode.lua</pre></blockquote>
 
 					Replace <strong>Aaron</strong> with your username to get yours. (If you&rsquo;re running an older version of Windows, please get a new <del>computer</del> operating system: running an OS that&rsquo;s no longer being updated is a major security risk that puts all your data in jeopardy. Windows 11, meanwhile, has the same path as Windows 10.)</li>
 				<li><strong>Vasara</strong> and <strong>VAF</strong> are plugins, so they belong in the <strong>Plugins</strong> folder (if there isn&rsquo;t one already, make one called &lsquo;<strong>Plugins</strong>&rsquo;). This can be the scenario plugins folder:
 
-					<blockquote class="wide"><pre>C:/Games/Marathon Infinity/Plugins/Vasara.zip</pre></blockquote>
+					<blockquote class="wide"><pre class="mobilenowrap mobilescroll">C:/Games/Marathon Infinity/Plugins/Vasara.zip</pre></blockquote>
 
 					Or, if you&rsquo;d like it to be accessible to <em>all</em> scenarios, the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data</a> <strong>plugins folder</strong>, e.g.: 
 
-						<blockquote class="wide"><pre>C:/Users/Aaron/Documents/AlephOne/Plugins/Vasara.zip</pre></blockquote>
+						<blockquote class="wide"><pre class="mobilenowrap mobilescroll">C:/Users/Aaron/Documents/AlephOne/Plugins/Vasara.zip</pre></blockquote>
 
 					This may be more convenient if, like me, you&rsquo;re perverse enough to map for five scenarios at a time, but you&rsquo;ll have to disable it outside Weland!Aleph One for all scenarios in which you aren&rsquo;t using solo Lua.
 				</li>
@@ -326,10 +331,10 @@ window.onload = function () {makeAllSortable();};
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking.html">Advanced guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
 			<h2 id="visualmodepreferences" class="centred">Configuring Weland!Aleph One</h2>
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li>These steps may be slightly confusing. <em><strong>Within Weland&rsquo;s preferences dialog,</strong></em> click the <strong>&lsquo;Edit Preferences&rsquo;</strong> button, which will launch Aleph One using the selected scenario. <em><strong>This is entirely intended!</strong></em></li>
 				<li><em><strong>Within Weland!Aleph One,</strong></em> click <strong>Settings</strong>. This creates a new &lsquo;Preferences Editor&rsquo; file that only affects the game&rsquo;s behavior <em class="weight3">when Weland lanches it</em> (e.g., launching <em>Marathon Infinity</em> from Weland creates a new &lsquo;<strong>Marathon Infinity Preferences Editor</strong>&rsquo; file within your Aleph One preferences folder).
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li class="fixheight"><strong>For Visual Mode.lua:</strong> Go to <strong>Environment</strong>, make sure <strong>&lsquo;Use Solo Script&rsquo;</strong> is <em>checked</em>, then select <strong>&lsquo;Script File&rsquo;</strong> and find Visual Mode.lua in the <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations" target="_blank">user data folder</a> (from which Aleph One usually navigates by default).</li>
 						<li class="fixheight"><strong>For Vasara</strong> or <strong>VAF</strong>: Select it under <strong>Plugins</strong>; no other plugins that use solo Lua should be active, and &lsquo;<strong>Use Solo Script</strong>&rsquo; in <strong>Environment</strong> should be <em>unchecked</em>. If Vasara doesn&rsquo;t appear, make sure you copied it to the right location. If the top level of Settings has no <strong>Plugins</strong> button, update your Aleph One version.</li>
 					</ul>
@@ -347,9 +352,9 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">The modern replacement for Anvil is ShapeFusion; its feature set is very nearly identical to Anvil&rsquo;s, although it does a few things differently. Nonetheless, the annotated Anvil help balloons will be essential, since they&rsquo;re one of the few Anvil features not integrated into ShapeFusion. The default <em>Infinity</em> physics model is also essential because the &ldquo;Standard&rdquo; physics model distributed with <em>Marathon Infinity</em> is actually a <em>Marathon 2</em> physics model (thanks, Bungie), so if you want to edit VacBob or SMG physics, you&rsquo;ll have to grab the one from Simplici7y.</p>
 
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><a href="http://archives2.bungie.org/manuals/Trilogy_Manual.pdf" target="_blank"><strong>Bungie&rsquo;s Forge & Anvil Manuals</strong></a>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><a href="forgemanual.html"><strong>Annotated Forge Manual</strong></a> <em><strong>(<strong>work in progress</strong> &ndash; I have not finished annotating the whole manual yet)</strong></em></li>
 					</ul>
 				</li>
@@ -363,17 +368,17 @@ window.onload = function () {makeAllSortable();};
 
 			<h2 id="forgeerrata" class="centred">Forge Manual Errata & Omissions</h2>
 
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><strong>Platforms:</strong> The &lsquo;<strong>Locked Door</strong>&rsquo; flag is broken and doesn&rsquo;t do anything.</li>
 				<li><strong>Lights:</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li>The &lsquo;<strong>Stateless</strong>&rsquo; flag is broken and doesn&rsquo;t do anything.</li>
 						<li>The manual says &lsquo;<strong>&#916; Period</strong>&rsquo; is &lsquo;the maximum random amount of time added to or subtracted from&rsquo; the value of <strong>Period</strong>. In fact, the game never subtracts <strong>&#916; Period</strong> from <strong>Period</strong>; it only ever adds them together.</li>
 						<li>The manual&rsquo;s statement that &lsquo;<strong>&#916; Intensity</strong>&rsquo; &lsquo;does for <strong>Intensity</strong> what <strong>&#916; Period</strong> does for <strong>Period</strong>&rsquo; is technically correct (the best kind of correct!), but since its description of <strong>&#916; Period</strong> is wrong, I&rsquo;m listing it here for completeness&rsquo; sake.</li>
 					</ul>
 				</li>
 				<li><strong>Environment Types:</strong> The manual&rsquo;s description of &lsquo;<strong>Rebellion</strong>&rsquo; is completely outdated; it is a correct description of &lsquo;<strong>Rebellion (M1)</strong>&rsquo;.
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li>The &lsquo;<strong>Rebellion</strong>&rsquo; flag strips all players&rsquo; weapons and ammunition, and if their health is above 37 (full 1x shields would be 150), the game strips their health to 37. The converse is <em>not</em> true: if their health is below 37, it <em>won&rsquo;t</em> be restored to 37.</li>
 						<li>Furthermore, if the &lsquo;<strong>Extermination</strong>&rsquo; mission type is set on a &lsquo;<strong>Rebellion</strong>&rsquo; level, <em>all</em> monsters set as &lsquo;<strong>Alien</strong>&rsquo; in the physics must, <em>without exception</em>, either be killed or (perhaps counterintuitively) have teleported out for the mission status to be set as &lsquo;<strong>Complete</strong>&rsquo;.</p></li>
 						<li>Both the rebellion health total and the starting health total can be customized with MML. <!--The following code will start players with yellow (2x) health and strip them to red (1x) health in rebellion levels:
@@ -385,21 +390,21 @@ window.onload = function () {makeAllSortable();};
 					</ul>
 				</li>
 				<li><strong>Mission Types:</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li>&lsquo;<strong>Rescue</strong>&rsquo; is broken. Use &lsquo;<strong>Rescue (M1)</strong>&rsquo; if you want this behaviour. Additionally, &lsquo;<strong>Rescue (M1)</strong>&rsquo; only affects whether the level completion state is set to &lsquo;<strong>Failed</strong>&rsquo;; it&rsquo;s still up to mapmakers to set the &lsquo;<strong>Finished</strong>&rsquo; or &lsquo;<strong>Unfinished</strong>&rsquo; states in other cases. <strong>aperturegrillz</strong>&rsquo;s <a href="https://youtu.be/rMSyuAsnIfc" target="_blank">speedrun of &lsquo;Bob-B-Q&rsquo;</a> shows us what can happen when a mapmaker neglects to set any mission types besides &lsquo;<strong>Rescue (M1)</strong>&rsquo;.</li>
 						<li>&lsquo;<strong>Extermination</strong>&rsquo; doesn&rsquo;t require killing <em>everything</em> unless, as mentioned above, the &lsquo;<strong>Rebellion</strong>&rsquo; flag is <em>also</em> set. Otherwise, the player gets a leeway of up to eight monsters marked as &lsquo;<strong>Alien</strong>&rsquo; in the physics. The game doesn&rsquo;t count monsters that are not marked as &lsquo;<strong>Alien</strong>&rsquo;, and it doesn&rsquo;t matter whether they&rsquo;re set as hostile to the player. (You can force players to kill all monsters of one or more specific types using MML.) Also, the game disregards monsters that have teleported out for the sake of extermination missions, likely to prevent players from being unable to complete a mission if too many teleport out.</li>
 						<li>I cover &lsquo;<strong>Exploration (M1)</strong>&rsquo; (potentially useful) and &lsquo;<strong>Repair (M1)</strong>&rsquo; (probably not) in my <a href="mapmaking.html#m1missions">advanced guide</a>.</li>
 					</ul>
 				</li>
 				<li><strong>Sound Objects:</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li>&lsquo;<strong>Is On Platform</strong>&rsquo; overrides the selected sound with the platform&rsquo;s ambient sound.</li>
 						<li>&lsquo;<strong>&#916; Volume</strong>&rsquo;, &lsquo;<strong>&#916; Period</strong>&rsquo;, &lsquo;<strong>&#916; Pitch</strong>&rsquo;, and &lsquo;<strong>&#916; Direction</strong>&rsquo;, like the similar light values above, are only ever added to, respectively, <strong>Volume</strong>, <strong>Period</strong>, <strong>Pitch</strong>, and <strong>Direction</strong>; they are never subtracted. Additionally, for these values (but, curiously, <em>not</em> for the similar light variables), the game will never select the maximum delta value. Thus, if both <strong>Period</strong> and <strong>&#916; Period</strong> are 30, the game selects a value from 30 to 59, inclusive.</li>
 						<li>While this isn&rsquo;t truly an erratum, &lsquo;<strong>&#916; Direction</strong>&rsquo; deserves further mention for a questionable design choice that can create the misleading impression that, for a sound to play from a constant direction, <strong>&#916; Direction</strong> should <em>exactly</em> match <strong>Direction</strong>: in fact, <strong>&#916; Direction</strong> should be 0&deg;. (If <strong>Direction</strong> and <strong>&#916; Direction</strong> are both 135&deg;, for example, the results will range from 135&deg; to 269&deg; (nice), inclusive.)</li>
 					</ul>
 				</li>
 				<li><strong>Polygon Types:</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li>The manual&rsquo;s description of the &lsquo;<strong>Invisible Monster Trigger</strong>&rsquo; was probably the intended behaviour of the polygon type, but in practice, it is the same as the &lsquo;<strong>Dual Monster Trigger</strong>&rsquo;: it activates all monsters in a zone, not just teleporting ones.</li>
 						<li>Only players can trigger <strong>Platform On<span class="breaker">/</span>Off Triggers</strong>, but both players and monsters can trigger <strong>Light On<span class="breaker">/</span>Off Triggers</strong>.</li>
 						<li>Monsters can&rsquo;t move over <strong>Teleporters</strong> and won&rsquo;t cross them (this doesn&rsquo;t apply to <strong>Automatic Exits</strong>).</li>
@@ -416,7 +421,7 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">Weland has some differences from Forge and a few (mostly minor) bugs. It&rsquo;s worth being aware of these issues:</p>
 
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li>Forge threw an error if you attempted to enter Visual Mode or save a map with any concave polygons. Weland just lets you do it. However, Forge&rsquo;s more aggressive treatment of the matter was justified in that the engine crashes if a player ever enters those polygons. By default, Weland colors concave polygons orange in Draw Mode, but if a lot of your polygons overlap in X/Y space, concave polygons may not be visible at a given time. Thus, be especially careful when moving lines, points, or polygons.</li>
 				<li>In the top-down texture view, if you have a texture selected from any collection <em>except</em> the one specified in <strong>Special</strong> &rarr; <strong>Set Level Parameters</strong> &rarr; <strong>Environment</strong>, &lsquo;<strong>Undo</strong>&rsquo; always sets the selected texture to the latter environment&rsquo;s first texture. (The <strong>Landscape</strong> collection is not immune to this bug.)</li>
 				<li>In all other top-down views <em>except</em> Draw Mode, &lsquo;<strong>Undo</strong>&rsquo; always sets the selection to the palette&rsquo;s first item.</li>
@@ -430,11 +435,11 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">A few problems occur when texturing in Aleph One that were not problems in Forge. These include:</p>
 
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li>When you exit visual mode, tags should be in the state they&rsquo;re meant to start the level in. Thus, if you tabbed a tag switch that starts the level inactive so you could open some doors, reset the tag to inactive. Take special care with wires and chip insertion switches &ndash; messing them up can render levels uncompletable. This is one of several reasons I&rsquo;d recommend avoiding tags where possible &ndash; this is just the tip of the iceberg (you don&rsquo;t need to worry about <a href="tagsareterrible.html">the other reasons</a> until later).</li>
 				<li>
 					In Visual Mode.lua and Vasara 1.0.x, walking on a <strong>Must Be Explored</strong> polygon (or even looking at it if <strong>Exploration (M1)</strong> is set) resets it to <strong>Normal.</strong> (I have not yet tested whether Vasara 1.1 fixes this; I will report back later.) Be sure to reset these after texturing (or just don&rsquo;t set them until you&rsquo;ve finished texturing).
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li>By default, <a href="https://github.com/aaronfreed/vaf" target="_blank">VAF</a> fixes this in a <span id="ftnt_ref02" class="dotted" title="Namely, when VAF loads the map, it makes a table containing all polygons marked as &ldquo;Must Be Explored&rdquo;, then in Triggers.idle, Triggers.postidle, and Triggers.cleanup, it scans that list, and if any polygons have been set as &ldquo;Normal&rdquo;, it resets them to &ldquo;Must Be Explored&rdquo;. If this doesn&rsquo;t make sense to you, don&rsquo;t worry; it&rsquo;s in a footnote because it&rsquo;s far beyond the scope of this guide.">fairly hacky way<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span> that has the cost of making it impossible to complete <strong>Exploration</strong> mission types while VAF is running. However, VAF is a texturing app above all, and this is much closer to the Forge behaviour mapmakers are likely to expect.</li>
 					</ul>
 				</li>
@@ -443,9 +448,9 @@ window.onload = function () {makeAllSortable();};
 				<li>Visual Mode.lua did not handle wires correctly until version 3.0.2, released on 2024-01-19. If you&rsquo;re having trouble getting them to work correctly, upgrade to the latest version or use Vasara or VAF.</li>
 				<li>Forge&rsquo;s &ldquo;align heights in visual mode&rdquo; feature doesn&rsquo;t exist in any modern editor; it&rsquo;s necessary to exit visual mode, change the polygon&rsquo;s heights, then go back to visual mode to texture it (or use Lua to do that, if you know it; one of several reasons I added overlays to VAF was to facilitate this). If you&rsquo;re on the obsessive-compulsive spectrum like me, you probably hated Forge&rsquo;s implementation of this feature because it didn&rsquo;t actually align heights correctly (see <a href="https://github.com/aaronfreed/vaf#planned-features" target="_blank">my discussion in in VAF&rsquo;s readme</a> for specifics). However, I plan to add a less sloppy implementation to VAF once I&rsquo;m satisfied with my UI design. (I&rsquo;m not a UI specialist and have long held that UI is far too important to be left up to programmers that aren&rsquo;t UI specialists.)</li>
 				<li>Occasional issues with platforms&rsquo; texture alignment.
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li>If you&rsquo;re using a version of Aleph One prior to 1.6:
-							<ol>
+							<ol class="mobileleftmargin15">
 								<li>Upgrade, for the love of Pthia.</li>
 								<li>When you exit visual mode (or type <strong>.save level</strong>), platforms that extend <strong>From Ceiling</strong> or <strong>From Both</strong> <em>must</em> be in the same position they start the level in, or you&rsquo;ll get texture misalignments.</li>
 							</ol>
@@ -457,14 +462,14 @@ window.onload = function () {makeAllSortable();};
 
 			<h3 id="vasaratexturing" class="centred">Further Texturing Issues in Vasara and VAF</h3>
 
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li>Vasara 1.0.x gets weird with more than 56 lights. If you have both &lsquo;Apply Light&rsquo; and &lsquo;Apply Texture&rsquo; selected with a light &#8805; 56, the HUD disappears; reduce the light value to something &lt; 56 and hit the action key to restore it. If one is selected, but not the other, the HUD functions normally.
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><a href="https://github.com/aaronfreed/vaf" target="_blank">VAF</a> fixes the Lua error spam. It currently does not display previews of lights greater than 55 correctly, but it lists lights from 0 to 97 in its options screen.</li>
 					</ul>
 				</li>
 				<li>If you leave visual mode (or type <strong>.save level</strong>) while a polygon is flashing and highlighted on the map for the player to teleport to, this will be set as a <strong>Major Ouch</strong> polygon and the floor&rsquo;s transfer mode will change to <strong>Static</strong>. So&hellip; don&rsquo;t do that. This occurs because Vasara and VAF highlight the polygon on the map by changing it temporarily to a <strong>Major Ouch</strong> polygon (and physically change its appearance in the game world to create the static effect on its floor).
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li>Fixing this would require not highlighting the polygon on the map, and after trying that for a bit, I found it more annoying than the current behavior. I&rsquo;m working on a possible compromise.</li>
 					</ul>
 				</li>
@@ -477,17 +482,17 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">I can&rsquo;t vouch for the accuracy of all of this info (except, I hope, my own page), and you definitely shouldn&rsquo;t worry about most of this stuff until later &ndash; you need to familiarize yourself with the fundamentals before moving onto more advanced techniques. (If you don&rsquo;t know how to play a paradiddle, you aren&rsquo;t ready to cover a Neil Peart solo.) Hastur&rsquo;s Workshop is listed first here because it&rsquo;s the first advanced tutorial you should read &ndash; while not all of it is still relevant, you can still find helpful nuggets even in the seemingly irrelevant bits (e.g., viewing distances are no longer limited to 30 World Units, but the tips on that page can still be helpful for making spaces seem larger than they are, which is especially helpful since there are really only about 63 usable World Units in each direction).</p>
 
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><a href="https://citadel.lhowon.org/litterbox/Forge/hastursworkshop" target="_blank">Hastur&rsquo;s Workshop</a> <em>(advanced tips from <em>Marathon Infinity</em>&rsquo;s creators)</em></li>
 				<li><a href="mapmaking.html">My advanced mapmaking page</a>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><a href="dontmakeascenario.html">My provocatively-titled advice to anyone who wants to make a new <em>Marathon</em> scenario in 2024</a></li>
 					</ul>
 				</li>
 				<li><a href="https://citadel.lhowon.org/litterbox/Forge/index.html" target="_blank">Forge tutorials</a> from <strong>the Battle Cat</strong>, <strong>Jason Harper</strong>, <strong>Even Steven</strong>, &amp; <strong>Chris Komarnicki</strong></li>
 				<li><a href="https://citadel.lhowon.org/litterbox/Anvil/Index.html" target="_blank">Anvil references</a> from <strong>Hamish Sanderson</strong>, <strong>Quartz</strong>, <strong>Mark Levin</strong>, <strong>Claude Errera</strong>, &amp; <strong>Ra&uacute;l Bonilla</strong></li>
 				<li><strong>Current Aleph One scripting documentation:</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><a href="https://htmlpreview.github.io/?https://github.com/Aleph-One-Marathon/alephone/blob/master/docs/MML.html" target="_blank">Marathon Markup Language<br /></a></li>
 						<li><a href="https://htmlpreview.github.io/?https://github.com/Aleph-One-Marathon/alephone/blob/master/docs/Lua.html" target="_blank">Lua (Solo &amp; net scripting)<br /></a></li>
 						<li><a href="https://htmlpreview.github.io/?https://github.com/Aleph-One-Marathon/alephone/blob/master/docs/Lua_HUD.html" target="_blank">Lua (Heads-Up Display scripting)<br /></a></li>
@@ -495,12 +500,12 @@ window.onload = function () {makeAllSortable();};
 				</li>
 				<li><a href="https://gist.github.com/marrub--/98af41f36e15a277088b220a6a9f4244" target="_blank">File format info</a> <em>(note: parts of this now appear to be outdated, but parts may still be helpful)</em></li>
 				<li><a href="https://simplici7y.com/items/marathon-2-texture-replacements-for-marathon-infinity/" target="_blank"><em>M2</em>-flavored <em>Infinity</em> shapes</a>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li>If you want to make <em>Marathon 2</em> maps, I recommend configuring Weland to use <em>Marathon Infinity</em> as the scenario and this as the shapes. <strong>Vasara</strong>, <strong>VAF</strong>, and <strong>Visual Mode.lua</strong> look for the Jjaro collection by default, and weird things happen if they don&rsquo;t find it. (You can edit them to prevent this, but this prevents the need for that, or for changing Weland&rsquo;s scenario from <em>Marathon Infinity</em> to <em>Marathon 2</em> and back.)</li>
 					</li>
 					</ul>
 				<li><a href="https://simplici7y.com/items/m1-shapes-in-m2-format/" target="_blank">M2-formatted M1 shapes</a>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li>Note that this won&rsquo;t actually run with <em>Marathon 1</em>. It&rsquo;s useful if you want to use <em>M1</em>&rsquo;s shapes as a base for editing, but you&rsquo;ll have to convert it back to <em>M1</em> format afterward if you want to use it with <em>M1</em>.</li>
 					</ul>
 				</li>
@@ -511,25 +516,25 @@ window.onload = function () {makeAllSortable();};
 			<h2 id="resourcescommunity" class="centred">Marathon Communities & Resources</h2>
 
 			<h3 id="resourcesfiles" class="centred">Game Files</h3>
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><a href="https://alephone.lhowon.org/" target="_blank">The Marathon trilogy (all-in-one releases)</a></li>
 				<li><a href="https://alephone.lhowon.org/download.html" target="_blank">Stand-alone Aleph One app</a></li>
 				<li><a href="https://alephone.lhowon.org/scenarios.html" target="_blank">Data files</a><strong> for the trilogy and </strong><span id="ftnt_ref04" class="dotted" title="Trojan, EVIL, Tempus Irae Redux, RED, Eternal X, Rubicon X, Phoenix, Mararthon Yuge, Apotheosis X, and Istoria. [See endnote for my thoughts on each]"><strong>ten major Aleph One scenarios</strong><a href="#ftnt04" class="noprintlink">&#8317;&#8308;&#8318;</a></span></strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><a href="https://sourceforge.net/projects/emr3/files/" target="_blank"><em>Excalibur: Morgana&rsquo;s Revenge</em> 3.0</a>: Probably the largest scenario omitted from that page, though there&rsquo;s a reason for that:
-							<ul>
+							<ul class="mobileleftmargin15">
 								<li><a href="https://simplici7y.com/items/emr-ao-compatible-patch-beta1/" target="_blank"><em>EMR</em> 3.0 Compatibility Patch</a>: Out of the box, <em>EMR 3.0</em> does not work correctly with any Aleph One release from at least the last ten years. This plugin makes it function correctly, and it&rsquo;s (IMO at least) the only way to make <em>EMR</em> actually tolerable to play &ndash; the modified version of Aleph One distributed with <em>EMR</em> with crashes more often than a plane piloted by a drunken sailor with cataracts, but worse still, it doesn&rsquo;t run at 60 fps. Literally unplayable. (P.S. I&rsquo;m <a href="https://en.wiktionary.org/wiki/kid_on_the_square" target="_blank">kidding on the square</a>.)</li>
 							</ul>
 						</li>
 						<li><a href="https://citadel.lhowon.org/">The Citadel of Antiquity</a>: A repository with two scenarios excluded from Aleph One&rsquo;s website, <em class="weight2">Return to Marathon</em> and <em class="weight2">Pfh&rsquo;Joueur</em>, which are respectively #7 and #8 on my scenario list (<em>Tempus Irae Redux</em>, <em>Rubicon</em>, <em>Eternal</em>, <em>Phoenix</em>, <em>Apotheosis</em>, and <em>Istoria</em> precede them). I strongly recommend both, with caveats:
-							<ol class="loweralpha">
+							<ol class="loweralpha mobileleftmargin15">
 								<li>Both of their design philosophies are <em>very</em> &rsquo;90s; if that bothers you, you probably won&rsquo;t enjoy them</li>
 								<li><em>Return to Marathon</em> is unfinished</li>
 								<li><em>Return to Marathon</em> also has some disturbing body horror elements. (I&rsquo;m quite squeamish, but I still liked it enough to place it #7 on my scenario list. That might tell you something.)</li>
 							</ol>
 						</li>
 						<li><a href="https://simplici7y.com/items/blauwe-vingers-mac/" target="_blank"><em>Blauwe Vingers</em></a>: Another major scenario excluded from the above page. Though this version says it&rsquo;s for Mac, you should now use it on Windows and Linux as well; just ignore the .appl it ships with and run it with modern Aleph One instead. Note: <em>Blauwe Vingers</em> has no save terminals; you can save anywhere using Ctrl+S. (Its name is Dutch for <em>Blue Fingers</em>, and it&rsquo;s probably #9 on my scenario list.)
-							<ul>
+							<ul class="mobileleftmargin15">
 								<li><a href="https://simplici7y.com/items/blauwe-vingers-english/" target="_blank">Translated English map for <em>Blauwe Vingers</em></a></li>
 							</ul>
 						</li>
@@ -544,48 +549,48 @@ window.onload = function () {makeAllSortable();};
 
 			<h3 id="resourceshd" class="centred">Hi-Res Graphics</h3>
 			<h4 id="resourceshdbespoke" class="centred">Bespoke Graphics</h4>
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><strong>Global</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><em>Marathon 2</em>/<em>&infin;</em>: <a href="https://simplici7y.com/items/maratoon-infinity-3/" target="_blank"><strong>MaraToon</strong> by <strong>Juzo-kun</strong></a> <em class="light">(a crisp, clean, modernized look for all game assets; extremely high-quality work)</em></li>
 					</ul>
 				</li>
 				<li><strong>Landscapes</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><em>Marathon 1</em>: <a href="https://simplici7y.com/items/marathon-over-tau-ceti-e-i-landscape-texture/" target="_blank">Marathon over Tau Ceti E-I Landscape Texture by liacrow</a> <em class="light">(8192&times;3072)</em></li>
 						<li><em>Marathon &infin;</em>: <a href="https://simplici7y.com/items/gorans-highres-landscape-plugin/" target="_blank">Goran Svensson&rsquo;s Landscapes</a> <em class="light">(4096&times;2160)</em></li>
 					</ul>
 				</li>
 				<li><strong>Monsters</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><em>Marathon 1</em>: nothin&rsquo; but upscales available, sorry</li>
 						<li><em>Marathon 2</em>/<em>&infin;</em>: <a href="https://simplici7y.com/items/community-freeverse-plugin-monsters/" target="_blank">Community/Freeverse Monsters</a> <em class="light">(these are much higher-resolution than the ones that shipped with the XBLA release and look immeasurably better)</em></li>
 						<li><em>Marathon &infin;</em>: <a href="https://simplici7y.com/items/hi-res-critters-and-vacbobs/" target="_blank">General Tacticus&rsquo; Hi-Res Critters & VacBobs</a></li>
 					</ul>
 				</li>
 				<li><strong>Scenery</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><em>Marathon 1</em>: <a href="https://simplici7y.com/items/3d-scenery-for-m1/" target="_blank">General Tacticus&rsquo; 3D Scenery for M1</a></li>
 						<li><em>Marathon 2</em>/<em>&infin;</em>: <a href="http://simplici7y.com/items/community-freeverse-plugin-scenery" target="_blank">Community/Freeverse Scenery Plugin</a></li>
 						<li><em>Marathon &infin;</em>: <a href="https://simplici7y.com/items/hi-res-jjarro-scenery-replacement/" target="_blank">General Tacticus&rsquo; Jjaro Scenery</a></li>
 					</ul>
 				</li>
 				<li><strong>Textures</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><em>Marathon 1</em>: <a href="https://simplici7y.com/items/ttep-updated-plugin-m1-1024x1024/" target="_blank">Total Texture Enhancement Pack (TTEP) by Tim Vogel &amp; Jay Faircloth</a></li>
 						<li><em>Marathon 2</em>: <a href="https://simplici7y.com/items/community-freeverse-plugin-walls-m2/" target="_blank">Community/Freeverse Walls</a></li>
 						<li><em>Marathon &infin;</em>: <a href="https://simplici7y.com/items/high-definition-marathon-infinity-textures-all-in-one-repackaging/" target="_blank">Goran Svensson&rsquo;s textures</a> (with <strong>kaosof</strong>&rsquo;s parallax maps for the Sewage set)</li>
 					</ul>
 				</li>
 				<li><strong>Weapons</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><em>Marathon 1</em>: <a href="https://simplici7y.com/items/tacticus-m1-weapons-redux-2/" target="_blank">General Tacticus&rsquo; M1 Weapons Redux</a></li>
 						<li><em>Marathon 2</em>: <a href="https://simplici7y.com/items/community-freeverse-plugin-weapons-m2/" target="_blank">Community/Freeverse Weapons &ndash; M2</a></li>
 						<li><em>Marathon &infin;</em>: <a href="https://simplici7y.com/items/community-freeverse-plugin-weapons/" target="_blank">Community/Freeverse Weapons &ndash; M&infin;</a></li>
 					</ul>
 				</li>
 				<li><strong>April Fool&rsquo;s Jokes</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><em>Marathon 2</em> Landscapes: <a href="https://simplici7y.com/items/m2-pepperscapes/" target="_blank">Pepperscapes by W&rsquo;rkncacnter</a></li>
 						<li><em>Marathon 2</em> Textures: <a href="https://simplici7y.com/items/m2-ai-textures/" target="_blank">AI Textures by W&rsquo;rkncacnter</a></li>
 					</ul>
@@ -593,10 +598,10 @@ window.onload = function () {makeAllSortable();};
 			</ul>
 
 			<h4 id="resourceshdupscales" class="centred">Upscaled Game Assets</h4>
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li>Entire Trilogy: <a href="https://lochnits.com/marathon/upscales/" target="_blank">Topaz Gigapixel upscales by W&rsquo;rkncacnter</a></li>
 				<li><em>Marathon &infin;</em> Pixelmator Pro upscales by treellama:
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><a href="https://simplici7y.com/items/ml-super-res-monsters-infinity-plugin-2/" target="_blank">Monsters &amp; Scenery</a></li>
 						<li><a href="https://simplici7y.com/items/ml-super-res-walls-infinity-plugin/" target="_blank">Textures</a></li>
 						<li><a href="https://simplici7y.com/items/ml-super-res-weapons-infinity-plugin/" target="_blank">Weapons, Items, &amp; Projectiles</a></li>
@@ -605,7 +610,7 @@ window.onload = function () {makeAllSortable();};
 			</ul>
 
 			<h3 id="resourcescommunities" class="centred">Communities</h3>
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><a href="https://discord.gg/NmE66Mhq2a" target="_blank">Discord Server</a></li>
 				<li><a href="https://pfhorums.com/" target="_blank">The Pfhorums</a></li>
 				<li><a href="http://forums.bungie.org/story/" target="_blank">Marathon&rsquo;s Story Forums</a></li>
@@ -613,19 +618,19 @@ window.onload = function () {makeAllSortable();};
 			</ul>
 
 			<h3 id="resourcesstory" class="centred">Story &amp; Lore References</h3>
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><a href="http://marathon.bungie.org/story" target="_blank">Marathon&rsquo;s Story Page</a> <em class="light">(if you have story questions, for the love of Yrro, go here first &ndash; 90% of them can be answered with a quick search here)</em></li>
 				<li><a href="https://marathon.karnemir.com/" target="_blank">Marathon Lore Archive</a> <em class="light">(searchable archive of terminals from the trilogy and ARG material from Bungie&rsquo;s upcoming game; mobile-friendlier, but excludes fourth-wall-breaking content like credit terminals)</em></li>
 				<li><a href="http://lochnits.com/marathon/scenarios" target="_blank">Scenarios on Lochnits</a> <em class="light">(links, maps, terminals, & level flowcharts for major & many obscure fan scenarios)</em></li>
 			</ul>
 
 			<h3 id="resourcesgameplay" class="centred">Gameplay Resources</h3>
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><a href="http://marathon.bungie.org/spoiler" target="_blank">Marathon Spoiler Guide</a></li>
 				<li><a href="https://1drv.ms/u/s!AuD0MykSsmaRmx_NxpRgTRM69vgn?e=AplygX" target="_blank">Dr John Sumner&rsquo;s Spoiler Guides</a> <em class="light">(like playing on Total Carnage or fists-only? Then these extremely detailed spoiler guides may be for you. Also, they&rsquo;re the only resources available for certain scenarios)</em></li>
 				<li><a href="http://marathon.bungie.org/vidmaster" target="_blank">Marathon Vidmasters&rsquo; Page</a></li>
 				<li><strong>Vidmaster films on YouTube:</strong>
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><a href="https://www.youtube.com/@MarathonVidmaster" target="_blank">My channel</a> <em class="light">(newer, films rendered in Aleph One)</em></li>
 						<li><a href="https://www.youtube.com/@VidmasterChallenge" target="_blank">jteg&rsquo;s channel</strong></a> <em class="light">(last updated in 2016, films rendered in emulators)</em></li>
 					</ul>
@@ -636,11 +641,11 @@ window.onload = function () {makeAllSortable();};
 			</ul>
 
 			<h3 id="resourceswikis" class="centred">Wikis</h3>
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><a href="https://www.marathonwiki.com/" target="_blank">CyberAcme</a> <em class="light">(Marathon wiki; while this is still getting started, it at least has actual standards for its articles. Please don&rsquo;t link to Pfhorpedia; not only is it a Fandom wiki, but it&rsquo;s so full of misinformation as to be entirely unsalvageable.)</em></li>
 				<li><a href="https://en.wikipedia.org/wiki/Marathon_Trilogy" target="_blank">Wikipedia</strong>&rsquo;s <em>Marathon</em> Trilogy article</a></li>
 				<li><strong>TV Tropes:</strong> 
-					<ul>
+					<ul class="mobileleftmargin15">
 						<li><a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/Marathon" target="_blank"><em>Marathon</em> Trilogy</a></li>
 						<li><a href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/MarathonExpandedUniverse" target="_blank"><em>Marathon</em> Expanded Universe</a> <em class="light">(fan scenarios)</em></li>
 					</ul>
@@ -648,7 +653,7 @@ window.onload = function () {makeAllSortable();};
 			</ul>
 
 			<h3 id="resourcesmusic" class="centred">Music &amp; Sound Resources</h3>
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><a href="https://www.themarathonmusic.com/downloads.html">Dr Craig Hardgrove&rsquo;s soundtrack page</a> <em class="light">(mostly older releases)</em></li>
 				<li><a href="soundtracks.html">My soundtrack page</a> <em class="light">(newer releases and remasters of some older releases)</em></li>
 				<li><a href="https://github.com/aaronfreed/marathonsounds">My <em>Marathon</em> sound archive</a> <em class="light">(FLAC files of: (a) every sound from the trilogy, (b) my remixes of sounds whose sources we know, and (c) my remasters of sounds whose sources we don&rsquo;t)</em></li>
@@ -667,7 +672,7 @@ window.onload = function () {makeAllSortable();};
 
 			<h1 id="thanks" class="centred">Acknowledgements</h1>
 
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
 				<li><strong>Solra Bizna</strong> for an incomprehensible amount of programming help, including the code that makes this exact page show up differently if you&rsquo;re using dark mode.</li>
 				<li>The numerous <em>Marathon</em> mapmakers I&rsquo;ve learned from or been influenced by over the years. I can&rsquo;t possibly hope to list them all, but <strong>James Hastings-Trew</strong>, <strong>CryoS</strong>, <strong>hypersleep</strong>, <strong>RyokoTK</strong>, <strong>windbreaker</strong>, <strong>Don-Martin Antell</strong>, <strong>Drictelt</strong>, <strong>Mike Trinder</strong>, <strong>Jason Harper</strong>, <strong>Chris Lund</strong>, <strong>Courtney Evans</strong>, <strong>Frank Rooke</strong>, <strong>Devon Belcher</strong>, <strong>Borzz</strong>, <strong>Rich Dierkes</strong>, <strong>Shebob</strong>, <strong>Jason Jones</strong>, <strong>Greg Kirkpatrick</strong>, <strong>Randy Reddig</strong>, <strong>Antonio de Llamas</strong>, and <strong>FrigidMan</strong> undoubtedly number among them.</li>
@@ -697,7 +702,7 @@ window.onload = function () {makeAllSortable();};
 					</tr>
 					<tr>
 						<td class="right"><a href="#ftnt_ref03" id="ftnt03" class="noprintlink"><strong>3</strong><span class="weight0">.</span></a></td>
-						<td><ul style="margin-top: 0px; margin-bottom: 0px;">
+						<td><ul style="margin-top: 0px; margin-bottom: 0px;" class="mobileleftmargin15">
 								<li style="margin-top: 0px;">Tie the platform&rsquo;s activation to some specific action on the map, such as a &ldquo;platform on trigger&rdquo; on the player&rsquo;s spawn polygon; then X+click to load the level from elsewhere when you go to texture.</li>
 								<li>Set the &ldquo;platform on trigger&rdquo; as something besides the starting polygon that players must walk on before they can see the platform; then teleport around the map to avoid walking on it.</li>
 								<li>Another solution is reportedly to type <code>.save level</code> in the Lua console rather than to close visual mode; you&rsquo;ll then have to (re)load the version you saved (which will show up <a href="https://github.com/Aleph-One-Marathon/alephone/wiki/File-Locations#saved-games--films--screenshots--saved-levels" target="_blank">here</a>) in Weland.</li>
@@ -709,7 +714,7 @@ window.onload = function () {makeAllSortable();};
 						<td class="right"><a href="#ftnt_ref04" id="ftnt04" class="noprintlink"><strong>4</strong><span class="weight0">.</span></a></td>
 						<td><em>Trojan</em>, <em>EVIL</em>, <em>Tempus Irae Redux</em>, <em>RED</em>, <em>Eternal X</em>, <em>Rubicon X</em>, <em>Phoenix</em>, <em>Mararthon Yuge</em>, <em>Apotheosis X</em>, &amp; <em>Istoria</em>.
 
-							<ul style="margin-bottom: 0px;">
+							<ul style="margin-bottom: 0px;" class="mobileleftmargin15">
 								<li>If you&rsquo;re here, you&rsquo;ll likely enjoy <em>Tempus Irae Redux</em>, <em>Eternal X</em>, <em>Phoenix</em>, and <em>Apotheosis X</em>. I&rsquo;m hardly impartial (I remastered <em>Phoenix</em>&rsquo;s music; wrote <em>Apotheosis X</em>&rsquo;s Lua and remixed<span class="breaker">/</span>remastered many of its sounds; and worked on nearly every aspect of <em>Eternal X</em> and <em>Tempus Irae Redux</em>), but I listed all four of these scenarios (or their predecessors) on what was, at the time, my top five list long before I worked on them, so you&rsquo;d probably need a microscope to see that caveat.</li>
 								<li><em>Rubicon X</em> and <em>Istoria</em> round out my top six with the caveats &lsquo;don&rsquo;t play <em>Rubicon X</em> above Normal unless you think <a href="https://www.halopedia.org/Mythic_(difficulty)" target="_blank" rel="noopener noreferrer">LASO</a> is fun&rsquo; and <span class="dotted" id="ftnt_ref05" title="To be fair, Istoria 1.1, which I haven&rsquo;t played yet, rebalances the Flame IADD fight &ndash; what I&rsquo;ve read leads me to suspect that I&rsquo;ll find the redesigned version somewhat less obnoxious. &para; &hellip;Also, I&rsquo;ve technically contributed to Rubicon X as well, though I&rsquo;m uncredited; on 2022-09-21, I released a plugin that was effectively integrated wholesale into the game in 2024-04-25. I&rsquo;m not especially fussed about being uncredited; the plugin can&rsquo;t have taken me more than thirty minutes to make, and it&rsquo;s easily the least significant of my contributions to what, at the time I wrote it, were my top five scenarios. &para; I can&rsquo;t say that I&rsquo;ve contributed to all my favorite scenarios, though, because my top five is now a top six. I haven&rsquo;t contributed in any way to Istoria and doubt I ever will; I can&rsquo;t imagine them ever needing my help.">&lsquo;the Flame IADD fight can heck right off&rsquo;.<a href="#ftnt05" class="noprintlink">&#8317;&#8309;&#8318;</a></span></li>
 								<li>If you&rsquo;re attuned to <em>Yuge</em>&rsquo;s irreverent humour (yes, it&rsquo;s <em>Mara<strong class="weight3 hue300">r</strong>thon Yuge</em>), it&rsquo;ll reward you with fantastic gameplay and a remarkable demonstration of procedural level design.</li>
@@ -721,9 +726,9 @@ window.onload = function () {makeAllSortable();};
 					</tr>
 					<tr>
 						<td class="right"><a href="#ftnt_ref05" id="ftnt05" class="noprintlink"><strong>5</strong><span class="weight0">.</span></a></td>
-						<td>To be fair, <em>Istoria</em> 1.1, which I haven&rsquo;t played yet, rebalances the Flame IADD fight &ndash; what I&rsquo;ve read leads me to suspect that I&rsquo;ll find the redesigned version somewhat less obnoxious.
-						<p class="midpara">&hellip;Also, I&rsquo;ve technically contributed to <em>Rubicon X</em> as well, though I&rsquo;m uncredited; on 2022-09-21, I released <a href="https://simplici7y.com/items/rubicon-x-bloom-monster-fix/" target="_blank">a plugin</a> that was effectively integrated wholesale into the game on 2024-04-25. I&rsquo;m not especially fussed about being uncredited; the plugin can&rsquo;t have taken me more than thirty minutes to make, and it&rsquo;s easily the least significant of my contributions to what, at the time I wrote it, were my top five scenarios.</p>
-						I can&rsquo;t say that I&rsquo;ve contributed to all my favorite scenarios, though, because my top five is now a top six. I haven&rsquo;t contributed in any way to <em>Istoria</em> and doubt I ever will; I can&rsquo;t imagine them ever needing my help.</td>
+						<td><p>To be fair, <em>Istoria</em> 1.1, which I haven&rsquo;t played yet, rebalances the Flame IADD fight &ndash; what I&rsquo;ve read leads me to suspect that I&rsquo;ll find the redesigned version somewhat less obnoxious.</p>
+						<p>&hellip;Also, I&rsquo;ve technically contributed to <em>Rubicon X</em> as well, though I&rsquo;m uncredited; on 2022-09-21, I released <a href="https://simplici7y.com/items/rubicon-x-bloom-monster-fix/" target="_blank">a plugin</a> that was effectively integrated wholesale into the game on 2024-04-25. I&rsquo;m not especially fussed about being uncredited; the plugin can&rsquo;t have taken me more than thirty minutes to make, and it&rsquo;s easily the least significant of my contributions to what, at the time I wrote it, were my top five scenarios.</p>
+						<p>I can&rsquo;t say that I&rsquo;ve contributed to all my favorite scenarios, though, because my top five is now a top six. I haven&rsquo;t contributed in any way to <em>Istoria</em> and doubt I ever will; I can&rsquo;t imagine them ever needing my help.</p></td>
 					</tr>
 				</tbody>
 			</table>

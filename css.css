@@ -798,7 +798,7 @@ th {
 	.mobilemin600 {
 		min-width: 800px;
 	}
-	.mobilenowrap {
+	.mobilenowrap, .balanced-wrap.mobilenowrap, td.balanced-wrap.mobilenowrap, th.balanced-wrap.mobilenowrap, tr.balanced-wrap.mobilenowrap {
 		white-space: nowrap;
 	}
 	.mobileleftmargin0 {
@@ -1141,13 +1141,22 @@ th {
 	blockquote.wide {
 		margin: 16px 0px 16px 15px;
 	}
-	.mobilealignleft {
+	.mobilealignleft,
+	.right.mobilealignleft,
+	.centred.mobilealignleft,
+	.justify.mobilealignleft {
 		text-align: left;
 	}
-	.mobilealigncenter {
+	.mobilealigncenter,
+	.right.mobilealigncenter,
+	.left.mobilealigncenter,
+	.justify.mobilealigncenter {
 		text-align: center;
 	}
-	.mobilealignright {
+	.mobilealignright,
+	.left.mobilealignright,
+	.centred.mobilealignright,
+	.justify.mobilealignright {
 		text-align: right;
 	}
 	.mobileleftmargin-15 {
@@ -4854,6 +4863,11 @@ thead tr.freshprince th {
 }
 .codeexample, code.codeexample, pre.codeexample {
 	font-family: "Fira Mono", monospace;
+}
+.preformatted {
+	font-family: "Fira Mono", monospace;
+	white-space: nowrap;
+	white-space-collapse: preserve-breaks preserve-spaces;
 }
 .discography .number, .discography .dr, .discography .date, .discography .accent {
 	font-family: inherit;

@@ -6171,3 +6171,27 @@ img.fittowidth {
 .mainsize, .mainsize td {
 	font-size: 1rem;
 }
+
+@supports (image-rendering: crisp-edges) {
+	img {
+		image-rendering: crisp-edges;
+	}
+}
+
+@supports (image-rendering: -webkit-optimize-contrast) {
+	img {
+		image-rendering: -webkit-optimize-contrast;
+	}
+}
+
+@supports (image-rendering: -moz-crisp-edges) {
+	img {
+		image-rendering: -moz-crisp-edges
+	}
+}
+
+img.pixelated {
+	img {
+		image-rendering: pixelated;
+	}
+}

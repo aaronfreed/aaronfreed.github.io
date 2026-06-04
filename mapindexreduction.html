@@ -166,6 +166,8 @@ window.onload = function () {makeAllSortable();};
 					</li>
 				</ul>
 
+				<p>Don’t feel bad if you find this unintuitive at first. How to fill spaces with as few convex polygons of no more than eight sides as possible is, as far as I know, an unsolved problem in geometry, and it wouldn’t surprise me in the slightest if it were an <a href="https://en.wikipedia.org/wiki/NP-hardness" target="_blank" rel="noopener noreferrer">NP-hard</a> problem. If a computer can’t do it efficiently, you certainly don’t have any hope at doing so yourself. Trial and error will improve your intuition, though. Don’t feel bad about saving often, experimenting with different ways to fill spaces, and reloading your previous save if they turn out to be less efficient.</p>
+
 				<p class="sectionbreak"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
 			<h1 class="centred" id="pitfalls">Potential Pitfalls of Pruning</h1>
@@ -186,10 +188,10 @@ window.onload = function () {makeAllSortable();};
 						<ul><li>If any platform switches referred to such a platform, you&rsquo;ll have to reassign them.</li></ul>
 					</li>
 					<li>If redrawing the geometry causes &lsquo;bouncy walls&rsquo; that eject players upon collisions, you may wish to avoid doing so. (Bouncy walls are especially likely to happen with narrow polygons [&lt;1/4 WU width] or heavily acute angles, though not all bouncy walls are caused by acute angles or narrow polygons, and not all narrow polygons or acute angles cause bouncy walls.)</li>
-					<li>The overhead map uses polygon index to determine display order, which can mess up aesthetics &ndash; however, I should note that as conscious of aesthetics as I am, even I don&rsquo;t pay a ton of attention to this. (I plan to write a Weland plugin to swap two polygons&rsquo; indices soon&trade;.)</li>
+					<li>The overhead map uses polygon index to determine display order, which can mess up aesthetics &ndash; however, I should note that as conscious of aesthetics as I am, even I don&rsquo;t pay a ton of attention to this. (I’ve written a Weland plugin to swap two polygons’ indices, but I still need to test it more before I release it.)</li>
 				</ul>
 
-			<p>With all this in mind (not to mention what a pain it is to retexture areas after deleting and remaking polygons &ndash; Weland&rsquo;s &lsquo;Remember Deleted Sides&rsquo; only works some of the time), I can&rsquo;t blame anyone for not finding polygon pruning to be the most attractive solution. Ideally, you can prevent the need to prune by looking closely at your geometry before you even begin texturing. However, I&rsquo;m surely not the only person who&rsquo;s planned one thing for a level, then wound up doing something entirely different that required fewer polygons than expected.</p>
+			<p>With all this in mind (not to mention what a pain it is to retexture areas after deleting and remaking polygons &ndash; Weland&rsquo;s &lsquo;Remember Deleted Sides&rsquo; only works <em>most</em> of the time, even in 1.4.10), I can&rsquo;t blame anyone for not finding polygon pruning to be the most attractive solution. Ideally, you can prevent the need to prune by looking closely at your geometry before you even begin texturing. However, I&rsquo;m surely not the only person who&rsquo;s planned one thing for a level, then wound up doing something entirely different that required fewer polygons than expected.</p>
 
 			<p>In any case, as time-consuming and frustrating as this process can be, it&rsquo;s still &ndash; to me at least &ndash; far preferable to having to sacrifice map complexity. Hopefully this helps.</p>
 

@@ -6106,7 +6106,7 @@ a.songlink.weight3:hover
 	text-decoration-color: color-mix(in sRGB, currentcolor 77.77777%, transparent);
 	text-decoration-skip-ink: all;
 }
-li.songentry::before, li.songentry > p, .songentry { font-size: 1.25rem; }
+li.songentry::before, li.songentry > p, ol.songheader > li::before, ol.songheader > li > p:first-of-type, li.songheader::before, .songentry, .songheader > p:first-of-type { font-size: 1.25rem; }
 li.movemententry::before, li.movemententry > p, .movemententry { font-size: 1.125rem; }
 
 

@@ -5392,6 +5392,9 @@ p.interpolation.songwriter, p.interpolation-songwriters {
 	font-variant-caps: petite-caps;
 	color: var(--toc-counter);
 }
+.subheading.normalcaps {
+	font-variant-caps: normal;
+}
 .selectedworks :is(.compositions2023-2024 .song, .song, .movement) {
 	font-weight: var(--weight0);
 	color: var(--heading-color);

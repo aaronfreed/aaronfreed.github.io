@@ -4767,12 +4767,12 @@ textarea {
 	border-bottom: 1px solid var(--offset-level-2);
 }
 
-:is(.master) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
-:is(.solo, .compilation, .multi) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
+:is(.master, .multi, .compilation) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
+:is(.solo) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
 .unofficial-master tbody > tr:is(:nth-child(4n+3), :nth-child(4n+4)),
 .solo > thead,
-.multi > thead,
-.compilation > thead,
+.solo > tfoot,
+.multi > tfoot,
 .compilation > tfoot,
 .unofficial > tfoot, 
 .discography .endnotes > thead,
@@ -4788,13 +4788,13 @@ thead tr.freshprince th {
 	border-color: var(--offset-level-1);
 }
 
-:is(.master) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
-:is(.solo, .compilation, .multi) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
+:is(.master, .multi, .compilation) tbody > tr:is(:nth-child(6n+4), :nth-child(6n+5), :nth-child(6n+6)),
+:is(.solo) tbody > tr:is(:nth-child(6n+1), :nth-child(6n+2), :nth-child(6n+3)),
 .unofficial-master tbody > tr:is(:nth-child(4n+1), :nth-child(4n+2)),
-.solo > tfoot,
 .master > thead,
 .master > tfoot,
-.multi > tfoot,
+.multi > thead,
+.compilation > thead,
 .unofficial > thead,
 .backgroundcolor
 {

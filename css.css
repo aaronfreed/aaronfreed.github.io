@@ -433,13 +433,13 @@ th {
 .marginleft8, p.marginleft8, div.marginleft8, li.marginleft8, td.marginleft8, th.marginleft8, blockquote.marginleft8, h1.marginleft8, h2.marginleft8, h3.marginleft8, h4.marginleft8, h5.marginleft8 {
 	margin-left: 8px;
 }
-.marginright8, p.marginright8, div.marginright8, li.marginright8, td.marginright8, th.marginright8, blockquote.marginright8, h1.marginright8, h2.marginright8, h3.marginright8, h4.marginright8, h5.marginright8 {
+.marginright8, p.marginright8, div.marginright8, li.marginright8, td.marginright8, th.marginright8, blockquote.marginright8, h1.marginright8, h2.marginright8, h3.marginright8, h4.marginright8, h5.marginright8, ol.marginright8, ul.marginright8 {
 	margin-right: 8px;
 }
-.marginbottom8, p.marginbottom8, div.marginbottom8, li.marginbottom8, td.marginbottom8, th.marginbottom8, blockquote.marginbottom8, h1.marginbottom8, h2.marginbottom8, h3.marginbottom8, h4.marginbottom8, h5.marginbottom8 {
+.marginbottom8, p.marginbottom8, div.marginbottom8, li.marginbottom8, td.marginbottom8, th.marginbottom8, blockquote.marginbottom8, h1.marginbottom8, h2.marginbottom8, h3.marginbottom8, h4.marginbottom8, h5.marginbottom8, ol.marginbottom8.overridebottommargin, ul.marginbottom8.overridebottommargin {
 	margin-bottom: 8px;
 }
-.margintop8, p.margintop8, div.margintop8, li.margintop8, td.margintop8, th.margintop8, blockquote.margintop8, h1.margintop8, h2.margintop8, h3.margintop8, h4.margintop8, h5.margintop8 {
+.margintop8, p.margintop8, div.margintop8, li.margintop8, td.margintop8, th.margintop8, blockquote.margintop8, h1.margintop8, h2.margintop8, h3.margintop8, h4.margintop8, h5.margintop8, ol.margintop8, ul.margintop8.overridetopmargin {
 	margin-top: 8px;
 }
 
@@ -1148,8 +1148,17 @@ th {
 		font-size: .6rem;
 		line-height: 12.6px;
 	}
-	.portfolio :is(ul, ol) {
-		margin: 16px 0px 4px 15px;
+	.portfolio :is(ul, ol):not(.overridetopmargin) {
+		margin-top: 16px;
+	}
+	.portfolio :is(ul, ol):not(.overriderightmargin) {
+		margin-right: 0px;
+	}
+	.portfolio :is(ul, ol):not(.overridebottommargin) {
+		margin-bottom: 4px;
+	}
+	.portfolio :is(ul, ol):not(.overrideleftmargin) {
+		margin-left: 15px;
 	}
 	.portfolio :is(ol.midpara, ul.midpara) {
 		margin: 8px 0px 8px 15px;
@@ -1385,8 +1394,17 @@ th {
 	.nowrapdesktop {
 		white-space: nowrap;
 	}
-	.portfolio :is(ul, ol) {
-		margin: 16px 0px 4px 30px;
+	.portfolio :is(ul, ol):not(.overridetopmargin) {
+		margin-top: 16px;
+	}
+	.portfolio :is(ul, ol):not(.overriderightmargin) {
+		margin-right: 0px;
+	}
+	.portfolio :is(ul, ol):not(.overridebottommargin) {
+		margin-bottom: 4px;
+	}
+	.portfolio :is(ul, ol):not(.overrideleftmargin) {
+		margin-left: 30px;
 	}
 	.portfolio :is(ol.midpara, ul.midpara) {
 		margin: 8px 0px 8px 30px;
@@ -1813,8 +1831,17 @@ th {
 	.print60toleft {
 		margin-left: -60px !important;
 	}
-	.portfolio :is(ul, ol) {
-		margin: 16px 0px 4px 30px;
+	.portfolio :is(ul, ol):not(.overridetopmargin) {
+		margin-top: 16px;
+	}
+	.portfolio :is(ul, ol):not(.overriderightmargin) {
+		margin-right: 0px;
+	}
+	.portfolio :is(ul, ol):not(.overridebottommargin) {
+		margin-bottom: 4px;
+	}
+	.portfolio :is(ul, ol):not(.overrideleftmargin) {
+		margin-left: 30px;
 	}
 	.portfolio :is(ol.midpara, ul.midpara) {
 		margin: 8px 0px 8px 30px;
@@ -5019,7 +5046,6 @@ tr.force-justify :is(td, th) {
 }
 .balanced-wrap,
 .balanced-wrap :is(td, th, li) {
-	white-space: balance;
 	text-wrap: balance;
 }
 .pretty-wrap,

@@ -1148,17 +1148,8 @@ th {
 		font-size: .6rem;
 		line-height: 12.6px;
 	}
-	.portfolio :is(ul, ol):not(.overridetopmargin) {
-		margin-top: 16px;
-	}
-	.portfolio :is(ul, ol):not(.overriderightmargin) {
-		margin-right: 0px;
-	}
-	.portfolio :is(ul, ol):not(.overridebottommargin) {
-		margin-bottom: 4px;
-	}
-	.portfolio :is(ul, ol):not(.overrideleftmargin) {
-		margin-left: 15px;
+	.portfolio ul, .portfolio ol {
+		margin-top: 16px 0px 4px 15px;
 	}
 	.portfolio :is(ol.midpara, ul.midpara) {
 		margin: 8px 0px 8px 15px;
@@ -1394,17 +1385,9 @@ th {
 	.nowrapdesktop {
 		white-space: nowrap;
 	}
-	.portfolio :is(ul, ol):not(.overridetopmargin) {
-		margin-top: 16px;
-	}
-	.portfolio :is(ul, ol):not(.overriderightmargin) {
-		margin-right: 0px;
-	}
-	.portfolio :is(ul, ol):not(.overridebottommargin) {
-		margin-bottom: 4px;
-	}
-	.portfolio :is(ul, ol):not(.overrideleftmargin) {
-		margin-left: 30px;
+	.portfolio ul,
+	.portfolio ol {
+		margin: 16px 0px 4px 30px;
 	}
 	.portfolio :is(ol.midpara, ul.midpara) {
 		margin: 8px 0px 8px 30px;
@@ -1831,17 +1814,8 @@ th {
 	.print60toleft {
 		margin-left: -60px !important;
 	}
-	.portfolio :is(ul, ol):not(.overridetopmargin) {
-		margin-top: 16px;
-	}
-	.portfolio :is(ul, ol):not(.overriderightmargin) {
-		margin-right: 0px;
-	}
-	.portfolio :is(ul, ol):not(.overridebottommargin) {
-		margin-bottom: 4px;
-	}
-	.portfolio :is(ul, ol):not(.overrideleftmargin) {
-		margin-left: 30px;
+	.portfolio ul, .portfolio ol {
+		margin: 16px 0px 4px 30px;
 	}
 	.portfolio :is(ol.midpara, ul.midpara) {
 		margin: 8px 0px 8px 30px;
@@ -4090,6 +4064,10 @@ ol {
 :is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0) li {
 	display: block;
 }
+.portfolio :is(ol, ul):is(.toc, .toclite, .tocliter, .toc8, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0), .portfolio :is(ol.toc, ol.toclite, ol.tocliter, ol.toc8, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1, ol.toc0) :is(ol) {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
 :is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li:not(.notopmargin, .margintop2, .margintop3, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop18, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60, .overridetopmargin) {
 	margin-top: 4px;
 }
@@ -6154,7 +6132,7 @@ td.timesignature {
 	font-weight: var(--weight3);
 	text-decoration-thickness: 1.375px;
 }
-.compositions2023-2024 ol.contents li:not(.overridetopmargin) {
+.compositions2023-2024 ol.contents li:not(.overridetopmargin, .toc, .toclite, .tocliter, .toc0, .toc1, .toc2, .toc3, .toc4, .toc5, .toc6, .toc7, .toc8) {
 	margin-top: 16px;
 }
 .compositions2023-2024 ol.contents ol.normal {

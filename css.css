@@ -1799,17 +1799,29 @@ th {
 	.print10toleft {
 		margin-left: -10px !important;
 	}
+	.print15toleft {
+		margin-left: -15px !important;
+	}
 	.print20toleft {
 		margin-left: -20px !important;
 	}
 	.print30toleft {
 		margin-left: -30px !important;
 	}
+	.print35toleft {
+		margin-left: -35px !important;
+	}
 	.print40toleft {
 		margin-left: -40px !important;
 	}
+	.print45toleft {
+		margin-left: -45px !important;
+	}
 	.print50toleft {
 		margin-left: -50px !important;
+	}
+	.print55toleft {
+		margin-left: -55px !important;
 	}
 	.print60toleft {
 		margin-left: -60px !important;
@@ -1819,6 +1831,18 @@ th {
 	}
 	.portfolio :is(ol.midpara, ul.midpara) {
 		margin: 8px 0px 8px 30px;
+	}
+	.printleftmargin15, .portfolio ul.printleftmargin15 {
+		margin-left: 15px;
+	}
+	.printleftmargin20, .portfolio ul.printleftmargin20, .portfolio ol.printleftmargin20 {
+		margin-left: 20px;
+	}
+	.printleftmargin30 {
+		margin-left: 30px;
+	}
+	.printalignleft {
+		text-align: left;
 	}
 
 	table.nobg, 

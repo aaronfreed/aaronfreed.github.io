@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css.css">
+	</head>
+	<body class="light">
+
+		<ol class="tocliter">
+			<li><a href="#prefatorycaveats">A Few Prefatory Caveats</a></li>
+			<li><a href="#code">The Code</a></li>
+			<li><a href="#decoding">Decoding the Code</a></li>
+			<li><a href="#luaresult">The Results of Our Loop</a></li>
+			<li><a href="#endnotes">Endnotes</a></li>
+		</ol>
+
+		<h1 class="centred" id="luashortcut">A Lua Shortcut</h1>
+		<p>Normally, I&rsquo;d simply tell you to apply the same heights, minus 2 WU, to each floor. And you can do that if you like. But using Lua can make this process a lot less tedious.</p>
+
+		<h2 class="centred" id="prefatorycaveats">A Few Prefatory Caveats</h2>
+
+		<p>First, though, I have a caveat:</p>
+
+		<blockquote><em class="weight3">If you don&rsquo;t know what you&rsquo;re doing, running Lua on your maps can easily mess them up!</em></blockquote>
+
+		<p>To save yourself a tremendous amoung of heartache:</p>
+
+		<ol>
+			<li>Save your work before you modify it with Lua scripts.</li>
+			<li>Before running any script, be sure you have a very good idea of what it will do.
+				<ol class="loweralpha">
+					<li>Corollary: If you run something and don&rsquo;t have any idea what it did, revert to your last saved version.</li>
+				</ol>
+			</li>
+			<li>Test the results thoroughly.</li>
+			<li>Have a good <a href="https://en.wikipedia.org/wiki/Version_control" target="_blank">version control</a> system in place in case you need to revert to an older version.</li>
+		</ol>
+
+		<p>Also, while I&rsquo;m thinking of it, Lua is <em class="weight2">not an acronym</em> and thus <em class="weight2">should not be written in all caps</em>. It is a word &ndash; namely, the Portuguese word for <em>moon</em>, cognate to the Latin and Spanish word <em>luna</em>. Lua (the language) originates from the Pontifical Catholic University, located in Rio de Janeiro, Brazil.</p>
+
+		<h2 id="code" class="centred">The Code</h2>
+
+		<p>With those caveats aside, once you&rsquo;ve saved your map, go into visual mode and press the key to enter the console, which is backslash (<code class="toc-counter codeexample">\</code>) by default. Now type the following code, which will assign <strong>every polygon in the level</strong> a floor height of its ceiling height minus 2 WU (2048 IU). You must enter this code <em>exactly as indicated</em> &ndash; Lua is case-sensitive, and spaces can be syntactically important, so they should go exactly as placed here:</p>
+
+		<blockquote><pre class="toc-counter codeexample">for p in Polygons() do p.floor.z = p.ceiling.z - 2 end</pre></blockquote>
+
+		<p>This would normally be written (and we can read it) as:</p>
+
+			<blockquote><pre class="toc-counter codeexample">
+for p in Polygons() do
+    p.floor.z = p.ceiling.z - 2
+end</pre></blockquote>
+			
+		<p>However, entering more than one line of code in the console is complicated at best.</p>
+
+		<h2 class="centred" id="decoding">Decoding the Code</h2>
+
+		<p>A line-by-line explanation:</p>
+
+		<ol>
+			<li><blockquote><pre class="toc-counter codeexample">for p in Polygons() do</pre></blockquote>
+
+				Iterates through every member of <code class="toc-counter codeexample">Polygons</code>, using <code class="toc-counter codeexample">p</code> as an alias for the polygon at that stage of the loop. This is Aleph One-specific syntax; I&rsquo;ll review more traditional Lua syntax below.
+			</li>
+			<li><blockquote><pre class="toc-counter codeexample">    p.floor.z = p.ceiling.z - 2</pre></blockquote>
+
+				The floor height (<code class="toc-counter codeexample">p.floor.z</code>) is assigned (<code class="toc-counter codeexample">=</code>) the ceiling height (<code class="toc-counter codeexample">p.ceiling.z</code>) minus 2 WU (<code class="nowrap toc-counter">- 2</code>).
+			</li>
+			<li><blockquote><pre class="toc-counter codeexample">end</pre></blockquote>
+
+				Denotes the end of the <code class="toc-counter codeexample">for</code> loop, telling Lua to jump to the next instance of <code class="toc-counter codeexample">Polygons</code> and repeat the code within the body of the <code class="toc-counter codeexample">for</code> loop, if there is one, or stop looping, if there isn&rsquo;t. (In this case, line 2 is the entire loop body, but loops can get far more complicated.)
+			</li>
+		</ol>
+
+		<p>If you&rsquo;ve entered this correctly, the floor heights will change instantly. If you see a syntax error, correct the syntax and try again. If you didn&rsquo;t see a syntax error, exit visual mode whether or not the heights changed; if they didn&rsquo;t change, reload the level and try again.</p>
+
+		<h2 class="centred" id="luaresult">The Results of Our Loop</h2>
+
+		<p>After you run the above code, your floor heights should look like this (again, shown to the thousandths place):</p>
+
+		<div class="image"><a href="images/5d07.png" target="_blank"><img src="images/5d07.png" width="697.5" height="384.5" title="The floor heights of our &infin; symbol." /></a></div>
+
+		<p>If that was your first Aleph One Lua script, congratulations. I will, at some point, write more detailed guides to Lua for mappers &ndash; it can, if used correctly, save an immense amount of time and busywork, as here.</p>
+
+		<p>Once you&rsquo;ve gotten the polygon heights assigned correctly, go in and texture and shade your level, if you like. I&rsquo;ve placed a version of this map textured for <em>Marathon Infinity</em> online <a href="mapexamples/infinitysymbol.sceA" target="_blank">here</a>, if you&rsquo;d like to explore it.</p>
+
+		<h2 class="centred" id="briefdigressions">A Few Brief Digressions</h2>
+
+		<h3 class="centred" id="traditionalsyntax">Digression 1: Traditional Lua Syntax</h3>
+
+			<p>More traditional Lua syntax with the same result as the above loop would look something like:</p>
+
+		<pre class="toc-counter codeexample">
+    for i = 0, #Polygons - 1 do
+        Polygons[i].floor.z = Polygons[i].ceiling.z - 2
+    end</pre>
+
+			<p>On which I have the following notes:</p>
+			<ol>
+				<li><code class="toc-counter codeexample">#Polygons</code> denotes the <code class="toc-counter codeexample">Polygons</code> table&rsquo;s length.</li>
+				<li>We start at 0 and subtract 1 from <code class="toc-counter codeexample">#Polygons</code> because Aleph One uses zero-based indexing. Since Lua uses one-based indexing (well, nobody&rsquo;s perfect), standard Lua tables would use <code class="toc-counter codeexample">for i = 1, #Polygons</code>.</li>
+			
+				<li><code class="toc-counter codeexample">Polygons[i]</code> denotes the member of the <code class="toc-counter codeexample">Polygons</code> table with index <code class="toc-counter codeexample">i</code>.</li>
+			</ol>
+			
+			<p>I leave decoding the rest as an exercise for the reader, with only the final note that <code class="toc-counter codeexample">i</code> stands for <code class="toc-counter codeexample">iterator</code>.</p>
+
+			<h3 class="centred" id="repeatuntil">Digression 2: <code>repeat</code>&hellip;<code>until</code></h3>
+			<p>The following code also accomplishes the exact same thing, incidentally:</p>
+
+			<blockquote><pre class="toc-counter codeexample">
+local i = 0
+repeat
+    Polygons[i].floor.z = Polygons[i].ceiling.z - 2
+    i = i + 1
+until i >= #Polygons</pre></blockquote>
+
+		<p>I&rsquo;d add the following line to the above script, for reasons I&rsquo;ll explain below:</p>
+
+		<blockquote><pre class="toc-counter codeexample">assert(i == #Polygons,"Logic error: i ~= #Polygons after repeat...until loop")</pre></blockquote>
+
+		<p>Some explanations:</p>
+
+		<ol>
+			<li><p><code class="toc-counter codeexample">local</code> restricts the variable&rsquo;s scope; its contents will be removed from memory after the current code level finishes executing. It&rsquo;s good practice to restrict variable scope to <code class="toc-counter codeexample">local</code> unless it&rsquo;s strictly necessary not to &ndash; not only it is better for memory usage, but access to local variables is faster as well.</li>
+
+			<li><code class="toc-counter codeexample">>=</code> is Lua&rsquo;s &ldquo;greater than or equal&rdquo; operator. If we haven&rsquo;t made logic errors, <code class="toc-counter codeexample">==</code>, the comparison operator, would be logically equivalent here. <code class="toc-counter codeexample">==</code> returns <code class="toc-counter codeexample">true</code> if two values are equal and <code class="toc-counter codeexample">false</code> otherwise; it&rsquo;s not the same thing as <code class="toc-counter codeexample">=</code>. <span class="dotted" title="I, alas, learned BASIC and Turbo Pascal as my first two languages; both of them just use = for comparisons, and have syntax such that the comparison operator and the assignment operator can never be used in the same place, making it impossible for the interpreter to get confused. I personally think this should be standard language design practice, but unfortunately I&rsquo;m in a minority on this. If you think == is bad, wait until you see JavaScript&rsquo;s ===. (I am not making this up.)" id="ftnt_ref01">Remember this &ndash; I never do.<a href="#ftnt01">&#8317;&sup1;&#8318;</a></span> However, avoiding an infinite loop and throwing an assertion failure if the values aren&rsquo;t equal at the end of the loop is better programming practice.</li>
+			<li>
+				The <code class="toc-counter codeexample">assert</code> line helps detect logic errors. If <code class="toc-counter codeexample">i == #Polygons</code> evaluates to <code class="toc-counter codeexample">false</code> at the end of our loop, then we very likely skipped not just our final polygon, but others as well. That&rsquo;s bad, mkay?
+				
+				<p>Thus, if the first parameter of <code class="toc-counter codeexample">assert</code> <em>doesn&rsquo;t</em> evaluate to <code class="toc-counter codeexample">true</code>, we want our script to immediately halt execution and tell us, <a href="https://youtu.be/Dd7FixvoKBw" target="_blank" rel="nofollow" class="underlinelink">&ldquo;You done messed up, A. A. Ron!&rdquo;</a></p>
+				
+				<p>&hellip;Sorry; the <em>actual</em> error it will display is its second parameter, which in this case is:</p>
+				
+				<blockquote><pre class="toc-counter codeexample">Logic error: i ~= #Polygons after repeat...until loop</pre></blockquote>
+				<p>Halting execution and displaying an error here is vastly preferable to letting logic errors living undetected, wreaking unknown havoc on our maps for untold amounts of time. It&rsquo;s also preferable to an infinite loop, since it tells us exactly what went wrong and where to look for it. (The dialog box will give us a line number; the above error message reminds us to start searching for our error in the loop above that line. It&rsquo;s ideal to keep <code class="toc-counter codeexample">assert</code> error messages terse, but helpful.)</p>
+			</li>
+
+			<li>
+				<code class="toc-counter codeexample">&quot;</code> denotes a string literal; the characters enclosed between two <code class="toc-counter codeexample">&quot;</code> are <em>usually</em> the string&rsquo;s contents, with exceptions for characters preceded by <code class="toc-counter codeexample">\</code>. In particular, to get a <em>value</em> of <code class="toc-counter codeexample">&quot;</code> within a string, we&rsquo;d have to use <code class="toc-counter codeexample">\&quot;</code>. To get a backslash, we&rsquo;d use <code class="toc-counter codeexample">\\</code>. To get two backslashes in a row, we&rsquo;d use <code class="toc-counter codeexample">\\\\</code>. And so on. These can get complicated to parse; programs like <a href="https://code.visualstudio.com" target="_blank" rel="nofollow" class="underlinelink">Microsoft Visual Studio Code</a> or <a href="https://notepad-plus-plus.org" target="_blank" rel="nofollow" class="underlinelink">Notepad++</a> can help.
+			</li>
+
+			<li>
+				<code class="toc-counter codeexample">repeat</code>&hellip;<code class="toc-counter codeexample">until</code> should be mostly self-explanatory, so I&rsquo;ll just point out that its body will <em>always</em> execute at least once, regardless of whether <code class="toc-counter codeexample">i >= #Polygons</code> evaluates to <code class="toc-counter codeexample">true</code> or not. If we want code that will <em>only</em> execute if the condition is <code class="toc-counter codeexample">true</code>, we can use a <code class="toc-counter codeexample">while</code> loop, explained in Digression 3.
+			</li>
+
+			<li>
+				The <code class="toc-counter codeexample">for</code> loop handles much of this automatically, reduces (but doesn&rsquo;t eliminate) our need to worry about skipping values, and is probably more legible to boot; using them where possible is therefore good practice.
+			</li>
+		</ol>
+		
+		<h3 class="centred" id="toc-counter">Digression 3: <code>while</code></h3>
+
+		<p>The following code is logically equivalent to the <code class="toc-counter codeexample">repeat</code> loop in Digression 2.</p>
+
+		<blockquote><pre class="toc-counter codeexample">
+local i = 0
+while i &lt; #Polygons do
+    Polygons[i].floor.z = Polygons[i].ceiling.z - 2
+    i = i + 1
+end
+assert(i == #Polygons,"Logic error: i ~= #Polygons after while loop")</pre></blockquote>
+
+		<ol>
+			<li>Note that we had to reverse the condition here: <code class="toc-counter codeexample">repeat</code><wbr/>&hellip;<wbr/><code class="toc-counter codeexample">until</code> only <em>stops</em> executing when its ending condition is <code class="toc-counter codeexample">false</code>, while <code class="toc-counter codeexample">while</code> only <em>executes</em> if its opening condition is <code class="toc-counter codeexample">true</code>.</li>
+
+			<li>Also, as noted above, <code class="toc-counter codeexample">repeat</code> always executes at least once and only evalutes its condition at the end of the loop, whereas <code class="toc-counter codeexample">while</code> evaluates its starting condition before it runs even once.</li>
+
+			<li>Thinking of the interpreter evaluating a condition where it appears in the code can be a helpful mnemonic for which loop type is which. Since a <code class="toc-counter codeexample">while</code> loop&rsquo;s condition goes before its body, the interpreter must evaluate the condition before it can run the code within the loop even once; since the <code class="toc-counter codeexample">repeat</code> condition appears after the loop body, the interpreter can only evaluate the condition after the loop body has run.</li>
+
+			<li>As written, the only way the <code class="toc-counter codeexample">while</code> loop will evaluate to <code class="toc-counter codeexample">false</code> on its first iteration is if <code class="toc-counter codeexample">#Polygons</code> is 0 &ndash; in which case, our map wouldn&rsquo;t even have loaded!</li>
+			<li><code class="toc-counter codeexample">~=</code>, Lua&rsquo;s &ldquo;not equal to&rdquo; operator, would be logically equivalent to <code class="toc-counter codeexample">&lt;</code> in the <code class="toc-counter codeexample">while</code> comparison if and only if we didn&rsquo;t make any logic errors. However, as with our above <code class="toc-counter codeexample">repeat</code> example, I think getting an assertion failure if we <em>did</em> make a logic error is vastly preferable to getting an infinite loop (much less to letting the logic error live on, undetected, for untold amounts of time).<!--we could also use <code class="toc-counter codeexample">&lt;</code>, but as in the <code class="toc-counter nowrap">repeat</code><wbr/>&hellip;<wbr/><code class="toc-counter nowrap">until</code> loop, I think getting an infinite loop if we&rsquo;ve made a logic error is preferable.--></li>
+		</ol>
+
+		<footer>
+			<h2 class="centred" id="endnotes">Endnotes</h2>
+			<table class="light endnotes curved">
+				<thead>
+					<tr class="weight4">
+						<th class="right">#</th>
+						<th>Note</th>
+					</tr>
+				</thead>
+				<tbody>	
+					<tr>
+						<td><a href="#ftnt_ref01"><strong>1</strong>.</a></td>
+						<td>I, alas, learned BASIC and Turbo Pascal as my first two languages; both of them just use <code class="toc-counter codeexample">=</code> for comparisons, and have syntax such that the comparison operator and the assignment operator can never be used in the same place, making it impossible for the interpreter to get confused. I personally think this should be standard language design practice, but unfortunately I&rsquo;m in a minority on this. If you think <code class="toc-counter codeexample">==</code> is bad, wait until you see JavaScript&rsquo;s <code class="toc-counter codeexample">===</code>. (I am not making this up.)</td>
+					</tr>
+				</tbody>
+			</table>
+		</footer>
+
+	</body>
+</html>
+	

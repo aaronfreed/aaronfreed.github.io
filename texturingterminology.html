@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Marathon Aleph One Texturing Terminology</title>
+		<link rel="stylesheet" type="text/css" href="css.css">
+	</head>
+	<body class="light fixheight blue-list-numbers">
+
+		<h1 id="notes-on-terminology" class="centred petitecaps">Texturing Terminology</h1>
+
+		<p>Definitions of terminology related to texturing maps for <a href="https://alephone.lhowon.org/" target="_blank" class="underline songlink">Marathon Aleph One</a>. I originally wrote this for the documentation of <a href="https://github.com/aaronfreed/vaf/" target="_blank" class="underline songlink">VAF</a>, a texturing plugin I work on (which is meant to be used with <a href="https://github.com/treellama/weland/releases/" target="_blank" class="underline songlink">Weland</a>); however, I&rsquo;ve since been convinced this information is better suited to its own document. Those lacking context may wish to consult my <a href="mapmaking101.html" class="underline songlink">beginners&rsquo;</a> and <a href="mapmaking.html" class="underline songlink">advanced mapmaking guides</a>. Please <a href="aboutme.html" class="underline songlink">contact me</a> if you notice any errors or omissions.</p>
+
+		<h1 id="toc" class="centred">Table of Contents</h1>
+
+		<ol class="tocliter">
+			<li><a href="#top">Intro</a></li>
+			<li><a href="#lengths-and-heights">Lengths and Heights</a></li>
+			<li><a href="#lines-sides-and-surfaces">Lines, Sides, Surfaces, and Textures</a>
+				<ol>
+					<li><a href="#lines-and-sides">Lines and Sides</a></li>
+					<li><a href="#surfaces-and-textures">Surfaces and Textures</a></li>
+				</ol>
+			</li>
+			<li><a href="#ambient-delta">Ambient Delta</a></li>
+		</ol>
+
+		<h1 id="lengths-and-heights" class="centred">Lengths and Heights</h1>
+		<ul>
+			<li>A <strong class="accent">world unit (WU)</strong> is the standard size of a texture repetition (i.e., not using the &ldquo;2x&rdquo;, &ldquo;4x&rdquo;, or &ldquo;Landscape&rdquo; transfer modes).</li>
+			<li>The game uses a much smaller scale to store its position values and to perform most of its calculations, which I call <strong class="accent">internal units (IU)</strong>. 1,024 internal units equal one world unit (thus, 1 IU = 0.0009765625 WU).</li>
+			<li>For reference, in vanilla game physics, the player is 819 IU (≈0.7998 WU) tall and has a radius of 256 IU (0.25 WU). There is contradictory information about how this corresponds to real-world measurements; the indispensable <a href="https://marathon.bungie.org/story/" target="_blank" rel="nofollow" class="underline songlink">Marathon&rsquo;s Story page</a> has an <a href="https://marathon.bungie.org/story/ourheight.html" target="_blank" rel="nofollow" class="underline songlink">entire section on this</a>, and the definitive answer is &ldquo;¯\(°_o)/¯&rdquo;.</li>
+			<li>Forge and <a href="https://github.com/treellama/weland/releases" target="_blank" rel="nofollow" class="underline songlink">Weland</a> use both WU and IU in different contexts; for instance, when you single-click a point in either, the status bar in the lower left shows its location in WU; when you double-click it, the dialog box that comes up lists its location in IU. Most values are rounded to the thousandths place (which means that, e.g., 64 IU and 65 IU both display as 0.063 WU, although Weland treats these as functionally different heights in some circumstances).</li>
+			<li>Anvil and <a href="https://github.com/treellama/shapefusion/releases" target="_blank" rel="nofollow" class="underline songlink">ShapeFusion</a> list values for physics models in IU. The squares of shapes files&rsquo; scale factors similarly correspond to IU&sup2; &ndash; each pixel of a shape with a scale factor of 1 occupies 1 IU&sup2; in the game world. Each pixel of a shape with a scale factor of 2 would as 4 IU&sup2; in-game (2 IU vertical &times; 2 IU horizontal); each pixel of a shape with a scale factor of 3 would render as 9 IU&sup2; in-game (3 IU vertical &times; 3 IU horizontal); and so on.</li>
+			<li>I present both WU and IU throughout the this document. <a href="https://github.com/aaronfreed/vaf" target="_blank" rel="nofollow" class="underline songlink">VAF</a> also displays both where space permits.</li>
+		</ul>
+
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+		<h1 id="lines-sides-and-surfaces" class="centred">Lines, Sides, Surfaces, and Textures</h1>
+		<h2 id="lines-and-sides" class="centred">Lines and Sides</h2>
+		<ul>
+			<li>A <strong class="accent">line</strong> is what you&rsquo;d draw in Forge or Weland, and what they display in top-down view.</li>
+			<li>Each line can have up to two associated <strong class="accent">sides</strong>. Generally, a side does not exist until a <strong class="accent">texture</strong> is placed on the line, usually because a mapmaker either paved the level or manually placed a texture. A line can have a side for each adjoining polygon; thus, if the line adjoins two polygons, it can have two sides, and if it adjoins one, it can only have one. To disambiguate them, I call the polygon closer to a given side&rsquo;s viewer its <strong class="accent">obverse polygon</strong> (in this context, <em class="weight1 toc-counter">obverse</em> = <em class="weight1 toc-counter">facing the observer</em>); the <strong class="accent">reverse polygon</strong>, if it exists, is the one directly behind it. (My usage roughly corresponds to numismatics, wherein <em class="weight1 toc-counter">obverse</em> signifies a coin&rsquo;s <em class="weight1 toc-counter">heads</em> side and <em class="weight1 toc-counter">reverse</em> signifies <em class="weight1 toc-counter">tails</em>.)
+				<ul>
+					<li>A line <em>must</em> have an obverse polygon, since negative space <em>physically does not exist</em> in <a href="https://en.wikipedia.org/wiki/Portal_rendering" target="_blank" rel="nofollow" class="underline songlink">portal engines</a> like Aleph One; indeed, attempting to render from outside the bounds of a polygon simply crashes the game. This is why Aleph One does not (and probably will never have) a noclip cheat. (To my knowledge, <em>Marathon</em>&rsquo;s source does not actually use the term <em>portal</em> anywhere, but in Aleph One, a portal is functionally equivalent to a polygon in most contexts.)</li>
+					<li>Aleph One doesn&rsquo;t use the terms <em class="weight1 toc-counter">obverse polygon</em> and <em class="weight1 toc-counter">reverse polygon</em>, or indeed any like them; most often, it instead uses <strong class="accent">counterclockwise polygon</strong> and <strong class="accent">clockwise polygon</strong>, which don&rsquo;t correspond reliably to viewer position and are very nearly useless for mapmakers unless they&rsquo;re writing Lua scripts (in which case it may be helpful to note that they <em>do</em> correspond reliably to <strong class="accent">counterclockwise side</strong> and <strong class="accent">clockwise side</strong>...as far as I know‽). To my understanding, how the mapmaker drew the line determines which side is clockwise and which is counterclockwise. (If either point already belonged to another line when the line in question was drawn, this may not correspond to the points&rsquo; indices.) Picture yourself <del>in a boat on a river</del> as being at point A, which is generally the point at which the mapmaker clicked to draw the line, and facing point B, generally the point at which they released the mouse button. (If someone has since moved these points, update these definitions to match their new locations.) To your left, you&rsquo;ll find the clockwise side; to your right, counterclockwise.</li>
+					<li>Forge used, and the engine sometimes uses, <em class="accent weight2">adjacent side</em> (i.e., obverse side) and <em class="accent weight2">opposite side</em> (i.e., reverse side); I&rsquo;ve avoided this because <em class="weight1 toc-counter">adjacent</em> also appears in a different mapmaking context, <span class="weight1 toc-counter">&ldquo;activates adjacent platform&rdquo;</span>, that I don&rsquo;t consider sufficiently similar. (An &ldquo;adjacent&rdquo; platform is actually further from a player who&rsquo;s standing on the platform that activates it!)</li>
+				</ul>
+			</li>
+		</ul>
+
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+		<h2 id="surfaces-and-textures" class="centred">Surfaces and Textures</h2>
+
+		<ul>
+			<li>Each side in turn has what, for lack of a better term, I refer to as <strong class="accent">surfaces</strong>. These generally, though not always, correspond to textures placed on them. I describe the exceptions in the sublist below.</li>
+			<li>Each side can also have multiple <strong class="accent">textures</strong>, which can be <strong class="accent">primary</strong>, <strong class="accent">secondary</strong>, or <strong class="accent">transparent</strong>. These generally, though not always, correspond both to surfaces and to different parts of a border between two polygons.</li>
+			<li>I&rsquo;m currently aware of at least four cases where &ldquo;surface&rdquo; and &ldquo;texture&rdquo; correspond unpredictably:
+				<ol class="lowerroman">
+					<li>After the side was textured, one or more of the polygons on either side had its height changed in a way that added or deleted a surface.
+						<blockquote style="margin-top: 8px; margin-bottom: 8px;"><strong>TIP:</strong> Using the &ldquo;select texture&rdquo; key on such a side will correct this, though you&rsquo;ll probably need to retexture the side or realign its textures after you do so.</blockquote>
+					</li>
+					<li>Both transparent and primary textures can be applied to the same surface of a line that doesn&rsquo;t border another polygon, e.g., the <a href="https://citadel.lhowon.org/litterbox/Forge/hastursworkshop/aesthetics3.html" target="_blank" rel="nofollow" class="underline songlink">dual texture trick</a> from <a href="https://citadel.lhowon.org/litterbox/Forge/hastursworkshop/" target="_blank" rel="nofollow" class="underline songlink">Hastur&rsquo;s Workshop</a>.</li>
+					<li>A transparent and primary texture can also be applied to the same surface of a line bordering two polygons in certain circumstances, described in a-c below. In these cases, the same side can be given both a primary and a transparent texture, which functionally behave as two transparent textures with the &ldquo;transparent&rdquo; texture rendered in front of the &ldquo;primary&rdquo; texture on both sides. As far as I know, this currently must be done using Lua. I&rsquo;m currently thinking about a UI to enable this in VAF.
+						<ol class="loweralpha">
+							<li>This can work on <em>both</em> sides of the line <em>if and only if</em> the polygons on each side have identical floor and ceiling heights (down to the IU).</li>
+							<li>It can work on <em>one</em> side if the reverse polygon&rsquo;s floor is no lower than the obverse polygon&rsquo;s, and the reverse polygon&rsquo;s ceiling is no higher than the obverse polygon&rsquo;s. However, if the adjoining polygons&rsquo; floors or ceilings differ in height, it <em>will not</em> work on both sides of the line.</li>
+							<li>If either the reverse polygon&rsquo;s height is higher than the obverse polygon&rsquo;s, or the reverse polygon&rsquo;s ceiling is lower than the obverse polygon&rsquo;s, this currently results in glitchy z-fighting.
+								<ul>
+									<li>Sampling textures from sides of type b or c currently removes the transparent side if &ldquo;edit transparent sides&rdquo; is selected; fortunately, &ldquo;undo&rdquo; restores it. &ldquo;Fix this&rdquo; is on my to-do list.</li>
+								</ul>
+							</li>
+						</ol>
+					</li>
+					<li>The conditions described in iii may also exist <em>without</em> a transparent texture. This means that, confusingly, a side will have a texture that looks to all appearances to be a &ldquo;transparent&rdquo; texture, but is defined as &ldquo;primary&rdquo; in the engine. This was fairly easy to do in Forge &ndash; one simply made a line non-transparent, textured its sides, then made it transparent again. It&rsquo;s less easy with modern tools &ndash; in fact, these sides are currently invisible to VAF (I plan to work on a fix for this as well). Several examples of this occur in the <em>Tempus Irae</em> levels &ldquo;Polygonium opus&rdquo; [sic], &ldquo;Towel Boy&rdquo;, and &ldquo;You Gotta Sin to Get Saved&rdquo;. (I changed many to genuine &ldquo;transparent&rdquo; textures in <em>Tempus Irae Redux</em> to make my life easier.)</li>
+				</ol>
+			</li>
+			<li>If the polygon on the reverse side has a lower ceiling and higher floor than the one on the obverse side, the primary texture is applied to the part of the side above the reverse polygon&rsquo;s ceiling, the transparent texture (if it exists) is applied to the part between the reverse polygon&rsquo;s floor and its ceiling, and the secondary texture is applied to the part below its floor.</li>
+			<li>As far as I know, in most other cases (outside the exceptions listed above), sides should only display primary and/or transparent textures, though the game can sometimes get confused into displaying the secondary texture, or not displaying any texture, if polygon heights have changed since the last time the side was textured. (See case <span class="toc-counter">i</span> above: sampling the texture of any surface of the wall should generally fix the issue.)</li>
+			<li>Polygons&rsquo; <strong class="accent">floors</strong> and <strong class="accent">ceilings</strong> behave similarly to side surfaces, except their definition is much more straightforward, since each polygon always has exactly one floor and exactly one ceiling.</li>
+		</ul>
+
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+		<h1 id="ambient-delta" class="centred">Ambient Delta</h1>
+		<ul>
+			<li><strong class="accent">Ambient delta</strong> is a value added to or subtracted from a side&rsquo;s light value. An ambient delta of 1 corresponds to a 100% increase in light value.</li>
+			<li>Ambient delta applies to the entire side &ndash; thus, its primary, secondary, and transparent textures are all affected by it. It cannot be applied to polygon floors or ceilings.</li>
+			<li>Negative ambient delta values can override the game&rsquo;s miner&rsquo;s light (i.e., the effect that lights surfaces close to the player more brightly).
+				<ul>
+					<li>Thus, if you want to preserve the miner&rsquo;s light, do not give any side an ambient delta value lower than <code>m/100 - 1</code>, where <code>m</code> is the minimum possible intensity for any light applied to any of its surfaces.
+						<ul>
+							<li><strong>NOTE:</strong> The Forge manual is wrong about <strong class="accent">&ldquo;∆ Intensity&rdquo;</strong>: the game only ever adds random values to a light&rsquo;s specified <strong class="accent">&ldquo;Intensity&rdquo;</strong>; it never subtracts them. Thus, <span class="toc-counter weight1">Intensity</span> and <span class="toc-counter weight1">∆ Intensity</span> of 50 yield a range of 50 to 100, not 0 to 100. This is, incidentally, <a href="mapmaking101.html#forgeerrata" target="_blank" rel="nofollow" class="underline songlink">far from the manual&rsquo;s only erratum</a>.</li>
+						</ul>
+					</li>
+					<li>A side with an ambient delta value of 1 always renders at 100% light intensity, even if one or more of its surfaces is textured with a 0% intensity light.</li>
+					<li>Barring occurrences such as muzzle flashes:
+						<ol>
+							<li>An ambient delta of -1 causes textures on that side with 100% intensities to be rendered with 0% intensities, and textures with 0% intensities to be rendered as completely black.</li>
+							<li>An ambient delta of -2 causes all textures on that side to be rendered as completely black.</li>
+						</ol>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
+
+	</body>
+</html>

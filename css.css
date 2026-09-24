@@ -411,7 +411,8 @@
 	--weight8: 900;
 
 	--page-width: min(800px, calc(100vw - 16px));
-	--gatefold-width: min(400px, calc(50vw - 8px));
+	--gatefold-width: calc(var(--page-width) / 2);
+	--small-thumbnail-4x3-height: calc(var(--page-width) * .375);
 }
 td,
 th {
@@ -1562,22 +1563,22 @@ th {
 }
 @media print {
 	:root {
-		--page-width: min(800px, calc(100vw - 16px)) !important;
+		--page-width: var(--page-width) !important;
 	}
-	table:not(.printpadding1, .printpadding2, .printpadding3, .printpadding4, .printpadding5, .printpadding6, .printpadding7, .printpadding8, .printpadding9, .printpadding10, .sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad16, .sidepad20, .sidepad30, .sidepad40, .sidepad50, .sidepad60, .noleftpad, .norightpad, .nosidepad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .gatefoldsplit) 
-	:is(td, th):not(.printpadding1, .printpadding2, .printpadding3, .printpadding4, .printpadding5, .printpadding6, .printpadding7, .printpadding8, .printpadding9, .printpadding10, .sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad16, .sidepad20, .sidepad30, .sidepad40, .sidepad50, .sidepad60, .noleftpad, .norightpad, .nosidepad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .gatefoldsplit)
+	table:not(.printpadding1, .printpadding2, .printpadding3, .printpadding4, .printpadding5, .printpadding6, .printpadding7, .printpadding8, .printpadding9, .printpadding10, .sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad16, .sidepad20, .sidepad30, .sidepad40, .sidepad50, .sidepad60, .noleftpad, .norightpad, .nosidepad, .nopad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .gatefoldsplit) 
+	:is(td, th):not(.printpadding1, .printpadding2, .printpadding3, .printpadding4, .printpadding5, .printpadding6, .printpadding7, .printpadding8, .printpadding9, .printpadding10, .sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad16, .sidepad20, .sidepad30, .sidepad40, .sidepad50, .sidepad60, .noleftpad, .norightpad, .nosidepad, .nopad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .gatefoldsplit)
 	{
 		padding-left: 12px;
 		padding-right: 12px;
 	}
 	table:not(.notoppad) 
-	:is(td, th):not(.notoppad)
+	:is(td, th):not(.notoppad, .noverticalpad, .nopad)
 	{
 		padding-top: 4px;
 	}
 
 	table:not(.nobottompad) 
-	:is(td, th):not(.nobottompad)
+	:is(td, th):not(.nobottompad, .noverticalpad, .nopad)
 	{
 		padding-bottom: 4px;
 	}
@@ -1856,6 +1857,10 @@ th {
 		background: none !important;
 	}
 
+	td.nopad,
+	th.nopad,
+	table.nopad td,
+	table.nopad th,
 	td.nosidepad,
 	th.nosidepad,
 	.nosidepad :is(td, th) {
@@ -4042,6 +4047,10 @@ ol {
 	margin: 4px 0px 4px 30px;
 	padding: 0px;
 }
+table.nospacing td, table.nospacing th {
+	margin: 0px !important;
+	padding: 0px !important;
+}
 
 :is(.music, .soundtracks) li:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop18, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60) {
 	margin-top: 6px;
@@ -5634,13 +5643,37 @@ table.noborder {
 .noborder :is(thead, tbody, tr, th, td) {
 	background: none !important;
 }
+.nopad,
 .notoppad,
-.notoppad :is(li, td, th) {
+.noverticalpad,
+.nopad :is(li, td, th),
+.notoppad :is(li, td, th),
+.noverticalpad :is(li, td, th) {
 	padding-top: 0px;
 }
+.nopad,
 .nobottompad,
-.nobottompad :is(li, td, th) {
+.noverticalpad,
+.nopad :is(li, td, th),
+.nobottompad :is(li, td, th),
+.noverticalpad :is(li, td, th) {
 	padding-bottom: 0px;
+}
+.nopad,
+.noleftpad,
+.nosidepad,
+.nopad :is(li, td, th),
+.noleftpad :is(li, td, th),
+.nosidepad :is(li, td, th) {
+	padding-left: 0px;
+}
+.nopad,
+.norightpad,
+.nosidepad,
+.nopad :is(li, td, th),
+.norightpad :is(li, td, th),
+.nosidepad :is(li, td, th) {
+	padding-right: 0px;
 }
 .notopmargin,
 .notopmargin :is(li, td, th),

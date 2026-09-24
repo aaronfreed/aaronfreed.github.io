@@ -1563,7 +1563,7 @@ th {
 }
 @media print {
 	:root {
-		--page-width: var(--page-width) !important;
+		--page-width: min(800px, calc(100vw - 16px)) !important;
 	}
 	table:not(.printpadding1, .printpadding2, .printpadding3, .printpadding4, .printpadding5, .printpadding6, .printpadding7, .printpadding8, .printpadding9, .printpadding10, .sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad16, .sidepad20, .sidepad30, .sidepad40, .sidepad50, .sidepad60, .noleftpad, .norightpad, .nosidepad, .nopad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .gatefoldsplit) 
 	:is(td, th):not(.printpadding1, .printpadding2, .printpadding3, .printpadding4, .printpadding5, .printpadding6, .printpadding7, .printpadding8, .printpadding9, .printpadding10, .sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad16, .sidepad20, .sidepad30, .sidepad40, .sidepad50, .sidepad60, .noleftpad, .norightpad, .nosidepad, .nopad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .gatefoldsplit)

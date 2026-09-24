@@ -4572,6 +4572,14 @@ table.hyphenate > :is(
 	tfoot > tr > th,
 	tr > td,
 	tr > th
+),
+table > :is(
+	td.hyphenate,
+	th.hyphenate,
+	tr.hyphenate > :is(td, th),
+	thead.hyphenate > :is(td, th),
+	tbody.hyphenate > :is(td, th),
+	tfoot.hyphenate > :is(td, th)
 ) {
 	hyphens: auto;
 	hyphenate-limit-chars: 5 2 2;

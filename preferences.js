@@ -84,8 +84,8 @@ function openPreferences() {
 </ul>
 <p>Font:</p>
 <ul>
-<li class="fira"><input type="radio" name="font" id="fontFira" value="" checked> <label for="colorNeutral">FiraGO</label> (default)</li>
-<li class="atkinson"><input type="radio" name="font" id="fontLysdexia" value="lysdexicsUntie"> <label for="colorDark">Atkinson Hyperlegible Next</label></li>
+<li class="fira"><input type="radio" name="font" id="fontFira" value="" checked> <label for="fontFira">FiraGO</label> (default)</li>
+<li class="atkinson"><input type="radio" name="font" id="fontLysdexia" value="lysdexicsUntie"> <label for="fontLysdexia">Atkinson Hyperlegible Next</label></li>
 </ul>
 <button id="closePrefs">Close</button>
 `;

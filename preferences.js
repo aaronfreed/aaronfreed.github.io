@@ -87,6 +87,7 @@ function openPreferences() {
 <li class="fira"><input type="radio" name="font" id="fontFira" value="" checked> <label for="fontFira">FiraGO</label> (default)</li>
 <li class="atkinson"><input type="radio" name="font" id="fontLysdexia" value="lysdexicsUntie"> <label for="fontLysdexia">Atkinson Hyperlegible Next</label></li>
 </ul>
+<p><a href="https://aaronfreed.github.io/cookienotice.html" target="_blank">Notice on cookie usage</a></p>
 <button id="closePrefs">Close</button>
 `;
         let cookie = document.cookie;

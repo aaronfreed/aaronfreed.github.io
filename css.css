@@ -346,6 +346,7 @@
 }
 
 :root {
+	/* note to self: if you add more colors here, make sure they also go in force_light.css */
 	--background: #fff;
 	--background-translucent: #ffffffc6;
 	--background-translucenter: #ffffff8d;
@@ -512,6 +513,184 @@
 	--gatefold-width: calc(var(--page-width) / 2);
 	--small-thumbnail-4x3-height: calc(var(--page-width) * .375);
 }
+
+@media (prefers-color-scheme: dark) {
+	@media screen {
+		:root {
+			/* note to self: if you add more colors here, make sure they also go in force_dark.css */
+			--background: #000;
+			--background-translucent: #000000c6;
+			--background-translucenter: #0000008d;
+			--background-1: #0e0f1b;
+			--background-1-translucent: #0e0f1bc6;
+			--background-1-translucenter: #0e0f1b8d;
+			--background-2: #1c1e36;
+			--background-2-translucent: #1c1e36c6;
+			--background-2-translucenter: #1c1e368d;
+			--background-3: #2a2d51;
+			--background-3-translucent: #2a2d51c6;
+			--background-3-translucenter: #2a2d518d;
+			--background-4: #383c6c;
+			--background-4-translucent: #383c6cc6;
+			--background-4-translucenter: #383c6c8d;
+			--background-5: #464b87;
+			--background-5-translucent: #464b87c6;
+			--background-5-translucenter: #464b878d;
+			--background-6: #545aa2;
+			--background-6-translucent: #545aa2c6;
+			--background-6-translucenter: #545aa28d;
+			--background-7: #6269bd;
+			--background-7-translucent: #6269bdc6;
+			--background-7-translucenter: #6269bd8d;
+			--background-8: #7078d8;
+			--background-8-translucent: #7078d8c6;
+			--background-8-translucenter: #7078d88d;
+			--background-9: #7e87f3;
+			--background-9-translucent: #7e87f3c6;
+			--background-9-translucenter: #7e87f38d;
+			--offset-level-1: #1c1e36;
+			--offset-level-1-translucent: #1c1e36c6;
+			--offset-level-1-translucenter: #1c1e368d;
+			--offset-level-2: #383c6c;
+			--offset-level-2-translucent: #383c6cc6;
+			--offset-level-2-translucenter: #383c6c8d;
+			--offset-level-3: #545aa2;
+			--offset-level-3-translucent: #545aa2c6;
+			--offset-level-3-translucenter: #545aa28d;
+			--offset-level-4: #7078d8;
+			--offset-level-4-translucent: #7078d8c6;
+			--offset-level-4-translucenter: #7078d88d;
+			--link: #73e8ff;
+			--link-translucent: #73e8ffc6;
+			--link-translucenter: #73e8ff8d;
+			--link-visited: #ff93ff;
+			--link-visited-translucent: #ff93ffc6;
+			--link-visited-translucenter: #ff93ff8d;
+			--link-active: #adffad;
+			--link-active-translucent: #adffadc6;
+			--link-active-translucenter: #adffad8d;
+			--link-hover: #ffb57b;
+			--link-hover-translucent: #ffb57bc6;
+			--link-hover-translucenter: #ffb57b8d;
+			--heading-color: #74d4ff;
+			--heading-color-translucent: #74d4ffc6;
+			--heading-color-translucenter: #74d4ff8d;
+			--portfolio-heading: #b8f0ff;
+			--portfolio-heading-translucent: #b8f0ffc6;
+			--portfolio-heading-translucenter: #b8f0ff8d;
+			--toc-counter: #a8f0ff;
+			--toc-counter-translucent: #a8f0ffc6;
+			--toc-counter-translucenter: #a8f0ff8d;
+			--main: #fff;
+			--main-semitranslucent: #ffffffe3;
+			--main-translucent: #ffffffc6;
+			--main-translucenter: #ffffff8d;
+			/* these are OKHSV 29/50/100, 59/50/100, etc., via Björn Ottosson's
+			color picker: https://bottosson.github.io/misc/colorpicker/ - 29°
+			hue in OKHSV corresponds roughly to 0° hue in traditional HSV */
+			--oklab0: #ff9485;
+			--oklab30: #ffb87f;
+			--oklab60: #ffdc80;
+			--oklab90: #e6ff88;
+			--oklab120: #96ffab;
+			--oklab150: #88ffe7;
+			--oklab180: #84eeff;
+			--oklab210: #85ceff;
+			--oklab240: #84a3ff;
+			--oklab270: #bf9dff;
+			--oklab300: #ff9ef9;
+			--oklab330: #ff93b7; 
+			--oklab0-translucent: #ff9485c6;
+			--oklab30-translucent: #ffb87fc6;
+			--oklab60-translucent: #ffdc80c6;
+			--oklab90-translucent: #e6ff88c6;
+			--oklab120-translucent: #96ffabc6;
+			--oklab150-translucent: #88ffe7c6;
+			--oklab180-translucent: #84eeffc6;
+			--oklab210-translucent: #85ceffc6;
+			--oklab240-translucent: #84a3ffc6;
+			--oklab270-translucent: #bf9dffc6;
+			--oklab300-translucent: #ff9ef9c6;
+			--oklab330-translucent: #ff93b7c6; 
+			--oklab0-translucenter: #ff94858d;
+			--oklab30-translucenter: #ffb87f8d;
+			--oklab60-translucenter: #ffdc808d;
+			--oklab90-translucenter: #e6ff888d;
+			--oklab120-translucenter: #96ffab8d;
+			--oklab150-translucenter: #88ffe78d;
+			--oklab180-translucenter: #84eeff8d;
+			--oklab210-translucenter: #85ceff8d;
+			--oklab240-translucenter: #84a3ff8d;
+			--oklab270-translucenter: #bf9dff8d;
+			--oklab300-translucenter: #ff9ef98d;
+			--oklab330-translucenter: #ff93b78d; 
+			--oklab0-bg: #720001;
+			--oklab30-bg: #582d00;
+			--oklab60-bg: #493700;
+			--oklab90-bg: #363f00;
+			--oklab120-bg: #00471a;
+			--oklab150-bg: #00443b;
+			--oklab180-bg: #00424b;
+			--oklab210-bg: #003e5e;
+			--oklab240-bg: #1a01ae;
+			--oklab270-bg: #4b008a;
+			--oklab300-bg: #620061;
+			--oklab330-bg: #6d0038;
+			--oklab0-bg-translucent: #720001c6;
+			--oklab30-bg-translucent: #582d00c6;
+			--oklab60-bg-translucent: #493700c6;
+			--oklab90-bg-translucent: #363f00c6;
+			--oklab120-bg-translucent: #00471ac6;
+			--oklab150-bg-translucent: #00443bc6;
+			--oklab180-bg-translucent: #00424bc6;
+			--oklab210-bg-translucent: #003e5ec6;
+			--oklab240-bg-translucent: #1a01aec6;
+			--oklab270-bg-translucent: #4b008ac6;
+			--oklab300-bg-translucent: #620061c6;
+			--oklab330-bg-translucent: #6d0038c6;
+			--oklab0-bg-translucenter: #7200018d;
+			--oklab30-bg-translucenter: #582d008d;
+			--oklab60-bg-translucenter: #4937008d;
+			--oklab90-bg-translucenter: #363f008d;
+			--oklab120-bg-translucenter: #00471a8d;
+			--oklab150-bg-translucenter: #00443b8d;
+			--oklab180-bg-translucenter: #00424b8d;
+			--oklab210-bg-translucenter: #003e5e8d;
+			--oklab240-bg-translucenter: #1a01ae8d;
+			--oklab270-bg-translucenter: #4b008a8d;
+			--oklab300-bg-translucenter: #6200618d;
+			--oklab330-bg-translucenter: #6d00388d;
+		}
+		thead .darkkey {
+			background-color: var(--offset-level-1);
+			border-bottom-color: var(--offset-level-3);
+		}
+		thead .lightkey {
+			background-color: var(--offset-level-2);
+			border-bottom-color: var(--offset-level-3);
+		}
+		tbody tr:nth-child(even) .darkkey {
+			background-color: var(--offset-level-1);
+			border-bottom-color: var(--offset-level-3);
+		}
+		tbody tr:nth-child(even) .lightkey {
+			background-color: var(--offset-level-2);
+			border-bottom-color: var(--offset-level-3);
+		}
+		tbody tr:nth-child(odd) .darkkey {
+			background-color: var(--background);
+			border-bottom-color: var(--offset-level-3);
+		}
+		tbody tr:nth-child(odd) .lightkey {
+			background-color: var(--offset-level-1);
+			border-bottom-color: var(--offset-level-3);
+		}
+		.dark-invert {
+			filter:invert(100%) hue-rotate(180deg);
+		}
+	}
+}
+
 td,
 th {
 	padding: 4px 12px;
@@ -685,181 +864,6 @@ th {
 	margin-top: 90px;
 }
 
-@media (prefers-color-scheme: dark) {
-	@media screen {
-		:root {
-			--background: #000;
-			--background-translucent: #000000c6;
-			--background-translucenter: #0000008d;
-			--background-1: #0e0f1b;
-			--background-1-translucent: #0e0f1bc6;
-			--background-1-translucenter: #0e0f1b8d;
-			--background-2: #1c1e36;
-			--background-2-translucent: #1c1e36c6;
-			--background-2-translucenter: #1c1e368d;
-			--background-3: #2a2d51;
-			--background-3-translucent: #2a2d51c6;
-			--background-3-translucenter: #2a2d518d;
-			--background-4: #383c6c;
-			--background-4-translucent: #383c6cc6;
-			--background-4-translucenter: #383c6c8d;
-			--background-5: #464b87;
-			--background-5-translucent: #464b87c6;
-			--background-5-translucenter: #464b878d;
-			--background-6: #545aa2;
-			--background-6-translucent: #545aa2c6;
-			--background-6-translucenter: #545aa28d;
-			--background-7: #6269bd;
-			--background-7-translucent: #6269bdc6;
-			--background-7-translucenter: #6269bd8d;
-			--background-8: #7078d8;
-			--background-8-translucent: #7078d8c6;
-			--background-8-translucenter: #7078d88d;
-			--background-9: #7e87f3;
-			--background-9-translucent: #7e87f3c6;
-			--background-9-translucenter: #7e87f38d;
-			--offset-level-1: #1c1e36;
-			--offset-level-1-translucent: #1c1e36c6;
-			--offset-level-1-translucenter: #1c1e368d;
-			--offset-level-2: #383c6c;
-			--offset-level-2-translucent: #383c6cc6;
-			--offset-level-2-translucenter: #383c6c8d;
-			--offset-level-3: #545aa2;
-			--offset-level-3-translucent: #545aa2c6;
-			--offset-level-3-translucenter: #545aa28d;
-			--offset-level-4: #7078d8;
-			--offset-level-4-translucent: #7078d8c6;
-			--offset-level-4-translucenter: #7078d88d;
-			--link: #73e8ff;
-			--link-translucent: #73e8ffc6;
-			--link-translucenter: #73e8ff8d;
-			--link-visited: #ff93ff;
-			--link-visited-translucent: #ff93ffc6;
-			--link-visited-translucenter: #ff93ff8d;
-			--link-active: #adffad;
-			--link-active-translucent: #adffadc6;
-			--link-active-translucenter: #adffad8d;
-			--link-hover: #ffb57b;
-			--link-hover-translucent: #ffb57bc6;
-			--link-hover-translucenter: #ffb57b8d;
-			--heading-color: #74d4ff;
-			--heading-color-translucent: #74d4ffc6;
-			--heading-color-translucenter: #74d4ff8d;
-			--portfolio-heading: #b8f0ff;
-			--portfolio-heading-translucent: #b8f0ffc6;
-			--portfolio-heading-translucenter: #b8f0ff8d;
-			--toc-counter: #a8f0ff;
-			--toc-counter-translucent: #a8f0ffc6;
-			--toc-counter-translucenter: #a8f0ff8d;
-			--main: #fff;
-			--main-semitranslucent: #ffffffe3;
-			--main-translucent: #ffffffc6;
-			--main-translucenter: #ffffff8d;
-			/* these are OKHSV 29/50/100, 59/50/100, etc., via Björn Ottosson's
-			color picker: https://bottosson.github.io/misc/colorpicker/ - 29°
-			hue in OKHSV corresponds roughly to 0° hue in traditional HSV */
-			--oklab0: #ff9485;
-			--oklab30: #ffb87f;
-			--oklab60: #ffdc80;
-			--oklab90: #e6ff88;
-			--oklab120: #96ffab;
-			--oklab150: #88ffe7;
-			--oklab180: #84eeff;
-			--oklab210: #85ceff;
-			--oklab240: #84a3ff;
-			--oklab270: #bf9dff;
-			--oklab300: #ff9ef9;
-			--oklab330: #ff93b7; 
-			--oklab0-translucent: #ff9485c6;
-			--oklab30-translucent: #ffb87fc6;
-			--oklab60-translucent: #ffdc80c6;
-			--oklab90-translucent: #e6ff88c6;
-			--oklab120-translucent: #96ffabc6;
-			--oklab150-translucent: #88ffe7c6;
-			--oklab180-translucent: #84eeffc6;
-			--oklab210-translucent: #85ceffc6;
-			--oklab240-translucent: #84a3ffc6;
-			--oklab270-translucent: #bf9dffc6;
-			--oklab300-translucent: #ff9ef9c6;
-			--oklab330-translucent: #ff93b7c6; 
-			--oklab0-translucenter: #ff94858d;
-			--oklab30-translucenter: #ffb87f8d;
-			--oklab60-translucenter: #ffdc808d;
-			--oklab90-translucenter: #e6ff888d;
-			--oklab120-translucenter: #96ffab8d;
-			--oklab150-translucenter: #88ffe78d;
-			--oklab180-translucenter: #84eeff8d;
-			--oklab210-translucenter: #85ceff8d;
-			--oklab240-translucenter: #84a3ff8d;
-			--oklab270-translucenter: #bf9dff8d;
-			--oklab300-translucenter: #ff9ef98d;
-			--oklab330-translucenter: #ff93b78d; 
-			--oklab0-bg: #720001;
-			--oklab30-bg: #582d00;
-			--oklab60-bg: #493700;
-			--oklab90-bg: #363f00;
-			--oklab120-bg: #00471a;
-			--oklab150-bg: #00443b;
-			--oklab180-bg: #00424b;
-			--oklab210-bg: #003e5e;
-			--oklab240-bg: #1a01ae;
-			--oklab270-bg: #4b008a;
-			--oklab300-bg: #620061;
-			--oklab330-bg: #6d0038;
-			--oklab0-bg-translucent: #720001c6;
-			--oklab30-bg-translucent: #582d00c6;
-			--oklab60-bg-translucent: #493700c6;
-			--oklab90-bg-translucent: #363f00c6;
-			--oklab120-bg-translucent: #00471ac6;
-			--oklab150-bg-translucent: #00443bc6;
-			--oklab180-bg-translucent: #00424bc6;
-			--oklab210-bg-translucent: #003e5ec6;
-			--oklab240-bg-translucent: #1a01aec6;
-			--oklab270-bg-translucent: #4b008ac6;
-			--oklab300-bg-translucent: #620061c6;
-			--oklab330-bg-translucent: #6d0038c6;
-			--oklab0-bg-translucenter: #7200018d;
-			--oklab30-bg-translucenter: #582d008d;
-			--oklab60-bg-translucenter: #4937008d;
-			--oklab90-bg-translucenter: #363f008d;
-			--oklab120-bg-translucenter: #00471a8d;
-			--oklab150-bg-translucenter: #00443b8d;
-			--oklab180-bg-translucenter: #00424b8d;
-			--oklab210-bg-translucenter: #003e5e8d;
-			--oklab240-bg-translucenter: #1a01ae8d;
-			--oklab270-bg-translucenter: #4b008a8d;
-			--oklab300-bg-translucenter: #6200618d;
-			--oklab330-bg-translucenter: #6d00388d;
-		}
-		thead .darkkey {
-			background-color: var(--offset-level-1);
-			border-bottom-color: var(--offset-level-3);
-		}
-		thead .lightkey {
-			background-color: var(--offset-level-2);
-			border-bottom-color: var(--offset-level-3);
-		}
-		tbody tr:nth-child(even) .darkkey {
-			background-color: var(--offset-level-1);
-			border-bottom-color: var(--offset-level-3);
-		}
-		tbody tr:nth-child(even) .lightkey {
-			background-color: var(--offset-level-2);
-			border-bottom-color: var(--offset-level-3);
-		}
-		tbody tr:nth-child(odd) .darkkey {
-			background-color: var(--background);
-			border-bottom-color: var(--offset-level-3);
-		}
-		tbody tr:nth-child(odd) .lightkey {
-			background-color: var(--offset-level-1);
-			border-bottom-color: var(--offset-level-3);
-		}
-		.dark-invert {
-			filter:invert(100%) hue-rotate(180deg);
-		}
-	}
-}
 @media screen and (max-width: 600px) {
 	.fixmobilefontsize, .fixmobilefontsize > td, .fixmobilefontsize > th {
 		font-size: 1rem;
@@ -3471,8 +3475,11 @@ ol.baseball-eras {
 html {
 	font-size: 100%;
 }
-body {
+body, button, .fira {
 	font-family: "FiraGO", "Noto Accidentals", "Noto Music", sans-serif;
+}
+
+body {
 	text-align: justify;
 	margin: auto;
 	hyphens: auto;
@@ -3484,9 +3491,6 @@ body {
 }
 .atkinson {
 	font-family: "Atkinson Hyperlegible Next", "Noto Accidental", "Noto Music", sans-serif;
-}
-.fira {
-	font-family: "FiraGO", "Noto Accidentals", "Noto Music", sans-serif;
 }
 .smol {
 	font-size: .8125rem;
@@ -3501,8 +3505,10 @@ body:not(.trigtables) {
 	width: var(--page-width);
 }
 .normal, button {
-	font-family: "FiraGO", "Noto Accidentals", "Noto Music", sans-serif;
 	font-weight: var(--weight2);
+}
+button {
+	font-family: inherit;
 }
 .soundtracks strong,
 .soundtracks a:link,
@@ -4989,7 +4995,6 @@ thead tr.freshprince th {
 .istoria :is(td, th) {
 	padding: 4px 12px;
 	font: -apple-system-body;
-	font-family: "FiraGO", sans-serif;
 	font-weight: var(--weight2);
 	border: 1px solid var(--offset-level-4);
 }
@@ -5015,7 +5020,6 @@ thead tr.freshprince th {
 	font-size: .8125rem;
 }
 .istoria :where(td, th).topic {
-	font-family: "FiraGO", sans-serif;
 	font-weight: var(--weight3);
 	text-decoration-thickness: 1.375px;
 	text-align: right;
@@ -6461,7 +6465,36 @@ img.fittowidth {
 }
 
 img.pixelated {
-	img {
-		image-rendering: pixelated;
-	}
+	image-rendering: pixelated;
+}
+
+.preferencesButton {
+	position: absolute;
+	font-size: 32px;
+	top: 1ex;
+	right: 1ex;
+	opacity: 0.75;
+	color: var(--link);
+}
+.preferencesButton:hover {
+	opacity: 1.0;
+	color: var(--link-hover);
+}
+.preferencesButton:active {
+	opacity: 1.0;
+	color: var(--link-active);
+}
+.preferencesButton.isOpen {
+	opacity: 0.5;
+	color: var(--link-visited);
+}
+
+.prefsBox {
+	position: absolute;
+	top: 3ex;
+	right: 6ex;
+	background: var(--offset-level-1);
+	border: 5px ridge var(--offset-level-4);
+	padding: 12px;
+	width: 32ex;
 }

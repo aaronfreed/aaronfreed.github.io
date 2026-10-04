@@ -2,3 +2,6 @@ body, button, .fixheight {
 	font-family: "Atkinson Hyperlegible Next", "Noto Accidentals", "Noto Music", sans-serif;
 	line-height: 1.6;
 }
+.fixheight li {
+	line-height: 1.6;
+}

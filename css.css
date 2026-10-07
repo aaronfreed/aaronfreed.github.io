@@ -4218,7 +4218,7 @@ table.nospacing td, table.nospacing th {
 	margin-bottom: 4px;
 }
 :is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li {
-	line-height: 125%;
+	line-height: 1.25rem;
 }
 /*:is(.toc, .toclite) li::before {
 	content: "{" counters(item, ".")"} ";
@@ -4409,7 +4409,7 @@ ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
 /* a bunch of weird stuff for the Forge manual table of contents */
 .forgecontents ol.toc > li {
 	font-size: 1.25rem;
-	line-height: 125%;
+	line-height: 1.25rem;
 	font-weight: var(--weight8);
 	text-decoration-thickness: 2.25px;
 }
@@ -4427,7 +4427,7 @@ ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
 	font-weight: var(--weight6);
 	text-decoration-thickness: 2px;
 	font-size: 1.125rem;
-	line-height: 125%;
+	line-height: 1.25rem;
 }
 .forgecontents ol.toc > li > ol > li::marker {
 	font-weight: var(--weight6);
@@ -4437,7 +4437,7 @@ ol.songtranslations > li > ol > li > ol.greekmovement > li::before {
 	counter-reset: i3;
 	font-weight: var(--weight4);
 	text-decoration-thickness: 1.5px;
-	line-height: 125%;
+	line-height: 1.25rem;
 }
 .forgecontents ol.toc > li > ol > li > ol :is(li a:link, li a:visited, li)
 {
@@ -5135,7 +5135,7 @@ thead tr.freshprince th {
 }
 
 .centred,
-tr.centred > :is(td, th),
+:is(tr.centred, thead.centred, tbody.centred, tfoot.centred, table.centred) > :is(td, th),
 :where(td, th):where(.centred, .dr),
 .istoria .footer {
 	text-align: center;
@@ -5250,7 +5250,7 @@ code {
 	font-family: "Fira Code", monospace;
 }
 .musicalmodes li {
-	line-height: 125%;
+	line-height: calc(4rem / 3);
 }
 :is(.musicalmodes, table.curved) thead tr:first-child {
 	background-color: var(--offset-level-2);
@@ -6089,8 +6089,8 @@ li.weight8,
 }
 
 
-.fixheight, h1.fixheight, h2.fixheight, h3.fixheight, h4.fixheight {
-	line-height: 133.33333%;
+.fixheight, h1.fixheight, h2.fixheight, h3.fixheight, h4.fixheight, ul.fixheight li, ol.fixheight li {
+	line-height: calc(4rem / 3);
 }
 .musictheory :is(p, td, th, .fixheight, li) {
 	line-height: 1.75rem;

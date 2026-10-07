@@ -2,6 +2,13 @@ body, button, .fixheight {
 	font-family: "Atkinson Hyperlegible Next", "Noto Accidentals", "Noto Music", sans-serif;
 	line-height: 1.6;
 }
-.fixheight li {
+.fixheight li, .musicalmodes li, h1.fixheight, h2.fixheight, h3.fixheight, h4.fixheight, ul.fixheight li, ol.fixheight li {
+	line-height: 1.6;
+}
+:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li:not(.notopmargin, .margintop2, .margintop3, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop18, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60, .overridetopmargin) {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+:is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li {
 	line-height: 1.6;
 }

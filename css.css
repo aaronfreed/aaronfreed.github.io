@@ -1483,6 +1483,9 @@ th {
 	.nonmobile5col {
 		columns: 1;
 	}
+	.nonmobile3col.mobile2col, .nonmobile4col.mobile2col, .nonmobile5col.mobile2col {
+		columns: 2;
+	}
 }
 @media screen and (width > 600px) {
 	.nowrapdesktop {

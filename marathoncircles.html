@@ -67,11 +67,11 @@ window.onload = function () {makeAllSortable();};
 
 			<p>There are a few ways to construct circles in Weland. The simplest is probably to use shift+alt and draw points of equal length out from a central area. This will give you a regular 16-sided polygon, and for many cases, this is all you&rsquo;ll need. However, in many cases, you may want more points. There are a few options here. There&rsquo;s a <a href="https://simplici7y.com/items/circle-plugin-for-weland" target="_blank">circle plugin</a>, which is fine if you&rsquo;re OK doing a bit of math. (To get this to load on Windows, you may need to go to &lsquo;Properties&rsquo; and select &lsquo;Unblock&rsquo; next to &lsquo;Security&rsquo;. Obviously, don&rsquo;t make a habit of doing this with just <em>any</em> software downloaded from the Internet unless you trust the authors.) Another option that doesn&rsquo;t require a plugin (but still requires a bit of math) is the custom grid, this little icon you may not have bothered to try out before:</p>
 
-			<div class="image"><img src="gridicon.png" width="647" height="73" alt="Custom Grid Icon" title="Custom Grid Icon"/></div>
+			<div class="image"><a href="gridicon.png" target="_blank"><img src="gridicon.png" alt="Custom Grid Icon" title="Custom Grid Icon"/></a></div> <!-- width="647" height="73" -->
 
 			<p>When you click it, it brings up some sliders that may at first look intimidating. (I&rsquo;ve resized parts of this image to make its contents legible, but it&rsquo;s otherwise untouched.)</p>
 
-			<div class="image"><img src="gridsliders.png" width="740" height="35" alt="Custom Grid Sliders" title="Custom Grid Sliders"/></div>
+			<div class="image"><a href="gridsliders.png" target="_blank"><img src="gridsliders.png" alt="Custom Grid Sliders" title="Custom Grid Sliders"/></a></div> <!--  width="740" height="35" -->
 
 			<ul>
 				<li><strong>Reset:</strong> Restores the default grid settings.</li>
@@ -91,25 +91,27 @@ window.onload = function () {makeAllSortable();};
 
 			<p>For our &lsquo;circle&rsquo;, <strong>Origin</strong> will match its center and <strong>Scale</strong> will match its radius (at its vertices, anyhow). <strong>Rotation</strong> will vary, as we&rsquo;ll see. I&rsquo;ll demonstrate how to draw a 24-sided circle. We&rsquo;ll leave Origin as 0, 0. We&rsquo;ll start <strong>Rotation</strong> from 0&deg;. For <strong>Scale</strong>, we&rsquo;ll use the seemingly random number 3.831. Press 4 on the keyboard to get the grid to show at 1x size, then draw points out from (0, 0) in all four cardinal directions. We should have something like:</p>
 
-			<div class="image"><img src="circle0.png" width="550" height="546" alt="0&deg; Circle Vertices" title="0&deg; Circle Vertices"/></div>
+			<div class="image"><img src="circle0.png" alt="0&deg; Circle Vertices" title="0&deg; Circle Vertices"/></div> <!--  width="550" height="546" -->
 
 			<blockquote><strong>Protip:</strong> If you&rsquo;re having trouble finding (0, 0), you can rotate the grid forward and backward (it always rotates around the center point); or edit one point by double-clicking it; or start from 15&deg; and work back around to 0&deg;. (Again, I don&rsquo;t recommend using a <strong>Rotation</strong> of 90&deg;; it&rsquo;s not quite accurate.)</blockquote>
 
 			<p>From here, we must rotate the grid by regular increments (this might be the trickiest part). 360&deg; (a circle&rsquo;s full rotation) divided by 24 points (our vertex count) gives us 15&deg; increments, so our next angle is 15&deg;. Set <strong>Rotation</strong> to 15&deg; and draw lines out from the center. Rotating another 15&deg; gives us 30&deg;, then 45&deg;, then 60&deg;, then 75&deg;. (We could do this with fewer rotations, but we&rsquo;ll save that for later.) Here are visuals of all these steps:</p>
 
-			<div class="image"><img src="circle1.png" width="124" height="124" alt="15&deg; Circle Vertices" title="15&deg; Circle Vertices"/>
-			<img src="circle2.png" width="124" height="124" alt="30&deg; Circle Vertices" title="30&deg; Circle Vertices"/>
-			<img src="circle3.png" width="124" height="124" alt="45&deg; Circle Vertices" title="45&deg; Circle Vertices"/>
-			<img src="circle4.png" width="124" height="124" alt="60&deg; Circle Vertices" title="60&deg; Circle Vertices"/>
-			<img src="circle5.png" width="124" height="124" alt="75&deg; Circle Vertices" title="75&deg; Circle Vertices"/></div>
+			<div class="image">
+				<img src="circle1.png" width="124" height="124" alt="15&deg; Circle Vertices" title="15&deg; Circle Vertices"/>
+				<img src="circle2.png" width="124" height="124" alt="30&deg; Circle Vertices" title="30&deg; Circle Vertices"/>
+				<img src="circle3.png" width="124" height="124" alt="45&deg; Circle Vertices" title="45&deg; Circle Vertices"/>
+				<img src="circle4.png" width="124" height="124" alt="60&deg; Circle Vertices" title="60&deg; Circle Vertices"/>
+				<img src="circle5.png" width="124" height="124" alt="75&deg; Circle Vertices" title="75&deg; Circle Vertices"/>
+			</div>
 
 			<p>We now have our circle&rsquo;s points. Our next step is to draw our lines. It&rsquo;ll probably help to disable the grid or to reduce the grid size (i.e., press 1 on the keyboard).</p>
 
-			<div class="image"><img src="circle6.png" width="248" height="248" alt="Drawing the Lines of Our &lsquo;Circle&rsquo;"/></div>
+			<div class="image"><img src="circle6.png" class="erauqssidlroweht" alt="Drawing the Lines of Our &lsquo;Circle&rsquo;"/></div>
 
 			<p>The next task is to fill the circle (assuming we wish to do that). It&rsquo;s an inefficient allocation of map indices to fill all 24 triangles when we can use more sides per polygon; here, we can divide our circle into quadrants to get eight sides per polygon, which is perfect.</p>
 
-			<div class="image"><img src="circle7.png" width="248" height="248" alt="Filling Our &lsquo;Circle&rsquo;"/></div>
+			<div class="image"><img src="circle7.png" class="erauqssidlroweht" alt="Filling Our &lsquo;Circle&rsquo;"/></div>
 
 			<p>Now, some notes:</p>
 
@@ -140,162 +142,164 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="light" style="font-size: 13px; text-align: center;">(Click a category in the table header to sort by that category. Click it again to reverse the sort direction.)</p>
 
-			<table class="curved">
-				<thead class="accent weight3">
-					<tr>
-						<td class="right"># Sides</strong></td>
-						<td class="right">WU Radius</td>
-						<td class="right">IU Radius</td>
-						<td>Rotation</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="right">3</td>
-						<td class="right">0.578</td>
-						<td class="right">591.3</td>
-						<td>120.0&deg;</td>
-					</tr>
-					<tr>
-						<td class="right">5</td>
-						<td class="right">0.852</td>
-						<td class="right">871</td>
-						<td><span class="hidden">0</span>72.0&deg;</td>
-					</tr>
-					<tr class="hue210">
-						<td class="right">6</td>
-						<td class="right">1.000</td>
-						<td class="right">1024</td>
-						<td><span class="hidden">0</span>60.0&deg;</td>
-					</tr>
-					<tr>
-						<td class="right">7</td>
-						<td class="right">1.153</td>
-						<td class="right">1180</td>
-						<td><span class="hidden">0</span>51.42857142&hellip;&deg;</td>
-					</tr>
-					<tr class="weight3 hue30">
-						<td class="right">8</td>
-						<td class="right">1.306</td>
-						<td class="right">1338</td>
-						<td><span class="hidden">0</span>45.0&deg;</td>
-					</tr>
-					<tr class="hue210">
-						<td class="right">10</td>
-						<td class="right">1.618</td>
-						<td class="right">1657</td>
-						<td><span class="hidden">0</span>36.0&deg;</td>
-					</tr>
-					<tr class="italic hue300">
-						<td class="right">12</td>
-						<td class="right">1.934</td>
-						<td class="right">1978</td>
-						<td><span class="hidden">0</span>30.0&deg;</td>
-					</tr>
-					<tr class="hue210">
-						<td class="right">14</td>
-						<td class="right">2.247</td>
-						<td class="right">2301</td>
-						<td><span class="hidden">0</span>25.71428571&hellip;&deg;</td>
-					</tr>
-					<tr class="weight4 italic hue120">
-						<td class="right">16</td>
-						<td class="right">2.563</td>
-						<td class="right">2624</td>
-						<td><span class="hidden">0</span>22.5&deg;</td>
-					</tr>
-					<tr class="hue210">
-						<td class="right">18</td>
-						<td class="right">2.880</td>
-						<td class="right">2948</td>
-						<td><span class="hidden">0</span>20.0&deg;</td>
-					</tr>
-					<tr class="italic hue300">
-						<td class="right">20</td>
-						<td class="right">3.197</td>
-						<td class="right">3272</td>
-						<td><span class="hidden">0</span>18.0&deg;</td>
-					</tr>
-					<tr class="weight3 hue30">
-						<td class="right">24</td>
-						<td class="right">3.831</td>
-						<td class="right">3922</td>
-						<td><span class="hidden">0</span>15.0&deg;</td>
-					</tr>
-					<tr class="italic hue300">
-						<td class="right">28</td>
-						<td class="right">4.467</td>
-						<td class="right">4574</td>
-						<td><span class="hidden">0</span>12.85714285&hellip;&deg;</td>
-					</tr>
-					<tr class="weight4 italic hue120">
-						<td class="right">32</td>
-						<td class="right">5.102</td>
-						<td class="right">5224</td>
-						<td><span class="hidden">0</span>11.25&deg;</td>
-					</tr>
-					<tr class="italic hue300">
-						<td class="right">36</td>
-						<td class="right">5.735</td>
-						<td class="right">5873</td>
-						<td><span class="hidden">0</span>10.0&deg;</td>
-					</tr>
-					<tr class="weight3 hue30">
-						<td class="right">40</td>
-						<td class="right">6.372</td>
-						<td class="right">6525</td>
-						<td><span class="hidden">00</span>9.0&deg;</td>
-					</tr>
-					<tr class="hue210">
-						<td class="right">42</td>
-						<td class="right">6.690</td>
-						<td class="right">6851</td>
-						<td><span class="hidden">00</span>8.57142857&hellip;&deg;</td>
-					</tr>
-					<tr class="italic hue300">
-						<td class="right">44</td>
-						<td class="right">7.008</td>
-						<td class="right">7176</td>
-						<td><span class="hidden">00</span>8.1818&hellip;&deg;</td>
-					</tr>
-					<tr class="weight4 italic hue120">
-						<td class="right">48</td>
-						<td class="right">7.647</td>
-						<td class="right">7830</td>
-						<td><span class="hidden">00</span>7.5&deg;</td>
-					</tr>
-					<tr class="italic hue300">
-						<td class="right">52</td>
-						<td class="right">8.283 (use 4.142)</td>
-						<td class="right">8482</td>
-						<td><span class="hidden">00</span>6.92307692&hellip;&deg;</td>
-					</tr>
-					<tr class="weight3 hue30">
-						<td class="right">56</td>
-						<td class="right">8.918 (use 4.459)</td>
-						<td class="right">9130</td>
-						<td><span class="hidden">00</span>6.42857142&hellip;&deg;</td>
-					</tr>
-					<tr class="italic hue300">
-						<td class="right">60</td>
-						<td class="right">9.558 (use 4.779)</td>
-						<td class="right">9780</td>
-						<td><span class="hidden">00</span>6.0&deg;</td>
-					</tr>
-					<tr class="weight4 italic hue120">
-						<td class="right">64</td>
-						<td class="right">10.190 (use 5.095)</td>
-						<td class="right">10435</td>
-						<td><span class="hidden">00</span>5.625&deg;</td>
-					</tr>
-					<tr class="weight3 hue30">
-						<td class="right">72</td>
-						<td class="right">11.468 (use 5.734)</td>
-						<td class="right">11740</td>
-						<td><span class="hidden">00</span>5.0&deg;</td>
-					</tr>
-				</tbody>
-			</table>
+			<div class="mobilescroll">
+				<table class="curved mobilenowrap">
+					<thead class="accent weight3">
+						<tr>
+							<td class="right"># Sides</strong></td>
+							<td class="right">WU Radius</td>
+							<td class="right">IU Radius</td>
+							<td>Rotation</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="right">3</td>
+							<td class="right">0.578</td>
+							<td class="right">591.3</td>
+							<td>120.0&deg;</td>
+						</tr>
+						<tr>
+							<td class="right">5</td>
+							<td class="right">0.852</td>
+							<td class="right">871</td>
+							<td><span class="hidden">0</span>72.0&deg;</td>
+						</tr>
+						<tr class="hue210">
+							<td class="right">6</td>
+							<td class="right">1.000</td>
+							<td class="right">1024</td>
+							<td><span class="hidden">0</span>60.0&deg;</td>
+						</tr>
+						<tr>
+							<td class="right">7</td>
+							<td class="right">1.153</td>
+							<td class="right">1180</td>
+							<td><span class="hidden">0</span>51.42857142&hellip;&deg;</td>
+						</tr>
+						<tr class="weight3 hue30">
+							<td class="right">8</td>
+							<td class="right">1.306</td>
+							<td class="right">1338</td>
+							<td><span class="hidden">0</span>45.0&deg;</td>
+						</tr>
+						<tr class="hue210">
+							<td class="right">10</td>
+							<td class="right">1.618</td>
+							<td class="right">1657</td>
+							<td><span class="hidden">0</span>36.0&deg;</td>
+						</tr>
+						<tr class="italic hue300">
+							<td class="right">12</td>
+							<td class="right">1.934</td>
+							<td class="right">1978</td>
+							<td><span class="hidden">0</span>30.0&deg;</td>
+						</tr>
+						<tr class="hue210">
+							<td class="right">14</td>
+							<td class="right">2.247</td>
+							<td class="right">2301</td>
+							<td><span class="hidden">0</span>25.71428571&hellip;&deg;</td>
+						</tr>
+						<tr class="weight4 italic hue120">
+							<td class="right">16</td>
+							<td class="right">2.563</td>
+							<td class="right">2624</td>
+							<td><span class="hidden">0</span>22.5&deg;</td>
+						</tr>
+						<tr class="hue210">
+							<td class="right">18</td>
+							<td class="right">2.880</td>
+							<td class="right">2948</td>
+							<td><span class="hidden">0</span>20.0&deg;</td>
+						</tr>
+						<tr class="italic hue300">
+							<td class="right">20</td>
+							<td class="right">3.197</td>
+							<td class="right">3272</td>
+							<td><span class="hidden">0</span>18.0&deg;</td>
+						</tr>
+						<tr class="weight3 hue30">
+							<td class="right">24</td>
+							<td class="right">3.831</td>
+							<td class="right">3922</td>
+							<td><span class="hidden">0</span>15.0&deg;</td>
+						</tr>
+						<tr class="italic hue300">
+							<td class="right">28</td>
+							<td class="right">4.467</td>
+							<td class="right">4574</td>
+							<td><span class="hidden">0</span>12.85714285&hellip;&deg;</td>
+						</tr>
+						<tr class="weight4 italic hue120">
+							<td class="right">32</td>
+							<td class="right">5.102</td>
+							<td class="right">5224</td>
+							<td><span class="hidden">0</span>11.25&deg;</td>
+						</tr>
+						<tr class="italic hue300">
+							<td class="right">36</td>
+							<td class="right">5.735</td>
+							<td class="right">5873</td>
+							<td><span class="hidden">0</span>10.0&deg;</td>
+						</tr>
+						<tr class="weight3 hue30">
+							<td class="right">40</td>
+							<td class="right">6.372</td>
+							<td class="right">6525</td>
+							<td><span class="hidden">00</span>9.0&deg;</td>
+						</tr>
+						<tr class="hue210">
+							<td class="right">42</td>
+							<td class="right">6.690</td>
+							<td class="right">6851</td>
+							<td><span class="hidden">00</span>8.57142857&hellip;&deg;</td>
+						</tr>
+						<tr class="italic hue300">
+							<td class="right">44</td>
+							<td class="right">7.008</td>
+							<td class="right">7176</td>
+							<td><span class="hidden">00</span>8.1818&hellip;&deg;</td>
+						</tr>
+						<tr class="weight4 italic hue120">
+							<td class="right">48</td>
+							<td class="right">7.647</td>
+							<td class="right">7830</td>
+							<td><span class="hidden">00</span>7.5&deg;</td>
+						</tr>
+						<tr class="italic hue300">
+							<td class="right">52</td>
+							<td class="right">8.283 (use 4.142)</td>
+							<td class="right">8482</td>
+							<td><span class="hidden">00</span>6.92307692&hellip;&deg;</td>
+						</tr>
+						<tr class="weight3 hue30">
+							<td class="right">56</td>
+							<td class="right">8.918 (use 4.459)</td>
+							<td class="right">9130</td>
+							<td><span class="hidden">00</span>6.42857142&hellip;&deg;</td>
+						</tr>
+						<tr class="italic hue300">
+							<td class="right">60</td>
+							<td class="right">9.558 (use 4.779)</td>
+							<td class="right">9780</td>
+							<td><span class="hidden">00</span>6.0&deg;</td>
+						</tr>
+						<tr class="weight4 italic hue120">
+							<td class="right">64</td>
+							<td class="right">10.190 (use 5.095)</td>
+							<td class="right">10435</td>
+							<td><span class="hidden">00</span>5.625&deg;</td>
+						</tr>
+						<tr class="weight3 hue30">
+							<td class="right">72</td>
+							<td class="right">11.468 (use 5.734)</td>
+							<td class="right">11740</td>
+							<td><span class="hidden">00</span>5.0&deg;</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="mapmaking101.html">Mapmaking (basic)</a> &middot; <a href="mapmaking.html">Mapmaking (advanced)</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 		</main>

@@ -908,6 +908,21 @@ th {
 		overflow: auto;
 		contain: inline-size;
 	}
+	.image img {
+		max-width: var(--page-width);
+	}
+	:is(ol, ul) .image img {
+		max-width: calc(var(--page-width) - 30px);
+	}
+	:is(ol, ul) :is(ol, ul) .image img {
+		max-width: calc(var(--page-width) - 60px);
+	}
+	:is(ol.mobileleftmargin15, ul.mobileleftmargin15) .image img {
+		max-width: calc(var(--page-width) - 15px);
+	}
+	:is(ol.mobileleftmargin15, ul.mobileleftmargin15) :is(ol.mobileleftmargin15, ul.mobileleftmargin15) .image img {
+		max-width: calc(var(--page-width) - 30px);
+	}
 	.mobilemin800 {
 		min-width: 800px;
 	}

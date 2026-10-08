@@ -56,20 +56,20 @@ window.onload = function () {makeAllSortable();};
 			<p class="fixheight">I mentioned in the advanced page&rsquo;s <a href="mapmaking.html#generalmapmaking">General Notes</a> section that <span id="ftnt_ref01" class="dotted" name="I highly advise just following the link for an explanation, but in brief, you&rsquo;re limited to 65,536 map indices. That sounds like a lot, but each vertex, each line, each polygon, each line shorter than 0.5 World Units, each platform, and each polygon within a 10 World Unit X/Y radius of each sound object uses a map index, and that&rsquo;s just off the top of my head &ndash; you run out of them quickly. (This is a slight oversimplification &ndash; lines and vertices that aren&rsquo;t attached to polygons don&rsquo;t actually count.) In practice, you generally start to run out somewhere between 1,500 and 2,000 polygons. The largest polygon count I&rsquo;ve seen in a playable map layout is 2,466.">map indices<a href="#ftnt01" class="noprintlink">&#8317;&sup1;&#8318;</a></span> are the primary limit on map complexity and advised avoiding too many small polygons in a given area. Two more reasons to avoid too much complexity, though, are to avoid frustration and to improve map performance. This case study largely centers on the once-infamous <em>Eternal</em> level <strong>&lsquo;Where Giants Have Fallen&rsquo;</strong>. I apologize in advance for the length and number of images; the main lessons can be summarized as &lsquo;Don&rsquo;t overuse greeble or sound objects,&rsquo; but I think illustrating what that means would be helpful.</p>
 
 			<h1 id="contents" class="centred">Contents</h1>
-			<ol class="toc">
+			<ol class="toc mobileleftmargin15">
 				<li><a href="#top">Intro</a></li>
-				<li><a href="#contents">Table of Contents</a> (you&rsquo;re looking at it)</li>
+				<li><a href="#contents">Table of Contents</a> <span class="nomobile">(you&rsquo;re looking at it)</span></li>
 				<li><a href="#whfg">Three Iterations of &lsquo;Where Giants Have Fallen&rsquo;</a>
-					<ol>
+					<ol class="mobileleftmargin15">
 						<li><a href="#wghf-mv">Iteration 1: <em>Eternal</em> Mark V</a></li>
 						<li><a href="#wghf-10">Iteration 2: <em>Eternal X</em> 1.0</a></li>
 						<li><a href="#wghf-13">Iteration 3: <em>Eternal X</em> 1.3</a>
-							<ol>
+							<ol class="mobileleftmargin15">
 								<li><a href="crossbeams">Crossbeams: A Closer Look</a></li>
 								<li><a href="#escapewillmakemegod">Escape Will Make Me God</a></li>
 								<li><a href="#pillars">The Magic Disappearing Pillar</a></li>
 								<li><a href="#limits">How We Stayed Within the Index Limits</a>
-									<ol>
+									<ol class="mobileleftmargin15">
 										<li><a href="#greeble">Minimal Greeble Density</a></li>
 										<li><a href="#soundobjects">The Law of Conservation of Sound Objects</a></li>
 									</ol>
@@ -78,9 +78,9 @@ window.onload = function () {makeAllSortable();};
 						</li>
 					</ol>
 				</li>
-				<li><a href="#igs">&lsquo;Il grande silenzio&rsquo;</a> (<em>Tempus Irae Redux</em>)</li>
-				<li><a href="#monument">&lsquo;Monument to All Your Sins&rsquo;</a> (<em>Starlight</em>)</li>
-				<li><a href="#stp">&lsquo;Stone Temple Pilates&rsquo;</a> (<em>Marathon Phoenix</em>)</li>
+				<li><a href="#igs">&lsquo;Il grande silenzio&rsquo;</a> <span class="weight3">(<em>Tempus Irae Redux</em>)</span></li>
+				<li><a href="#monument">&lsquo;Monument to All Your Sins&rsquo;</a> <span class="weight3">(<em>Starlight</em>)</span></li>
+				<li><a href="#stp">&lsquo;Stone Temple Pilates&rsquo;</a> <span class="weight3">(<em>Marathon Phoenix</em>)</span></li>
 				<li><a href="#lessons">Lessons</a></li>
 				<li><a href="#endnotes">Endnotes</a></li>
 			</ol>
@@ -91,15 +91,15 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">This is a Weland view of <em>Eternal Mark V</em>&rsquo;s &lsquo;Where Giants Have Fallen&rsquo;:</p>
 
-			<div class="image"><a href="wghf-mv-0.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Draw Mode" src="wghf-mv-0.png" width="512" height="512" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Draw Mode"></a></div>
+			<div class="image"><a href="wghf-mv-0.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Draw Mode" src="wghf-mv-0.png" class="erauqssidlroweht" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Draw Mode"></a></div>
 
 			<p class="fixheight">(I&rsquo;ve hidden all objects besides players and sounds in all these screenshots; they&rsquo;re the only important objects for our purposes. I&rsquo;ve also removed extraneous lines and map writing from some later screenshots; the writing would be illegible at this resolution anyway. Also, click this or any subsequent image on this page to enlarge it.)</p>
 
 			<p class="fixheight">And here are some Vasara screenshots, with a few major caveats. First, I took these screenshots with 1.3 shapes because I wanted consistency between them. Second, the map had basically no shading to speak of, so I ran Auto Shade on it to make it easier to parse. Third, I rarely use hi-res textures when texturing, due partly to loading times, but mostly to memory usage: the game must load all textures into memory when it loads VAF, Vasara, or Visual Mode.lua. That adds up fast. That said, the <em>Mark V</em> version looks like this:</p>
 
-			<div class="image"><a href="wghf-mv-1.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1" src="wghf-mv-1.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1"></a></div>
+			<div class="image"><a href="wghf-mv-1.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1" src="wghf-mv-1.png" class="image2x1" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #1"></a></div>
 
-			<div class="image"><a href="wghf-mv-2.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2" src="wghf-mv-2.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2"></a></div>
+			<div class="image"><a href="wghf-mv-2.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2" src="wghf-mv-2.png" class="image2x1" title="&lsquo;Where Giants Have Fallen&rsquo; Mark V Visual Mode #2"></a></div>
 
 			<p class="fixheight">Beyond the obvious issues of the terrible shading and the sea of gray, this version, despite featuring only 509 polygons, is relatively slow for several reasons I&rsquo;ll discuss at length soon.</p>
 
@@ -110,13 +110,13 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight"><em>Eternal X</em> 1.0 overhauled the level, but the new version was even slower. It looked like this in Weland:</p>
 
-			<div class="image"><a href="wghf-10-0.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode" src="wghf-10-0.png" width="512" height="512" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode"></a></div>
+			<div class="image"><a href="wghf-10-0.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode" src="wghf-10-0.png" class="erauqssidlroweht" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Draw Mode"></a></div>
 
 			<p class="fixheight">Despite only featuring 836 polygons, this one chugs even worse. Both of these maps have a major problem: they have essentially no negative space. To oversimplify slightly, Aleph One is effectively a <a href="https://en.wikipedia.org/wiki/Portal_rendering" target="_blank" rel="noopener noreferrer">portal engine</a>. Portal engines have several strengths, but rendering large, complex outdoor spaces is not one of them. As a result, whenever players approach the edges of one of these maps and look inward, the performance plummets, even on modern boxes. With frame interpolation being an established Aleph One feature, it&rsquo;s simply unacceptable for maps to get fewer than 60 fps on modern boxes, at least in areas of the map players are meant to access. Here are a few screenshots of <span id="ftnt_ref02" class="dotted" title="1.0.3 differs from 1.0 only in featuring a few minor bug fixes. Since there was all of one week between 1.0&rsquo;s release on 2008-02-23 and 1.0.3&rsquo;s release on 2008-03-01, I have to imagine that comparatively few people played versions 1.0 through 1.0.2.">&ldquo;Where Giants Have Fallen&rdquo; in <em>Eternal X</em> 1.0.3<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span> (again with 1.3 textures):</p>
 
-			<div class="image"><a href="wghf-10-1.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1" src="wghf-10-1.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1"></a></div>
+			<div class="image"><a href="wghf-10-1.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1" src="wghf-10-1.png" class="image2x1" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #1"></a></div>
 
-			<div class="image"><a href="wghf-10-2.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #2" src="wghf-10-2.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #2"></a></div>
+			<div class="image"><a href="wghf-10-2.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #2" src="wghf-10-2.png" class="image2x1" title="&lsquo;Where Giants Have Fallen&rsquo; 1.0 Visual Mode #2"></a></div>
 
 			<p class="fixheight">You get as close to the feeling of having climbed up a huge mountain as Aleph One is likely to provide (which is admittedly not very close), but as you can see in the first screenshot, the frame rate is bad in places, the texturing is monotonous, and the lamps just look silly. Subsequent releases fixed the latter two aspects, but the frame rate problem persisted, which was the primary impetus for CryoS and me to remake it from scratch.</p>
 
@@ -127,13 +127,13 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">Our new version &ndash; and I&rsquo;ll withhold its polygon count for a moment &ndash; looks like this in Weland (minus some map writing that I&rsquo;ve removed to make the screenshot more legible):</p>
 
-			<div class="image"><a href="wghf-13-0.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Draw Mode" src="wghf-13-0.png" width="512" height="512" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Draw Mode"></a></div>
+			<div class="image"><a href="wghf-13-0.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Draw Mode" src="wghf-13-0.png" class="erauqssidlroweht" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Draw Mode"></a></div>
 
 			<p class="fixheight">This screenshot has some conspicuous features. First, the new map is a lot more circular. (I worked on the design, to the surprise of no one who knows my style.) Secondly, there are <span id="ftnt_ref03" class="dotted" title="One of the crossbeams has gone out of skew on the treadle.">crossbeams<a href="#ftnt03" class="noprintlink">&#8317;&sup3;&#8318;</a></span> extending through playable areas of the map that break it up into sextants (septants if we count the central structure). It&rsquo;s hard to tell from a Weland screenshot, but these actually create an optical illusion to make players think they&rsquo;re seeing much further than they actually are; landscape textures mostly conceal players&rsquo; inability to actually see past the crossbeams. Here are some screenshots I took in Vasara:</p>
 
-			<div class="image"><a href="wghf-13-1.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #1" src="wghf-13-1.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #1"></a></div>
+			<div class="image"><a href="wghf-13-1.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #1" src="wghf-13-1.png" class="image2x1" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #1"></a></div>
 
-			<div class="image"><a href="wghf-13-2.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #2" src="wghf-13-2.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #2"></a></div>
+			<div class="image"><a href="wghf-13-2.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #2" src="wghf-13-2.png" class="image2x1" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #2"></a></div>
 
 			<p class="fixheight">Again, we notice a few things immediately. First, this area still <em>looks</em> wide-open, even though it constricts the view to a much smaller area; second, despite having a snow script (which can be a drag on performance), the map gets a much better frame rate. And here&rsquo;s where I&rsquo;ll note its polygon count: 2,028. That&rsquo;s <em>not</em> a typo.</p>
 
@@ -143,11 +143,11 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">But doesn&rsquo;t it look like you can see over the crossbeams? Yes. This <del>trick</del> <em>illusion</em> employs &lsquo;5D space&rsquo;, the engine&rsquo;s ability to overlap spaces in X/Y/Z coordinates. It can do this because it uses <em>four</em> dimensions to render spaces: <strong>X</strong>, <strong>Y</strong>, <strong>Z</strong>, and <strong>polygon</strong>. This is related to it being a portal engine: it determines what to render based on how lines connect polygons. I feel a bit like a magician revealing how to perform <del>a trick</del> <em>an illusion</em> here, but&hellip; if you could get to the area of the crossbeam with the blue pillars, you&rsquo;d see this:</p>
 
-			<div class="image"><a href="wghf-13-3.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #1" src="wghf-13-3.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #1"></a></div>
+			<div class="image"><a href="wghf-13-3.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #1" src="wghf-13-3.png" class="image2x1" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #1"></a></div>
 
 			<p class="fixheight">And the other side of the crossbeam would look like this:</p>
 
-			<div class="image"><a href="wghf-13-4.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #2" src="wghf-13-4.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #2"></a></div>
+			<div class="image"><a href="wghf-13-4.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #2" src="wghf-13-4.png" class="image2x1" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #2"></a></div>
 
 			<p class="fixheight">The only thing to the left of the last screenshot, and to the right of the one prior, is a landscape-textured wall. (These regions are, of course, inaccessible to players.) As long as we constrict players&rsquo; view to a reasonable segment of the level, the frame rate rarely dips below 120 fps and almost never below 60 (on my eight-year-old Windows box, no less).</p>
 
@@ -157,11 +157,11 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">But in a few cases, players can actually escape the constriction. One is if they fall to their deaths, which, who cares. In a few others, though, they can use the assault rifle (or a similar weapon) to boost themselves over onto the edges of the crossbeams, whence they&rsquo;ll get a clear view of two sextants at once:</p>
 
-			<div class="image"><a href="wghf-13-5.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #3" src="wghf-13-5.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #3"></a></div>
+			<div class="image"><a href="wghf-13-5.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #3" src="wghf-13-5.png" class="image2x1" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Crossbeam Top #3"></a></div>
 
 			<p class="fixheight">Or even jump to an island, where they can see the sky texture clipping their view of the crossbeam in places:</p>
 
-			<div class="image"><a href="wghf-13-6.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Island View" src="wghf-13-6.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Island View"></a></div>
+			<div class="image"><a href="wghf-13-6.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Island View" src="wghf-13-6.png" class="image2x1" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Island View"></a></div>
 
 			<p class="fixheight">I consider these secrets, so I don&rsquo;t really care to fix them. More importantly, this goes to show how important negative space is to keeping the frame rate within acceptable bounds.</p>
 
@@ -171,11 +171,11 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">There are other seams in the level design as well, but there&rsquo;s usually enough going on in the level to distract players from noticing. Another case relates to the blue pillars. Two are clearly visible from here:</p>
 
-			<div class="image"><a href="wghf-13-7.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3: Now you see it&hellip;" src="wghf-13-7.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3: Now you see it&hellip;"></a></div>
+			<div class="image"><a href="wghf-13-7.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3: Now you see it&hellip;" src="wghf-13-7.png" class="image2x1" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3: Now you see it&hellip;"></a></div>
 
 			<p class="fixheight">However, if we step a bit to the left:</p>
 
-			<div class="image"><a href="wghf-13-8.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3:&hellip;now you don&rsquo;t." src="wghf-13-8.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3: &hellip;now you don&rsquo;t."></a></div>
+			<div class="image"><a href="wghf-13-8.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3:&hellip;now you don&rsquo;t." src="wghf-13-8.png" class="image2x1" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3: &hellip;now you don&rsquo;t."></a></div>
 
 			<p class="fixheight">The rear one disappears. This is a result of the engine&rsquo;s lack of any sort of &lsquo;bridges and balconies&rsquo;, owing to how it connects polygons. We can&rsquo;t stack one polygon on top of another, and the passage under the crossbeam blocks off the view above it, so the blue pillar in the back is impossible to show. Despite this, I felt the blue pillars were worth including, since they conceal more conspicuous blemishes in the view from the top of the level (which are again consequences of the passages beneath the crossbeams).</p>
 
@@ -197,10 +197,11 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">The other way I saved a lot of headache was by using as few sound objects as possible; to avoid using too many, I even went to the trouble of making new ambient sounds that combined existing sounds. For instance, this sound may <em>say</em> <strong>&lsquo;Waterfall&rsquo;</strong>:</p>
 
-			<div class="image"><a href="wghf-13-a.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="Sound in Where Giants Have Fallen" src="wghf-13-a.png" width="800" height="416" title="Sound in &lsquo;Where Giants Have Fallen&rsquo;"></a></div>
+			<div class="image"><a href="wghf-13-a.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="Sound in Where Giants Have Fallen" src="wghf-13-a.png" title="Sound in &lsquo;Where Giants Have Fallen&rsquo;"></a></div>
 
 			<p class="fixheight">However, the following script is merged in with the level:</p>
 
+			<div class="mobilescroll">
 			<blockquote><pre>&lt;marathon&gt;
 	&lt;!-- puts Water &amp; Waterfall into the Waterfall slot --&gt;
 	&lt;sounds&gt;
@@ -210,7 +211,7 @@ window.onload = function () {makeAllSortable();};
 	&lt;liquid index=&quot;0&quot;&gt;
 		&lt;sound type=&quot;5&quot; which=&quot;6&quot;/&gt;
 	&lt;/liquid&gt;
-&lt;/marathon&gt;</pre></blockquote>
+&lt;/marathon&gt;</pre></blockquote></div>
 
 			<p class="fixheight">As the comments suggest, this reassigns the &lsquo;Waterfall&rsquo; ambient sound to use a separate ambient sound created by mix-pasting the &lsquo;Water&rsquo; and &lsquo;Waterfall&rsquo; sounds; and it plays that sound whenever the player&rsquo;s head is above water. This effectively cuts in half the number of sounds I need water to play, and cuts the number of sound objects on the level by eight.</p>
 
@@ -222,23 +223,23 @@ window.onload = function () {makeAllSortable();};
 			<h4 class="centred notopmargin nobottommargin fixheight">Collection: <em><a href="https://nardo.bungie.org/tir" target="_blank" rel="noopener noreferrer" class="weight5">Tempus Irae Redux</a></em></h4>
 			<h4 class="centred notopmargin fixheight weight3">Designer: Aaron Freed</h4>
 
-			<div class="image"><a href="igs-0.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Il grande silenzio&rsquo; Draw Mode" src="igs-0.png" width="512" height="512" title="&lsquo;Il grande silenzio&rsquo; 1.3 Draw Mode"></a></div>
+			<div class="image"><a href="igs-0.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Il grande silenzio&rsquo; Draw Mode" src="igs-0.png" class="erauqssidlroweht" title="&lsquo;Il grande silenzio&rsquo; 1.3 Draw Mode"></a></div>
 
 			<p class="fixheight">My first pastiche of &lsquo;Stone Temple Pilates&rsquo;, seen above in a near-final state (1,751 polygons), went a lot differently. Called &lsquo;Il grande silenzio&rsquo; (after a brilliant Corbucci spaghetti western with an equally brilliant Morricone soundtrack), it appears in <em>Tempus Irae Redux</em>, which came out in March 2025. There are obvious stylistic differences, starting with the mathematical regularity of &lsquo;Where Giants Have Fallen&rsquo;; we can also see how much more densely the sound, points, and polygons are clustered in many areas of &lsquo;Il grande silenzio&rsquo; (and, as a direct consequence, how much less densely they&rsquo;re clustered in others).</p>
 
 			<p class="fixheight">In fact, I first ran out of map indices at around 1,500 polygons and had to prune dozens of sound objects. This is partly because I set almost all my doors to Heavy S&rsquo;pht Doors (well, Heavy Italian Doors, as we might call them in <em>Tempus Irae Redux</em>), which each require sound objects to keep their ambient sounds from cutting off; and partly because I was pastiching two brilliant mapmakers: <strong>RyokoTK</strong> and my co-conspirator <strong>James Hastings-Trew</strong>, who both tend to employ a lot of greeble. Ryoko noted on Discord that I &lsquo;underestimated just how damn wasteful&rsquo; his polygon use is, but funnily enough, I deliberately set out to <em>exceed</em> the amount of greeble they use, reasoning, &lsquo;Modern computers can handle it.&rsquo; (This was my first mistake; it was before Aleph One had frame interpolation.) But thanks to the snow script and the comparative lack of negative space, the map chugs in a few places:</p>
 
-			<div class="image"><a href="igs-1.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #1" src="igs-1.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #1"></a></div>
+			<div class="image"><a href="igs-1.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #1" src="igs-1.png" class="image2x1" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #1"></a></div>
 
-			<div class="image"><a href="igs-2.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #2" src="igs-2.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #2"></a></div>
+			<div class="image"><a href="igs-2.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #2" src="igs-2.png" class="image2x1" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #2"></a></div>
 
 			<p class="fixheight">I initially wanted to fix that, but I kept procrastinating because I couldn&rsquo;t face the idea of removing and reconstructing parts of the map from scratch. By the time the project came out, we decided computers had gotten fast enough that performance shouldn&rsquo;t be an issue. Moral of the story: Sometimes procrastination pays off, kids!</p>
 
 			<p class="fixheight">It might be more instructive to show screenshots of these maps consecutively:</p>
 
-			<div class="image"><a href="igs-3.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #3" src="igs-3.png" width="600" height="300" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #3"></a></div>
+			<div class="image"><a href="igs-3.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Il grande silenzio&rsquo; Visual Mode #3" src="igs-3.png" class="image2x1" title="&lsquo;Il grande silenzio&rsquo; Visual Mode #3"></a></div>
 
-			<div class="image"><a href="wghf-13-9.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #9" src="wghf-13-9.png" width="600" height="300" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #9"></a></div>
+			<div class="image"><a href="wghf-13-9.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #9" src="wghf-13-9.png" class="image2x1" title="&lsquo;Where Giants Have Fallen&rsquo; 1.3 Visual Mode #9"></a></div>
 
 			<p class="fixheight">Now, do I think the geometry in the <em>Tempus</em> map looks cool? Yes. Do I think it looks that much cooler than the <em>Eternal</em> map? Certainly not enough to justify the added difficulty it caused me.</p>
 
@@ -250,13 +251,13 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">That said, I&rsquo;m showing these screenshots not to show off the maps, but to illustrate how overusing greeble causes problems, and to provide a better yardstick for <em>what &lsquo;overusing greeble&rsquo; even means</em>. Greeble looks cool, but you have to know how much is too much. There&rsquo;s probably no way to truly learn this except through trial and error, but examining mapmakers&rsquo; styles more closely than I did can help. Ryoko doesn&rsquo;t use as much greeble as I thought he did when I made &lsquo;Il grande silenzio&rsquo;. I believe &lsquo;Monument to All Your Sins&rsquo; from <em>Starlight</em> still has the highest polygon count of any map he&rsquo;s released (1,843):</p>
 
-			<div class="image"><a href="monument-0.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Monument to All Your Sins&rsquo; Draw Mode" src="monument-0.png" width="512" height="512" title="&lsquo;Monument to All Your Sins&rsquo; Draw Mode"></a></div>
+			<div class="image"><a href="monument-0.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Monument to All Your Sins&rsquo; Draw Mode" src="monument-0.png" class="erauqssidlroweht" title="&lsquo;Monument to All Your Sins&rsquo; Draw Mode"></a></div>
 
 			<p class="fixheight">Yes, there are parts with plenty of greeble, but there&rsquo;s really nothing approaching the density I was using. Regardless of this, when I got his permission to adapt it for <em>Chronicles</em> as a solo level, he warned me that it was near the map index limit, that he&rsquo;d had to simplify it during construction, and that it&rsquo;d probably crash if I added too much complexity or many more ambient sound objects &ndash; which, in fact, is exactly what happened. In any case, here are two views from the southeast of &lsquo;Monument&rsquo; (which, to be clear, is just about the upper bound of the detail I&rsquo;d suggest trying to incorporate):</p>
 
-			<div class="image"><a href="monument-1.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #1" src="monument-1.png" width="600" height="300" title="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #1"></a></div>
+			<div class="image"><a href="monument-1.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #1" src="monument-1.png" class="image2x1" title="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #1"></a></div>
 
-			<div class="image"><a href="monument-2.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #2" src="monument-2.png" width="600" height="300" title="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #2"></a></div>
+			<div class="image"><a href="monument-2.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #2" src="monument-2.png" class="image2x1" title="&lsquo;Monument to All Your Sins&rsquo; Visual Mode #2"></a></div>
 
 			<p class="fixheight">There are parts with a lot of greeble, but others with almost none. And it looks fantastic. This was a lesson I hadn&rsquo;t absorbed when I made &lsquo;Il grande silenzio&rsquo;, but &lsquo;Where Giants Have Fallen&rsquo; hammered it home for me.</p>
 
@@ -268,15 +269,15 @@ window.onload = function () {makeAllSortable();};
 
 			<p class="fixheight">While I&rsquo;m at it, here&rsquo;s &lsquo;Stone Temple Pilates&rsquo;, which has 1,771 polygons. The Weland view looks like this:</p>
 
-			<div class="image"><a href="stp-0.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Stone Temple Pilates&rsquo; Draw Mode" src="stp-0.png" width="512" height="512" title="&lsquo;Stone Temple Pilates&rsquo; Draw Mode"></a></div>
+			<div class="image"><a href="stp-0.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Stone Temple Pilates&rsquo; Draw Mode" src="stp-0.png" class="erauqssidlroweht" title="&lsquo;Stone Temple Pilates&rsquo; Draw Mode"></a></div>
 
 			<p class="fixheight">I think the map&rsquo;s overall polygon density is comparable to what I wanted &lsquo;Il grande silenzio&rsquo; to have, but there are some important differences. The clusters of small polygons aren&rsquo;t as densely packed together, and while there are a lot of sound objects, Ryoko has few of them near polygon clusters as dense as mine. (Scroll back to the &lsquo;Il grande silenzio&rsquo; Weland screenshot and look at how densely clustered the polygons in some of my houses are &ndash; then bear in mind that many have two floors, so they&rsquo;re even more densely detailed than they look.)</p>
 
 			<p class="fixheight">&lsquo;Stone Temple Pilates&rsquo; looks like this in Vasara:</p>
 
-			<div class="image"><a href="stp-1.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #1" src="stp-1.png" width="600" height="300" title="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #1"></a></div>
+			<div class="image"><a href="stp-1.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #1" src="stp-1.png" class="image2x1" title="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #1"></a></div>
 
-			<div class="image"><a href="stp-2.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2" src="stp-2.png" width="600" height="300" title="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2"></a></div>
+			<div class="image"><a href="stp-2.png" target="_blank" rel="noopener noreferrer" class="noprintlink"><img alt="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2" src="stp-2.png" class="image2x1" title="&lsquo;Stone Temple Pilates&rsquo; Visual Mode #2"></a></div>
 
 			<p class="fixheight">This map slaps. Its influence on &lsquo;Il grande silenzio&rsquo; is probably obvious; its influence on &lsquo;Where Giants Have Fallen&rsquo; may be less so, besides the isolated islands whence Enforcers snipe at players, but it&rsquo;s nonetheless there.</p>
 

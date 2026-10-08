@@ -70,7 +70,7 @@ window.onload = function () {makeAllSortable();};
 
 			<p>If that isn&rsquo;t an option, you&rsquo;ll have to reduce the level&rsquo;s count of one or more of the following:</p>
 
-			<ul class="fixheight">
+			<ul class="fixheight mobileleftmargin15">
 				<li>Polygons</li>
 				<li>Lines</li>
 				<li>Vertices</li>
@@ -92,43 +92,44 @@ window.onload = function () {makeAllSortable();};
 			<div class="image"><a href="monument-to-nonexistence.gif" target="_blank"><img src="monument-to-nonexistence.gif" title="I will destroy extraneous polygons! I will create a monument to fear, surprise, ruthless efficiency, an almost fanatical devotion to the pope, and nice, red uniforms&hellip; oh, bugger" width="512" /></a></div>
 
 			<p>The fact that I only found 59 polygons to prune is actually quite impressive. Here are a few levels from various editions of <em>Where Monsters Are in Dreams</em> with their initial polygon counts, the polygon counts I pruned them to, and the number of polygons I pruned. (In all cases, I did not visibly change the levels&rsquo; appearance.)</p>
-
-			<table class="fixheight">
-				<thead>
-					<tr class="weight4 accent">
-						<th>Level</th>
-						<th class="right">Ante</th>
-						<th class="right">Post</th>
-						<th class="right">&Delta;</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><strong>We Were Speaking of Fate</strong></td>
-						<td class="right">1,705</td>
-						<td class="right">1,500</td>
-						<td class="right">&minus;205</td>
-					</tr>
-					<tr>
-						<td><strong>Cause &amp; Effect</strong> (first iteration)</td>
-						<td class="right">2,466</td>
-						<td class="right">2,222</td>
-						<td class="right">&minus;244</td>
-					</tr>
-					<tr>
-						<td><strong>Burning Memories</strong></td>
-						<td class="right">2,217</td>
-						<td class="right">2,020</td>
-						<td class="right">&minus;197</td>
-					</tr>
-					<tr>
-						<td><strong>Cast Your Fate to the Stars</strong></td>
-						<td class="right">1,950</td>
-						<td class="right">1,768</td>
-						<td class="right">&minus;182</td>
-					</tr>
-				</tbody>
-			</table>
+			<div class="mobilescroll">
+				<table class="fixheight curved mobilenowrap">
+					<thead>
+						<tr class="weight4 accent">
+							<th>Level</th>
+							<th class="right">Ante</th>
+							<th class="right">Post</th>
+							<th class="right">&Delta;</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><strong>We Were Speaking of Fate</strong></td>
+							<td class="right">1,705</td>
+							<td class="right">1,500</td>
+							<td class="right">&minus;205</td>
+						</tr>
+						<tr>
+							<td><strong>Cause &amp; Effect</strong> (first iteration)</td>
+							<td class="right">2,466</td>
+							<td class="right">2,222</td>
+							<td class="right">&minus;244</td>
+						</tr>
+						<tr>
+							<td><strong>Burning Memories</strong></td>
+							<td class="right">2,217</td>
+							<td class="right">2,020</td>
+							<td class="right">&minus;197</td>
+						</tr>
+						<tr>
+							<td><strong>Cast Your Fate to the Stars</strong></td>
+							<td class="right">1,950</td>
+							<td class="right">1,768</td>
+							<td class="right">&minus;182</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 
 			<p>I&rsquo;m not letting myself off the hook for inefficient polygon use here: &lsquo;Cast Your Fate to the Stars&rsquo; is my level!</p>
 
@@ -139,12 +140,12 @@ window.onload = function () {makeAllSortable();};
 			<h1 class="centred" id="principles">Principles of Pruning</h1>
 			<p>These principles have served me well:</p>
 
-				<ul class="fixheight">
+				<ul class="fixheight mobileleftmargin15">
 					<li>Look at the floor and ceiling heights. If you have a large cluster of polygons at the same height, they may be inefficiently filled.</li>
 					<li>Triangles are rarely the most efficient way to fill a space. Examine them especially closely.</li>
 					<li>Moving a point by an amount that&rsquo;s imperceptible to humans can often change a convex angle into a concave angle, thus allowing two polygons to be combined into one.</li>
 					<li>Pruning lines and vertices that are attached to polygons is at least as important as pruning polygons, though it&rsquo;s harder to keep track of since Weland doesn&rsquo;t print those at the bottom of each level.
-						<ul>
+						<ul class="mobileleftmargin15">
 							<li>To find out how many lines and vertices your map has, draw a new line unconnected to any other line. Select the line; its index will be your line count. Select the vertex you drew <em>first</em>; its index will be your vertex count. Now delete it. (Lines and vertices that are unconnected to any polygon don&rsquo;t actually count to the map index count, so this won&rsquo;t give you an exact count, but it&rsquo;ll get you a rough estimate.)</li>
 						</ul>
 					</li>
@@ -152,13 +153,13 @@ window.onload = function () {makeAllSortable();};
 					<li>Pruning clusters of polygons that are close to sound objects is most important of all &ndash; as I&rsquo;ve said elsewhere, every single polygon within a 10 World Unit X/Y radius of a sound object uses up a map index. (Height doesn&rsquo;t matter at all here.)</li>
 					<li>Learn to recognize patterns. Here are three example patterns I find myself running into <em>all the time</em>. (We&rsquo;ll assume that none of the pitfalls mentioned in the section below this one apply to any of these cases.)
 
-					<div class="image"><img src="example-savings.png" width="465" height="401" title="Three examples of geometry that can be filled more efficiently. (Note that 3a does not actually save map indices.)"/></div>
+					<div class="image"><img src="example-savings.png" title="Three examples of geometry that can be filled more efficiently. (Note that 3a does not actually save map indices.)"/></div>
 
-						<ol>
+						<ol class="mobileleftmargin15">
 							<li>Our initial instinct might be to keep polygon sizes relatively constant here, but by redrawing the area so that the leftmost protrusion is one polygon and the remaining space is another, we save ourselves not only one polygon, but also three lines and two vertices &ndash; if I understand how map indices are allocated correctly, this saves us six.</li>
 							<li>It&rsquo;s often tempting to draw split polygons at every polygon boundary, but they can often be combined. In this case, we save ourselves four vertices, eight lines, four polygons, and possibly four polygon exclusion zones &ndash; again, if I understand map index allocation correctly (which may not be the case), this saves us a net <em>twenty</em>.</li>
 							<li>There are two options here, and they are not created equal:
-								<ol class="loweralpha">
+								<ol class="loweralpha mobileleftmargin15">
 									<li>Again, our instinct might be to keep polygon sizes equal, but filling this area with two equal-sized polygons actually <em>adds</em> a vertex while not reducing our line count &ndash; thus using the same number of indices we started with!</li>
 									<li>Simply combining the leftmost polygon with the bottom-most polygon, on the other hand, saves us both a polygon and a line. This represents the most modest savings among these three examples (two map indices), but it&rsquo;s also the most straightforward: it merely requires deleting a line and refilling a polygon. (You could also combine the rightmost polygon with the bottom-most one; of course, you can&rsquo;t do both.)</li>
 								</ol>
@@ -174,7 +175,7 @@ window.onload = function () {makeAllSortable();};
 			<h1 class="centred" id="pitfalls">Potential Pitfalls of Pruning</h1>
 			<p>There are, of course, potential pitfalls as well:</p>
 
-				<ul class="fixheight">
+				<ul class="fixheight mobileleftmargin15">
 					<li>The floor and ceiling heights should match.</li>
 					<li>The floor and ceiling textures should match.</li>
 					<li>The liquid assignments should match.</li>
@@ -186,7 +187,7 @@ window.onload = function () {makeAllSortable();};
 					<li>If you have any terminals that use intralevel teleports, you&rsquo;ll probably have to redo them after deleting and remaking polygons.</li>
 					<li>If any teleporters took players to one of these polygons, you&rsquo;ll have to reassign them.</li>
 					<li>If there was a platform on one of these polygons, you&rsquo;ll have to remake it.
-						<ul><li>If any platform switches referred to such a platform, you&rsquo;ll have to reassign them.</li></ul>
+						<ul class="mobileleftmargin15"><li>If any platform switches referred to such a platform, you&rsquo;ll have to reassign them.</li></ul>
 					</li>
 					<li>If redrawing the geometry causes &lsquo;bouncy walls&rsquo; that eject players upon collisions, you may wish to avoid doing so. (Bouncy walls are especially likely to happen with narrow polygons [&lt;1/4 WU width] or heavily acute angles, though not all bouncy walls are caused by acute angles or narrow polygons, and not all narrow polygons or acute angles cause bouncy walls.)</li>
 					<li>The overhead map uses polygon index to determine display order, which can mess up aesthetics &ndash; however, I should note that as conscious of aesthetics as I am, even I don&rsquo;t pay a ton of attention to this. (I’ve written a Weland plugin to swap two polygons’ indices, but I still need to test it more before I release it.)</li>

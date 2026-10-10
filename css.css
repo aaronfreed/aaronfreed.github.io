@@ -1529,13 +1529,13 @@ th {
 	blockquote:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop18, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60, .margintop90, .speaker) {
 		margin-top: 16px;
 	}
-	blockquote:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright6, .marginright8, .marginright10, .marginright12, .marginright15, .marginright16, .marginright18, .marginright20, .marginright30, .marginright40, .marginright50, .marginright60, .marginright90) {
+	blockquote:not(.norightmargin, .marginright2, .marginright3, .marginright4, .marginright6, .marginright8, .marginright10, .marginright12, .marginright15, .marginright16, .marginright18, .marginright20, .marginright30, .marginright40, .marginright50, .marginright60, .marginright90, .printrightmargin15, .printrightmargin20) {
 		margin-right: 30px;
 	}
 	blockquote:not(.nobottommargin, .marginbottom2, .marginbottom3, .marginbottom4, .marginbottom6, .marginbottom8, .marginbottom10, .marginbottom12, .marginbottom15, .marginbottom16, .marginbottom18, .marginbottom20, .marginbottom30, .marginbottom40, .marginbottom50, .marginbottom60, .marginbottom90) {
 		margin-bottom: 16px;
 	}
-	blockquote:not(.noleftmargin, .marginleft2, .marginleft3, .marginleft4, .marginleft6, .marginleft8, .marginleft10, .marginleft12, .marginleft15, .marginleft16, .marginleft18, .marginleft20, .marginleft30, .marginleft40, .marginleft50, .marginleft60, .marginleft90, .speaker) {
+	blockquote:not(.noleftmargin, .marginleft2, .marginleft3, .marginleft4, .marginleft6, .marginleft8, .marginleft10, .marginleft12, .marginleft15, .marginleft16, .marginleft18, .marginleft20, .marginleft30, .marginleft40, .marginleft50, .marginleft60, .marginleft90, .speaker, .printleftmargin15, .printleftmargin20) {
 		margin-left: 30px;
 	}
 	blockquote.wide {
@@ -1964,6 +1964,18 @@ th {
 	}
 	.printalignleft {
 		text-align: left;
+	}
+	.printrightmargin15, .portfolio ul.printrightmargin15 {
+		margin-right: 15px;
+	}
+	.printrightmargin20, .portfolio ul.printrightmargin20, .portfolio ol.printrightmargin20 {
+		margin-right: 20px;
+	}
+	.printrightmargin30 {
+		margin-right: 30px;
+	}
+	.printalignright {
+		text-align: right;
 	}
 
 	table.nobg, 
@@ -3552,6 +3564,12 @@ button {
 }
 .musicnotation {
 	font-family: "Noto Music", "Nishiki-teki Regular";
+}
+
+
+abbr, abbr a:link, abbr a:visited { text-decoration: 1.5px underline dotted; text-underline-offset: 2px; }
+abbr.nounderline {
+	text-decoration: none;
 }
 
 /* link stuff */
@@ -5617,6 +5635,9 @@ p.interpolation.songwriter, p.interpolation-songwriters {
 	font-weight: var(--weight2);
 	color: var(--toc-counter);
 }
+.albumcredit a:link {
+	font-weight: var(--weight2);
+}
 .performercredit {
 	font-weight: var(--weight4);
 	color: var(--heading-color);
@@ -6078,31 +6099,31 @@ li.weight8,
 	text-decoration-thickness: 2.75px;
 
 }
-.weight0thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight0thickness, .weight0thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight0thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight0thickness, .weight0thickness) :is(a:link, a:visited, a:hover, a:active), a.weight0thickness:link {
 	text-decoration-thickness: 0.25px;
 }
-.weight1thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight1thickness, .weight1thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight1thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight1thickness, .weight1thickness) :is(a:link, a:visited, a:hover, a:active), a.weight1thickness:link {
 	text-decoration-thickness: 0.375px;
 }
-.weight2thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight2thickness, .weight2thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight2thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight2thickness, .weight2thickness) :is(a:link, a:visited, a:hover, a:active), a.weight2thickness:link {
 	text-decoration-thickness: 0.5px;
 }
-.weight3thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight3thickness, .weight3thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight3thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight3thickness, .weight3thickness) :is(a:link, a:visited, a:hover, a:active), a.weight3thickness:link {
 	text-decoration-thickness: 1.375px;
 }
-.weight4thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight4thickness, .weight4thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight4thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight4thickness, .weight4thickness) :is(a:link, a:visited, a:hover, a:active), a.weight4thickness:link {
 	text-decoration-thickness: 1.5px;
 }
-.weight5thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight5thickness, .weight5thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight5thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight5thickness, .weight5thickness) :is(a:link, a:visited, a:hover, a:active), a.weight5thickness:link {
 	text-decoration-thickness: 2px;
 }
-.weight6thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight6thickness, .weight6thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight6thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight6thickness, .weight6thickness) :is(a:link, a:visited, a:hover, a:active), a.weight6thickness:link {
 	text-decoration-thickness: 2.25px;
 }
-.weight7thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight7thickness, .weight7thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight7thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight7thickness, .weight7thickness) :is(a:link, a:visited, a:hover, a:active), a.weight7thickness:link {
 	text-decoration-thickness: 2.5px;
 }
-.weight8thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight8thickness, .weight8thickness) :is(a:link, a:visited, a:hover, a:active) {
+.weight8thickness, :is(:is(ol.toc, ol.toclite, ol.tocliter) :is(li, li li, li li li, li li li li) .weight8thickness, .weight8thickness) :is(a:link, a:visited, a:hover, a:active), a.weight8thickness:link {
 	text-decoration-thickness: 2.75px;
 }
 
@@ -6376,6 +6397,9 @@ a.songlink.weight3:hover
 li.songentry::before, li.songentry > p, ol.songheader > li::before, ol.songheader > li > p:first-of-type, li.songheader::before, .songentry, .songheader > p:first-of-type { font-size: 1.25rem; }
 li.movemententry::before, li.movemententry > p, .movemententry { font-size: 1.125rem; }
 
+.fainterunderline, a.fainterunderline:link {
+	text-decoration-color: color-mix(in sRGB, currentcolor 77.77777%, transparent);
+}
 
 ol.toc4 li :is(a.weight0:link, a.weight0:visited)
 {

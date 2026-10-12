@@ -1781,12 +1781,14 @@ th {
 		content: " \0027E8" attr(href) "\0027E9 ";
 		color: var(--link-hover) !important;
 		font-size: 81.25%;
+		hyphens: none;
 	}
 	a.locallink::after {
 		font-weight: var(--weight2) !important;
 		content: " \0027E8aaronfreed.github.io/" attr(href) "\0027E9 ";
 		color: var(--link-hover) !important;
 		font-size: 81.25%;
+		hyphens: none;
 	}
 	.linktext {
 		font-weight: var(--weight2);

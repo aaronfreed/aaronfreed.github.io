@@ -5366,6 +5366,43 @@ table.curved thead > tr:first-child > th {
 .bottomborder {
 	border-bottom: 2px solid var(--offset-level-3);
 }
+.bottomborderhue0, tr.bottomborderhue0, tr.bottomborderhue0 td {
+	border-bottom: 2px solid var(--oklab0-translucenter);
+}
+.bottomborderhue30, tr.bottomborderhue30, tr.bottomborderhue30 td {
+	border-bottom: 2px solid var(--oklab30-translucenter);
+}
+.bottomborderhue60, tr.bottomborderhue60, tr.bottomborderhue60 td {
+	border-bottom: 2px solid var(--oklab60-translucenter);
+}
+.bottomborderhue90, tr.bottomborderhue90, tr.bottomborderhue90 td {
+	border-bottom: 2px solid var(--oklab90-translucenter);
+}
+.bottomborderhue120, tr.bottomborderhue120, tr.bottomborderhue120 td {
+	border-bottom: 2px solid var(--oklab120-translucenter);
+}
+.bottomborderhue150, tr.bottomborderhue150, tr.bottomborderhue150 td {
+	border-bottom: 2px solid var(--oklab150-translucenter);
+}
+.bottomborderhue180, tr.bottomborderhue180, tr.bottomborderhue180 td {
+	border-bottom: 2px solid var(--oklab180-translucenter);
+}
+.bottomborderhue210, tr.bottomborderhue210, tr.bottomborderhue210 td {
+	border-bottom: 2px solid var(--oklab210-translucenter);
+}
+.bottomborderhue240, tr.bottomborderhue240, tr.bottomborderhue240 td {
+	border-bottom: 2px solid var(--oklab240-translucenter);
+}
+.bottomborderhue270, tr.bottomborderhue270, tr.bottomborderhue270 td {
+	border-bottom: 2px solid var(--oklab270-translucenter);
+}
+.bottomborderhue300, tr.bottomborderhue300, tr.bottomborderhue300 td {
+	border-bottom: 2px solid var(--oklab300-translucenter);
+}
+.bottomborderhue330, tr.bottomborderhue330, tr.bottomborderhue330 td {
+	border-bottom: 2px solid var(--oklab330-translucenter);
+}
+
 .nobottomborder, tr.nobottomborder :is(td, th), table.curved tr.nobottomborder :is(td, th) {
 	border-bottom: 0px;
 }

@@ -1703,6 +1703,9 @@ th {
 		padding-bottom: 4px;
 	}
 
+	.forceprintpadding2 :is(td, th), td.forceprintpadding2, th.forceprintpadding2 {padding-left: 2px !important; padding-right: 2px !important;}
+	.forceprintpadding4 :is(td, th), td.forceprintpadding4, th.forceprintpadding4 {padding-left: 4px !important; padding-right: 4px !important;}
+	.forceprintpadding6 :is(td, th), td.forceprintpadding6, th.forceprintpadding6 {padding-left: 6px !important; padding-right: 6px !important;}
 	.forceprintpadding8 :is(td, th), td.forceprintpadding8, th.forceprintpadding8 {padding-left: 8px !important; padding-right: 8px !important;}
 	.forceprintpadleft0 :is(td, th), td.forceprintpadleft0, th.forceprintpadleft0 {padding-left: 0px !important;}
 	.forceprintpadright0 :is(td, th), td.forceprintpadright0, th.forceprintpadright0 {padding-right: 0px !important;}
@@ -2349,6 +2352,9 @@ th {
 		padding-left: 4px;
 		padding-right: 4px;
 	}
+	table.printpadding4.curved :is(thead, tbody) tr :is(td, th) {
+		padding: 4px;
+	}
 
 	.printpadding3 td, .printpadding3 th,
 	:is(.sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad16, .sidepad20).printpadding3 :is(td, th),
@@ -2399,6 +2405,20 @@ th {
 	:is(td:last-child, th:last-child) {
 		padding-right: 0px;
 	} */
+	:is(.musicalmodes, .albumdocumentation) .print95 span.musicsymbol {
+		font-size: 1.425rem;
+	}
+	:is(.musicalmodes, .albumdocumentation) .print90 span.musicsymbol {
+		font-size: 1.35rem;
+	}
+	:is(.musicalmodes, .albumdocumentation) .print85 span.musicsymbol {
+		font-size: 1.275rem;
+	}
+	:is(.musicalmodes, .albumdocumentation) .print80 span.musicsymbol {
+		font-size: 1.2rem;
+	}
+
+
 }
 @media screen {
 	:root {
@@ -6277,11 +6297,14 @@ td.timesignature {
 .musictheory .musicsymbol {
 	font-size: 1.5rem;
 }
-:is(.musicalmodes, .albumdocumentation) span.musicsymbol, :is(.musicalmodes, .albumdocumentation) :is(.weight1, .weight2, .weight3, .weight4, .weight5, .weight6, .weight7, .weight8, .normal) .musicsymbol {
+:is(.musicalmodes, .albumdocumentation) span.musicsymbol {
 	font-size: 1.5rem;
 	font-weight: var(--weight0);
 	line-height: 0.75rem;
 	transform: translateY(-2px);
+}
+ :is(.musicalmodes, .albumdocumentation) :is(.weight1, .weight2, .weight3, .weight4, .weight5, .weight6, .weight7, .weight8, .normal) .musicsymbol {
+	font-weight: var(--weight0);
 }
 
 /* a very stupid way of doing this, but it works? sort of? */

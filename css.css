@@ -5380,46 +5380,83 @@ table.curved thead > tr:first-child > th {
 .rightborder {
 	border-right: 2px solid var(--offset-level-3);
 }
+.rightborderhue0, :is(tr, td, th).rightborderhue0, tr.rightborderhue0 td {
+	border-right: 2px solid var(--oklab0-translucenter);
+}
+.rightborderhue30, :is(tr, td, th).rightborderhue30, tr.rightborderhue30 td {
+	border-right: 2px solid var(--oklab30-translucenter);
+}
+.rightborderhue60, :is(tr, td, th).rightborderhue60, tr.rightborderhue60 td {
+	border-right: 2px solid var(--oklab60-translucenter);
+}
+.rightborderhue90, :is(tr, td, th).rightborderhue90, tr.rightborderhue90 td {
+	border-right: 2px solid var(--oklab90-translucenter);
+}
+.rightborderhue120, :is(tr, td, th).rightborderhue120, tr.rightborderhue120 td {
+	border-right: 2px solid var(--oklab120-translucenter);
+}
+.rightborderhue150, :is(tr, td, th).rightborderhue150, tr.rightborderhue150 td {
+	border-right: 2px solid var(--oklab150-translucenter);
+}
+.rightborderhue180, :is(tr, td, th).rightborderhue180, tr.rightborderhue180 td {
+	border-right: 2px solid var(--oklab180-translucenter);
+}
+.rightborderhue210, :is(tr, td, th).rightborderhue210, tr.rightborderhue210 td {
+	border-right: 2px solid var(--oklab210-translucenter);
+}
+.rightborderhue240, :is(tr, td, th).rightborderhue240, tr.rightborderhue240 td {
+	border-right: 2px solid var(--oklab240-translucenter);
+}
+.rightborderhue270, :is(tr, td, th).rightborderhue270, tr.rightborderhue270 td {
+	border-right: 2px solid var(--oklab270-translucenter);
+}
+.rightborderhue300, :is(tr, td, th).rightborderhue300, tr.rightborderhue300 td {
+	border-right: 2px solid var(--oklab300-translucenter);
+}
+.rightborderhue330, :is(tr, td, th).rightborderhue330, tr.rightborderhue330 td {
+	border-right: 2px solid var(--oklab330-translucenter);
+}
+
 .topborder {
 	border-top: 2px solid var(--offset-level-3);
 }
 .bottomborder {
 	border-bottom: 2px solid var(--offset-level-3);
 }
-.bottomborderhue0, tr.bottomborderhue0, tr.bottomborderhue0 td {
+.bottomborderhue0, :is(tr, td, th).bottomborderhue0, tr.bottomborderhue0 td, :is(.musicalmodes, table.curved) :is(td, th).bottomborderhue0 {
 	border-bottom: 2px solid var(--oklab0-translucenter);
 }
-.bottomborderhue30, tr.bottomborderhue30, tr.bottomborderhue30 td {
+.bottomborderhue30, :is(tr, td, th).bottomborderhue30, tr.bottomborderhue30 td, :is(.musicalmodes, table.curved) :is(td, th).bottomborderhue30 {
 	border-bottom: 2px solid var(--oklab30-translucenter);
 }
-.bottomborderhue60, tr.bottomborderhue60, tr.bottomborderhue60 td {
+.bottomborderhue60, :is(tr, td, th).bottomborderhue60, tr.bottomborderhue60 td, :is(.musicalmodes, table.curved) :is(td, th).bottomborderhue60 {
 	border-bottom: 2px solid var(--oklab60-translucenter);
 }
-.bottomborderhue90, tr.bottomborderhue90, tr.bottomborderhue90 td {
+.bottomborderhue90, :is(tr, td, th).bottomborderhue90, tr.bottomborderhue90 td, :is(.musicalmodes, table.curved) :is(td, th).bottomborderhue90 {
 	border-bottom: 2px solid var(--oklab90-translucenter);
 }
-.bottomborderhue120, tr.bottomborderhue120, tr.bottomborderhue120 td {
+.bottomborderhue120, :is(tr, td, th).bottomborderhue120, tr.bottomborderhue120 td, :is(.musicalmodes, table.curved) :is(td, th).bottomborderhue120 {
 	border-bottom: 2px solid var(--oklab120-translucenter);
 }
-.bottomborderhue150, tr.bottomborderhue150, tr.bottomborderhue150 td {
+.bottomborderhue150, :is(tr, td, th).bottomborderhue150, tr.bottomborderhue150 td, :is(.musicalmodes, table.curved) :is(td, th).bottomborderhue150 {
 	border-bottom: 2px solid var(--oklab150-translucenter);
 }
-.bottomborderhue180, tr.bottomborderhue180, tr.bottomborderhue180 td {
+.bottomborderhue180, :is(tr, td, th).bottomborderhue180, tr.bottomborderhue180 td, :is(.musicalmodes, table.curved) :is(td, th).bottomborderhue180 {
 	border-bottom: 2px solid var(--oklab180-translucenter);
 }
-.bottomborderhue210, tr.bottomborderhue210, tr.bottomborderhue210 td {
+.bottomborderhue210, :is(tr, td, th).bottomborderhue210, tr.bottomborderhue210 td, :is(.musicalmodes, table.curved) :is(td, th).bottomborderhue210 {
 	border-bottom: 2px solid var(--oklab210-translucenter);
 }
-.bottomborderhue240, tr.bottomborderhue240, tr.bottomborderhue240 td {
+.bottomborderhue240, :is(tr, td, th).bottomborderhue240, tr.bottomborderhue240 td, :is(.musicalmodes, table.curved) :is(td, th).bottomborderhue240 {
 	border-bottom: 2px solid var(--oklab240-translucenter);
 }
-.bottomborderhue270, tr.bottomborderhue270, tr.bottomborderhue270 td {
+.bottomborderhue270, :is(tr, td, th).bottomborderhue270, tr.bottomborderhue270 td, :is(.musicalmodes, table.curved) :is(td, th).bottomborderhue270 {
 	border-bottom: 2px solid var(--oklab270-translucenter);
 }
-.bottomborderhue300, tr.bottomborderhue300, tr.bottomborderhue300 td {
+.bottomborderhue300, :is(tr, td, th).bottomborderhue300, tr.bottomborderhue300 td, :is(.musicalmodes, table.curved) :is(td, th).bottomborderhue300 {
 	border-bottom: 2px solid var(--oklab300-translucenter);
 }
-.bottomborderhue330, tr.bottomborderhue330, tr.bottomborderhue330 td {
+.bottomborderhue330, :is(tr, td, th).bottomborderhue330, tr.bottomborderhue330 td, :is(.musicalmodes, table.curved) :is(td, th).bottomborderhue330 {
 	border-bottom: 2px solid var(--oklab330-translucenter);
 }
 

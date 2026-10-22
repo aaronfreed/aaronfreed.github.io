@@ -1299,6 +1299,9 @@ th {
 	blockquote.wide {
 		margin: 16px 0px 16px 15px;
 	}
+	blockquote.mobilerightmargin0 {
+		margin-right: 0px;
+	}
 	.mobilealignleft,
 	.right.mobilealignleft,
 	.centred.mobilealignleft,
@@ -1539,9 +1542,6 @@ th {
 		margin-left: 30px;
 	}
 	blockquote.wide {
-		margin-right: 0px;
-	}
-	blockquote.mobilerightmargin0 {
 		margin-right: 0px;
 	}
 	.mobileonly {

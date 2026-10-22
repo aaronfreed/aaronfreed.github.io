@@ -864,7 +864,7 @@ th {
 	margin-top: 90px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 	.fixmobilefontsize, .fixmobilefontsize > td, .fixmobilefontsize > th {
 		font-size: 1rem;
 		text-size-adjust: none;
@@ -1505,7 +1505,7 @@ th {
 		columns: 2;
 	}
 }
-@media screen and (width > 600px) {
+@media screen and (width > 800px) {
 	.nowrapdesktop {
 		white-space: nowrap;
 	}
@@ -1528,7 +1528,7 @@ th {
 		width: 800px;
 	}
 }
-@media screen and (width > 600px), print {
+@media screen and (width > 800px), print {
 	blockquote:not(.notopmargin, .margintop2, .margintop3, .margintop4, .margintop6, .margintop8, .margintop10, .margintop12, .margintop15, .margintop16, .margintop18, .margintop20, .margintop30, .margintop40, .margintop50, .margintop60, .margintop90, .speaker) {
 		margin-top: 16px;
 	}

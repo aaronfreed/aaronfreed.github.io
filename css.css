@@ -865,6 +865,15 @@ th {
 }
 
 @media screen and (max-width: 800px) {
+	html {
+		font-size: 16px;
+	    -webkit-text-size-adjust: 100%;
+    	text-size-adjust: 100%;
+	}
+	body {
+		font-size: 1rem; /* Inherits 16px from html */
+		line-height: 1.5;
+	}
 	.fixmobilefontsize, .fixmobilefontsize > td, .fixmobilefontsize > th {
 		font-size: 1rem;
 		text-size-adjust: none;
@@ -905,12 +914,21 @@ th {
 		padding-right: 0px;
 	}
 	.mobilescroll {
-		overflow: auto;
+		overflow-x: auto;
 		contain: inline-size;
+		-webkit-overflow-scrolling: touch;
 	}
-	.image img {
+
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+	.image img, img, iframe, video {
 		max-width: var(--page-width);
 	}
+	img {
+		height: auto;
+	}
+
 	:is(ol, ul) .image img {
 		max-width: calc(var(--page-width) - 30px);
 	}
@@ -927,7 +945,10 @@ th {
 		min-width: 800px;
 	}
 	.mobilemin600 {
-		min-width: 800px;
+		min-width: 600px;
+	}
+	.mobilemin400 {
+		min-width: 400px;
 	}
 	.mobilenowrap, .balanced-wrap.mobilenowrap, td.balanced-wrap.mobilenowrap, th.balanced-wrap.mobilenowrap, tr.balanced-wrap.mobilenowrap {
 		white-space: nowrap;
@@ -1112,6 +1133,24 @@ th {
 	}
 	.mobilerightpad15, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .noleftpad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .leftpad12, .leftpad15, .leftpad16, .leftpad20, .leftpad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad20, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobileleftpad, .mobileleftpad2, .mobileleftpad4, .mobileleftpad6, .mobileleftpad8, .mobileleftpad10, .mobileleftpad12, .mobileleftpad15, .mobileleftpad16, .mobileleftpad20, .mobileleftpad30, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30) .mobilerightpad15 {
 		padding-right: 15px;
+	}
+	.mobileleftpad20, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .noleftpad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .leftpad12, .leftpad15, .leftpad16, .leftpad20, .leftpad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad20, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobileleftpad, .mobileleftpad2, .mobileleftpad4, .mobileleftpad6, .mobileleftpad8, .mobileleftpad10, .mobileleftpad12, .mobileleftpad15, .mobileleftpad16, .mobileleftpad20, .mobileleftpad30, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30) .mobileleftpad20 {
+		padding-left: 20px;
+	}
+	.mobilerightpad20, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .noleftpad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .leftpad12, .leftpad15, .leftpad16, .leftpad20, .leftpad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad20, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobileleftpad, .mobileleftpad2, .mobileleftpad4, .mobileleftpad6, .mobileleftpad8, .mobileleftpad10, .mobileleftpad12, .mobileleftpad15, .mobileleftpad16, .mobileleftpad20, .mobileleftpad30, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30) .mobilerightpad20 {
+		padding-right: 20px;
+	}
+	.mobileleftpad25, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .noleftpad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .leftpad12, .leftpad15, .leftpad16, .leftpad20, .leftpad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad20, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobileleftpad, .mobileleftpad2, .mobileleftpad4, .mobileleftpad6, .mobileleftpad8, .mobileleftpad10, .mobileleftpad12, .mobileleftpad15, .mobileleftpad16, .mobileleftpad20, .mobileleftpad30, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30) .mobileleftpad25 {
+		padding-left: 25px;
+	}
+	.mobilerightpad25, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .noleftpad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .leftpad12, .leftpad15, .leftpad16, .leftpad20, .leftpad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad20, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobileleftpad, .mobileleftpad2, .mobileleftpad4, .mobileleftpad6, .mobileleftpad8, .mobileleftpad10, .mobileleftpad12, .mobileleftpad15, .mobileleftpad16, .mobileleftpad20, .mobileleftpad30, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30) .mobilerightpad25 {
+		padding-right: 25px;
+	}
+	.mobileleftpad30, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .noleftpad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .leftpad12, .leftpad15, .leftpad16, .leftpad20, .leftpad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad20, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobileleftpad, .mobileleftpad2, .mobileleftpad4, .mobileleftpad6, .mobileleftpad8, .mobileleftpad10, .mobileleftpad12, .mobileleftpad15, .mobileleftpad16, .mobileleftpad20, .mobileleftpad30, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30) .mobileleftpad30 {
+		padding-left: 30px;
+	}
+	.mobilerightpad30, :is(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .noleftpad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .leftpad12, .leftpad15, .leftpad16, .leftpad20, .leftpad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad20, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobileleftpad, .mobileleftpad2, .mobileleftpad4, .mobileleftpad6, .mobileleftpad8, .mobileleftpad10, .mobileleftpad12, .mobileleftpad15, .mobileleftpad16, .mobileleftpad20, .mobileleftpad30, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30) .mobilerightpad30 {
+		padding-right: 30px;
 	}
 	.mobilepad20 td:not(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .noleftpad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .leftpad12, .leftpad15, .leftpad16, .leftpad20, .leftpad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobileleftpad, .mobileleftpad2, .mobileleftpad4, .mobileleftpad6, .mobileleftpad8, .mobileleftpad10, .mobileleftpad12, .mobileleftpad15, .mobileleftpad16, .mobileleftpad20, .mobileleftpad30, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30),
 	.mobilepad20 th:not(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .noleftpad, .leftpad2, .leftpad4, .leftpad6, .leftpad8, .leftpad10, .leftpad12, .leftpad15, .leftpad16, .leftpad20, .leftpad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobileleftpad, .mobileleftpad2, .mobileleftpad4, .mobileleftpad6, .mobileleftpad8, .mobileleftpad10, .mobileleftpad12, .mobileleftpad15, .mobileleftpad16, .mobileleftpad20, .mobileleftpad30, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30)
@@ -1548,70 +1587,70 @@ th {
 		visibility: collapse !important;
 		display: none !important;
 	}
-	.nonmobileleftpad2 {
+	.nonmobileleftpad2, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobileleftpad2 {
 		padding-left: 2px;
 	}
-	.nonmobilerightpad2 {
+	.nonmobilerightpad2, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobilerightpad2 {
 		padding-right: 2px;
 	}
-	.nonmobileleftpad3 {
+	.nonmobileleftpad3, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobileleftpad3 {
 		padding-left: 3px;
 	}
-	.nonmobilerightpad3 {
+	.nonmobilerightpad3, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobilerightpad3 {
 		padding-right: 3px;
 	}
-	.nonmobileleftpad4 {
+	.nonmobileleftpad4, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobileleftpad4 {
 		padding-left: 4px;
 	}
-	.nonmobilerightpad4 {
+	.nonmobilerightpad4, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobilerightpad4 {
 		padding-right: 4px;
 	}
-	.nonmobileleftpad5 {
+	.nonmobileleftpad5, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobileleftpad5 {
 		padding-left: 5px;
 	}
-	.nonmobilerightpad5 {
+	.nonmobilerightpad5, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobilerightpad5 {
 		padding-right: 5px;
 	}
-	.nonmobileleftpad6 {
+	.nonmobileleftpad6, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobileleftpad6 {
 		padding-left: 6px;
 	}
-	.nonmobilerightpad6 {
+	.nonmobilerightpad6, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobilerightpad6 {
 		padding-right: 6px;
 	}
-	.nonmobileleftpad8 {
+	.nonmobileleftpad8, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobileleftpad8 {
 		padding-left: 8px;
 	}
-	.nonmobilerightpad8 {
+	.nonmobilerightpad8, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobilerightpad8 {
 		padding-right: 8px;
 	}
-	.nonmobileleftpad10 {
+	.nonmobileleftpad10, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobileleftpad10 {
 		padding-left: 10px;
 	}
-	.nonmobilerightpad10 {
+	.nonmobilerightpad10, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobilerightpad10 {
 		padding-right: 10px;
 	}
-	.nonmobileleftpad12 {
+	.nonmobileleftpad12, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobileleftpad12 {
 		padding-left: 12px;
 	}
-	.nonmobilerightpad12 {
+	.nonmobilerightpad12, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobilerightpad12 {
 		padding-right: 12px;
 	}
-	.nonmobileleftpad15 {
+	.nonmobileleftpad15, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobileleftpad15 {
 		padding-left: 15px;
 	}
-	.nonmobilerightpad15 {
+	.nonmobilerightpad15, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobilerightpad15 {
 		padding-right: 15px;
 	}
-	.nonmobileleftpad20 {
+	.nonmobileleftpad20, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobileleftpad20 {
 		padding-left: 20px;
 	}
-	.nonmobilerightpad20 {
+	.nonmobilerightpad20, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobilerightpad20 {
 		padding-right: 20px;
 	}
-	.nonmobileleftpad30 {
+	.nonmobileleftpad30, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobileleftpad30 {
 		padding-left: 30px;
 	}
-	.nonmobilerightpad30 {
+	.nonmobilerightpad30, :is(.sidepad1, .sidepad2, .sidepad3, .sidepad4, .sidepad5, .sidepad6, .sidepad7, .sidepad8, .sidepad9, .sidepad10, .sidepad12, .sidepad15) :is(td, th).nonmobilerightpad30 {
 		padding-right: 30px;
 	}
 	.nonmobileleftmargin-30 {
@@ -3683,6 +3722,7 @@ ol.baseball-eras {
 /*@import url('https://free.bboxtype.com/embedfonts/?family=FiraSans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|FiraSans+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|FiraSans+Compressed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');*/
 
 /* start main entry */
+
 html {
 	font-size: 100%;
 }
@@ -6393,7 +6433,7 @@ li.weight8,
 }
 .discography .fixheight,
 .discography .fixheight :is(td, th) {
-	line-height: 21px;
+	line-height: 1.3125rem;
 }
 :is(.musictheory, .fixheight) :is(h1, h2, h3, h4, .sectionbreak) {
 	line-height: initial;

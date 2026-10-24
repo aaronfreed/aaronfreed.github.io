@@ -883,6 +883,9 @@ th {
 		-moz-text-size-adjust: none !important;
 		-ms-text-size-adjust: none !important;
 	}
+	.nowrapscreen {
+		white-space: nowrap;
+	}
 	.nomobilepad td:not(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad20, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30),
 	.nomobilepad th:not(.sidepad2, .sidepad4, .sidepad6, .sidepad8, .sidepad10, .sidepad12, .sidepad15, .sidepad20, .sidepad30, .norightpad, .rightpad2, .rightpad4, .rightpad6, .rightpad8, .rightpad10, .rightpad12, .rightpad15, .rightpad16, .rightpad20, .rightpad30, .nomobilepad, .mobilepad20, .mobilepad30, .mobilepad40, .mobilepad50, .mobilepad60, .mobilepad70, .mobilepad80, .mobilepad90, .nomobilerightpad, .mobilerightpad2, .mobilerightpad4, .mobilerightpad6, .mobilerightpad8, .mobilerightpad10, .mobilerightpad12, .mobilerightpad15, .mobilerightpad16, .mobilerightpad20, .mobilerightpad30),
 	td.nomobilepad,
@@ -945,7 +948,11 @@ th {
 	.mobilemin400 {
 		min-width: 400px;
 	}
-	.mobilenowrap, .balanced-wrap.mobilenowrap, td.balanced-wrap.mobilenowrap, th.balanced-wrap.mobilenowrap, tr.balanced-wrap.mobilenowrap {
+	.mobilenowrap, .nowrapscreen,
+	.balanced-wrap.mobilenowrap, .balanced-wrap.nowrapscreen,
+	td.balanced-wrap.mobilenowrap, td.balanced-wrap.nowrapscreen,
+	th.balanced-wrap.mobilenowrap, th.balanced-wrap.nowrapscreen,
+	tr.balanced-wrap.mobilenowrap, tr.balanced-wrap.nowrapscreen {
 		white-space: nowrap;
 	}
 	.mobileleftmargin0 {
@@ -1540,7 +1547,11 @@ th {
 	}
 }
 @media screen and (width > 800px) {
-	.nowrapdesktop {
+	.nowrapdesktop, .nowrapscreen,
+	.balanced-wrap.nowrapdesktop, .balanced-wrap.nowrapscreen,
+	td.balanced-wrap.nowrapdesktop, td.balanced-wrap.nowrapscreen,
+	th.balanced-wrap.nowrapdesktop, th.balanced-wrap.nowrapscreen,
+	tr.balanced-wrap.nowrapdesktop, tr.balanced-wrap.nowrapscreen {
 		white-space: nowrap;
 	}
 	.portfolio ul,
@@ -1749,9 +1760,6 @@ th {
 		display: none !important;
 	}
 	.nowrapprint {
-		white-space: nowrap;
-	}
-	.nowrapdesktop {
 		white-space: nowrap;
 	}
 	.nopagebreak {

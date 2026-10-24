@@ -1675,10 +1675,7 @@ th {
 		margin-left: 50px;
 	}
 	.nonmobileleftmargin60 {
-		margin-left: 50px;
-	}
-	.nonmobileleftmargin50 {
-		margin-left: 50px;
+		margin-left: 60px;
 	}
 	.nonmobilebalancedwrap,
 	.nonmobilebalancedwrap :is(td, th, li) {

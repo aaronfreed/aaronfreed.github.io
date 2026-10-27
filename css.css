@@ -1046,12 +1046,12 @@ th {
 		margin-right: 45px;
 	}
 	.hangindent15.mobileleftmargin15 {
-		margin-left: 30px;
 		text-indent: -15px;
+		margin-left: 30px;
 	}
 	.mobilehangindent30, p.mobilehangindent30, .mobilehangindent30 p {
-	text-indent: -30px;
-	margin-left: 30px;
+		text-indent: -30px;
+		margin-left: 30px;
 	}
 	.mobilehangindent15, p.mobilehangindent15, .mobilehangindent15 p {
 		text-indent: -15px;
@@ -1694,6 +1694,15 @@ th {
 	.nonmobile5col {
 		columns: 5;
 	}
+	.nonmobilehangindent30, p.nonmobilehangindent30, .nonmobilehangindent30 p {
+		text-indent: -30px;
+		margin-left: 30px;
+	}
+	.nonmobilehangindent15, p.nonmobilehangindent15, .nonmobilehangindent15 p {
+		text-indent: -15px;
+		margin-left: 15px;
+	}
+
 }
 @media (prefers-color-scheme: light) {
 	@media screen {
@@ -6786,6 +6795,18 @@ img.fittowidth {
 .hangindent15, p.hangindent15, .hangindent15 p {
 	text-indent: -15px;
 	margin-left: 15px;
+}
+.indent-15 {
+	text-indent: -15px;
+}
+.indent-30 {
+	text-indent: -30px;
+}
+.indent15 {
+	text-indent: 15px;
+}
+.indent30 {
+	text-indent: 30px;
 }
 
 .mainsize, .mainsize td {

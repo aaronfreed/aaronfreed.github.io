@@ -6814,25 +6814,21 @@ img.fittowidth {
 }
 
 @supports (image-rendering: crisp-edges) {
-	img {
+	img[src$=".gif"], img.pixelated {
 		image-rendering: crisp-edges;
 	}
 }
 
 @supports (image-rendering: -webkit-optimize-contrast) {
-	img {
+	img[src$=".gif"], img.pixelated {
 		image-rendering: -webkit-optimize-contrast;
 	}
 }
 
 @supports (image-rendering: -moz-crisp-edges) {
-	img {
+	img[src$=".gif"], img.pixelated {
 		image-rendering: -moz-crisp-edges
 	}
-}
-
-img.pixelated {
-	image-rendering: pixelated;
 }
 
 .preferencesButton {

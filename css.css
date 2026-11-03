@@ -1820,7 +1820,7 @@ th {
 		break-inside: avoid-page;
 		break-before: auto;
 	}
-	.discography :not(:is(.unofficial-master, .endnotes)) tbody > :is(tr:nth-child(6n+1), tr:nth-child(6n+4)) {
+	/* .discography :not(:is(.unofficial-master, .endnotes)) tbody > :is(tr:nth-child(6n+1), tr:nth-child(6n+4)) {
 		break-inside: avoid-page;
 		break-before: auto;
 	}
@@ -1835,7 +1835,7 @@ th {
 	.unofficial-master tbody > :is(tr:nth-child(4n+2), tr:nth-child(4n+4)) {
 		break-inside: avoid-page;
 		break-before: avoid-page;
-	}
+	} */
 	h1,
 	h2,
 	h3,

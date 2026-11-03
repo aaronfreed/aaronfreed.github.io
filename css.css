@@ -1808,7 +1808,7 @@ th {
 	.forceprintpadding8 :is(td, th), td.forceprintpadding8, th.forceprintpadding8 {padding-left: 8px !important; padding-right: 8px !important;}
 	.forceprintpadleft0 :is(td, th), td.forceprintpadleft0, th.forceprintpadleft0 {padding-left: 0px !important;}
 	.forceprintpadright0 :is(td, th), td.forceprintpadright0, th.forceprintpadright0 {padding-right: 0px !important;}
-	.noprint
+	.noprint, .prefsBox, .preferencesButton
 	{
 		visibility: collapse !important;
 		display: none !important;

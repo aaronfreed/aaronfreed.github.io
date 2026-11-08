@@ -1332,7 +1332,7 @@ th {
 		padding-left: 3px;
 		padding-right: 3px;
 	}
-	.discography .mobile60 td.date, .discography .mobile60 th.date,
+	/* .discography .mobile60 td.date, .discography .mobile60 th.date,
 	.discography .mobile60 td.dr, .discography .mobile60 th.dr,
 	.discography .mobile60 td.website, .discography .mobile60 th.website,
 	.discography .mobile60 td.albumname, .discography .mobile60 th.albumname,
@@ -1354,7 +1354,7 @@ th {
 	{
 		font-size: .6rem;
 		line-height: 12.6px;
-	}
+	} */
 	.portfolio ul, .portfolio ol {
 		margin-top: 16px 0px 4px 15px;
 	}
@@ -1592,6 +1592,9 @@ th {
 	}
 	.nonmobile3col.mobile2col, .nonmobile4col.mobile2col, .nonmobile5col.mobile2col {
 		columns: 2;
+	}
+	.date {
+		white-space: nowrap;
 	}
 }
 @media screen and (width > 800px) {
@@ -5460,10 +5463,6 @@ thead tr.freshprince th {
 	font-family: "Fira Code", monospace;
 	font-weight: var(--weight5);
 	text-decoration-thickness: 2px;
-}
-.date {
-	text-align: right;
-	white-space: nowrap;
 }
 .dr {
 	font-family: "Fira Code", monospace;

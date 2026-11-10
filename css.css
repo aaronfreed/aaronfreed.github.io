@@ -6761,6 +6761,18 @@ td.timesignature {
 .accent .translucent-decoration, .accent.translucent-decoration, h1.translucent-decoration, h2.translucent-decoration, h3.translucent-decoration, h4.translucent-decoration, h5.translucent-decoration {
 	text-decoration-color: var(--heading-color-translucent);
 }
+A:link.translucent-decoration, .translucent-decoration A:link {
+	text-decoration-color: var(--link-translucent);
+}
+A:visited.translucent-decoration, .translucent-decoration A:visited {
+	text-decoration-color: var(--link-visited-translucent);
+}
+A:hover.translucent-decoration, .translucent-decoration A:hover {
+	text-decoration-color: var(--link-hover-translucent);
+}
+A:active.translucent-decoration, .translucent-decoration A:active {
+	text-decoration-color: var(--link-active-translucent);
+}
 .songlink,
 a.songlink,
 a.songlink:link,

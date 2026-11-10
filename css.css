@@ -6755,6 +6755,12 @@ td.timesignature {
 .translucent-decoration {
 	text-decoration-color: var(--main-translucent);
 }
+.toc-counter .translucent-decoration, .toc-counter.translucent-decoration {
+	text-decoration-color: var(--toc-counter-translucent);
+}
+.accent .translucent-decoration, .accent.translucent-decoration, h1.translucent-decoration, h2.translucent-decoration, h3.translucent-decoration, h4.translucent-decoration, h5.translucent-decoration {
+	text-decoration-color: var(--heading-color-translucent);
+}
 .songlink,
 a.songlink,
 a.songlink:link,

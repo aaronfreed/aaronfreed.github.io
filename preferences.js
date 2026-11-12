@@ -44,6 +44,20 @@ function applyPreferences() {
     } else {
         forceElement("font", null);
     }
+    if(cookie.includes("minweight300")) {
+        forceElement("minWeight", "minweight300.css");
+    } else if(cookie.includes("minweight200")) {
+        forceElement("minWeight", "maxweight200.css");
+    } else {
+        forceElement("minWeight", null);
+    }
+    if(cookie.includes("maxweight700")) {
+        forceElement("maxWeight", "maxweight700.css");
+    } else if(cookie.includes("maxweight800")) {
+        forceElement("maxWeight", "maxweight800.css");
+    } else {
+        forceElement("maxWeight", null);
+    }
 }
 
 function updatePreferences() {
@@ -53,6 +67,12 @@ function updatePreferences() {
         elements.push(e);
     }
     if((e = document.querySelector(`input[name="font"]:checked`)?.value)) {
+        elements.push(e);
+    }
+    if((e = document.querySelector(`input[name="minWeight"]:checked`)?.value)) {
+        elements.push(e);
+    }
+    if((e = document.querySelector(`input[name="maxWeight"]:checked`)?.value)) {
         elements.push(e);
     }
     document.cookie = `preferences=${elements.join("+")}`;
@@ -87,6 +107,19 @@ function openPreferences() {
 <li class="fira"><input type="radio" name="font" id="fontFira" value="" checked> <label for="fontFira">FiraGO</label> (default)</li>
 <li class="atkinson"><input type="radio" name="font" id="fontLysdexia" value="lysdexicsUntie"> <label for="fontLysdexia">Atkinson Hyperlegible Next</label></li>
 </ul>
+<p>Minimum Font Weight:</p>
+<ul>
+<li><input type="radio" name="minWeight" id="minweight100" value="" checked> <label for="minweight100" style="font-weight: 100;">Min. weight: 100</label> (default)</li>
+<li><input type="radio" name="minWeight" id="minweight200" value="weight200"> <label for="minweight200" style="font-weight: 200;">Min. weight: 200</label></li>
+<li><input type="radio" name="minWeight" id="minweight300" value="weight300"> <label for="minweight300" style="font-weight: 300;">Min. weight: 300</label></li>
+</ul>
+<p>Maximum Font Weight:</p>
+<ul>
+<li><input type="radio" name="maxWeight" id="maxweight700" value="weight700"> <label for="maxweight700" style="font-weight: 700;">Max. weight: 700</label></li>
+<li><input type="radio" name="maxWeight" id="maxweight800" value="weight800"> <label for="maxweight800" style="font-weight: 800;">Max. weight: 800</label></li>
+<li><input type="radio" name="maxWeight" id="maxweight900" value="" checked> <label for="maxweight900" style="font-weight: 900;">Max. weight: 900</label> (default)</li>
+</ul>
+<p>(I think the only thing that goes past 700 is my book on modes, and only a few times at that.)
 <p><a href="https://aaronfreed.github.io/cookienotice.html" target="_blank">Notice on cookie usage</a></p>
 <button id="closePrefs">Close</button>
 `;

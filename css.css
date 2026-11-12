@@ -6755,22 +6755,58 @@ td.timesignature {
 .translucent-decoration {
 	text-decoration-color: var(--main-translucent);
 }
-.toc-counter .translucent-decoration, .toc-counter.translucent-decoration {
+.toc-counter .translucent-decoration,
+.toc-counter.translucent-decoration,
+.toc-counterlinks .translucent-decoration A:link,
+.toc-counterlinks.translucent-decoration A:link,
+.toc-counterlinks A:link.translucent-decoration,
+.toc-counterlinks .translucent-decoration A:visited,
+.toc-counterlinks.translucent-decoration A:visited,
+.toc-counterlinks A:visited.translucent-decoration {
 	text-decoration-color: var(--toc-counter-translucent);
 }
-.accent .translucent-decoration, .accent.translucent-decoration, h1.translucent-decoration, h2.translucent-decoration, h3.translucent-decoration, h4.translucent-decoration, h5.translucent-decoration {
+.accent .translucent-decoration,
+.accent.translucent-decoration,
+h1.translucent-decoration,
+h2.translucent-decoration,
+h3.translucent-decoration,
+h4.translucent-decoration,
+h5.translucent-decoration,
+.accentlinks .translucent-decoration A:link,
+.accentlinks.translucent-decoration A:link,
+.accentlinks A:link.translucent-decoration,
+.accentlinks .translucent-decoration A:visited,
+.accentlinks.translucent-decoration A:visited,
+.accentlinks A:visited.translucent-decoration {
 	text-decoration-color: var(--heading-color-translucent);
 }
-A:link.translucent-decoration, .translucent-decoration A:link {
+A.translucent-decoration:link,
+.translucent-decoration A:link {
 	text-decoration-color: var(--link-translucent);
 }
-A:visited.translucent-decoration, .translucent-decoration A:visited {
+A.translucent-decoration:visited,
+.translucent-decoration A:visited {
 	text-decoration-color: var(--link-visited-translucent);
 }
-A:hover.translucent-decoration, .translucent-decoration A:hover {
+A.translucent-decoration:hover,
+.translucent-decoration A:hover,
+.accentlinks.translucent-decoration A:hover,
+.toc-counterlinks.translucent-decoration A:hover,
+.accentlinks .translucent-decoration A:hover,
+.toc-counterlinks .translucent-decoration A:hover,
+.accentlinks A.translucent-decoration:hover,
+.toc-counterlinks A.translucent-decoration:hover
+{
 	text-decoration-color: var(--link-hover-translucent);
 }
-A:active.translucent-decoration, .translucent-decoration A:active {
+A.translucent-decoration:active,
+.translucent-decoration A:active,
+.accentlinks.translucent-decoration A:active,
+.toc-counterlinks.translucent-decoration A:active,
+.accentlinks .translucent-decoration A:active,
+.toc-counterlinks .translucent-decoration A:active,
+.accentlinks A.translucent-decoration:active,
+.toc-counterlinks A.translucent-decoration:active {
 	text-decoration-color: var(--link-active-translucent);
 }
 .songlink,

@@ -107,7 +107,7 @@ function openPreferences() {
 <li class="fira"><input type="radio" name="font" id="fontFira" value="" checked> <label for="fontFira">FiraGO</label> (default)</li>
 <li class="atkinson"><input type="radio" name="font" id="fontLysdexia" value="lysdexicsUntie"> <label for="fontLysdexia">Atkinson Hyperlegible Next</label></li>
 </ul>
-<p>Minimum Font Weight:</p>
+<!--<p>Minimum Font Weight:</p>
 <ul>
 <li><input type="radio" name="minWeight" id="minweight100" value="" checked> <label for="minweight100" style="font-weight: 100;">Min. weight: 100</label> (default)</li>
 <li><input type="radio" name="minWeight" id="minweight200" value="weight200"> <label for="minweight200" style="font-weight: 200;">Min. weight: 200</label></li>
@@ -119,7 +119,7 @@ function openPreferences() {
 <li><input type="radio" name="maxWeight" id="maxweight800" value="weight800"> <label for="maxweight800" style="font-weight: 800;">Max. weight: 800</label></li>
 <li><input type="radio" name="maxWeight" id="maxweight900" value="" checked> <label for="maxweight900" style="font-weight: 900;">Max. weight: 900</label> (default)</li>
 </ul>
-<p>(I think the only thing that goes past 700 is my book on modes, and only a few times at that.)
+<p>(I think the only thing that goes past 700 is my book on modes, and only a few times at that.)-->
 <p><a href="https://aaronfreed.github.io/cookienotice.html" target="_blank">Notice on cookie usage</a></p>
 <button id="closePrefs">Close</button>
 `;

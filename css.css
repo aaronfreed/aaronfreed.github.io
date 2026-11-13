@@ -5585,7 +5585,7 @@ code {
 	font-family: "Fira Code", monospace;
 }
 .musicalmodes li {
-	line-height: calc(4rem / 3);
+	line-height: /*calc(4rem / 3)*/ inherit;
 }
 :is(.musicalmodes, table.curved) thead tr:first-child {
 	background-color: var(--offset-level-2);

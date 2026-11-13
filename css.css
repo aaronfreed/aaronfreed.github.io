@@ -4617,6 +4617,12 @@ ol.toc :is(li:not(.overridethickness), li:not(.overridethickness) a:link, li:not
 	color: var(--toc-counter);
 	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
 }
+:is(ol.toc, ol.toclite, ol.tocliter, ol.toc7, ol.toc6, ol.toc5, ol.toc4, ol.toc3, ol.toc2, ol.toc1, ol.toc0) ol ol ol ol li::before {
+	content: "\27EA" counters(item, ".")"\27EB\0020";
+	counter-increment: item;
+	color: var(--toc-counter);
+	text-decoration-color: color-mix(in sRGB, currentColor 77.77777%, transparent);
+}
 
 ol.toc7 :is(li, li a:link, li a:visited),
 ol.toc7 li::before {

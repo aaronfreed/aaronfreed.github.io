@@ -4551,7 +4551,7 @@ table.nospacing td, table.nospacing th {
 	margin-bottom: 4px;
 }
 :is(.toc, .toclite, .tocliter, .toc7, .toc6, .toc5, .toc4, .toc3, .toc2, .toc1, .toc0, .overview) li {
-	line-height: 1.25rem;
+	line-height: /*1.25rem*/ inherit;
 }
 /*:is(.toc, .toclite) li::before {
 	content: "{" counters(item, ".")"} ";

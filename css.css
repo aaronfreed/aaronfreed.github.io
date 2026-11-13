@@ -3859,7 +3859,7 @@ abbr.nounderline {
 
 /* link stuff */
 
-a:where(:link, :visited):where(:not(:hover, :active)) {
+.sectionbreak a:where(:link, :visited):where(:not(:hover, :active)) {
 	text-decoration: none;
 }
 a:link {

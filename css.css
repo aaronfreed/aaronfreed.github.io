@@ -3865,14 +3865,22 @@ abbr.nounderline {
 a:link {
 	color: var(--link);
 }
-/* a:visited {
+a:visited {
 	color: var(--link-visited);
-} */
+}
 a:hover {
 	color: var(--link-hover);
 }
 a:active {
 	color: var(--link-active);
+}
+.nolinkunderline a:link, a.nolinkunderline:link,
+.nolinkunderline a:visited, a.nolinkunderline:visited {
+	text-decoration: none;
+}
+.nolinkunderline a.underlinelink:link,
+.nolinkunderline a.underlinelink:visited {
+	text-decoration: underline;
 }
 
 del {

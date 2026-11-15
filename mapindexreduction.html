@@ -42,7 +42,7 @@ function makeAllSortable(parent) {
 window.onload = function () {makeAllSortable();};
 	</script>
 </head>
-	<body class="light tabular-oldstyle fixheight">
+	<body class="light tabular-oldstyle">
 		<header>
 			<h1 class="centred petitecaps"><em>Marathon</em> Mapmaking: Reducing Map Index Use</h1>
 
@@ -70,7 +70,7 @@ window.onload = function () {makeAllSortable();};
 
 			<p>If that isn&rsquo;t an option, you&rsquo;ll have to reduce the level&rsquo;s count of one or more of the following:</p>
 
-			<ul class="fixheight mobileleftmargin15">
+			<ul class="mobileleftmargin15">
 				<li>Polygons</li>
 				<li>Lines</li>
 				<li>Vertices</li>
@@ -93,7 +93,7 @@ window.onload = function () {makeAllSortable();};
 
 			<p>The fact that I only found 59 polygons to prune is actually quite impressive. Here are a few levels from various editions of <em>Where Monsters Are in Dreams</em> with their initial polygon counts, the polygon counts I pruned them to, and the number of polygons I pruned. (In all cases, I did not visibly change the levels&rsquo; appearance.)</p>
 			<div class="mobilescroll">
-				<table class="fixheight curved mobilenowrap">
+				<table class="curved mobilenowrap">
 					<thead>
 						<tr class="weight4 accent">
 							<th>Level</th>
@@ -140,7 +140,7 @@ window.onload = function () {makeAllSortable();};
 			<h1 class="centred" id="principles">Principles of Pruning</h1>
 			<p>These principles have served me well:</p>
 
-				<ul class="fixheight mobileleftmargin15">
+				<ul class="mobileleftmargin15">
 					<li>Look at the floor and ceiling heights. If you have a large cluster of polygons at the same height, they may be inefficiently filled.</li>
 					<li>Triangles are rarely the most efficient way to fill a space. Examine them especially closely.</li>
 					<li>Moving a point by an amount that&rsquo;s imperceptible to humans can often change a convex angle into a concave angle, thus allowing two polygons to be combined into one.</li>
@@ -175,7 +175,7 @@ window.onload = function () {makeAllSortable();};
 			<h1 class="centred" id="pitfalls">Potential Pitfalls of Pruning</h1>
 			<p>There are, of course, potential pitfalls as well:</p>
 
-				<ul class="fixheight mobileleftmargin15">
+				<ul class="mobileleftmargin15">
 					<li>The floor and ceiling heights should match.</li>
 					<li>The floor and ceiling textures should match.</li>
 					<li>The liquid assignments should match.</li>

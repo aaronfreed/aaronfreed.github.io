@@ -42,15 +42,15 @@ function makeAllSortable(parent) {
 window.onload = function () {makeAllSortable();};
 		</script>
 	</head>
-	<body class="light fixheight tabular-oldstyle">
+	<body class="light tabular-oldstyle">
 
 		<header>
 		<h1 class="petitecaps centred"><em>Marathon</em> Mapmaking: Snafus &amp; Solutions</h1>
 
-			<p class="fixheight">This is an advanced content creation guide for <strong><a href="https://alephone.lhowon.org/" target="_blank">Marathon Aleph One</a></strong>, an open-source engine based on <strong>Bungie</strong>&rsquo;s groundbreaking 1994-1996 first-person shooter trilogy (<em>not</em> its upcoming extraction shooter). It contains far more information than beginners will need (or even want) to know. If you&rsquo;re just getting started, bookmark this page so you can return here when you&rsquo;ve mastered the basics; then, consult my <a href="mapmaking101.html">beginner&rsquo;s guide</a> for:
+			<p>This is an advanced content creation guide for <strong><a href="https://alephone.lhowon.org/" target="_blank">Marathon Aleph One</a></strong>, an open-source engine based on <strong>Bungie</strong>&rsquo;s groundbreaking 1994-1996 first-person shooter trilogy (<em>not</em> its upcoming extraction shooter). It contains far more information than beginners will need (or even want) to know. If you&rsquo;re just getting started, bookmark this page so you can return here when you&rsquo;ve mastered the basics; then, consult my <a href="mapmaking101.html">beginner&rsquo;s guide</a> for:
 			</p>
 
-				<ul class="fixheight overview mobileleftmargin15">
+				<ul class="overview mobileleftmargin15">
 					<li>links to editors</li>
 					<li>detailed instructions on launching the texture editors Vasara, VAF, and Visual Mode.lua from the map editor Weland on Windows and MacOS</li>
 					<li>links to the official Forge and Anvil documentation</li>
@@ -60,11 +60,11 @@ window.onload = function () {makeAllSortable();};
 					<li>links to communities that may be able to solve problems my guides and the above resources don&rsquo;t address</li>
 				</ul>
 
-			<p class="fixheight">Meanwhile, this guide contains overviews of both common and uncommon problems creators may face (and solutions thereto). It&rsquo;s meant to help troubleshoot several problems with <em>Marathon</em> content creation that, as far as I know, aren&rsquo;t documented anywhere else well, if at all.</p>
+			<p>Meanwhile, this guide contains overviews of both common and uncommon problems creators may face (and solutions thereto). It&rsquo;s meant to help troubleshoot several problems with <em>Marathon</em> content creation that, as far as I know, aren&rsquo;t documented anywhere else well, if at all.</p>
 
-			<p class="fixheight">I&rsquo;ve been reorganizing this guide into smaller, more digestible pages, though I&rsquo;m <em>mostly</em> finished now &ndash; apologies for the inconvenience, but the ultimate form should be both more accessible and more logically organized.</p>
+			<p>I&rsquo;ve been reorganizing this guide into smaller, more digestible pages, though I&rsquo;m <em>mostly</em> finished now &ndash; apologies for the inconvenience, but the ultimate form should be both more accessible and more logically organized.</p>
 
-			<p class="fixheight">Should you have any suggestions for improvements to this guide or notice any errors, please either <a href="aboutme.html">contact me or submit to this page&rsquo;s GitHub repository</a>. (If you&rsquo;d like to be credited, please let me know.)</p>
+			<p>Should you have any suggestions for improvements to this guide or notice any errors, please either <a href="aboutme.html">contact me or submit to this page&rsquo;s GitHub repository</a>. (If you&rsquo;d like to be credited, please let me know.)</p>
 
 			<h1 id="toc" class="centred">Table of Contents</h1>
 
@@ -197,10 +197,10 @@ window.onload = function () {makeAllSortable();};
 			<h1 id="mapmaking" class="centred">Mapmaking</h1>
 			<h2 id="generalmapmaking" class="centred">General Notes</h2>
 
-			<ul class="fixheight mobileleftmargin15">
+			<ul class="mobileleftmargin15">
 				<li>Test your maps extensively on Total Carnage. If you&rsquo;re not good enough, get someone who is to test it. If you <em>are</em> good enough, note that you have a sort of &lsquo;home field advantage&rsquo; in already knowing the maps and your intended strategies &ndash; other players will find your maps harder than you think they will. Also, if something annoys you, it&rsquo;ll annoy other players ten times more.</li>
-				<li class="fixheight">Monsters can&rsquo;t move through lines shorter than their diameters, as <a href="https://citadel.lhowon.org/litterbox/Forge/hastursworkshop/things2.html" target="_blank">Hastur&rsquo;s Workshop explains</a>. This link also features plenty of other vital information about monster path building.</li>
-				<li class="fixheight">Aleph One lifts the vanilla 1,024-polygon limit (and many others), but as <a href="http://pfhorums.com/viewtopic.php?p=73316#p73316" target="_blank">Aleph One developer treellama noted</a>, the map index limit still constrains map complexity. (Note: The limit is now 65,535, not 32,767). The engine uses map indices to keep track of vertices, sides, polygons, sound objects, platforms, lines that are too small for the player to cross, and several other factors. The tl;dr:
+				<li>Monsters can&rsquo;t move through lines shorter than their diameters, as <a href="https://citadel.lhowon.org/litterbox/Forge/hastursworkshop/things2.html" target="_blank">Hastur&rsquo;s Workshop explains</a>. This link also features plenty of other vital information about monster path building.</li>
+				<li>Aleph One lifts the vanilla 1,024-polygon limit (and many others), but as <a href="http://pfhorums.com/viewtopic.php?p=73316#p73316" target="_blank">Aleph One developer treellama noted</a>, the map index limit still constrains map complexity. (Note: The limit is now 65,535, not 32,767). The engine uses map indices to keep track of vertices, sides, polygons, sound objects, platforms, lines that are too small for the player to cross, and several other factors. The tl;dr:
 					<ul class="mobileleftmargin15">
 						<li>Use as few sound objects as possible (but see below).</li>
 						<li>Avoid clusters of small polygons and/or short lines.</li>
@@ -212,7 +212,7 @@ window.onload = function () {makeAllSortable();};
 						<li>At the risk of being overly editorial: always, <em>always</em>, <strong><em>ALWAYS</em></strong> set <strong>Can&rsquo;t Deactivate Externally</strong> for these. I can&rsquo;t stress this strongly enough. If a door players need to pass through deactivates before they do so (or it traps them on the wrong side), that can render a level incompletable, and to compound the matter, they may save their games in such a state without having any idea they&rsquo;ve done anything wrong &ndash; which can be as mundane as &ldquo;shot switch with shotgun&rdquo; or &ldquo;accidentally hit Tab twice&rdquo;. In a guide such as this, I&rsquo;d rarely call something Objectively Bad Game Design. This is the exception.
 							<ul class="mobileleftmargin15">
 								<li>To make matters worse, <strong>Can&rsquo;t Deactivate Externally</strong> is necessary but not sufficient to prevent soft locks &ndash; for starters, a platform set to activate only once must <em>also</em> not border any platforms that have either <strong>Activates: Deactivates Adjacent Platform</strong> or <strong>Deactivates: Deactivates Adjacent Platform</strong> selected, since those override <strong>Can&rsquo;t Deactivate Externally</strong>. <!--I&rsquo;m currently not sure if this is new behaviour; I need to test it on an emulator later.--></li>
-								<li class="fixheight">As an indication of how much you should know before you break this rule, I&rsquo;ve encountered several otherwise professional-quality maps with <strong>Activates Only Once</strong> softlocks, including several levels of the original <em>Tempus Irae</em> that got their creator a job at Monolith Productions &ndash; so &lsquo;professional-quality&rsquo; is in no sense hyperbole. Are your maps good enough to get you a game development job? That&rsquo;s where they should probably be before you <em>think</em> about breaking this rule. (My maps haven&rsquo;t gotten me a game dev job, just in case it sounds like I&rsquo;m appealing to my own authority here.)</li>
+								<li>As an indication of how much you should know before you break this rule, I&rsquo;ve encountered several otherwise professional-quality maps with <strong>Activates Only Once</strong> softlocks, including several levels of the original <em>Tempus Irae</em> that got their creator a job at Monolith Productions &ndash; so &lsquo;professional-quality&rsquo; is in no sense hyperbole. Are your maps good enough to get you a game development job? That&rsquo;s where they should probably be before you <em>think</em> about breaking this rule. (My maps haven&rsquo;t gotten me a game dev job, just in case it sounds like I&rsquo;m appealing to my own authority here.)</li>
 								<li>The only <em>possible</em> acceptable exception to this rule is for missable secrets, but I&rsquo;d strongly discourage even that. If you absolutely <em>must</em> have a missable secret (please don&rsquo;t make your secrets missable), provide a way out for players caught on the wrong sides of doors (unless you mean to be <em>Marathon 1</em>-level sadistic &ndash; please, <em>please</em> don&rsquo;t do this: secrets shouldn&rsquo;t <em>punish</em> players who find them!), and make sure any teleporters are usable (i.e., test them in-game).</li>
 							</ul>
 						</li>
@@ -244,9 +244,9 @@ window.onload = function () {makeAllSortable();};
 				</li>
 				<li>If Weland plugins don&rsquo;t load on Windows, you may need to unblock them by checking the box shown below:
 					<div class="image mobilescroll"><img src="windows-unblock.png" /></div>
-					<p class="fixheight">I can&rsquo;t stress the following strongly enough, so I&rsquo;m printing it in large, bold, italicized, green capital letters:</p>
+					<p>I can&rsquo;t stress the following strongly enough, so I&rsquo;m printing it in large, bold, italicized, green capital letters:</p>
 					<p class="smallcaps green weight5 centred" style="font-size: 24px; text-wrap: balance; line-height: 125%;"><em>Don&rsquo;t make a habit of doing this with unknown software &ndash; only do it if you have reason to trust the source.</em></p>
-					<p class="fixheight">Unblocking untrustworthy software is a great way to get yourself subjected to spyware or worse.</p>
+					<p>Unblocking untrustworthy software is a great way to get yourself subjected to spyware or worse.</p>
 				</li>
 			</ul>
 
@@ -254,9 +254,9 @@ window.onload = function () {makeAllSortable();};
 
 			<h2 id="alephoneerrata" class="centred">Aleph One Documentation Errata</h2>
 
-			<p class="fixheight">Aleph One&rsquo;s documentation is largely accurate, but it does have a few errors. In the Lua documentation:</p>
+			<p>Aleph One&rsquo;s documentation is largely accurate, but it does have a few errors. In the Lua documentation:</p>
 
-			<ul class="fixheight mobileleftmargin15">
+			<ul class="mobileleftmargin15">
 				<li>
 					<strong><strong>Triggers</strong></strong>
 					<ul class="mobileleftmargin15">
@@ -294,7 +294,7 @@ window.onload = function () {makeAllSortable();};
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
 			<h2 id="scripts" class="centred">Scripts, Monster Limits, &amp; Music</h2>
-			<ul class="fixheight mobileleftmargin15">
+			<ul class="mobileleftmargin15">
 				<li>
 					<p>You can override monster activation limits with MML scripts. If you&rsquo;re making a standalone scenario, override this in your scenario&rsquo;s <strong>Scripts</strong> folder. The code for this (which also raises some limits on rendered objects) is:</p>
 
@@ -343,7 +343,7 @@ window.onload = function () {makeAllSortable();};
 
 			<h2 id="ambientsound" class="centred">Ambient Sound</h2>
 
-			<ul class="fixheight mobileleftmargin15">
+			<ul class="mobileleftmargin15">
 				<li>Platforms or doors with associated ambient sounds should have sound objects marked <strong>&lsquo;Is On Platform&rsquo;</strong> so that their &lsquo;moving&rsquo; sounds don&rsquo;t suddenly cut off when players walk off the platform, which sounds unnatural. This doesn&rsquo;t apply to platforms without ambient sounds (i.e., S&rsquo;pht Door, S&rsquo;pht Platform Silent).</li>
 				<li>Liquids should have the correct associated sound objects near their edges. Failure to include these causes sudden cutoffs when players move from polygons with liquids to polygons without them (or vice versa). These should be marked <strong>&lsquo;Floats&rsquo;</strong> so they align to their liquids&rsquo; heights; if they fall below the liquids, they&rsquo;ll become almost inaudible, which defeats the purpose of placing them.</li>
 				<li>If you place ambient sounds on polygons, boundaries between different ambient sounds (or between ambient sounds and silence) should have sound objects to avoid sudden cutoffs when players move between &lsquo;sound boundaries&rsquo;. This also results in directional sound, which enhances immersion.</li>
@@ -354,7 +354,7 @@ window.onload = function () {makeAllSortable();};
 
 			<h2 id="m1legacy" class="centred"><em>Marathon 1</em> Legacy Compatibility</h2>
 			<h3 id="m1polygons" class="centred">Those Weird <em>Marathon 1</em> Polygon Types</h3>
-			<ul class="fixheight mobileleftmargin15">
+			<ul class="mobileleftmargin15">
 				<li><strong>Minor Ouch</strong> behaves like <em>M1</em> lava: it only damages monsters and players that are touching the ground.</li>
 				<li><strong>Major Ouch</strong> behaves like <em>M1</em> Pfhor goo: it damages monsters and players even if they&rsquo;re airborne.</li>
 				<li>Both <strong>Ouch</strong> polygon types have additional behavior that only becomes active if <strong>Ouch Is Lava</strong> is checked in the <strong>Level Parameters</strong> box&rsquo;s <strong>M1 Compatibility</strong> section (see <a href="#m1compatibility">below</a>).</li>
@@ -372,7 +372,7 @@ window.onload = function () {makeAllSortable();};
 
 			<h3 id="m1missions" class="centred"><em>Marathon 1</em> Mission Types</h3>
 
-			<ul class="fixheight mobileleftmargin15">
+			<ul class="mobileleftmargin15">
 				<li><strong>Exploration (M1)</strong>: Like regular <strong>Exploration</strong>, except that rather than requiring players to walk on all <strong>Must Be Explored</strong> polygons (as in <em>M2</em>/<em>Infinity</em>-style <strong>Exploration</strong> missions), it merely requires players to look at them.
 					<ul class="mobileleftmargin15">
 						<li>As mentioned above, looking at these in <strong>Visual Mode.lua</strong> or <strong>Vasara 1.0.3</strong> resets them to <strong>&lsquo;Normal&rsquo;</strong>, so be careful. (<strong>VAF</strong> overrides this behavior at the cost of making it impossible to complete <strong>Exploration</strong> missions while <strong>VAF</strong> is active, but that&rsquo;s not what it&rsquo;s for, anyway; if all you want is to play the game without monsters, just use <a href="https://simplici7y.com/items/nature-s-peace/" target="_blank">Nature&rsquo;s Peace</a> instead.)</li>
@@ -388,9 +388,9 @@ window.onload = function () {makeAllSortable();};
 
 			<h3 id="m1compatibility" class="centred"><em>Marathon 1</em> Compatibility Flags</h3>
 
-			<p class="fixheight">All of these are found under <strong>Special</strong> &rightarrow; <strong>Level Parameters</strong> &rightarrow; <strong>M1 Compatibility</strong>.</p>
+			<p>All of these are found under <strong>Special</strong> &rightarrow; <strong>Level Parameters</strong> &rightarrow; <strong>M1 Compatibility</strong>.</p>
 
-			<ul class="fixheight mobileleftmargin15">
+			<ul class="mobileleftmargin15">
 				<li><strong>Glue:</strong> <strong>Superglue</strong>, <strong>Glue Trigger</strong>, and <strong>Glue</strong> (see <a href="#m1polygons">above</a>) only function if this is selected.</li>
 				<li><strong>Ouch Is Lava:</strong> Prevents monsters from leaving corpses on <strong>Minor Ouch</strong> or <strong>Major Ouch</strong> polygons if it&rsquo;s checked. (Those polygons will still damage players and monsters even if it isn&rsquo;t.)</li>
 				<li><strong>Use Song Index:</strong> Overrides the landscape collection selector with a number used to select a song index. I believe that, e.g., music index 0 <strong>must</strong> be stored at a path like <strong>Music/00.mp3</strong>, <strong>Music/00.ogg</strong>, <strong>Music/00.wav</strong>, or <strong>Music/00.aif</strong>, and to my knowledge, these are the only four audio formats that will work with this method of playing music. I strongly recommend using any other method instead.</li>
@@ -405,23 +405,23 @@ window.onload = function () {makeAllSortable();};
 
 			<h2 id="8bitsoftware" class="centred">8-bit Software Mode</h2>
 
-			<p class="fixheight">Aleph One 1.4 restored 8-bit software mode after it had been unavailable for over a decade. This causes potential havoc in territory related to both ShapeFusion (shapes sequences) and Atque (images files, map resources). I address the latter immediately below; see the ShapeFusion section further below for the former.</p>
+			<p>Aleph One 1.4 restored 8-bit software mode after it had been unavailable for over a decade. This causes potential havoc in territory related to both ShapeFusion (shapes sequences) and Atque (images files, map resources). I address the latter immediately below; see the ShapeFusion section further below for the former.</p>
 
 			<h3 id="chapterscreens" class="centred">Chapter Screens &amp; Sounds</h3>
 
-			<p class="fixheight">Aleph One won&rsquo;t display a chapter screen in 8-bit software mode unless it has an associated CLUT resource sharing the chapter screen&rsquo;s resource ID. Make sure to include these if you care about 8-bit software mode at all. Chapter screens go from 1500 (for level 0) to 1599 (for the end screen or, God help us all, level 99). Add 10,000 for &lsquo;24-bit&rsquo; versions and (I found this one out the hard way &ndash; by noticing it after a scenario release) 20,000 for &lsquo;32-bit&rsquo; versions. (This effectively makes 115xx and 215xx unusable if you have a level xx &ndash; but I&rsquo;m not sure if Aleph One will ever display the 115xx picture when the 215xx exists, so if you use 215xx for the chapter screen, you might be able to get away with using 115xx for a terminal picture.)</p>
+			<p>Aleph One won&rsquo;t display a chapter screen in 8-bit software mode unless it has an associated CLUT resource sharing the chapter screen&rsquo;s resource ID. Make sure to include these if you care about 8-bit software mode at all. Chapter screens go from 1500 (for level 0) to 1599 (for the end screen or, God help us all, level 99). Add 10,000 for &lsquo;24-bit&rsquo; versions and (I found this one out the hard way &ndash; by noticing it after a scenario release) 20,000 for &lsquo;32-bit&rsquo; versions. (This effectively makes 115xx and 215xx unusable if you have a level xx &ndash; but I&rsquo;m not sure if Aleph One will ever display the 115xx picture when the 215xx exists, so if you use 215xx for the chapter screen, you might be able to get away with using 115xx for a terminal picture.)</p>
 
-			<p class="fixheight">Also, if there&rsquo;s an associated sound sharing the 15xx ID, Aleph One will play it. This includes ending screens (though Aleph One also plays the music file, so it&rsquo;s probably not worth including a sound 1599 unless you plan for your scenario not to have opening music).</p>
+			<p>Also, if there&rsquo;s an associated sound sharing the 15xx ID, Aleph One will play it. This includes ending screens (though Aleph One also plays the music file, so it&rsquo;s probably not worth including a sound 1599 unless you plan for your scenario not to have opening music).</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
 			<h3 id="8bitsoftwareimages" class="centred">The Images File</h3>
 
-			<p class="fixheight">The Images file should have at least images 1100 and 1101 (&lsquo;enabled&rsquo; and &lsquo;disabled&rsquo; versions of the main menu) and 1700 (the vanilla HUD). It also needs CLUT resources with the same IDs. If it lacks images 1100 and 1101 (and their accompanying CLUTs), the menu will show up black if a player selects 8-bit software, and if they then quit the game, they&rsquo;ll either need to delete their scenario preferences or manually edit them to fix the graphics settings (on the very slim chance they even know how to do this) &ndash; which will effectively render the scenario unplayable for many players.</p>
+			<p>The Images file should have at least images 1100 and 1101 (&lsquo;enabled&rsquo; and &lsquo;disabled&rsquo; versions of the main menu) and 1700 (the vanilla HUD). It also needs CLUT resources with the same IDs. If it lacks images 1100 and 1101 (and their accompanying CLUTs), the menu will show up black if a player selects 8-bit software, and if they then quit the game, they&rsquo;ll either need to delete their scenario preferences or manually edit them to fix the graphics settings (on the very slim chance they even know how to do this) &ndash; which will effectively render the scenario unplayable for many players.</p>
 
-			<p class="fixheight">For full reference, the resources in Images correspond to the following:</p>
+			<p>For full reference, the resources in Images correspond to the following:</p>
 
-			<ul class="fixheight mobileleftmargin15">
+			<ul class="mobileleftmargin15">
 				<li><strong>1000:</strong> Opening splash screen. If 1001, 1002, 1003, etc., are defined, the game subsequently displays each before loading the main menu. (Please don&rsquo;t overdo this.)</li>
 				<li><strong>1100:</strong> &lsquo;Disabled&rsquo; main menu.</li>
 				<li><strong>1101:</strong> &lsquo;Enabled&rsquo; main menu.</li>
@@ -429,15 +429,15 @@ window.onload = function () {makeAllSortable();};
 				<li><strong>1700:</strong> Default HUD.</li>
 			</ul>
 
-			<p class="fixheight">Add 1,000 to each of these numbers for the &lsquo;24-bit&rsquo; versions. It&rsquo;s ideal to have separate 8-bit and 24-bit versions, as IIRC, Photoshop and GIMP dither images much better than Aleph One does.</p>
+			<p>Add 1,000 to each of these numbers for the &lsquo;24-bit&rsquo; versions. It&rsquo;s ideal to have separate 8-bit and 24-bit versions, as IIRC, Photoshop and GIMP dither images much better than Aleph One does.</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
 			<h2 id="directionality" class="centred">Directionality</h2>
-			<p style="margin-bottom: 16px;" class="fixheight">Angles in Weland can vary in two, not three, but <em>four</em> different ways. Its representation of objects&rsquo; angles corresponds to <span id="ftnt_ref02" class="dotted" title="The game actually represents the player&rsquo;s yaw internally as a 9-bit value, ranging from 0 to 511; an increase of 1 in its internal representation corresponds to an increase of 0.703125&deg;, i.e., 360/512. If you press F10, it shows the angle as a value ranging from &ndash;179.296875&deg; to 180&deg;, but this is because it subtracts 360&deg; from angles greater than 180&deg; &ndash; printing the value in the Lua console returns values from 0&deg; to 359.296875&deg;.">the game&rsquo;s representation of the player&rsquo;s yaw (non-vertical angle)<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span>.</p>
+			<p style="margin-bottom: 16px;">Angles in Weland can vary in two, not three, but <em>four</em> different ways. Its representation of objects&rsquo; angles corresponds to <span id="ftnt_ref02" class="dotted" title="The game actually represents the player&rsquo;s yaw internally as a 9-bit value, ranging from 0 to 511; an increase of 1 in its internal representation corresponds to an increase of 0.703125&deg;, i.e., 360/512. If you press F10, it shows the angle as a value ranging from &ndash;179.296875&deg; to 180&deg;, but this is because it subtracts 360&deg; from angles greater than 180&deg; &ndash; printing the value in the Lua console returns values from 0&deg; to 359.296875&deg;.">the game&rsquo;s representation of the player&rsquo;s yaw (non-vertical angle)<a href="#ftnt02" class="noprintlink">&#8317;&sup2;&#8318;</a></span>.</p>
 			<div class="mobilescroll mobilenowrap">
 				<table class="curved">
-					<thead class="fixheight">
+					<thead>
 						<tr class="accent weight4 centred">
 							<td class="right">Angle</td>
 							<td>Yaw</td>
@@ -447,7 +447,7 @@ window.onload = function () {makeAllSortable();};
 							<td>Lines</td>
 						</tr>
 					</thead>
-					<tbody class="fixheight">
+					<tbody>
 						<tr>
 							<td class="right"><strong>0&deg;</strong></td>
 							<td class="left">Faces east</td>
@@ -490,7 +490,7 @@ window.onload = function () {makeAllSortable();};
 
 			<h2 id="general" class="centred">General</h2>
 
-			<ul class="fixheight mobileleftmargin15">
+			<ul class="mobileleftmargin15">
 				<li>You can rename ShapeFusion resources by adding a file called <strong>DefaultNames.txt</strong> to your ShapeFusion folder. (You can also, of course, keep multiple ShapeFusion installs with different DefaultNames.txt files in each folder if you need versions for multiple scenarios.) I have <a href="defaultnames.html">a version of DefaultNames.txt</a> that incorporates complete lists of the Lua mnemonics for all possible resources, with a few specific changes, all detailed at the start of the file. Feel free to use these as needed to create names for your own scenarios.</li>
 				<li>ShapeFusion has most of <strong>Anvil</strong>&rsquo;s functionality, plus some functionality Anvil lacks (e.g. the ability to add new sound slots or alter the frames in a sequence). However, it lacks two major features:</li>
 					<ul class="mobileleftmargin15">
@@ -509,47 +509,47 @@ window.onload = function () {makeAllSortable();};
 
 			<h2 id="clutrestrictions" class="centred">Restrictions on Number of Colors</h2>
 
-			<p class="fixheight">Palettes (also called <strong>CLUTs</strong>, short for <strong>Color Look-Up Tables</strong>, the name for these resources in MacOS&rsquo; resource fork in the classic OS) can pose particular problems. One particular issue occurs with non-standard CLUTs.</p>
+			<p>Palettes (also called <strong>CLUTs</strong>, short for <strong>Color Look-Up Tables</strong>, the name for these resources in MacOS&rsquo; resource fork in the classic OS) can pose particular problems. One particular issue occurs with non-standard CLUTs.</p>
 
-			<ol class="fixheight mobileleftmargin15">
+			<ol class="mobileleftmargin15">
 				<li>We&rsquo;re restricted to 256</span> colors not just <em>within one palette</em> but <em>across all eight palettes within a collection</em>. If there are more than 256</span>, then once it runs out, Aleph One will simply use the closest color it encounters among the first 256</span>.</li>
 				<li>Aleph One counts colors that are imperceptibly different as separate colors. For instance, it regards #0100</span>FF (red 1, green 0, blue 255</span>) as different from #0200FF (red 2, green 0, blue 255</span>).</li>
 				<li>Unlike Anvil (which tried to restrict itself to vanilla-safe colors unless you specifically enabled a setting to override this), ShapeFusion isn&rsquo;t guaranteed to use the same colors each time it creates a color ramp unless each ramp starts and ends with the same colors and contains the same number of colors.</li>
 			</ol>
 
-			<p class="fixheight">It&rsquo;s a mess. Two ways to ensure you&rsquo;re getting the 256</span> colors you want:</p>
+			<p>It&rsquo;s a mess. Two ways to ensure you&rsquo;re getting the 256</span> colors you want:</p>
 
-			<ol class="fixheight mobileleftmargin15">
+			<ol class="mobileleftmargin15">
 				<li>Export all color tables in a collection to GIMP format (.gpl) and go through them with a fine-toothed comb. GIMP palettes are human-readable and can be edited in any text editor; each color is simply listed in RGB format, with values ranging from 0 to 255</span> for all three colors. After weeding out the unwanted near-identical colors across palettes, save and reimport.</li>
 				<li>Simply use all 256</span> colors you want in CLUT 0 and rearrange them as desired in the others if needed. Be warned, however, that ShapeFusion currently has no option to reduce the number of colors per CLUT, should you decide you want fewer. You&rsquo;d currently need to open the shapes file in Anvil or Hakvil (using an emulator or a classic Mac) and adjust the palettes there.</li>
 			</ol>
 
-			<p class="fixheight">Note that using more than 253 colors across all 8-bit palettes in a shapes file can look very, very stupid in 8-bit software mode, in case anyone even cares about that in 2024. I don&rsquo;t actually know how 8-bit software mode selects colors, but sticking strictly to vanilla colors averts the issue. To that end, I&rsquo;ve compiled the safe colors for <a href="marathon1palette.html"><em>Marathon 1</em></a> and <a href="marathon2palette.html"><em>Marathon 2</em>/<em>&infin;</em></a>. (To be clear: use <em>M1</em> colors for <em>M1</em> shapes and <em>M2</em>/<em>&infin;</em> colors for <em>M2</em>/<em>&infin;</em> shapes.)</p>
+			<p>Note that using more than 253 colors across all 8-bit palettes in a shapes file can look very, very stupid in 8-bit software mode, in case anyone even cares about that in 2024. I don&rsquo;t actually know how 8-bit software mode selects colors, but sticking strictly to vanilla colors averts the issue. To that end, I&rsquo;ve compiled the safe colors for <a href="marathon1palette.html"><em>Marathon 1</em></a> and <a href="marathon2palette.html"><em>Marathon 2</em>/<em>&infin;</em></a>. (To be clear: use <em>M1</em> colors for <em>M1</em> shapes and <em>M2</em>/<em>&infin;</em> colors for <em>M2</em>/<em>&infin;</em> shapes.)</p>
 
-			<p class="fixheight">The other possibility is to pick a set of 253 colors and ensure that <em>every</em> &ldquo;8-bit color version&rdquo; sticks exclusively to those colors. This is more challenging, since you&rsquo;ll have to edit every existing 8-bit palette in your shapes file, but it can result in a distinctive aesthetic.</p>
+			<p>The other possibility is to pick a set of 253 colors and ensure that <em>every</em> &ldquo;8-bit color version&rdquo; sticks exclusively to those colors. This is more challenging, since you&rsquo;ll have to edit every existing 8-bit palette in your shapes file, but it can result in a distinctive aesthetic.</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
 			<h2 id="transparency" class="centred">Transparency &amp; Landscapes</h2>
 
-			<p class="fixheight"><em>Marathon</em> counts the first three colors of each CLUT as transparent, whether you want it to or not. Why does it need three? Why not just one? In all likelihood, only Jason Jones might be able to answer this question, assuming he even remembers the answer. This poses problems with custom landscape CLUTs. Why do landscapes even have transparency? Another question Jason Jones probably doesn&rsquo;t recall the answer to. The first three colors in a landscape CLUT are still considered transparent, and in OpenGL mode, <em>Marathon</em> changes anything it regards as transparent to show up as white.</p>
+			<p><em>Marathon</em> counts the first three colors of each CLUT as transparent, whether you want it to or not. Why does it need three? Why not just one? In all likelihood, only Jason Jones might be able to answer this question, assuming he even remembers the answer. This poses problems with custom landscape CLUTs. Why do landscapes even have transparency? Another question Jason Jones probably doesn&rsquo;t recall the answer to. The first three colors in a landscape CLUT are still considered transparent, and in OpenGL mode, <em>Marathon</em> changes anything it regards as transparent to show up as white.</p>
 
-			<p class="fixheight">As a result, for all practical purposes, landscape CLUTs are restricted to 253</span> colors, so when generating landscape CLUTs, you must account for transparency and fill the CLUT&rsquo;s first three colors with garbage that won&rsquo;t show up in the landscape. Alternately (in Photoshop), you can:</p>
+			<p>As a result, for all practical purposes, landscape CLUTs are restricted to 253</span> colors, so when generating landscape CLUTs, you must account for transparency and fill the CLUT&rsquo;s first three colors with garbage that won&rsquo;t show up in the landscape. Alternately (in Photoshop), you can:</p>
 
-			<ol class="fixheight mobileleftmargin15">
+			<ol class="mobileleftmargin15">
 				<li>Convert to 253</span>-color indexed color.</li>
 				<li>Convert back to RGB.</li>
 				<li>Using <strong>Forced &gt; Custom</strong> with #0000</span>FF, #FF00</span>FF, and #00</span>FFFF, convert to 256</span>-color indexed color.</li>
 				<li>Export the new CLUT.</li>
 			</ol>
 
-			<p class="fixheight">Either way. (I don&rsquo;t use GIMP, but I&rsquo;m guessing you can do something similar by making a 253</span>-color bitmap, exporting the CLUT, and editing it in a text editor.)</p>
+			<p>Either way. (I don&rsquo;t use GIMP, but I&rsquo;m guessing you can do something similar by making a 253</span>-color bitmap, exporting the CLUT, and editing it in a text editor.)</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
 			<h2 id="sequencetiming" class="centred">Sequence Timing &amp; Film Compatibility</h2>
 
-			<ul class="fixheight mobileleftmargin15">
+			<ul class="mobileleftmargin15">
 				<li>Ideally, &lsquo;Transfer mode period&rsquo; should equal &lsquo;Frames per view&rsquo; times &lsquo;Number of frames&rsquo;.</li>
 				<li>Probably obvious: Changing a sequence&rsquo;s timing, loop frame, or key frame can and almost certainly will desync films and network games.</li>
 				<li>Probably <em>not</em> obvious: Changing either the number of frames or the duration thereof is also likely to desync films and network games, <em><strong>even if the &lsquo;transfer mode period&rsquo; remains unchanged!</strong></em> There are several off-by-one errors in this game&rsquo;s source code, and it&rsquo;d require a deep dive into the game source code to describe all the arcane rules one would have to obey to avoid causing issues.</li>
@@ -561,19 +561,19 @@ window.onload = function () {makeAllSortable();};
 
 			<h2 id="weaponsinhand" class="centred">&lsquo;Weapons in Hand&rsquo; Sequences</h2>
 
-			<p class="fixheight">For years, Aleph One didn&rsquo;t have 8-bit software mode, so &lsquo;8-bit color&rsquo; and &lsquo;true color&rsquo; sequences being out of alignment wasn&rsquo;t a problem. Aleph One 1.4 restored it, so it&rsquo;s worth taking note if a sequence is present in one and not the other. A physics model calling said sequence in 8-bit software mode will crash Aleph One (or cause an assertion failure; I forget which, but either way, it closes the game). Plus, if a sequence has a different timing between the two versions of a collection, it&rsquo;ll desync films and may desync network games if one player uses 8-bit software mode and the other doesn&rsquo;t.</p>
+			<p>For years, Aleph One didn&rsquo;t have 8-bit software mode, so &lsquo;8-bit color&rsquo; and &lsquo;true color&rsquo; sequences being out of alignment wasn&rsquo;t a problem. Aleph One 1.4 restored it, so it&rsquo;s worth taking note if a sequence is present in one and not the other. A physics model calling said sequence in 8-bit software mode will crash Aleph One (or cause an assertion failure; I forget which, but either way, it closes the game). Plus, if a sequence has a different timing between the two versions of a collection, it&rsquo;ll desync films and may desync network games if one player uses 8-bit software mode and the other doesn&rsquo;t.</p>
 
-			<p class="fixheight">As tempting as it is to tell players not to use 8-bit software mode, some will inevitably disregard it out of ignorance, and others out of pure spite (insert out-of-context &lsquo;Killing in the Name&rsquo; quote here). The best solution is to make sure each sequence in both versions has the same sequence type, frames per view, ticks per frame, loop frame, key frame, transfer mode period, and frame sound, then update one anytime you update the other.</p>
+			<p>As tempting as it is to tell players not to use 8-bit software mode, some will inevitably disregard it out of ignorance, and others out of pure spite (insert out-of-context &lsquo;Killing in the Name&rsquo; quote here). The best solution is to make sure each sequence in both versions has the same sequence type, frames per view, ticks per frame, loop frame, key frame, transfer mode period, and frame sound, then update one anytime you update the other.</p>
 
-			<p class="fixheight">By default, the only other collections with &lsquo;true color&rsquo; versions are the landscape palettes, and it&rsquo;s very rare (though not unthinkable) for something to call one of the sequences in these (assuming any are even defined). I think a classic Mac utility could create &lsquo;true color&rsquo; versions of other collections (all 32</span> collections can have them; it&rsquo;s just that, by default, only the Weapons in Hand and Landscapes did), and if a shapes file had these, their sequences should align between &lsquo;8-bit&rsquo; and &lsquo;true color&rsquo; wherever they&rsquo;re defined.</p>
+			<p>By default, the only other collections with &lsquo;true color&rsquo; versions are the landscape palettes, and it&rsquo;s very rare (though not unthinkable) for something to call one of the sequences in these (assuming any are even defined). I think a classic Mac utility could create &lsquo;true color&rsquo; versions of other collections (all 32</span> collections can have them; it&rsquo;s just that, by default, only the Weapons in Hand and Landscapes did), and if a shapes file had these, their sequences should align between &lsquo;8-bit&rsquo; and &lsquo;true color&rsquo; wherever they&rsquo;re defined.</p>
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
 
 			<h1 id="appendices" class="centred">Appendices &amp; Transplanted Content</h1>
 
-			<p class="fixheight">I&rsquo;ve split several sections off onto their own pages. Please update your links accordingly:</p>
+			<p>I&rsquo;ve split several sections off onto their own pages. Please update your links accordingly:</p>
 
-			<ul class="fixheight mobileleftmargin15">
+			<ul class="mobileleftmargin15">
 				<li><a href="marathoncircles.html" id="circles">Circles and the Custom Grid</a>, including its subsection <strong id="radii">Radii and Rotations for 1 WU-long Sides with Regular Polygons</strong>.</li>
 				<li><a href="mapcomplexity.html" id="mapcomplexity">Map Complexity: A Case Study</a>
 					<ul class="mobileleftmargin15">
@@ -606,8 +606,8 @@ window.onload = function () {makeAllSortable();};
 				</li>
 			</ul>
 
-			<p class="fixheight">Additionally, to avoid duplicating content, I&rsquo;ve moved several sections to the <a href="mapmaking101.html">beginners&rsquo; mapmaking page</a>. Here are direct links to the relevant sections &ndash; again, please update your links.</p>
-				<ul class="fixheight mobileleftmargin15">
+			<p>Additionally, to avoid duplicating content, I&rsquo;ve moved several sections to the <a href="mapmaking101.html">beginners&rsquo; mapmaking page</a>. Here are direct links to the relevant sections &ndash; again, please update your links.</p>
+				<ul class="mobileleftmargin15">
 					<li>I&rsquo;ve primarily split <strong id="resources">Resources</strong> across <a href="mapmaking101.html#editors" id="editors">Aleph One Content Editors</a> and <a href="mapmaking101.html#furtherreading">Further Reading</a>, with a small bit going into the <a href="mapmaking101.html#basics">Mapmaking Basics</a> section.
 						<ul class="mobileleftmargin15">
 							<li><a href="mapmaking101.html#editorsm2i" id="resourcesa1">Aleph One Content Editing (<em>Marathon 2</em>/<em>Infinity</em> Format)</a></li>
@@ -637,7 +637,7 @@ window.onload = function () {makeAllSortable();};
 					</li>
 				</ul>
 
-				<p class="fixheight">Lastly, I&rsquo;ve moved my <a href="aboutme.html#bio" id="bio">biography</a> and <a href="aboutme.html#contact" id="contact">contact info</a> to a dedicated page: <a href="aboutme.html">aaronfreed.github.io/aboutme.html</a>.</p>
+				<p>Lastly, I&rsquo;ve moved my <a href="aboutme.html#bio" id="bio">biography</a> and <a href="aboutme.html#contact" id="contact">contact info</a> to a dedicated page: <a href="aboutme.html">aaronfreed.github.io/aboutme.html</a>.</p>
 
 
 			<p class="sectionbreak noprint"><a href="#top">Back to top</a> &middot; <a href="#toc">Table of contents</a> &middot; <a href="mapmaking101.html">Beginners&rsquo; guide</a> &middot; <a href="aboutme.html">Contact me</a> &middot; <a href="index.html">Website index</a></p>
@@ -646,7 +646,7 @@ window.onload = function () {makeAllSortable();};
 		<footer>
 			<h1 id="thanks" class="centred">Acknowledgements</h1>
 
-			<ul class="fixheight mobileleftmargin15">
+			<ul class="mobileleftmargin15">
 				<li><strong>Paul S.</strong> on Stack Overflow for his <a href="https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript/14268260#14268260">table sort script</a>, and <strong>Fla</strong> for a revision that enabled it to sort numeric values. (My knowledge of JavaScript is effectively nonexistent.)</li>
 				<li><strong>Jason Karns</strong> and <strong>Davide Cannizzo</strong> on Stack Overflow for the <a href="https://stackoverflow.com/a/21684020">CSS table of contents</a>, which is beyond my relatively competent level of CSS ability.</li>
 				<li><strong>Solra Bizna</strong> for an incomprehensible amount of programming help, including the CSS that makes this exact page follow your computer&rsquo;s dark mode settings.</li>
@@ -681,7 +681,7 @@ window.onload = function () {makeAllSortable();};
 
 			<h1 id="endnotes" class="centred">Endnotes</h1>
 
-			<table class="light endnotes fixheight curved">
+			<table class="light endnotes curved">
 				<thead>
 					<tr>
 						<th class="integer"><strong>#</strong></th>

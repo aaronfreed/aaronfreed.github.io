@@ -6243,7 +6243,7 @@ ul.notablemargin {
 }
 
 .aboutme :is(ol, ul) {
-	padding-left: 15px; line-height: 125%;
+	padding-left: 15px;
 }
 
 .orange, .orangelinks {
